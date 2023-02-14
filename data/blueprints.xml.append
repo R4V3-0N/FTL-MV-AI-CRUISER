@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<FTL>
 <!--
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -112,13 +112,10 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="5"> 
-		<doors>10</doors>
-		<sensors>10</sensors>
-		<battery>10</battery>
-		<temporal>10</temporal>
-		<engines>4</engines>
-		<pilot>4</pilot>
+	<hack duration="3"> 
+		<doors>6</doors>
+		<sensors>6</sensors>
+		<temporal>6</temporal>
 	</hack>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
@@ -219,10 +216,11 @@
 		<weapon name="RA_EFFECTOR_1" />
 	</weaponList>
 	<droneList drones="6" count="3">
-		<drone name="AMPHI_COMBAT" />
+		<!-- <drone name="AMPHI_COMBAT" /> -->
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="6" />
 	<crewCount amount="3" class="zoltan_osmian_hologram" />
 </shipBlueprint>
 
+</FTL>
