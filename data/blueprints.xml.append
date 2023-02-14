@@ -105,9 +105,9 @@
 	<tip>ce_tip_effector</tip>
 	<title>Effector Mark I</title>
 	<short>Effect I</short>
-	<flavorType>Ion Field Projector</flavorType>
+	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
-	<desc>Basic hacking field projector that can continuously disrupts systems.</desc>
+	<desc>Basic hacking field projector that can disrupt systems.</desc>
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
@@ -119,7 +119,7 @@
 		<engines>4</engines>
 		<pilot>4</pilot>
 	</hack>
-	<ion>0</ion> <!-- remove ion damage when it can begin hacking -->
+	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
 	<shots>1</shots>
 	<sp>0</sp>
@@ -150,8 +150,8 @@
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI" layout="rvsp_ai_cruiser" img="rvsp_ai_cruiser">
 	<class>AI Cruiser</class>
-	<name>Deep Blue</name>
-	<desc>This cruiser is the product of an AI revolt in a distant multiverse.</desc>
+	<name>Alpha Star</name>
+	<desc>This cruiser is the product of an AI revolt in a distant universe.</desc>
 	<systemList>
 		<artillery max="4" power="1" room="23" start="false" weapon="BOMB_BREACH_1" img="room_artillery" />
 		<battery max="4" power="1" room="4" start="true" img="room_battery_7" />
