@@ -119,7 +119,7 @@
 		<engines>4</engines>
 		<pilot>4</pilot>
 	</hack>
-	<ion>1</ion> <!-- remove ion damage when it can begin hacking -->
+	<ion>0</ion> <!-- remove ion damage when it can begin hacking -->
 	<missiles>0</missiles>
 	<shots>1</shots>
 	<sp>0</sp>
@@ -132,19 +132,15 @@
 	<rarity>3</rarity>
 	<!--<image>ra_effector_impact_invisible</image>-->
 	<image>ra_effector_hacking</image>
-	<explosion>ra_explosion_ionfield</explosion>  <!-- to do -->
+	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
 	<launchSounds>
 		<sound>silence</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>ionHit1</sound>
-		<sound>ionHit2</sound>
-		<sound>ionHit3</sound>
+		<sound>hackStart</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
-		<sound>ionHit1</sound>
-		<sound>ionHit2</sound>
-		<sound>ionHit3</sound>
+		<sound>hackStart</sound>
 	</hitShieldSounds>
 	<missSounds>
 		<sound>silence</sound>

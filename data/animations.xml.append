@@ -1,9 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<animSheet name="invisible" w="1" h="1" fw="1" fh="1">misc/invisible.png</animSheet>
+<anim name="invisible">
+    <sheet>invisible</sheet>
+    <desc length="1" x="0" y="0"/>
+    <time>0.01</time>
+</anim>
+
 <animSheet name="ra_beam_auto" w="175" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_strip7.png</animSheet>
+<animSheet name="ra_beam_auto_charge" w="50" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_chargeglow.png</animSheet>
 <animSheet name="ra_effector_1" w="105" h="54" fw="35" fh="54">weapons_rebalanced_arsenal/ra_effector_1_strip3.png</animSheet>
 
 <!--<animSheet name="ra_effector_2" w="123" h="62" fw="41" fh="62">weapons_rebalanced_arsenal/ra_effector_2_strip3.png</animSheet>
 <animSheet name="ra_effector_3" w="138" h="72" fw="46" fh="72">weapons_rebalanced_arsenal/ra_effector_3_strip3.png</animSheet>-->
 
+<anim name="ra_beam_auto_charge">
+	<sheet>ra_beam_auto_charge</sheet>
+	<desc length="2" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
 <weaponAnim name="ra_beam_auto">
 	<sheet>ra_beam_auto</sheet>
 	<desc length="7" x="0" y="0"/>
@@ -12,6 +27,7 @@
 	<firePoint  x="16" y="8"/>
 	<mountPoint x="5" y="26"/>
 	<chargeImage>weapons_rebalanced_arsenal/ra_beam_auto_glow.png</chargeImage>
+	<boost>ra_beam_auto_charge</boost>
 </weaponAnim>
 
 <weaponAnim name="ra_effector_1">
@@ -47,7 +63,7 @@
 <anim name="ra_effector_hacking"> <!-- 1? -->
 	<sheet>ra_effector_hacking</sheet>
 	<desc length="20" x="0" y="0"/>
-	<time>1</time>
+	<time>2</time>
 </anim>
 
 <anim name="ra_effector_hacking_2">
