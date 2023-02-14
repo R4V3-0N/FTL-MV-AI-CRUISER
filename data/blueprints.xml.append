@@ -72,6 +72,7 @@
 <weaponBlueprint name="RA_BEAM_AUTO">
 	<type>BEAM</type>
 	<title>Auto Focus Beam</title>
+	<tip>tip_focus</tip>
 	<short>Auto Beam</short>
 	<desc>Fast charging support beam designed to continually keep enemy ships under fire after warming up.</desc>
 	<tooltip>One damage per room beam weapon</tooltip>
