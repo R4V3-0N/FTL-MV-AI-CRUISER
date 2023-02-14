@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<discord enabled="true">
+	<miniships> <!-- Asset ids for miniships - if a ship does not have a miniship defined here, it will use the "miniship_question" asset which has to be created in your application -->
+		<miniship>miniship_rvsp_ai_cruiser_a</miniship>
+	</miniships>
+	<appId>737088144931029032</appId> <!-- Discord app id -->
+	<icon>logo_50_big</icon> <!-- internal asset id for large icon -->
+</discord>
+<FTL>
+	<mod:findLike type="ships">
+		<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="false" c="false" />
+		<mod-append:customShip name="PLAYER_SHIP_RVSP_AI">
+			<hiddenAug>SHIP_AUTO</mod-append> <!-- eventually replace with AI -->
+			<hiddenAug>FOR_MULTIVERSE</mod-append>
+			<crewLimit>4</mod-append>
+			<autoShipForce>true</mod-append>
+		</mod-append:customShip>
+	</mod:findLike>
+</FTL>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+	MULTIVERSE SMUGGLER WEAPONS
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->
+
+<!-- SLEEPER'S HYPERSPACE -->
+<weaponBlueprint name="RVS_HS_IR_BEAM_1">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_focus</tip>
+    <title>Infrared Pulse Beam</title>
+    <short>IR Pulse Beam</short>
+    <desc>Basic single shot beam weapon that has full shield piercing ability and sometimes causes damage cascade.</desc>
+	<!--<desc>Sci-Fi Garbage!
+	
+		Surveys have shown that laser light inherently causes wide fascination among early Low-Tech people. They usually become determined to somehow weaponize it at all costs, even if the attempts are objectively silly.</desc>
+	-->
+    <tooltip>One damage per room beam weapon</tooltip>
+    <damage>1</damage>
+    <sp>0</sp>
+    <fireChance>2</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+    <speed>1</speed>
+    <power>2</power>
+    <cost>80</cost>
+    <bp>2</bp>
+    <rarity>4</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <launchSounds>
+        <sound>rvs_photon1</sound>
+		<sound>rvs_photon2</sound>
+    </launchSounds>
+    <weaponArt>rvs_infrared_pulse_beam</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="RVS_HS_IR_BEAM_1_COLOURED">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_focus</tip>
+    <title>Infrared Pulse Beam</title>
+    <short>IR Pulse Beam</short>
+    <desc>Basic single shot beam weapon that has full shield piercing ability and sometimes causes damage cascade.</desc>
+    <tooltip>One damage per room beam weapon</tooltip>
+    <damage>1</damage>
+    <sp>0</sp>
+    <fireChance>2</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+    <speed>1</speed>
+    <power>2</power>
+    <cost>80</cost>
+    <bp>2</bp>
+    <rarity>4</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <launchSounds>
+        <sound>rvs_photon1</sound>
+		<sound>rvs_photon2</sound>
+    </launchSounds>
+    <weaponArt>rvs_loot_infrared_pulse_beam</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<!-- REBALANCED ARSENAL -->
+<weaponBlueprint name="RA_BEAM_AUTO">
+	<type>BEAM</type>
+	<title>Auto Focus Beam</title>
+	<short>Auto Beam</short>
+	<desc>Fast charging support beam designed to continually keep enemy ships under fire after warming up.</desc>
+	<tooltip>One damage per room beam weapon</tooltip>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>14</cooldown> <!-- was 5 without chain, now it's down to 4 post chain -->
+	<speed>1</speed>
+	<length>1</length>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>2</rarity>
+	<image>beam_contact</image>
+	<boost>
+		<type>cooldown</type>
+		<amount>10</amount>
+		<count>1</count>
+	</boost>
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+	<weaponArt>ra_beam_auto</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="RA_EFFECTOR_1">
+	<type>BOMB</type>
+	<tip>ce_tip_effector</tip>
+	<title>Effector Mark I</title>
+	<short>Effect I</short>
+	<flavorType>Ion Field Projector</flavorType>
+	<locked>1</locked>
+	<desc>Basic hacking field projector that can continuously disrupts systems.</desc>
+	<tooltip>Disrupts enemy systems.</tooltip>
+	<!-- Make it hack Chrono -->
+	<damage>0</damage>
+	<ion>2</ion> <!-- remove ion damage when it can begin hacking -->
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<power>2</power>
+	<cost>40</cost>
+	<bp>2</bp>
+	<rarity>3</rarity>
+	<!--<image>ra_effector_impact_invisible</image>-->
+	<image>ra_effector_hacking</image>
+	<explosion>ra_explosion_ionfield</explosion>  <!-- to do -->
+	<launchSounds>
+		<sound>silence</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>ra_effector_1</weaponArt>
+</weaponBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_RVSP_AI" layout="rvsp_ai_cruiser" img="rvsp_ai_cruiser">
+	<class>AI Cruiser</class>
+	<name>Deep Blue</name>
+	<desc>This cruiser is the product of an AI revolt in a distant multiverse.</desc>
+	<systemList>
+		<artillery max="4" power="1" room="23" start="false" weapon="BOMB_BREACH_1" img="room_artillery" />
+		<battery max="4" power="1" room="4" start="true" img="room_battery_7" />
+		<cloaking power="1" room="16" start="false" img="room_cloaking_4" />
+		<clonebay power="1" room="2" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="27" start="true" img="room_doors_5">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones max="8" power="1" room="14" start="true" img="room_drones_10" />
+		<engines max="8" power="4" room="7" start="true" img="room_engines_4">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="12" start="false" img="room_hacking_4" />
+		<medbay power="1" room="2" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="5" start="false" img="room_mind_2" />
+		<oxygen power="1" room="13" start="false" img="room_oxygen_5" />
+		<pilot power="1" room="0" start="true" img="room_pilot_5">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="24" start="false" img="room_sensors_3_rotated">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields max="8" power="2" room="19" start="true" img="room_shields_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="20" start="false" />
+		<weapons max="8" power="4" room="26" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="5" count="3">
+		<weapon name="RA_BEAM_AUTO" />
+		<weapon name="RA_EFFECTOR_1" />
+	</weaponList>
+	<droneList drones="6" count="3">
+		<drone name="AMPHI_COMBAT" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="6" />
+	<crewCount amount="3" class="zoltan_osmian_hologram" />
+</shipBlueprint>
+
