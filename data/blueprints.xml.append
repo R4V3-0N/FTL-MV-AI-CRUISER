@@ -135,7 +135,10 @@
 	<image>ra_effector_hacking</image>
 	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
 	<launchSounds>
-		<sound>silence</sound>
+		<sound>rvs_effector_shoot1</sound>
+		<sound>rvs_effector_shoot2</sound>
+		<sound>rvs_effector_shoot3</sound>
+		<sound>rvs_effector_shoot4</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>hackStart</sound>

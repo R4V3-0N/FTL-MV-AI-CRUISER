@@ -9,3 +9,9 @@
 <rvs_photon2 volume="2">weapons/rvs_photon2.ogg</rvs_photon2>
 
 <ra_warning_effector volume="1">ui/warning3.wav</ra_warning_effector>
+
+<!-- created by dondondongon https://freesound.org/people/dondondongon/sounds/328662/ -->
+<rvs_effector_shoot1 volume="1">weapons/rvs_effector_shoot1.ogg</rvs_effector_shoot1>
+<rvs_effector_shoot2 volume="1">weapons/rvs_effector_shoot2.ogg</rvs_effector_shoot2>
+<rvs_effector_shoot3 volume="1">weapons/rvs_effector_shoot3.ogg</rvs_effector_shoot3>
+<rvs_effector_shoot4 volume="1">weapons/rvs_effector_shoot4.ogg</rvs_effector_shoot4>
