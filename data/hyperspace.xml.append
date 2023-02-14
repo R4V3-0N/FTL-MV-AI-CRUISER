@@ -10,10 +10,10 @@
 	<mod:findLike type="ships">
 		<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="false" c="false" />
 		<mod-append:customShip name="PLAYER_SHIP_RVSP_AI">
-			<hiddenAug>SHIP_AUTO</mod-append> <!-- eventually replace with AI -->
-			<hiddenAug>FOR_MULTIVERSE</mod-append>
-			<crewLimit>4</mod-append>
-			<autoShipForce>true</mod-append>
+			<hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crewLimit>4</crewLimit>
+			<autoShipForce>true</autoShipForce>
 		</mod-append:customShip>
 	</mod:findLike>
 </FTL>

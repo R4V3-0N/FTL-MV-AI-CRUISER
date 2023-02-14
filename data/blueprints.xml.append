@@ -167,7 +167,7 @@
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones max="8" power="1" room="14" start="true" img="room_drones_10" />
+		<drones max="8" power="2" room="14" start="true" img="room_drones_10" />
 		<engines max="8" power="4" room="7" start="true" img="room_engines_4">
 			<slot>
 				<direction>down</direction>
