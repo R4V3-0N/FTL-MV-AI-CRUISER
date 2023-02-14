@@ -15,3 +15,5 @@
 <rvs_effector_shoot2 volume="1">weapons/rvs_effector_shoot2.ogg</rvs_effector_shoot2>
 <rvs_effector_shoot3 volume="1">weapons/rvs_effector_shoot3.ogg</rvs_effector_shoot3>
 <rvs_effector_shoot4 volume="1">weapons/rvs_effector_shoot4.ogg</rvs_effector_shoot4>
+
+<aiDeath volume="3">aliens/rvs_ai_death.ogg</aiDeath>

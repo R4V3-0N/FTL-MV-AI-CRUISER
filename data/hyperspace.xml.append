@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <discord enabled="true">
 	<miniships> <!-- Asset ids for miniships - if a ship does not have a miniship defined here, it will use the "miniship_question" asset which has to be created in your application -->
 		<miniship>miniship_rvsp_ai_cruiser_a</miniship>
@@ -6,17 +7,34 @@
 	<appId>737088144931029032</appId> <!-- Discord app id -->
 	<icon>logo_50_big</icon> <!-- internal asset id for large icon -->
 </discord>
+
 <FTL>
-	<mod:findLike type="ships">
-		<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="false" c="false" />
-		<mod-append:customShip name="PLAYER_SHIP_RVSP_AI">
-			<hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crewLimit>4</crewLimit>
-			<autoShipForce>true</autoShipForce>
-		</mod-append:customShip>
-	</mod:findLike>
-    <mod:findLike type="scripts">
-        <mod-append:script>data/check_for_vertex.lua</mod-append:script>
-    </mod:findLike>
+
+<mod:findLike type="ships">
+    <mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="false" c="false" />
+    <mod-append:customShip name="PLAYER_SHIP_RVSP_AI">
+        <hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <crewLimit>4</crewLimit>
+        <autoShipForce>true</autoShipForce>
+    </mod-append:customShip>
+</mod:findLike>
+
+<mod:findLike type="crew">
+    <mod-append:race name="rvs_ai_hologram">
+        <maxHealth>50</maxHealth>
+		<noSlot>true</noSlot>
+        <canBurn>false</canBurn>
+        <canSuffocate>false</canSuffocate>
+        <canPhaseThroughDoors>true</canPhaseThroughDoors>
+        <deathSounds>
+            <deathSound>aiDeath</deathSound>
+        </deathSounds>
+    </mod-append:race>
+</mod:findLike>
+
+<mod:findLike type="scripts">
+    <mod-append:script>data/check_for_vertex.lua</mod-append:script>
+</mod:findLike>
+
 </FTL>

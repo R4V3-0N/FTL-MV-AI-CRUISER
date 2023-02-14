@@ -128,12 +128,12 @@
 </anim>
 <anim name="rvs_ai_hologram_death_right">
 	<sheet>rvs_ai_hologram</sheet>
-	<desc length="5" x="3" y="0"/>
+	<desc length="6" x="3" y="0"/>
 	<time>0.75</time>
 </anim>
 <anim name="rvs_ai_hologram_death_left">
 	<sheet>rvs_ai_hologram</sheet>
-	<desc length="5" x="0" y="2"/>
+	<desc length="6" x="0" y="2"/>
 	<time>0.75</time>
 </anim>
 <anim name="rvs_ai_hologram_walk_down">

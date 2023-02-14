@@ -149,6 +149,21 @@
 	<weaponArt>ra_effector_1</weaponArt>
 </weaponBlueprint>
 
+<crewBlueprint name="rvs_ai_hologram">
+	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
+	<cost>30</cost>
+	<bp>1</bp>
+	<title>AI Avatar</title>
+	<short>AI Avatar</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Does not take up a crew slot</power>
+		<power>Immune to suffocation and fires</power>
+		<power>Max Health is reduced to 50</power>
+		<power>Can phase through doors</power>
+	</powerList>
+</crewBlueprint>
+
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI" layout="rvsp_ai_cruiser" img="rvsp_ai_cruiser">
 	<class>AI Cruiser</class>
 	<name>Alpha Star</name>
@@ -220,7 +235,7 @@
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="6" />
-	<crewCount amount="3" class="zoltan_osmian_hologram" />
+	<crewCount amount="3" class="rvs_ai_hologram" />
 </shipBlueprint>
 
 </FTL>
