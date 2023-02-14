@@ -198,13 +198,13 @@
 		</medbay>
 		<mind power="1" room="5" start="false" img="room_mind_2" />
 		<oxygen power="1" room="13" start="false" img="room_oxygen_5" />
-		<pilot power="1" room="0" start="true" img="room_pilot_5">
+		<pilot power="1" room="0" start="true" img="room_pilot_rvs_ai">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
 			</slot>
 		</pilot>
-		<sensors power="1" room="24" start="false" img="room_sensors_3_rotated">
+		<sensors power="1" room="24" start="false" img="room_sensors_rvs_ai">
 			<slot>
 				<direction>down</direction>
 				<number>1</number>
