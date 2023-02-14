@@ -109,9 +109,17 @@
 	<locked>1</locked>
 	<desc>Basic hacking field projector that can continuously disrupts systems.</desc>
 	<tooltip>Disrupts enemy systems.</tooltip>
-	<!-- Make it hack Chrono -->
 	<damage>0</damage>
-	<ion>2</ion> <!-- remove ion damage when it can begin hacking -->
+	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
+	<hack duration="5"> 
+		<doors>10</doors>
+		<sensors>10</sensors>
+		<battery>10</battery>
+		<temporal>10</temporal>
+		<engines>4</engines>
+		<pilot>4</pilot>
+	</hack>
+	<ion>1</ion> <!-- remove ion damage when it can begin hacking -->
 	<missiles>0</missiles>
 	<shots>1</shots>
 	<sp>0</sp>
