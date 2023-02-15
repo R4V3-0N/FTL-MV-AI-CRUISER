@@ -158,6 +158,9 @@
 	<rarity>0</rarity>
 	<powerList>
 		<power>Does not take up a crew slot</power>
+		<power>Cannot heal in medbay or be cloned</power>
+		<power>Heals slowly in drone control room</power>
+		<power>Regains 25 health on jump</power>
 		<power>Immune to suffocation and fires</power>
 		<power>Max Health is reduced to 50</power>
 		<power>Can phase through doors</power>

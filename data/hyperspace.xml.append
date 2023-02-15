@@ -24,12 +24,62 @@
     <mod-append:race name="rvs_ai_hologram">
         <maxHealth>50</maxHealth>
 		<noSlot>true</noSlot>
+        <noClone>true</noClone>
+        <healSpeed>0</healSpeed>
         <canBurn>false</canBurn>
         <canSuffocate>false</canSuffocate>
         <canPhaseThroughDoors>true</canPhaseThroughDoors>
         <deathSounds>
             <deathSound>aiDeath</deathSound>
         </deathSounds>
+        <passiveStatBoosts>
+            <statBoost name="healSpeed">
+                <boostType>SET</boostType>
+                <amount>1.0</amount>
+                <shipTarget>CURRENT_ROOM</shipTarget>
+                <crewTarget>SELF</crewTarget>
+                <maxStacks>1</maxStacks>
+                <priority>0</priority>
+                <whiteList>
+                    <rvs_ai_hologram/>
+                </whiteList>
+                <systemRoomTarget>ALL</systemRoomTarget>
+                <systemPowerDependency>
+                    <drones/>
+                </systemPowerDependency>
+                <systemList>
+                    <drones/>
+                </systemList>
+                <systemPowerScaling>
+                    <noSys>0</noSys>
+                    <noPwr>1</noPwr>
+                    <onePwr>1</onePwr>
+                </systemPowerScaling>
+            </statBoost>
+            <statBoost name="healAmount">
+                <boostType>FLAT</boostType>
+                <amount>2.0</amount>
+                <shipTarget>CURRENT_ROOM</shipTarget>
+                <crewTarget>SELF</crewTarget>
+                <maxStacks>1</maxStacks>
+                <priority>0</priority>
+                <whiteList>
+                    <rvs_ai_hologram/>
+                </whiteList>
+                <systemRoomTarget>ALL</systemRoomTarget>
+                <systemPowerDependency>
+                    <drones/>
+                </systemPowerDependency>
+                <systemList>
+                    <drones/>
+                </systemList>
+                <systemPowerScaling>
+                    <noSys>0</noSys>
+                    <noPwr>1</noPwr>
+                    <onePwr>1</onePwr>
+                </systemPowerScaling>
+            </statBoost>
+        </passiveStatBoosts>
     </mod-append:race>
 </mod:findLike>
 
