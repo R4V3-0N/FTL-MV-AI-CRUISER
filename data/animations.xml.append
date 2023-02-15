@@ -8,7 +8,7 @@
 </anim>
 
 <animSheet name="ra_beam_auto" w="175" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_strip7.png</animSheet>
-<animSheet name="ra_beam_auto_charge" w="50" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_chargeglow.png</animSheet>
+<animSheet name="ra_beam_auto_charge" w="25" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_chargeglow.png</animSheet>
 <animSheet name="ra_effector_1" w="105" h="54" fw="35" fh="54">weapons_rebalanced_arsenal/ra_effector_1_strip3.png</animSheet>
 
 <!--<animSheet name="ra_effector_2" w="123" h="62" fw="41" fh="62">weapons_rebalanced_arsenal/ra_effector_2_strip3.png</animSheet>
@@ -16,7 +16,7 @@
 
 <anim name="ra_beam_auto_charge">
 	<sheet>ra_beam_auto_charge</sheet>
-	<desc length="2" x="0" y="0"/>
+	<desc length="1" x="0" y="0"/>
 	<time>1.0</time>
 </anim>
 <weaponAnim name="ra_beam_auto">
