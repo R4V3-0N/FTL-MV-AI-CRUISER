@@ -237,7 +237,7 @@
 		<!-- <drone name="AMPHI_COMBAT" /> -->
 	</droneList>
 	<health amount="30" />
-	<maxPower amount="6" />
+	<maxPower amount="8" />
 	<crewCount amount="3" class="rvs_ai_hologram" />
 </shipBlueprint>
 
