@@ -75,6 +75,30 @@
                 </systemList>
                 <systemPowerScaling>
                     <noSys>0</noSys>
+                    <hackedSys>0</hackedSys>
+                    <noPwr>0</noPwr>
+                    <onePwr>1</onePwr>
+                </systemPowerScaling>
+            </statBoost>
+            <statBoost name="bonusPower">
+                <boostType>SET</boostType>
+                <amount>1</amount>
+                <shipTarget>CURRENT_ROOM</shipTarget>
+                <crewTarget>SELF</crewTarget>
+                <maxStacks>1</maxStacks>
+                <priority>0</priority>
+                <whiteList>
+                    <rvs_ai_hologram/>
+                </whiteList>
+                <systemRoomTarget>ALL</systemRoomTarget>
+                <systemPowerDependency>
+                    <drones/>
+                </systemPowerDependency>
+                <systemList>
+                    <drones/>
+                </systemList>
+                <systemPowerScaling>
+                    <noSys>0</noSys>
                     <noPwr>1</noPwr>
                     <onePwr>1</onePwr>
                 </systemPowerScaling>
