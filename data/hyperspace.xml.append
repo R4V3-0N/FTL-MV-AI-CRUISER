@@ -84,7 +84,7 @@
 </mod:findLike>
 
 <mod:findLike type="scripts">
-    <mod-append:script>data/check_for_vertex.lua</mod-append:script>
+    <mod-append:script>data/ai_cruiser.lua</mod-append:script>
 </mod:findLike>
 
 </FTL>
