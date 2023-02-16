@@ -1,0 +1,9 @@
+<event name="RVS_HOLO_DEATH">
+    <loadEventList default="RVS_HOLO_DEATH_IGNORE">
+        <event name="RVS_HOLO_DEATH_TRACK" req="RVS_REQ_HOLO_TRACK_DEATH"/>
+    </loadEventList>
+</event>
+<event name="RVS_HOLO_DEATH_IGNORE" />
+<event name="RVS_HOLO_DEATH_TRACK">
+    <variable name="loc_holos_dead" op="add" val="1"/>
+</event>

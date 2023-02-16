@@ -29,9 +29,13 @@
         <canBurn>false</canBurn>
         <canSuffocate>false</canSuffocate>
         <canPhaseThroughDoors>true</canPhaseThroughDoors>
+        <resistsMindControl>true</resistsMindControl>
         <deathSounds>
             <deathSound>aiDeath</deathSound>
         </deathSounds>
+        <deathEffect>
+            <event load="RVS_HOLO_DEATH"/>
+        </deathEffect>
         <passiveStatBoosts>
             <statBoost name="healSpeed">
                 <boostType>SET</boostType>
@@ -105,6 +109,18 @@
             </statBoost>
         </passiveStatBoosts>
     </mod-append:race>
+</mod:findLike>
+
+<mod:findLike type="events" limit="1">
+    <mod-append:variable name="loc_holos_dead" op="set" val="0"/>
+    <mod-append:req name="RVS_REQ_HOLO_TRACK_DEATH" type="any">
+        <name>RVS_HOLO_EMITTERS</name>
+        <name>SHIP PLAYER_SHIP_RVSP_AI</name>
+    </mod-append:req>
+    <mod-append:req name="RVS_REQ_HOLO_REVIVE" type="all">
+        <name>loc_holos_dead</name>
+        <name>RVS_REQ_HOLO_TRACK_DEATH</name>
+    </mod-append:req>
 </mod:findLike>
 
 <mod:findLike type="scripts">

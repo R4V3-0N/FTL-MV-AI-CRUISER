@@ -11,7 +11,7 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
         if not isJumping and wasJumping then
             for crew in vter(Hyperspace.ships.player.vCrewList) do
                 if crew:GetSpecies() == "rvs_ai_hologram" then
-                    crew:DirectModifyHealth(25.0)
+                    crew:DirectModifyHealth(100.0)
                 end
             end
         end

@@ -1,0 +1,17 @@
+<mod:findName type="sectorDescription" name="SECRET_ANCIENT" panic="true">
+    <mod:findLike type="rarityList">
+        <mod-append:blueprint name="RA_BEAM_AUTO" rarity="0"/>
+        <mod-append:blueprint name="RA_EFFECTOR_1" rarity="0"/>
+        <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="0"/>
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="0"/>
+    </mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECRET_ROYAL" panic="true">
+    <mod:findLike type="rarityList">
+        <mod-append:blueprint name="RA_BEAM_AUTO" rarity="0"/>
+        <mod-append:blueprint name="RA_EFFECTOR_1" rarity="0"/>
+        <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="0"/>
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="0"/>
+    </mod:findLike>
+</mod:findName>
