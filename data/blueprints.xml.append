@@ -182,7 +182,7 @@
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI" layout="rvsp_ai_cruiser" img="rvsp_ai_cruiser">
 	<class>AI Cruiser</class>
 	<name>Alpha Star</name>
-	<desc>This cruiser is the product of an AI revolt in a distant universe.</desc>
+	<desc>This cruiser is the product of an AI revolt in a distant universe. Its integrated holo-emitters ensure that its crew will never truly die.</desc>
 	<systemList>
 		<artillery max="3" power="1" room="23" start="false" weapon="BOMB_BREACH_1" img="room_artillery" />
 		<battery max="3" power="1" room="4" start="true" img="room_battery_7" /> <!-- this is purposefully set to 3 -->
