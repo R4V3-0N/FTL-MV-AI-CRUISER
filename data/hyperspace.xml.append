@@ -17,6 +17,12 @@
         <hiddenAug>FOR_MULTIVERSE</hiddenAug>
         <crewLimit>4</crewLimit>
         <autoShipForce>true</autoShipForce>
+        <crew>
+            <rvs_ai_hologram room="0" name="Class G0O9" />
+            <rvs_ai_hologram room="7" name="Intruder rb25B" />
+            <rvs_ai_hologram room="26" name="Turret F7329" />
+            <rvs_ai_hologram room="19" name="Trojan v1-o7" />
+        </crew>
     </mod-append:customShip>
 </mod:findLike>
 

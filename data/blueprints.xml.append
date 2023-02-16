@@ -250,7 +250,7 @@
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="8" />
-	<crewCount amount="4" class="rvs_ai_hologram" />
+	<!-- <crewCount amount="4" class="rvs_ai_hologram" /> -->
 	<aug name="ADV_SCANNERS" />
 </shipBlueprint>
 
