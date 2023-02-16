@@ -78,9 +78,9 @@
 	<tooltip>One damage per room beam weapon</tooltip>
 	<damage>1</damage>
 	<sp>0</sp>
-	<fireChance>0</fireChance>
+	<fireChance>1</fireChance> <!-- R4 2023.02 now 1 from 0-->
 	<breachChance>0</breachChance>
-	<cooldown>14</cooldown> <!-- was 5 without chain, now it's down to 4 post chain -->
+	<cooldown>14</cooldown> <!-- was 5 without chain, now it's down to 4 post chain --> <!-- now it's 2.5 once chainged -->
 	<speed>1</speed>
 	<length>1</length>
 	<power>2</power>
@@ -90,7 +90,7 @@
 	<image>beam_contact</image>
 	<boost>
 		<type>cooldown</type>
-		<amount>10</amount>
+		<amount>11.5</amount>
 		<count>1</count>
 	</boost>
 	<launchSounds>
@@ -103,7 +103,7 @@
 
 <weaponBlueprint name="RA_EFFECTOR_1">
 	<type>BOMB</type>
-	<tip>ce_tip_effector</tip>
+	<tip>ce_tip_effector</tip> <!-- oh woops, this should be fixed -->
 	<title>Effector Mark I</title>
 	<short>Effect I</short>
 	<flavorType>Disruption Field Projector</flavorType>
@@ -112,10 +112,11 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="3"> 
-		<doors>6</doors>
-		<sensors>6</sensors>
-		<temporal>6</temporal>
+	<hack duration="4">
+		<shields>3.8</shields> <!-- to prevent it doing 2 shields solo-->
+		<doors>8</doors>
+		<sensors>8</sensors>
+		<temporal>8</temporal>
 	</hack>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
@@ -123,7 +124,7 @@
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>16</cooldown>
+	<cooldown>15</cooldown> <!-- R4 2023.02.15 reduced down from 16 to 15 -->
 	<power>2</power>
 	<cost>40</cost>
 	<bp>2</bp>
@@ -172,8 +173,8 @@
 	<name>Alpha Star</name>
 	<desc>This cruiser is the product of an AI revolt in a distant universe.</desc>
 	<systemList>
-		<artillery max="4" power="1" room="23" start="false" weapon="BOMB_BREACH_1" img="room_artillery" />
-		<battery max="4" power="1" room="4" start="true" img="room_battery_7" />
+		<artillery max="3" power="1" room="23" start="false" weapon="BOMB_BREACH_1" img="room_artillery" />
+		<battery max="3" power="1" room="4" start="true" img="room_battery_7" /> <!-- this is purposefully set to 3 -->
 		<cloaking power="1" room="16" start="false" img="room_cloaking_4" />
 		<clonebay power="1" room="2" start="false">
 			<slot>
@@ -238,7 +239,8 @@
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="8" />
-	<crewCount amount="3" class="rvs_ai_hologram" />
+	<crewCount amount="4" class="rvs_ai_hologram" />
+	<aug name="ADV_SCANNERS" />
 </shipBlueprint>
 
 </FTL>
