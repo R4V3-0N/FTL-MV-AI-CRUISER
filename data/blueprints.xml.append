@@ -30,7 +30,7 @@
     <power>2</power>
     <cost>80</cost>
     <bp>2</bp>
-    <rarity>4</rarity>
+    <rarity>0</rarity>
     <image>beam_contact</image>
     <length>1</length>
     <launchSounds>
@@ -57,7 +57,7 @@
     <power>2</power>
     <cost>80</cost>
     <bp>2</bp>
-    <rarity>4</rarity>
+    <rarity>0</rarity>
     <image>beam_contact</image>
     <length>1</length>
     <launchSounds>
@@ -149,20 +149,31 @@
 	<weaponArt>ra_effector_1</weaponArt>
 </weaponBlueprint>
 
+<augBlueprint name="RVS_HOLO_EMITTERS">
+    <title>Holo-Emitters</title>
+    <desc>Allows any hologram crew which have been destroyed after this augment has been installed to be recreated at empty beacons.</desc>
+    <cost>60</cost>
+    <bp>8</bp>
+    <rarity>4</rarity>
+    <stackable>false</stackable>
+    <value>1</value>
+</augBlueprint>
+
 <crewBlueprint name="rvs_ai_hologram">
 	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
 	<cost>30</cost>
 	<bp>1</bp>
 	<title>AI Avatar</title>
 	<short>AI Avatar</short>
-	<rarity>0</rarity>
+	<rarity>4</rarity>
 	<powerList>
 		<power>Does not take up a crew slot</power>
+		<power>Max Health is reduced to 50</power>
 		<power>Cannot heal in medbay or be cloned</power>
 		<power>Provides power and heals slowly in drone control room</power>
-		<power>Regains 25 health on jump</power>
+		<power>Regains all health on jump</power>
 		<power>Immune to suffocation and fires</power>
-		<power>Max Health is reduced to 50</power>
+		<power>Immune to mind control</power>
 		<power>Can phase through doors</power>
 	</powerList>
 </crewBlueprint>
