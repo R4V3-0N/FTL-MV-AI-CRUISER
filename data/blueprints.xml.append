@@ -171,8 +171,9 @@
 		<power>Does not take up a crew slot</power>
 		<power>Max Health is reduced to 50</power>
 		<power>Cannot heal in medbay or be cloned</power>
-		<power>Provides power and heals slowly in drone control room on any ship</power>
+		<power>Provides power and heals slowly in drone control room</power>
 		<power>Regains all health on jump</power>
+		<power>Can teleport anywhere from the enemy teleporter room</power>
 		<power>Immune to suffocation and fires</power>
 		<power>Immune to mind control</power>
 		<power>Can phase through doors</power>

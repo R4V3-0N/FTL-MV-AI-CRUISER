@@ -28,7 +28,7 @@
 </mod:findLike>
 
 <mod:findLike type="crew">
-    <mod-append:race name="rvs_ai_hologram">
+    <mod-append:race name="rvs_ai_hologram"> <!-- PLAYER ONLY -->
         <maxHealth>50</maxHealth>
 		<noSlot>true</noSlot>
         <noClone>true</noClone>
@@ -41,13 +41,14 @@
             <deathSound>aiDeath</deathSound>
         </deathSounds>
         <deathEffect>
-            <event load="RVS_HOLO_DEATH"/>
+            <playerEvent load="RVS_HOLO_DEATH"/>
         </deathEffect>
         <passiveStatBoosts>
+            <!-- Heal in player drone room -->
             <statBoost name="healSpeed">
                 <boostType>SET</boostType>
                 <amount>1.0</amount>
-                <shipTarget>CURRENT_ROOM</shipTarget>
+                <shipTarget>PLAYER_SHIP</shipTarget>
                 <crewTarget>SELF</crewTarget>
                 <maxStacks>1</maxStacks>
                 <priority>0</priority>
@@ -70,7 +71,7 @@
             <statBoost name="healAmount">
                 <boostType>FLAT</boostType>
                 <amount>2.0</amount>
-                <shipTarget>CURRENT_ROOM</shipTarget>
+                <shipTarget>PLAYER_SHIP</shipTarget>
                 <crewTarget>SELF</crewTarget>
                 <maxStacks>1</maxStacks>
                 <priority>0</priority>
@@ -94,7 +95,7 @@
             <statBoost name="bonusPower">
                 <boostType>SET</boostType>
                 <amount>1</amount>
-                <shipTarget>CURRENT_ROOM</shipTarget>
+                <shipTarget>PLAYER_SHIP</shipTarget>
                 <crewTarget>SELF</crewTarget>
                 <maxStacks>1</maxStacks>
                 <priority>0</priority>
@@ -107,6 +108,31 @@
                 </systemPowerDependency>
                 <systemList>
                     <drones/>
+                </systemList>
+                <systemPowerScaling>
+                    <noSys>0</noSys>
+                    <noPwr>1</noPwr>
+                    <onePwr>1</onePwr>
+                </systemPowerScaling>
+            </statBoost>
+            
+            <!-- Teleport from enemy teleporter -->
+            <statBoost name="teleportMoveOtherShip">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ENEMY_SHIP</shipTarget>
+                <crewTarget>SELF</crewTarget>
+                <maxStacks>1</maxStacks>
+                <priority>0</priority>
+                <whiteList>
+                    <rvs_ai_hologram/>
+                </whiteList>
+                <systemRoomTarget>ALL</systemRoomTarget>
+                <systemPowerDependency>
+                    <teleporter/>
+                </systemPowerDependency>
+                <systemList>
+                    <teleporter/>
                 </systemList>
                 <systemPowerScaling>
                     <noSys>0</noSys>
