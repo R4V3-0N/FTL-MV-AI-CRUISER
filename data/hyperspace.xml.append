@@ -28,7 +28,7 @@
 </mod:findLike>
 
 <mod:findLike type="crew">
-    <mod-append:race name="rvs_ai_hologram"> <!-- PLAYER ONLY -->
+    <mod-append:race name="rvs_ai_hologram">
         <maxHealth>50</maxHealth>
 		<noSlot>true</noSlot>
         <noClone>true</noClone>
@@ -44,11 +44,11 @@
             <playerEvent load="RVS_HOLO_DEATH"/>
         </deathEffect>
         <passiveStatBoosts>
-            <!-- Heal in player drone room -->
+            <!-- Heal in owner's drone room -->
             <statBoost name="healSpeed">
                 <boostType>SET</boostType>
                 <amount>1.0</amount>
-                <shipTarget>PLAYER_SHIP</shipTarget>
+                <shipTarget>ORIGINAL_SHIP</shipTarget>
                 <crewTarget>SELF</crewTarget>
                 <maxStacks>1</maxStacks>
                 <priority>0</priority>
@@ -71,7 +71,7 @@
             <statBoost name="healAmount">
                 <boostType>FLAT</boostType>
                 <amount>2.0</amount>
-                <shipTarget>PLAYER_SHIP</shipTarget>
+                <shipTarget>ORIGINAL_SHIP</shipTarget>
                 <crewTarget>SELF</crewTarget>
                 <maxStacks>1</maxStacks>
                 <priority>0</priority>
@@ -95,7 +95,7 @@
             <statBoost name="bonusPower">
                 <boostType>SET</boostType>
                 <amount>1</amount>
-                <shipTarget>PLAYER_SHIP</shipTarget>
+                <shipTarget>ORIGINAL_SHIP</shipTarget>
                 <crewTarget>SELF</crewTarget>
                 <maxStacks>1</maxStacks>
                 <priority>0</priority>
@@ -116,11 +116,11 @@
                 </systemPowerScaling>
             </statBoost>
             
-            <!-- Teleport from enemy teleporter -->
+            <!-- Teleport from the other ship's teleporter -->
             <statBoost name="teleportMoveOtherShip">
                 <boostType>SET</boostType>
                 <value>true</value>
-                <shipTarget>ENEMY_SHIP</shipTarget>
+                <shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
                 <crewTarget>SELF</crewTarget>
                 <maxStacks>1</maxStacks>
                 <priority>0</priority>
