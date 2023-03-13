@@ -68,6 +68,83 @@
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="RVS_EMP_1">
+	<type>LASER</type>
+	<title>EMP Device</title>
+	<short>EMP Device</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>Test EMP weapon.</desc>
+	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip> <!-- placeholder -->
+	<damage>1</damage> <!-- added one damage for now -->
+	<!--<ion>1</ion>-->
+	<speed>35</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>1</stunChance>	<!-- perhaps should be higher? -->
+	<cooldown>7</cooldown>	<!-- lowered from 8-->
+	<power>2</power>
+	<cost>50</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_emp_1</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_BEAM_SHOTGUN_2">
+    <type>BURST</type>
+    <flavorType></flavorType>
+    <title>Splitter Beam Mark II</title> <!-- Scatter Beam mark II? -->
+    <tip>tip_</tip>
+    <short>Splitter II</short>
+    <desc>Fires a cluster of focus beams over a wide area dealing up to 4 damage.</desc>
+    <tooltip>Fires a scatter of beams across a random area doing up to 4 damage.</tooltip>
+    <radius>42</radius>
+    <damage>1</damage>
+    <shots>1</shots>
+    <sp>0</sp>
+    <fireChance>4</fireChance> <!-- fire chance moderately high for Chronos pleasure -->
+    <breachChance>1</breachChance>
+    <cooldown>10</cooldown>
+    <power>2</power>
+    <cost>62</cost>
+    <bp>10</bp>
+    <speed>0</speed> <!-- R4: Chrono told me this is important to be 0-->
+    <rarity>0</rarity> <!-- 3? -->
+    <projectiles>
+        <projectile count="4" fake="false">RVS_PROJECTILE_BEAM_FOCUS_1</projectile> <!-- Fake projectiles which LUA replaces with beams -->
+    </projectiles>
+    <!-- not sure what sound effect best works here -->
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+    <weaponArt>rvs_beam_shotgun_2</weaponArt>
+</weaponBlueprint>
+
 <!-- REBALANCED ARSENAL -->
 <weaponBlueprint name="RA_BEAM_AUTO">
 	<type>BEAM</type>
@@ -243,7 +320,8 @@
 	<weaponSlots>3</weaponSlots>
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="5" count="3">
-		<weapon name="RA_BEAM_AUTO" />
+		<!--<weapon name="RA_BEAM_AUTO" />-->
+		<weapon name="RVS_BEAM_SHOTGUN_2" />
 		<weapon name="RA_EFFECTOR_1" />
 	</weaponList>
 	<droneList drones="6" count="3">
