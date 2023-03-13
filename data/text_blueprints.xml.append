@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <text name="text_PLAYER_SHIP_RVSP_AI_class">AI Cruiser</text>
-<text name="text_PLAYER_SHIP_HARD_name">AlphaStar</text>
+<text name="text_PLAYER_SHIP_RVSP_AI_name">AlphaStar</text> <!-- Excuse me why is this player ship hard?? -->
 <text name="text_PLAYER_SHIP_RVSP_AI_desc">This cruiser is the product of an AI revolt in a distant multiverse.</text>
 
+<text name="text_PLAYER_SHIP_RVSP_AI_2_class">AI Shock Cruiser</text>
+<text name="text_PLAYER_SHIP_RVSP_AI_2_name">Placeholder for now</text>
+<text name="text_PLAYER_SHIP_RVSP_AI_2_desc">This self-aware cruiser is configured for rapid avatar deployment.</text>
+<!--- <text name="text_PLAYER_SHIP_RVSP_AI_2_desc">The avatar of this cruiser is most obnoxious.</text> --->

@@ -3,6 +3,7 @@
 <discord enabled="true">
 	<miniships> <!-- Asset ids for miniships - if a ship does not have a miniship defined here, it will use the "miniship_question" asset which has to be created in your application -->
 		<miniship>miniship_rvsp_ai_cruiser_a</miniship>
+		<miniship>miniship_rvsp_ai_cruiser_b</miniship>
 	</miniships>
 	<appId>737088144931029032</appId> <!-- Discord app id -->
 	<icon>logo_50_big</icon> <!-- internal asset id for large icon -->
@@ -11,7 +12,8 @@
 <FTL>
 
 <mod:findLike type="ships">
-    <mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="false" c="false" />
+	<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="true" c="false">    
+    </mod-append:ship>
     <mod-append:customShip name="PLAYER_SHIP_RVSP_AI">
         <hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
         <hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -25,7 +27,23 @@
             <rvs_ai_hologram room="19" name="Trojan v1-o7" />
         </crew>
     </mod-append:customShip>
+	
+	<mod-append:customShip name="PLAYER_SHIP_RVSP_AI_2">
+		<hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>
+		<crewLimit>4</crewLimit>
+		<autoShipForce>true</autoShipForce>
+		<crew>
+			<rvs_ai_hologram room="0" name="[404]" /> <!-- Piloting-->
+			<rvs_ai_hologram room="9" name="Replicant 1042" /> <!-- Weapons -->
+			<rvs_ai_hologram room="23" name="Reciteful Error" /> <!-- Engines -->
+			<rvs_ai_hologram room="29" name="DIE DIE DIE" /> <!-- Shields -->
+		</crew>
+	</mod-append:customShip>
 </mod:findLike>
+
+
 
 <mod:findLike type="crew">
     <mod-append:race name="rvs_ai_hologram">

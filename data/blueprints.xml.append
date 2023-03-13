@@ -255,4 +255,78 @@
 	<aug name="ADV_SCANNERS" />
 </shipBlueprint>
 
+<shipBlueprint name="PLAYER_SHIP_RVSP_AI_2" layout="rvsp_ai_cruiser_2" img="rvsp_ai_cruiser_2">
+	<class>AI Shock Cruiser</class>
+	<name>Ellectric Colar</name>
+	<desc>This self-aware cruiser is configured for rapid avatar deployment, however it lacks proper insulation for organic crews.</desc>
+	<systemList>
+		<artillery power="1" room="1" start="false" weapon="BOMB_BREACH_1" img="room_artillery_5" />
+		<battery power="1" room="26" start="true" img="room_battery_3" />
+		<cloaking power="1" room="15" start="false" img="rvs_room_cloaking_11" />
+		<clonebay power="1" room="4" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="17" start="true" img="room_doors_8">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="13" start="true" img="room_drones_12" />
+		<engines power="3" room="23" start="true" img="rvs_room_engines_1">
+			<slot>
+				<direction>down</direction>
+				<number>3</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="2" start="false" img="room_hacking_9" />
+		<medbay power="1" room="4" start="false" img="rvs_room_medbay_1">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="28" start="false" img="room_mind_6" />
+		<oxygen power="1" room="24" start="false" img="room_oxygen_9" />
+		<pilot power="2" room="0" start="true" img="rvs_room_pilot_1">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="2" room="11" start="true" img="room_sensors_old">
+			<slot>
+				<direction>right</direction>
+				<number>-2</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="29" start="true" img="room_shields_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="7" start="false" />
+		<weapons power="4" room="9" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="5" count="3">
+		<weapon name="RVS_EMP_1" />
+	</weaponList>
+	<droneList drones="6" count="3">
+		<drone name="PEST_RAD" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="9" />
+	<aug name="ADV_SCANNERS" />
+	<shieldImage>rvsp_ai_cruiser</shieldImage>
+	<cloakImage>rvsp_ai_cruiser</cloakImage>
+</shipBlueprint>
 </FTL>
