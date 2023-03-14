@@ -63,6 +63,14 @@
 	<chargeImage>weapons_hyperspace/rvs_beam_shotgun_2_glow.png</chargeImage>
 </weaponAnim>
 
+
+<animSheet name="RVS_PROJECTILE_BEAM_FOCUS_1" w="12" h="5" fw="12" fh="5">effects/RVS_PROJECTILE_BEAM_FOCUS_1.png</animSheet>
+<anim name="RVS_PROJECTILE_BEAM_FOCUS_1">
+	<sheet>RVS_PROJECTILE_BEAM_FOCUS_1</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
 <animSheet name="ra_effector_hacking" w="2000" h="100" fw="100" fh="100">effects_rebalanced_arsenal/ra_effector_hacking_strip20.png</animSheet>
 <animSheet name="ra_effector_hacking_warning" w="4800" h="120" fw="600" fh="120">effects_rebalanced_arsenal/ra_effector_hacking_warning_strip8.png</animSheet>
 <animSheet name="ra_effector_hacking_warning_small" w="1800" h="120" fw="600" fh="120">effects_rebalanced_arsenal/ra_effector_hacking_warning_small_strip3.png</animSheet>
