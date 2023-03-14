@@ -32,14 +32,12 @@ script.on_fire_event(Defines.FireEvents.WEAPON_FIRE, function(ship, weapon, proj
     local beamReplacement = burstsToBeams[Hyperspace.Get_Projectile_Extend(projectile).name]
     if beamReplacement then
         local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
-        spaceManager:CreateBeam(
-            beamReplacement,
-            projectile.position,
-            projectile.currentSpace,
-            projectile.ownerId,
+        local beam = spaceManager:CreateBeam(
+            beamReplacement, projectile.position, projectile.currentSpace, projectile.ownerId,
             projectile.target, Hyperspace.Pointf(projectile.target.x, projectile.target.y + 1),
-            projectile.destinationSpace,
-            1, projectile.heading).entryAngle = projectile.entryAngle
+            projectile.destinationSpace, 1, projectile.heading)
+        beam.sub_start.x = 500*math.cos(projectile.entryAngle)
+        beam.sub_start.y = 500*math.sin(projectile.entryAngle) 
         projectile:Kill()
         return true
     end
@@ -51,7 +49,7 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(ship,
 		local pop = Hyperspace.Damage()	--we've assigned the object Hyperspace.Damage as pop, which we made local to avoid any conflicts with other mods.
 		pop.iDamage = 2
 		ship.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, pop, true)
-       -- ship:CollisionShield(projectile.position, projectile.position, pop, false)
+        -- ship:CollisionShield(projectile.position, projectile.position, pop, false)
 		log(response.collision_type)
     end
 end)
@@ -65,6 +63,6 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(ship, 
 
        ship:DamageArea(projectile.position, empHullHit, true) --Vert: Can now call DamageArea safely
 
-        Hyperspace.Get_Projectile_Extend(projectile).name = "RVS_EMP_1" --Vert: set the name back for any future functions to use
+       Hyperspace.Get_Projectile_Extend(projectile).name = "RVS_EMP_1" --Vert: set the name back for any future functions to use
     end
 end)
