@@ -296,10 +296,10 @@
 				<number>1</number>
 			</slot>
 		</clonebay>
-		<doors power="1" room="27" start="true" img="room_doors_5">
+		<doors power="1" room="27" start="true" img="room_doors_rvs_ai">
 			<slot>
-				<direction>right</direction>
-				<number>0</number>
+				<direction>up</direction>
+				<number>-2</number>
 			</slot>
 		</doors>
 		<drones max="8" power="2" room="14" start="true" img="room_drones_10" />
@@ -325,8 +325,8 @@
 		</pilot>
 		<sensors power="1" room="24" start="false" img="room_sensors_rvs_ai">
 			<slot>
-				<direction>down</direction>
-				<number>1</number>
+				<direction>up</direction>
+				<number>-2</number>
 			</slot>
 		</sensors>
 		<shields max="8" power="2" room="19" start="true" img="room_shields_9">

@@ -28,19 +28,19 @@
         </crew>
     </mod-append:customShip>
 	
-	<mod-append:customShip name="PLAYER_SHIP_RVSP_AI_2">
-		<hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
+	<!--<mod-append:customShip name="PLAYER_SHIP_RVSP_AI_2">
+		<hiddenAug>SHIP_AUTO</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>
 		<crewLimit>4</crewLimit>
 		<autoShipForce>true</autoShipForce>
 		<crew>
-			<rvs_ai_hologram room="0" name="[404]" /> <!-- Piloting-->
-			<rvs_ai_hologram room="9" name="Replicant 1042" /> <!-- Weapons -->
-			<rvs_ai_hologram room="23" name="Reciteful Error" /> <!-- Engines -->
-			<rvs_ai_hologram room="29" name="DIE DIE DIE" /> <!-- Shields -->
+			<rvs_ai_hologram room="0" name="[404]" />
+			<rvs_ai_hologram room="9" name="Replicant 1042" />
+			<rvs_ai_hologram room="23" name="Reciteful Error" />
+			<rvs_ai_hologram room="29" name="DIE DIE DIE" />
 		</crew>
-	</mod-append:customShip>
+	</mod-append:customShip>-->
 </mod:findLike>
 
 
