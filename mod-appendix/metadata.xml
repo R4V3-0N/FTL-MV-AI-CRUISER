@@ -10,7 +10,7 @@
   <description>
 <![CDATA[ THIS MOD HAS DEPENDENCIES! Make sure to patch Inferno Core and Vertex Tags and Utility Functions first!
 
-This mod adds a new race of AI hardlight Avatars from a distant universe which will eventually be developed upon further, both with type B and C layouts as well as eventually events and lore.
+This mod adds a new race of AI hardlight Avatars from a distant universe which will eventually be developed upon further, both with type B and C layouts as well as eventually events and lore inspired by the AI Avatar race from Captains Edition and Hyperspace by Sleeper Service.
 
 This sample includes:
 - AI Cruiser type A
@@ -20,8 +20,6 @@ This sample includes:
   - Splitter Focus Beam II, a 'flak beam' that fires 4 focus beams
 - New Race: AI Avatar's, a synthetic race of disposable hardlight avatars with many immunities
 - New Augment: Hologram Emmiter, an augment that lets you produce an AI hologram when one perishes
-
-Load after Multiverse.
 ]]>
   </description>
 </metadata>
