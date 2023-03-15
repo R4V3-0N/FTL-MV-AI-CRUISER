@@ -12,7 +12,7 @@
 <FTL>
 
 <mod:findLike type="ships">
-	<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="true" c="false">    
+	<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="false" c="false">    
     </mod-append:ship>
     <mod-append:customShip name="PLAYER_SHIP_RVSP_AI">
         <hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
