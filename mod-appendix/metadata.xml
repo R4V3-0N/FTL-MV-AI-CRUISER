@@ -1,6 +1,6 @@
 <metadata>
   <title><![CDATA[ AI Cruiser ]]></title>
-  <threadUrl><![CDATA[ pending ]]></threadUrl>
+  <threadUrl><![CDATA[ https://github.com/R4V3-0N/FTL-MV-AI-CRUISER/releases ]]></threadUrl>
   <author><![CDATA[ R4V3-0N and Chrono Vortex ]]></author>
   <version><![CDATA[ 1.0 ]]></version>
 
@@ -19,7 +19,11 @@ This sample includes:
   - Auto Beam, a beam that after firing drops to a quick 2.5 second cooldown
   - Splitter Focus Beam II, a 'flak beam' that fires 4 focus beams
 - New Race: AI Avatar's, a synthetic race of disposable hardlight avatars with many immunities
-- New Augment: Hologram Emmiter, an augment that lets you produce an AI hologram when one perishes
+- New Augment: Hologram Emitter, an augment that lets you produce an AI hologram when one perishes
+
+Links to Vertex and InfernoCore:
+https://github.com/ChronoVortex/FTL-HS-Vertex/releases
+https://drive.google.com/file/d/14XXh8w6SLV78nC9sU-MA0qHKCYzo21tk/view
 ]]>
   </description>
 </metadata>
