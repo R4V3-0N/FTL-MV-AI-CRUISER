@@ -1,3 +1,4 @@
+<FTL>
 <mod:findName type="sectorDescription" name="SECRET_ANCIENT" panic="true">
     <mod:findLike type="rarityList">
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="0"/>
@@ -15,3 +16,66 @@
         <mod-append:blueprint name="rvs_ai_hologram" rarity="0"/>
     </mod:findLike>
 </mod:findName>
+
+<!--
+	Due to the lore of the AI Avatars being incredibly work in progress, this early release will distribute the weapons added in this mod and the AI's themselves into the following sectors to allow players
+	to have fun playing around with things and expanding on their arsenal.
+	
+	In the future these items will be a lot more restrictive
+-->
+
+<mod:findName type="sectorDescription" name="SECTOR_SEPARATIST">
+	<mod:findLike type = "rarityList">
+		<mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
+		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="3"/>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="sectorDescription" name="SECTOR_SEPARATIST_UNIQUE">
+	<mod:findLike type = "rarityList">
+		<mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
+		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="3"/>
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_ZOLTAN">
+	<mod:findLike type = "rarityList">
+		<mod-append:blueprint name="RA_BEAM_AUTO" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
+		<mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="2"/>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="sectorDescription" name="SECTOR_ZOLTAN_UNIQUE">
+	<mod:findLike type = "rarityList">
+		<mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
+		<mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="3"/>
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_ENGI">
+	<mod:findLike type = "rarityList">
+		<mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
+		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="2"/>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="sectorDescription" name="SECTOR_ENGI_UNIQUE">
+	<mod:findLike type = "rarityList">
+		<mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
+		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="2"/>
+	</mod:findLike>
+</mod:findName>
+</FTL>

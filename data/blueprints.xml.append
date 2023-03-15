@@ -147,7 +147,7 @@
     <short>Splitter II</short>
     <desc>Fires a cluster of pinpoint beams over a wide area dealing up to 4 damage.</desc>
     <tooltip>Fires a scatter of beams across a random area doing up to 4 damage.</tooltip>
-    <radius>42</radius>
+    <radius>47</radius> <!-- R4: Changed from 42 to 47, as I think a near guaranteed 4 hits on a 2x2 room is a lil powerful for a weapon like this-->
     <damage>1</damage>
     <shots>1</shots>
     <sp>0</sp>
@@ -158,7 +158,7 @@
     <cost>62</cost>
     <bp>10</bp>
     <speed>0</speed> <!-- R4: Chrono told me this is important to be 0-->
-    <rarity>3</rarity>
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
     <projectiles>
         <projectile count="4" fake="false">laser_burst</projectile> <!-- Fake projectiles which LUA replaces with beams -->
     </projectiles>
@@ -189,7 +189,7 @@
 	<power>2</power>
 	<cost>45</cost>
 	<bp>2</bp>
-	<rarity>2</rarity>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
 	<image>beam_contact</image>
 	<boost>
 		<type>cooldown</type>
@@ -216,7 +216,7 @@
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
 	<hack duration="4">
-		<shields>3.8</shields> <!-- to prevent it doing 2 shields solo-->
+		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
 		<doors>8</doors>
 		<sensors>8</sensors>
 		<temporal>8</temporal>
@@ -231,7 +231,7 @@
 	<power>2</power>
 	<cost>55</cost>
 	<bp>2</bp>
-	<rarity>3</rarity>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
 	<!--<image>ra_effector_impact_invisible</image>-->
 	<image>ra_effector_hacking</image>
 	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
@@ -258,7 +258,7 @@
     <desc>Allows any hologram crew which have been destroyed after this augment has been installed to be recreated at empty beacons.</desc>
     <cost>60</cost>
     <bp>8</bp>
-    <rarity>4</rarity>
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
     <stackable>false</stackable>
     <value>1</value>
 </augBlueprint>
@@ -269,7 +269,7 @@
 	<bp>1</bp>
 	<title>AI Avatar</title>
 	<short>AI Avatar</short>
-	<rarity>4</rarity>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
 	<powerList>
 		<power>Does not take up a crew slot</power>
 		<power>Max Health is reduced to 50</power>
@@ -361,7 +361,7 @@
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI_2" layout="rvsp_ai_cruiser_2" img="rvsp_ai_cruiser_2">
 	<class>AI Shock Cruiser</class>
-	<name>Ellectric Colar</name>
+	<name>Electric Collar</name>
 	<desc>This self-aware cruiser is configured for rapid avatar deployment, however it lacks proper insulation for organic crews.</desc>
 	<systemList>
 		<artillery power="1" room="1" start="false" weapon="BOMB_BREACH_1" img="room_artillery_5" />
