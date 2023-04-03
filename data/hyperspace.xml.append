@@ -28,7 +28,7 @@
         </crew>
     </mod-append:customShip>
 	
-	<!--<mod-append:customShip name="PLAYER_SHIP_RVSP_AI_2">
+	<mod-append:customShip name="PLAYER_SHIP_RVSP_AI_2">
 		<hiddenAug>SHIP_AUTO</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>
@@ -40,7 +40,7 @@
 			<rvs_ai_hologram room="23" name="Reciteful Error" />
 			<rvs_ai_hologram room="29" name="DIE DIE DIE" />
 		</crew>
-	</mod-append:customShip>-->
+	</mod-append:customShip>
 </mod:findLike>
 
 
