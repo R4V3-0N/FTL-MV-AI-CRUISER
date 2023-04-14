@@ -275,7 +275,7 @@
 
 <augBlueprint name="RVS_LOCKED_MICROTELEPORTER">
     <title>Microteleporter</title>
-    <desc>Allows any hologram crew to use a microteleporter to board the enemy vesel, however, it doesn't provide a method back.</desc>
+    <desc>Allows hologram crew to board enemy ships, but does not allow retrieval.</desc>
     <cost>55</cost>
     <bp>8</bp>
     <rarity>0</rarity>	<!-- rarity in sector rarity list-->
@@ -296,7 +296,7 @@
 		<power>Cannot heal in medbay or be cloned</power>
 		<power>Provides power and heals slowly in drone control room</power>
 		<power>Regains all health on jump</power>
-		<power>Can teleport anywhere from the enemy teleporter room</power>
+		<power>Can teleport to your ship from the enemy teleporter room</power>
 		<power>Immune to suffocation and fires</power>
 		<power>Immune to mind control</power>
 		<power>Can phase through doors</power>
