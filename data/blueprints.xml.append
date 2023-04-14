@@ -263,6 +263,26 @@
     <value>1</value>
 </augBlueprint>
 
+<augBlueprint name="RVS_HOLO_MAKER">
+    <title>Holo-Projector</title>
+    <desc>Can produce new Hologram Avatars at empty beacons.</desc>
+    <cost>48</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
+    <stackable>false</stackable>
+    <value>1</value>
+</augBlueprint>
+
+<augBlueprint name="RVS_LOCKED_MICROTELEPORTER">
+    <title>Microteleporter</title>
+    <desc>Allows any hologram crew to use a microteleporter to board the enemy vesel, however, it doesn't provide a method back.</desc>
+    <cost>55</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
+    <stackable>false</stackable>
+    <value>1</value>
+</augBlueprint>
+
 <crewBlueprint name="rvs_ai_hologram">
 	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
 	<cost>30</cost>
@@ -362,7 +382,7 @@
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI_2" layout="rvsp_ai_cruiser_2" img="rvsp_ai_cruiser_2">
 	<class>AI Shock Cruiser</class>
 	<name>Electric Collar</name>
-	<desc>This self-aware cruiser is configured for rapid avatar deployment, however it lacks proper insulation for organic crews.</desc>
+	<desc>This self-aware cruiser is configured for rapid avatar deployment, though rather inhospitable to organic crew.</desc>
 	<systemList>
 		<artillery power="1" room="1" start="false" weapon="BOMB_BREACH_1" img="room_artillery_5" />
 		<battery power="1" room="26" start="true" img="room_battery_3" />
@@ -372,12 +392,7 @@
 				<number>1</number>
 			</slot>
 		</clonebay>
-		<doors power="1" room="17" start="true" img="room_doors_8">
-			<slot>
-				<direction>left</direction>
-				<number>0</number>
-			</slot>
-		</doors>
+		<doors power="1" room="18" start="true" img="room_doors_small_rvs_ai" />
 		<drones power="2" room="13" start="true" img="room_drones_12" />
 		<engines power="3" room="23" start="true" img="rvs_room_engines_1">
 			<slot>
@@ -429,6 +444,7 @@
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="9" />
+	<aug name="RVS_LOCKED_MICROTELEPORTER" />
 	<aug name="ADV_SCANNERS" />
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>

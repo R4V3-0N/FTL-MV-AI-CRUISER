@@ -12,19 +12,19 @@
 <FTL>
 
 <mod:findLike type="ships">
-	<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="false" c="false">    
+	<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="true" c="false">    
     </mod-append:ship>
     <mod-append:customShip name="PLAYER_SHIP_RVSP_AI">
-        <hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
-        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-        <hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>
+		<hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>RVS_HOLO_EMITTERS</hiddenAug> <!-- change this to a maker augment -->
         <crewLimit>4</crewLimit>
         <autoShipForce>true</autoShipForce>
         <crew>
             <rvs_ai_hologram room="0" name="Class G0O9" />
-            <rvs_ai_hologram room="7" name="Intruder rb25B" />
-            <rvs_ai_hologram room="26" name="Turret F7329" />
-            <rvs_ai_hologram room="19" name="Trojan v1-o7" />
+            <rvs_ai_hologram room="7" name="Intruder b25B" />
+            <rvs_ai_hologram room="26" name="Turret F739" />
+            <rvs_ai_hologram room="19" name="Trojan V1-o7" />
         </crew>
     </mod-append:customShip>
 	
@@ -32,6 +32,10 @@
 		<hiddenAug>SHIP_AUTO</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>
+		<room id="18">
+			<roomAnim renderLayer="2">telepad_ico</roomAnim> <!-- R4: This might be changed with a unique symbol instead -->
+			<roomAnim renderLayer="1">telepad_on</roomAnim> <!-- R4: I am not sure if this works -->
+		</room>
 		<crewLimit>4</crewLimit>
 		<autoShipForce>true</autoShipForce>
 		<crew>
@@ -162,6 +166,105 @@
     </mod-append:race>
 </mod:findLike>
 
+<augments>
+	<aug name="RVS_LOCKED_MICROTELEPORTER">
+		<locked/>
+		<statBoosts>
+			<statBoost name="teleportMoveOtherShip">
+				<boostType>SET</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget> <!-- Hologram list-->
+				<whiteList load ="RVS_LIST_AI_AVATAR"/>
+				<droneTarget>CREW</droneTarget>
+				<value>true</value>
+				<systemList>
+					<doors/>
+				</systemList>
+				<priority>0</priority>
+			</statBoost>
+		</statBoosts>
+	</aug>	
+<!-- Reference to get TP stuff right hopefully
+	<aug name="LOCKED_GLOBAL_TELEPORT">
+		<locked/>
+		<statBoosts>
+			<statBoost name="teleportMoveOtherShip">
+				<boostType>SET</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<value>true</value>
+				<priority>0</priority>
+			</statBoost>
+		</statBoosts>
+    </aug>
+	<aug name="LOCKED_SHIP_TELEPORT">
+		<locked/>
+		<statBoosts>
+			<statBoost name="teleportMove">
+				<boostType>SET</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<value>true</value>
+				<systemList>
+					<engines/>
+				</systemList>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemPowerDependency>
+					<engines/>
+				</systemPowerDependency>
+				<systemPowerScaling>
+					<noSys>0.0</noSys>
+					<hackedSys>0.0</hackedSys>
+					<noPwr>0.0</noPwr>
+					<onePwr>1.0</onePwr>
+				</systemPowerScaling>
+			</statBoost>
+			<statBoost name="teleportMove">
+				<boostType>SET</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<value>true</value>
+				<systemList>
+					<weapons/>
+				</systemList>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemPowerDependency>
+					<weapons/>
+				</systemPowerDependency>
+				<systemPowerScaling>
+					<noSys>0.0</noSys>
+					<hackedSys>0.0</hackedSys>
+					<noPwr>0.0</noPwr>
+					<onePwr>1.0</onePwr>
+				</systemPowerScaling>
+			</statBoost>
+			<statBoost name="teleportMove">
+				<boostType>SET</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<value>true</value>
+				<systemList>
+					<shields/>
+				</systemList>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemPowerDependency>
+					<shields/>
+				</systemPowerDependency>
+				<systemPowerScaling>
+					<noSys>0.0</noSys>
+					<hackedSys>0.0</hackedSys>
+					<noPwr>0.0</noPwr>
+					<onePwr>1.0</onePwr>
+				</systemPowerScaling>
+			</statBoost>
+		</statBoosts>
+    </aug>-->
+</augments>
+
 <mod:findLike type="events" limit="1">
     <mod-append:variable name="loc_holos_dead" op="set" val="0"/>
     <mod-append:req name="RVS_REQ_HOLO_TRACK_DEATH" type="any">
@@ -176,5 +279,4 @@
 <mod:findLike type="scripts">
     <mod-append:script>data/ai_cruiser.lua</mod-append:script>
 </mod:findLike>
-
 </FTL>
