@@ -43,6 +43,45 @@ script.on_fire_event(Defines.FireEvents.WEAPON_FIRE, function(ship, weapon, proj
     end
 end, INT_MAX)
 
+local empWeapons = {} -- CV: Use a list of EMP weapons instead of comparing to one string
+empWeapons["RVS_EMP_1"] = {
+    shieldPop = 2,
+    shieldSuperPop = 2,
+    ion = 2
+}
+
+-- Make EMP pop extra shields
+script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)
+    local shieldPower = shipManager.shieldSystem.shields.power
+    local empData = nil
+    if pcall(function() empData = empWeapons[Hyperspace.Get_Projectile_Extend(projectile).name] end) and empData then
+        if shieldPower.super.first > 0 then
+            if empData.shieldSuperPop > 0 then
+                local popper = Hyperspace.Damage()
+                popper.iDamage = empData.shieldSuperPop
+                shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, popper, true)
+            end
+        else
+            shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
+            shieldPower.first = math.max(0, shieldPower.first - empData.shieldPop)
+        end
+    end
+end)
+
+-- Make EMP do ion damage
+-- This is fixed with a method provided by Vert, I still have yet to understand the logic of this. But their notes are here to provide me closure when I am wise enough to comprehend it. I have retroactively applied comments from them with a prefix
+script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(ship, projectile, damage, response)
+    local empData = nil
+    if pcall(function() empData = empWeapons[Hyperspace.Get_Projectile_Extend(projectile).name] end) and empData then
+       local empHullHit = Hyperspace.Damage()
+       empHullHit.iIonDamage = empData.ion
+       Hyperspace.Get_Projectile_Extend(projectile).name = "" --Vert: if the name of the active projectile is blank, the first line will evaluate to false and empHullImpact won't do anything within the next call of DamageArea
+       ship:DamageArea(projectile.position, empHullHit, true) --Vert: Can now call DamageArea safely
+       Hyperspace.Get_Projectile_Extend(projectile).name = "RVS_EMP_1" --Vert: set the name back for any future functions to use
+    end
+end)
+
+--[[ Old shield popping code
 --checks on internal event, that event is defined as a shield collission, which when it detects a shield collission it then calls for empShieldImpact
 script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(ship, projectile, damage, response) --this functions arguement is looking at a bunch of things that I have yet to comprehend but it should cover all the basics I need for when the projectile hits a shield
     if Hyperspace.Get_Projectile_Extend(projectile).name == "RVS_EMP_1" then            --this gives me an output that tells me which projectile hit a shield which it then compares to the blueprint of the weapon, if it equals rvs_emp_1 then it continues. If not it stops
@@ -53,16 +92,4 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(ship,
 		log(response.collision_type)
     end
 end)
-
--- This is fixed with a method provided by Vert, I still have yet to understand the logic of this. But their notes are here to provide me closure when I am wise enough to comprehend it. I have retroactively applied comments from them with a prefix
-script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(ship, projectile, damage, response)
-    if Hyperspace.Get_Projectile_Extend(projectile).name == "RVS_EMP_1" then
-       local empHullHit = Hyperspace.Damage()
-       empHullHit.iIonDamage = 1 --R4: Will set it to 1 ion damage for now along with 1 regular damage
-       Hyperspace.Get_Projectile_Extend(projectile).name = "" --Vert: if the name of the active projectile is blank, the first line will evaluate to false and empHullImpact won't do anything within the next call of DamageArea
-
-       ship:DamageArea(projectile.position, empHullHit, true) --Vert: Can now call DamageArea safely
-
-       Hyperspace.Get_Projectile_Extend(projectile).name = "RVS_EMP_1" --Vert: set the name back for any future functions to use
-    end
-end)
+]]--

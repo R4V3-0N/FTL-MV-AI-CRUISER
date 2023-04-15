@@ -76,8 +76,7 @@
 	<locked>1</locked>
 	<desc>Test EMP weapon.</desc>
 	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip> <!-- placeholder -->
-	<damage>1</damage> <!-- added one damage for now -->
-	<!--<ion>1</ion>-->
+	<damage>0</damage>
 	<speed>35</speed>
 	<shots>1</shots>
 	<sp>0</sp>
