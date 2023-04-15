@@ -384,16 +384,21 @@
 	<desc>This self-aware cruiser is configured for rapid avatar deployment, though rather inhospitable to organic crew.</desc>
 	<systemList>
 		<artillery power="1" room="1" start="false" weapon="BOMB_BREACH_1" img="room_artillery_5" />
-		<battery power="1" room="26" start="true" img="room_battery_3" />
+		<battery max="3" power="1" room="26" start="true" img="room_battery_3" />
 		<cloaking power="1" room="15" start="false" img="rvs_room_cloaking_11" />
 		<clonebay power="1" room="4" start="false">
 			<slot>
 				<number>1</number>
 			</slot>
 		</clonebay>
-		<doors power="1" room="18" start="true" img="room_doors_small_rvs_ai" />
-		<drones power="2" room="13" start="true" img="room_drones_12" />
-		<engines power="3" room="23" start="true" img="rvs_room_engines_1">
+		<doors power="1" room="18" start="true" img="room_doors_small_rvs_ai">
+			<slot>
+				<direction>up</direction>
+				<number>-2</number>
+			</slot>
+		</doors>
+		<drones max="8" power="2" room="13" start="true" img="room_drones_12" />
+		<engines max="8" power="3" room="23" start="true" img="rvs_room_engines_2">
 			<slot>
 				<direction>down</direction>
 				<number>3</number>
@@ -426,7 +431,7 @@
 			</slot>
 		</shields>
 		<teleporter power="1" room="7" start="false" />
-		<weapons power="4" room="9" start="true" img="room_weapons_4">
+		<weapons max="8" power="4" room="9" start="true" img="room_weapons_4">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
