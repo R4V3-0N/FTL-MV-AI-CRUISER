@@ -271,4 +271,12 @@
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
+
+
+<animSheet name="telepad_on_1x1" w="35" h="35" fw="35" fh="35">effects/telepad_on_1x1.png</animSheet>
+<anim name="telepad_on_1x1">
+	<sheet>telepad_on_1x1</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
 </FTL>

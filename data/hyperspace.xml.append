@@ -35,7 +35,10 @@
         <rooms>
             <room id="18">
                 <roomAnim renderLayer="2">telepad_ico</roomAnim> <!-- R4: This might be changed with a unique symbol instead -->
-                <roomAnim renderLayer="1">telepad_on</roomAnim> <!-- R4: I am not sure if this works -->
+                <roomAnim renderLayer="1">
+                    <anim animType="default" animBorder="0">invisible</anim>
+                    <tileAnim>telepad_on_1x1</tileAnim>
+                </roomAnim> 
             </room>
         </rooms>
 		<crewLimit>4</crewLimit>
