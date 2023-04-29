@@ -93,3 +93,24 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(ship,
     end
 end)
 ]]--
+
+--Funny beam
+local ionAxtinguisherBeams = {
+    WEAPON_NAME = 2, --WEAPON_NAME will de-ionize rooms, and do 2 times as much damage to ionized rooms
+}
+
+
+script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM, 
+function(ShipManager, Projectile, Location, Damage, newTile, beamHit)
+  local weaponName = Hyperspace.Get_Projectile_Extend(projectile).name --Get the name of the weapon firing the beam.
+  local damageMultiplier = ionAxtinguisherBeams[weaponName] --If the weapon has a multiplier, assign that to damageMultiplier. Otherwise, damageMultiplier will be nil
+  if damageMultiplier then --If the weapon has a multiplier, then do the following
+    local roomId = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true) --Get the selected room from the location that the beam is hitting
+    local system = ShipManager:GetSystemInRoom(roomId)
+    if system.iLockCount > 0 then --If the system is ionized
+        system:LockSystem(0) --Deionize the system
+        Damage.iDamage = Damage.iDamage * damageMultiplier --Multiply the damage of the weapon by damageMultiplier
+    end
+  end 
+  return Defines.Chain.CONTINUE, beamHit 
+end)
