@@ -32,10 +32,12 @@
 		<hiddenAug>SHIP_AUTO</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>
-		<room id="18">
-			<roomAnim renderLayer="2">telepad_ico</roomAnim> <!-- R4: This might be changed with a unique symbol instead -->
-			<roomAnim renderLayer="1">telepad_on</roomAnim> <!-- R4: I am not sure if this works -->
-		</room>
+        <rooms>
+            <room id="18">
+                <roomAnim renderLayer="2">telepad_ico</roomAnim> <!-- R4: This might be changed with a unique symbol instead -->
+                <roomAnim renderLayer="1">telepad_on</roomAnim> <!-- R4: I am not sure if this works -->
+            </room>
+        </rooms>
 		<crewLimit>4</crewLimit>
 		<autoShipForce>true</autoShipForce>
 		<crew>
