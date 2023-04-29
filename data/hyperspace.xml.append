@@ -36,7 +36,7 @@
             <room id="18">
                 <roomAnim renderLayer="2">telepad_ico</roomAnim> <!-- R4: This might be changed with a unique symbol instead -->
                 <roomAnim renderLayer="1">
-                    <anim animType="default" animBorder="0">invisible</anim>
+                    <anim animType="default" animBorder="0">invisible</anim> <!--Needed or else game crashes-->
                     <tileAnim>telepad_on_1x1</tileAnim>
                 </roomAnim> 
             </room>
