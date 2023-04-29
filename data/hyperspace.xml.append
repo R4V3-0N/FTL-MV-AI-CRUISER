@@ -144,11 +144,7 @@
                 <value>true</value>
                 <shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
                 <crewTarget>SELF</crewTarget>
-                <maxStacks>1</maxStacks>
                 <priority>0</priority>
-                <whiteList>
-                    <rvs_ai_hologram/>
-                </whiteList>
                 <systemRoomTarget>ALL</systemRoomTarget>
                 <systemPowerDependency>
                     <teleporter/>
@@ -157,7 +153,6 @@
                     <teleporter/>
                 </systemList>
                 <systemPowerScaling>
-                    <noSys>0</noSys>
                     <noPwr>1</noPwr>
                     <onePwr>1</onePwr>
                 </systemPowerScaling>
