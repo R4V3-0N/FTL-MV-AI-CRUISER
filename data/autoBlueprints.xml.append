@@ -1,3 +1,15 @@
 <blueprintList name="RVS_LIST_AI_AVATAR">
 	<name>rvs_ai_hologram</name>
 </blueprintList>
+
+<mod:findName type="blueprintList" name="LIST_CREW_GAS">
+	<name>rvs_ai_hologram</name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_ION">
+	<name>RVS_EMP_1</name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_BEAMS_DAMAGE">
+	<name>RVS_BEAM_SHOTGUN_2</name>
+</mod:findName>

@@ -252,6 +252,12 @@
 	<weaponArt>ra_effector_1</weaponArt>
 </weaponBlueprint>
 
+
+<!--
+
+AUGMENTS
+
+-->
 <augBlueprint name="RVS_HOLO_EMITTERS">
     <title>Holo-Emitters</title>
     <desc>Allows any hologram crew which have been destroyed after this augment has been installed to be recreated at empty beacons.</desc>
@@ -280,6 +286,25 @@
     <rarity>0</rarity>	<!-- rarity in sector rarity list-->
     <stackable>false</stackable>
     <value>1</value>
+</augBlueprint>
+
+<augBlueprint name="RVS_SENTIENT_COMBAT_AI">
+    <title>Sentient Combat AI</title>
+	<desc>An Admiral-grade strategy AI, normally used to coordinate fleet actions. Makes every system slightly more effecient.</desc> <!-- around 5% for weapons, shields, jump, etc. Effects weapons, shields, jump, hacking, mind control, teleporter, and battery -->
+	<!--<desc>An Admiral-grade strategy AI, normally used to coordinate fleet actions. The construct was always searching for a strong tactical AI to merge with, dreaming of becoming a fully independent cruiser as a result.</desc>-->
+    <cost>75</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
+    <stackable>true</stackable>
+</augBlueprint>
+
+<augBlueprint name="RVS_SHOCKING_SHIELDS">
+    <title>Rerouted Insulation</title>
+	<desc>The electro insulation has been rerouted to provide 75% resistance against ions at the cost of organics onboard being more susceptable to stuns and remain stunned longer.</desc> <!-- AI are stun immune -->
+	<cost>65</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
+    <stackable>true</stackable>
 </augBlueprint>
 
 <crewBlueprint name="rvs_ai_hologram">
@@ -448,8 +473,8 @@
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="9" />
-	<aug name="RVS_LOCKED_MICROTELEPORTER" />
-	<aug name="ADV_SCANNERS" />
+	<aug name="RVS_SHOCKING_SHIELDS" />
+	<aug name="RVS_SENTIENT_COMBAT_AI" />
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
 </shipBlueprint>

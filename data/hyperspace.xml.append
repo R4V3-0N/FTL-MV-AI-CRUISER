@@ -10,6 +10,12 @@
 </discord>
 
 <FTL>
+<mod:findName type="req" name="BLUELIST_CREW_NOFIRE">
+  <mod-append:name>rvs_ai_hologram</mod-append:name>
+</mod:findName>
+<mod:findName type="req" name="BLUELIST_CREW_NO2">
+  <mod-append:name>rvs_ai_hologram</mod-append:name>
+</mod:findName>
 
 <mod:findLike type="ships">
 	<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="true" c="false">    
@@ -32,6 +38,7 @@
 		<hiddenAug>SHIP_AUTO</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>
+		<hiddenAug>RVS_LOCKED_MICROTELEPORTER</hiddenAug>
         <rooms>
             <room id="18">
                 <roomAnim renderLayer="2">telepad_ico</roomAnim> <!-- R4: This might be changed with a unique symbol instead -->
@@ -181,6 +188,49 @@
 					<doors/>
 				</systemList>
 				<priority>0</priority>
+			</statBoost>
+		</statBoosts><stunMultiplier>0</stunMultiplier>
+	</aug>
+	<aug name="RVS_SENTIENT_COMBAT_AI"> <!-- place holder stats, eventually will have main systems set to be +1 skill to each terminal, old stats will be reused by the cooldowner-->
+		<function name="FTL_BOOSTER" value="0.05" useForReqs="true"/>
+		<function name="SHIELD_RECHARGE" value="0.05" useForReqs="true"/>
+		<function name="AUTO_COOLDOWN" value="0.05" useForReqs="true"/>
+		<function name="BATTERY_BOOSTER" value="0.05" useForReqs="true"/>
+		<function name="FAST_MIND" value="1" useForReqs="true"/> <!--makes hacking 5 seconds faster-->
+		<function name="FAST_CLOAK" value="1" useForReqs="true"/> <!--makes hacking 5 seconds faster-->
+		<function name="FAST_HACK" value="1" useForReqs="true"/> <!--makes hacking 5 seconds faster-->
+		<function name="FAST_TEMPORAL" value="1" useForReqs="true"/> <!--makes hacking 5 seconds faster-->
+		<statBoosts>
+			<statBoost name="healCrewAmount">
+				<boostType>FLAT</boostType>
+				<amount>0.05</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+				</statBoost>
+		</statBoosts>
+	</aug>
+	<aug name="RVS_SHOCKING_SHIELDS"> <!-- place holder stats, eventually will have main systems set to be +1 skill to each terminal, old stats will be reused by the cooldowner-->
+    	<function name="ION_ARMOR" value="0.80" useForReqs="true"/>
+		<statBoosts>
+			<statBoost name="stunMultiplier">
+				<boostType>MULT</boostType>
+				<amount>1.5</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<affectsSelf>true</affectsSelf>
+				<priority>0</priority>
+			</statBoost>
+			<statBoost name="stunMultiplier">
+				<boostType>MULT</boostType>
+				<amount>0</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<affectsSelf>true</affectsSelf>
+				<priority>0</priority>
+				<whiteList>
+					<rvs_ai_hologram/>
+				</whiteList>
 			</statBoost>
 		</statBoosts>
 	</aug>	
