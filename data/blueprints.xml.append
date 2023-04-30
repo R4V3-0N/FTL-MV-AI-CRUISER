@@ -11,8 +11,8 @@
 <weaponBlueprint name="RVS_BEAM_ION_BUST_1">
 	<type>BEAM</type>
 	<tip>tip_beams</tip>
-	<title>Hull Beam</title>
-	<short>Hull Beam</short>
+	<title>Ion Bust Beam Mark 1</title>
+	<short>Ion Bust 1</short>
 	<tip>tip_hull</tip>
 	<desc>This beam is most powerful when targeting ionized systems.</desc>
 	<tooltip>Beam weapon; 1 damage; 2x damage in ionized rooms.</tooltip>
@@ -477,7 +477,7 @@ AUGMENTS
 				<number>-2</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="29" start="true" img="room_shields_9">
+		<shields max="8" power="2" room="29" start="true" img="room_shields_9">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
