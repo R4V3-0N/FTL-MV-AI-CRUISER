@@ -102,7 +102,7 @@ local ionBustBeams = {
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM, 
 function(ShipManager, Projectile, Location, Damage, newTile, beamHit)
-  local weaponName = Hyperspace.Get_Projectile_Extend(projectile).name --Get the name of the weapon firing the beam.
+  local weaponName = Hyperspace.Get_Projectile_Extend(Projectile).name --Get the name of the weapon firing the beam.
   local damageMultiplier = ionBustBeams[weaponName] --If the weapon has a multiplier, assign that to damageMultiplier. Otherwise, damageMultiplier will be nil
   if damageMultiplier then --If the weapon has a multiplier, then do the following
     local roomId = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true) --Get the selected room from the location that the beam is hitting
