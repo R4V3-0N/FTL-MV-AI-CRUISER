@@ -107,7 +107,7 @@ function(ShipManager, Projectile, Location, Damage, newTile, beamHit)
   if damageMultiplier then --If the weapon has a multiplier, then do the following
     local roomId = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true) --Get the selected room from the location that the beam is hitting
     local system = ShipManager:GetSystemInRoom(roomId)
-    if system.iLockCount > 0 then --If the system is ionized
+    if system and system.iLockCount > 0 then --If the system is ionized
         system:LockSystem(0) --Deionize the system
         Damage.iDamage = Damage.iDamage * damageMultiplier --Multiply the damage of the weapon by damageMultiplier
         local soundName = "ionHit" .. Hyperspace.random32() % 3 
