@@ -8,6 +8,34 @@
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->
 
+<weaponBlueprint name="RVS_BEAM_ION_BUST_1">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Hull Beam</title>
+	<short>Hull Beam</short>
+	<tip>tip_hull</tip>
+	<desc>This beam is most powerful when targeting ionized systems.</desc>
+	<tooltip>Beam weapon; 1 damage; 2x damage in ionized rooms.</tooltip>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>14</cooldown>
+	<!--on lua table for x2 ion damage under ionBustBeams-->
+	<power>2</power>
+	<cost>70</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>115</length> <!-- R4: 15 pixels longer than hull beam, due to lower availability of ionized rooms making this a straight upgrade when ignoring any busts-->
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>rvs_beam_ion_bust_1</weaponArt>
+	<iconImage>beamH</iconImage>
+</weaponBlueprint>
+
 <!-- SLEEPER'S HYPERSPACE -->
 <weaponBlueprint name="RVS_HS_IR_BEAM_1">
     <type>BEAM</type>
@@ -467,6 +495,7 @@ AUGMENTS
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="5" count="3">
 		<weapon name="RVS_EMP_1" />
+		<weapon name="RVS_BEAM_ION_BUST_1" />
 	</weaponList>
 	<droneList drones="6" count="3">
 		<drone name="PEST_RAD" />

@@ -11,11 +11,16 @@
 
 <FTL>
 <mod:findName type="req" name="BLUELIST_CREW_NOFIRE">
-  <mod-append:name>rvs_ai_hologram</mod-append:name>
+  <mod-append:name>RVS_LIST_CREW_AI_AVATAR</mod-append:name>
 </mod:findName>
 <mod:findName type="req" name="BLUELIST_CREW_NO2">
-  <mod-append:name>rvs_ai_hologram</mod-append:name>
+  <mod-append:name>RVS_LIST_CREW_AI_AVATAR</mod-append:name>
 </mod:findName>
+
+<mod:findName type="req" name="LIST_CHECK_ANY_CREW">
+  <mod-append:name>RVS_LIST_CREW_AI_AVATAR</mod-append:name>
+</mod:findName>
+
 
 <mod:findLike type="ships">
 	<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="true" c="false">    
