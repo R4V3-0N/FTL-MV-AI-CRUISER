@@ -110,7 +110,7 @@ function(ShipManager, Projectile, Location, Damage, newTile, beamHit)
     if system and system.iLockCount > 0 then --If the system is ionized
         system:LockSystem(0) --Deionize the system
         Damage.iDamage = Damage.iDamage * damageMultiplier --Multiply the damage of the weapon by damageMultiplier
-        local soundName = "ionHit" .. Hyperspace.random32() % 3 
+        local soundName = "ionHit" .. Hyperspace.random32() % 3 + 1
         Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix(soundName, 1, true)
     end
   end 
