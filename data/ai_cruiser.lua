@@ -98,7 +98,21 @@ end)
 local ionBustBeams = {
     RVS_BEAM_ION_BUST_1 = 2, --WEAPON_NAME will de-ionize rooms, and do 2 times as much damage to ionized rooms
 }
+local RandomList = {
+    New = function(self, table)
+        table = table or {}
+        self.__index = self
+        setmetatable(table, self)
+        return table
+    end,
 
+    GetItem = function(self)
+        local index = Hyperspace.random32() % #self + 1
+        return self[index]
+    end,
+}
+
+ionSounds = RandomList:New {"ionHit1", "ionHit2", "ionHit3"}
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM, 
 function(ShipManager, Projectile, Location, Damage, newTile, beamHit)
@@ -110,8 +124,7 @@ function(ShipManager, Projectile, Location, Damage, newTile, beamHit)
     if system and system.iLockCount > 0 then --If the system is ionized
         system:LockSystem(0) --Deionize the system
         Damage.iDamage = Damage.iDamage * damageMultiplier --Multiply the damage of the weapon by damageMultiplier
-        local soundName = "ionHit" .. math.floor(Hyperspace.random32() % 3 + 1)
-        print(soundName)
+        local soundName = ionSounds:GetItem()
         Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix(soundName, 1, true)
     end
   end 
