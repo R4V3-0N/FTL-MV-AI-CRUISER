@@ -201,13 +201,13 @@
 		<function name="FAST_HACK" value="1" useForReqs="true"/> <!--makes hacking 5 seconds faster-->
 		<function name="FAST_TEMPORAL" value="1" useForReqs="true"/> <!--makes hacking 5 seconds faster-->
 		<statBoosts>
-			<statBoost name="healCrewAmount">
+			<statBoost name="healSpeed">
 				<boostType>FLAT</boostType>
-				<amount>0.05</amount>
+				<amount>0.10</amount>
 				<shipTarget>ALL</shipTarget>
 				<crewTarget>ALLIES</crewTarget>
 				<priority>0</priority>
-				</statBoost>
+			</statBoost>
 		</statBoosts>
 	</aug>
 	<aug name="RVS_SHOCKING_SHIELDS"> <!-- place holder stats, eventually will have main systems set to be +1 skill to each terminal, old stats will be reused by the cooldowner-->
