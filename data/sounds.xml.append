@@ -17,3 +17,8 @@
 <rvs_effector_shoot4 volume="3">weapons/rvs_effector_shoot4.ogg</rvs_effector_shoot4>
 
 <aiDeath volume="3">aliens/rvs_ai_death.ogg</aiDeath>
+
+<beamShock1 volume="3">weapons/cv_shock_1.ogg</beamShock1>
+<beamShock2 volume="3">weapons/cv_shock_2.ogg</beamShock2>
+<beamShock3 volume="3">weapons/cv_shock_3.ogg</beamShock3>
+<beamShock4 volume="3">weapons/cv_shock_4.ogg</beamShock4>

@@ -112,7 +112,7 @@ local RandomList = {
     end,
 }
 
-ionSounds = RandomList:New {"ionHit1", "ionHit2", "ionHit3"}
+ionSounds = RandomList:New {"beamShock1", "beamShock2", "beamShock3", "beamShock4"}
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM, 
 function(ShipManager, Projectile, Location, Damage, newTile, beamHit)
