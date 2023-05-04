@@ -51,35 +51,11 @@ empWeapons["RVS_EMP_1"] = {
 }
 
 -- Make EMP pop extra shields
-script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)
-    local shieldPower = shipManager.shieldSystem.shields.power
-    local empData = nil
-    if pcall(function() empData = empWeapons[Hyperspace.Get_Projectile_Extend(projectile).name] end) and empData then
-        if shieldPower.super.first > 0 then
-            if empData.shieldSuperPop > 0 then
-                local popper = Hyperspace.Damage()
-                popper.iDamage = empData.shieldSuperPop
-                shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, popper, true)
-            end
-        else
-            shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
-            shieldPower.first = math.max(0, shieldPower.first - empData.shieldPop)
-        end
-    end
-end)
-
+local popWeapons = mods.inferno.popWeapons
+popWeapons.RVS_EMP_1 = {count = 2, countSuper = 2}
 -- Make EMP do ion damage
--- This is fixed with a method provided by Vert, I still have yet to understand the logic of this. But their notes are here to provide me closure when I am wise enough to comprehend it. I have retroactively applied comments from them with a prefix
-script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(ship, projectile, damage, response)
-    local empData = nil
-    if pcall(function() empData = empWeapons[Hyperspace.Get_Projectile_Extend(projectile).name] end) and empData then
-       local empHullHit = Hyperspace.Damage()
-       empHullHit.iIonDamage = empData.ion
-       Hyperspace.Get_Projectile_Extend(projectile).name = "" --Vert: if the name of the active projectile is blank, the first line will evaluate to false and empHullImpact won't do anything within the next call of DamageArea
-       ship:DamageArea(projectile.position, empHullHit, true) --Vert: Can now call DamageArea safely
-       Hyperspace.Get_Projectile_Extend(projectile).name = "RVS_EMP_1" --Vert: set the name back for any future functions to use
-    end
-end)
+local roomDamageWeapons = mods.inferno.roomDamageWeapons
+roomDamageWeapons.RVS_EMP_1 = {ion = 2}
 
 --[[ Old shield popping code
 --checks on internal event, that event is defined as a shield collission, which when it detects a shield collission it then calls for empShieldImpact
@@ -129,4 +105,29 @@ function(ShipManager, Projectile, Location, Damage, newTile, beamHit)
     end
   end 
   return Defines.Chain.CONTINUE, beamHit 
+end)
+
+--Harpoon thingy
+script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT,
+function(ShipManager, Projectile, Location, Damage, shipFriendlyFire)
+  if Hyperspace.Get_Projectile_Extend(Projectile).name == "HARPOON_THINGY" then
+    local destinationRoomNumber = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true)
+    local firingShip = Hyperspace.Global.GetInstance():GetShipManager(Projectile.ownerId)
+    local airlockRooms = {}
+    for door in vter(firingShip.ship.vOuterAirlocks) do
+        airlockRooms[door.iRoom1] = true
+    end
+    local playTeleportSound = false
+    for crew in vter(firingShip.vCrewList) do
+      if crew.iShipId == firingShip.iShipId and airlockRooms[crew.iRoomId] then --only sends player crew
+        Hyperspace.Get_CrewMember_Extend(crew):InitiateTeleport(ShipManager.iShipId, destinationRoomNumber)
+        playTeleportSound = true
+      end
+    end
+  
+    if playTeleportSound then
+      Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("teleport", -1, false)
+    end
+  end
+  return Defines.CHAIN_CONTINUE
 end)
