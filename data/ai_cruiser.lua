@@ -43,19 +43,25 @@ script.on_fire_event(Defines.FireEvents.WEAPON_FIRE, function(ship, weapon, proj
     end
 end, INT_MAX)
 
-local empWeapons = {} -- CV: Use a list of EMP weapons instead of comparing to one string
-empWeapons["RVS_EMP_1"] = {
-    shieldPop = 2,
-    shieldSuperPop = 2,
-    ion = 2
-}
-
 -- Make EMP pop extra shields
 local popWeapons = mods.inferno.popWeapons
 popWeapons.RVS_EMP_1 = {count = 2, countSuper = 2}
 -- Make EMP do ion damage
 local roomDamageWeapons = mods.inferno.roomDamageWeapons
 roomDamageWeapons.RVS_EMP_1 = {ion = 2}
+
+local emptyRoomDamage = {
+    RVS_EMP_1 = 1
+}
+script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA, function(ShipManager, Projectile, Location, Damage, forceHit, shipFriendlyFire)
+    local roomID = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true)
+    local system = ShipManager:GetSystemInRoom(roomID)
+    if not system then
+        local emptyRoomDamage = emptyRoomDamage[Hyperspace.Get_Projectile_Extend(Projectile).name] or 0
+        Damage.iDamage = Damage.iDamage + emptyRoomDamage
+    end
+    return Defines.CHAIN_CONTINUE, forceHit, shipFriendlyFire
+end)
 
 --[[ Old shield popping code
 --checks on internal event, that event is defined as a shield collission, which when it detects a shield collission it then calls for empShieldImpact
