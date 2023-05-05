@@ -96,18 +96,25 @@
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
+<!-- these weapons and bellow are inspired by HS but are not are more adapted to fit within FTL -->
 <weaponBlueprint name="RVS_EMP_1">
 	<type>LASER</type>
 	<title>EMP Device</title>
 	<short>EMP Device</short>
 	<tip>tip_ion</tip>
 	<locked>1</locked>
-	<desc>Test EMP weapon.</desc>
+	<desc>A simple yet effective and flexible EMP device, firing blasts of EMP projectiles that can take down 2 layers of shields, 2 ion damage to systems, or 1 damage to empty rooms.</desc>
 	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip> <!-- placeholder -->
 	<damage>0</damage>
 	<speed>35</speed>
 	<shots>1</shots>
 	<sp>0</sp>
+	<!-- ai_cruiser.lua stats
+	2 shield pop
+	2 ion on system hit
+	2 damage on energy shields
+	1 damage on empty rooms [this might change in the future]
+	-->
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<stunChance>1</stunChance>	<!-- perhaps should be higher? -->
@@ -283,6 +290,73 @@
 
 <!--
 
+DRONES
+
+-->
+
+
+<weaponBlueprint name="RVS_DRONE_EMP_LIGHT">
+	<type>LASER</type>
+	<title>RVS DRONE LIGHT EMP</title>
+	<short>YOU SHOULDN'T SEE THIS</short>
+	<desc>YOU SHOULDN'T SEE THIS - REPORT THIS TO R4V3-0N... But while you are here: this is a light EMP device equiped on drones</desc>
+	<damage>0</damage>
+	<speed>35</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<stunChance>3</stunChance>
+	<rarity>0</rarity>
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_emp_1</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+<droneBlueprint name="RVS_AI_MICROFIGHTER_SHOCK">
+	<type>COMBAT</type>
+	<!--<tip>tip_ai_microfighter</tip>-->
+	<title>AI Shock Microfighter</title>
+	<short>Shock Drone</short>
+	<desc>placeholder desc: Armed with a light EMP device, this self aware drone attempts to evade enemy projectiles and focuses fire on enemy systems.</desc>
+	<!--	Excessively long non-descriptive description I wrote... starting to think I want to port Slow's INS+ computer menu into MV
+	<desc>Piloted by a rather obnoxious Avatar, modified well beyond nominal safety parametres stripping away standard EMP shielding necessary for other Avatars to maintain a link. SRKZ on the other hand is well suited to pilot this specialised microfighter.</desc>
+	-->
+	<!--	long modified desc from HS:DF,
+	<desc>The avatar of this thing is most obnoxious. Other AIs needed additional EMP shielding.</desc>
+	-->
+	<!--	Short modified desc from HS:DF,
+	<desc>An EMP-centred loadout that excels in disabling early game enemies, but ill equiped to deal with enemies with stronger shielding.</desc>
+	-->
+	<power>1</power>	<!-- Keeping it 1 power for now. Thinking of making this fighter potentially take power directly from the reactor? -->
+	<cooldown>1000</cooldown>
+	<dodge>9</dodge>
+	<speed>15</speed>
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>rvs_ai_microfighter_shock</droneImage>
+	<weaponBlueprint>RVS_DRONE_EMP_LIGHT</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<!--
+
 AUGMENTS
 
 -->
@@ -434,7 +508,7 @@ AUGMENTS
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI_2" layout="rvsp_ai_cruiser_2" img="rvsp_ai_cruiser_2">
 	<class>AI Shock Cruiser</class>
 	<name>Electric Collar</name>
-	<desc>This self-aware cruiser is configured for rapid avatar deployment, though rather inhospitable to organic crew.</desc>
+	<desc>This self-aware cruiser is configured for one-way rapid AI Avatar deployment while it disrupts enemy ships.</desc>
 	<systemList>
 		<artillery power="1" room="1" start="false" weapon="BOMB_BREACH_1" img="room_artillery_5" />
 		<battery max="3" power="1" room="26" start="true" img="room_battery_3" />
@@ -497,8 +571,8 @@ AUGMENTS
 		<weapon name="RVS_EMP_1" />
 		<weapon name="RVS_BEAM_ION_BUST_1" />
 	</weaponList>
-	<droneList drones="6" count="3">
-		<drone name="PEST_RAD" />
+	<droneList drones="10" count="3">
+		<drone name="RVS_AI_MICROFIGHTER_SHOCK" />
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="9" />

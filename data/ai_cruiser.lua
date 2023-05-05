@@ -46,9 +46,11 @@ end, INT_MAX)
 -- Make EMP pop extra shields
 local popWeapons = mods.inferno.popWeapons
 popWeapons.RVS_EMP_1 = {count = 2, countSuper = 2}
+popWeapons.RVS_DRONE_EMP_LIGHT = {count = 1, countSuper = 1}
 -- Make EMP do ion damage
 local roomDamageWeapons = mods.inferno.roomDamageWeapons
 roomDamageWeapons.RVS_EMP_1 = {ion = 2}
+roomDamageWeapons.RVS_DRONE_EMP_LIGHT = {ion = 1}
 
 local emptyRoomDamage = {
     RVS_EMP_1 = 1
