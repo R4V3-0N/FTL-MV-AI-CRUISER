@@ -11,8 +11,8 @@
 <weaponBlueprint name="RVS_BEAM_ION_BUST_1">
 	<type>BEAM</type>
 	<tip>tip_beams</tip>
-	<title>Ion Bust Beam Mark 1</title>
-	<short>Ion Bust 1</short>
+	<title>Ion Bust Beam Mark I</title>
+	<short>Ion Bust I</short>
 	<tip>tip_hull</tip>
 	<desc>This beam is most powerful when targeting ionized systems.</desc>
 	<tooltip>Beam weapon; 1 damage; 2x damage in ionized rooms.</tooltip>
@@ -103,7 +103,7 @@
 	<short>EMP Device</short>
 	<tip>tip_ion</tip>
 	<locked>1</locked>
-	<desc>A simple yet effective and flexible EMP device, firing blasts of EMP projectiles that can take down 2 layers of shields, 2 ion damage to systems, or 1 damage to empty rooms.</desc>
+	<desc>A simple yet effective EMP device, firing blasts of EMP projectiles that can take down 2 layers of shields, 2 ion damage to systems, or 1 damage to empty rooms.</desc>
 	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip> <!-- placeholder -->
 	<damage>0</damage>
 	<speed>35</speed>
@@ -117,8 +117,8 @@
 	-->
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
-	<stunChance>1</stunChance>	<!-- perhaps should be higher? -->
-	<cooldown>7</cooldown>	<!-- lowered from 8-->
+	<stunChance>3</stunChance>	<!-- perhaps should be higher? -->
+	<cooldown>9</cooldown>	<!-- increased to 9 from 7-->
 	<power>2</power>
 	<cost>50</cost>
 	<bp>3</bp>
@@ -344,10 +344,10 @@ DRONES
 	<!--	Short modified desc from HS:DF,
 	<desc>An EMP-centred loadout that excels in disabling early game enemies, but ill equiped to deal with enemies with stronger shielding.</desc>
 	-->
-	<power>1</power>	<!-- Keeping it 1 power for now. Thinking of making this fighter potentially take power directly from the reactor? -->
+	<power>2</power>	<!-- Changing it to 2 from 1 for more speed -->
 	<cooldown>1000</cooldown>
 	<dodge>9</dodge>
-	<speed>15</speed>
+	<speed>22</speed>
 	<cost>50</cost>
 	<bp>3</bp>
 	<droneImage>rvs_ai_microfighter_shock</droneImage>
