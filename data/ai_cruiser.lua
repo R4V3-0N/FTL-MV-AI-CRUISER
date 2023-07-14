@@ -145,7 +145,7 @@ end)
 
 --Make a drone target enemy drones first before normal anti ship targetting
 local function retarget_drone_to_ddrone(ship, droneName)
-    local otherShip = Hyperspace.Global.GetInstance():GetShipManager((ship.iShipId + 1)%2)
+    local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - ship.iShipId)
     if otherShip then
         local target = nil
         for drone in vter(otherShip.spaceDrones) do
@@ -171,7 +171,7 @@ end)
 
 --Make a drone target systems only
 local function retarget_drone_to_system(ship, droneName)
-    local otherShip = Hyperspace.Global.GetInstance():GetShipManager((ship.iShipId + 1)%2)
+    local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - ship.iShipId)
     if otherShip then
         local otherShipGraph = Hyperspace.ShipGraph.GetShipInfo(otherShip.iShipId)
         for drone in vter(ship.spaceDrones) do
