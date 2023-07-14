@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FTL>
+
 <!--
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -295,6 +296,67 @@ DRONES
 -->
 
 
+
+<weaponBlueprint name="RVS_DRONE_LASER_SCATTER">
+	<type>LASER</type>
+	<title>RVS DRONE LASER SCATTER</title>
+	<short>YOU SHOULDN'T SEE THIS</short>
+	<desc>YOU SHOULDN'T SEE THIS - REPORT THIS TO R4V3-0N... But while you are here: this is a laser scatter equiped on drones</desc>
+	<damage>1</damage>
+	<sysDamage>-1</sysDamage>
+	<persDamage>-1</persDamage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<breachChance>3</breachChance>
+	<rarity>0</rarity>
+	<image>ra_laser_burst_scatter_shot_fast</image> <!-- R4: Scatter Shot from CE -->
+	<explosion>ra_explosion_laser_burst_scatter</explosion>	<!-- ^ -->
+	<launchSounds>
+		<sound>rvs_heavyLaserScatter1</sound>
+		<sound>rvs_heavyLaserScatter2</sound>
+		<sound>rvs_heavyLaserScatter3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>rvs_hit_hull_scatter_1</sound>
+		<sound>rvs_hit_hull_scatter_2</sound>
+		<sound>rvs_hit_hull_scatter_3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>rvs_hit_shield_scatter_1</sound>
+		<sound>rvs_hit_shield_scatter_2</sound>
+		<sound>rvs_hit_shield_scatter_3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_1</weaponArt>
+</weaponBlueprint>
+<droneBlueprint name="RVS_AI_MICROFIGHTER_INTERCEPTER">
+	<type>COMBAT</type>
+	<!--<tip>tip_ai_microfighter</tip>-->
+	<title>AI Intercepter Microfighter</title>
+	<short>Int. Drone</short>
+	<desc>A highly advanced and maneuverable microfighter intended to intercept small ships and drones with a reliable scatter laser. It is technically more sentient than you.</desc>
+	<!--
+	HS:Dogfights Long Description
+	<desc>Intended to outmaneuver enemies with it's anti-gravity engines and gravity anchor.</desc>
+	HS:Dogfights Fluff Description
+	<desc>Technically this drone is more sentient than you, however it isn't exactly a sophisticated machine but don't let it hear you say that.</desc>
+	HS Short Description
+	<desc>A Sentient drone prototype</desc>
+	-->
+	<power>2</power>
+	<cooldown>1000</cooldown>
+	<dodge>9</dodge>
+	<speed>25</speed>
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>rvs_ai_microfighter_intercepter</droneImage>
+	<weaponBlueprint>RVS_DRONE_LASER_SCATTER</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
 <weaponBlueprint name="RVS_DRONE_EMP_LIGHT">
 	<type>LASER</type>
 	<title>RVS DRONE LIGHT EMP</title>
@@ -334,7 +396,7 @@ DRONES
 	<!--<tip>tip_ai_microfighter</tip>-->
 	<title>AI Shock Microfighter</title>
 	<short>Shock Drone</short>
-	<desc>placeholder desc: Armed with a light EMP device, this self aware drone attempts to evade enemy projectiles and focuses fire on enemy systems.</desc>
+	<desc>Modified well beyond safety parametres by a rather obnoxious Avatar which pilots this craft. This evasive Microfighter has an EMP-centred loadout that excels in disabling ships systems single handedly when their shielding is disabled.</desc>
 	<!--	Excessively long non-descriptive description I wrote... starting to think I want to port Slow's INS+ computer menu into MV
 	<desc>Piloted by a rather obnoxious Avatar, modified well beyond nominal safety parametres stripping away standard EMP shielding necessary for other Avatars to maintain a link. SRKZ on the other hand is well suited to pilot this specialised microfighter.</desc>
 	-->
@@ -492,12 +554,12 @@ AUGMENTS
 	<weaponSlots>3</weaponSlots>
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="5" count="3">
-		<!--<weapon name="RA_BEAM_AUTO" />-->
+		<!--<weapon name="RA_BEAM_AUTO" /> replaced with Beam Flak-->
 		<weapon name="RVS_BEAM_SHOTGUN_2" />
 		<weapon name="RA_EFFECTOR_1" />
 	</weaponList>
-	<droneList drones="6" count="3">
-		<!-- <drone name="AMPHI_COMBAT" /> -->
+	<droneList drones="7" count="3">
+	<drone name="RVS_AI_MICROFIGHTER_INTERCEPTER" />
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="8" />
@@ -581,4 +643,5 @@ AUGMENTS
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
 </shipBlueprint>
+
 </FTL>

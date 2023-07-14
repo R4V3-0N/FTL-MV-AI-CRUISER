@@ -1,3 +1,4 @@
+<!-- Cut FTL SFX -->
 <ra_focusbeam1 volume="5">weapons/bp_laser_2.ogg</ra_focusbeam1>
 <ra_focusbeam2 volume="5">weapons/bp_laser_2b.ogg</ra_focusbeam2>
 <ra_focusbeam3 volume="5">weapons/bp_laser_2c.ogg</ra_focusbeam3>
@@ -10,7 +11,22 @@
 
 <ra_warning_effector volume="2">ui/warning3.wav</ra_warning_effector>
 
-<!-- created by dondondongon https://freesound.org/people/dondondongon/sounds/328662/ -->
+<!-- Originally used in Captains Edition -->
+<rvs_hit_hull_scatter_1 volume="10">weapons/rvs_hit_hull_scatter_1.ogg</rvs_hit_hull_scatter_1>
+<rvs_hit_hull_scatter_2 volume="10">weapons/rvs_hit_hull_scatter_2.ogg</rvs_hit_hull_scatter_2>
+<rvs_hit_hull_scatter_3 volume="10">weapons/rvs_hit_hull_scatter_3.ogg</rvs_hit_hull_scatter_3>
+
+<!-- Originally used in Captains Edition -->
+<rvs_hit_shield_scatter_1 volume="10">weapons/rvs_hit_shield_scatter_1.ogg</rvs_hit_shield_scatter_1>
+<rvs_hit_shield_scatter_2 volume="10">weapons/rvs_hit_shield_scatter_2.ogg</rvs_hit_shield_scatter_2>
+<rvs_hit_shield_scatter_3 volume="10">weapons/rvs_hit_shield_scatter_3.ogg</rvs_hit_shield_scatter_3>
+
+<!-- Cut FTL SFX -->
+<rvs_heavyLaserScatter1 volume="10">weapons/rvs_laser_heavy_2.ogg</rvs_heavyLaserScatter1>
+<rvs_heavyLaserScatter2 volume="10">weapons/rvs_laser_heavy_2b.ogg</rvs_heavyLaserScatter2>
+<rvs_heavyLaserScatter3 volume="10">weapons/rvs_laser_heavy_2c.ogg</rvs_heavyLaserScatter3>
+
+<!-- original SFXX created by dondondongon https://freesound.org/people/dondondongon/sounds/328662/ -->
 <rvs_effector_shoot1 volume="3">weapons/rvs_effector_shoot1.ogg</rvs_effector_shoot1>
 <rvs_effector_shoot2 volume="3">weapons/rvs_effector_shoot2.ogg</rvs_effector_shoot2>
 <rvs_effector_shoot3 volume="3">weapons/rvs_effector_shoot3.ogg</rvs_effector_shoot3>

@@ -13,3 +13,25 @@
 <mod:findName type="blueprintList" name="BLUELIST_BEAMS_DAMAGE">
 	<mod-append:name>RVS_BEAM_SHOTGUN_2</mod-append:name>
 </mod:findName>
+
+<shipBlueprint name="RVS_AI_INTERCEPTOR" layout="rvs_ai_interceptor" img="rvs_ai_interceptor">
+	<class>AI Interceptor</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<cloaking power="1" max="2" room="4" start="false" /> 	<!-- May be swapped to Dronebay if I can get healing to work -->
+		<engines power="2" max="8" room="3" start="true" />		<!-- This... lets just see how this goes... -->
+		<pilot power="1" max="3" room="1" start="true" />
+		<shields power="2" max="4" room="2" start="true" />
+		<weapons power="2" max="8" room="0" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="8" count="4" load="WEAPONS_CRYSTAL" />	<!-- Make and change it to an AI list! -->
+	<droneList drones="4" count="4" load="MV_DRONES_COMBAT" />		<!-- Make and change it to an AI list! -->
+	<health amount="6" />
+	<maxPower amount="8" />
+	<crewCount amount="3" max="4" class="rvs_ai_hologram" /> 		<!-- Maybe change it to 5 max? -->
+	<boardingAI>invasion</boardingAI>
+	<aug name="CREW_OXYGEN" />										<!-- Unsure what Augments they should use, a Cooldowner? -->
+</shipBlueprint>
