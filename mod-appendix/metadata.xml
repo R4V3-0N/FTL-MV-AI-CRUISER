@@ -2,13 +2,13 @@
   <title><![CDATA[ AI Cruiser ]]></title>
   <threadUrl><![CDATA[ https://github.com/R4V3-0N/FTL-MV-AI-CRUISER/releases ]]></threadUrl>
   <author><![CDATA[ R4V3-0N, Chrono Vortex, and Vertaalfout ]]></author>
-  <version><![CDATA[ 1.1 ]]></version>
+  <version><![CDATA[ 2.0 ]]></version>
 
   
   
   
   <description>
-<![CDATA[ THIS MOD HAS DEPENDENCIES! Make sure to patch Inferno Core and Vertex Tags and Utility Functions first! (links bellow)
+<![CDATA[ THIS MOD HAS DEPENDENCIES! Make sure to patch Vertex Tags and Utility Functions first! (links bellow)
 
 This mod adds a new race of AI hardlight Avatars from a distant universe which will eventually be developed upon further, both with type B and C layouts as well as eventually events and lore inspired by the AI Avatar race from Captains Edition and Hyperspace by Sleeper Service.
 
@@ -30,9 +30,8 @@ This sample includes:
   - Rerouted Insulation, gives the ship a 80% ion resistance while all crew onboard are more susceptable to stuns.
 
 
-Links to Vertex and InfernoCore:
+Download Vertex:
 https://github.com/ChronoVortex/FTL-HS-Vertex/releases
-https://drive.google.com/file/d/14XXh8w6SLV78nC9sU-MA0qHKCYzo21tk/view
 ]]>
   </description>
 </metadata>

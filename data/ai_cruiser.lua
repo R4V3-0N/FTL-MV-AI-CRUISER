@@ -1,12 +1,8 @@
 if not mods or not mods.vertexutil then
-    error("Couldn't find Vertex Tags and Utility Functions! Make sure it's above mods which depend on it in the Slipstream load order", 2)
-end
-if not mods or not mods.inferno then
-    error("Couldn't find Inferno Core! Make sure it's above mods which depend on it in the Slipstream load order", 2)
+    error("Couldn't find Vertex Tags and Utility Functions! Make sure it's above mods which depend on it in the Slipstream load order")
 end
 
 local vter = mods.vertexutil.vter
-local INT_MAX = 2147483647
 
 -- Heal holograms on jump
 local wasJumping = false
@@ -28,8 +24,8 @@ end)
 local pinpointBlueprint = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_1")
 local burstsToBeams = {}
 burstsToBeams["RVS_BEAM_SHOTGUN_2"] = pinpointBlueprint
-script.on_fire_event(Defines.FireEvents.WEAPON_FIRE, function(ship, weapon, projectile)
-    local beamReplacement = burstsToBeams[Hyperspace.Get_Projectile_Extend(projectile).name]
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
+    local beamReplacement = burstsToBeams[weapon.blueprint.name]
     if beamReplacement then
         local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
         local beam = spaceManager:CreateBeam(
@@ -39,18 +35,50 @@ script.on_fire_event(Defines.FireEvents.WEAPON_FIRE, function(ship, weapon, proj
         beam.sub_start.x = 500*math.cos(projectile.entryAngle)
         beam.sub_start.y = 500*math.sin(projectile.entryAngle) 
         projectile:Kill()
-        return true
     end
-end, INT_MAX)
+end)
 
 -- Make EMP pop extra shields
-local popWeapons = mods.inferno.popWeapons
-popWeapons.RVS_EMP_1 = {count = 2, countSuper = 2}
-popWeapons.RVS_DRONE_EMP_LIGHT = {count = 1, countSuper = 1}
+local popWeapons = {}
+popWeapons["RVS_EMP_1"] = {
+    count = 2,
+    countSuper = 2
+}
+popWeapons["RVS_DRONE_EMP_LIGHT"] = {
+    count = 1,
+    countSuper = 1
+}
+script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)
+    local shieldPower = shipManager.shieldSystem.shields.power
+    local popData = nil
+    if pcall(function() popData = popWeapons[Hyperspace.Get_Projectile_Extend(projectile).name] end) and popData then
+        if shieldPower.super.first > 0 then
+            if popData.countSuper > 0 then
+                shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
+                shieldPower.super.first = math.max(0, shieldPower.super.first - popData.countSuper)
+            end
+        else
+            shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
+            shieldPower.first = math.max(0, shieldPower.first - popData.count)
+        end
+    end
+end)
+
 -- Make EMP do ion damage
-local roomDamageWeapons = mods.inferno.roomDamageWeapons
-roomDamageWeapons.RVS_EMP_1 = {ion = 2}
-roomDamageWeapons.RVS_DRONE_EMP_LIGHT = {ion = 1}
+local empWeapons = {}
+empWeapons["RVS_EMP_1"] = 2
+empWeapons["RVS_DRONE_EMP_LIGHT"] = 1
+script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(ship, projectile, damage, response)
+    local empAmount = nil
+    if pcall(function() empAmount = empWeapons[Hyperspace.Get_Projectile_Extend(projectile).name] end) and empAmount then
+       local empHullHit = Hyperspace.Damage()
+       empHullHit.iIonDamage = empAmount
+       local weaponName = Hyperspace.Get_Projectile_Extend(projectile).name
+       Hyperspace.Get_Projectile_Extend(projectile).name = ""
+       ship:DamageArea(projectile.position, empHullHit, true)
+       Hyperspace.Get_Projectile_Extend(projectile).name = weaponName
+    end
+end)
 
 local emptyRoomDamage = {
     RVS_EMP_1 = 1
