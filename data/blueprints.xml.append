@@ -310,7 +310,19 @@ DRONES
 	<breachChance>3</breachChance>
 	<rarity>0</rarity>
 	<image>ra_laser_burst_scatter_shot_fast</image> <!-- R4: Scatter Shot from CE -->
-	<explosion>ra_explosion_laser_burst_scatter</explosion>	<!-- ^ -->
+	<explosion>invisible</explosion>
+    <particleEmitters>
+        <particleEmitter name="ra_emitter_explosion_scatter" />
+        <particleEmitter name="ra_emitter_explosion_scatter">
+            <type>ra_part_explosion_tiny2</type>
+        </particleEmitters>
+        <particleEmitter name="ra_emitter_explosion_scatter">
+            <type>ra_part_explosion_tiny3</type>
+        </particleEmitters>
+        <particleEmitter name="ra_emitter_explosion_scatter">
+            <type>ra_part_explosion_tiny4</type>
+        </particleEmitters>
+    </particleEmitters>
 	<launchSounds>
 		<sound>rvs_heavyLaserScatter1</sound>
 		<sound>rvs_heavyLaserScatter2</sound>
