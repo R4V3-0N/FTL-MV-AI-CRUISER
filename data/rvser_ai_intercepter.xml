@@ -10,7 +10,7 @@
 	<mount x="140" y="92" rotate="false" mirror="false" gib="1" slide="right" />
 	<mount x="42" y="112" rotate="false" mirror="true" gib="2" slide="up" />
 	<mount x="151" y="137" rotate="false" mirror="false" gib="1" slide="right" />
-	<mount x="99" y="78" rotate="false" mirror="true" gib="3" slide="up" />
+	<mount x="99" y="78" rotate="false" mirror="true" gib="1" slide="up" />
 </weaponMounts>
 <explosion>
 	<gib1>
