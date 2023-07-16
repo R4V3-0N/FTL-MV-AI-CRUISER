@@ -7,6 +7,18 @@ end
 
 local vter = mods.vertexutil.vter
 
+local function bool_to_num(bool)
+    if bool then return 1 end
+    return 0
+end
+
+-- Track whether we're in a nebula or a nebula with an ion storm
+script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
+    local space = Hyperspace.Global.GetInstance():GetCApp().world.space
+    Hyperspace.playerVariables.loc_nebula_nostorm = bool_to_num(space.bNebula and not space.bStorm)
+    Hyperspace.playerVariables.loc_nebula_storm = bool_to_num(space.bStorm)
+end)
+
 -- Heal holograms on jump
 local wasJumping = false
 script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
