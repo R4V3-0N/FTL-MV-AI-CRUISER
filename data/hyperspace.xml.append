@@ -23,6 +23,7 @@
 
 
 <mod:findLike type="ships">
+    <!-- Player ships -->
 	<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="true" c="false">    
     </mod-append:ship>
     <mod-append:customShip name="PLAYER_SHIP_RVSP_AI">
@@ -61,6 +62,15 @@
 			<rvs_ai_hologram room="23" name="Reciteful Error" />
 			<rvs_ai_hologram room="29" name="DIE DIE DIE" />
 		</crew>
+	</mod-append:customShip>
+    
+    <!-- Enemies -->
+	<mod-append:customShip name="RVSER_AI_INTERCEPTER">
+		<shipIcons>
+			<shipIcon>icon_no2</shipIcon>
+			<shipIcon>icon_auto</shipIcon>
+        </shipIcons>
+		<autoShipForce>true</autoShipForce>
 	</mod-append:customShip>
 </mod:findLike>
 

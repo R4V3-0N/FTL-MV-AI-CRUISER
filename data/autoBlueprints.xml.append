@@ -35,3 +35,27 @@
 	<boardingAI>invasion</boardingAI>
 	<aug name="CREW_OXYGEN" />										<!-- Unsure what Augments they should use, a Cooldowner? -->
 </shipBlueprint>
+
+<!-- MV renegade encounter (non-boss) -->
+<shipBlueprint name="RVSER_AI_INTERCEPTER" layout="rvser_ai_intercepter" img="rvser_ai_intercepter">
+	<class>Multiverse Renegade</class>
+	<minSector>2</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<drones power="2" max="10" room="4" start="true" />
+		<engines power="1" max="4" room="2" start="true" />
+		<pilot power="2" max="3" room="1" start="true" />
+		<shields power="3" max="7" room="3" start="true" />
+		<weapons power="2" max="10" room="0" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="8" count="4" load="WEAPONS_CRYSTAL" />
+	<droneList drones="4" count="4" load="MV_DRONES_COMBAT" />
+	<health amount="8" />
+	<maxPower amount="12" />
+	<crewCount amount="2" max="2" class="rvs_ai_hologram" />
+	<boardingAI>invasion</boardingAI>
+	<aug name="CREW_OXYGEN" />
+    <cloakImage>rvs_ai_intercepter</cloakImage>
+</shipBlueprint>

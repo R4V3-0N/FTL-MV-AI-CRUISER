@@ -1,0 +1,23 @@
+<mod:findName type="event" name="MV_TRAVELER_SECTORS13">
+	<mod:findLike type="loadEventList">
+		<mod-append:event name="MV_TRAVELER_AI_INTERCEPTER"/>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="MV_TRAVELER_SECTORS45">
+	<mod:findLike type="loadEventList">
+		<mod-append:event name="MV_TRAVELER_AI_INTERCEPTER"/>
+	</mod:findLike>
+</mod:findName>
+
+<ship name="SHIP_RVSER_AI_INTERCEPTER" auto_blueprint="RVSER_AI_INTERCEPTER">
+	<destroyed load="DEFEAT_MULTIVERSE_TRAVELER" />
+	<deadCrew load="DEFEAT_MULTIVERSE_TRAVELER" />
+</ship>
+<event name="MV_TRAVELER_AI_INTERCEPTER">
+	<text>PLACEHOLDER</text>
+	<ship load="SHIP_RVSER_AI_INTERCEPTER" hostile="true"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
