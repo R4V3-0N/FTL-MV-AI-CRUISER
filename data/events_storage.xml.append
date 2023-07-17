@@ -1,3 +1,4 @@
+<!-- Storage check -->
 <mod:findName type="event" name="STORAGE_CHECK_REAL" panic="true">
     <mod-append:choice req="RVS_REQ_HOLO_REVIVE" blue="false">
         <text>Revive a hologram.</text>
@@ -312,3 +313,98 @@
         <crewMember amount="1" class="rvs_ai_hologram">Pet Arsonist</crewMember>
     </event>
 </eventList>
+
+
+
+<!-- Combat check -->
+<mod:findName type="event" name="COMBAT_CHECK_REAL">
+    <mod-append:choice req="COMBAT_NEBULA_CLEAR_STORM" blue="false">
+        <text>(Conductive Hull Plating) Neutralize the ion storm's effect on your reactor.</text>
+        <event load="COMBAT_CHECK_NEBULA_CLEAR_STORM"/>
+    </mod-append:choice>
+    <mod-append:choice req="COMBAT_NEBULA_MAKE_STORM" blue="false">
+        <text>(Conductive Hull Plating) Create an ion storm.</text>
+        <event load="COMBAT_CHECK_NEBULA_MAKE_STORM"/>
+    </mod-append:choice>
+    <mod:findWithChildLike type="choice" child-type="text" panic="true">
+        <mod:selector>Do some last minute check-ups while we charge the weapons.</mod:selector>
+        <mod:removeTag />
+    </mod:findWithChildLike>
+    <mod:findWithChildLike type="choice" child-type="text" panic="true">
+        <mod:selector>Do nothing.</mod:selector>
+        <mod:removeTag />
+    </mod:findWithChildLike>
+    <mod-append:choice>
+        <text>Do some last minute check-ups while we charge the weapons.</text>
+        <event load="COMBAT_CHECK_GENERIC"/>
+    </mod-append:choice>
+    <mod-append:choice>
+        <text>Do nothing.</text>
+        <event>
+            <status type="clear" target="enemy" system="teleporter" amount="100"/>
+        </event>
+    </mod-append:choice>
+</mod:findName>
+
+<event name="COMBAT_CHECK_NEBULA_CLEAR_STORM">
+	<text>Are you sure you want to do this?
+	[Will clear your reactor limit]</text>
+	<choice hidden="true">
+		<text>Yes</text>
+		<event>
+			<text>Your hull absorbs the electric energy of the surrounding gasses, powering your reactor to full capactiy.</text>
+            <status type="clear" target="player" system="reactor" amount="100"/>
+		</event>
+	</choice>
+	<choice blue="false" req="loc_flagship" lvl="0" max_group="1"  >
+		<text>Do something else instead.</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+	<choice blue="false" req="loc_flagship" lvl="1" max_group="1">
+		<text>Do something else instead.</text>
+		<event load="COMBAT_CHECK_FLAGSHIP"/>
+	</choice>
+	<choice>
+		<text>Nevermind, let's fight!</text>
+		<event>
+			<text>You decide not to do anything and prepare to fight.</text>
+			<status type="clear" target="enemy" system="teleporter" amount="100"/>
+		</event>
+	</choice>
+</event>
+
+<event name="COMBAT_CHECK_NEBULA_MAKE_STORM">
+	<text>Are you sure you want to do this?
+	[Will create an ion storm]</text>
+	<choice hidden="true">
+		<text>Yes</text>
+		<event>
+			<text>Power surges through the hull of your ship, electrifying the surrounding gasses.</text>
+			<environment type="storm"/>
+			<status type="divide" target="enemy" system="reactor" amount="2"/>
+			<status type="clear" target="enemy" system="teleporter" amount="100"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>The energy feeds back into your hull, powering your reactor to full capactiy.</text>
+                    <status type="clear" target="player" system="reactor" amount="100"/>
+                </event>
+            </choice>
+		</event>
+	</choice>
+	<choice blue="false" req="loc_flagship" lvl="0" max_group="1"  >
+		<text>Do something else instead.</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+	<choice blue="false" req="loc_flagship" lvl="1" max_group="1">
+		<text>Do something else instead.</text>
+		<event load="COMBAT_CHECK_FLAGSHIP"/>
+	</choice>
+	<choice>
+		<text>Nevermind, let's fight!</text>
+		<event>
+			<text>You decide not to do anything and prepare to fight.</text>
+			<status type="clear" target="enemy" system="teleporter" amount="100"/>
+		</event>
+	</choice>
+</event>

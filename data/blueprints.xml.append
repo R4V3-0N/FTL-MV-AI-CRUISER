@@ -483,6 +483,15 @@ AUGMENTS
     <stackable>true</stackable>
 </augBlueprint>
 
+<augBlueprint name="RVS_ELECTRIC_PLATING">
+    <title>Conductive Hull Plating</title>
+	<desc>This hull plating allows your ship to create ion storms inside nebulas and regain lost reactor power in an ion storm.</desc>
+	<cost>90</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>
+    <stackable>false</stackable>
+</augBlueprint>
+
 <crewBlueprint name="rvs_ai_hologram">
 	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
 	<cost>30</cost>
@@ -651,6 +660,7 @@ AUGMENTS
 	<health amount="30" />
 	<maxPower amount="9" />
 	<aug name="RVS_SHOCKING_SHIELDS" />
+	<aug name="RVS_ELECTRIC_PLATING" />
 	<aug name="RVS_SENTIENT_COMBAT_AI" />
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
