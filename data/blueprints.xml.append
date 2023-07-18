@@ -346,9 +346,12 @@ DRONES
 <droneBlueprint name="RVS_AI_MICROFIGHTER_INTERCEPTER">
 	<type>COMBAT</type>
 	<!--<tip>tip_ai_microfighter</tip>-->
-	<title>AI Intercepter Microfighter</title>
+	<!--<title>AI Intercepter Microfighter</title>
 	<short>Int. Drone</short>
-	<desc>A highly advanced and maneuverable microfighter intended to intercept small ships and drones with a reliable scatter laser. It is technically more sentient than you.</desc>
+	<desc>A highly advanced and maneuverable microfighter intended to intercept small ships and drones with a reliable scatter laser. It is technically more sentient than you.</desc>-->
+	<title>AI Scatter Microfighter</title>
+	<short>Scatter Drone</short>
+	<desc>A highly advanced and maneuverable microfighter designed to provide supporting fire with a reliable scatter laser. It is technically more sentient than you.</desc>
 	<!--
 	HS:Dogfights Long Description
 	<desc>Intended to outmaneuver enemies with it's anti-gravity engines and gravity anchor.</desc>
@@ -408,7 +411,7 @@ DRONES
 	<!--<tip>tip_ai_microfighter</tip>-->
 	<title>AI Shock Microfighter</title>
 	<short>Shock Drone</short>
-	<desc>Modified well beyond safety parametres by a rather obnoxious Avatar which pilots this craft. This evasive Microfighter has an EMP-centred loadout that excels in disabling ships systems single handedly when their shielding is disabled.</desc>
+	<desc>Modified well beyond safety parametres by a rather obnoxious Avatar which pilots this craft. This evasive Microfighter has an EMP-centred loadout that excels in disabling ships systems single-handedly when their shielding is disabled.</desc>
 	<!--	Excessively long non-descriptive description I wrote... starting to think I want to port Slow's INS+ computer menu into MV
 	<desc>Piloted by a rather obnoxious Avatar, modified well beyond nominal safety parametres stripping away standard EMP shielding necessary for other Avatars to maintain a link. SRKZ on the other hand is well suited to pilot this specialised microfighter.</desc>
 	-->

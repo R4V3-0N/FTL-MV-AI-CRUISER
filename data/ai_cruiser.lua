@@ -126,32 +126,6 @@ function(ShipManager, Projectile, Location, Damage, newTile, beamHit)
   return Defines.Chain.CONTINUE, beamHit 
 end)
 
---Make a drone target enemy drones first before normal anti ship targetting
-local function retarget_drone_to_ddrone(ship, droneName)
-    local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - ship.iShipId)
-    if otherShip then
-        local target = nil
-        for drone in vter(otherShip.spaceDrones) do
-            if drone.deployed and drone.blueprint.typeName == "DEFENSE" then
-                target = drone
-                break
-            end
-        end
-        if target then
-            for drone in vter(ship.spaceDrones) do
-                if drone.blueprint.name == droneName then
-                    drone.targetLocation.x = target.currentLocation.x
-                    drone.targetLocation.y = target.currentLocation.y
-                end
-            end
-        end
-    end
-end
-script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
-    if Hyperspace.ships.player then retarget_drone_to_ddrone(Hyperspace.ships.player, "RVS_AI_MICROFIGHTER_INTERCEPTER") end
-    if Hyperspace.ships.enemy then retarget_drone_to_ddrone(Hyperspace.ships.enemy, "RVS_AI_MICROFIGHTER_INTERCEPTER") end
-end)
-
 --Make a drone target systems only
 local function retarget_drone_to_system(ship, droneName)
     local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - ship.iShipId)
