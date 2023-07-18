@@ -659,7 +659,7 @@ AUGMENTS
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="9" />
-	<aug name="RVS_SHOCKING_SHIELDS" />
+	<!-- <aug name="RVS_SHOCKING_SHIELDS" /> -->
 	<aug name="RVS_ELECTRIC_PLATING" />
 	<aug name="RVS_SENTIENT_COMBAT_AI" />
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
