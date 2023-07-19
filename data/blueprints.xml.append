@@ -105,7 +105,7 @@
 	<tip>tip_ion</tip>
 	<locked>1</locked>
 	<desc>A simple yet effective EMP device, firing blasts of EMP projectiles that can take down 2 layers of shields, 2 ion damage to systems, or 1 damage to empty rooms.</desc>
-	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip> <!-- placeholder -->
+	<tooltip>Fires a single blast that does 2 ion damage on room hit otherwise pops 2 shields.</tooltip> <!-- placeholder -->
 	<damage>0</damage>
 	<speed>35</speed>
 	<shots>1</shots>
@@ -148,6 +148,108 @@
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="RVS_EMP_2">
+	<type>LASER</type>
+	<title>EMP Device Mark II</title>
+	<short>EMP Device II</short>
+	<tip>tip_emp</tip>
+	<locked>1</locked>
+	<desc>Slightly improved version of the EMP Device that fires two shots per charge.</desc>
+	<tooltip>Fires a blast of two that does 2 ion damage. Can hit and disable shields as well as systems.</tooltip> <!-- placeholder -->
+	<damage>0</damage>
+	<speed>35</speed>
+	<shots>2</shots>
+	<sp>0</sp>
+	<!-- ai_cruiser.lua stats
+	2 shield pop
+	2 ion on system hit
+	2 damage on energy shields
+	1 damage on empty rooms [this might change in the future]
+	-->
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>3</stunChance>
+	<cooldown>12</cooldown>
+	<power>3</power>
+	<cost>60</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_emp_2</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<!-- R4: For Chronklo, depending on how this weapon balance works, it might be fun to have this decrease enemy shield cooldown for like 2-3 seconds when it hits their shield bubble directly, thoughts? -->
+<weaponBlueprint name="RVS_EMP_HEAVY_1">
+	<type>LASER</type>
+	<title>Heavy EMP Device</title>
+	<short>EMP Device</short>
+	<tip>rvs_tip_emp_heavy</tip>
+	<locked>1</locked>
+	<desc>These Heavy EMP devices were once favoured for their intense but non-lethal effect. Capable of crippling cruisers in but a few blasts.</desc>
+	<tooltip>Big EMP go pew pew.</tooltip> <!-- placeholder -->
+	<damage>0</damage>
+	<speed>35</speed> <!-- R4: considering it being slower -->
+	<shots>1</shots>
+	<sp>0</sp>
+	<!-- ai_cruiser.lua stats
+	4 shield pop
+	3 to 2 ion on system hit
+	1 to 2 ion on adjacent systems and half stun duration stun
+	6 damage on energy shields
+	2 damage on empty rooms [this might change in the future]
+	-->
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>9</stunChance>
+	<cooldown>15</cooldown>	<!-- might be longer to adjust for balance -->
+	<power>3</power>
+	<cost>80</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>
+	<image>ion_4_shot</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_emp_heavy</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="RVS_PROJECTILE_BEAM_FOCUS_1">
 	<type>BEAM</type>
 	<tip>tip_focus</tip>
@@ -174,10 +276,42 @@
 	</launchSounds>
 	<weaponArt>ra_beam_auto</weaponArt> 
 </weaponBlueprint>
+<weaponBlueprint name="RVS_BEAM_SHOTGUN_1">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>rvs_tip_focus_split</tip>
+    <title>Splitter Pinpoint Mark I</title> <!-- Scatter Beam mark II? -->
+    <short>Splitter I</short>
+    <desc>Fires a pair of single damage pinpoint beams over an area.</desc>
+    <tooltip>Fires a pair of beams across a random area doing up to 2 damage.</tooltip>
+    <radius>45</radius> <!-- R4: Changed from 42 to 47, as I think a near guaranteed 4 hits on a 2x2 room is a lil powerful for a weapon like this-->
+    <damage>1</damage>
+    <shots>1</shots>
+    <sp>0</sp>
+    <fireChance>4</fireChance> <!-- fire chance moderately high for Chronos pleasure -->
+    <breachChance>1</breachChance>
+    <cooldown>8</cooldown>
+    <power>1</power>
+    <cost>45</cost>
+    <bp>2</bp>
+    <speed>0</speed> <!-- R4: Chrono told me this is important to be 0-->
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
+    <projectiles>
+        <projectile count="2" fake="false">laser_burst</projectile> <!-- Fake projectiles which LUA replaces with beams -->
+    </projectiles>
+    <!-- not sure what sound effect best works here -->
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+    <weaponArt>rvs_beam_shotgun_2</weaponArt>
+</weaponBlueprint>
+
 <weaponBlueprint name="RVS_BEAM_SHOTGUN_2">
     <type>BURST</type>
     <flavorType>Pinpoint</flavorType>
-    <tip>tip_focus_split</tip>
+    <tip>rvs_tip_focus_split</tip>
     <title>Splitter Pinpoint Mark II</title> <!-- Scatter Beam mark II? -->
     <short>Splitter II</short>
     <desc>Fires a cluster of pinpoint beams over a wide area dealing up to 4 damage.</desc>
@@ -196,6 +330,38 @@
     <rarity>0</rarity>	<!-- rarity in sector rarity list-->
     <projectiles>
         <projectile count="4" fake="false">laser_burst</projectile> <!-- Fake projectiles which LUA replaces with beams -->
+    </projectiles>
+    <!-- not sure what sound effect best works here -->
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+    <weaponArt>rvs_beam_shotgun_2</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_BEAM_SHOTGUN_3">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>rvs_tip_focus_split</tip>
+    <title>Splitter Pinpoint Mark III</title> <!-- Scatter Beam mark II? -->
+    <short>Splitter III</short>
+    <desc>Fires devestating volley of 3 pinpoint beams that deal 2 damage each.</desc>
+    <tooltip>Fires a scatter of beams across a random area doing up to 4 damage.</tooltip>
+    <radius>55</radius> <!-- might reduce to 50 later? -->
+    <damage>2</damage> <!-- two damage on the mark 3-->
+    <shots>1</shots>
+    <sp>0</sp>
+    <fireChance>5</fireChance>
+    <breachChance>3</breachChance> <!-- R4: breach chance higher for the breach gods -->
+    <cooldown>10</cooldown>
+    <power>3</power>
+    <cost>62</cost>
+    <bp>10</bp>
+    <speed>0</speed> <!-- R4: Chrono told me this is important to be 0-->
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
+    <projectiles>
+        <projectile count="3" fake="false">laser_burst</projectile> <!-- Fake projectiles which LUA replaces with beams -->
     </projectiles>
     <!-- not sure what sound effect best works here -->
 	<launchSounds>
@@ -241,7 +407,7 @@
 
 <weaponBlueprint name="RA_EFFECTOR_1">
 	<type>BOMB</type>
-	<tip>ce_tip_effector</tip> <!-- oh woops, this should be fixed -->
+	<tip>rvs_tip_effector</tip> <!-- oh woops, this should be fixed -->
 	<title>Effector Mark I</title>
 	<short>Effect I</short>
 	<flavorType>Disruption Field Projector</flavorType>
