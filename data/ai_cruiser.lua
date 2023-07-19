@@ -36,9 +36,12 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
 end)
 
 -- Replace burst projectile with beam for shotgun pinpoints
-local pinpointBlueprint = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_1")
+local pinpoint1 = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_1")
+local pinpoint2 = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_2")
 local burstsToBeams = {}
-burstsToBeams["RVS_BEAM_SHOTGUN_2"] = pinpointBlueprint
+burstsToBeams["RVS_BEAM_SHOTGUN_1"] = pinpoint1
+burstsToBeams["RVS_BEAM_SHOTGUN_2"] = pinpoint1
+burstsToBeams["RVS_BEAM_SHOTGUN_3"] = pinpoint2
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local beamReplacement = burstsToBeams[weapon.blueprint.name]
     if beamReplacement then
@@ -56,15 +59,21 @@ end)
 -- Make EMP pop extra shields
 local popWeapons = mods.inferno.popWeapons
 popWeapons.RVS_EMP_1 = {count = 2, countSuper = 2}
+popWeapons.RVS_EMP_2 = {count = 2, countSuper = 2}
+popWeapons.RVS_EMP_HEAVY_1 = {count = 4, countSuper = 6}
 popWeapons.RVS_DRONE_EMP_LIGHT = {count = 1, countSuper = 1}
 
 -- Make EMP do ion damage
 local roomDamageWeapons = mods.inferno.roomDamageWeapons
 roomDamageWeapons.RVS_EMP_1 = {ion = 2}
+roomDamageWeapons.RVS_EMP_2 = {ion = 2}
+roomDamageWeapons.RVS_EMP_HEAVY_1 = {ion = 3}
 roomDamageWeapons.RVS_DRONE_EMP_LIGHT = {ion = 1}
 
 local emptyRoomDamage = {
-    RVS_EMP_1 = 1
+    RVS_EMP_1 = 1,
+    RVS_EMP_2 = 1,
+    RVS_EMP_HEAVY_1 = 2
 }
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA, function(ShipManager, Projectile, Location, Damage, forceHit, shipFriendlyFire)
     local roomID = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true)
