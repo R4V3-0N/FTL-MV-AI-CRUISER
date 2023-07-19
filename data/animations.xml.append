@@ -8,8 +8,6 @@
 </anim>
 
 
-
-
 <animSheet name="rvs_beam_ion_bust_1" w="290" h="76" fw="29" fh="76">weapons/rvs_beam_ion_bust_1_strip10.png</animSheet>
 <weaponAnim name="rvs_beam_ion_bust_1">
 	<sheet>rvs_beam_ion_bust_1</sheet>
@@ -56,7 +54,11 @@
 
 
 <animSheet name="rvs_emp_1" w="324" h="95" fw="27" fh="95">weapons_hyperspace/rvs_emp_1_strip12.png</animSheet>
+<animSheet name="rvs_emp_2" w="372" h="106" fw="31" fh="95">weapons_hyperspace/rvs_emp_2_strip12.png</animSheet>
+<animSheet name="rvs_emp_heavy_1" w="432" h="95" fw="36" fh="95">weapons_hyperspace/rvs_emp_heavy_1_strip12.png</animSheet>
+<animSheet name="rvs_beam_shotgun_1" w="192" h="40" fw="24" fh="40">weapons_hyperspace/rvs_beam_shotgun_1_strip8.png</animSheet>
 <animSheet name="rvs_beam_shotgun_2" w="340" h="49" fw="34" fh="49">weapons_hyperspace/rvs_beam_shotgun_2_strip10.png</animSheet>
+<animSheet name="rvs_beam_shotgun_3" w="340" h="49" fw="34" fh="49">weapons_hyperspace/rvs_beam_shotgun_3_strip10.png</animSheet>
 
 <weaponAnim name="rvs_emp_1">
 	<sheet>rvs_emp_1</sheet>
@@ -67,6 +69,34 @@
 	<mountPoint x="3" y="58"/>
 	<chargeImage>weapons_hyperspace/rvs_emp_1_glow.png</chargeImage>
 </weaponAnim>
+<weaponAnim name="rvs_emp_2">
+	<sheet>rvs_emp_2</sheet>
+	<desc length="12" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint  x="18" y="21"/>
+	<mountPoint x="3" y="65"/>
+	<chargeImage>weapons_hyperspace/rvs_emp_2_glow.png</chargeImage>
+</weaponAnim>
+<weaponAnim name="rvs_emp_heavy_1">
+	<sheet>rvs_emp_heavy_1</sheet>
+	<desc length="12" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint  x="20" y="21"/>
+	<mountPoint x="4" y="67"/>
+	<chargeImage>weapons_hyperspace/rvs_emp_heavy_1_glow.png</chargeImage>
+</weaponAnim>
+
+<weaponAnim name="rvs_beam_shotgun_1">
+	<sheet>rvs_beam_shotgun_1</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="15" y="2"/>
+	<mountPoint x="5" y="26"/>
+	<chargeImage>weapons_hyperspace/rvs_beam_shotgun_1_glow.png</chargeImage>
+</weaponAnim>
 <weaponAnim name="rvs_beam_shotgun_2">
 	<sheet>rvs_beam_shotgun_2</sheet>
 	<desc length="10" x="0" y="0"/>
@@ -76,7 +106,15 @@
 	<mountPoint x="5" y="36"/>
 	<chargeImage>weapons_hyperspace/rvs_beam_shotgun_2_glow.png</chargeImage>
 </weaponAnim>
-
+<weaponAnim name="rvs_beam_shotgun_3">
+	<sheet>rvs_beam_shotgun_3</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="23" y="2"/>
+	<mountPoint x="5" y="56"/>
+	<chargeImage>weapons_hyperspace/rvs_beam_shotgun_3_glow.png</chargeImage>
+</weaponAnim>
 
 <animSheet name="RVS_PROJECTILE_BEAM_FOCUS_1" w="12" h="5" fw="12" fh="5">effects/RVS_PROJECTILE_BEAM_FOCUS_1.png</animSheet>
 <anim name="RVS_PROJECTILE_BEAM_FOCUS_1">
