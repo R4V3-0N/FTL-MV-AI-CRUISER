@@ -14,7 +14,7 @@
 	<deadCrew load="DEFEAT_MULTIVERSE_TRAVELER" />
 </ship>
 <event name="MV_TRAVELER_AI_INTERCEPTER">
-	<text>PLACEHOLDER</text>
+	<text>TODO: r4 needs to write like 3 sentences here. pee pee doo doo kaka</text>
 	<ship load="SHIP_RVSER_AI_INTERCEPTER" hostile="true"/>
 	<choice hidden="true">
 		<text>Continue...</text>
