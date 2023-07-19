@@ -246,7 +246,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>rvs_emp_heavy</weaponArt>
+	<weaponArt>rvs_emp_heavy_1</weaponArt>
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 
@@ -290,7 +290,7 @@
     <sp>0</sp>
     <fireChance>4</fireChance> <!-- fire chance moderately high for Chronos pleasure -->
     <breachChance>1</breachChance>
-    <cooldown>8</cooldown>
+    <cooldown>5</cooldown>
     <power>1</power>
     <cost>45</cost>
     <bp>2</bp>
@@ -354,7 +354,7 @@
     <sp>0</sp>
     <fireChance>5</fireChance>
     <breachChance>3</breachChance> <!-- R4: breach chance higher for the breach gods -->
-    <cooldown>10</cooldown>
+    <cooldown>12</cooldown>
     <power>3</power>
     <cost>62</cost>
     <bp>10</bp>
