@@ -183,3 +183,50 @@ function(ShipManager, Projectile, Location, Damage, shipFriendlyFire)
   end
   return Defines.CHAIN_CONTINUE
 end)
+--Number of shots a drone may fire before it is destroyed
+local limitShots = {
+    RVS_AI_MISSILE_1 = 3,
+}
+script.on_internal_event(Defines.InternalEvents.DRONE_FIRE,
+function(Projectile, Drone)
+    local shots = limitShots[Drone.blueprint.name]
+    if shots then
+        if not Drone.table[limitShots] then
+            Drone.table[limitShots] = shots
+        end
+        Drone.table[limitShots] = Drone.table[limitShots] - 1
+        if Drone.table[limitShots] <= 0 then
+            Drone:BlowUp(false)
+            Drone.table[limitShots] = shots
+        end
+    end
+    return Defines.Chain.CONTINUE
+end)
+
+script.on_internal_event(Defines.InternalEvents.DRONE_FIRE,
+function(Projectile, Drone)
+    if Drone.blueprint.name == "RVS_BEAM_DEFENSE_1" then
+        local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
+        --Spawn beam from drone to target
+        spaceManager:CreateBeam(
+            Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_1"), 
+            Drone.currentLocation, 
+            Projectile.currentSpace,
+            1 - Projectile.ownerId,
+            Projectile.target, 
+            Hyperspace.Pointf(Projectile.target.x, Projectile.target.y + 1),
+            Projectile.currentSpace, 
+            1, 
+            -1)
+        --Destroy target (Beam is not programmed to do so in base game)
+        for target in vter(spaceManager.projectiles) do
+            if target:GetSelfId() == Drone.currentTargetId then
+                target:Kill()
+                break
+            end
+        end
+        
+        return Defines.Chain.PREEMPT
+    end
+    return Defines.Chain.CONTINUE
+end)

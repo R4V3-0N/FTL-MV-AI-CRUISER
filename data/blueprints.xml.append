@@ -599,6 +599,36 @@ DRONES
 	<weaponArt>rvs_emp_1</weaponArt>
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
+
+<weaponBlueprint name="RVS_DEFENSE_INSTANT">
+	<type>LASER</type>
+	<title>Drone Laser</title>
+	<damage>1</damage>
+	<shots>1</shots>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>2147483647</speed>
+	<rarity>0</rarity>
+	<image>laser_light</image>
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>
+</weaponBlueprint>
 <droneBlueprint name="RVS_AI_MICROFIGHTER_SHOCK">
 	<type>COMBAT</type>
 	<!--<tip>tip_ai_microfighter</tip>-->
@@ -625,6 +655,45 @@ DRONES
 	<rarity>0</rarity>
 	<iconImage>combat</iconImage>
 </droneBlueprint>
+
+<droneBlueprint name="RVS_AI_MISSILE_1">
+	<type>COMBAT</type>
+	<title>Missile Drone MK I</title>
+	<short>Missile MK I</short>
+	<desc>Equipped with an integrated missile storage unit, this drone can fire 3 2-damage missiles before it has to be reconstructed.</desc>
+	<power>2</power>
+	<speed>15</speed>
+	<cost>75</cost>
+	<bp>3</bp>
+	<cooldown>1000</cooldown>
+	<droneImage>rvs_missile_drone_1</droneImage>
+	<weaponBlueprint>MISSILES_2_ENEMY</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<!--TODO: Add proper glows-->
+<droneBlueprint name="RVS_BEAM_DEFENSE_1">
+	<type>DEFENSE</type>
+	<level>1</level>
+	<target>LASERS</target>
+	<tip>tip_defense</tip>
+	<title>Beam Defender Mk. I</title>
+	<short>Beam Defense I</short>
+	<desc>Defense drone capable of targeting lasers or solid projectiles with a beam
+	Reload: 600 MS</desc>
+	<power>2</power>
+	<cooldown>600</cooldown>
+	<dodge>0</dodge>
+	<speed>5</speed>
+	<cost>55</cost>
+	<bp>2</bp>
+	<droneImage>rvs_beam_defense_1</droneImage>
+	<weaponBlueprint>RVS_DEFENSE_INSTANT</weaponBlueprint>
+	<iconImage>defense</iconImage>
+	<rarity>0</rarity>
+</droneBlueprint>
+
 <!--
 
 AUGMENTS
