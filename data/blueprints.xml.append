@@ -629,6 +629,33 @@ DRONES
 	</missSounds>
 	<weaponArt>laser_burst_1</weaponArt>
 </weaponBlueprint>
+
+<weaponBlueprint name="RVS_BEAM_DEFENSE_1">
+	<type>BEAM</type>
+	<tip>tip_focus</tip>
+	<title>Point Defense</title>
+	<short>Point Defense</short>
+	<desc>YOU SOULD NEVER SEE THIS</desc>
+	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+	<damage>0</damage>
+	<sp>0</sp>
+    <fireChance>0</fireChance> 
+    <breachChance>0</breachChance>
+	<cooldown>0</cooldown>
+	<speed>1</speed>
+	<length>1</length>
+	<power>0</power>
+	<cost>0</cost>
+	<bp>0</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+	<weaponArt>ra_beam_auto</weaponArt> 
+</weaponBlueprint>
 <droneBlueprint name="RVS_AI_MICROFIGHTER_SHOCK">
 	<type>COMBAT</type>
 	<!--<tip>tip_ai_microfighter</tip>-->

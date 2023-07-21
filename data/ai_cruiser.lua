@@ -209,7 +209,7 @@ function(Projectile, Drone)
         local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
         --Spawn beam from drone to target
         spaceManager:CreateBeam(
-            Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_1"), 
+            Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_BEAM_DEFENSE_1"), 
             Drone.currentLocation, 
             Projectile.currentSpace,
             1 - Projectile.ownerId,
@@ -221,7 +221,7 @@ function(Projectile, Drone)
         --Destroy target (Beam is not programmed to do so in base game)
         for target in vter(spaceManager.projectiles) do
             if target:GetSelfId() == Drone.currentTargetId then
-                target:Kill()
+                target.death_animation:Start(true)
                 break
             end
         end
