@@ -721,6 +721,42 @@ DRONES
 	<rarity>0</rarity>
 </droneBlueprint>
 
+<droneBlueprint name="RVS_AI_SWARM_DRONE">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>AI Swarm Drone</title>
+	<short>Swarm</short>
+	<desc>By using next-gen field manufacturing, this drone spawns a temporary mini-drone to assist it every other shot.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>12</speed>
+	<cost>70</cost>
+	<bp>3</bp>
+	<droneImage>rvs_ai_swarm_drone</droneImage>
+	<weaponBlueprint>DRONE_LASER_COMBAT</weaponBlueprint>
+	<rarity>1</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="RVS_AI_SWARM_DRONE_CHILD">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Spawned Swarm Drone</title>
+	<short>Spawned Drone</short>
+	<desc>Based on an extremely lightweight template, this drone can be manufactured multiple times using negligable resources.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>9</speed>
+	<cost>15</cost>
+	<bp>3</bp>
+	<droneImage>rvs_ai_swarm_drone_child</droneImage>
+	<weaponBlueprint>DRONE_LASER_COMBAT</weaponBlueprint>
+	<rarity>1</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
 <!--
 
 AUGMENTS
