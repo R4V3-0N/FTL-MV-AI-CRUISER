@@ -539,12 +539,9 @@ DRONES
 <droneBlueprint name="RVS_AI_MICROFIGHTER_INTERCEPTER">
 	<type>COMBAT</type>
 	<!--<tip>tip_ai_microfighter</tip>-->
-	<!--<title>AI Intercepter Microfighter</title>
+	<title>AI Intercepter Microfighter</title>
 	<short>Int. Drone</short>
-	<desc>A highly advanced and maneuverable microfighter intended to intercept small ships and drones with a reliable scatter laser. It is technically more sentient than you.</desc>-->
-	<title>AI Scatter Microfighter</title>
-	<short>Scatter Drone</short>
-	<desc>A highly advanced and maneuverable microfighter designed to provide supporting fire with a reliable scatter laser. It is technically more sentient than you.</desc>
+	<desc>A highly advanced and maneuverable microfighter intended to intercept small ships and drones with a reliable scatter laser. It is technically more sentient than you.</desc>
 	<!--
 	HS:Dogfights Long Description
 	<desc>Intended to outmaneuver enemies with it's anti-gravity engines and gravity anchor.</desc>
