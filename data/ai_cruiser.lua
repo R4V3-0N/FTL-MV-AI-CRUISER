@@ -151,7 +151,7 @@ local function aquire_drone_target(ship, droneName)
     if otherShip then
         local target = nil
         for drone in vter(otherShip.spaceDrones) do
-            if drone.deployed and drone.currentSpace == otherShip.iShipId and not drone.explosion.tracker.running and drone.blueprint.typeName ~= "SHIP_REPAIR" and drone.blueprint.typeName ~= "HACKING" then
+            if drone.deployed and drone.currentSpace == otherShip.iShipId and not drone.explosion.tracker.running and (drone.blueprint.typeName == "DEFENSE" or drone.blueprint.typeName == "SHIELD") then
                 target = drone
                 break
             end
