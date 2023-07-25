@@ -234,3 +234,82 @@ function(ShipManager, Projectile, Location, Damage, shipFriendlyFire)
   end
   return Defines.CHAIN_CONTINUE
 end)
+--Number of shots a drone may fire before it is destroyed
+local limitShots = {}
+limitShots.RVS_AI_MISSILE_1 = 3
+
+--Implementation uses lifespan for save and load, replace with table implementation when saving features are available
+--I think lifespan is only used for surge drones so it's ok to use here
+script.on_internal_event(Defines.InternalEvents.DRONE_FIRE,
+function(Projectile, Drone)
+    local shots = limitShots[Drone.blueprint.name]
+    --Lifespan incremented by base game code
+    if shots then
+        if Drone.lifespan == 2147483647 then
+            Drone.lifespan = shots - 1
+        elseif Drone.lifespan == 0 then
+            Drone:BlowUp(false)
+            Drone.lifespan = shots
+        end
+    end
+    return Defines.Chain.CONTINUE
+end)
+
+script.on_internal_event(Defines.InternalEvents.DRONE_FIRE,
+function(Projectile, Drone)
+    if Drone.blueprint.name == "RVS_BEAM_DEFENSE_1" then
+        local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
+        --Spawn beam from drone to target
+        spaceManager:CreateBeam(
+            Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_BEAM_DEFENSE_1"), 
+            Drone.currentLocation, 
+            Projectile.currentSpace,
+            1 - Projectile.ownerId,
+            Projectile.target, 
+            Hyperspace.Pointf(Projectile.target.x, Projectile.target.y + 1),
+            Projectile.currentSpace, 
+            1, 
+            -1)
+        --Destroy target (Beam is not programmed to do so in base game)
+        for target in vter(spaceManager.projectiles) do
+            if target:GetSelfId() == Drone.currentTargetId then
+                target.death_animation:Start(true)
+                break
+            end
+        end
+        
+        return Defines.Chain.PREEMPT
+    end
+    return Defines.Chain.CONTINUE
+end)
+
+local function LoadEvent(eventName)
+    local world = Hyperspace.Global.GetInstance():GetCApp().world
+    Hyperspace.CustomEventsParser.GetInstance():LoadEvent(world, eventName, false, -1)
+end
+
+local SWARM_KEY = {}
+local shotsToSpawn = 2 --Spawn a drone every shotsToSpawn shots
+script.on_internal_event(Defines.InternalEvents.DRONE_FIRE,
+function(Projectile, Drone)
+    if Drone.blueprint.name == "RVS_AI_SWARM_DRONE" then
+        if not Drone.table[SWARM_KEY] then
+            Drone.table[SWARM_KEY] = shotsToSpawn
+        end
+
+        Drone.table[SWARM_KEY] = Drone.table[SWARM_KEY] - 1
+
+        if Drone.table[SWARM_KEY] <= 0 then
+            Drone.table[SWARM_KEY] = shotsToSpawn
+
+            local surgeEvent = Drone.iShipId == 0 and "RVS_AI_SWARM_DRONE_SURGE_PLAYER" or "RVS_AI_SWARM_DRONE_SURGE_ENEMY"
+            LoadEvent(surgeEvent)
+            local superDrones = Hyperspace.Global.GetInstance():GetShipManager(Drone.iShipId).superDrones
+            --Each drone only fires 4 shots
+            superDrones[0].lifespan = 4
+            --So new drones don't overwrite old drones, equivalant to <clearSuperDrones>
+            superDrones:clear()
+        end
+    end
+    return Defines.Chain.CONTINUE
+end)

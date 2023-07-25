@@ -7,3 +7,12 @@
 <event name="RVS_HOLO_DEATH_TRACK">
     <variable name="loc_holos_dead" op="add" val="1"/>
 </event>
+
+<event name="RVS_AI_SWARM_DRONE_SURGE_PLAYER">
+    <superDrones player="true" name="RVS_AI_SWARM_DRONE_SURGE"/>
+</event>
+
+<event name="RVS_AI_SWARM_DRONE_SURGE_ENEMY">
+    <superDrones player="false" name="RVS_AI_SWARM_DRONE_SURGE"/>
+</event>
+
