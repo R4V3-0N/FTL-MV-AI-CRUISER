@@ -292,7 +292,7 @@ local SWARM_KEY = {}
 local shotsToSpawn = 2 --Spawn a drone every shotsToSpawn shots
 script.on_internal_event(Defines.InternalEvents.DRONE_FIRE,
 function(Projectile, Drone)
-    if Drone.blueprint.name == "RVS_AI_SWARM_DRONE" then
+    if Drone.blueprint.name == "RVS_AI_MICROFIGHTER_SWARM" then
         if not Drone.table[SWARM_KEY] then
             Drone.table[SWARM_KEY] = shotsToSpawn
         end

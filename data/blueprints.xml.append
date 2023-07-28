@@ -97,6 +97,66 @@
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="RVS_FLOCK_GUN">
+	<type>LASER</type>
+	<title>Flock Gun</title>
+	<short>Flock Gun</short>
+	<tip>tip_laser</tip>
+	<desc>This heavy laser fires two shots in quick succession, each dealing 2 damage.</desc>
+	<tooltip>Fires 2 heavy projectiles, 2 damage each with low chance of fire and breaching.</tooltip>
+	<radius>50</radius>
+	<!-- Radius goes down by 5 for each drone active,
+	1 DRONE  = 45
+	2 DRONES = 40
+	3 DRONES = 35
+	4 DRONES = 30
+	-->
+	<accuracyMod>2</accuracyMod>
+	<!-- Radius goes up by 4 for each drone active,
+	1 DRONE  = 6
+	2 DRONES = 10
+	3 DRONES = 14
+	4 DRONES = 18
+	-->
+	<damage>2</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>4</breachChance>
+	<stunChance>3</stunChance>
+	<cooldown>12</cooldown> <!-- goes down 2 seconds per drone,
+	1 DRONE  = 10 seconds
+	2 DRONES = 8 seconds
+	3 DRONES = 6 seconds
+	4 DRONES = 4 seconds
+	-->
+	<power>3</power>
+	<cost>65</cost>
+	<!--was 75-->
+	<bp>10</bp>
+	<rarity>0</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_flock_gun</weaponArt>
+	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
+
 <!-- these weapons and bellow are inspired by HS but are not are more adapted to fit within FTL -->
 <weaponBlueprint name="RVS_EMP_1">
 	<type>LASER</type>
@@ -332,7 +392,7 @@
 		<sound>ra_focusbeam2</sound>
 		<sound>ra_focusbeam3</sound>
 	</launchSounds>
-    <weaponArt>rvs_beam_shotgun_2</weaponArt>
+    <weaponArt>rvs_beam_shotgun_1</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="RVS_BEAM_SHOTGUN_2">
@@ -396,7 +456,7 @@
 		<sound>ra_focusbeam2</sound>
 		<sound>ra_focusbeam3</sound>
 	</launchSounds>
-    <weaponArt>rvs_beam_shotgun_2</weaponArt>
+    <weaponArt>rvs_beam_shotgun_3</weaponArt>
 </weaponBlueprint>
 
 <!-- REBALANCED ARSENAL -->
@@ -436,7 +496,7 @@
 	<type>BOMB</type>
 	<tip>rvs_tip_effector</tip> <!-- oh woops, this should be fixed -->
 	<title>Effector Mark I</title>
-	<short>Effect I</short>
+	<short>Effect. I</short>
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
 	<desc>Basic hacking field projector that can disrupt systems.</desc>
@@ -481,6 +541,156 @@
 	<weaponArt>ra_effector_1</weaponArt>
 </weaponBlueprint>
 
+<weaponBlueprint name="RA_EFFECTOR_2">
+	<type>BOMB</type>
+	<tip>rvs_tip_effector</tip> <!-- oh woops, this should be fixed -->
+	<title>Effector Mark II</title>
+	<short>Effect. II</short>
+	<flavorType>Disruption Field Projector</flavorType>
+	<locked>1</locked>
+	<desc>Fast charging projector device that hacks systems at a higher rate than its predecessor.</desc>
+	<tooltip>Disrupts enemy systems.</tooltip>
+	<damage>0</damage>
+	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
+	<hack duration="4">
+		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
+		<doors>8</doors>
+		<sensors>8</sensors>
+		<temporal>8</temporal>
+	</hack>
+	<accuracyMod>10</accuracyMod>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>11</cooldown> <!-- R4 2023.07.28 Cooldown is 11, 4 lower than the mk 1 -->
+	<power>3</power>
+	<cost>60</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
+	<!--<image>ra_effector_impact_invisible</image>-->
+	<image>ra_effector_hacking</image>
+	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
+	<launchSounds>
+		<sound>rvs_effector_shoot1</sound>
+		<sound>rvs_effector_shoot2</sound>
+		<sound>rvs_effector_shoot3</sound>
+		<sound>rvs_effector_shoot4</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hackStart</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hackStart</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>ra_effector_2</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="RA_EFFECTOR_HEAVY">
+	<type>BOMB</type>
+	<tip>rvs_tip_effector</tip> <!-- oh woops, this should be fixed -->
+	<title>Heavy Effector</title>
+	<short>Hv. Effect.</short>
+	<flavorType>Disruption Field Projector</flavorType>
+	<locked>1</locked>
+	<desc>Slow-charging effector that can heavily disrupt ship systems with a prolonged hacking attack.</desc>
+	<tooltip>Disrupts enemy systems.</tooltip>
+	<damage>0</damage>
+	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
+	<hack duration="10">
+		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
+		<doors>14</doors>
+		<sensors>14</sensors>
+		<temporal>14</temporal>	
+	</hack>
+	<accuracyMod>10</accuracyMod>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>20</cooldown> <!-- R4 2023.02.15 reduced down from 16 to 15 -->
+	<power>3</power>
+	<cost>65</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
+	<!--<image>ra_effector_impact_invisible</image>-->
+	<image>ra_effector_hacking</image>
+	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
+	<launchSounds>
+		<sound>rvs_effector_shoot1</sound>
+		<sound>rvs_effector_shoot2</sound>
+		<sound>rvs_effector_shoot3</sound>
+		<sound>rvs_effector_shoot4</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hackStart</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hackStart</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>ra_effector_heavy</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="RA_EFFECTOR_CHAIN">
+	<type>BOMB</type>
+	<tip>rvs_tip_effector</tip> <!-- oh woops, this should be fixed -->
+	<title>Chain Effector</title>
+	<short>Chain Effect.</short>
+	<flavorType>Disruption Field Projector</flavorType>
+	<locked>1</locked>
+	<desc>Intelligent field projector that decreases in cooldown to keep up with enemy defenses with its hacking attacks.</desc>
+	<tooltip>Disrupts enemy systems.</tooltip>
+	<damage>0</damage>
+	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
+	<hack duration="7">
+		<doors>11</doors>
+		<sensors>11</sensors>
+		<temporal>11</temporal>	
+	</hack>
+	<accuracyMod>10</accuracyMod>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>18</cooldown>
+	<boost>
+		<type>cooldown</type> <!-- Final Cooldown: 12 -->
+		<amount>2</amount>
+		<count>3</count>
+	</boost>
+	<power>3</power>
+	<cost>65</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
+	<!--<image>ra_effector_impact_invisible</image>-->
+	<image>ra_effector_hacking</image>
+	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
+	<launchSounds>
+		<sound>rvs_effector_shoot1</sound>
+		<sound>rvs_effector_shoot2</sound>
+		<sound>rvs_effector_shoot3</sound>
+		<sound>rvs_effector_shoot4</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hackStart</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hackStart</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>ra_effector_chain</weaponArt>
+</weaponBlueprint>
 
 <!--
 
@@ -508,13 +718,13 @@ DRONES
         <particleEmitter name="ra_emitter_explosion_scatter" />
         <particleEmitter name="ra_emitter_explosion_scatter">
             <type>ra_part_explosion_tiny2</type>
-        </particleEmitters>
+        </particleEmitter>
         <particleEmitter name="ra_emitter_explosion_scatter">
             <type>ra_part_explosion_tiny3</type>
-        </particleEmitters>
+        </particleEmitter>
         <particleEmitter name="ra_emitter_explosion_scatter">
             <type>ra_part_explosion_tiny4</type>
-        </particleEmitters>
+        </particleEmitter>
     </particleEmitters>
 	<launchSounds>
 		<sound>rvs_heavyLaserScatter1</sound>
@@ -596,6 +806,32 @@ DRONES
 	<weaponArt>rvs_emp_1</weaponArt>
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
+<droneBlueprint name="RVS_AI_MICROFIGHTER_SHOCK">
+	<type>COMBAT</type>
+	<!--<tip>tip_ai_microfighter</tip>-->
+	<title>AI Shock Microfighter</title>
+	<short>Shock Drone</short>
+	<desc>Modified well beyond safety parametres by a rather obnoxious Avatar which pilots this craft. This evasive Microfighter has an EMP-centred loadout that excels in disabling ships systems single-handedly when their shielding is disabled.</desc>
+	<!--	Excessively long non-descriptive description I wrote... starting to think I want to port Slow's INS+ computer menu into MV
+	<desc>Piloted by a rather obnoxious Avatar, modified well beyond nominal safety parametres stripping away standard EMP shielding necessary for other Avatars to maintain a link. SRKZ on the other hand is well suited to pilot this specialised microfighter.</desc>
+	-->
+	<!--	long modified desc from HS:DF,
+	<desc>The avatar of this thing is most obnoxious. Other AIs needed additional EMP shielding.</desc>
+	-->
+	<!--	Short modified desc from HS:DF,
+	<desc>An EMP-centred loadout that excels in disabling early game enemies, but ill equiped to deal with enemies with stronger shielding.</desc>
+	-->
+	<power>2</power>	<!-- Changing it to 2 from 1 for more speed -->
+	<cooldown>1000</cooldown>
+	<dodge>9</dodge>
+	<speed>22</speed>
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>rvs_ai_microfighter_shock</droneImage>
+	<weaponBlueprint>RVS_DRONE_EMP_LIGHT</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
 
 <weaponBlueprint name="RVS_DEFENSE_INSTANT">
 	<type>LASER</type>
@@ -653,32 +889,6 @@ DRONES
 	</launchSounds>
 	<weaponArt>ra_beam_auto</weaponArt> 
 </weaponBlueprint>
-<droneBlueprint name="RVS_AI_MICROFIGHTER_SHOCK">
-	<type>COMBAT</type>
-	<!--<tip>tip_ai_microfighter</tip>-->
-	<title>AI Shock Microfighter</title>
-	<short>Shock Drone</short>
-	<desc>Modified well beyond safety parametres by a rather obnoxious Avatar which pilots this craft. This evasive Microfighter has an EMP-centred loadout that excels in disabling ships systems single-handedly when their shielding is disabled.</desc>
-	<!--	Excessively long non-descriptive description I wrote... starting to think I want to port Slow's INS+ computer menu into MV
-	<desc>Piloted by a rather obnoxious Avatar, modified well beyond nominal safety parametres stripping away standard EMP shielding necessary for other Avatars to maintain a link. SRKZ on the other hand is well suited to pilot this specialised microfighter.</desc>
-	-->
-	<!--	long modified desc from HS:DF,
-	<desc>The avatar of this thing is most obnoxious. Other AIs needed additional EMP shielding.</desc>
-	-->
-	<!--	Short modified desc from HS:DF,
-	<desc>An EMP-centred loadout that excels in disabling early game enemies, but ill equiped to deal with enemies with stronger shielding.</desc>
-	-->
-	<power>2</power>	<!-- Changing it to 2 from 1 for more speed -->
-	<cooldown>1000</cooldown>
-	<dodge>9</dodge>
-	<speed>22</speed>
-	<cost>50</cost>
-	<bp>3</bp>
-	<droneImage>rvs_ai_microfighter_shock</droneImage>
-	<weaponBlueprint>RVS_DRONE_EMP_LIGHT</weaponBlueprint>
-	<rarity>0</rarity>
-	<iconImage>combat</iconImage>
-</droneBlueprint>
 
 <droneBlueprint name="RVS_AI_MISSILE_1">
 	<type>COMBAT</type>
@@ -718,7 +928,7 @@ DRONES
 	<rarity>0</rarity>
 </droneBlueprint>
 
-<droneBlueprint name="RVS_AI_SWARM_DRONE">
+<droneBlueprint name="RVS_AI_MICROFIGHTER_SWARM">
 	<type>COMBAT</type>
 	<tip>tip_toggle_combat</tip>
 	<title>AI Swarm Drone</title>
@@ -730,25 +940,25 @@ DRONES
 	<speed>12</speed>
 	<cost>70</cost>
 	<bp>3</bp>
-	<droneImage>rvs_ai_swarm_drone</droneImage>
+	<droneImage>rvs_ai_microfighter_swarm</droneImage>
 	<weaponBlueprint>DRONE_LASER_COMBAT</weaponBlueprint>
 	<rarity>1</rarity>
 	<iconImage>combat</iconImage>
 </droneBlueprint>
 
-<droneBlueprint name="RVS_AI_SWARM_DRONE_CHILD">
+<droneBlueprint name="RVS_AI_MICROFIGHTER_SWARM_CHILD">
 	<type>COMBAT</type>
 	<tip>tip_toggle_combat</tip>
-	<title>Spawned Swarm Drone</title>
-	<short>Spawned Drone</short>
-	<desc>Based on an extremely lightweight template, this drone can be manufactured multiple times using negligable resources.</desc>
-	<power>2</power>
+	<title>Spawned Flock Drone</title>
+	<short>Flock Drone</short>
+	<desc>Based on an extremely lightweight template, this drone can be manufactured multiple times using negligable resources gathered during combat.</desc>
+	<power>1</power>
 	<cooldown>1000</cooldown>
 	<dodge>0</dodge>
 	<speed>9</speed>
 	<cost>15</cost>
 	<bp>3</bp>
-	<droneImage>rvs_ai_swarm_drone_child</droneImage>
+	<droneImage>rvs_ai_flock_drone</droneImage>
 	<weaponBlueprint>DRONE_LASER_COMBAT</weaponBlueprint>
 	<rarity>1</rarity>
 	<iconImage>combat</iconImage>

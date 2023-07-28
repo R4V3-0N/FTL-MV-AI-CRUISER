@@ -76,7 +76,7 @@
 
 <mod:findLike type="boss">
 	<mod-append:surgeDrones name="RVS_AI_SWARM_DRONE_SURGE">
-		<drone name="RVS_AI_SWARM_DRONE_CHILD" count="1"/>
+		<drone name="RVS_AI_MICROFIGHTER_SWARM_CHILD" count="1"/>
 	</mod-append:surgeDrones>
 </mod:findLike>
 
