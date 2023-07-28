@@ -14,7 +14,9 @@
 	<deadCrew load="DEFEAT_MULTIVERSE_TRAVELER" />
 </ship>
 <event name="MV_TRAVELER_AI_INTERCEPTER">
-	<text>TODO: r4 needs to write like 3 sentences here. pee pee doo doo kaka</text>
+	<text>Your ship is bombarded with transmissions from beyond the portal's horizon, too rapid and dense to decypher in live time. This is only compounded as the data flow accelerates in advance of the arival of a ship unlike any you have ever seen. It crawls to a stop as its transmissions end, as though waiting for you to respond. 
+
+You don't have time to do so, as ship engages in a hard burn with its weapons powering up mere moments later! You do not know if you offended them or if their intent was hostile from the outset, but regardless, you power weapons and prepare to respond in kind.</text>
 	<ship load="SHIP_RVSER_AI_INTERCEPTER" hostile="true"/>
 	<choice hidden="true">
 		<text>Continue...</text>
