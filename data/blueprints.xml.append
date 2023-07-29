@@ -503,11 +503,11 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="4">
+	<hack duration="4" immuneAfterHack="4">
 		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
-		<doors>8</doors>
-		<sensors>8</sensors>
-		<temporal>8</temporal>
+		<doors immuneAfterHack="0">8</doors>
+		<sensors immuneAfterHack="0">8</sensors>
+		<temporal immuneAfterHack="0">8</temporal>
 	</hack>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
@@ -552,11 +552,11 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="4">
+	<hack duration="4" immuneAfterHack="4">
 		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
-		<doors>8</doors>
-		<sensors>8</sensors>
-		<temporal>8</temporal>
+		<doors immuneAfterHack="0">8</doors>
+		<sensors immuneAfterHack="0">8</sensors>
+		<temporal immuneAfterHack="0">8</temporal>
 	</hack>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
@@ -601,11 +601,11 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="10">
+	<hack duration="10" immuneAfterHack="4">
 		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
-		<doors>14</doors>
-		<sensors>14</sensors>
-		<temporal>14</temporal>	
+		<doors immuneAfterHack="0">14</doors>
+		<sensors immuneAfterHack="0">14</sensors>
+		<temporal immuneAfterHack="0">14</temporal>	
 	</hack>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
@@ -650,10 +650,10 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="7">
-		<doors>11</doors>
-		<sensors>11</sensors>
-		<temporal>11</temporal>	
+	<hack duration="7" immuneAfterHack="4">
+		<doors immuneAfterHack="0">11</doors>
+		<sensors immuneAfterHack="0">11</sensors>
+		<temporal immuneAfterHack="0">11</temporal>	
 	</hack>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
