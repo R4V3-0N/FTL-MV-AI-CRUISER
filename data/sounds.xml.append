@@ -3,6 +3,10 @@
 <ra_focusbeam2 volume="5">weapons/bp_laser_2b.ogg</ra_focusbeam2>
 <ra_focusbeam3 volume="5">weapons/bp_laser_2c.ogg</ra_focusbeam3>
 
+<ra_focusbeambig1 volume="5">weapons/bp_laser_big_2.ogg</ra_focusbeambig1>
+<ra_focusbeambig2 volume="5">weapons/bp_laser_big_2b.ogg</ra_focusbeambig2>
+<ra_focusbeambig3 volume="5">weapons/bp_laser_big_2c.ogg</ra_focusbeambig3>
+
 <silence volume="0">explosions/ra_explosion_effector_silence.ogg</silence>
 
 <!-- edited by ChronoVortex, originally created by soundslikewillem https://freesound.org/people/soundslikewillem/sounds/190707/ -->

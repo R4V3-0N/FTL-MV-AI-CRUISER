@@ -357,9 +357,9 @@
 	<rarity>0</rarity>
 	<image>beam_contact</image>
 	<launchSounds>
-		<sound>ra_focusbeam1</sound>
-		<sound>ra_focusbeam2</sound>
-		<sound>ra_focusbeam3</sound>
+		<sound>ra_focusbeambig1</sound>
+		<sound>ra_focusbeambig2</sound>
+		<sound>ra_focusbeambig3</sound>
 	</launchSounds>
 	<weaponArt>ra_beam_auto</weaponArt> 
 </weaponBlueprint>
@@ -450,11 +450,10 @@
     <projectiles>
         <projectile count="3" fake="false">laser_burst</projectile> <!-- Fake projectiles which LUA replaces with beams -->
     </projectiles>
-    <!-- not sure what sound effect best works here -->
 	<launchSounds>
-		<sound>ra_focusbeam1</sound>
-		<sound>ra_focusbeam2</sound>
-		<sound>ra_focusbeam3</sound>
+		<sound>ra_focusbeambig1</sound>
+		<sound>ra_focusbeambig2</sound>
+		<sound>ra_focusbeambig3</sound>
 	</launchSounds>
     <weaponArt>rvs_beam_shotgun_3</weaponArt>
 </weaponBlueprint>
