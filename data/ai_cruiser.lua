@@ -355,33 +355,41 @@ function(Projectile, Drone)
     return Defines.Chain.CONTINUE
 end)
 
-local function LoadEvent(eventName)
-    local world = Hyperspace.Global.GetInstance():GetCApp().world
-    Hyperspace.CustomEventsParser.GetInstance():LoadEvent(world, eventName, false, -1)
+-- Spawn children for swarm drone
+local shotsToSpawn = 2 -- Spawn a drone every shotsToSpawn shots
+local function spawn_temp_drone(name, ownerShip, targetShip, targetLocation, shots, position)
+    local drone = ownerShip:CreateSpaceDrone(Hyperspace.Global.GetInstance():GetBlueprints():GetDroneBlueprint(name))
+    drone.powerRequired = 0
+    drone:SetMovementTarget(targetShip._targetable)
+    drone:SetWeaponTarget(targetShip._targetable)
+    drone.lifespan = shots or 2
+    drone.powered = true
+    drone:SetDeployed(true)
+    drone.bDead = false
+    if position then drone:SetCurrentLocation(position) end
+    if targetLocation then drone.targetLocation = targetLocation end
+    return drone
 end
-
-local SWARM_KEY = {}
-local shotsToSpawn = 2 --Spawn a drone every shotsToSpawn shots
-script.on_internal_event(Defines.InternalEvents.DRONE_FIRE,
-function(Projectile, Drone)
-    if Drone.blueprint.name == "RVS_AI_MICROFIGHTER_SWARM" then
-        if not Drone.table[SWARM_KEY] then
-            Drone.table[SWARM_KEY] = shotsToSpawn
-        end
-
-        Drone.table[SWARM_KEY] = Drone.table[SWARM_KEY] - 1
-
-        if Drone.table[SWARM_KEY] <= 0 then
-            Drone.table[SWARM_KEY] = shotsToSpawn
-
-            local surgeEvent = Drone.iShipId == 0 and "RVS_AI_SWARM_DRONE_SURGE_PLAYER" or "RVS_AI_SWARM_DRONE_SURGE_ENEMY"
-            LoadEvent(surgeEvent)
-            local superDrones = Hyperspace.Global.GetInstance():GetShipManager(Drone.iShipId).superDrones
-            --Each drone only fires 4 shots
-            superDrones[0].lifespan = 4
-            --So new drones don't overwrite old drones, equivalant to <clearSuperDrones>
-            superDrones:clear()
+script.on_internal_event(Defines.InternalEvents.DRONE_FIRE, function(projectile, drone)
+    if drone.blueprint.name == "RVS_AI_MICROFIGHTER_SWARM" then
+        local swarmData = userdata_table(drone, "mods.ai.droneSwarm")
+        swarmData.shots = (swarmData.shots or shotsToSpawn) - 1
+        if swarmData.shots <= 0 then
+            swarmData.shots = shotsToSpawn
+            local thisShip = Hyperspace.Global.GetInstance():GetShipManager(drone.iShipId)
+            local otherShip = Hyperspace.Global.GetInstance():GetShipManager((drone.iShipId + 1)%2)
+            local childDrone = spawn_temp_drone("RVS_AI_MICROFIGHTER_SWARM_CHILD", thisShip, otherShip)
+            userdata_table(childDrone, "mods.ai.droneSwarm").clearOnJump = true
         end
     end
     return Defines.Chain.CONTINUE
+end)
+script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
+    if ship.bJumping then
+        for drone in vter(ship.spaceDrones) do
+            if userdata_table(drone, "mods.ai.droneSwarm").clearOnJump then
+                drone:SetDestroyed(true, false)
+            end
+        end
+    end
 end)
