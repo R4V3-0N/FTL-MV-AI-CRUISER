@@ -164,7 +164,7 @@
 	<short>EMP Device</short>
 	<tip>tip_ion</tip>
 	<locked>1</locked>
-	<desc>A simple yet effective EMP device, firing blasts of EMP projectiles that can take down 2 layers of shields, 2 ion damage to systems, or 1 damage to empty rooms.</desc>
+	<desc>A simple yet effective EMP device, firing blasts of EMP projectiles that can take down 2 layers of shields, deal 2 ion damage to systems or 1 damage to empty rooms.</desc>
 	<tooltip>Fires a single blast that does 2 ion damage on room hit otherwise pops 2 shields.</tooltip> <!-- placeholder -->
 	<damage>0</damage>
 	<speed>35</speed>
@@ -265,7 +265,7 @@
 	<short>Heavy EMP Device</short>
 	<tip>rvs_tip_emp_heavy</tip>
 	<locked>1</locked>
-	<desc>These Heavy EMP devices were once favoured for their intense but non-lethal effect. Capable of crippling cruisers in but a few blasts.</desc>
+	<desc>These Heavy EMP devices were once favoured for their intense but non-lethal effect. Its projectiles can take down 4 layers of shields, deal 3 ion damage to systems, 2 damage to empty rooms and 1 ion damage to adjacent systems.</desc>
 	<tooltip>Big EMP go pew pew.</tooltip> <!-- placeholder -->
 	<damage>0</damage>
 	<speed>35</speed> <!-- R4: considering it being slower -->
@@ -273,12 +273,11 @@
 	<sp>0</sp>
 	<!-- ai_cruiser.lua stats
 	4 shield pop
-	3 to 2 ion on system hit
-	1 to 2 ion on adjacent systems and half stun duration stun
+	3 ion on system hit
+	1 ion on adjacent systems and half stun duration stun
 	6 damage on energy shields
 	2 damage on empty rooms [this might change in the future]
 	-->
-    <!-- CV: random damage not supported by the system we're using. will implement damage to adjacent rooms later. -->
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<stunChance>9</stunChance>

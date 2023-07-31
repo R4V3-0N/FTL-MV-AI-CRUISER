@@ -7,6 +7,8 @@ end
 
 local vter = mods.vertexutil.vter
 local userdata_table = mods.vertexutil.userdata_table
+local get_room_at_location = mods.vertexutil.get_room_at_location
+local get_adjacent_rooms = mods.vertexutil.get_adjacent_rooms
 
 local function bool_to_num(bool)
     if bool then return 1 end
@@ -84,6 +86,23 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA, function(ShipManage
         Damage.iDamage = Damage.iDamage + emptyRoomDamage
     end
     return Defines.CHAIN_CONTINUE, forceHit, shipFriendlyFire
+end)
+
+local aoeWeapons = {}
+aoeWeapons["RVS_EMP_HEAVY_1"] = Hyperspace.Damage()
+aoeWeapons["RVS_EMP_HEAVY_1"].iIonDamage = 1
+
+script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(shipManager, projectile, location, damage, shipFriendlyFire)
+    local weaponName = nil
+    pcall(function() weaponName = Hyperspace.Get_Projectile_Extend(projectile).name end)
+    local aoeDamage = aoeWeapons[weaponName]
+    if aoeDamage then
+        Hyperspace.Get_Projectile_Extend(projectile).name = ""
+        for roomId, _ in pairs(get_adjacent_rooms(shipManager.iShipId, get_room_at_location(shipManager, location, false), false)) do
+            shipManager:DamageArea(shipManager:GetRoomCenter(roomId), aoeDamage, true)
+        end
+        Hyperspace.Get_Projectile_Extend(projectile).name = weaponName
+    end
 end)
 
 --[[ Old shield popping code
