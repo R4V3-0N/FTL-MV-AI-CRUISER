@@ -42,9 +42,9 @@ end)
 local pinpoint1 = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_1")
 local pinpoint2 = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_2")
 local burstsToBeams = {}
-burstsToBeams["RVS_BEAM_SHOTGUN_1"] = pinpoint1
-burstsToBeams["RVS_BEAM_SHOTGUN_2"] = pinpoint1
-burstsToBeams["RVS_BEAM_SHOTGUN_3"] = pinpoint2
+burstsToBeams.RVS_BEAM_SHOTGUN_1 = pinpoint1
+burstsToBeams.RVS_BEAM_SHOTGUN_2 = pinpoint1
+burstsToBeams.RVS_BEAM_SHOTGUN_3 = pinpoint2
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local beamReplacement = burstsToBeams[weapon.blueprint.name]
     if beamReplacement then
@@ -88,9 +88,10 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA, function(ShipManage
     return Defines.CHAIN_CONTINUE, forceHit, shipFriendlyFire
 end)
 
+-- Give heavy EMP AOE damage
 local aoeWeapons = {}
-aoeWeapons["RVS_EMP_HEAVY_1"] = Hyperspace.Damage()
-aoeWeapons["RVS_EMP_HEAVY_1"].iIonDamage = 1
+aoeWeapons.RVS_EMP_HEAVY_1 = Hyperspace.Damage()
+aoeWeapons.RVS_EMP_HEAVY_1.iIonDamage = 1
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(shipManager, projectile, location, damage, shipFriendlyFire)
     local weaponName = nil
@@ -102,6 +103,58 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(shipMa
             shipManager:DamageArea(shipManager:GetRoomCenter(roomId), aoeDamage, true)
         end
         Hyperspace.Get_Projectile_Extend(projectile).name = weaponName
+    end
+end)
+
+-- Make enemy effectors target only systems
+local systemTargetWeapons = {}
+local sysWeights = {}
+sysWeights.weapons = 6
+sysWeights.shields = 6
+sysWeights.pilot = 3
+sysWeights.engines = 3
+sysWeights.teleporter = 2
+sysWeights.hacking = 2
+sysWeights.medbay = 2
+sysWeights.clonebay = 2
+systemTargetWeapons.RA_EFFECTOR_1 = sysWeights
+systemTargetWeapons.RA_EFFECTOR_2 = sysWeights
+systemTargetWeapons.RA_EFFECTOR_HEAVY = sysWeights
+systemTargetWeapons.RA_EFFECTOR_CHAIN = sysWeights
+
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
+    local playerShip = Hyperspace.ships.player
+    local sysWeights = nil
+    if weapon.iShipId == 1 and playerShip and pcall(function() sysWeights = systemTargetWeapons[weapon.blueprint.name] end) and sysWeights then
+        local sysTargets = {}
+        local weightSum = 0
+        
+        -- Collect all player systems and their weights
+        for system in vter(playerShip.vSystemList) do
+            local sysId = system:GetId()
+            if playerShip:HasSystem(sysId) then
+                local weight = sysWeights[Hyperspace.ShipSystem.SystemIdToName(sysId)] or 1
+                weightSum = weightSum + weight
+                table.insert(sysTargets, {
+                    id = sysId,
+                    weight = weight
+                })
+            end
+        end
+        
+        -- Pick a random system using the weights
+        if #sysTargets > 0 then
+            local rnd = math.random(weightSum);
+            for i = 1, #sysTargets do
+                if rnd <= sysTargets[i].weight then
+                    projectile.target = playerShip:GetRoomCenter(playerShip:GetSystemRoom(sysTargets[i].id))
+                    projectile:ComputeHeading()
+                    return
+                end
+                rnd = rnd - sysTargets[i].weight
+            end
+            error("Weighted selection error - reached end of options without making a choice!")
+        end
     end
 end)
 
