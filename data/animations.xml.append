@@ -69,8 +69,8 @@
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
 	<firePoint  x="21" y="2"/>
-	<mountPoint x="3" y="46"/>
-	<chargeImage>>weapons_rebalanced_arsenal/ra_effector_2_glow.png</chargeImage>
+	<mountPoint x="4" y="43"/>
+	<chargeImage>weapons_rebalanced_arsenal/ra_effector_2_glow.png</chargeImage>
 </weaponAnim>
 
 <weaponAnim name="ra_effector_heavy">
@@ -79,26 +79,26 @@
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
 	<firePoint  x="21" y="2"/>
-	<mountPoint x="3" y="55"/>
-	<chargeImage>>weapons_rebalanced_arsenal/ra_effector_heavy_glow.png</chargeImage>
+	<mountPoint x="4" y="52"/>
+	<chargeImage>weapons_rebalanced_arsenal/ra_effector_heavy_glow.png</chargeImage>
 </weaponAnim>
 
 
-<animSheet name="ra_effector_adaptive_charge" w="108" h="74" fw="36" fh="74">weapons_rebalanced_arsenal/ra_effector_adaptive_chargeglow.png</animSheet>
-<anim name="ra_effector_adaptive_charge">
-	<sheet>ra_effector_adaptive_charge</sheet>
+<animSheet name="ra_effector_chain_charge" w="120" h="73" fw="40" fh="73">weapons_rebalanced_arsenal/ra_effector_chain_chargeglow.png</animSheet>
+<anim name="ra_effector_chain_charge">
+	<sheet>ra_effector_chain_charge</sheet>
 	<desc length="3" x="0" y="0"/>
 	<time>1.0</time>
 </anim>
 
-<animSheet name="ra_effector_chain" w="108" h="74" fw="36" fh="74">weapons_rebalanced_arsenal/ra_effector_chain_strip3.png</animSheet>
+<animSheet name="ra_effector_chain" w="120" h="73" fw="40" fh="73">weapons_rebalanced_arsenal/ra_effector_chain_strip3.png</animSheet>
 <weaponAnim name="ra_effector_chain">
 	<sheet>ra_effector_chain</sheet>
 	<desc length="3" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
 	<firePoint  x="21" y="2"/>
-	<mountPoint x="3" y="55"/>
+	<mountPoint x="5" y="51"/>
 	<chargeImage>weapons_rebalanced_arsenal/ra_effector_chain_glow.png</chargeImage>
 	<boost>ra_effector_chain_charge</boost>
 </weaponAnim>

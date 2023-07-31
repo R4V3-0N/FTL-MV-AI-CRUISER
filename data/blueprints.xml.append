@@ -502,11 +502,11 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="4" immuneAfterHack="4">
+	<hack duration="4" immuneAfterHack="5">
 		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
-		<doors immuneAfterHack="0">8</doors>
-		<sensors immuneAfterHack="0">8</sensors>
-		<temporal immuneAfterHack="0">8</temporal>
+		<doors immuneAfterHack="1">8</doors>
+		<sensors immuneAfterHack="1">8</sensors>
+		<temporal immuneAfterHack="1">8</temporal>
 	</hack>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
@@ -551,11 +551,11 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="4" immuneAfterHack="4">
+	<hack duration="4" immuneAfterHack="5">
 		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
-		<doors immuneAfterHack="0">8</doors>
-		<sensors immuneAfterHack="0">8</sensors>
-		<temporal immuneAfterHack="0">8</temporal>
+		<doors immuneAfterHack="1">8</doors>
+		<sensors immuneAfterHack="1">8</sensors>
+		<temporal immuneAfterHack="1">8</temporal>
 	</hack>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
@@ -563,7 +563,7 @@
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>11</cooldown> <!-- R4 2023.07.28 Cooldown is 11, 4 lower than the mk 1 -->
+	<cooldown>10</cooldown> <!-- R4 2023.07.28 Cooldown is 10, 5 lower than the mk 1 -->
 	<power>3</power>
 	<cost>60</cost>
 	<bp>3</bp>
@@ -600,11 +600,11 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="10" immuneAfterHack="4">
+	<hack duration="10" immuneAfterHack="12">
 		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
-		<doors immuneAfterHack="0">14</doors>
-		<sensors immuneAfterHack="0">14</sensors>
-		<temporal immuneAfterHack="0">14</temporal>	
+		<doors immuneAfterHack="8">14</doors>
+		<sensors immuneAfterHack="8">14</sensors>
+		<temporal immuneAfterHack="8">14</temporal>	
 	</hack>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
@@ -649,10 +649,10 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="7" immuneAfterHack="4">
-		<doors immuneAfterHack="0">11</doors>
-		<sensors immuneAfterHack="0">11</sensors>
-		<temporal immuneAfterHack="0">11</temporal>	
+	<hack duration="7" immuneAfterHack="8">
+		<doors immuneAfterHack="4">11</doors>
+		<sensors immuneAfterHack="4">11</sensors>
+		<temporal immuneAfterHack="4">11</temporal>	
 	</hack>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
