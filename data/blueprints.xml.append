@@ -262,7 +262,7 @@
 <weaponBlueprint name="RVS_EMP_HEAVY_1">
 	<type>LASER</type>
 	<title>Heavy EMP Device</title>
-	<short>EMP Device</short>
+	<short>Heavy EMP Device</short>
 	<tip>rvs_tip_emp_heavy</tip>
 	<locked>1</locked>
 	<desc>These Heavy EMP devices were once favoured for their intense but non-lethal effect. Capable of crippling cruisers in but a few blasts.</desc>
@@ -678,7 +678,7 @@
 	<type>BOMB</type>
 	<tip>rvs_tip_effector</tip> <!-- oh woops, this should be fixed -->
 	<title>Chain Effector</title>
-	<short>Chain Effect.</short>
+	<short>Chain Eff.</short>
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
 	<desc>Intelligent field projector that decreases in cooldown to keep up with enemy defenses with its hacking attacks.</desc>
