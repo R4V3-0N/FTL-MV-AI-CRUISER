@@ -71,6 +71,13 @@
 	<name>RA_EFFECTOR_CHAIN</name>
 </blueprintList>
 
+<blueprintList name="RVS_LIST_DRONES_AI">
+	<name>RVS_AI_MICROFIGHTER_INTERCEPTER</name>
+	<name>RVS_AI_MICROFIGHTER_SHOCK</name>
+	<name>RVS_AI_MICROFIGHTER_SWARM</name>
+	<name>RVS_BEAM_DEFENSE_1</name>
+</blueprintList>
+
 
 
 <!-- Enemy ships -->
@@ -89,7 +96,7 @@
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="8" count="4" load="RVS_LIST_WEAPONS_AI" />
-	<droneList drones="4" count="4" load="MV_DRONES_COMBAT" />		<!-- Make and change it to an AI list! -->
+	<droneList drones="8" count="4" load="RVS_LIST_DRONES_AI" />
 	<health amount="6" />
 	<maxPower amount="8" />
 	<crewCount amount="3" max="4" class="rvs_ai_hologram" /> 		<!-- Maybe change it to 5 max? -->
@@ -112,7 +119,7 @@
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="8" count="4" load="RVS_LIST_WEAPONS_AI" />
-	<droneList drones="4" count="4" load="MV_DRONES_COMBAT" />
+	<droneList drones="8" count="4" load="RVS_LIST_DRONES_AI" />
 	<health amount="8" />
 	<maxPower amount="12" />
 	<crewCount amount="2" max="2" class="rvs_ai_hologram" />
