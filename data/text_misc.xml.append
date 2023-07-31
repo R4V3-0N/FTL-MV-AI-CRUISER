@@ -1,4 +1,4 @@
-<text name="rvs_tip_effector">Tip: Effectors pierce shields and hack systems. Hacked systems are temporarily disrupted and locked down.</text>
+<text name="rvs_tip_effector">Tip: Effectors pierce all shields and hack systems. They cannot hack systems which already have a hacking drone. Hacked systems temporarily become immune to effector hacking once the hack has completed.</text>
 <text name="rvs_tip_focus_split">Tip: Splitter pinpoint beams trade the high damage of most pinpoints for multiple beams, allowing for higher potential damage if the target's shields are down.</text>
 
 <text name="rvs_tip_emp">Tip: EMP projectiles pop 2 layers of shields on impact and deals ion damage on direct system hits.</text>
