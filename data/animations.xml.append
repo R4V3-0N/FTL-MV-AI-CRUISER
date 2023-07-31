@@ -229,6 +229,7 @@
 
 <!-- Rebalanced Arsenal Explosions -->
 <animSheet name="ra_effector_hacking" w="2000" h="100" fw="100" fh="100">effects_rebalanced_arsenal/ra_effector_hacking_strip20.png</animSheet>
+<animSheet name="ra_effector_residual" w="1200" h="100" fw="100" fh="100">effects_rebalanced_arsenal/ra_effector_residual_strip12.png</animSheet>
 <animSheet name="ra_effector_hacking_warning" w="4800" h="120" fw="600" fh="120">effects_rebalanced_arsenal/ra_effector_hacking_warning_strip8.png</animSheet>
 <animSheet name="ra_effector_hacking_warning_small" w="1800" h="120" fw="600" fh="120">effects_rebalanced_arsenal/ra_effector_hacking_warning_small_strip3.png</animSheet>
 <animSheet name="ra_effector_hacking_warning_heavy" w="4800" h="120" fw="600" fh="120">effects_rebalanced_arsenal/ra_effector_hacking_warning_heavy_strip8.png</animSheet>
@@ -250,6 +251,12 @@
 	<sheet>ra_effector_hacking</sheet>
 	<desc length="20" x="0" y="0"/>
 	<time>2</time>
+</anim>
+
+<anim name="ra_effector_residual"> <!-- 1? -->
+	<sheet>ra_effector_residual</sheet>
+	<desc length="12" x="0" y="0"/>
+	<time>1.2</time>
 </anim>
 
 <anim name="ra_effector_hacking_2">

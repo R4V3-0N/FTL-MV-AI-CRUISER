@@ -502,12 +502,24 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="4" immuneAfterHack="5">
+	<hack duration="4" immuneAfterHack="7">
 		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
-		<doors immuneAfterHack="1">8</doors>
-		<sensors immuneAfterHack="1">8</sensors>
-		<temporal immuneAfterHack="1">8</temporal>
+		<doors immuneAfterHack="3">8</doors>
+		<sensors immuneAfterHack="3">8</sensors>
+		<temporal immuneAfterHack="3">8</temporal>
 	</hack>
+	<roomStatBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>0</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<duration>11</duration>
+			<roomAnim renderLayer="3">
+				<anim animType="center">ra_effector_residual</anim>
+			</roomAnim>
+		</statBoost>
+	</roomStatBoosts>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
 	<shots>1</shots>
@@ -551,12 +563,24 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="4" immuneAfterHack="5">
+	<hack duration="4" immuneAfterHack="7">
 		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
-		<doors immuneAfterHack="1">8</doors>
-		<sensors immuneAfterHack="1">8</sensors>
-		<temporal immuneAfterHack="1">8</temporal>
+		<doors immuneAfterHack="3">8</doors>
+		<sensors immuneAfterHack="3">8</sensors>
+		<temporal immuneAfterHack="3">8</temporal>
 	</hack>
+	<roomStatBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>0</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<duration>11</duration>
+			<roomAnim renderLayer="3">
+				<anim animType="center">ra_effector_residual</anim>
+			</roomAnim>
+		</statBoost>
+	</roomStatBoosts>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
 	<shots>1</shots>
@@ -600,12 +624,24 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="10" immuneAfterHack="12">
+	<hack duration="10" immuneAfterHack="13">
 		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
-		<doors immuneAfterHack="8">14</doors>
-		<sensors immuneAfterHack="8">14</sensors>
-		<temporal immuneAfterHack="8">14</temporal>	
+		<doors immuneAfterHack="9">14</doors>
+		<sensors immuneAfterHack="9">14</sensors>
+		<temporal immuneAfterHack="9">14</temporal>	
 	</hack>
+	<roomStatBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>0</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<duration>23</duration>
+			<roomAnim renderLayer="3">
+				<anim animType="center">ra_effector_residual</anim>
+			</roomAnim>
+		</statBoost>
+	</roomStatBoosts>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
 	<shots>1</shots>
@@ -649,11 +685,23 @@
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="7" immuneAfterHack="8">
-		<doors immuneAfterHack="4">11</doors>
-		<sensors immuneAfterHack="4">11</sensors>
-		<temporal immuneAfterHack="4">11</temporal>	
+	<hack duration="7" immuneAfterHack="10">
+		<doors immuneAfterHack="6">11</doors>
+		<sensors immuneAfterHack="6">11</sensors>
+		<temporal immuneAfterHack="6">11</temporal>	
 	</hack>
+	<roomStatBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>0</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<duration>17</duration>
+			<roomAnim renderLayer="3">
+				<anim animType="center">ra_effector_residual</anim>
+			</roomAnim>
+		</statBoost>
+	</roomStatBoosts>
 	<accuracyMod>10</accuracyMod>
 	<missiles>0</missiles>
 	<shots>1</shots>
