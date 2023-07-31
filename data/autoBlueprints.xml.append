@@ -61,7 +61,7 @@
 	<name>RVS_EMP_1</name>
 	<name>RVS_EMP_2</name>
 	<name>RVS_EMP_HEAVY_1</name>
-	<name>RVS_HS_IR_BEAM_1</name>
+	<name>RA_BEAM_AUTO</name>
 	<name>RVS_BEAM_SHOTGUN_1</name>
 	<name>RVS_BEAM_SHOTGUN_2</name>
 	<name>RVS_BEAM_SHOTGUN_3</name>
@@ -88,7 +88,7 @@
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
-	<weaponList missiles="8" count="4" load="RVS_LIST_WEAPONS_AI" />	<!-- Make and change it to an AI list! -->
+	<weaponList missiles="8" count="4" load="RVS_LIST_WEAPONS_AI" />
 	<droneList drones="4" count="4" load="MV_DRONES_COMBAT" />		<!-- Make and change it to an AI list! -->
 	<health amount="6" />
 	<maxPower amount="8" />
@@ -111,7 +111,7 @@
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
-	<weaponList missiles="8" count="4" load="RVS_LIST_WEAPONS_EFFECTOR" /> <!-- Gets a guarenteed EMP and splitter beam from event defenition -->
+	<weaponList missiles="8" count="4" load="RVS_LIST_WEAPONS_AI" />
 	<droneList drones="4" count="4" load="MV_DRONES_COMBAT" />
 	<health amount="8" />
 	<maxPower amount="12" />

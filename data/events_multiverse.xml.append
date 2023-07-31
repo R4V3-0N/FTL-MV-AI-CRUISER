@@ -12,10 +12,6 @@
 <ship name="SHIP_RVSER_AI_INTERCEPTER" auto_blueprint="RVSER_AI_INTERCEPTER">
 	<destroyed load="DEFEAT_MULTIVERSE_TRAVELER" />
 	<deadCrew load="DEFEAT_MULTIVERSE_TRAVELER" />
-	<weaponOverride count="2">
-		<name>RVS_LIST_WEAPONS_EMP</name>
-		<name>RVS_LIST_WEAPONS_BEAM_SHOTGUN</name>
-	</weaponOverride>
 </ship>
 <event name="MV_TRAVELER_AI_INTERCEPTER">
 	<text>Your ship is bombarded with transmissions from beyond the portal's horizon, too rapid and dense to decypher in live time. This is only compounded as the data flow accelerates in advance of the arival of a ship unlike any you have ever seen. It crawls to a stop as its transmissions end, as though waiting for you to respond. 
