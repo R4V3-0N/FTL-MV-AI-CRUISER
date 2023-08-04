@@ -465,6 +465,7 @@ local function RandomPointCircle(center, radius)
     return x, y
 end
 
+local critStrip = Hyperspace.Resources:GetImageId "weapons_hyperspace/projectiles/rvs_flock_crit.png"
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE,
 function(projectile, weapon)
     if weapon.blueprint.name == "RVS_FLOCK_GUN" then
@@ -476,11 +477,11 @@ function(projectile, weapon)
                 numDronesActive = numDronesActive + 1
             end
         end
-        --TODO: Add alternate projectile sprite and sound for crit shots
+        
         if math.random(6) <= numDronesActive then
             projectile.damage.iDamage = projectile.damage.iDamage * 2
+            projectile.flight_animation.animationStrip = critStrip
         end
-
     end
 end)
 
