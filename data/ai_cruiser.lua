@@ -463,7 +463,7 @@ local function RandomPointCircle(center, radius)
     local x = center.x + radius * math.cos(angle)
     local y = center.y + radius * math.sin(angle)
     return x, y
-  end
+end
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE,
 function(projectile, weapon)
