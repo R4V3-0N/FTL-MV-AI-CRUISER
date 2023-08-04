@@ -111,25 +111,20 @@
 	3 DRONES = 35
 	4 DRONES = 30
 	-->
-	<accuracyMod>2</accuracyMod>
-	<!-- Radius goes up by 4 for each drone active,
-	1 DRONE  = 6
-	2 DRONES = 10
-	3 DRONES = 14
-	4 DRONES = 18
+	<accuracyMod>1</accuracyMod>
+	<damage>1</damage>
+	<!-- N/6 chance for a crit (double damage), where N is the number of drones active
+	1 DRONE = 1/6 chance to crit
+	2 DRONES = 2/6 chance to crit
+	3 DRONES = 3/6 chance to crit
+	4 DRONES = 4/6 chance to crit
 	-->
-	<damage>2</damage>
-	<shots>2</shots>
+	<shots>4</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>4</breachChance>
 	<stunChance>3</stunChance>
-	<cooldown>12</cooldown> <!-- goes down 2 seconds per drone,
-	1 DRONE  = 10 seconds
-	2 DRONES = 8 seconds
-	3 DRONES = 6 seconds
-	4 DRONES = 4 seconds
-	-->
+	<cooldown>12</cooldown> 
 	<power>3</power>
 	<cost>65</cost>
 	<!--was 75-->
@@ -1124,6 +1119,15 @@ AUGMENTS
 	<desc>This hull plating allows your ship to create ion storms inside nebulas and regain lost reactor power in an ion storm.</desc>
 	<cost>90</cost>
     <bp>8</bp>
+    <rarity>0</rarity>
+    <stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="RVS_AI_SWARM">
+    <title>Auxillery drone bays</title>
+	<desc>When one of your drones is shot down, a temporary drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon recieving hull damage.</desc>
+	<cost>70</cost>
+    <bp>7</bp>
     <rarity>0</rarity>
     <stackable>false</stackable>
 </augBlueprint>

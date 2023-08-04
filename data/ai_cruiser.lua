@@ -11,8 +11,7 @@ local get_room_at_location = mods.vertexutil.get_room_at_location
 local get_adjacent_rooms = mods.vertexutil.get_adjacent_rooms
 
 local function bool_to_num(bool)
-    if bool then return 1 end
-    return 0
+    return bool and 1 or 0
 end
 
 -- Track whether we're in a nebula or a nebula with an ion storm
@@ -82,7 +81,7 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA, function(ShipManage
     local roomID = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true)
     local system = ShipManager:GetSystemInRoom(roomID)
     if not system then
-        local emptyRoomDamage = emptyRoomDamage[Hyperspace.Get_Projectile_Extend(Projectile).name] or 0
+        local emptyRoomDamage = emptyRoomDamage[Projectile.extend.name] or 0
         Damage.iDamage = Damage.iDamage + emptyRoomDamage
     end
     return Defines.CHAIN_CONTINUE, forceHit, shipFriendlyFire
@@ -95,14 +94,14 @@ aoeWeapons.RVS_EMP_HEAVY_1.iIonDamage = 1
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(shipManager, projectile, location, damage, shipFriendlyFire)
     local weaponName = nil
-    pcall(function() weaponName = Hyperspace.Get_Projectile_Extend(projectile).name end)
+    pcall(function() weaponName = projectile.extend.name end)
     local aoeDamage = aoeWeapons[weaponName]
     if aoeDamage then
-        Hyperspace.Get_Projectile_Extend(projectile).name = ""
+        projectile.extend.name = ""
         for roomId, _ in pairs(get_adjacent_rooms(shipManager.iShipId, get_room_at_location(shipManager, location, false), false)) do
             shipManager:DamageArea(shipManager:GetRoomCenter(roomId), aoeDamage, true)
         end
-        Hyperspace.Get_Projectile_Extend(projectile).name = weaponName
+        projectile.extend.name = weaponName
     end
 end)
 
@@ -193,7 +192,7 @@ ionSounds = RandomList:New {"beamShock1", "beamShock2", "beamShock3", "beamShock
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM, 
 function(ShipManager, Projectile, Location, Damage, newTile, beamHit)
-  local weaponName = Hyperspace.Get_Projectile_Extend(Projectile).name --Get the name of the weapon firing the beam.
+  local weaponName = Projectile.extend.name --Get the name of the weapon firing the beam.
   local damageMultiplier = ionBustBeams[weaponName] --If the weapon has a multiplier, assign that to damageMultiplier. Otherwise, damageMultiplier will be nil
   if damageMultiplier then --If the weapon has a multiplier, then do the following
     local roomId = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true) --Get the selected room from the location that the beam is hitting
@@ -285,7 +284,7 @@ end)
 --Harpoon thingy
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT,
 function(ShipManager, Projectile, Location, Damage, shipFriendlyFire)
-  if Hyperspace.Get_Projectile_Extend(Projectile).name == "HARPOON_THINGY" then
+  if Projectile.extend.name == "HARPOON_THINGY" then
     local destinationRoomNumber = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true)
     local firingShip = Hyperspace.Global.GetInstance():GetShipManager(Projectile.ownerId)
     local airlockRooms = {}
@@ -295,7 +294,7 @@ function(ShipManager, Projectile, Location, Damage, shipFriendlyFire)
     local playTeleportSound = false
     for crew in vter(firingShip.vCrewList) do
       if crew.iShipId == firingShip.iShipId and airlockRooms[crew.iRoomId] then --only sends player crew
-        Hyperspace.Get_CrewMember_Extend(crew):InitiateTeleport(ShipManager.iShipId, destinationRoomNumber)
+        crew.extend:InitiateTeleport(ShipManager.iShipId, destinationRoomNumber)
         playTeleportSound = true
       end
     end
@@ -357,7 +356,14 @@ end)
 
 -- Spawn children for swarm drone
 local shotsToSpawn = 2 -- Spawn a drone every shotsToSpawn shots
-local function spawn_temp_drone(name, ownerShip, targetShip, targetLocation, shots, position)
+local function spawn_temp_drone(table)
+    local name = table.name
+    local ownerShip = table.ownerShip
+    local targetShip = table.targetShip
+    local targetLocation = table.targetLocation
+    local shots = table.shots
+    local position = table.position
+
     local drone = ownerShip:CreateSpaceDrone(Hyperspace.Global.GetInstance():GetBlueprints():GetDroneBlueprint(name))
     drone.powerRequired = 0
     drone:SetMovementTarget(targetShip._targetable)
@@ -377,8 +383,8 @@ script.on_internal_event(Defines.InternalEvents.DRONE_FIRE, function(projectile,
         if swarmData.shots <= 0 then
             swarmData.shots = shotsToSpawn
             local thisShip = Hyperspace.Global.GetInstance():GetShipManager(drone.iShipId)
-            local otherShip = Hyperspace.Global.GetInstance():GetShipManager((drone.iShipId + 1)%2)
-            local childDrone = spawn_temp_drone("RVS_AI_MICROFIGHTER_SWARM_CHILD", thisShip, otherShip)
+            local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - drone.iShipId)
+            local childDrone = spawn_temp_drone{name = "RVS_AI_MICROFIGHTER_SWARM_CHILD", ownerShip = thisShip, targetShip = otherShip}
             userdata_table(childDrone, "mods.ai.droneSwarm").clearOnJump = true
         end
     end
@@ -391,5 +397,98 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
                 drone:SetDestroyed(true, false)
             end
         end
+    end
+end)
+
+--RVS_AI_SWARM implementation (CHANGE NAME LATER)
+
+--Spawn drone when drone is destroyed
+script.on_internal_event(Defines.InternalEvents.DRONE_COLLISION,
+function(Drone, Projectile, Damage, CollisionResponse)
+    local thisShip = Hyperspace.Global.GetInstance():GetShipManager(Drone.iShipId)
+    if Damage.iIonDamage <= 0 and Damage.iDamage > 0 and thisShip:HasAugmentation("RVS_AI_SWARM") > 0 then --If drone would be destroyed and ship has drone spawning aug
+        local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - Drone.iShipId)
+        --Spawn drone at drone's location, location shouldn't really matter if destroyed drone is a defense drone because it's in a different space anyway
+        spawn_temp_drone{name = "RVS_AI_MICROFIGHTER_SWARM_CHILD", ownerShip = thisShip, targetShip = otherShip, position = Drone.currentLocation} 
+    end
+    return Defines.Chain.CONTINUE
+end) 
+
+
+--V: Should this trigger on resist? Leaving like this for now unless told otherwise.
+local function drone_vengeance(ship, damage)
+    local rolledVengeance = math.random(100) <= 15 --15% chance
+    if damage.iDamage > 0 and ship:HasAugmentation("RVS_AI_SWARM") > 0 and rolledVengeance then
+        local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - ship.iShipId)
+        spawn_temp_drone{name = "RVS_AI_MICROFIGHTER_SWARM_CHILD", ownerShip = ship, targetShip = otherShip}
+    end
+end
+script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, 
+function(ship, projectile, location, damage, shipFriendlyFire)
+    drone_vengeance(ship, damage)
+    return Defines.Chain.CONTINUE
+end, -1000) --Allow other functions to modify parameters first
+
+script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
+function(ship, projectile, location, damage, newTile, beamHit)
+    if beamHit == Defines.BeamHit.NEW_ROOM then
+        drone_vengeance(ship, damage)   
+    end
+    return Defines.Chain.CONTINUE, beamHit
+end, -1000) --Allow other functions to modify parameters first
+
+--Flock gun implementation
+script.on_internal_event(Defines.InternalEvents.SHIP_LOOP,
+function(ship)
+    if ship.weaponSystem then
+        local numDronesActive = 0
+        for drone in vter(ship.spaceDrones) do
+            if not drone.bDead and drone.powered then
+                numDronesActive = numDronesActive + 1
+            end
+        end
+        
+        for weapon in vter(ship.weaponSystem.weapons) do
+            if weapon.blueprint.name == "RVS_FLOCK_GUN" then
+                weapon.radius = weapon.blueprint.radius - (5 * numDronesActive)
+                weapon.radius = math.max(weapon.radius, 0)
+            end
+        end
+    end
+end)
+
+local function RandomPointCircle(center, radius)
+    local radius = radius * math.random()
+    local angle = 2 * math.pi * math.random()
+    local x = center.x + radius * math.cos(angle)
+    local y = center.y + radius * math.sin(angle)
+    return x, y
+  end
+
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE,
+function(projectile, weapon)
+    if weapon.blueprint.name == "RVS_FLOCK_GUN" then
+        projectile.target.x, projectile.target.y = RandomPointCircle(weapon.lastTargets[0], weapon.radius)
+        local ship = Hyperspace.Global.GetInstance():GetShipManager(weapon.iShipId)
+        local numDronesActive = 0
+        for drone in vter(ship.spaceDrones) do
+            if not drone.bDead and drone.powered then
+                numDronesActive = numDronesActive + 1
+            end
+        end
+        --TODO: Add alternate projectile sprite and sound for crit shots
+        if math.random(6) <= numDronesActive then
+            projectile.damage.iDamage = projectile.damage.iDamage * 2
+        end
+
+    end
+end)
+
+
+--Effector Artillery Targetting
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE,
+function(projectile, weapon)
+    if weapon.blueprint.name == "" then
+
     end
 end)
