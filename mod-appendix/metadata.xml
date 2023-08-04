@@ -1,5 +1,5 @@
 <metadata>
-  <title><![CDATA[ AI Cruiser ]]></title>
+  <title><![CDATA[ AI Cruisers ]]></title>
   <threadUrl><![CDATA[ https://github.com/R4V3-0N/FTL-MV-AI-CRUISER/releases ]]></threadUrl>
   <author><![CDATA[ R4V3-0N, Chrono Vortex, and Vertaalfout ]]></author>
   <version><![CDATA[ 2.0 ]]></version>
@@ -8,26 +8,33 @@
   
   
   <description>
-<![CDATA[ THIS MOD HAS DEPENDENCIES! Make sure to patch Inferno Core and Vertex Tags and Utility Functions first! (links bellow)
+<![CDATA[ THIS MOD HAS DEPENDENCIES! Make sure to patch "Inferno Core" and "Vertex Tags and Utility Functions" first! (links bellow)
 
 This mod adds a new race of AI hardlight Avatars from a distant universe which will eventually be developed upon further, both with type B and C layouts as well as eventually events and lore inspired by the AI Avatar race from Captains Edition and Hyperspace by Sleeper Service.
 
 This sample includes:
-- AI Cruiser type A
+- AI Cruiser type A, B, and C with achievements!
 - 5 New Weapons
-  - Effector mk I, a projector that hacks into enemy systems
-  - Auto Beam, a beam that after firing drops to a quick 2.5 second cooldown
-  - Splitter Focus Beam II, a 'flak beam' that fires 4 focus beams
-  - EMP Device, a weapon that fires a projectile that knocks down 2 layers of shields, while dealing 2 ion damage on system room hit.
+  - Effector mk I, and II; a projector that hacks into enemy systems.
+  - Heavy Effector, a projector that hacks and disrupts enemy systems for longer.
+  - Chain Effector, a chain variation of the Effector designed to keep enemies disrupted after a few shots.
+  - Auto Beam, a beam that after firing drops to a quick 2.5 second cooldown.
+  - Splitter Focus Beam I, II, and III; a series of 'flak' beams that fire several pinpoint beams over a radius.
+  - EMP Device mk I, and II; a series of weapons that fires projectiles that knocks down 2 layers of shields on impact, and deals ion damage on room hit.
+  - Heavy EMP Device, a variation that can knock down more shields and inflicts ion on adjacent rooms.
   - Ion Bust Beam, which can deal double damage on ionized rooms but in doing so clears the ion effect.
-- 2 New Drones
+- 5 New Drones
   - Interceptor Microfighter, a drone that is technically more sentient than you. An evasive drone that focuses fire on enemy defence drones before targeting the ship.
   - Shock Microfighter, piloted by an obnoxious avatar, this drone targets enemy systems with its light EMP device repeatedly while evading enemy fire.
+  - Swarm Microfighter, the sword of a run away swarm-intelligence. Every alternating shot assimilates material to create a rudimentary attack drone.
+  - Missile Drone, a temporary drone that fires off a small series of missiles before despawning.
+  - Focus Beam Defence Drone, a Defence drone that shoots down enemy projectiles with beams, never misses!
 - New Race: AI Avatar's, a synthetic race of disposable hardlight avatars with many immunities
 - New Augments
   - Hologram Emitter, an augment that lets you produce an AI hologram when one perishes at empty beacons
   - Sentient Combat computer, improves most systems by 5%
   - Rerouted Insulation, gives the ship a 80% ion resistance while all crew onboard are more susceptable to stuns.
+...and More!
 
 
 Links to Vertex and InfernoCore:

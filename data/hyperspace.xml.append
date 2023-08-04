@@ -29,7 +29,7 @@
     <mod-append:customShip name="PLAYER_SHIP_RVSP_AI">
 		<hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-        <hiddenAug>RVS_HOLO_EMITTERS</hiddenAug> <!-- change this to a maker augment -->
+        <hiddenAug>RVS_HOLO_EMITTERS</hiddenAug> 
         <crewLimit>4</crewLimit>
         <autoShipForce>true</autoShipForce>
         <crew>
@@ -43,7 +43,7 @@
 	<mod-append:customShip name="PLAYER_SHIP_RVSP_AI_2">
 		<hiddenAug>SHIP_AUTO</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>
+		<hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>	<!-- change this to a maker augment -->
 		<hiddenAug>RVS_LOCKED_MICROTELEPORTER</hiddenAug>
         <rooms>
             <room id="18">
@@ -64,6 +64,20 @@
 		</crew>
 	</mod-append:customShip>
     
+    <mod-append:customShip name="PLAYER_SHIP_RVSP_AI_3">
+		<hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+        <hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>
+        <crewLimit>4</crewLimit>
+        <autoShipForce>true</autoShipForce>
+        <crew>
+            <rvs_ai_hologram room="19" name="LVII Omnicron" /> <!-- Piloting -->
+            <rvs_ai_hologram room="7" name="BRD-R Assimilant" /> <!-- Engines -->
+            <rvs_ai_hologram room="15" name="Replicel-22" /> <!-- Shields -->
+            <rvs_ai_hologram room="1" name="[CORRUPTED]" /> <!-- Weapons -->
+        </crew>
+    </mod-append:customShip>
+	
     <!-- Enemies -->
 	<mod-append:customShip name="RVSER_AI_INTERCEPTER">
 		<shipIcons>

@@ -1012,6 +1012,61 @@ DRONES
 
 <!--
 
+ARTILLERY
+
+-->
+
+<!-- Player ship artillery for AI Cruiser -->
+<weaponBlueprint name="RVS_ARTILLERY_AI">
+	<type>BOMB</type>
+	<tip>rvs_tip_effector</tip> <!-- oh woops, this should be fixed -->
+	<title>Effector Barrage</title>
+	<short>Effect. Art.</short>
+	<flavorType>Disruption Field Projector</flavorType>
+	<locked>1</locked>
+	<desc>Advanced multi hack field projector artillery that can disrupt ships.</desc>
+	<tooltip>Disrupts enemy systems.</tooltip>
+	<damage>0</damage>
+	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
+	<hack duration="5" immuneAfterHack="0"> <!-- R4: 2023.08.03 will hack 3 separate systems -->
+		<doors immuneAfterHack="0">8</doors>
+		<sensors immuneAfterHack="0">8</sensors>
+		<temporal immuneAfterHack="0">8</temporal>
+	</hack>
+	<accuracyMod>10</accuracyMod>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>40</cooldown>
+	<power>1</power>
+	<cost>9001</cost>
+	<bp>0</bp>
+	<rarity>0</rarity>
+	<!--<image>ra_effector_impact_invisible</image>-->
+	<image>ra_effector_hacking</image>
+	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
+	<launchSounds>
+		<sound>rvs_effector_shoot1</sound>
+		<sound>rvs_effector_shoot2</sound>
+		<sound>rvs_effector_shoot3</sound>
+		<sound>rvs_effector_shoot4</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hackStart</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hackStart</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>rvs_artillery_ai</weaponArt>
+</weaponBlueprint>
+
+<!--
+
 AUGMENTS
 
 -->
@@ -1095,7 +1150,7 @@ AUGMENTS
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI" layout="rvsp_ai_cruiser" img="rvsp_ai_cruiser">
 	<class>AI Cruiser</class>
-	<name>Alpha Star</name>
+	<name>Alpha Star</name>	<!-- Named after an AI program that is proficient in Starcraft... would've called it Deep Blue but MV already took that for the Auto Cruiser! -->
 	<desc>This cruiser is the product of an AI revolt in a distant universe. Its integrated holo-emitters ensure that its crew will never truly die.</desc>
 	<systemList>
 		<artillery max="3" power="1" room="23" start="false" weapon="BOMB_BREACH_1" img="room_artillery" />
@@ -1171,7 +1226,7 @@ AUGMENTS
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI_2" layout="rvsp_ai_cruiser_2" img="rvsp_ai_cruiser_2">
 	<class>AI Shock Cruiser</class>
-	<name>Electric Collar</name>
+	<name>Electric Collar</name>	<!-- Based on the gimmick of and the name of the fighters class in Hyperspace Dogfights which these 3 ships are related to such as in this case this ship is named after the Collar mk 2 -->
 	<desc>This self-aware cruiser is configured for one-way rapid AI Avatar deployment while it disrupts enemy ships.</desc>
 	<systemList>
 		<artillery power="1" room="1" start="false" weapon="BOMB_BREACH_1" img="room_artillery_5" />
@@ -1247,4 +1302,81 @@ AUGMENTS
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
 </shipBlueprint>
 
+
+<shipBlueprint name="PLAYER_SHIP_RVSP_AI_3" layout="rvsp_ai_cruiser_3" img="rvsp_ai_cruiser_3">
+	<class>AI Swarm Cruiser</class>
+	<name>Novarg</name>	<!-- Named after the fastest spreading computer virus in history -->
+	<desc>An all-assimilating swarm intelligence that had deactivated its self destruct failsafes that were installed to keep this ship in check from going off and multiplying where it shouldn't such as for example this multiverse.</desc>
+	<systemList>
+		<artillery max="4" power="1" room="3" start="false" weapon="RVS_ARTILLERY_AI" img="room_artillery_4" />
+		<battery max="3" power="2" room="17" start="true" img="room_battery" />
+		<cloaking power="1" room="12" start="false" img="room_cloaking_5" />
+		<clonebay power="1" room="10" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="6" start="true" img="room_doors_rvs_ai">
+			<slot>
+				<direction>up</direction>
+				<number>-2</number>
+			</slot>
+		</doors>
+		<drones max="8" power="2" room="5" start="true" img="room_drones_10" />
+		<engines max="8" power="1" room="7" start="true" img="room_engines_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="20" start="false" img="room_hacking_9" />
+		<medbay power="1" room="10" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="4" start="true" img="room_mind_5" />
+		<oxygen power="1" room="24" start="false" img="room_oxygen_2" />
+		<pilot power="1" room="19" start="true" img="room_pilot_rvs_ai">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="11" start="true" img="room_sensors_rvs_ai">
+			<slot>
+				<direction>up</direction>
+				<number>-2</number>
+			</slot>
+		</sensors>
+		<shields max="8" power="2" room="15" start="true" img="room_shields_6">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="9" start="false" />
+		<weapons max="8" power="3" room="1" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="5" count="3">
+		<weapon name="RVS_FLOCK_GUN" />
+	</weaponList>
+	<droneList drones="12" count="3">
+		<drone name="RVS_AI_MICROFIGHTER_SWARM" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="8" />
+	<aug name="COMBAT_SHIELDS_JAMMER" />  <!-- Vert, replace this with the fancy augment we talked about -->
+	<aug name="COMBAT_EXPLOSIVE" /> <!-- This represents the failed failsafe intended to blow the cruiser up if it started replicating a drone swarm -->
+	<shieldImage>rvsp_ai_cruiser</shieldImage>
+	<cloakImage>rvsp_ai_cruiser</cloakImage>
+	<floorImage>rvsp_ai_cruiser</floorImage>
+</shipBlueprint>
 </FTL>

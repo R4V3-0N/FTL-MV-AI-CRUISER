@@ -2,12 +2,18 @@
 
 <text name="text_PLAYER_SHIP_RVSP_AI_class">AI Cruiser</text>
 <text name="text_PLAYER_SHIP_RVSP_AI_name">AlphaStar</text>
-<text name="text_PLAYER_SHIP_RVSP_AI_desc">A prototype automated cruiser. It is technically more sentient than you but isn't very sophisticated.</text>
+<text name="text_PLAYER_SHIP_RVSP_AI_desc">A prototype automated cruiser. It is technically more sentient than you but it isn't very sophisticated.</text>
 <!--<text name="text_PLAYER_SHIP_RVSP_AI_desc">This cruiser is the product of an AI revolt in a distant multiverse.</text> R4: removed this for now as I believe it fits better for the "Rogue" AI cruisers-->
 
 <text name="text_PLAYER_SHIP_RVSP_AI_2_class">AI Shock Cruiser</text>
 <text name="text_PLAYER_SHIP_RVSP_AI_2_name">Placeholder for now</text>
 <text name="text_PLAYER_SHIP_RVSP_AI_2_desc">This self-aware cruiser is configured for rapid avatar deployment.</text>
 <!--- <text name="text_PLAYER_SHIP_RVSP_AI_2_desc">The avatar of this cruiser is most obnoxious.</text> --->
+
+<text name="text_PLAYER_SHIP_RVSP_AI_3_class">AI Swarm Cruiser</text>
+<text name="text_PLAYER_SHIP_RVSP_AI_3_name">Alpha Star</text>
+<text name="text_PLAYER_SHIP_RVSP_AI_3_desc">An all-assimilating swarm intelligence that had deactivated its self destruct failsafes that were installed to keep this ship in check from going off and multiplying where it shouldn't such as for example this multiverse.</text>
+
+
 
 <text name="text_RVS_AI_INTERCEPTER_class">AI Intercepter</text>

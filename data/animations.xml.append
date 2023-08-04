@@ -226,6 +226,19 @@
 	<time>1.0</time>
 </anim>
 
+<!-- Artillery -->
+
+<!-- effector barrage artillery for the AI cruisers -->
+<animSheet name="rvs_artillery_ai" w="1098" h="301" fw="366" fh="301">weapons/rvs_artillery_ai_strip3.png</animSheet>
+<weaponAnim name="rvs_artillery_ai">
+	<sheet>rvs_artillery_ai</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="0" y="0"/>
+	<mountPoint x="0" y="0"/>
+	<chargeImage>weapons/rvs_artillery_ai_glow.png</chargeImage>
+</weaponAnim>
 
 <!-- Rebalanced Arsenal Explosions -->
 <animSheet name="ra_effector_hacking" w="2000" h="100" fw="100" fh="100">effects_rebalanced_arsenal/ra_effector_hacking_strip20.png</animSheet>
