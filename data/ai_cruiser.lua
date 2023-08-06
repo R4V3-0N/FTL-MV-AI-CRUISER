@@ -120,18 +120,19 @@ systemTargetWeapons.RA_EFFECTOR_1 = sysWeights
 systemTargetWeapons.RA_EFFECTOR_2 = sysWeights
 systemTargetWeapons.RA_EFFECTOR_HEAVY = sysWeights
 systemTargetWeapons.RA_EFFECTOR_CHAIN = sysWeights
+systemTargetWeapons.RVS_ARTILLERY_AI = sysWeights
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
-    local playerShip = Hyperspace.ships.player
-    local sysWeights = nil
-    if weapon.iShipId == 1 and playerShip and pcall(function() sysWeights = systemTargetWeapons[weapon.blueprint.name] end) and sysWeights then
+    local thisShip = Hyperspace.Global.GetInstance():GetShipManager(weapon.iShipId)
+    local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - weapon.iShipId)
+    if thisShip and otherShip and pcall(function() sysWeights = systemTargetWeapons[weapon.blueprint.name] end) and sysWeights then
         local sysTargets = {}
         local weightSum = 0
         
         -- Collect all player systems and their weights
-        for system in vter(playerShip.vSystemList) do
+        for system in vter(otherShip.vSystemList) do
             local sysId = system:GetId()
-            if playerShip:HasSystem(sysId) then
+            if otherShip:HasSystem(sysId) then
                 local weight = sysWeights[Hyperspace.ShipSystem.SystemIdToName(sysId)] or 1
                 weightSum = weightSum + weight
                 table.insert(sysTargets, {
@@ -146,7 +147,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
             local rnd = math.random(weightSum);
             for i = 1, #sysTargets do
                 if rnd <= sysTargets[i].weight then
-                    projectile.target = playerShip:GetRoomCenter(playerShip:GetSystemRoom(sysTargets[i].id))
+                    projectile.target = otherShip:GetRoomCenter(otherShip:GetSystemRoom(sysTargets[i].id))
                     projectile:ComputeHeading()
                     return
                 end
@@ -482,14 +483,5 @@ function(projectile, weapon)
             projectile.damage.iDamage = projectile.damage.iDamage * 2
             projectile.flight_animation.animationStrip = critStrip
         end
-    end
-end)
-
-
---Effector Artillery Targetting
-script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE,
-function(projectile, weapon)
-    if weapon.blueprint.name == "" then
-
     end
 end)
