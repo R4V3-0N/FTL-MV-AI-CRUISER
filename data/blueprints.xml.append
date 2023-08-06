@@ -102,16 +102,16 @@
 	<title>Flock Gun</title>
 	<short>Flock Gun</short>
 	<tip>tip_laser</tip>
-	<desc>This heavy laser fires two shots in quick succession, each dealing 2 damage.</desc>
-	<tooltip>Fires 2 heavy projectiles, 2 damage each with low chance of fire and breaching.</tooltip>
-	<radius>50</radius>
-	<!-- Radius goes down by 5 for each drone active,
-	1 DRONE  = 45
+	<desc>A weapon designed by a runaway automated fleet. Not bad considering it was designed by something that only had just achieved swarm conciousness 5 minutes prior. An eratic burst weapon that heavily relies on targeting data from other drones for increased critical chance and precision.</desc>
+	<tooltip>Fires 4 projectiles, 1 damage each with chance for critical based on number of active drones.</tooltip>
+	<radius>70</radius>				<!-- R4 2023.08.07 Increased from 60 to 70, but now each drone decreases radius by 15 instead of 5 -->
+	<!-- Radius goes down by 15 for each drone active,
+	1 DRONE  = 55
 	2 DRONES = 40
-	3 DRONES = 35
-	4 DRONES = 30
+	3 DRONES = 25
+	4+ DRONES = 10
 	-->
-	<accuracyMod>1</accuracyMod>
+	<accuracyMod>10</accuracyMod>	<!-- R4 2023.08.07 Increased from 1 to 5 -->
 	<damage>1</damage>
 	<!-- N/6 chance for a crit (double damage), where N is the number of drones active
 	1 DRONE = 1/6 chance to crit
@@ -119,15 +119,14 @@
 	3 DRONES = 3/6 chance to crit
 	4 DRONES = 4/6 chance to crit
 	-->
-	<shots>4</shots>
+	<shots>4</shots>	<!-- R4 2023.08.07 Keeping this at 4 for now and trying to put it's stats somewhere between an MV BL3 and HL3 -->
 	<sp>0</sp>
 	<fireChance>0</fireChance>
-	<breachChance>4</breachChance>
+	<breachChance>1</breachChance>	<!-- R4 2023.08.07 Reduced from 4 to 1 -->
 	<stunChance>3</stunChance>
-	<cooldown>12</cooldown> 
+	<cooldown>14</cooldown>			<!-- R4 2023.08.07 Increased from 12 to 14. This puts it 1 projectile and 5 seconds faster than a BL3, and equal projectiles and 4 seconds faster than a HL3 but relies on drones up for crits and has dispersion with no drones around -->
 	<power>3</power>
-	<cost>65</cost>
-	<!--was 75-->
+	<cost>72</cost>					<!-- R4 2023.08.07 Increased from 65 to 72 -->
 	<bp>10</bp>
 	<rarity>0</rarity>
 	<image>laser_heavy1</image>
@@ -973,7 +972,7 @@ DRONES
 	<type>COMBAT</type>
 	<tip>tip_toggle_combat</tip>
 	<title>AI Swarm Drone</title>
-	<short>Swarm</short>
+	<short>Swarm Drone</short>
 	<desc>By using next-gen field manufacturing, this drone spawns a temporary mini-drone to assist it every other shot.</desc>
 	<power>2</power>
 	<cooldown>1000</cooldown>
@@ -1353,7 +1352,7 @@ AUGMENTS
 				<number>-2</number>
 			</slot>
 		</sensors>
-		<shields max="8" power="2" room="15" start="true" img="room_shields_6">
+		<shields max="8" power="3" room="15" start="true" img="room_shields_6">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
@@ -1377,7 +1376,7 @@ AUGMENTS
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="8" />
-	<aug name="COMBAT_SHIELDS_JAMMER" />  <!-- Vert, replace this with the fancy augment we talked about -->
+	<aug name="RVS_AI_SWARM" />
 	<aug name="COMBAT_EXPLOSIVE" /> <!-- This represents the failed failsafe intended to blow the cruiser up if it started replicating a drone swarm -->
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
