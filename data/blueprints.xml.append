@@ -1123,7 +1123,7 @@ AUGMENTS
 </augBlueprint>
 
 <augBlueprint name="RVS_AI_SWARM">
-    <title>Auxiliary Drone Bays</title>
+    <title>Assimilative Drone Bays</title>
 	<desc>When an enemy drone is shot down, a temporary drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon recieving hull damage.</desc>
 	<cost>70</cost>
     <bp>7</bp>
