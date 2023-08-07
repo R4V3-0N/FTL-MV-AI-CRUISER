@@ -58,6 +58,7 @@
 </blueprintList>
 
 <blueprintList name="RVS_LIST_WEAPONS_AI">
+	<name>BA_LASER_ARTILLERY_2</name>	<!-- Place holder -->
 	<name>RVS_EMP_1</name>
 	<name>RVS_EMP_2</name>
 	<name>RVS_EMP_HEAVY_1</name>
@@ -73,14 +74,35 @@
 
 <blueprintList name="RVS_LIST_DRONES_AI">
 	<name>RVS_AI_MICROFIGHTER_INTERCEPTER</name>
-	<name>RVS_AI_MICROFIGHTER_SHOCK</name>
-	<name>RVS_AI_MICROFIGHTER_SWARM</name>
+	<name>RVS_AI_MICROFIGHTER_SHOCK</name>	<!-- Eventually will be replaced / "type B" coloured currently -->
+	<name>RVS_AI_MICROFIGHTER_SWARM</name>	<!-- Eventually will be replaced / "type C" coloured currently -->
 	<name>RVS_BEAM_DEFENSE_1</name>
 </blueprintList>
 
+<!--
+////////////////////////////////////////////////////////////////////////////////////
+			MULTIVERSE RENEGADE LISTS
+////////////////////////////////////////////////////////////////////////////////////
+-->
 
+<!-- R4 2023.08.07 need to think of a better bp name for renegade lists...
+remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I number the list?
+-->
+<blueprintList name="RVS_LIST_MV_DRONES_AI_RENEGADE">
+	<name>RVS_AI_MICROFIGHTER_INTERCEPTER</name>
+	<name>RVS_BEAM_DEFENSE_1</name>
+	
+	<!-- MVanilla Drones -->
+	<name>FOCUS_1_AMP2</name>
+	<name>FOCUS_1_AMP3</name>
+	<name>FOCUS_1_AMP4</name>
+</blueprintList>
 
-<!-- Enemy ships -->
+<!-- 
+////////////////////////////////////////////////////////////////////////////////////
+			Enemy ships 
+////////////////////////////////////////////////////////////////////////////////////
+			-->
 
 <shipBlueprint name="RVS_AI_INTERCEPTOR" layout="rvs_ai_interceptor" img="rvs_ai_interceptor">
 	<class>AI Interceptor</class>
@@ -119,11 +141,11 @@
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="8" count="4" load="RVS_LIST_WEAPONS_AI" />
-	<droneList drones="8" count="4" load="RVS_LIST_DRONES_AI" />
+	<droneList drones="8" count="4" load="RVS_LIST_MV_DRONES_AI_RENEGADE" />
 	<health amount="8" />
 	<maxPower amount="12" />
-	<crewCount amount="2" max="2" class="rvs_ai_hologram" />
+	<crewCount amount="2" max="4" class="rvs_ai_hologram" />
 	<boardingAI>invasion</boardingAI>
-	<aug name="CREW_OXYGEN" />
+	<aug name="RVS_SENTIENT_COMBAT_AI" />	<!-- Evil? who knows! -->
     <cloakImage>rvs_ai_intercepter</cloakImage>
 </shipBlueprint>

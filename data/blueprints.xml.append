@@ -930,13 +930,13 @@ DRONES
 	<weaponArt>ra_beam_auto</weaponArt> 
 </weaponBlueprint>
 
-<droneBlueprint name="RVS_AI_MISSILE_1">
+<droneBlueprint name="RVS_COMBAT_MISSILE_1">
 	<type>COMBAT</type>
 	<title>Missile Drone MK I</title>
 	<short>Missile MK I</short>
 	<desc>Equipped with an integrated missile storage unit, this drone can fire 3 2-damage missiles before it has to be reconstructed.</desc>
 	<power>2</power>
-	<speed>15</speed>
+	<speed>10</speed>
 	<cost>75</cost>
 	<bp>3</bp>
 	<cooldown>1000</cooldown>
