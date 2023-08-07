@@ -409,10 +409,10 @@ end)
 script.on_internal_event(Defines.InternalEvents.DRONE_COLLISION,
 function(Drone, Projectile, Damage, CollisionResponse)
     local thisShip = Hyperspace.Global.GetInstance():GetShipManager(Drone.iShipId)
-    if Damage.iIonDamage <= 0 and Damage.iDamage > 0 and thisShip:HasAugmentation("RVS_AI_SWARM") > 0 then --If drone would be destroyed and ship has drone spawning aug
-        local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - Drone.iShipId)
+    local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - Drone.iShipId)
+    if thisShip and otherShip and thisShip.iShipId == Drone.currentSpace and Damage.iIonDamage <= 0 and Damage.iDamage > 0 and otherShip:HasAugmentation("RVS_AI_SWARM") > 0 then --If drone would be destroyed and ship has drone spawning aug
         --Spawn drone at drone's location, location shouldn't really matter if destroyed drone is a defense drone because it's in a different space anyway
-        spawn_temp_drone{name = "RVS_AI_MICROFIGHTER_SWARM_CHILD", ownerShip = thisShip, targetShip = otherShip, position = Drone.currentLocation} 
+        spawn_temp_drone{name = "RVS_AI_MICROFIGHTER_SWARM_CHILD", ownerShip = otherShip, targetShip = thisShip, position = Drone.currentLocation} 
     end
     return Defines.Chain.CONTINUE
 end) 
