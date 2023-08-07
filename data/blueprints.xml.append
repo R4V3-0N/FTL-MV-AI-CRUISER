@@ -934,7 +934,7 @@ DRONES
 	<type>COMBAT</type>
 	<title>Missile Drone MK I</title>
 	<short>Missile MK I</short>
-	<desc>Equipped with an integrated missile storage unit, this drone can fire 3 2-damage missiles before it has to be reconstructed.</desc>
+	<desc>Equipped with an integrated missile storage unit, this drone can fire 5 2-damage missiles before it has to be reconstructed.</desc>
 	<power>2</power>
 	<speed>10</speed>
 	<cost>75</cost>
@@ -942,7 +942,7 @@ DRONES
 	<cooldown>1000</cooldown>
 	<droneImage>rvs_missile_drone_1</droneImage>
 	<weaponBlueprint>MISSILES_2_ENEMY</weaponBlueprint>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<iconImage>combat</iconImage>
 </droneBlueprint>
 
@@ -982,7 +982,7 @@ DRONES
 	<bp>3</bp>
 	<droneImage>rvs_ai_microfighter_swarm</droneImage>
 	<weaponBlueprint>DRONE_LASER_COMBAT</weaponBlueprint>
-	<rarity>1</rarity>
+	<rarity>0</rarity>
 	<iconImage>combat</iconImage>
 </droneBlueprint>
 
@@ -999,8 +999,8 @@ DRONES
 	<cost>15</cost>
 	<bp>3</bp>
 	<droneImage>rvs_ai_flock_drone</droneImage>
-	<weaponBlueprint>DRONE_LASER_COMBAT</weaponBlueprint>
-	<rarity>1</rarity>
+	<weaponBlueprint>RVS_PROJECTILE_BEAM_FOCUS_1</weaponBlueprint>
+	<rarity>0</rarity>
 	<iconImage>combat</iconImage>
 </droneBlueprint>
 
