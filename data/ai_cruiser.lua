@@ -357,8 +357,7 @@ function(Projectile, Drone)
     return Defines.Chain.CONTINUE
 end)
 
--- Spawn children for swarm drone
-local shotsToSpawn = 2 -- Spawn a drone every shotsToSpawn shots
+-- Temporary drone handler
 local function spawn_temp_drone(table)
     local name = table.name
     local ownerShip = table.ownerShip
@@ -377,22 +376,9 @@ local function spawn_temp_drone(table)
     drone.bDead = false
     if position then drone:SetCurrentLocation(position) end
     if targetLocation then drone.targetLocation = targetLocation end
+    userdata_table(drone, "mods.ai.droneSwarm").clearOnJump = true
     return drone
 end
-script.on_internal_event(Defines.InternalEvents.DRONE_FIRE, function(projectile, drone)
-    if drone.blueprint.name == "RVS_AI_MICROFIGHTER_SWARM" then
-        local swarmData = userdata_table(drone, "mods.ai.droneSwarm")
-        swarmData.shots = (swarmData.shots or shotsToSpawn) - 1
-        if swarmData.shots <= 0 then
-            swarmData.shots = shotsToSpawn
-            local thisShip = Hyperspace.Global.GetInstance():GetShipManager(drone.iShipId)
-            local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - drone.iShipId)
-            local childDrone = spawn_temp_drone{name = "RVS_AI_MICROFIGHTER_SWARM_CHILD", ownerShip = thisShip, targetShip = otherShip}
-            userdata_table(childDrone, "mods.ai.droneSwarm").clearOnJump = true
-        end
-    end
-    return Defines.Chain.CONTINUE
-end)
 script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
     if ship.bJumping then
         for drone in vter(ship.spaceDrones) do
@@ -401,6 +387,22 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
             end
         end
     end
+end)
+
+-- Spawn children for swarm drone
+local shotsToSpawn = 2 -- Spawn a drone every shotsToSpawn shots
+script.on_internal_event(Defines.InternalEvents.DRONE_FIRE, function(projectile, drone)
+    if drone.blueprint.name == "RVS_AI_MICROFIGHTER_SWARM" then
+        local swarmData = userdata_table(drone, "mods.ai.droneSwarm")
+        swarmData.shots = (swarmData.shots or shotsToSpawn) - 1
+        if swarmData.shots <= 0 then
+            swarmData.shots = shotsToSpawn
+            local thisShip = Hyperspace.Global.GetInstance():GetShipManager(drone.iShipId)
+            local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - drone.iShipId)
+            spawn_temp_drone{name = "RVS_AI_MICROFIGHTER_SWARM_CHILD", ownerShip = thisShip, targetShip = otherShip}
+        end
+    end
+    return Defines.Chain.CONTINUE
 end)
 
 --RVS_AI_SWARM implementation (CHANGE NAME LATER)
