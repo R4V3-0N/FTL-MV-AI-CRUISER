@@ -125,7 +125,7 @@ systemTargetWeapons.RVS_ARTILLERY_AI = sysWeights
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local thisShip = Hyperspace.Global.GetInstance():GetShipManager(weapon.iShipId)
     local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - weapon.iShipId)
-    if thisShip and otherShip and pcall(function() sysWeights = systemTargetWeapons[weapon.blueprint.name] end) and sysWeights then
+    if thisShip and otherShip and (thisShip.iShipId == 1 or weapon.isArtillery) and pcall(function() sysWeights = systemTargetWeapons[weapon.blueprint.name] end) and sysWeights then
         local sysTargets = {}
         local weightSum = 0
         
