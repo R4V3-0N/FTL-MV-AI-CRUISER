@@ -1121,8 +1121,24 @@ AUGMENTS
     <rarity>0</rarity>
     <stackable>false</stackable>
 </augBlueprint>
+<augBlueprint name="RVS_ELECTRIC_PLATING_LOCK">
+    <title>Conductive Hull Plating</title>
+	<desc>This hull plating allows your ship to create ion storms inside nebulas and regain lost reactor power in an ion storm.</desc>
+	<cost>90</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>
+    <stackable>false</stackable>
+</augBlueprint>
 
 <augBlueprint name="RVS_AI_SWARM">
+    <title>Assimilative Drone Bays</title>
+	<desc>When an enemy drone is shot down, a temporary drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon recieving hull damage.</desc>
+	<cost>70</cost>
+    <bp>7</bp>
+    <rarity>0</rarity>
+    <stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="RVS_AI_SWARM_LOCK">
     <title>Assimilative Drone Bays</title>
 	<desc>When an enemy drone is shot down, a temporary drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon recieving hull damage.</desc>
 	<cost>70</cost>
@@ -1299,7 +1315,7 @@ AUGMENTS
 	<health amount="30" />
 	<maxPower amount="9" />
 	<!-- <aug name="RVS_SHOCKING_SHIELDS" /> -->
-	<aug name="RVS_ELECTRIC_PLATING" />
+	<aug name="RVS_ELECTRIC_PLATING_LOCK" />
 	<aug name="RVS_SENTIENT_COMBAT_AI" />
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
@@ -1376,7 +1392,7 @@ AUGMENTS
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="8" />
-	<aug name="RVS_AI_SWARM" />
+	<aug name="RVS_AI_SWARM_LOCK" />
 	<aug name="COMBAT_EXPLOSIVE" /> <!-- This represents the failed failsafe intended to blow the cruiser up if it started replicating a drone swarm -->
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>

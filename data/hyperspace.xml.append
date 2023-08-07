@@ -264,7 +264,15 @@
 				</whiteList>
 			</statBoost>
 		</statBoosts>
-	</aug>	
+	</aug>
+	<aug name="RVS_ELECTRIC_PLATING_LOCK">
+		<locked/>
+		<function name="RVS_ELECTRIC_PLATING" value="1" useForReqs="true"/>
+	</aug>
+	<aug name="RVS_AI_SWARM_LOCK">
+		<locked/>
+		<function name="RVS_AI_SWARM" value="1" useForReqs="true"/>
+	</aug>
 <!-- Reference to get TP stuff right hopefully
 	<aug name="LOCKED_GLOBAL_TELEPORT">
 		<locked/>
