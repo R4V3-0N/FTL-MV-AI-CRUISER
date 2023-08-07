@@ -134,11 +134,13 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
             local sysId = system:GetId()
             if otherShip:HasSystem(sysId) then
                 local weight = sysWeights[Hyperspace.ShipSystem.SystemIdToName(sysId)] or 1
-                weightSum = weightSum + weight
-                table.insert(sysTargets, {
-                    id = sysId,
-                    weight = weight
-                })
+                if weight > 0 then
+                    weightSum = weightSum + weight
+                    table.insert(sysTargets, {
+                        id = sysId,
+                        weight = weight
+                    })
+                end
             end
         end
         
