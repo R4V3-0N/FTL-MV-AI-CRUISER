@@ -22,18 +22,11 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
 end)
 
 -- Heal holograms on jump
-local wasJumping = false
-script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
-    local isJumping = false
-    if pcall(function() isJumping = Hyperspace.ships.player.bJumping end) then
-        if not isJumping and wasJumping then
-            for crew in vter(Hyperspace.ships.player.vCrewList) do
-                if crew:GetSpecies() == "rvs_ai_hologram" then
-                    crew:DirectModifyHealth(100.0)
-                end
-            end
+script.on_internal_event(Defines.InternalEvents.JUMP_LEAVE, function(ship)
+    for crew in vter(ship.vCrewList) do
+        if crew:GetSpecies() == "rvs_ai_hologram" then
+            crew:DirectModifyHealth(100.0)
         end
-        wasJumping = isJumping
     end
 end)
 

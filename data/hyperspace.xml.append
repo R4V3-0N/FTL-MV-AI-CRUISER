@@ -10,6 +10,9 @@
 </discord>
 
 <FTL>
+
+<version>^1.8.0</version>
+
 <mod:findName type="req" name="BLUELIST_CREW_NOFIRE">
   <mod-append:name>RVS_LIST_CREW_AI_AVATAR</mod-append:name>
 </mod:findName>
