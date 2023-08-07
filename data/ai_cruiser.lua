@@ -308,7 +308,7 @@ function(ShipManager, Projectile, Location, Damage, shipFriendlyFire)
 end)
 --Number of shots a drone may fire before it is destroyed
 local limitShots = {}
-limitShots.RVS_AI_MISSILE_1 = 3
+limitShots.RVS_AI_MISSILE_1 = 5
 
 --Implementation uses lifespan for save and load, replace with table implementation when saving features are available
 --I think lifespan is only used for surge drones so it's ok to use here
@@ -451,7 +451,7 @@ function(ship)
         
         for weapon in vter(ship.weaponSystem.weapons) do
             if weapon.blueprint.name == "RVS_FLOCK_GUN" then
-                weapon.radius = weapon.blueprint.radius - (5 * numDronesActive)
+                weapon.radius = weapon.blueprint.radius - (15 * numDronesActive)
                 weapon.radius = math.max(weapon.radius, 0)
             end
         end
