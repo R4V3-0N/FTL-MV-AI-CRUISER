@@ -1241,6 +1241,7 @@ AUGMENTS
 	<maxPower amount="8" />
 	<!-- <crewCount amount="4" class="rvs_ai_hologram" /> -->
 	<aug name="ADV_SCANNERS" />
+    <mapImage>map_icon_rvs_ai</mindControl>
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI_2" layout="rvsp_ai_cruiser_2" img="rvsp_ai_cruiser_2">
@@ -1319,6 +1320,7 @@ AUGMENTS
 	<aug name="RVS_SENTIENT_COMBAT_AI" />
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
+    <mapImage>map_icon_rvs_ai</mindControl>
 </shipBlueprint>
 
 
@@ -1397,5 +1399,6 @@ AUGMENTS
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
 	<floorImage>rvsp_ai_cruiser</floorImage>
+    <mapImage>map_icon_rvs_ai</mindControl>
 </shipBlueprint>
 </FTL>
