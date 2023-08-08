@@ -17,6 +17,12 @@
 	<mountPoint x="4" y="69"/>
 	<chargeImage>weapons_hyperspace/rvs_flock_gun_glow.png</chargeImage>
 </weaponAnim>
+<animSheet name="rvs_laser_flock" w="60" h="20" fw="60" fh="20">weapons_hyperspace/projectiles/rvs_flock.png</animSheet>
+<anim name="rvs_laser_flock">
+	<sheet>rvs_laser_flock</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.3</time>
+</anim>
 
 
 <animSheet name="rvs_beam_ion_bust_1" w="290" h="76" fw="29" fh="76">weapons/rvs_beam_ion_bust_1_strip10.png</animSheet>

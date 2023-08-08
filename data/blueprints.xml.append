@@ -129,7 +129,7 @@
 	<cost>72</cost>					<!-- R4 2023.08.07 Increased from 65 to 72 -->
 	<bp>10</bp>
 	<rarity>0</rarity>
-	<image>laser_heavy1</image>
+	<image>rvs_laser_flock</image>
 	<launchSounds>
 		<sound>heavyLaser1</sound>
 		<sound>heavyLaser2</sound>
@@ -1241,7 +1241,7 @@ AUGMENTS
 	<maxPower amount="8" />
 	<!-- <crewCount amount="4" class="rvs_ai_hologram" /> -->
 	<aug name="ADV_SCANNERS" />
-    <mapImage>map_icon_rvs_ai</mindControl>
+    <mapImage>map_icon_rvs_ai</mapImage>
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI_2" layout="rvsp_ai_cruiser_2" img="rvsp_ai_cruiser_2">
@@ -1320,7 +1320,7 @@ AUGMENTS
 	<aug name="RVS_SENTIENT_COMBAT_AI" />
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
-    <mapImage>map_icon_rvs_ai</mindControl>
+    <mapImage>map_icon_rvs_ai</mapImage>
 </shipBlueprint>
 
 
@@ -1334,7 +1334,7 @@ AUGMENTS
 		<cloaking power="1" room="12" start="false" img="room_cloaking_5" />
 		<clonebay power="1" room="10" start="false">
 			<slot>
-				<number>1</number>
+				<number>0</number>
 			</slot>
 		</clonebay>
 		<doors power="2" room="6" start="true" img="room_doors_rvs_ai">
@@ -1343,7 +1343,7 @@ AUGMENTS
 				<number>-2</number>
 			</slot>
 		</doors>
-		<drones max="8" power="2" room="5" start="true" img="room_drones_10" />
+		<drones max="8" power="2" room="5" start="true" img="room_drones_5" />
 		<engines max="8" power="1" room="7" start="true" img="room_engines_9">
 			<slot>
 				<direction>up</direction>
@@ -1351,9 +1351,9 @@ AUGMENTS
 			</slot>
 		</engines>
 		<hacking power="1" room="20" start="false" img="room_hacking_9" />
-		<medbay power="1" room="10" start="false" img="room_medbay">
+		<medbay power="1" room="10" start="false" img="room_medbay_rvs_ai_2">
 			<slot>
-				<number>1</number>
+				<number>0</number>
 			</slot>
 		</medbay>
 		<mind power="1" room="4" start="true" img="room_mind_5" />
@@ -1399,6 +1399,6 @@ AUGMENTS
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
 	<floorImage>rvsp_ai_cruiser</floorImage>
-    <mapImage>map_icon_rvs_ai</mindControl>
+    <mapImage>map_icon_rvs_ai</mapImage>
 </shipBlueprint>
 </FTL>
