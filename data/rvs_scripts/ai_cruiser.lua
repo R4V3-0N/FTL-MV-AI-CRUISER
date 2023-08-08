@@ -465,7 +465,7 @@ local function RandomPointCircle(center, radius)
     return x, y
 end
 
-local critStrip = Hyperspace.Resources:GetImageId "weapons_hyperspace/projectiles/rvs_flock_crit.png"
+local critStrip = Hyperspace.Resources:GetImageId "projectiles/rvs_flock_crit.png"
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE,
 function(projectile, weapon)
     if weapon.blueprint.name == "RVS_FLOCK_GUN" then
