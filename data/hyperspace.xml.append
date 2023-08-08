@@ -13,6 +13,9 @@
 
 <version>^1.8.0</version>
 
+<!-- placeholder until MV 5.4 -->
+<showShipAchievements enabled="true" toggle="true" hideIfMissing="true" id="hangar_achievements_title_default"/>
+
 <mod:findName type="req" name="BLUELIST_CREW_NOFIRE">
   <mod-append:name>RVS_LIST_CREW_AI_AVATAR</mod-append:name>
 </mod:findName>
@@ -27,7 +30,33 @@
 
 <mod:findLike type="ships">
     <!-- Player ships -->
-	<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="true" c="true">  
+	<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="true" c="true">
+        <unlock variant="b" silent="false">
+            <type>1</type>
+            <shipReq>PLAYER_SHIP_RVSP_AI</shipReq>
+            <value>8</value>
+        </unlock>
+        <unlock variant="c" silent="false">
+            <type>4</type>
+        </unlock>
+        <achievement name="ACH_SHIP_RVSP_AI_1" layout="all">
+            <name>I'll Be Back</name>
+            <description>Revive a lost crewmember with Holo-Emitters 4 times in one run while using the AI Cruiser.</description>
+            <icon>rvsp_ai_ach_1</icon>
+            <lockImage>rvsp_ai_ach_1_lock</lockImage>
+        </achievement>
+        <achievement name="ACH_SHIP_RVSP_AI_2" layout="all">
+            <name>Artificial Superiority</name>
+            <description>Reach sector 8 without installing Life Support, Medbay or Clonebay in the AI Cruiser.</description>
+            <icon>rvsp_ai_ach_2</icon>
+            <lockImage>rvsp_ai_ach_2_lock</lockImage>
+        </achievement>
+        <achievement name="ACH_SHIP_RVSP_AI_3" layout="all">
+            <name>Bet You Can't Stick It</name>
+            <description>Destroy 8 ships without missing a single shot (including shots fired by drones) in one run while using the AI Cruiser.</description>
+            <icon>rvsp_ai_ach_3</icon>
+            <lockImage>rvsp_ai_ach_3_lock</lockImage>
+        </achievement>
     </mod-append:ship>
     <mod-append:customShip name="PLAYER_SHIP_RVSP_AI">
 		<hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
@@ -376,6 +405,7 @@
 </mod:findLike>
 
 <mod:findLike type="scripts">
-    <mod-append:script>data/ai_cruiser.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_cruiser.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_cruiser_ach.lua</mod-append:script>
 </mod:findLike>
 </FTL>

@@ -1294,8 +1294,9 @@ AUGMENTS
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI_2" layout="rvsp_ai_cruiser_2" img="rvsp_ai_cruiser_2">
-	<class>AI Shock Cruiser</class>
+	<class>AI Cruiser</class>
 	<name>Electric Collar</name>	<!-- Based on the gimmick of and the name of the fighters class in Hyperspace Dogfights which these 3 ships are related to such as in this case this ship is named after the Collar mk 2 -->
+    <unlock>Get to Sector 8 with the AI Cruiser Type A to unlock this ship.</unlock>
 	<desc>This self-aware cruiser is configured for one-way rapid AI Avatar deployment while it disrupts enemy ships.</desc>
 	<systemList>
 		<artillery power="1" room="1" start="false" weapon="BOMB_BREACH_1" img="room_artillery_5" />
@@ -1374,9 +1375,10 @@ AUGMENTS
 
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI_3" layout="rvsp_ai_cruiser_3" img="rvsp_ai_cruiser_3">
-	<class>AI Swarm Cruiser</class>
+	<class>AI Cruiser</class>
 	<name>Novarg</name>	<!-- Named after the fastest spreading computer virus in history -->
-	<desc>An all-assimilating swarm intelligence that had deactivated its self destruct failsafes that were installed to keep this ship in check from going off and multiplying where it shouldn't such as for example this multiverse.</desc>
+    <unlock>Complete 2/3 of the AI Cruiser Achievements to unlock this ship.</unlock>
+	<desc>The swarm intelligence installed aboard this ship has managed to disable its self-destruct failsafes. It now roams the Multiverse, multiplying indiscriminately.</desc>
 	<systemList>
 		<artillery max="4" power="1" room="3" start="false" weapon="RVS_ARTILLERY_AI" img="room_artillery_4" />
 		<battery max="3" power="2" room="17" start="true" img="room_battery" />

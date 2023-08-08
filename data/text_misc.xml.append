@@ -3,3 +3,7 @@
 
 <text name="rvs_tip_emp">Tip: EMP projectiles pop 2 layers of shields on impact and deals ion damage on direct system hits.</text>
 <text name="rvs_tip_emp_heavy">Tip: Heavy EMP projectiles pop 4 layers of shields on impact, otherwise it deals heavy ion damage on system hits and some ion damage to adjacent systems.</text>
+
+<!-- placeholder until MV 5.4 -->
+<text name="hangar_achievements_title_default">Ship Achievements</text>
+<text name="hangar_no_ship_achievements">No Ship Achievements</text>
