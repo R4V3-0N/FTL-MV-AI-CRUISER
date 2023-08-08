@@ -1027,9 +1027,9 @@ ARTILLERY
 		<sensors immuneAfterHack="0">8</sensors>
 		<temporal immuneAfterHack="0">8</temporal>
 	</hack>
-	<accuracyMod>10</accuracyMod>
+	<accuracyMod>100</accuracyMod>
 	<missiles>0</missiles>
-	<shots>1</shots>
+	<shots>3</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>

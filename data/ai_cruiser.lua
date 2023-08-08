@@ -113,7 +113,6 @@ systemTargetWeapons.RA_EFFECTOR_1 = sysWeights
 systemTargetWeapons.RA_EFFECTOR_2 = sysWeights
 systemTargetWeapons.RA_EFFECTOR_HEAVY = sysWeights
 systemTargetWeapons.RA_EFFECTOR_CHAIN = sysWeights
-systemTargetWeapons.RVS_ARTILLERY_AI = sysWeights
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local thisShip = Hyperspace.Global.GetInstance():GetShipManager(weapon.iShipId)
@@ -480,5 +479,48 @@ function(projectile, weapon)
             projectile.damage.iDamage = projectile.damage.iDamage * 2
             projectile.flight_animation.animationStrip = critStrip
         end
+    end
+end)
+
+local function MakeSet(table)
+    local set = {}
+    for _, value in ipairs(table) do
+        set[value] = true
+    end
+    return set
+end
+
+local defensiveSystemIds = MakeSet {0, 1, 6, 10}
+local offensiveSystemIds = MakeSet {3, 4, 9, 11, 14, 15}
+
+local function PopRandom(_table)
+    return table.remove(_table, math.random(#_table))
+end
+
+--Rules:
+--Never target the same room twice, unless the ship has less than 3 rooms
+--Always target systems, unless the ship has less than 3 systems
+--Always target a defensive, offensive, and "other" system, unless the ship does not have a system to fit one or more of said categories
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE,
+function(projectile, weapon)
+    if weapon.blueprint.name == "RVS_ARTILLERY_AI" and weapon.queuedProjectiles:size() == 2 then --Target projectiles when first projectile fires
+        local ship = Hyperspace.ships(projectile.targetId)
+        local roomList = ship.ship.vRoomList
+        local defensive, offensive, other, empty = {}, {}, {}, {} --Create target candidate tables
+        for roomID = 0, Hyperspace.ShipGraph.GetShipInfo(projectile.targetId):RoomCount() - 1 do
+            local system = ship:GetSystemInRoom(roomID)
+            if not system then
+                table.insert(empty, roomID) --List of systemless room IDs
+            elseif defensiveSystemIds[system:GetId()] then
+                table.insert(defensive, roomID) --List of defensive system room IDs
+            elseif offensiveSystemIds[system:GetId()] then
+                table.insert(offensive, roomID) --List of offensive system room IDs
+            else
+                table.insert(other, roomID) --List of other system room IDs
+            end
+        end
+        projectile.target = ship:GetRoomCenter(PopRandom(defensive) or PopRandom(offensive) or PopRandom(other) or PopRandom(empty) or 0) --Prioritize defensive systems, then systems, then empty rooms
+        weapon.queuedProjectiles[0].target = ship:GetRoomCenter(PopRandom(offensive) or PopRandom(other) or PopRandom(defensive) or PopRandom(empty) or 0) --Prioritize offensive systems, then systems, then empty rooms
+        weapon.queuedProjectiles[1].target = ship:GetRoomCenter(PopRandom(other) or PopRandom(defensive) or PopRandom(offensive) or PopRandom(empty) or 0) --Prioritize other systems, then systems, then empty rooms
     end
 end)
