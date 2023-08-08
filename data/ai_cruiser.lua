@@ -302,7 +302,10 @@ function(ShipManager, Projectile, Location, Damage, shipFriendlyFire)
 end)
 --Number of shots a drone may fire before it is destroyed
 local limitShots = {}
-limitShots.RVS_AI_MISSILE_1 = 5
+limitShots.RVS_AI_MISSILE_1 = 7
+limitShots.RVS_AI_MISSILE_2 = 5
+limitShots.RVS_AI_MISSILE_3 = 15
+
 
 --Implementation uses lifespan for save and load, replace with table implementation when saving features are available
 --I think lifespan is only used for surge drones so it's ok to use here

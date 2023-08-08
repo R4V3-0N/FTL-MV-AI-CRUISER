@@ -930,18 +930,67 @@ DRONES
 	<weaponArt>ra_beam_auto</weaponArt> 
 </weaponBlueprint>
 
+<!--
+WIP area, just made a bunch of droens because procrastination. LUA side needs to be updated
+
+Might attatch a missile cost to these drones later along side the temp spawn or in the stead of the temp spawn. 
+-->
+
 <droneBlueprint name="RVS_COMBAT_MISSILE_1">
 	<type>COMBAT</type>
-	<title>Missile Drone MK I</title>
+	<title>Anti-Ship Missile Drone MK I</title>
 	<short>Missile MK I</short>
+	<!--
 	<desc>Equipped with an integrated missile storage unit, this drone can fire 5 2-damage missiles before it has to be reconstructed.</desc>
+	<desc>Slow-moving drone that repeatedly attacks the enemy ship with mini missiles.</desc>
+	-->
+	<desc>Slow-moving drone that repeatedly attacks the enemy ship with missiles. Equipped with an integrated missile storage unit, this drone can fire 7 missiles before it has to be reconstructed.</desc>
 	<power>2</power>
-	<speed>10</speed>
-	<cost>75</cost>
+	<speed>9</speed>
+	<cost>60</cost>
 	<bp>3</bp>
 	<cooldown>1000</cooldown>
-	<droneImage>rvs_missile_drone_1</droneImage>
+	<droneImage>ra_drone_missiles_1</droneImage>
+	<weaponBlueprint>MISSILES_1_ENEMY</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="RVS_COMBAT_MISSILE_2">
+	<type>COMBAT</type>
+	<title>Heavy Anti-Ship Missile Drone</title>
+	<short>H. Missile</short>
+	<!--
+	<desc>Extremely slow drone that repeatedly attacks the enemy ship with heavy missile strikes.</desc>
+	-->
+	<desc>Extremely slow drone that repeatedly attacks the enemy ship with heavy missile strikes. Equipped with an integrated missile storage unit, this drone can fire 5 missiles before it has to be reconstructed.</desc>
+	<power>2</power>
+	<speed>7</speed>
+	<cost>60</cost>
+	<bp>3</bp>
+	<cooldown>1000</cooldown>
+	<droneImage>ra_drone_missiles_2</droneImage>
 	<weaponBlueprint>MISSILES_2_ENEMY</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="RVS_COMBAT_MISSILE_3">
+	<type>COMBAT</type>
+	<title>Missile Drone MK II</title>
+	<short>Missile MK II</short>
+	<!--
+	<desc>Powerful drone that continuously attacks the enemy ship with mini missiles.</desc>
+	-->
+	<desc>Powerful drone that continuously attacks the enemy ship with missiles. Equipped with an integrated missile storage unit, this drone can fire 15 1-damage missiles before it has to be reconstructed.</desc>
+	<power>3</power>
+	<dodge>1</dodge>
+	<speed>12</speed>
+	<cost>110</cost>
+	<bp>3</bp>
+	<cooldown>1000</cooldown>
+	<droneImage>ra_drone_missiles_3</droneImage>
+	<weaponBlueprint>MISSILES_1_ENEMY</weaponBlueprint>
 	<rarity>5</rarity>
 	<iconImage>combat</iconImage>
 </droneBlueprint>
