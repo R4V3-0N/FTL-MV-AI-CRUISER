@@ -76,7 +76,11 @@
 	<name>RVS_AI_MICROFIGHTER_INTERCEPTER</name>
 	<name>RVS_AI_MICROFIGHTER_SHOCK</name>	<!-- Eventually will be replaced / "type B" coloured currently -->
 	<name>RVS_AI_MICROFIGHTER_SWARM</name>	<!-- Eventually will be replaced / "type C" coloured currently -->
+
 	<name>RVS_BEAM_DEFENSE_1</name>
+	
+	<name>RA_RA_DRONE_HEAVY_1</name>
+	<name>RA_DRONE_HEAVY_2</name>
 </blueprintList>
 
 <!--
@@ -88,9 +92,44 @@
 <!-- R4 2023.08.07 need to think of a better bp name for renegade lists...
 remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I number the list?
 -->
+<blueprintList name="RVS_LIST_MV_WEAPONS_AI_RENEGADE">
+	<!-- MV vanilla weapons -->
+	<name>BA_LASER_ARTILLERY_2</name>	<!-- Place holder -->
+	<name>BEAM_1</name>		<!-- beams that can't get through 1 layer of shield -->
+	<name>BEAM_LONG</name>
+	<name>BEAM_STUN</name>	<!-- added to decrease overall firepower -->
+	<name>FOCUS_1</name>
+	<name>FOCUS_2</name>
+	<name>FOCUS_3</name>
+	<name>SHOTGUN</name>	<!-- added flaks as it felt fitting for this ship-->
+	<name>SHOTGUN_2</name>
+	<name>SHOTGUN_CHAIN</name>
+	<name>MINELAUNCHER_STUN</name>	<!-- CE moment, I am evil -->
+	
+	
+	<!-- HS and original weapons -->
+	<name>RVS_EMP_1</name>
+	<name>RVS_EMP_2</name>
+	<name>RVS_EMP_HEAVY_1</name>
+	<name>RVS_BEAM_SHOTGUN_1</name>
+	<name>RVS_BEAM_SHOTGUN_2</name>
+	<name>RVS_BEAM_SHOTGUN_3</name>
+	
+	<!-- CE weapons -->
+	<name>RA_BEAM_AUTO</name>	
+	<name>RA_EFFECTOR_1</name>
+	<name>RA_EFFECTOR_2</name>
+	<name>RA_EFFECTOR_HEAVY</name>
+	<name>RA_EFFECTOR_CHAIN</name>
+</blueprintList>
+
 <blueprintList name="RVS_LIST_MV_DRONES_AI_RENEGADE">
 	<name>RVS_AI_MICROFIGHTER_INTERCEPTER</name>
 	<name>RVS_BEAM_DEFENSE_1</name>
+	
+	<!-- CE drones -->
+	<name>RA_RA_DRONE_HEAVY_1</name>
+	<name>RA_DRONE_HEAVY_2</name>
 	
 	<!-- MVanilla Drones -->
 	<name>FOCUS_1_AMP2</name>
@@ -98,11 +137,13 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<name>FOCUS_1_AMP4</name>
 </blueprintList>
 
+
+
 <!-- 
 ////////////////////////////////////////////////////////////////////////////////////
 			Enemy ships 
 ////////////////////////////////////////////////////////////////////////////////////
-			-->
+-->
 
 <shipBlueprint name="RVS_AI_INTERCEPTOR" layout="rvs_ai_interceptor" img="rvs_ai_interceptor">
 	<class>AI Interceptor</class>
@@ -140,12 +181,12 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
-	<weaponList missiles="8" count="4" load="RVS_LIST_WEAPONS_AI" />
+	<weaponList missiles="8" count="4" load="RVS_LIST_MV_WEAPONS_AI_RENEGADE" />
 	<droneList drones="8" count="4" load="RVS_LIST_MV_DRONES_AI_RENEGADE" />
 	<health amount="8" />
 	<maxPower amount="12" />
 	<crewCount amount="2" max="4" class="rvs_ai_hologram" />
 	<boardingAI>invasion</boardingAI>
-	<aug name="RVS_SENTIENT_COMBAT_AI" />	<!-- Evil? who knows! -->
+	<!--<aug name="RVS_SENTIENT_COMBAT_AI" />	Evil? who knows! EDIT: It was evil... -->
     <cloakImage>rvs_ai_intercepter</cloakImage>
 </shipBlueprint>
