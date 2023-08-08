@@ -30,286 +30,343 @@
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Trojan RR03S</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Drive 8h1Y</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Object 19-XA</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Class 0004</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Address t3qZ7</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Object 40k7</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Drive w17E</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Intruder PcD97</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Turret N1-vQ</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Scraper 88b8</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Agent i1u0x</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Intruder 88771</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Intruder 04tR</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Intruder kJ64</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Trojan O3PV</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Agent 8sF74</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Injector 5665</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Turret v1-39</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Intruder f16C</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Class K043</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Trojan lx-SC</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Injector 6QJ5</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Object 9ctN6</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Agent 3St0</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Scraper VX-4w</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Address Kk-h1</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Scraper 7nQtE</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Object 3c66</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Trojan 3aD8</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Class I071</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Agent 91Q2s</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Object nh-7P</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Address 1LU2r</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Drive jl-l5</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Injector 1n-zX</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Scraper x9oF</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Trojan rWs0</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Trojan 8Gqgq</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Class 7411</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Trojan 10F0</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Agent p4248</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Trojan A6591</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Object ulI13</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Intruder 7E-1l</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Turret hB-1H</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Class 7x-xn</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Agent 79Z15</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Trojan 85-Fa</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Intruder E0w40</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Drive ahqp</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">[ERR_PARSE]</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">404</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Imminent Dawn</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Automatic Sunrise</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">DIEDIEDIEDIE</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Greg</crewMember>
     </event>
     <event>
         <text>A new hologram coalesces aboard your ship, ready to serve.</text>
         <variable name="loc_holos_dead" op="add" val="-1"/>
+        <variable name="loc_holos_revived" op="add" val="1"/>
         <crewMember amount="1" class="rvs_ai_hologram">Pet Arsonist</crewMember>
     </event>
 </eventList>

@@ -385,8 +385,12 @@
 
 <mod:findLike type="events" limit="1">
     <mod-append:variable name="loc_holos_dead" op="set" val="0"/>
+    <mod-append:variable name="loc_holos_revived" op="set" val="0"/>
     <mod-append:variable name="loc_nebula_nostorm" op="set" val="0"/>
     <mod-append:variable name="loc_nebula_storm" op="set" val="0"/>
+    <mod-append:variable name="loc_ai_ach_in_combat" op="set" val="0"/>
+    <mod-append:variable name="loc_ai_ach_missed_this_fight" op="set" val="0"/>
+    <mod-append:variable name="loc_ai_ach_no_miss_count" op="set" val="0"/>
     <mod-append:req name="COMBAT_NEBULA_MAKE_STORM" type="all">
         <name>loc_nebula_nostorm</name>
         <name>RVS_ELECTRIC_PLATING</name>
