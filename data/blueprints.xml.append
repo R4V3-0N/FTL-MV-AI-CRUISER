@@ -1265,6 +1265,16 @@ AUGMENTS
     <stackable>false</stackable>
 </augBlueprint>
 
+<augBlueprint name="RVS_DODGE_ARMOR">
+    <title>Evasion Armor</title>
+	<desc>Passively increases dodge chance by 10%.</desc>
+	<cost>55</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <stackable>true</stackable>
+	<value>10</value>
+</augBlueprint>
+
 <crewBlueprint name="rvs_ai_hologram">
 	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
 	<cost>30</cost>
