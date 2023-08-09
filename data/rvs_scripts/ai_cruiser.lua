@@ -31,8 +31,8 @@ script.on_internal_event(Defines.InternalEvents.JUMP_LEAVE, function(ship)
 end)
 
 -- Replace burst projectile with beam for shotgun pinpoints
-local pinpoint1 = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_1")
-local pinpoint2 = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_2")
+local pinpoint1 = Hyperspace.Blueprints:GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_1")
+local pinpoint2 = Hyperspace.Blueprints:GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_2")
 local burstsToBeams = {}
 burstsToBeams.RVS_BEAM_SHOTGUN_1 = pinpoint1
 burstsToBeams.RVS_BEAM_SHOTGUN_2 = pinpoint1
@@ -115,8 +115,8 @@ systemTargetWeapons.RA_EFFECTOR_HEAVY = sysWeights
 systemTargetWeapons.RA_EFFECTOR_CHAIN = sysWeights
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
-    local thisShip = Hyperspace.Global.GetInstance():GetShipManager(weapon.iShipId)
-    local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - weapon.iShipId)
+    local thisShip = Hyperspace.ships(weapon.iShipId)
+    local otherShip = Hyperspace.ships(1 - weapon.iShipId)
     if thisShip and otherShip and (thisShip.iShipId == 1 or weapon.isArtillery) and pcall(function() sysWeights = systemTargetWeapons[weapon.blueprint.name] end) and sysWeights then
         local sysTargets = {}
         local weightSum = 0
@@ -196,7 +196,7 @@ function(ShipManager, Projectile, Location, Damage, newTile, beamHit)
         system:LockSystem(0) --Deionize the system
         Damage.iDamage = Damage.iDamage * damageMultiplier --Multiply the damage of the weapon by damageMultiplier
         local soundName = ionSounds:GetItem()
-        Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix(soundName, -1, true)
+        Hyperspace.Sounds:PlaySoundMix(soundName, -1, true)
     end
   end 
   return Defines.Chain.CONTINUE, beamHit 
@@ -207,13 +207,13 @@ end)
 local function set_drone_destination(drone)
     local target = userdata_table(drone, "mods.ai.droneTarget").target
     if target then
-        local shieldCenter = Hyperspace.Global.GetInstance():GetShipManager(drone.currentSpace).ship:GetBaseEllipse().center
+        local shieldCenter = Hyperspace.ships(drone.currentSpace).ship:GetBaseEllipse().center
         drone.destinationLocation.x = (target.currentLocation.x - shieldCenter.x)*1.15 + shieldCenter.x
         drone.destinationLocation.y = (target.currentLocation.y - shieldCenter.y)*1.15 + shieldCenter.y
     end
 end
 local function aquire_drone_target(ship, droneName)
-    local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - ship.iShipId)
+    local otherShip = Hyperspace.ships(1 - ship.iShipId)
     if otherShip then
         local target = nil
         for drone in vter(otherShip.spaceDrones) do
@@ -254,7 +254,7 @@ end)
 
 --Make a drone target systems only
 local function retarget_drone_to_system(ship, droneName)
-    local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - ship.iShipId)
+    local otherShip = Hyperspace.ships(1 - ship.iShipId)
     if otherShip then
         local otherShipGraph = Hyperspace.ShipGraph.GetShipInfo(otherShip.iShipId)
         for drone in vter(ship.spaceDrones) do
@@ -281,7 +281,7 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT,
 function(ShipManager, Projectile, Location, Damage, shipFriendlyFire)
   if Projectile.extend.name == "HARPOON_THINGY" then
     local destinationRoomNumber = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true)
-    local firingShip = Hyperspace.Global.GetInstance():GetShipManager(Projectile.ownerId)
+    local firingShip = Hyperspace.ships(Projectile.ownerId)
     local airlockRooms = {}
     for door in vter(firingShip.ship.vOuterAirlocks) do
         airlockRooms[door.iRoom1] = true
@@ -295,7 +295,7 @@ function(ShipManager, Projectile, Location, Damage, shipFriendlyFire)
     end
   
     if playTeleportSound then
-      Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("teleport", -1, false)
+      Hyperspace.Sounds:PlaySoundMix("teleport", -1, false)
     end
   end
   return Defines.CHAIN_CONTINUE
@@ -330,7 +330,7 @@ function(Projectile, Drone)
         local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
         --Spawn beam from drone to target
         spaceManager:CreateBeam(
-            Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_BEAM_DEFENSE_1"), 
+            Hyperspace.Blueprints:GetWeaponBlueprint("RVS_BEAM_DEFENSE_1"), 
             Drone.currentLocation, 
             Projectile.currentSpace,
             1 - Projectile.ownerId,
@@ -361,7 +361,7 @@ local function spawn_temp_drone(table)
     local shots = table.shots
     local position = table.position
 
-    local drone = ownerShip:CreateSpaceDrone(Hyperspace.Global.GetInstance():GetBlueprints():GetDroneBlueprint(name))
+    local drone = ownerShip:CreateSpaceDrone(Hyperspace.Blueprints:GetDroneBlueprint(name))
     drone.powerRequired = 0
     drone:SetMovementTarget(targetShip._targetable)
     drone:SetWeaponTarget(targetShip._targetable)
@@ -392,8 +392,8 @@ script.on_internal_event(Defines.InternalEvents.DRONE_FIRE, function(projectile,
         swarmData.shots = (swarmData.shots or shotsToSpawn) - 1
         if swarmData.shots <= 0 then
             swarmData.shots = shotsToSpawn
-            local thisShip = Hyperspace.Global.GetInstance():GetShipManager(drone.iShipId)
-            local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - drone.iShipId)
+            local thisShip = Hyperspace.ships(drone.iShipId)
+            local otherShip = Hyperspace.ships(1 - drone.iShipId)
             spawn_temp_drone{name = "RVS_AI_MICROFIGHTER_SWARM_CHILD", ownerShip = thisShip, targetShip = otherShip}
         end
     end
@@ -405,8 +405,8 @@ end)
 --Spawn drone when drone is destroyed
 script.on_internal_event(Defines.InternalEvents.DRONE_COLLISION,
 function(Drone, Projectile, Damage, CollisionResponse)
-    local thisShip = Hyperspace.Global.GetInstance():GetShipManager(Drone.iShipId)
-    local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - Drone.iShipId)
+    local thisShip = Hyperspace.ships(Drone.iShipId)
+    local otherShip = Hyperspace.ships(1 - Drone.iShipId)
     if thisShip and otherShip and thisShip.iShipId == Drone.currentSpace and Damage.iIonDamage <= 0 and Damage.iDamage > 0 and otherShip:HasAugmentation("RVS_AI_SWARM") > 0 then --If drone would be destroyed and ship has drone spawning aug
         --Spawn drone at drone's location, location shouldn't really matter if destroyed drone is a defense drone because it's in a different space anyway
         spawn_temp_drone{name = "RVS_AI_MICROFIGHTER_SWARM_CHILD", ownerShip = otherShip, targetShip = thisShip, position = Drone.currentLocation} 
@@ -419,7 +419,7 @@ end)
 local function drone_vengeance(ship, damage)
     local rolledVengeance = math.random(100) <= 15 --15% chance
     if damage.iDamage > 0 and ship:HasAugmentation("RVS_AI_SWARM") > 0 and rolledVengeance then
-        local otherShip = Hyperspace.Global.GetInstance():GetShipManager(1 - ship.iShipId)
+        local otherShip = Hyperspace.ships(1 - ship.iShipId)
         spawn_temp_drone{name = "RVS_AI_MICROFIGHTER_SWARM_CHILD", ownerShip = ship, targetShip = otherShip}
     end
 end
@@ -465,12 +465,12 @@ local function RandomPointCircle(center, radius)
     return x, y
 end
 
-local critStrip = Hyperspace.Resources:GetImageId "weapons_hyperspace/projectiles/rvs_flock_crit.png"
+local critStrip = Hyperspace.Resources:GetImageId "projectiles/rvs_flock_crit.png"
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE,
 function(projectile, weapon)
     if weapon.blueprint.name == "RVS_FLOCK_GUN" then
         projectile.target.x, projectile.target.y = RandomPointCircle(weapon.lastTargets[0], weapon.radius)
-        local ship = Hyperspace.Global.GetInstance():GetShipManager(weapon.iShipId)
+        local ship = Hyperspace.ships(weapon.iShipId)
         local numDronesActive = 0
         for drone in vter(ship.spaceDrones) do
             if not drone.bDead and drone.powered then

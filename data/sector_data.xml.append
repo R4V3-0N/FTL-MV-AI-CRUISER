@@ -18,7 +18,11 @@
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="0"/>
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SWARM" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="0"/>
-		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="0"/>		
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="0"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_3" rarity="0"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="0"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="0"/>
 		
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="0"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="0"/>
@@ -49,6 +53,10 @@
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SWARM" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="0"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_3" rarity="0"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="0"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="0"/>
 
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="0"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="0"/>
@@ -84,6 +92,10 @@
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SWARM" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="0"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_3" rarity="0"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="2"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="4"/>
 		
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="4"/>
@@ -111,6 +123,10 @@
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="5"/>
 		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="4"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="4"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_3" rarity="4"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="2"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="3"/>
 		
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="2"/>
@@ -140,6 +156,10 @@
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="5"/>
 		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="4"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="4"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_3" rarity="5"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="5"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="5"/>
 		
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="2"/>
@@ -173,6 +193,11 @@
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="5"/>
 		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="4"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="4"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_3" rarity="5"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="5"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="5"/>
+
 		
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="2"/>
@@ -208,6 +233,11 @@
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SWARM" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="0"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_3" rarity="0"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="3"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="3"/>
+		
 		
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="3"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="4"/>
@@ -237,6 +267,10 @@
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SWARM" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="0"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_3" rarity="0"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="3"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="3"/>
 		
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="3"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="4"/>

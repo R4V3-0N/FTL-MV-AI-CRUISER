@@ -17,7 +17,7 @@
 	<mountPoint x="4" y="69"/>
 	<chargeImage>weapons_hyperspace/rvs_flock_gun_glow.png</chargeImage>
 </weaponAnim>
-<animSheet name="rvs_laser_flock" w="60" h="20" fw="60" fh="20">weapons_hyperspace/projectiles/rvs_flock.png</animSheet>
+<animSheet name="rvs_laser_flock" w="60" h="20" fw="60" fh="20">projectiles/rvs_flock.png</animSheet>
 <anim name="rvs_laser_flock">
 	<sheet>rvs_laser_flock</sheet>
 	<desc length="1" x="0" y="0"/>
@@ -180,13 +180,27 @@
 </anim>
 
 <!-- Rebalanced Arsenal Projectiles -->
-<animSheet name="ra_laser_heavy_scatter_shot_1" w="140" h="20" fw="35" fh="20">weapons_rebalanced_arsenal/ra_laser_heavy_scatter_shot_1_strip4.png</animSheet>
-<animSheet name="ra_laser_heavy_scatter_shot_2" w="180" h="25" fw="45" fh="25">weapons_rebalanced_arsenal/ra_laser_heavy_scatter_shot_2_strip4.png</animSheet>
-<animSheet name="ra_laser_light_scatter_shot_1" w="160" h="16" fw="40" fh="16">weapons_rebalanced_arsenal/ra_laser_light_scatter_shot_1_strip4.png</animSheet>
-<animSheet name="ra_laser_light_scatter_shot_2" w="160" h="28" fw="40" fh="28">weapons_rebalanced_arsenal/ra_laser_light_scatter_shot_2_strip4.png</animSheet>
-<animSheet name="ra_laser_light_scatter_shot_3" w="160" h="28" fw="40" fh="28">weapons_rebalanced_arsenal/ra_laser_light_scatter_shot_3_strip4.png</animSheet>
-<animSheet name="ra_laser_burst_scatter_shot" w="400" h="80" fw="50" fh="80">weapons_rebalanced_arsenal/ra_laser_burst_scatter_shot_strip8.png</animSheet>
+<animSheet name="ra_laser_heavy1" w="200" h="20" fw="50" fh="20">projectiles/ra_laser_heavy1_strip4.png</animSheet>
+<animSheet name="ra_laser_heavy2" w="200" h="20" fw="50" fh="20">projectiles/ra_laser_heavy2_strip4.png</animSheet>
+<animSheet name="ra_laser_heavy_scatter_shot_1" w="140" h="20" fw="35" fh="20">projectiles/ra_laser_heavy_scatter_shot_1_strip4.png</animSheet>
+<animSheet name="ra_laser_heavy_scatter_shot_2" w="180" h="25" fw="45" fh="25">projectiles/ra_laser_heavy_scatter_shot_2_strip4.png</animSheet>
+<animSheet name="ra_laser_light_scatter_shot_1" w="160" h="16" fw="40" fh="16">projectiles/ra_laser_light_scatter_shot_1_strip4.png</animSheet>
+<animSheet name="ra_laser_light_scatter_shot_2" w="160" h="28" fw="40" fh="28">projectiles/ra_laser_light_scatter_shot_2_strip4.png</animSheet>
+<animSheet name="ra_laser_light_scatter_shot_3" w="160" h="28" fw="40" fh="28">projectiles/ra_laser_light_scatter_shot_3_strip4.png</animSheet>
+<animSheet name="ra_laser_burst_scatter_shot" w="400" h="80" fw="50" fh="80">projectiles/ra_laser_burst_scatter_shot_strip8.png</animSheet>
 
+
+<anim name="ra_laser_heavy1">
+	<sheet>ra_laser_heavy1</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.1</time>
+</anim>
+
+<anim name="ra_laser_heavy2">
+	<sheet>ra_laser_heavy2</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.1</time>
+</anim>
 
 <anim name="ra_laser_light_scatter_shot_1">
 	<sheet>ra_laser_light_scatter_shot_1</sheet>

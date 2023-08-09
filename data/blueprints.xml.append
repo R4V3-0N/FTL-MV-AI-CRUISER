@@ -936,6 +936,75 @@ WIP area, just made a bunch of droens because procrastination. LUA side needs to
 Might attatch a missile cost to these drones later along side the temp spawn or in the stead of the temp spawn. 
 -->
 
+<weaponBlueprint name="RA_DRONE_LASER_HEAVY">
+	<type>LASER</type>
+	<title>RA Drone Heavy Laser</title>
+	<short>RA Drone Heavy Laser</short>
+	<damage>2</damage>
+	<stunChance>2</stunChance>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>2</fireChance>
+	<breachChance>2</breachChance>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<speed>60</speed>
+	<image>ra_laser_heavy1</image>
+	<!-- For enemy
+	<explosion>ra_explosion_laser_impact_heavy</explosion>
+	-->
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_heavy_1</weaponArt> 
+</weaponBlueprint>
+<droneBlueprint name="RA_DRONE_HEAVY_1">
+	<type>COMBAT</type>
+	<tip>tip_combat</tip>
+	<title>Heavy Anti-Ship Drone Mark I</title>
+	<short>Heavy I</short>
+	<desc>Slow drone that can cause a lot of damage with its heavy lasers.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!-- Doesn't effect combat drone -->
+	<dodge>0</dodge>
+	<speed>9</speed>	<!-- MV Combat 1 is 15 speed, CE Heavy Combat 1 is 7, I set the speed of this drone to 9 to compete with MV's combat drone -->
+	<cost>30</cost>
+	<bp>3</bp>
+	<droneImage>ra_drone_heavy_1</droneImage>
+	<weaponBlueprint>RA_DRONE_LASER_HEAVY</weaponBlueprint>
+	<rarity>0</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="RA_DRONE_HEAVY_2">
+	<type>COMBAT</type>
+	<tip>tip_combat</tip>
+	<title>Heavy Anti-Ship Drone Mk II</title>
+	<short>Heavy II</short>
+	<desc>Powerful drone that wreaks havoc when it hits with its heavy lasers. Moves and shoots faster than mark I.</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown> <!-- Doesn't effect combat drone -->
+	<dodge>2</dodge>
+	<speed>20</speed>	<!-- MV Combat 2 is 30 speed, CE Heavy Combat 1 is 14, I set the speed of this drone to 20 to compete with MV's combat drone -->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>ra_drone_heavy_2</droneImage>
+	<weaponBlueprint>RA_DRONE_LASER_HEAVY</weaponBlueprint>
+	<rarity>0</rarity>
+</droneBlueprint>
+
 <droneBlueprint name="RVS_COMBAT_MISSILE_1">
 	<type>COMBAT</type>
 	<title>Anti-Ship Missile Drone MK I</title>
