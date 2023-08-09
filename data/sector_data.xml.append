@@ -103,6 +103,7 @@
 		<mod-append:blueprint name="RVS_AI_SWARM" rarity="5"/>
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="3"/>	
+	</mod:findLike>
 </mod:findName>
 <mod:findName type="sectorDescription" name="SECTOR_SEPARATIST_UNIQUE">
 	<mod:findLike type = "rarityList">

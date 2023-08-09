@@ -8,7 +8,7 @@
 <text name="text_PLAYER_SHIP_RVSP_AI_2_class">AI Shock Cruiser</text>
 <text name="text_PLAYER_SHIP_RVSP_AI_2_name">Placeholder for now</text>
 <text name="text_PLAYER_SHIP_RVSP_AI_2_desc">This self-aware cruiser is configured for rapid avatar deployment.</text>
-<!--- <text name="text_PLAYER_SHIP_RVSP_AI_2_desc">The avatar of this cruiser is most obnoxious.</text> --->
+<!-- <text name="text_PLAYER_SHIP_RVSP_AI_2_desc">The avatar of this cruiser is most obnoxious.</text> -->
 
 <text name="text_PLAYER_SHIP_RVSP_AI_3_class">AI Swarm Cruiser</text>
 <text name="text_PLAYER_SHIP_RVSP_AI_3_name">Alpha Star</text>
