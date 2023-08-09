@@ -128,7 +128,7 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<name>RVS_BEAM_DEFENSE_1</name>
 	
 	<!-- CE drones -->
-	<name>RA_RA_DRONE_HEAVY_1</name>
+	<name>RA_DRONE_HEAVY_1</name>
 	<name>RA_DRONE_HEAVY_2</name>
 	
 	<!-- MVanilla Drones -->
