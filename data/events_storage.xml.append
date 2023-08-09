@@ -1,3 +1,41 @@
+<!-- Install artillery -->
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_WEAPONS" panic="true">
+	<mod-append:choice req="RVS_REQ_AI_ARTILLERY_INSTALLED" max_group="2" blue="false" hidden="true">
+		<text>Artillery System. [ALREADY INSTALLED]</text>
+		<event load="OPTION_INVALID"/>
+	</mod-append:choice>
+	<mod-append:choice req="RVS_REQ_AI_ARTILLERY" max_group="2" blue="false" hidden="true">
+		<text>Artillery System. [Cost: 80~, 10}]</text>
+		<event load="STORAGE_CHECK_SYSTEM_WEAPON_RVS_AI_ARTILLERY"/>
+	</mod-append:choice>
+</mod:findName>
+
+<event name="STORAGE_CHECK_SYSTEM_WEAPON_RVS_AI_ARTILLERY">
+	<text>You are about to install this ship's Artillery system.
+[Weapon: 3-shot Effector barrage]</text>
+	<choice req="weapons" lvl="6" max_group="0" blue="false" hidden="true">
+		<text>Install the system. [Cost: 80~, 10}]</text>
+		<event>
+			<text>You install the system.</text>
+            <system name="artillery"/>
+			<item_modify>
+				<item type="missiles" min="-10" max="-10"/>
+				<item type="scrap" min="-80" max="-80"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="weapons" lvl="0" max_lvl="5" max_group="0" blue="false" hidden="true">
+		<text>This system is unavailable. You need weapons level 6.</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="2" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD"/>
+	</choice>
+</event>
+
+
+
 <!-- Storage check -->
 <mod:findName type="event" name="STORAGE_CHECK_REAL" panic="true">
     <mod-append:choice req="RVS_REQ_HOLO_REVIVE" blue="false">

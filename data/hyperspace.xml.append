@@ -391,6 +391,24 @@
     <mod-append:variable name="loc_ai_ach_in_combat" op="set" val="0"/>
     <mod-append:variable name="loc_ai_ach_missed_this_fight" op="set" val="0"/>
     <mod-append:variable name="loc_ai_ach_no_miss_count" op="set" val="0"/>
+    <mod-append:req name="RVS_REQ_AI_ARTILLERY" type="all">
+        <req type="any">
+            <name>SHIP PLAYER_SHIP_RVSP_AI</name>
+            <name>SHIP PLAYER_SHIP_RVSP_AI_2</name>
+            <name>SHIP PLAYER_SHIP_RVSP_AI_3</name>
+        </req>
+        <req lvl="0" max_lvl="0">
+            <name>artillery</name>
+        </req>
+    </mod-append:req>
+    <mod-append:req name="RVS_REQ_AI_ARTILLERY_INSTALLED" type="all">
+        <req type="any">
+            <name>SHIP PLAYER_SHIP_RVSP_AI</name>
+            <name>SHIP PLAYER_SHIP_RVSP_AI_2</name>
+            <name>SHIP PLAYER_SHIP_RVSP_AI_3</name>
+        </req>
+        <name>artillery</name>
+    </mod-append:req>
     <mod-append:req name="COMBAT_NEBULA_MAKE_STORM" type="all">
         <name>loc_nebula_nostorm</name>
         <name>RVS_ELECTRIC_PLATING</name>

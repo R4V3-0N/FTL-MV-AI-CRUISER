@@ -1221,7 +1221,7 @@ AUGMENTS
 	<name>Alpha Star</name>	<!-- Named after an AI program that is proficient in Starcraft... would've called it Deep Blue but MV already took that for the Auto Cruiser! -->
 	<desc>This cruiser is the product of an AI revolt in a distant universe. Its integrated holo-emitters ensure that its crew will never truly die.</desc>
 	<systemList>
-		<artillery max="3" power="1" room="23" start="false" weapon="BOMB_BREACH_1" img="room_artillery" />
+		<artillery max="4" power="1" room="23" start="false" weapon="RVS_ARTILLERY_AI" img="room_artillery" />
 		<battery max="3" power="1" room="4" start="true" img="room_battery_7" /> <!-- this is purposefully set to 3 -->
 		<cloaking power="1" room="16" start="false" img="room_cloaking_4" />
 		<clonebay power="1" room="2" start="false">
@@ -1299,7 +1299,7 @@ AUGMENTS
     <unlock>Get to Sector 8 with the AI Cruiser Type A to unlock this ship.</unlock>
 	<desc>This self-aware cruiser is configured for one-way rapid AI Avatar deployment while it disrupts enemy ships.</desc>
 	<systemList>
-		<artillery power="1" room="1" start="false" weapon="BOMB_BREACH_1" img="room_artillery_5" />
+		<artillery max="4" power="1" room="1" start="false" weapon="RVS_ARTILLERY_AI" img="room_artillery_5" />
 		<battery max="3" power="1" room="26" start="true" img="room_battery_3" />
 		<cloaking power="1" room="15" start="false" img="rvs_room_cloaking_11" />
 		<clonebay power="1" room="4" start="false">
