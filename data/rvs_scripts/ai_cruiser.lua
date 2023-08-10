@@ -527,3 +527,10 @@ function(projectile, weapon)
         weapon.queuedProjectiles[1].target = ship:GetRoomCenter(PopRandom(other) or PopRandom(defensive) or PopRandom(offensive) or PopRandom(empty) or 0) --Prioritize other systems, then systems, then empty rooms
     end
 end)
+
+--Evasion Armor
+script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR,
+function(ShipManager, dodge)
+    dodge = dodge + ShipManager:GetAugmentationValue("RVS_DODGE_ARMOR")
+    return Defines.Chain.CONTINUE, dodge
+end)
