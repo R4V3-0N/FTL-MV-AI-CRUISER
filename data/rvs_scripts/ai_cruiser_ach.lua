@@ -83,7 +83,7 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
             -- If we just ended combat by destroying the ship with no miss, incriment counter
             if vars.loc_ai_ach_in_combat == 1 and enemyShip and enemyShip.bDestroyed and vars.loc_ai_ach_missed_this_fight == 0 then
                 vars.loc_ai_ach_no_miss_count = vars.loc_ai_ach_no_miss_count + 1
-                if vars.loc_ai_ach_no_miss_count >= 30 then
+                if vars.loc_ai_ach_no_miss_count >= 22 then
                     Hyperspace.CustomAchievementTracker.instance:SetAchievement("ACH_SHIP_RVSP_AI_3", false)
                     return
                 end

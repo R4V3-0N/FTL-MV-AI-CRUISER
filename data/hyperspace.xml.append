@@ -53,7 +53,7 @@
         </achievement>
         <achievement name="ACH_SHIP_RVSP_AI_3" layout="all">
             <name>Bet You Can't Stick It</name>
-            <description>Destroy 30 ships without missing a single shot (including shots fired by drones) in one run while using the AI Cruiser.</description>
+            <description>Destroy 22 ships without missing a single shot (including shots fired by drones) in one run while using the AI Cruiser.</description>
             <icon>rvsp_ai_ach_3</icon>
             <lockImage>rvsp_ai_ach_3_lock</lockImage>
         </achievement>
