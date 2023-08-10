@@ -1380,7 +1380,7 @@ AUGMENTS
 	<systemList>
 		<artillery max="4" power="1" room="1" start="false" weapon="RVS_ARTILLERY_AI" img="room_artillery_5" />
 		<battery max="3" power="1" room="26" start="true" img="room_battery_3" />
-		<cloaking power="1" room="15" start="false" img="rvs_room_cloaking_11" />
+		<cloaking power="1" room="15" start="false" img="room_cloaking_rvs_ai" />
 		<clonebay power="1" room="4" start="false">
 			<slot>
 				<number>1</number>
@@ -1393,21 +1393,21 @@ AUGMENTS
 			</slot>
 		</doors>
 		<drones max="8" power="2" room="13" start="true" img="room_drones_12" />
-		<engines max="8" power="3" room="23" start="true" img="rvs_room_engines_2">
+		<engines max="8" power="3" room="23" start="true" img="room_engines_rvs_ai">
 			<slot>
 				<direction>down</direction>
 				<number>3</number>
 			</slot>
 		</engines>
 		<hacking power="1" room="2" start="false" img="room_hacking_9" />
-		<medbay power="1" room="4" start="false" img="rvs_room_medbay_1">
+		<medbay power="1" room="4" start="false" img="room_medbay_rvs_ai">
 			<slot>
 				<number>-2</number>
 			</slot>
 		</medbay>
 		<mind power="1" room="28" start="false" img="room_mind_6" />
 		<oxygen power="1" room="24" start="false" img="room_oxygen_9" />
-		<pilot power="2" room="0" start="true" img="rvs_room_pilot_1">
+		<pilot power="2" room="0" start="true" img="room_pilot_rvs_ai_2">
 			<slot>
 				<direction>right</direction>
 				<number>0</number>

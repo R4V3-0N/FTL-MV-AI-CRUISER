@@ -3,10 +3,10 @@
 <roomLayout name="pilot_rvs_ai">			<!-- on the AI type A -->
 	<computerGlow name="glow_pilot" x="54" y="9" dir="RIGHT" />
 </roomLayout>
-<roomLayout name="rvs_room_pilot_1">		<!-- on the AI type B -->
+<roomLayout name="pilot_rvs_ai_2">		<!-- on the AI type B -->
 	<computerGlow name="glow_pilot" x="19" y="9" dir="RIGHT" />
 </roomLayout>
-<roomLayout name="rvs_room_engines_2">		<!-- on the AI type B -->
+<roomLayout name="engines_rvs_ai">		<!-- on the AI type B -->
 	<computerGlow x="43" y="53" dir="DOWN" />
 </roomLayout>
 
