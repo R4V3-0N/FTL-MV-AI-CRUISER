@@ -1302,6 +1302,46 @@ AUGMENTS
 		<power>Immune to mind control</power>
 		<power>Can phase through doors</power>
 	</powerList>
+	<colorList>
+		<layer><!-- Layer 1 - Outline -->
+			<color r="255" g="250" b="200" a="1"/>	<!-- Yellow -->
+			<color r="250" g="255" b="180" a="1"/>	<!-- Other Yellow -->
+			<color r="255" g="255" b="255" a="1"/>	<!-- White -->
+			<color r="235" g="235" b="235" a="1"/>	<!-- Grey -->
+			<color r="255" g="255" b="255" a="0.5"/><!-- Other White? -->
+
+			
+		</layer>
+		<layer><!-- Layer 2 - Glow -->
+			<color r="0" g="38" b="38" a="1"/>		<!-- Standard -->
+			<color r="0" g="38" b="38" a="1"/>		<!-- Standard -->
+			<color r="0" g="38" b="38" a="1"/>		<!-- Standard -->
+			
+			<color r="5" g="5" b="5" a="0.5"/>		<!-- Black -->
+			<color r="54" g="69" b="79" a="1"/>		<!-- Charcoal -->
+			
+			<color r="0" g="45" b="90" a="1"/>		<!-- Other Blue -->
+			<color r="0" g="0" b="90" a="1"/>		<!-- Blue -->
+			<color r="0" g="0" b="70" a="1"/>		<!-- Blue two -->
+			<color r="2" g="69" b="79" a="1"/>		<!-- Dark Blue? -->
+			<color r="0" g="0" b="51" a="1"/>		<!-- Darker Blue -->
+			<color r="1" g="0" b="102" a="1"/>		<!-- Dark Blue -->
+			<color r="0" g="25" b="60" a="1"/>		<!-- Dark other Blue -->
+			<color r="1" g="50" b="50" a="1"/>		<!-- Dark Teal -->
+			<color r="120" g="0" b="0" a="1"/>		<!-- Red -->
+			<color r="100" g="0" b="0" a="1"/>		<!-- Deep Red -->
+			<color r="55" g="25" b="0" a="1"/>		<!-- Dark Brown-->
+			<color r="50" g="0" b="0" a="1"/>		<!-- Darker Red -->
+			<color r="0" g="0" b="90" a="1"/>		<!-- Black -->
+
+			<color r="200" g="0" b="167" a="1"/>	<!-- Mulberry -->
+			<color r="130" g="0" b="108" a="1"/>	<!-- Loganberry -->
+			<color r="80" g="0" b="67" a="1"/>		<!-- Damson -->
+		</layer>
+		<layer><!-- Layer 3 - Eyes -->
+			<color r="255" g="0" b="0" a="1"/>
+		</layer>
+	</colorList>
 </crewBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI" layout="rvsp_ai_cruiser" img="rvsp_ai_cruiser">
@@ -1377,6 +1417,7 @@ AUGMENTS
 	<health amount="30" />
 	<maxPower amount="8" />
 	<!-- <crewCount amount="4" class="rvs_ai_hologram" /> -->
+	<aug name="RVS_ANTI_GRAVITY_ENGINE" />
 	<aug name="ADV_SCANNERS" />
     <mapImage>map_icon_rvs_ai</mapImage>
 </shipBlueprint>

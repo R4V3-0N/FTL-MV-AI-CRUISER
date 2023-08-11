@@ -88,9 +88,7 @@ aoeWeapons.RVS_EMP_HEAVY_1 = Hyperspace.Damage()
 aoeWeapons.RVS_EMP_HEAVY_1.iIonDamage = 1
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(shipManager, projectile, location, damage, shipFriendlyFire)
-    local weaponName = nil
-    pcall(function() weaponName = projectile.extend.name end)
-    local aoeDamage = aoeWeapons[weaponName]
+    local aoeDamage = aoeWeapons[projectile and projectile.extend.name] --Indexing with nil (no projectile) will return nil, otherwise returns projectile name index
     if aoeDamage then
         projectile.extend.name = ""
         for roomId, _ in pairs(get_adjacent_rooms(shipManager.iShipId, get_room_at_location(shipManager, location, false), false)) do
@@ -119,7 +117,8 @@ systemTargetWeapons.RA_EFFECTOR_CHAIN = sysWeights
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local thisShip = Hyperspace.ships(weapon.iShipId)
     local otherShip = Hyperspace.ships(1 - weapon.iShipId)
-    if thisShip and otherShip and (thisShip.iShipId == 1 or weapon.isArtillery) and pcall(function() sysWeights = systemTargetWeapons[weapon.blueprint.name] end) and sysWeights then
+    local sysWeights = systemTargetWeapons[weapon.blueprint.name]
+    if thisShip and otherShip and (thisShip.iShipId == 1 or weapon.isArtillery) and sysWeights then
         local sysTargets = {}
         local weightSum = 0
         
