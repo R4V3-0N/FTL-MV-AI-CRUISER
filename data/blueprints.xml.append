@@ -1319,7 +1319,7 @@ AUGMENTS
 			<color r="0" g="38" b="38" a="1"/>		<!-- Standard -->
 			<color r="0" g="38" b="38" a="1"/>		<!-- Standard -->
 			
-			<color r="5" g="5" b="5" a="0.5"/>		<!-- Black -->
+			<!--<color r="5" g="5" b="5" a="0.5"/>-->		<!-- Black -->
 			<color r="54" g="69" b="79" a="1"/>		<!-- Charcoal -->
 			
 			<color r="0" g="45" b="90" a="1"/>		<!-- Other Blue -->
