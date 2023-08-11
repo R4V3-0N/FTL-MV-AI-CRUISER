@@ -1151,7 +1151,7 @@ ARTILLERY
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>40</cooldown>
+	<cooldown>24</cooldown>
 	<power>1</power>
 	<cost>9001</cost>
 	<bp>0</bp>
@@ -1309,7 +1309,7 @@ AUGMENTS
 	<name>Alpha Star</name>	<!-- Named after an AI program that is proficient in Starcraft... would've called it Deep Blue but MV already took that for the Auto Cruiser! -->
 	<desc>This cruiser is the product of an AI revolt in a distant universe. Its integrated holo-emitters ensure that its crew will never truly die.</desc>
 	<systemList>
-		<artillery max="4" power="1" room="23" start="false" weapon="RVS_ARTILLERY_AI" img="room_artillery" />
+		<artillery max="3" power="1" room="23" start="false" weapon="RVS_ARTILLERY_AI" img="room_artillery" />
 		<battery max="3" power="1" room="4" start="true" img="room_battery_7" /> <!-- this is purposefully set to 3 -->
 		<cloaking power="1" room="16" start="false" img="room_cloaking_4" />
 		<clonebay power="1" room="2" start="false">
@@ -1387,7 +1387,7 @@ AUGMENTS
     <unlock>Get to Sector 8 with the AI Cruiser Type A to unlock this ship.</unlock>
 	<desc>This self-aware cruiser is configured for one-way rapid AI Avatar deployment while it disrupts enemy ships.</desc>
 	<systemList>
-		<artillery max="4" power="1" room="1" start="false" weapon="RVS_ARTILLERY_AI" img="room_artillery_5" />
+		<artillery max="3" power="1" room="1" start="false" weapon="RVS_ARTILLERY_AI" img="room_artillery_5" />
 		<battery max="3" power="1" room="26" start="true" img="room_battery_3" />
 		<cloaking power="1" room="15" start="false" img="room_cloaking_rvs_ai" />
 		<clonebay power="1" room="4" start="false">
@@ -1468,7 +1468,7 @@ AUGMENTS
     <unlock>Complete 2/3 of the AI Cruiser Achievements to unlock this ship.</unlock>
 	<desc>The swarm intelligence installed aboard this ship has managed to disable its self-destruct failsafes. It now roams the Multiverse, multiplying indiscriminately.</desc>
 	<systemList>
-		<artillery max="4" power="1" room="3" start="false" weapon="RVS_ARTILLERY_AI" img="room_artillery_4" />
+		<artillery max="3" power="1" room="3" start="false" weapon="RVS_ARTILLERY_AI" img="room_artillery_4" />
 		<battery max="3" power="2" room="17" start="true" img="room_battery" />
 		<cloaking power="1" room="12" start="false" img="room_cloaking_5" />
 		<clonebay power="1" room="10" start="false">

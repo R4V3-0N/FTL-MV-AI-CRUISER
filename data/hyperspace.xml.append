@@ -124,7 +124,8 @@
 <mod:findLike type="crew">
     <mod-append:race name="rvs_ai_hologram">
         <maxHealth>50</maxHealth>
-		<noSlot>true</noSlot>
+        <crewSlots>0</crewSlots>
+        <essential>-1</essential>
         <noClone>true</noClone>
         <healSpeed>0</healSpeed>
         <canBurn>false</canBurn>
