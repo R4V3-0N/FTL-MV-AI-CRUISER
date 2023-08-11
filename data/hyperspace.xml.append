@@ -381,6 +381,10 @@
 			</statBoost>
 		</statBoosts>
     </aug>-->
+
+    <aug name="RVS_ANTI_GRAVITY_ENGINE">
+		<function name="FTL_BOOSTER" value="0.1" useForReqs="true"/>
+	</aug>
 </augments>
 
 <mod:findLike type="events" limit="1">

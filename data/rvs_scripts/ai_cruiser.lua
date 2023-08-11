@@ -536,3 +536,17 @@ function(ShipManager, dodge)
     dodge = dodge + ShipManager:GetAugmentationValue("RVS_DODGE_ARMOR")
     return Defines.Chain.CONTINUE, dodge
 end)
+
+script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR,
+function(ShipManager, dodge)
+    if ShipManager:HasAugmentation("RVS_ANTI_GRAVITY_ENGINE") > 0 then
+        local engines = ShipManager:GetSystem(1)
+        local piloting = ShipManager:GetSystem(6)
+        if not piloting or piloting:GetEffectivePower() == 0 then
+            dodge = dodge + 15
+        elseif not engines or engines:GetEffectivePower() == 0 then
+            dodge = dodge + 5
+        end
+    end
+    return Defines.Chain.CONTINUE, dodge
+end)
