@@ -71,11 +71,13 @@ local emptyRoomDamage = {
     RVS_EMP_HEAVY_1 = 2
 }
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA, function(ShipManager, Projectile, Location, Damage, forceHit, shipFriendlyFire)
-    local roomID = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true)
-    local system = ShipManager:GetSystemInRoom(roomID)
-    if not system then
-        local emptyRoomDamage = emptyRoomDamage[Projectile.extend.name] or 0
-        Damage.iDamage = Damage.iDamage + emptyRoomDamage
+    if Projectile then
+        local roomID = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true)
+        local system = ShipManager:GetSystemInRoom(roomID)
+        local damageToDeal = emptyRoomDamage[Projectile.extend.name]
+        if damageToDeal and not system then
+            Damage.iDamage = Damage.iDamage + damageToDeal
+        end
     end
     return Defines.CHAIN_CONTINUE, forceHit, shipFriendlyFire
 end)
@@ -279,7 +281,7 @@ end)
 --Harpoon thingy
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT,
 function(ShipManager, Projectile, Location, Damage, shipFriendlyFire)
-  if Projectile.extend.name == "HARPOON_THINGY" then
+  if Projectile and Projectile.extend.name == "HARPOON_THINGY" then
     local destinationRoomNumber = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true)
     local firingShip = Hyperspace.ships(Projectile.ownerId)
     local airlockRooms = {}
