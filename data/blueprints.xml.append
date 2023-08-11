@@ -1275,6 +1275,15 @@ AUGMENTS
 	<value>10</value>
 </augBlueprint>
 
+<augBlueprint name="RVS_ANTI_GRAVITY_ENGINE">
+    <title>Anti-Gravity Engine</title>
+	<desc>If piloting is disabled, provides a 15% evasion boost, otherwise provides a 5% evasion boost if engines are disabled. +10% FTL Drive charge rate.</desc>
+	<cost>35</cost>
+    <bp>3</bp>
+    <rarity>0</rarity>
+    <stackable>false</stackable>
+</augBlueprint>
+
 <crewBlueprint name="rvs_ai_hologram">
 	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
 	<cost>30</cost>
