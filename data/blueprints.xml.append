@@ -1304,13 +1304,15 @@ AUGMENTS
 	</powerList>
 	<colorList>
 		<layer><!-- Layer 1 - Outline -->
-			<color r="255" g="250" b="200" a="1"/>	<!-- Yellow -->
-			<color r="250" g="255" b="180" a="1"/>	<!-- Other Yellow -->
-			<color r="255" g="255" b="255" a="1"/>	<!-- White -->
-			<color r="235" g="235" b="235" a="1"/>	<!-- Grey -->
-			<color r="255" g="255" b="255" a="0.5"/><!-- Other White? -->
+			<!--<color r="255" g="250" b="200" a="1"/>-->	 <!-- Yellow -->
+			<!--<color r="250" g="255" b="180" a="1"/>-->	 <!-- Other Yellow -->
+			<!--<color r="255" g="255" b="255" a="1"/>-->	 <!-- White -->
+			<!--<color r="235" g="235" b="235" a="1"/>-->	 <!-- Grey -->
+			<!--<color r="255" g="255" b="255" a="0.5"/>-->  <!-- Other White? -->
 
-			
+			<!-- CV: The color layer is set up the way it is for a reason, and the
+            outline layer always needs to be white to work with it correctly -->
+            <color r="255" g="255" b="255" a="1"/>
 		</layer>
 		<layer><!-- Layer 2 - Glow -->
 			<color r="0" g="38" b="38" a="1"/>		<!-- Standard -->
@@ -1334,7 +1336,7 @@ AUGMENTS
 			<color r="50" g="0" b="0" a="1"/>		<!-- Darker Red -->
 			<color r="0" g="0" b="90" a="1"/>		<!-- Black -->
 
-			<color r="200" g="0" b="167" a="1"/>	<!-- Mulberry -->
+			<!--<color r="200" g="0" b="167" a="1"/>-->	<!-- Mulberry -->
 			<color r="130" g="0" b="108" a="1"/>	<!-- Loganberry -->
 			<color r="80" g="0" b="67" a="1"/>		<!-- Damson -->
 		</layer>
