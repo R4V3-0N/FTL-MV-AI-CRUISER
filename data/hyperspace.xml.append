@@ -135,9 +135,6 @@
         <deathSounds>
             <deathSound>aiDeath</deathSound>
         </deathSounds>
-        <deathEffect>
-            <playerEvent load="RVS_HOLO_DEATH"/>
-        </deathEffect>
         <passiveStatBoosts>
             <!-- Heal in owner's drone room -->
             <statBoost name="healSpeed">
@@ -389,6 +386,7 @@
 </augments>
 
 <mod:findLike type="events" limit="1">
+    <mod-append:variable name="loc_holos_last_count" op="set" val="-1"/>
     <mod-append:variable name="loc_holos_dead" op="set" val="0"/>
     <mod-append:variable name="loc_holos_revived" op="set" val="0"/>
     <mod-append:variable name="loc_nebula_nostorm" op="set" val="0"/>
