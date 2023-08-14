@@ -497,7 +497,7 @@ function(ship)
 end)
 
 local function RandomPointCircle(center, radius)
-    local radius = radius * math.random()
+    local radius = radius * math.sqrt(math.random())
     local angle = 2 * math.pi * math.random()
     local x = center.x + radius * math.cos(angle)
     local y = center.y + radius * math.sin(angle)
