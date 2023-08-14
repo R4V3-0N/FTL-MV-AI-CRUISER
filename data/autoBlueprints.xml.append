@@ -1,9 +1,5 @@
 <!-- Appends -->
 
-<mod:findName type="blueprintList" name="LIST_CHECK_ANY_CREW">
-	<mod-append:name>rvs_ai_hologram</mod-append:name>
-</mod:findName>
-
 <mod:findName type="blueprintList" name="LIST_CREW_GAS">
 	<mod-append:name>rvs_ai_hologram</mod-append:name>
 </mod:findName>
