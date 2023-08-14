@@ -60,13 +60,17 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
 end)
 
 -- Heal holograms on jump
-script.on_internal_event(Defines.InternalEvents.JUMP_LEAVE, function(ship)
+local function holoHeal(ship)
+    ship = ship or Hyperspace.ships.player
     for crew in vter(ship.vCrewList) do
         if crew:GetSpecies() == "rvs_ai_hologram" then
             crew:DirectModifyHealth(100.0)
         end
     end
-end)
+end
+script.on_internal_event(Defines.InternalEvents.JUMP_LEAVE, holoHeal)
+--TODO: Run callback on ON_WAIT (when it is implemented)
+--script.on_internal_event(Defines.InternalEvents.ON_WAIT, holoHeal)
 
 -- Replace burst projectile with beam for shotgun pinpoints
 local pinpoint1 = Hyperspace.Blueprints:GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_1")
