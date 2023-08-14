@@ -1064,7 +1064,6 @@ Might attatch a missile cost to these drones later along side the temp spawn or 
 	<iconImage>combat</iconImage>
 </droneBlueprint>
 
-<!--TODO: Add proper glows-->
 <droneBlueprint name="RVS_BEAM_DEFENSE_1">
 	<type>DEFENSE</type>
 	<level>1</level>
