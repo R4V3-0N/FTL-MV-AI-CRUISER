@@ -61,7 +61,6 @@ end)
 
 -- Heal holograms on jump
 local function holoHeal(ship)
-    ship = ship or Hyperspace.ships.player
     for crew in vter(ship.vCrewList) do
         if crew:GetSpecies() == "rvs_ai_hologram" then
             crew:DirectModifyHealth(100.0)
