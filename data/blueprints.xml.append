@@ -14,7 +14,7 @@
 	<tip>tip_beams</tip>
 	<title>Ion Bust Beam Mark I</title>
 	<short>Ion Bust I</short>
-	<tip>tip_hull</tip>
+	<tip>rvs_tip_ion_bust</tip>
 	<desc>This beam is most powerful when targeting ionized systems.</desc>
 	<tooltip>Beam weapon; 1 damage; 2x damage in ionized rooms.</tooltip>
 	<damage>1</damage>
@@ -34,6 +34,34 @@
 		<sound>beam1_2</sound>
 	</launchSounds>
 	<weaponArt>rvs_beam_ion_bust_1</weaponArt>
+	<iconImage>beamH</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_BEAM_ION_BUST_2"> <!-- Awaiting for sprite and animation + hyperspace.xml -->
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Ion Bust Beam Mark II</title>
+	<short>Ion Bust II</short>
+	<tip>rvs_tip_ion_bust</tip>
+	<desc>A powerful beam that deals devestating damage against ionized systems.</desc>
+	<tooltip>Beam weapon; 2 damage; 2x damage in ionized rooms.</tooltip>
+	<damage>2</damage>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>17</cooldown>
+	<!--on lua table for x2 ion damage under ionBustBeams-->
+	<power>4</power>
+	<cost>90</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>100</length> <!-- R4: 10 pixels longer than hull beam, due to lower availability of ionized rooms making this a straight upgrade when ignoring any busts-->
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>rvs_beam_ion_bust_2</weaponArt>
 	<iconImage>beamH</iconImage>
 </weaponBlueprint>
 
@@ -101,7 +129,7 @@
 	<type>LASER</type>
 	<title>Flock Gun</title>
 	<short>Flock Gun</short>
-	<tip>tip_laser</tip>
+	<tip>rvs_tip_flock_gun</tip>
 	<desc>A weapon designed by a runaway automated fleet. Not bad considering it was designed by something that only had just achieved swarm conciousness 5 minutes prior. An eratic burst weapon that heavily relies on targeting data from other drones for increased critical chance and precision.</desc>
 	<tooltip>Fires 4 projectiles, 1 damage each with chance for critical based on number of active drones.</tooltip>
 	<radius>70</radius>				<!-- R4 2023.08.07 Increased from 60 to 70, but now each drone decreases radius by 15 instead of 5 -->
@@ -1087,8 +1115,8 @@ Might attatch a missile cost to these drones later along side the temp spawn or 
 
 <droneBlueprint name="RVS_AI_MICROFIGHTER_SWARM">
 	<type>COMBAT</type>
-	<tip>tip_toggle_combat</tip>
-	<title>AI Swarm Drone</title>
+	<tip>rvs_tip_swarm_drone</tip>
+	<title>AI Swarm Microfighter</title>
 	<short>Swarm Drone</short>
 	<desc>By using next-gen field manufacturing, this drone spawns a temporary mini-drone to assist it every other shot.</desc>
 	<power>2</power>
