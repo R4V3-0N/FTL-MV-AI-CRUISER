@@ -24,7 +24,6 @@
 	<time>0.3</time>
 </anim>
 
-
 <animSheet name="rvs_beam_ion_bust_1" w="290" h="76" fw="29" fh="76">weapons/rvs_beam_ion_bust_1_strip10.png</animSheet>
 <weaponAnim name="rvs_beam_ion_bust_1">
 	<sheet>rvs_beam_ion_bust_1</sheet>
@@ -33,7 +32,18 @@
 	<fireFrame>2</fireFrame>
 	<firePoint  x="19" y="21"/>
 	<mountPoint x="5" y="64"/>
-	<chargeImage>weapons/rvs_emp_1_glow.png</chargeImage>
+	<chargeImage>weapons/rvs_beam_ion_bust_1_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="rvs_beam_ion_bust_2" w="306" h="86" fw="34" fh="86">weapons/rvs_beam_ion_bust_2_strip9.png</animSheet>
+<weaponAnim name="rvs_beam_ion_bust_2">
+	<sheet>rvs_beam_ion_bust_2</sheet>
+	<desc length="9" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="22" y="26"/>
+	<mountPoint x="4" y="67"/>
+	<chargeImage>weapons/rvs_beam_ion_bust_2_glow.png</chargeImage>
 </weaponAnim>
 
 <animSheet name="ra_beam_auto" w="175" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_strip7.png</animSheet>

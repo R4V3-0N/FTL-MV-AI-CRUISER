@@ -210,6 +210,7 @@ end)
 --Funny beam
 local ionBustBeams = {
     RVS_BEAM_ION_BUST_1 = 2, --WEAPON_NAME will de-ionize rooms, and do 2 times as much damage to ionized rooms
+    RVS_BEAM_ION_BUST_2 = 2
 }
 local RandomList = {
     New = function(self, table)
