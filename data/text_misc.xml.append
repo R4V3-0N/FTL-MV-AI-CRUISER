@@ -1,9 +1,9 @@
-<ftl>
+<FTL>
 <text name="rvs_tip_ion_bust">Tip: Ion Bust weapons deal double damage in ionized systems while also clearing the ion status.</text>
 <text name="rvs_tip_flock_gun">Tip: -15 Radius and + 1/6 chance of dealing double damage per active external drone active.</text>
 <text name="rvs_tip_swarm_drone">Tip: Produces a temporary drone construct on every second shot that fire 1 damage focus beams.</text>
 
-<text name="rvs_tip_effector">Tip: Effectors pierce all shields and hack systems. They cannot hack systems which already have a hacking drone. Hacked systems temporarily become immune to effector hacking once the hack has completed.</text>
+<text name="rvs_tip_effector">Tip: Effectors bypass shields and hack systems. They cannot hack systems which already have a hacking drone atemporarily become immune to effector hacking once the hack has completed.</text>
 <text name="rvs_tip_focus_split">Tip: Splitter pinpoint beams trade the high damage of most pinpoints for multiple beams, allowing for higher potential damage if the target's shields are down.</text>
 
 <text name="rvs_tip_emp">Tip: EMP projectiles pop 2 layers of shields on impact and deals ion damage on direct system hits.</text>
@@ -14,4 +14,4 @@
 <!-- placeholder until MV 5.4 -->
 <text name="hangar_achievements_title_default">Ship Achievements</text>
 <text name="hangar_no_ship_achievements">No Ship Achievements</text>
-</ftl>
+</FTL>
