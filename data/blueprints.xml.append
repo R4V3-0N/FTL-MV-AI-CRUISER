@@ -1370,6 +1370,25 @@ AUGMENTS
 		</layer>
 	</colorList>
 </crewBlueprint>
+<crewBlueprint name="rvs_ai_hologram_cortana">
+	<desc>You must be lucky.</desc>
+	<cost>30</cost>
+	<bp>1</bp>
+	<title>CTN 0452-9</title>
+	<short>CTN 0452-9</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Does not take up a crew slot</power>
+		<power>Max Health is reduced to 50</power>
+		<power>Cannot heal in medbay or be cloned</power>
+		<power>Provides power and heals slowly in drone control room</power>
+		<power>Regains all health on jump</power>
+		<power>Can teleport to your ship from the enemy teleporter room</power>
+		<power>Immune to suffocation and fires</power>
+		<power>Immune to mind control</power>
+		<power>Can phase through doors</power>
+	</powerList>
+</crewBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI" layout="rvsp_ai_cruiser" img="rvsp_ai_cruiser">
 	<class>AI Cruiser</class>

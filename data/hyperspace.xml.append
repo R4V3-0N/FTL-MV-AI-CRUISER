@@ -124,6 +124,7 @@
 
 <mod:findLike type="crew">
     <mod-append:race name="rvs_ai_hologram">
+        <nameRace transformName="Cortana">rvs_ai_hologram_cortana</nameRace>
         <maxHealth>50</maxHealth>
         <crewSlots>0</crewSlots>
         <essential>-1</essential>
@@ -137,8 +138,7 @@
             <deathSound>aiDeath</deathSound>
         </deathSounds>
         <passiveStatBoosts>
-            <!-- Heal in owner's drone room -->
-            <statBoost name="healSpeed">
+            <statBoost name="healSpeed"> <!-- Heal in owner's drone room -->
                 <boostType>SET</boostType>
                 <amount>1.0</amount>
                 <shipTarget>ORIGINAL_SHIP</shipTarget>
@@ -208,9 +208,113 @@
                     <onePwr>1</onePwr>
                 </systemPowerScaling>
             </statBoost>
-            
-            <!-- Teleport from the other ship's teleporter -->
-            <statBoost name="teleportMoveOtherShip">
+            <statBoost name="teleportMoveOtherShip"> <!-- Teleport from the other ship's teleporter -->
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
+                <crewTarget>SELF</crewTarget>
+                <priority>0</priority>
+                <systemRoomTarget>ALL</systemRoomTarget>
+                <systemPowerDependency>
+                    <teleporter/>
+                </systemPowerDependency>
+                <systemList>
+                    <teleporter/>
+                </systemList>
+                <systemPowerScaling>
+                    <noPwr>1</noPwr>
+                    <onePwr>1</onePwr>
+                </systemPowerScaling>
+            </statBoost>
+        </passiveStatBoosts>
+    </mod-append:race>
+    <mod-append:race name="rvs_ai_hologram_cortana">
+        <!-- changeIfSame attribute seems to be broken in current HS -->
+        <!--<nameRace transformName="Cortana" changeIfSame="false">rvs_ai_hologram</nameRace>-->
+        <maxHealth>50</maxHealth>
+        <crewSlots>0</crewSlots>
+        <essential>-1</essential>
+        <noClone>true</noClone>
+        <healSpeed>0</healSpeed>
+        <canBurn>false</canBurn>
+        <canSuffocate>false</canSuffocate>
+        <canPhaseThroughDoors>true</canPhaseThroughDoors>
+        <resistsMindControl>true</resistsMindControl>
+        <deathSounds>
+            <deathSound>aiDeath</deathSound>
+        </deathSounds>
+        <passiveStatBoosts>
+            <statBoost name="healSpeed"> <!-- Heal in owner's drone room -->
+                <boostType>SET</boostType>
+                <amount>1.0</amount>
+                <shipTarget>ORIGINAL_SHIP</shipTarget>
+                <crewTarget>SELF</crewTarget>
+                <maxStacks>1</maxStacks>
+                <priority>0</priority>
+                <whiteList>
+                    <rvs_ai_hologram/>
+                </whiteList>
+                <systemRoomTarget>ALL</systemRoomTarget>
+                <systemPowerDependency>
+                    <drones/>
+                </systemPowerDependency>
+                <systemList>
+                    <drones/>
+                </systemList>
+                <systemPowerScaling>
+                    <noSys>0</noSys>
+                    <noPwr>1</noPwr>
+                    <onePwr>1</onePwr>
+                </systemPowerScaling>
+            </statBoost>
+            <statBoost name="healAmount">
+                <boostType>FLAT</boostType>
+                <amount>2.0</amount>
+                <shipTarget>ORIGINAL_SHIP</shipTarget>
+                <crewTarget>SELF</crewTarget>
+                <maxStacks>1</maxStacks>
+                <priority>0</priority>
+                <whiteList>
+                    <rvs_ai_hologram/>
+                </whiteList>
+                <systemRoomTarget>ALL</systemRoomTarget>
+                <systemPowerDependency>
+                    <drones/>
+                </systemPowerDependency>
+                <systemList>
+                    <drones/>
+                </systemList>
+                <systemPowerScaling>
+                    <noSys>0</noSys>
+                    <hackedSys>0</hackedSys>
+                    <noPwr>0</noPwr>
+                    <onePwr>1</onePwr>
+                </systemPowerScaling>
+            </statBoost>
+            <statBoost name="bonusPower">
+                <boostType>SET</boostType>
+                <amount>1</amount>
+                <shipTarget>ORIGINAL_SHIP</shipTarget>
+                <crewTarget>SELF</crewTarget>
+                <maxStacks>1</maxStacks>
+                <priority>0</priority>
+                <whiteList>
+                    <rvs_ai_hologram/>
+                </whiteList>
+                <systemRoomTarget>ALL</systemRoomTarget>
+                <systemPowerDependency>
+                    <drones/>
+                </systemPowerDependency>
+                <systemList>
+                    <drones/>
+                </systemList>
+                <systemPowerScaling>
+                    <noSys>0</noSys>
+                    <noPwr>1</noPwr>
+                    <onePwr>1</onePwr>
+                </systemPowerScaling>
+            </statBoost>
+            <statBoost name="teleportMoveOtherShip"> <!-- Teleport from the other ship's teleporter -->
                 <boostType>SET</boostType>
                 <value>true</value>
                 <shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>

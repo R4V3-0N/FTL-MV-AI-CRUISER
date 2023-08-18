@@ -17,15 +17,18 @@ end
 local function get_crew_count_name(ship, speciesName)
     if ship then
         local count = 0
+        if type(speciesName) == "string" then
+            speciesName = {[speciesName] = true}
+        end
         for crew in vter(ship.vCrewList) do
-            if crew.iShipId == ship.iShipId and crew:GetSpecies() == speciesName then
+            if crew.iShipId == ship.iShipId and speciesName[crew:GetSpecies()] then
                 count = count + 1
             end
         end
         local otherShip = Hyperspace.ships(1 - ship.iShipId)
         if otherShip then
             for crew in vter(otherShip.vCrewList) do
-                if crew.iShipId == ship.iShipId and crew:GetSpecies() == speciesName then
+                if crew.iShipId == ship.iShipId and speciesName[crew:GetSpecies()] then
                     count = count + 1
                 end
             end
@@ -34,6 +37,14 @@ local function get_crew_count_name(ship, speciesName)
     end
     return 0
 end
+
+-- Make a list of hologram crew that's easier to reference
+local holoSpecies = {}
+script.on_load(function()
+    for holoName in vter(Hyperspace.Blueprints:GetBlueprintList("RVS_LIST_CREW_AI_AVATAR")) do
+        holoSpecies[holoName] = true
+    end
+end)
 
 -- Track whether we're in a nebula or a nebula with an ion storm
 script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
@@ -48,7 +59,7 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
     if playerShip then
         local vars = Hyperspace.playerVariables
         if playerShip:HasEquipment("RVS_REQ_HOLO_TRACK_DEATH") > 0 then
-            local holoCount = get_crew_count_name(playerShip, "rvs_ai_hologram")
+            local holoCount = get_crew_count_name(playerShip, holoSpecies)
             if vars.loc_holos_last_count > -1 and vars.loc_holos_last_count > holoCount then
                 vars.loc_holos_dead = vars.loc_holos_dead + vars.loc_holos_last_count - holoCount
             end
@@ -62,7 +73,7 @@ end)
 -- Heal holograms on jump
 local function holoHeal(ship)
     for crew in vter(ship.vCrewList) do
-        if crew:GetSpecies() == "rvs_ai_hologram" then
+        if holoSpecies[crew:GetSpecies()] then
             crew:DirectModifyHealth(100.0)
         end
     end
