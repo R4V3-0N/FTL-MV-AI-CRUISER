@@ -1,6 +1,9 @@
 <FTL>
 <mod:findName type="sectorDescription" name="SECRET_ANCIENT" panic="true">
     <mod:findLike type="rarityList">
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="0"/>
+		
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="0"/>
@@ -35,6 +38,9 @@
 
 <mod:findName type="sectorDescription" name="SECRET_ROYAL" panic="true">
     <mod:findLike type="rarityList">
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="0"/>
+	
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="0"/>
@@ -74,6 +80,9 @@
 
 <mod:findName type="sectorDescription" name="SECTOR_SEPARATIST">
 	<mod:findLike type = "rarityList">
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
+		
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
@@ -100,13 +109,16 @@
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="4"/>
 		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="5"/>
-		<mod-append:blueprint name="RVS_AI_SWARM" rarity="5"/>
+		<mod-append:blueprint name="RVS_AI_SWARM" rarity="2"/>
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="3"/>	
 	</mod:findLike>
 </mod:findName>
 <mod:findName type="sectorDescription" name="SECTOR_SEPARATIST_UNIQUE">
 	<mod:findLike type = "rarityList">
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="1"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="3"/>
+	
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
@@ -132,7 +144,7 @@
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="2"/>
 		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="3"/>
-		<mod-append:blueprint name="RVS_AI_SWARM" rarity="3"/>
+		<mod-append:blueprint name="RVS_AI_SWARM" rarity="2"/>
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="2"/>	
 	</mod:findLike>
@@ -140,7 +152,10 @@
 
 <mod:findName type="sectorDescription" name="SECTOR_ZOLTAN">
 	<mod:findLike type = "rarityList">
-        <mod-append:blueprint name="RA_BEAM_AUTO" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="3"/>
+ 
+		<mod-append:blueprint name="RA_BEAM_AUTO" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
@@ -165,18 +180,16 @@
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="2"/>
 		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="3"/>
-		<mod-append:blueprint name="RVS_AI_SWARM" rarity="3"/>
+		<mod-append:blueprint name="RVS_AI_SWARM" rarity="4"/>
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="2"/>		
-	
-        <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
-		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="5"/>
-		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="5"/>
-		<mod-append:blueprint name="RVS_AI_SWARM" rarity="5"/>
 	</mod:findLike>
 </mod:findName>
 <mod:findName type="sectorDescription" name="SECTOR_ZOLTAN_UNIQUE">
 	<mod:findLike type = "rarityList">
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="2"/>
+		
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
@@ -216,6 +229,9 @@
 
 <mod:findName type="sectorDescription" name="SECTOR_ENGI">
 	<mod:findLike type = "rarityList">
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
+	
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
@@ -243,13 +259,16 @@
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="3"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="4"/>
 		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="0"/>
-		<mod-append:blueprint name="RVS_AI_SWARM" rarity="5"/>
+		<mod-append:blueprint name="RVS_AI_SWARM" rarity="3"/>
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="4"/>	
 	</mod:findLike>
 </mod:findName>
 <mod:findName type="sectorDescription" name="SECTOR_ENGI_UNIQUE">
 	<mod:findLike type = "rarityList">
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
+	
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
@@ -276,7 +295,7 @@
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="3"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="4"/>
 		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="0"/>
-		<mod-append:blueprint name="RVS_AI_SWARM" rarity="5"/>
+		<mod-append:blueprint name="RVS_AI_SWARM" rarity="3"/>
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="4"/>
 	</mod:findLike>

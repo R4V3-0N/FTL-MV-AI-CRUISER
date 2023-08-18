@@ -13,9 +13,13 @@
 
 <mod:findName type="blueprintList" name="BLUELIST_BEAMS_ALL">
 	<mod-append:name>RVS_HS_IR_BEAM_1</mod-append:name>
+	<mod-append:name>RVS_BEAM_ION_BUST_1</mod-append:name>
+	<mod-append:name>RVS_BEAM_ION_BUST_2</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="BLUELIST_BEAMS_DAMAGE">
 	<mod-append:name>RVS_HS_IR_BEAM_1</mod-append:name>
+	<mod-append:name>RVS_BEAM_ION_BUST_1</mod-append:name>
+	<mod-append:name>RVS_BEAM_ION_BUST_2</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_FOCUS_ALL">
