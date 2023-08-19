@@ -358,7 +358,7 @@
 		<function name="FTL_BOOSTER" value="0.05" useForReqs="true"/>
 		<function name="SHIELD_RECHARGE" value="0.05" useForReqs="true"/>
 		<function name="AUTO_COOLDOWN" value="0.05" useForReqs="true"/>
-		<function name="BATTERY_BOOSTER" value="0.05" useForReqs="true"/>
+		<function name="BATTERY_BOOSTER" value="0.75" useForReqs="true"/>
 		<function name="FAST_MIND" value="1" useForReqs="true"/> <!--makes hacking 5 seconds faster-->
 		<function name="FAST_CLOAK" value="1" useForReqs="true"/> <!--makes hacking 5 seconds faster-->
 		<function name="FAST_HACK" value="1" useForReqs="true"/> <!--makes hacking 5 seconds faster-->
