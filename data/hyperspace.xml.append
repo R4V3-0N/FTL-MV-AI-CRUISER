@@ -29,7 +29,7 @@
 </mod:findLike>
 
 
-<mod:findLike type="ships">
+<mod:findLike type="ships" limit="1">
     <!-- Player ships -->
 	<mod-append:ship name="PLAYER_SHIP_RVSP_AI" b="true" c="true">
         <unlock variant="b" silent="false">
@@ -122,7 +122,7 @@
 </mod:findLike>
 
 
-<mod:findLike type="crew">
+<mod:findLike type="crew" limit="1">
     <mod-append:race name="rvs_ai_hologram">
         <nameRace transformName="Cortana">rvs_ai_hologram_cortana</nameRace>
         <maxHealth>50</maxHealth>
@@ -534,7 +534,7 @@
     </mod-append:req>
 </mod:findLike>
 
-<mod:findLike type="scripts">
+<mod:findLike type="scripts" limit="1">
     <mod-append:script>data/rvs_scripts/ai_cruiser.lua</mod-append:script>
     <mod-append:script>data/rvs_scripts/ai_cruiser_ach.lua</mod-append:script>
 </mod:findLike>
