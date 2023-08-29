@@ -1146,6 +1146,25 @@ Might attatch a missile cost to these drones later along side the temp spawn or 
 	<rarity>0</rarity>
 	<iconImage>combat</iconImage>
 </droneBlueprint>
+<weaponBlueprint name="RVS_AI_MICROFIGHTER_SWARM_CHILD_PROJ_DUMMY">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title>YOU SOULD NEVER SEE THIS</title>
+	<short>YOU SOULD NEVER SEE THIS</short>
+	<desc>YOU SOULD NEVER SEE THIS</desc>
+	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<cooldown>9</cooldown>
+    <speed>15</speed>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>rvs_ai_flock_drone_on</image>
+	<weaponArt>missiles_1</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
 
 <!--
 
