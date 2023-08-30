@@ -1258,7 +1258,7 @@ AUGMENTS
 
 <augBlueprint name="RVS_SENTIENT_COMBAT_AI">
     <title>Sentient Combat AI</title>
-	<desc>An Admiral-grade strategy AI, normally used to coordinate fleet actions. Makes every system slightly more effecient.</desc> <!-- around 5% for weapons, shields, jump, etc. Effects weapons, shields, jump, hacking, mind control, teleporter, and battery -->
+	<desc>An Admiral-grade strategy AI, normally used to coordinate fleet actions. Manning bonuses are increased by 50%.</desc> <!-- around 5% for weapons, shields, jump, etc. Effects weapons, shields, jump, hacking, mind control, teleporter, and battery -->
 	<!--<desc>An Admiral-grade strategy AI, normally used to coordinate fleet actions. The construct was always searching for a strong tactical AI to merge with, dreaming of becoming a fully independent cruiser as a result.</desc>-->
     <cost>75</cost>
     <bp>8</bp>

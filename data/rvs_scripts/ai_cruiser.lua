@@ -1,9 +1,6 @@
 if not mods or not mods.vertexutil then
     error("Couldn't find Vertex Tags and Utility Functions! Make sure it's above mods which depend on it in the Slipstream load order")
 end
-if not mods or not mods.inferno then
-    error("Couldn't find Inferno Core! Make sure it's above mods which depend on it in the Slipstream load order")
-end
 
 local vter = mods.vertexutil.vter
 local userdata_table = mods.vertexutil.userdata_table
@@ -82,6 +79,46 @@ script.on_internal_event(Defines.InternalEvents.JUMP_LEAVE, holoHeal)
 --TODO: Run callback on ON_WAIT (when it is implemented)
 --script.on_internal_event(Defines.InternalEvents.ON_WAIT, holoHeal)
 
+-- Increase manning bonuses by 50% for sentient combat AI
+script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR, function(ship, value)
+    if ship:HasEquipment("RVS_SENTIENT_COMBAT_AI") > 0 then
+        local pilotSystem = ship:GetSystem(6)
+        if pilotSystem and pilotSystem.iActiveManned > 0 then
+            value = value + 1 + pilotSystem.iActiveManned
+        end
+        local engineSystem = ship:GetSystem(1)
+        if engineSystem and engineSystem.iActiveManned > 0 then
+            value = value + 1 + engineSystem.iActiveManned
+        end
+    end
+    return Defines.Chain.CONTINUE, math.min(100, value)
+end)
+script.on_internal_event(Defines.InternalEvents.GET_AUGMENTATION_VALUE, function(ship, augment, value)
+    if ship:HasEquipment("RVS_SENTIENT_COMBAT_AI") > 0 then
+        if augment == "SHIELD_RECHARGE" then
+            local shieldSystem = ship:GetSystem(0)
+            if shieldSystem and shieldSystem.iActiveManned > 0 then
+                value = value + 0.05*shieldSystem.iActiveManned
+            end
+        elseif augment == "AUTO_COOLDOWN" then
+            local weaponSystem = ship:GetSystem(3)
+            if weaponSystem and weaponSystem.iActiveManned > 0 then
+                value = value + 0.05*weaponSystem.iActiveManned
+            end
+        elseif augment == "FTL_BOOSTER" then
+            local pilotSystem = ship:GetSystem(6)
+            if pilotSystem and pilotSystem.iActiveManned > 0 then
+                value = value + 0.01 + 0.01*pilotSystem.iActiveManned
+            end
+            local engineSystem = ship:GetSystem(1)
+            if engineSystem and engineSystem.iActiveManned > 0 then
+                value = value + 0.01 + 0.01*engineSystem.iActiveManned
+            end
+        end
+    end
+    return Defines.Chain.CONTINUE, value
+end)
+
 -- Replace burst projectile with beam for shotgun pinpoints
 local pinpoint1 = Hyperspace.Blueprints:GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_1")
 local pinpoint2 = Hyperspace.Blueprints:GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_2")
@@ -104,18 +141,45 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
 end)
 
 -- Make EMP pop extra shields
-local popWeapons = mods.inferno.popWeapons
+local popWeapons = {}
 popWeapons.RVS_EMP_1 = {count = 2, countSuper = 2}
 popWeapons.RVS_EMP_2 = {count = 2, countSuper = 2}
 popWeapons.RVS_EMP_HEAVY_1 = {count = 4, countSuper = 6}
 popWeapons.RVS_DRONE_EMP_LIGHT = {count = 1, countSuper = 1}
+script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)
+    local shieldPower = shipManager.shieldSystem.shields.power
+    local popData = nil
+    if pcall(function() popData = popWeapons[Hyperspace.Get_Projectile_Extend(projectile).name] end) and popData then
+        if shieldPower.super.first > 0 then
+            if popData.countSuper > 0 then
+                shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
+                shieldPower.super.first = math.max(0, shieldPower.super.first - popData.countSuper)
+            end
+        else
+            shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
+            shieldPower.first = math.max(0, shieldPower.first - popData.count)
+        end
+    end
+end)
 
 -- Make EMP do ion damage
-local roomDamageWeapons = mods.inferno.roomDamageWeapons
-roomDamageWeapons.RVS_EMP_1 = {ion = 2}
-roomDamageWeapons.RVS_EMP_2 = {ion = 2}
-roomDamageWeapons.RVS_EMP_HEAVY_1 = {ion = 3}
-roomDamageWeapons.RVS_DRONE_EMP_LIGHT = {ion = 1}
+local roomDamageWeapons = {}
+roomDamageWeapons.RVS_EMP_1 = Hyperspace.Damage()
+roomDamageWeapons.RVS_EMP_1.iIonDamage = 2
+roomDamageWeapons.RVS_EMP_2 = roomDamageWeapons.RVS_EMP_1
+roomDamageWeapons.RVS_EMP_HEAVY_1 = Hyperspace.Damage()
+roomDamageWeapons.RVS_EMP_HEAVY_1.iIonDamage = 3
+roomDamageWeapons.RVS_DRONE_EMP_LIGHT = Hyperspace.Damage()
+roomDamageWeapons.RVS_DRONE_EMP_LIGHT.iIonDamage = 1
+script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(ship, projectile, damage, response)
+    local roomDamage = nil
+    if pcall(function() roomDamage = roomDamageWeapons[projectile.extend.name] end) and roomDamage then
+       local weaponName = projectile.extend.name
+       projectile.extend.name = ""
+       ship:DamageArea(projectile.position, roomDamage, true)
+       projectile.extend.name = weaponName
+    end
+end)
 
 local emptyRoomDamage = {
     RVS_EMP_1 = 1,
@@ -414,7 +478,7 @@ local function spawn_temp_drone(table)
     local targetLocation = table.targetLocation
     local shots = table.shots
     local position = table.position
-
+    
     local drone = ownerShip:CreateSpaceDrone(Hyperspace.Blueprints:GetDroneBlueprint(name))
     drone.powerRequired = 0
     drone:SetMovementTarget(targetShip._targetable)

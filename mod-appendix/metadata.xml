@@ -8,7 +8,7 @@
   
   
   <description>
-<![CDATA[ THIS MOD HAS DEPENDENCIES! Make sure to patch "Inferno Core" and "Vertex Tags and Utility Functions" first! (links bellow)
+<![CDATA[ THIS MOD HAS DEPENDENCIES! Make sure to patch "Vertex Tags and Utility Functions" first! (link bellow)
 
 This mod adds a new race of AI hardlight Avatars from a distant universe which will eventually be developed upon further, both with type B and C layouts as well as eventually events and lore inspired by the AI Avatar race from Captains Edition and Hyperspace by Sleeper Service.
 
@@ -32,14 +32,13 @@ This sample includes:
 - New Race: AI Avatar's, a synthetic race of disposable hardlight avatars with many immunities
 - New Augments
   - Hologram Emitter, an augment that lets you produce an AI hologram when one perishes at empty beacons
-  - Sentient Combat computer, improves most systems by 5%
+  - Sentient Combat computer, improves manning level of systems
   - Rerouted Insulation, gives the ship a 80% ion resistance while all crew onboard are more susceptable to stuns.
 ...and More!
 
 
-Links to Vertex and InfernoCore:
-https://github.com/ChronoVortex/FTL-HS-Vertex/releases
-https://drive.google.com/file/d/14XXh8w6SLV78nC9sU-MA0qHKCYzo21tk/view
+Download Vertex:
+https://github.com/ChronoVortex/FTL-HS-Vertex/releases/latest
 ]]>
   </description>
 </metadata>
