@@ -526,8 +526,8 @@
 
 		Shots Per Charge: 1
 
-		Hacking Duration: 4
-		Hack Immunity: 3
+		Hacking Duration: 4 seconds
+		Hack Immunity: 3 seconds
 		Accuracy Bonus: +10%
 		
 		Buy/Sell Price: 55~/27~
@@ -538,8 +538,8 @@
 
 		Shots Per Charge: 1
 
-		Hacking Duration: 4
-		Hack Immunity: 3
+		Hacking Duration: 4 seconds
+		Hack Immunity: 3 seconds
 		Accuracy Bonus: +10%
 	</tooltipOverride>
 	<damage>0</damage>
@@ -608,8 +608,8 @@
 		Required Power: 3
 		Charge Time: 10 seconds
 
-		Hacking Duration: 4
-		Hack Immunity: 3
+		Hacking Duration: 4 seconds
+		Hack Immunity: 3 seconds
 		Accuracy Bonus: +10%
 		
 		Buy/Sell Price: 55~/27~
@@ -620,8 +620,8 @@
 
 		Shots Per Charge: 1
 
-		Hacking Duration: 4
-		Hack Immunity: 3
+		Hacking Duration: 4 seconds
+		Hack Immunity: 3 seconds
 		Accuracy Bonus: +10%
 	</tooltipOverride>
 	<damage>0</damage>
@@ -690,8 +690,8 @@
 		Required Power: 3
 		Charge Time: 20 seconds
 
-		Hacking Duration: 10
-		Hack Immunity: 3
+		Hacking Duration: 10 seconds
+		Hack Immunity: 3 seconds
 		Accuracy Bonus: +10%
 		
 		Buy/Sell Price: 65~/32~
@@ -702,8 +702,8 @@
 
 		Shots Per Charge: 1
 
-		Hacking Duration: 10
-		Hack Immunity: 3
+		Hacking Duration: 10 seconds
+		Hack Immunity: 3 seconds
 		Accuracy Bonus: +10%
 	</tooltipOverride>
 	<damage>0</damage>
@@ -776,13 +776,24 @@
 		
 		Shots Per Charge: 1
 
-		Hacking Duration: 6
-		Hack Immunity: 3
+		Hacking Duration: 6 seconds
+		Hack Immunity: 3 seconds
 		Accuracy Bonus: +10%
 		
 		Buy/Sell Price: 65~/32~
 	</descriptionOverride>
 	<tooltip>Disrupts enemy systems.</tooltip>
+	<tooltipOverride>Required Power: 3
+		Charge Time: 18 seconds
+		Chain Effect: Decrease cooldown by 2
+		Chain Cooldown Cap: 12 (3 chains)
+		
+		Shots Per Charge: 1
+
+		Hacking Duration: 6 seconds
+		Hack Immunity: 3 seconds
+		Accuracy Bonus: +10%
+	</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
 	<hack duration="7" immuneAfterHack="10">
