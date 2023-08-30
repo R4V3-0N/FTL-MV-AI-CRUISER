@@ -512,17 +512,40 @@
 
 <weaponBlueprint name="RA_EFFECTOR_1">
 	<type>BOMB</type>
-	<tip>rvs_tip_effector</tip> <!-- oh woops, this should be fixed -->
+	<tip>rvs_tip_effector</tip>
 	<title>Effector Mark I</title>
 	<short>Effect. I</short>
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
 	<desc>Basic hacking field projector that can disrupt systems.</desc>
+	<descriptionOverride>Basic hacking field projector that can disrupt systems.
+
+		Stats:
+		Required Power: 2
+		Charge Time: 15 seconds
+
+		Shots Per Charge: 1
+
+		Hacking Duration: 4
+		Hack Immunity: 3
+		Accuracy Bonus: +10%
+		
+		Buy/Sell Price: 55~/27~
+	</descriptionOverride>
 	<tooltip>Disrupts enemy systems.</tooltip>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 15 seconds
+
+		Shots Per Charge: 1
+
+		Hacking Duration: 4
+		Hack Immunity: 3
+		Accuracy Bonus: +10%
+	</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
 	<hack duration="4" immuneAfterHack="7">
-		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
+		<shields>4.1</shields> <!--R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields. ADDENDUM: made it 4.1 just so it can work when time is sped up or slowed down -->
 		<doors immuneAfterHack="3">8</doors>
 		<sensors immuneAfterHack="3">8</sensors>
 		<temporal immuneAfterHack="3">8</temporal>
@@ -579,7 +602,28 @@
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
 	<desc>Fast charging projector device that hacks systems at a higher rate than its predecessor.</desc>
+	<descriptionOverride>Fast charging projector device that hacks systems at a higher rate than its predecessor.
+
+		Stats:
+		Required Power: 3
+		Charge Time: 10 seconds
+
+		Hacking Duration: 4
+		Hack Immunity: 3
+		Accuracy Bonus: +10%
+		
+		Buy/Sell Price: 55~/27~
+	</descriptionOverride>
 	<tooltip>Disrupts enemy systems.</tooltip>
+	<tooltipOverride>Required Power: 3
+		Charge Time: 10 seconds
+
+		Shots Per Charge: 1
+
+		Hacking Duration: 4
+		Hack Immunity: 3
+		Accuracy Bonus: +10%
+	</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
 	<hack duration="4" immuneAfterHack="7">
@@ -640,7 +684,28 @@
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
 	<desc>Slow-charging effector that can heavily disrupt ship systems with a prolonged hacking attack.</desc>
+	<descriptionOverride>Slow-charging effector that can heavily disrupt ship systems with a prolonged hacking attack.
+
+		Stats:
+		Required Power: 3
+		Charge Time: 20 seconds
+
+		Hacking Duration: 10
+		Hack Immunity: 3
+		Accuracy Bonus: +10%
+		
+		Buy/Sell Price: 65~/32~
+	</descriptionOverride>
 	<tooltip>Disrupts enemy systems.</tooltip>
+	<tooltipOverride>Required Power: 3
+		Charge Time: 20 seconds
+
+		Shots Per Charge: 1
+
+		Hacking Duration: 10
+		Hack Immunity: 3
+		Accuracy Bonus: +10%
+	</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
 	<hack duration="10" immuneAfterHack="13">
@@ -695,12 +760,28 @@
 
 <weaponBlueprint name="RA_EFFECTOR_CHAIN">
 	<type>BOMB</type>
-	<tip>rvs_tip_effector</tip> <!-- oh woops, this should be fixed -->
+	<tip>rvs_tip_effector</tip>
 	<title>Chain Effector</title>
 	<short>Chain Eff.</short>
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
 	<desc>Intelligent field projector that decreases in cooldown to keep up with enemy defenses with its hacking attacks.</desc>
+	<descriptionOverride>Intelligent field projector that decreases in cooldown to keep up with enemy defenses with its hacking attacks.
+
+		Stats:
+		Required Power: 3
+		Charge Time: 18 seconds
+		Chain Effect: Decrease cooldown by 2
+		Chain Cooldown Cap: 12 (3 chains)
+		
+		Shots Per Charge: 1
+
+		Hacking Duration: 6
+		Hack Immunity: 3
+		Accuracy Bonus: +10%
+		
+		Buy/Sell Price: 65~/32~
+	</descriptionOverride>
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
