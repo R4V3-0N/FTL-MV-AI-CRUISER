@@ -14,7 +14,7 @@ This mod adds a new race of AI hardlight Avatars from a distant universe which w
 
 This sample includes:
 - AI Cruiser type A, B, and C with achievements!
-- 5 New Weapons
+- 13 New Weapons
   - Effector mk I, and II; a projector that hacks into enemy systems.
   - Heavy Effector, a projector that hacks and disrupts enemy systems for longer.
   - Chain Effector, a chain variation of the Effector designed to keep enemies disrupted after a few shots.
@@ -23,19 +23,23 @@ This sample includes:
   - EMP Device mk I, and II; a series of weapons that fires projectiles that knocks down 2 layers of shields on impact, and deals ion damage on room hit.
   - Heavy EMP Device, a variation that can knock down more shields and inflicts ion on adjacent rooms.
   - Ion Bust Beam, which can deal double damage on ionized rooms but in doing so clears the ion effect.
-- 5 New Drones
+- 7 New Drones
   - Interceptor Microfighter, a drone that is technically more sentient than you. An evasive drone that focuses fire on enemy defence drones before targeting the ship.
   - Shock Microfighter, piloted by an obnoxious avatar, this drone targets enemy systems with its light EMP device repeatedly while evading enemy fire.
   - Swarm Microfighter, the sword of a run away swarm-intelligence. Every alternating shot assimilates material to create a rudimentary attack drone.
-  - Missile Drone, a temporary drone that fires off a small series of missiles before despawning.
+  - Missile Drone Mk 1, 2, and 3, are temporary drones that fires off a small series of missiles before despawning.
   - Focus Beam Defence Drone, a Defence drone that shoots down enemy projectiles with beams, never misses!
 - New Race: AI Avatar's, a synthetic race of disposable hardlight avatars with many immunities
-- New Augments
+- 6 New Augments
   - Hologram Emitter, an augment that lets you produce an AI hologram when one perishes at empty beacons
-  - Sentient Combat computer, improves manning level of systems
+  - Anti-Gravity Engine, provides evasion when your engines or helm is disabled.
+  - Sentient Combat AI, improves manning level of systems
+  - Conductive Hull Plating. This hull plating allows your ship to create ion storms inside nebulas and regain lost reactor power in an ion storm.
+  - Assimilative Drone Bays. Allowing the construction of temporary focus beam drones for destroyed enemy drones as well as a chance when your ships damaged.
   - Rerouted Insulation, gives the ship a 80% ion resistance while all crew onboard are more susceptable to stuns.
 ...and More!
 
+Special thanks to Julk for providing additional assistance :)
 
 Download Vertex:
 https://github.com/ChronoVortex/FTL-HS-Vertex/releases/latest
