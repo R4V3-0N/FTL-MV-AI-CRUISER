@@ -904,10 +904,10 @@ DRONES
 	</missSounds>
 	<weaponArt>laser_1</weaponArt>
 </weaponBlueprint>
-<droneBlueprint name="RVS_AI_MICROFIGHTER_INTERCEPTER">
+<droneBlueprint name="RVS_AI_MICROFIGHTER_INTERCEPTOR">
 	<type>COMBAT</type>
 	<!--<tip>tip_ai_microfighter</tip>-->
-	<title>AI Intercepter Microfighter</title>
+	<title>AI Interceptor Microfighter</title>
 	<short>Int. Drone</short>
 	<desc>A highly advanced and maneuverable microfighter intended to intercept small ships and drones with a reliable scatter laser. It is technically more sentient than you.</desc>
 	<!--

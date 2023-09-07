@@ -361,13 +361,13 @@ local function aquire_drone_target(ship, droneName)
     end
 end
 script.on_internal_event(Defines.InternalEvents.DRONE_FIRE, function(projectile, drone)
-    if drone.blueprint.name == "RVS_AI_MICROFIGHTER_INTERCEPTER" then
+    if drone.blueprint.name == "RVS_AI_MICROFIGHTER_INTERCEPTOR" then
         set_drone_destination(drone)
     end
 end)
 script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
-    if Hyperspace.ships.player then aquire_drone_target(Hyperspace.ships.player, "RVS_AI_MICROFIGHTER_INTERCEPTER") end
-    if Hyperspace.ships.enemy then aquire_drone_target(Hyperspace.ships.enemy, "RVS_AI_MICROFIGHTER_INTERCEPTER") end
+    if Hyperspace.ships.player then aquire_drone_target(Hyperspace.ships.player, "RVS_AI_MICROFIGHTER_INTERCEPTOR") end
+    if Hyperspace.ships.enemy then aquire_drone_target(Hyperspace.ships.enemy, "RVS_AI_MICROFIGHTER_INTERCEPTOR") end
 end)
 
 --Make a drone target systems only
