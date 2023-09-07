@@ -24,14 +24,14 @@
 		<velocity min="0.20" max="1.00" />
 		<direction min="35" max="166" />
 		<angular min="0.80" max="0.20" />
-		<x>0</x>
-		<y>28</y>
+		<x>13</x>
+		<y>29</y>
 	</gib2>
 	<gib3>
 		<velocity min="0.30" max="0.60" />
 		<direction min="-80" max="65" />
 		<angular min="0.60" max="0.80" />
-		<x>99</x>
+		<x>100</x>
 		<y>13</y>
 	</gib3>
 	<gib4>

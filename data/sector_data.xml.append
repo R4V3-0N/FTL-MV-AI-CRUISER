@@ -78,6 +78,79 @@
 	In the future these items will be a lot more restrictive
 -->
 
+<mod:findName type="sectorDescription" name="SECTOR_NEBULA" panic="true"> <!-- Nebula sector acting as defacto main way to get the fun toys currently -->
+    <mod:findLike type="rarityList">
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="2"/>
+		
+        <mod-append:blueprint name="RA_BEAM_AUTO" rarity="2"/>
+		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
+		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="2"/>
+		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="2"/>
+		<mod-append:blueprint name="RA_EFFECTOR_CHAIN" rarity="2"/>
+		
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="2"/>
+		<mod-append:blueprint name="RVS_EMP_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_EMP_2" rarity="2"/>
+		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="2"/>
+		
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_INTERCEPTER" rarity="2"/>
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="0"/>
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SWARM" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="1"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="2"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_3" rarity="2"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="1"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="1"/>
+		
+        <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="1"/>
+		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="1"/>
+		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="1"/>
+		<mod-append:blueprint name="RVS_AI_SWARM" rarity="1"/>
+		
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="1"/>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="sectorDescription" name="SECTOR_NEBULA_HEKTAR" panic="true">
+    <mod:findLike type="rarityList">
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="2"/>
+		
+        <mod-append:blueprint name="RA_BEAM_AUTO" rarity="2"/>
+		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
+		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
+		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
+		<mod-append:blueprint name="RA_EFFECTOR_CHAIN" rarity="3"/>
+		
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="3"/>
+		<mod-append:blueprint name="RVS_EMP_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_EMP_2" rarity="1"/>
+		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="1"/>
+		
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_INTERCEPTER" rarity="3"/>
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="0"/>
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SWARM" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_3" rarity="3"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="2"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="2"/>
+		
+        <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
+		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="2"/>
+		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="2"/>
+		<mod-append:blueprint name="RVS_AI_SWARM" rarity="2"/>
+		
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="1"/>
+    </mod:findLike>
+</mod:findName>
+
 <mod:findName type="sectorDescription" name="SECTOR_SEPARATIST">
 	<mod:findLike type = "rarityList">
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>

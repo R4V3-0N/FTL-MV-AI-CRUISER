@@ -85,7 +85,12 @@
 
 	<name>RVS_BEAM_DEFENSE_1</name>
 	
-	<name>RA_RA_DRONE_HEAVY_1</name>
+	<name>RA_DRONE_HEAVY_1</name>
+	<name>RA_DRONE_HEAVY_2</name>
+</blueprintList>
+
+<blueprintList name="RVS_LIST_DRONES_HEAVY">	
+	<name>RA_DRONE_HEAVY_1</name>
 	<name>RA_DRONE_HEAVY_2</name>
 </blueprintList>
 
@@ -111,7 +116,6 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<name>SHOTGUN_2</name>
 	<name>SHOTGUN_CHAIN</name>
 	<name>MINELAUNCHER_STUN</name>	<!-- CE moment, I am evil -->
-	
 	
 	<!-- HS and original weapons -->
 	<name>RVS_EMP_1</name>
@@ -143,6 +147,51 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<name>FOCUS_1_AMP4</name>
 </blueprintList>
 
+<!-- No clue what the hell I am doing here so I hope it spits out something vaguely okay? -->
+<blueprintList name="RVS_LIST_MV_WEAPONS_EMP_SPICY">
+	<!-- MV vanilla weapons -->
+	<name>BA_LASER_ARTILLERY_2</name>	<!-- Place holder because funny -->
+	<name>BEAM_FIRE</name>
+	<name>BEAM_FIRE_PIERCE</name>
+	<name>SPORE_1</name>
+	<name>SPORE_2</name>
+	<name>SPORE_HEAVY</name>
+	<name>SPORE_CHAIN</name>
+	<name>SPORE_STUN</name>
+	<name>ENERGY_1</name> 
+	<name>ENERGY_HULL</name>
+	<name>LASER_FIRE</name>
+	<name>LASER_STUN</name>
+	<name>LASER_HEAVY_PIERCE</name>
+	<name>LASER_PIERCE</name>
+	<name>LASER_PIERCE_2</name>
+	<name>LASER_PARTICLE</name>
+	<name>LASER_PARTICLE_2</name>
+	<name>BEAM_HULL</name>
+	<name>LASER_HULL_1</name>
+	<name>LASER_HULL_2</name>
+	<name>LASER_HULL_3</name>
+	<name>LASER_HULL_CHAINGUN</name>
+	<name>BEAM_GUILLOTINE</name>
+	<name>BOMB_1_ENEMY</name>
+	
+	<!-- HS and original weapons -->
+	<name>RVS_EMP_1</name>
+	<name>RVS_EMP_2</name>
+	<name>RVS_EMP_HEAVY_1</name>
+	<name>RVS_BEAM_SHOTGUN_1</name>
+	<name>RVS_BEAM_SHOTGUN_2</name>
+	<name>RVS_BEAM_SHOTGUN_3</name>
+	
+	<!-- CE weapons -->
+	<name>RA_BEAM_AUTO</name>	
+
+	<!-- double because funny -->
+	<name>RVS_EMP_1</name>
+	<name>RVS_EMP_2</name>
+	<name>RVS_EMP_HEAVY_1</name>
+	<name>BA_LASER_ARTILLERY_2</name>
+</blueprintList>
 
 
 <!-- 
@@ -157,15 +206,15 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<maxSector>8</maxSector>
 	<systemList>
 		<cloaking power="1" max="2" room="4" start="false" /> 	<!-- May be swapped to Dronebay if I can get healing to work -->
-		<engines power="2" max="8" room="3" start="true" />		<!-- This... lets just see how this goes... -->
+		<engines power="2" max="3" room="3" start="true" />		<!-- Why did I set it to 8 at first?! -->
 		<pilot power="1" max="3" room="1" start="true" />
-		<shields power="2" max="4" room="2" start="true" />
+		<shields power="2" max="4" room="2" start="false" />
 		<weapons power="2" max="8" room="0" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="8" count="4" load="RVS_LIST_WEAPONS_AI" />
-	<droneList drones="8" count="4" load="RVS_LIST_DRONES_AI" />
+	<droneList drones="8" count="4" load="RVS_LIST_MV_DRONES_AI_RENEGADE" /> <!-- Temporary Drone list -->
 	<health amount="6" />
 	<maxPower amount="8" />
 	<crewCount amount="3" max="4" class="rvs_ai_hologram" /> 		<!-- Maybe change it to 5 max? -->
@@ -180,19 +229,81 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<maxSector>8</maxSector>
 	<systemList>
 		<drones power="2" max="10" room="4" start="true" />
-		<engines power="1" max="4" room="2" start="true" />
+		<engines power="1" max="3" room="2" start="true" />
 		<pilot power="2" max="3" room="1" start="true" />
 		<shields power="3" max="7" room="3" start="true" />
 		<weapons power="2" max="10" room="0" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
-	<droneSlots>4</droneSlots>
+	<droneSlots>3</droneSlots>
 	<weaponList missiles="8" count="4" load="RVS_LIST_MV_WEAPONS_AI_RENEGADE" />
-	<droneList drones="8" count="4" load="RVS_LIST_MV_DRONES_AI_RENEGADE" />
+	<droneList drones="7" count="3" load="RVS_LIST_MV_DRONES_AI_RENEGADE" />
 	<health amount="8" />
 	<maxPower amount="12" />
 	<crewCount amount="2" max="4" class="rvs_ai_hologram" />
 	<boardingAI>invasion</boardingAI>
-	<!--<aug name="RVS_SENTIENT_COMBAT_AI" />	Evil? who knows! EDIT: It was evil... -->
-    <cloakImage>rvs_ai_interceptor</cloakImage>
+	<aug name="RVS_ANTI_GRAVITY_ENGINE" />
+	<cloakImage>rvs_ai_interceptor</cloakImage>
+</shipBlueprint>
+
+<!-- AI ASSAULT has two artilleries -->
+<shipBlueprint name="RVS_AI_ASSAULT" layout="rvs_ai_assault" img="rvs_ai_assault">
+	<class>AI Assault</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<artillery power="1" max="3" room="15" start="true" weapon="LIST_ARTILLERY_GUARD" />
+		<artillery power="1" max="3" room="3" start="true" weapon="LIST_ARTILLERY_GUARD" />
+		<battery power="1" max="2" room="7" start="false" />
+		<cloaking power="1" max="1" room="7" start="false" />	<!-- limited to 1 due to artilleries -->
+		<doors power="1" max="3" room="2" start="false" />
+		<drones power="2" max="6" room="11" start="false" />
+		<engines power="2" max="3" room="4" start="true" />
+		<pilot power="1" max="3" room="8" start="true" />
+		<shields power="2" max="10" room="13" start="true" />
+		<weapons power="0" max="6" room="0" start="false" /> <!-- Assaults would normally have greater power, but with artillery it would be best to lower this a little -->
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="6" count="3" load="RVS_LIST_WEAPONS_AI" />	<!-- currently set to 3 weapons for teesting -->
+	<droneList drones="5" count="2" load="RVS_LIST_MV_DRONES_AI_RENEGADE" /> <!-- RVS_LIST_MV_DRONES_AI_RENEGADE -->
+	<health amount="11" />
+	<maxPower amount="7" />
+	<crewCount amount="3" max="8" class="rvs_ai_hologram" />	<!-- 8 AI max because squimsh-->
+	<boardingAI>invasion</boardingAI>
+	<aug name="RVS_ANTI_GRAVITY_ENGINE" />
+</shipBlueprint>
+
+<!-- AI Assault Multiverse Renegade (non boss) -->
+<shipBlueprint name="RVSR_AI_ASSAULT" layout="rvsr_ai_assault" img="rvsr_ai_assault">
+	<class>Multiverse Renegade</class>
+	<minSector>4</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<artillery power="1" max="3" room="6" start="true" weapon="LIST_ARTILLERY_GUARD" />
+		<artillery power="1" max="3" room="3" start="true" weapon="ARTILLERY_BOSS_1" />
+		<battery power="1" max="2" room="4" start="true" />
+		<clonebay power="2" max="2" room="14" start="false" />	<!-- has clonebay due to having biological crew -->
+		<doors power="2" max="3" room="7" start="false" />
+		<engines power="2" max="3" room="0" start="true" />
+		<oxygen power="1" max="2" room="10" start="true" />
+		<pilot power="2" max="3" room="8" start="true" />
+		<shields power="1" max="8" room="5" start="true" />
+		<teleporter power="2" max="3" room="1" start="false" />
+		<temporal power="1" max="2" room="1" start="true" />
+		<weapons power="2" max="8" room="11" start="true" />
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="6" count="3" load="RVS_LIST_MV_WEAPONS_EMP_SPICY" />
+	<droneList drones="6" count="4" load="RVS_LIST_DRONES_HEAVY" />	<!-- I am an idiot making a drone list for a renegade ship that doesn't even use drones -->
+	<health amount="11" />
+	<maxPower amount="8" />
+	<crewCount amount="2" max="3" class="rvs_ai_hologram" />
+	<crewCount amount="1" max="2" class="mantis" />
+	<crewCount amount="0" max="2" clsas="zoltan"/>
+	<!-- eventually Contempter? -->
+	<boardingAI>invasion</boardingAI>
+	<aug name="RVS_ANTI_GRAVITY_ENGINE" />
+	<aug name="ENERGY_SHIELD" />
 </shipBlueprint>
