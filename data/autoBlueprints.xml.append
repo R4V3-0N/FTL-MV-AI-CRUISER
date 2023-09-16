@@ -282,7 +282,7 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<systemList>
 		<artillery power="1" max="3" room="6" start="true" weapon="LIST_ARTILLERY_GUARD" />
 		<artillery power="1" max="3" room="3" start="true" weapon="ARTILLERY_BOSS_1" />
-		<battery power="1" max="2" room="4" start="true" />
+		<battery power="1" max="3" room="4" start="true" />
 		<clonebay power="2" max="2" room="14" start="false" />	<!-- has clonebay due to having biological crew -->
 		<doors power="2" max="3" room="7" start="false" />
 		<engines power="2" max="3" room="0" start="true" />

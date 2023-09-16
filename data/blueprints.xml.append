@@ -850,6 +850,137 @@
 	<weaponArt>ra_effector_chain</weaponArt>
 </weaponBlueprint>
 
+
+<weaponBlueprint name="RVS_PLASMA_1">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<title>Plasma Projector Mark I</title>
+	<tip>ce_tip_plasma</tip>
+	<short>Plasma I</short>
+	<desc>Fires a concentrated blast of plasma that deals no physical damage but has a good chance to ignite fires.</desc>
+	<tooltip>Fires plasma across a small, random area. High fire chance.</tooltip>
+	<radius>40</radius>
+	<damage>0</damage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>6</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>10</bp>
+	<speed>30</speed>
+	<rarity>2</rarity>
+	<explosion>rvs_explosion_fire</explosion>
+	<projectiles>
+		<projectile count="4" fake="false">rvs_plasma_shot</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>heavyLaserScatter1</sound>
+		<sound>heavyLaserScatter2</sound>
+		<sound>heavyLaserScatter3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>fireBomb</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_plasma_projector_1</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_PLASMA_2">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<title>Plasma Projector Mark II</title>
+	<tip>ce_tip_plasma</tip>
+	<short>Plasma II</short>
+	<desc>Fires multiple blasts of plasma across a random area with a chance to light fires in every room that is hit.</desc>
+	<tooltip>Fires plasma across a wide, random area. Very high fire chance.</tooltip>
+	<radius>65</radius>
+	<damage>0</damage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>9</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>20</cooldown>
+	<power>2</power>
+	<cost>50</cost>
+	<bp>10</bp>
+	<speed>30</speed>
+	<rarity>3</rarity>
+	<explosion>rvs_explosion_fire</explosion>
+	<projectiles>
+		<projectile count="9" fake="false">rvs_plasma_shot</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>heavyLaserScatter1</sound>
+		<sound>heavyLaserScatter2</sound>
+		<sound>heavyLaserScatter3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>fireBomb</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_plasma_projector_2</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_PLASMA_3">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<title>Plasma Projector Mark III</title>
+	<tip>ce_tip_plasma</tip>
+	<short>Plasma III</short>
+	<desc>Fires multiple blasts of plasma across a random area with a chance to light fires in every room that is hit.</desc>
+	<tooltip>Fires plasma across a wide, random area. Very high fire chance.</tooltip>
+	<radius>90</radius>
+	<damage>0</damage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>9</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>20</cooldown>
+	<power>3</power>
+	<cost>50</cost>
+	<bp>10</bp>
+	<speed>30</speed>
+	<rarity>3</rarity>
+	<explosion>rvs_explosion_fire</explosion>
+	<projectiles>
+		<projectile count="14" fake="false">rvs_plasma_shot</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>heavyLaserScatter1</sound>
+		<sound>heavyLaserScatter2</sound>
+		<sound>heavyLaserScatter3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>fireBomb</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_plasma_projector_3</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+
 <!--
 
 DRONES
