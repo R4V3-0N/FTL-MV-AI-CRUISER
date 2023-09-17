@@ -891,7 +891,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>rvs_plasma_projector_1</weaponArt> 
+	<weaponArt>ba_plasma_projector_1</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -908,15 +908,15 @@
 	<missiles>0</missiles>
 	<shots>1</shots>
 	<sp>0</sp>
-	<fireChance>9</fireChance>
+	<fireChance>8</fireChance>	<!-- was 9 in CE -->
 	<breachChance>0</breachChance>
-	<cooldown>20</cooldown>
+	<cooldown>18</cooldown>	<!-- was 20 in CE -->
 	<power>2</power>
 	<cost>50</cost>
 	<bp>10</bp>
 	<speed>30</speed>
 	<rarity>3</rarity>
-	<explosion>rvs_explosion_fire</explosion>
+	<explosion>ba_explosion_fire</explosion>
     <projectiles>
 		<projectile count="9" fake="false" blueprint="RVS_LIST_SHOT_PLASMA_PLUS">ra_plasma_shot</projectile>
 	</projectiles>
@@ -959,7 +959,7 @@
 	<bp>10</bp>
 	<speed>30</speed>
 	<rarity>3</rarity>
-	<explosion>rvs_explosion_fire</explosion>
+	<explosion>ba_explosion_fire</explosion>
     <projectiles>
 		<projectile count="15" fake="false" blueprint="RVS_LIST_SHOT_PLASMA_PLUS">ra_plasma_shot</projectile>
 	</projectiles>
