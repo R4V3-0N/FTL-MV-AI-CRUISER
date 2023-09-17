@@ -891,7 +891,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>ba_plasma_projector_1</weaponArt> 
+	<weaponArt>rvs_plasma_projector_1</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
