@@ -9,6 +9,11 @@
 
 <silence volume="0">explosions/ra_explosion_effector_silence.ogg</silence>
 
+<!-- ??? --> <!-- probably needs replacement -->
+<heavyLaserScatter1 volume="10">weapons/bp_laser_heavy_2.ogg</heavyLaserScatter1>
+<heavyLaserScatter2 volume="10">weapons/bp_laser_heavy_2b.ogg</heavyLaserScatter2>
+<heavyLaserScatter3 volume="10">weapons/bp_laser_heavy_2c.ogg</heavyLaserScatter3>
+
 <!-- edited by ChronoVortex, originally created by soundslikewillem https://freesound.org/people/soundslikewillem/sounds/190707/ -->
 <rvs_photon1 volume="2">weapons/rvs_photon1.ogg</rvs_photon1>
 <rvs_photon2 volume="2">weapons/rvs_photon2.ogg</rvs_photon2>

@@ -851,6 +851,7 @@
 </weaponBlueprint>
 
 
+
 <weaponBlueprint name="RVS_PLASMA_1">
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
@@ -864,7 +865,7 @@
 	<missiles>0</missiles>
 	<shots>1</shots>
 	<sp>0</sp>
-	<fireChance>6</fireChance>
+	<fireChance>7</fireChance>	<!-- was 6 in CE -->
 	<breachChance>0</breachChance>
 	<cooldown>16</cooldown>
 	<power>1</power>
@@ -873,8 +874,8 @@
 	<speed>30</speed>
 	<rarity>2</rarity>
 	<explosion>rvs_explosion_fire</explosion>
-	<projectiles>
-		<projectile count="4" fake="false">rvs_plasma_shot</projectile>
+    <projectiles>
+		<projectile count="4" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>heavyLaserScatter1</sound>
@@ -916,8 +917,8 @@
 	<speed>30</speed>
 	<rarity>3</rarity>
 	<explosion>rvs_explosion_fire</explosion>
-	<projectiles>
-		<projectile count="9" fake="false">rvs_plasma_shot</projectile>
+    <projectiles>
+		<projectile count="9" fake="false" blueprint="RVS_LIST_SHOT_PLASMA_PLUS">ra_plasma_shot</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>heavyLaserScatter1</sound>
@@ -959,8 +960,8 @@
 	<speed>30</speed>
 	<rarity>3</rarity>
 	<explosion>rvs_explosion_fire</explosion>
-	<projectiles>
-		<projectile count="14" fake="false">rvs_plasma_shot</projectile>
+    <projectiles>
+		<projectile count="15" fake="false" blueprint="RVS_LIST_SHOT_PLASMA_PLUS">ra_plasma_shot</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>heavyLaserScatter1</sound>
@@ -981,6 +982,166 @@
 </weaponBlueprint>
 
 
+<weaponBlueprint name="RVS_SHOT_PLASMA_NORMAL">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<title>Plasma Projector Mark I</title>
+	<tip>ce_tip_plasma</tip>
+	<short>Plasma I</short>
+	<desc>YOU SHOULDN'T SEE THIS.</desc>
+	<tooltip>YOU SHOULDN'T SEE THIS.</tooltip>
+	<radius>40</radius>
+	<damage>0</damage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>7</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>10</bp>
+	<speed>30</speed>
+	<rarity>0</rarity>
+	<explosion>rvs_explosion_fire</explosion>
+	<launchSounds>
+		<sound>heavyLaserScatter1</sound>
+		<sound>heavyLaserScatter2</sound>
+		<sound>heavyLaserScatter3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>fireBomb</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_plasma_projector_1</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="RVS_SHOT_PLASMA_CRIT">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<title>YOU SHOULDN'T SEE THIS</title>
+	<tip>ce_tip_plasma</tip>
+	<short>Plasma I</short>
+	<desc>YOU SHOULDN'T SEE THIS.</desc>
+	<tooltip>YOU SHOULDN'T SEE THIS.</tooltip>
+	<radius>40</radius>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>7</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>10</bp>
+	<speed>30</speed>
+	<rarity>0</rarity>
+	<explosion>rvs_explosion_fire</explosion>
+	<launchSounds>
+		<sound>heavyLaserScatter1</sound>
+		<sound>heavyLaserScatter2</sound>
+		<sound>heavyLaserScatter3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>fireBomb</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_plasma_projector_1</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="RVS_SHOT_PLASMA_PLUS_NORMAL">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<title>Plasma Projector Mark I</title>
+	<tip>ce_tip_plasma</tip>
+	<short>Plasma I</short>
+	<desc>YOU SHOULDN'T SEE THIS.</desc>
+	<tooltip>YOU SHOULDN'T SEE THIS.</tooltip>
+	<radius>40</radius>
+	<damage>0</damage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>9</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>10</bp>
+	<speed>30</speed>
+	<rarity>0</rarity>
+	<explosion>rvs_explosion_fire</explosion>
+	<launchSounds>
+		<sound>heavyLaserScatter1</sound>
+		<sound>heavyLaserScatter2</sound>
+		<sound>heavyLaserScatter3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>fireBomb</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_plasma_projector_1</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="RVS_SHOT_PLASMA_PLUS_CRIT">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<title>YOU SHOULDN'T SEE THIS</title>
+	<tip>ce_tip_plasma</tip>
+	<short>Plasma I</short>
+	<desc>YOU SHOULDN'T SEE THIS.</desc>
+	<tooltip>YOU SHOULDN'T SEE THIS.</tooltip>
+	<radius>40</radius>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>10</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>10</bp>
+	<speed>30</speed>
+	<rarity>0</rarity>
+	<explosion>rvs_explosion_fire</explosion>
+	<launchSounds>
+		<sound>heavyLaserScatter1</sound>
+		<sound>heavyLaserScatter2</sound>
+		<sound>heavyLaserScatter3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>fireBomb</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_plasma_projector_1</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
 <!--
 
 DRONES
