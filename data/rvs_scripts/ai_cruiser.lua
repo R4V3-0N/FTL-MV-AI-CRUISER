@@ -684,3 +684,32 @@ function(ShipManager, dodge)
     end
     return Defines.Chain.CONTINUE, dodge
 end)
+
+local plasmaProjectiles = MakeSet {
+    "RVS_SHOT_PLASMA_NORMAL",
+    "RVS_SHOT_PLASMA_CRIT",
+}
+
+script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA, 
+function(ShipManager, Projectile, Location, Damage, forceHit, shipFriendlyFire)
+    local isPlasma = plasmaProjectiles[Projectile and Projectile.extend.name] --Indexing with nil (no projectile) will return nil, otherwise returns Projectile name index
+    if isPlasma then
+        local roomId = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true)
+        if roomId >= 0 then
+            local roomShape = ShipManager.ship.vRoomList[roomId].rect
+            local w = roomShape.w / 35
+            local h = roomShape.h / 35
+        
+            local tileCount = w * h
+            local fireCount = ShipManager:GetFireCount(roomId)
+
+            local firePercent = (fireCount / tileCount) * 100
+            local hullDamageChance = firePercent / 2
+
+            if math.random(100) <= hullDamageChance then
+                Damage.iDamage = Damage.iDamage + 1
+            end
+        end
+    end
+    return Defines.CHAIN_CONTINUE, forceHit, shipFriendlyFire
+end)
