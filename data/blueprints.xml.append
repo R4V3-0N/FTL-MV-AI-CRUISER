@@ -903,14 +903,14 @@
 	<short>Plasma II</short>
 	<desc>Fires multiple blasts of plasma across a random area with a chance to light fires in every room that is hit.</desc>
 	<tooltip>Fires plasma across a wide, random area. Very high fire chance.</tooltip>
-	<radius>65</radius>
+	<radius>70</radius>	<!-- was 65 in CE -->
 	<damage>0</damage>
 	<missiles>0</missiles>
 	<shots>1</shots>
 	<sp>0</sp>
 	<fireChance>8</fireChance>	<!-- was 9 in CE -->
 	<breachChance>0</breachChance>
-	<cooldown>18</cooldown>	<!-- was 20 in CE -->
+	<cooldown>20</cooldown>	<!-- put it back to 20 like it was in CE, I had set it to 18 but I felt it was too strong. -->
 	<power>2</power>
 	<cost>50</cost>
 	<bp>10</bp>
@@ -918,7 +918,7 @@
 	<rarity>3</rarity>
 	<explosion>ba_explosion_fire</explosion>
     <projectiles>
-		<projectile count="9" fake="false" blueprint="RVS_LIST_SHOT_PLASMA_PLUS">ra_plasma_shot</projectile>
+		<projectile count="9" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile> <!-- was RVS_LIST_SHOW_PLUS_PLASMA -->
 	</projectiles>
 	<launchSounds>
 		<sound>heavyLaserScatter1</sound>
@@ -946,14 +946,14 @@
 	<short>Plasma III</short>
 	<desc>Fires multiple blasts of plasma across a random area with a chance to light fires in every room that is hit.</desc>
 	<tooltip>Fires plasma across a wide, random area. Very high fire chance.</tooltip>
-	<radius>90</radius>
+	<radius>95</radius>	<!-- was 90 -->
 	<damage>0</damage>
 	<missiles>0</missiles>
 	<shots>1</shots>
 	<sp>0</sp>
 	<fireChance>9</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>20</cooldown>
+	<cooldown>24</cooldown>
 	<power>3</power>
 	<cost>50</cost>
 	<bp>10</bp>

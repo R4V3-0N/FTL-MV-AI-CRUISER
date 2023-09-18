@@ -200,11 +200,14 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 ////////////////////////////////////////////////////////////////////////////////////
 -->
 
-<blueprintList name="RVS_LIST_SHOT_PLASMA">
+<blueprintList name="RVS_LIST_SHOT_PLASMA">	<!-- was 50% crit chance, now 25% -->
+	<name>RVS_SHOT_PLASMA_NORMAL</name>
+	<name>RVS_SHOT_PLASMA_NORMAL</name>
 	<name>RVS_SHOT_PLASMA_NORMAL</name>
 	<name>RVS_SHOT_PLASMA_CRIT</name>
 </blueprintList>
-<blueprintList name="RVS_LIST_SHOT_PLASMA_PLUS">
+<blueprintList name="RVS_LIST_SHOT_PLASMA_PLUS">	<!-- was 50% crit chance, now 33% -->
+	<name>RVS_SHOT_PLASMA_PLUS_NORMAL</name>
 	<name>RVS_SHOT_PLASMA_PLUS_NORMAL</name>
 	<name>RVS_SHOT_PLASMA_PLUS_CRIT</name>
 </blueprintList>
