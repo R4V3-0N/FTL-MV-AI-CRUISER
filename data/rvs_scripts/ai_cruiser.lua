@@ -688,13 +688,12 @@ end)
 local plasmaProjectiles = MakeSet {
     "RVS_SHOT_PLASMA_NORMAL",
     "RVS_SHOT_PLASMA_CRIT",
-    "RVS_SHOT_PLASMA_PLUS_NORMAL",
-    "RVS_SHOT_PLASMA_PLUS_CRIT",
 }
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA, 
 function(ShipManager, Projectile, Location, Damage, forceHit, shipFriendlyFire)
     local isPlasma = plasmaProjectiles[Projectile and Projectile.extend.name] --Indexing with nil (no projectile) will return nil, otherwise returns Projectile name index
+    print(isPlasma, Projectile and Projectile.extend.name)
     if isPlasma then
         local roomId = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true)
         if roomId >= 0 then
