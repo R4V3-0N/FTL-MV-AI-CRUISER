@@ -94,6 +94,18 @@
 	<name>RA_DRONE_HEAVY_2</name>
 </blueprintList>
 
+
+<!--
+////////////////////////////////////////////////////////////////////////////////////
+			MULTIVERSE RENEGADE LISTS
+////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<blueprintList name="RVS_LIST_SHIPS_AI">
+	<name>RVS_AI_INTERCEPTOR</name>
+	<name>RVS_AI_ASSAULT</name>
+</blueprintList>
+
 <!--
 ////////////////////////////////////////////////////////////////////////////////////
 			MULTIVERSE RENEGADE LISTS
@@ -199,6 +211,13 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 			WEAPON CRITS
 ////////////////////////////////////////////////////////////////////////////////////
 -->
+
+<blueprintList name="RVS_LIST_SHOT_HS_PLASMA">	<!-- For HS Plasma Thrower -->
+	<name>RVS_SHOT_PLASMA_HS_NORMAL</name>
+	<name>RVS_SHOT_PLASMA_HS_NORMAL</name>
+	<name>RVS_SHOT_PLASMA_HS_NORMAL</name>
+	<name>RVS_SHOT_PLASMA_HS_CRIT</name>
+</blueprintList>
 
 <blueprintList name="RVS_LIST_SHOT_PLASMA">	<!-- was 50% crit chance, now 25% -->
 	<name>RVS_SHOT_PLASMA_NORMAL</name>

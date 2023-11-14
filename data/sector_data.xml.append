@@ -1,5 +1,6 @@
 <FTL>
-<mod:findName type="sectorDescription" name="SECRET_ANCIENT" panic="true">
+
+	<mod:findName type="sectorDescription" name="SECRET_ANCIENT" panic="true">
     <mod:findLike type="rarityList">
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="0"/>

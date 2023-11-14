@@ -9,10 +9,9 @@
 
 <silence volume="0">explosions/ra_explosion_effector_silence.ogg</silence>
 
-<!-- ??? --> <!-- probably needs replacement -->
-<heavyLaserScatter1 volume="10">weapons/bp_laser_heavy_2.ogg</heavyLaserScatter1>
-<heavyLaserScatter2 volume="10">weapons/bp_laser_heavy_2b.ogg</heavyLaserScatter2>
-<heavyLaserScatter3 volume="10">weapons/bp_laser_heavy_2c.ogg</heavyLaserScatter3>
+<rvs_heavyLaserScatter1 volume="10">weapons/bp_laser_heavy_2.ogg</heavyLaserScatter1>
+<rvs_heavyLaserScatter2 volume="10">weapons/bp_laser_heavy_2b.ogg</heavyLaserScatter2>
+<rvs_heavyLaserScatter3 volume="10">weapons/bp_laser_heavy_2c.ogg</heavyLaserScatter3>
 
 <!-- edited by ChronoVortex, originally created by soundslikewillem https://freesound.org/people/soundslikewillem/sounds/190707/ -->
 <rvs_photon1 volume="2">weapons/rvs_photon1.ogg</rvs_photon1>
@@ -30,7 +29,7 @@
 <rvs_hit_shield_scatter_2 volume="10">weapons/rvs_hit_shield_scatter_2.ogg</rvs_hit_shield_scatter_2>
 <rvs_hit_shield_scatter_3 volume="10">weapons/rvs_hit_shield_scatter_3.ogg</rvs_hit_shield_scatter_3>
 
-<!-- Cut FTL SFX -->
+<!-- Cut FTL SFX reintroduced -->
 <rvs_heavyLaserScatter1 volume="10">weapons/rvs_laser_heavy_2.ogg</rvs_heavyLaserScatter1>
 <rvs_heavyLaserScatter2 volume="10">weapons/rvs_laser_heavy_2b.ogg</rvs_heavyLaserScatter2>
 <rvs_heavyLaserScatter3 volume="10">weapons/rvs_laser_heavy_2c.ogg</rvs_heavyLaserScatter3>
@@ -41,9 +40,25 @@
 <rvs_effector_shoot3 volume="3">weapons/rvs_effector_shoot3.ogg</rvs_effector_shoot3>
 <rvs_effector_shoot4 volume="3">weapons/rvs_effector_shoot4.ogg</rvs_effector_shoot4>
 
+<!-- ChronoVortex -->
 <aiDeath volume="3">aliens/rvs_ai_death.ogg</aiDeath>
 
+<!-- ChronoVortex -->
 <beamShock1 volume="3">weapons/cv_shock_1.ogg</beamShock1>
 <beamShock2 volume="3">weapons/cv_shock_2.ogg</beamShock2>
 <beamShock3 volume="3">weapons/cv_shock_3.ogg</beamShock3>
 <beamShock4 volume="3">weapons/cv_shock_4.ogg</beamShock4>
+
+<!-- MUSIC -->
+<music>
+	<track> <!--composed by Altzeus-->
+		<name>avatar</name>
+		<explore>az_MUS_AvatarEXPLORE.ogg</explore>
+		<combat>az_MUS_AvatarBATTLE.ogg</combat>
+	</track>
+    <track> <!--from CE-->
+        <name>sonar</name>
+        <explore>ce_MUS_SonarEXPLORE.ogg</explore>
+        <combat>ce_MUS_SonarBATTLE.ogg</combat>
+    </track>  
+</music>

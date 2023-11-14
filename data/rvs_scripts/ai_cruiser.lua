@@ -688,8 +688,11 @@ end)
 local plasmaProjectiles = MakeSet {
     "RVS_SHOT_PLASMA_NORMAL",
     "RVS_SHOT_PLASMA_CRIT",
+    "RVS_DRONE_PLASMA_THROWER",
     "RVS_SHOT_PLASMA_PLUS_NORMAL",
     "RVS_SHOT_PLASMA_PLUS_CRIT",
+    "RVS_SHOT_PLASMA_HS_NORMAL",
+    "RVS_SHOT_PLASMA_HS_CRIT"
 }
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA, 
@@ -706,7 +709,7 @@ function(ShipManager, Projectile, Location, Damage, forceHit, shipFriendlyFire)
             local fireCount = ShipManager:GetFireCount(roomId)
 
             local firePercent = (fireCount / tileCount) * 100
-            local hullDamageChance = firePercent / 2
+            local hullDamageChance = firePercent / 3    --this was 2, I changed this to 3, hopefully that isn't bad? this does mean lower chance yes yes?
 
             if math.random(100) <= hullDamageChance then
                 Damage.iDamage = Damage.iDamage + 1
