@@ -76,7 +76,7 @@
 	<mod-append:customShip name="PLAYER_SHIP_RVSP_AI_2">
 		<hiddenAug>SHIP_AUTO</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>	<!-- change this to a maker augment -->
+		<hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>
 		<hiddenAug>RVS_LOCKED_MICROTELEPORTER</hiddenAug>
         <rooms>
             <room id="18">

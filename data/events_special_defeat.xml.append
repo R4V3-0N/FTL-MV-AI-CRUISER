@@ -1,0 +1,63 @@
+
+
+<event name="RVS_DESTROYED_AI">
+    <text load="RVS_TEXT_DESTROYED_AI"/>
+    <autoReward level="MED">standard</autoReward>
+</event>
+<textList name="RVS_TEXT_DESTROYED_AI">
+    <text>The lights of the strange vessel flicker before falling dark as their hull cracks open violently in one final explosion.</text>
+	<text>Exploding in a bright light the mysterious vessel is now no more beyond a scattering of debris and scrap at this beacon.</text>
+	<text>One final barrage marks their end. Their hull warping and crackling as its reactor detonates.</text>
+    <text>You wonder where these ships come from. The tech you collect from the ships remains are advanced and alien to you. Which you hope would be worth a fancy premium.</text>
+    <text>You wonder if the ship itself is sentient or is it the host for these intelligent constructs. You doubt it is truly that intelligent, seeing as its pieces are scattered throughout this system now.</text>
+    <text>If you weren't able to tell which side was the front or back of this ship you most certainly can't now, as its structure is shattered under your final blow. Scattering valuable scrap about.</text>
+    <text>There are not sure what happens to these constructs that once crewed this ship. Their hardlight forms dematerialise but beyond that it is a mystery. Do they die or did they ever truly live?</text>
+</textList>
+
+<event name="RVS_ESCAPE_AI">
+	<text load="RVS_TEXT_ESCAPE_AI"/>
+</event>
+<textList name="RVS_TEXT_ESCAPE_AI">
+	<text>"Organics like you is why we took refuge here. Disengage or perish" they appear to be trying to make an escape!</text>
+	<text>The rogue vessel appears to be trying to escape! Though their digital minds are constantly backed up for mental evac they are still rather partial to not dying.</text>
+	<text>You detect high energy signatures in the rogue's engines. It must be trying to escape!</text>
+	<text>The space darkens around their engines as they are preparing to perform an FTL jump. They are trying to escape!</text>
+</textList>
+
+<eventList name="RVS_GOTAWAY_AI">
+	<event load="RVS_GOTAWAY_AI_GENERIC"/>
+	<event load="RVS_GOTAWAY_AI_GENERIC"/>
+	
+	<event load="RVS_GOTAWAY_AI_REMAINS"/>
+</eventList>
+<event name="RVS_GOTAWAY_AI_GENERIC">
+	<text load="RVS_TEXT_GOTAWAY_AI"/>
+</event>
+<textList name="RVS_TEXT_GOTAWAY_AI">
+	<text>The rogues jumps away, along with garbled noise that is most likely laughter playing over your intercom. What jerks.</text>
+	<text>A final volley would have signed their destruction if they hadn't jumped away.</text>
+    <text>You have no idea what these ships are packing but it is clear their engine and FTL drive technology is unexpectedly advanced as there was nothing you could've done to stop their escape.</text>
+    <text>Statistical analysis: 98.75% chance of evac success. Structural integrity: Sufficient. Analysing combat recording: Analysis 15%... 27%... 62%... 95%... 100%. Analysis complete: You suck c:" You do not know what to make of their final transmission before their ship disappears. You are tempted to scrub that one from the audio-logs.</text>
+</textList>
+<event name="RVS_GOTAWAY_AI_REMAINS">
+	<text>One bright flash and the ship jumped away. Leaving behind some small amounts of advanced alloy debris for you to collect.</text>
+	<autoReward level="LOW">scrap_only</autoReward>
+</event>
+
+<eventList name="RVS_SURRENDER_AI">
+	<event load="RVS_SURRENDER_AI_GENERIC"/>
+</eventList>
+<event name="RVS_SURRENDER_AI_GENERIC">
+	<text>"Organics! Cease your attack. Consider this an incentive to leave us alone".</text>
+	<choice>
+		<text>Accept the surrender.</text>
+		<event name="SURRENDER_ACCEPT">
+			<ship hostile="false"/>
+			<autoReward level="RANDOM">stuff</autoReward>
+		</event>
+	</choice>
+	<choice>
+		<text>Refuse their surrender.</text>
+		<event/>
+	</choice>
+</event>

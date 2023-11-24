@@ -357,7 +357,11 @@
 	<desc length="4" x="0" y="0"/>
 	<time>0.3</time>
 </anim>
-<!-- Artillery -->
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\
+		Artillery 
+\\\\\\\\\\\\\\\\\\\\
+-->
 
 <!-- effector barrage artillery for the AI cruisers -->
 <animSheet name="rvs_artillery_ai" w="1098" h="301" fw="366" fh="301">weapons/rvs_artillery_ai_strip3.png</animSheet>
@@ -371,6 +375,44 @@
 	<chargeImage>weapons/rvs_artillery_ai_glow.png</chargeImage>
 </weaponAnim>
 
+<animSheet name="rvs_artillery_effector" w="264" h="65" fw="33" fh="65">artillery/rvs_artillery_effector_strip8.png</animSheet>
+<weaponAnim name="rvs_artillery_effector">
+	<sheet>rvs_artillery_effector</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="16" y="20"/>
+	<mountPoint x="14" y="65"/>
+	<chargeImage>artillery/rvs_artillery_effector_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="rvs_artillery_energy_stun" w="264" h="65" fw="33" fh="65">artillery/rvs_artillery_energy_stun_strip8.png</animSheet>
+<weaponAnim name="rvs_artillery_energy_stun">
+	<sheet>rvs_artillery_energy_stun</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="16" y="20"/>
+	<mountPoint x="14" y="65"/>
+	<chargeImage>artillery/rvs_artillery_energy_stun_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="rvs_artillery_beam_ion_bust" w="261" h="69" fw="29" fh="69">artillery/rvs_artillery_beam_ion_bust_strip9.png</animSheet>
+<weaponAnim name="rvs_artillery_beam_ion_bust">
+	<sheet>rvs_artillery_beam_ion_bust</sheet>
+	<desc length="9" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="15" y="15"/>
+	<mountPoint x="12" y="69"/>
+	<chargeImage>artillery/rvs_artillery_beam_ion_bust_glow.png</chargeImage>
+</weaponAnim>
+
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\
+		Explosions
+\\\\\\\\\\\\\\\\\\\\
+-->
 <!-- Rebalanced Arsenal Explosions -->
 <animSheet name="ra_effector_hacking" w="2000" h="100" fw="100" fh="100">effects_rebalanced_arsenal/ra_effector_hacking_strip20.png</animSheet>
 <animSheet name="ra_effector_residual_old" w="1200" h="100" fw="100" fh="100">effects_rebalanced_arsenal/ra_effector_residual_strip12.png</animSheet>

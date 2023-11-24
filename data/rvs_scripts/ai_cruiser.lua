@@ -229,6 +229,7 @@ systemTargetWeapons.RA_EFFECTOR_1 = sysWeights
 systemTargetWeapons.RA_EFFECTOR_2 = sysWeights
 systemTargetWeapons.RA_EFFECTOR_HEAVY = sysWeights
 systemTargetWeapons.RA_EFFECTOR_CHAIN = sysWeights
+systemTargetWeapons.RVS_ARTILLERY_EFFECTOR = sysWeights
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local thisShip = Hyperspace.ships(weapon.iShipId)
@@ -285,7 +286,8 @@ end)
 --Funny beam
 local ionBustBeams = {
     RVS_BEAM_ION_BUST_1 = 2, --WEAPON_NAME will de-ionize rooms, and do 2 times as much damage to ionized rooms
-    RVS_BEAM_ION_BUST_2 = 2
+    RVS_BEAM_ION_BUST_2 = 2,
+    RVS_ARTILLERY_BEAM_ION_BUST = 2,
 }
 local RandomList = {
     New = function(self, table)
@@ -448,7 +450,7 @@ function(Projectile, Drone)
         local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
         --Spawn beam from drone to target
         spaceManager:CreateBeam(
-            Hyperspace.Blueprints:GetWeaponBlueprint("RVS_BEAM_DEFENSE_1"), 
+            Hyperspace.Blueprints:GetWeaponBlueprint("RVS_BEAM_DEFENSE_SHOT"), 
             Drone.currentLocation, 
             Projectile.currentSpace,
             1 - Projectile.ownerId,
@@ -629,12 +631,23 @@ local function MakeSet(table)
     return set
 end
 
-local defensiveSystemIds = MakeSet {0, 1, 6, 10}
-local offensiveSystemIds = MakeSet {3, 4, 9, 11, 14, 15}
+local scatterGun = {}
+--for every gun do the following, the stats of the projectiles fired will be modified with a chance% chance by sys sysDamgae and pers persDamage
+scatterGun.RVS_LASER_BURST_SCATTER_1 = { damage={iSystemDamage = 1, iPersDamage = 1}, chance=25}
+scatterGun.RVS_LASER_BURST_SCATTER_2 = { damage={iSystemDamage = 1, iPersDamage = 1}, chance=25}
+scatterGun.RVS_SHOTGUN_SCATTER = { damage={iSystemDamage = 1, iPersDamage = 1}, chance=25}
+scatterGun.RVS_DRONE_LASER_SCATTER = { damage={iSystemDamage = 1, iPersDamage = 1}, chance=25}
 
-local function PopRandom(_table)
-    return table.remove(_table, math.random(#_table))
-end
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE,
+function(projectile, weapon)
+  local gun
+  pcall(function()gun = scatterGun[weapon.blueprint.name] end)
+  if gun and math.random(0,99)< gun.chance then
+    for k, v in pairs(gun.damage) do
+      projectile.damage[k] = projectile.damage[k] + v
+    end
+  end
+end)
 
 --Rules:
 --Never target the same room twice, unless the ship has less than 3 rooms

@@ -479,103 +479,6 @@
 
 
 <!-- REBALANCED ARSENAL -->
-<weaponBlueprint name="RVS_PROJECTILE_LASER_SCATTER">
-	<type>LASER</type>
-	<tip>rvs_tip_laser_scatter</tip>
-	<title>PROJECTILE LASER SCATTER</title>
-	<short>ERROR</short>
-	<desc>Basic laser scatter projectile</desc>
-	<tooltip>Scatter laser shot standard shot</tooltip>
-	<damage>1</damage>
-	<sysDamage>-1</sysDamage>
-	<persDamage>-1</persDamage>
-	<shots>2</shots>
-	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>2</breachChance>
-	<rarity>0</rarity>
-	<image>ra_laser_burst_scatter_shot</image>
-	<explosion>invisible</explosion>
-    <particleEmitters>
-        <particleEmitter name="ra_emitter_explosion_scatter" />
-        <particleEmitter name="ra_emitter_explosion_scatter">
-            <type>ra_part_explosion_tiny2</type>
-        </particleEmitter>
-        <particleEmitter name="ra_emitter_explosion_scatter">
-            <type>ra_part_explosion_tiny3</type>
-        </particleEmitter>
-        <particleEmitter name="ra_emitter_explosion_scatter">
-            <type>ra_part_explosion_tiny4</type>
-        </particleEmitter>
-    </particleEmitters>
-	<launchSounds>
-		<sound>rvs_heavyLaserScatter1</sound>
-		<sound>rvs_heavyLaserScatter2</sound>
-		<sound>rvs_heavyLaserScatter3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>rvs_hit_hull_scatter_1</sound>
-		<sound>rvs_hit_hull_scatter_2</sound>
-		<sound>rvs_hit_hull_scatter_3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>rvs_hit_shield_scatter_1</sound>
-		<sound>rvs_hit_shield_scatter_2</sound>
-		<sound>rvs_hit_shield_scatter_3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>rvs_laser_burst_scatter_1</weaponArt> 
-</weaponBlueprint>
-<weaponBlueprint name="RVS_PROJECTILE_LASER_SCATTER_CRIT">
-	<type>LASER</type>
-	<tip>rvs_tip_laser_scatter</tip>
-	<title>PROJECTILE LASER SCATTER CRIT</title>
-	<short>ERROR</short>
-	<desc>Basic laser scatter projectile critical hit</desc>
-	<tooltip>Scatter laser shot critical shot! deals regular damage</tooltip>
-	<damage>1</damage>
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>2</breachChance>
-	<rarity>0</rarity>
-	<image>ra_laser_burst_scatter_shot</image>
-	<explosion>invisible</explosion>
-    <particleEmitters>
-        <particleEmitter name="ra_emitter_explosion_scatter" />
-        <particleEmitter name="ra_emitter_explosion_scatter">
-            <type>ra_part_explosion_tiny2</type>
-        </particleEmitter>
-        <particleEmitter name="ra_emitter_explosion_scatter">
-            <type>ra_part_explosion_tiny3</type>
-        </particleEmitter>
-        <particleEmitter name="ra_emitter_explosion_scatter">
-            <type>ra_part_explosion_tiny4</type>
-        </particleEmitter>
-    </particleEmitters>
-	<launchSounds>
-		<sound>rvs_heavyLaserScatter1</sound>
-		<sound>rvs_heavyLaserScatter2</sound>
-		<sound>rvs_heavyLaserScatter3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>rvs_hit_hull_scatter_1</sound>
-		<sound>rvs_hit_hull_scatter_2</sound>
-		<sound>rvs_hit_hull_scatter_3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>rvs_hit_shield_scatter_1</sound>
-		<sound>rvs_hit_shield_scatter_2</sound>
-		<sound>rvs_hit_shield_scatter_3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>rvs_laser_burst_scatter_1</weaponArt> 
-</weaponBlueprint>
-
 <weaponBlueprint name="RVS_LASER_BURST_SCATTER_1">
 	<type>LASER</type>
 	<tip>rvs_tip_laser_scatter</tip>
@@ -743,129 +646,6 @@
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>rvs_shotgun_scatter</weaponArt> 
-	<iconImage>flak</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="RVS_PLASMA_THROWER_1">
-	<type>BURST</type>
-	<flavorType>Physical Projectile Blast</flavorType>
-	<title>Plasma Thrower</title>
-	<tip>ce_tip_plasma</tip>
-	<short>Plasma Thrower</short>
-	<desc>Out of this world tech. Fires a burst of blasts that sets ships aflame. Capable of dealing hull damage when striking rooms already on fire.</desc>
-	<tooltip>Fires plasma across a small, random area. High fire chance.</tooltip>
-	<radius>40</radius>
-	<damage>0</damage>
-	<missiles>0</missiles>
-	<shots>6</shots>
-	<sp>0</sp>
-	<fireChance>4</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>15</cooldown>
-	<power>2</power>
-	<cost>40</cost>
-	<bp>10</bp>
-	<speed>30</speed>
-	<rarity>2</rarity>
-	<explosion>ra_explosion_fire</explosion>
-    <projectiles>
-		<projectile count="1" fake="false" blueprint="RVS_LIST_SHOT_HS_PLASMA">rvs_hs_plasma_shot</projectile>
-	</projectiles>
-	<launchSounds>
-		<sound>rvs_heavyLaserScatter1</sound>
-		<sound>rvs_heavyLaserScatter2</sound>
-		<sound>rvs_heavyLaserScatter3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>fireBomb</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>fireBomb</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>rvs_hs_plasma_thrower_1</weaponArt>
-	<iconImage>flak</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="RVS_SHOT_PLASMA_HS_NORMAL">
-	<type>BURST</type>
-	<flavorType>Physical Projectile Blast</flavorType>
-	<title>Plasma Projector Mark I</title>
-	<tip>ce_tip_plasma</tip>
-	<short>Plasma I</short>
-	<desc>YOU SHOULDN'T SEE THIS.</desc>
-	<tooltip>YOU SHOULDN'T SEE THIS.</tooltip>
-	<radius>40</radius>
-	<damage>0</damage>
-	<missiles>0</missiles>
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>4</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>16</cooldown>
-	<power>1</power>
-	<cost>40</cost>
-	<bp>10</bp>
-	<speed>30</speed>
-	<rarity>0</rarity>
-	<explosion>ra_explosion_fire</explosion>
-	<launchSounds>
-		<sound>rvs_heavyLaserScatter1</sound>
-		<sound>rvs_heavyLaserScatter2</sound>
-		<sound>rvs_heavyLaserScatter3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>fireBomb</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>fireBomb</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>rvs_plasma_projector_1</weaponArt> 
-	<iconImage>flak</iconImage>
-</weaponBlueprint>
-<weaponBlueprint name="RVS_SHOT_PLASMA_HS_CRIT">
-	<type>BURST</type>
-	<flavorType>Physical Projectile Blast</flavorType>
-	<title>YOU SHOULDN'T SEE THIS</title>
-	<tip>ce_tip_plasma</tip>
-	<short>Plasma I</short>
-	<desc>YOU SHOULDN'T SEE THIS.</desc>
-	<tooltip>YOU SHOULDN'T SEE THIS.</tooltip>
-	<radius>40</radius>
-	<damage>0</damage>
-	<sysDamage>1</sysDamage>
-	<missiles>0</missiles>
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>4</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>16</cooldown>
-	<power>1</power>
-	<cost>40</cost>
-	<bp>10</bp>
-	<speed>30</speed>
-	<rarity>0</rarity>
-	<explosion>ra_explosion_fire</explosion>
-	<launchSounds>
-		<sound>rvs_heavyLaserScatter1</sound>
-		<sound>rvs_heavyLaserScatter2</sound>
-		<sound>rvs_heavyLaserScatter3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>fireBomb</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>fireBomb</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>rvs_plasma_projector_1</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -1247,7 +1027,7 @@
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>Plasma Projector Mark I</title>
-	<tip>ce_tip_plasma</tip>
+	<tip>rvs_tip_plasma</tip>
 	<short>Plasma I</short>
 	<desc>Fires a concentrated blast of plasma that deals no physical damage but has a good chance to ignite fires.</desc>
 	<tooltip>Fires plasma across a small, random area. High fire chance.</tooltip>
@@ -1269,9 +1049,9 @@
 		<projectile count="4" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>
 	</projectiles>
 	<launchSounds>
-		<sound>heavyLaserScatter1</sound>
-		<sound>heavyLaserScatter2</sound>
-		<sound>heavyLaserScatter3</sound>
+		<sound>rvs_heavyLaserScatter1</sound>
+		<sound>rvs_heavyLaserScatter2</sound>
+		<sound>rvs_heavyLaserScatter3</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>fireBomb</sound>
@@ -1290,7 +1070,7 @@
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>Plasma Projector Mark II</title>
-	<tip>ce_tip_plasma</tip>
+	<tip>rvs_tip_plasma</tip>
 	<short>Plasma II</short>
 	<desc>Fires multiple blasts of plasma across a random area with a chance to light fires in every room that is hit.</desc>
 	<tooltip>Fires plasma across a wide, random area. Very high fire chance.</tooltip>
@@ -1307,14 +1087,14 @@
 	<bp>10</bp>
 	<speed>30</speed>
 	<rarity>3</rarity>
-	<explosion>ba_explosion_fire</explosion>
+	<explosion>rvs_explosion_fire</explosion>
     <projectiles>
 		<projectile count="9" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile> <!-- was RVS_LIST_SHOW_PLUS_PLASMA -->
 	</projectiles>
 	<launchSounds>
-		<sound>heavyLaserScatter1</sound>
-		<sound>heavyLaserScatter2</sound>
-		<sound>heavyLaserScatter3</sound>
+		<sound>rvs_heavyLaserScatter1</sound>
+		<sound>rvs_heavyLaserScatter2</sound>
+		<sound>rvs_heavyLaserScatter3</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>fireBomb</sound>
@@ -1350,14 +1130,14 @@
 	<bp>10</bp>
 	<speed>30</speed>
 	<rarity>3</rarity>
-	<explosion>ba_explosion_fire</explosion>
+	<explosion>rvs_explosion_fire</explosion>
     <projectiles>
 		<projectile count="15" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>
 	</projectiles>
 	<launchSounds>
-		<sound>heavyLaserScatter1</sound>
-		<sound>heavyLaserScatter2</sound>
-		<sound>heavyLaserScatter3</sound>
+		<sound>rvs_heavyLaserScatter1</sound>
+		<sound>rvs_heavyLaserScatter2</sound>
+		<sound>rvs_heavyLaserScatter3</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>fireBomb</sound>
@@ -1377,7 +1157,7 @@
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>Plasma Projector Mark I</title>
-	<tip>ce_tip_plasma</tip>
+	<tip>rvs_tip_plasma</tip>
 	<short>Plasma I</short>
 	<desc>YOU SHOULDN'T SEE THIS.</desc>
 	<tooltip>YOU SHOULDN'T SEE THIS.</tooltip>
@@ -1396,9 +1176,9 @@
 	<rarity>0</rarity>
 	<explosion>ra_explosion_fire</explosion>
 	<launchSounds>
-		<sound>heavyLaserScatter1</sound>
-		<sound>heavyLaserScatter2</sound>
-		<sound>heavyLaserScatter3</sound>
+		<sound>rvs_heavyLaserScatter1</sound>
+		<sound>rvs_heavyLaserScatter2</sound>
+		<sound>rvs_heavyLaserScatter3</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>fireBomb</sound>
@@ -1416,7 +1196,7 @@
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>YOU SHOULDN'T SEE THIS</title>
-	<tip>ce_tip_plasma</tip>
+	<tip>rvs_tip_plasma</tip>
 	<short>Plasma I</short>
 	<desc>YOU SHOULDN'T SEE THIS.</desc>
 	<tooltip>YOU SHOULDN'T SEE THIS.</tooltip>
@@ -1436,9 +1216,9 @@
 	<rarity>0</rarity>
 	<explosion>ra_explosion_fire</explosion>
 	<launchSounds>
-		<sound>heavyLaserScatter1</sound>
-		<sound>heavyLaserScatter2</sound>
-		<sound>heavyLaserScatter3</sound>
+		<sound>rvs_heavyLaserScatter1</sound>
+		<sound>rvs_heavyLaserScatter2</sound>
+		<sound>rvs_heavyLaserScatter3</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>fireBomb</sound>
@@ -1458,7 +1238,7 @@
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>Plasma Projector Mark I</title>
-	<tip>ce_tip_plasma</tip>
+	<tip>rvs_tip_plasma</tip>
 	<short>Plasma I</short>
 	<desc>YOU SHOULDN'T SEE THIS.</desc>
 	<tooltip>YOU SHOULDN'T SEE THIS.</tooltip>
@@ -1477,9 +1257,9 @@
 	<rarity>0</rarity>
 	<explosion>ra_explosion_fire</explosion>
 	<launchSounds>
-		<sound>heavyLaserScatter1</sound>
-		<sound>heavyLaserScatter2</sound>
-		<sound>heavyLaserScatter3</sound>
+		<sound>rvs_heavyLaserScatter1</sound>
+		<sound>rvs_heavyLaserScatter2</sound>
+		<sound>rvs_heavyLaserScatter3</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>fireBomb</sound>
@@ -1497,7 +1277,7 @@
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>YOU SHOULDN'T SEE THIS</title>
-	<tip>ce_tip_plasma</tip>
+	<tip>rvs_tip_plasma</tip>
 	<short>Plasma I</short>
 	<desc>YOU SHOULDN'T SEE THIS.</desc>
 	<tooltip>YOU SHOULDN'T SEE THIS.</tooltip>
@@ -1517,9 +1297,9 @@
 	<rarity>0</rarity>
 	<explosion>ra_explosion_fire</explosion>
 	<launchSounds>
-		<sound>heavyLaserScatter1</sound>
-		<sound>heavyLaserScatter2</sound>
-		<sound>heavyLaserScatter3</sound>
+		<sound>rvs_heavyLaserScatter1</sound>
+		<sound>rvs_heavyLaserScatter2</sound>
+		<sound>rvs_heavyLaserScatter3</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>fireBomb</sound>
@@ -1604,9 +1384,9 @@ DRONES
 	<power>2</power>
 	<cooldown>1000</cooldown>
 	<dodge>9</dodge>
-	<speed>25</speed>
-	<cost>50</cost>
-	<bp>3</bp>
+	<speed>23</speed>	<!-- R4 2023.11.15: Was 25, but due to buffing the scatter laser to deal 1/4 chance full damage reduced this to 23 from 25-->
+	<cost>60</cost>		<!-- R4 2023.11.15: Was 50, now 60-->
+	<bp>5</bp>
 	<droneImage>rvs_ai_microfighter_interceptor</droneImage>
 	<weaponBlueprint>RVS_DRONE_LASER_SCATTER</weaponBlueprint>
 	<rarity>0</rarity>
@@ -1703,8 +1483,7 @@ DRONES
 	</missSounds>
 	<weaponArt>laser_burst_1</weaponArt>
 </weaponBlueprint>
-
-<weaponBlueprint name="RVS_BEAM_DEFENSE_1">
+<weaponBlueprint name="RVS_BEAM_DEFENSE_SHOT">
 	<type>BEAM</type>
 	<tip>tip_focus</tip>
 	<title>Point Defense</title>
@@ -1731,11 +1510,91 @@ DRONES
 	<weaponArt>ra_beam_auto</weaponArt> 
 </weaponBlueprint>
 
-<!--
-WIP area, just made a bunch of droens because procrastination. LUA side needs to be updated
 
-Might attatch a missile cost to these drones later along side the temp spawn or in the stead of the temp spawn. 
--->
+<!-- target level to 1, no fancy targeting. Thinking about making it target drones too? Perhaps not. Reload pending balance-->
+<weaponBlueprint name="RVS_DRONE_DEFENCE_SHOTGUN_SCATTER">
+	<type>BURST</type>
+	<title>Laser Scatter-Burst</title>
+	<short>YOU SHOULDN'T SEE THIS</short>
+	<desc>YOU SHOULDN'T SEE THIS - REPORT THIS TO R4V3-0N... But while you are here: this is a laser scatter flak equiped on a defence drone</desc>
+	<radius>15</radius>	<!-- half the radius of omnidrone-->
+	<damage>1</damage>
+	<speed>100</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="3" fake="false">ra_laser_burst_scatter_shot_fast</projectile>
+	</projectiles>
+
+	<explosion>invisible</explosion>
+	<particleEmitters>
+		<particleEmitter name="ra_emitter_explosion_scatter" />
+		<particleEmitter name="ra_emitter_explosion_scatter">
+			<type>ra_part_explosion_tiny2</type>
+		</particleEmitter>
+		<particleEmitter name="ra_emitter_explosion_scatter">
+			<type>ra_part_explosion_tiny3</type>
+		</particleEmitter>
+		<particleEmitter name="ra_emitter_explosion_scatter">
+			<type>ra_part_explosion_tiny4</type>
+		</particleEmitter>
+	</particleEmitters>
+	<launchSounds>
+		<sound>rvs_heavyLaserScatter1</sound>
+		<sound>rvs_heavyLaserScatter2</sound>
+		<sound>rvs_heavyLaserScatter3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>rvs_hit_hull_scatter_1</sound>
+		<sound>rvs_hit_hull_scatter_2</sound>
+		<sound>rvs_hit_hull_scatter_3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>rvs_hit_shield_scatter_1</sound>
+		<sound>rvs_hit_shield_scatter_2</sound>
+		<sound>rvs_hit_shield_scatter_3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_1</weaponArt>
+</weaponBlueprint>
+<droneBlueprint name="RVS_DRONE_DEFENSE_SCATTER">
+	<type>DEFENSE</type>
+	<tip>tip_defense</tip>
+	<level>1</level>
+	<title>Burst Scatter Defense Drone</title>
+	<short>Sc. Defense</short>
+	<desc>Quick firing drone that shoots down incoming missiles, mines, and asteroids with tight spread medium-velocity scatter salvo.
+	Reload: 600 MS</desc>
+	<power>2</power>
+	<cooldown>600</cooldown>	<!-- Was 300? Was it really 300? How was this so fast and good in CE??? Well this is going to be 600 since it does a lil flakky-->
+	<dodge>1</dodge>
+	<speed>7</speed>
+	<cost>60</cost>				<!-- was 70? -->
+	<bp>2</bp>
+	<droneImage>rvs_drone_defense_scatter</droneImage>
+	<weaponBlueprint>RVS_DRONE_DEFENCE_SHOTGUN_SCATTER</weaponBlueprint>
+	<rarity>2</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="RVS_DRONE_SCATTER">
+	<type>COMBAT</type>
+	<!--<tip></tip>-->
+	<title>Anti-Ship Scatter Drone</title>
+	<short>Scatter</short>
+	<desc>Basic drone that continually ablates enemy ship's hull with scatter lasers.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> 
+	<dodge>2</dodge>
+	<speed>20</speed>	<!-- CE was 16, MV Combat 1 is 15, changing this to 20-->
+	<cost>40</cost>		<!-- 10 scrap cheaper than MV Combat 1-->
+	<bp>3</bp>
+	<droneImage>rvs_drone_scatter_1</droneImage>
+	<weaponBlueprint>RVS_DRONE_LASER_SCATTER</weaponBlueprint>
+	<rarity>1</rarity>
+</droneBlueprint>
 
 <weaponBlueprint name="RA_DRONE_LASER_HEAVY">
 	<type>LASER</type>
@@ -1878,9 +1737,9 @@ Might attatch a missile cost to these drones later along side the temp spawn or 
 	<image>ra_plasma_shot</image>
 	<explosion>ra_explosion_fire</explosion>
 	<launchSounds>
-		<sound>heavyLaserScatter1</sound>
-		<sound>heavyLaserScatter2</sound>
-		<sound>heavyLaserScatter3</sound>
+		<sound>rvs_heavyLaserScatter1</sound>
+		<sound>rvs_heavyLaserScatter2</sound>
+		<sound>rvs_heavyLaserScatter3</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>fireBomb</sound>
@@ -2004,9 +1863,9 @@ Might attatch a missile cost to these drones later along side the temp spawn or 
 </weaponBlueprint>
 
 <!--
-
-ARTILLERY
-
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+			ARTILLERY
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->
 
 <!-- Player ship artillery for AI Cruiser -->
@@ -2057,6 +1916,139 @@ ARTILLERY
 	</missSounds>
 	<weaponArt>rvs_artillery_ai</weaponArt>
 </weaponBlueprint>
+
+<!-- Generic Artillery Mount -->
+
+<weaponBlueprint name="RVS_ARTILLERY_EFFECTOR">
+	<type>BOMB</type>
+	<tip>rvs_tip_effector</tip>
+	<title>Effector Artillery</title>
+	<short>Effect. Art.</short>
+	<flavorType>Disruption Field Projector</flavorType>
+	<locked>1</locked>
+	<desc>[Base cooldown: 26/23/20/17/14] Pretty Effective stuff huh?</desc>
+	<tooltip>Disrupts enemy systems.</tooltip>
+	<damage>0</damage>
+	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
+	<hack duration="5" immuneAfterHack="0">
+		<doors immuneAfterHack="0">8</doors>
+		<sensors immuneAfterHack="0">8</sensors>
+		<temporal immuneAfterHack="0">8</temporal>
+	</hack>
+	<accuracyMod>100</accuracyMod>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>26</cooldown>
+	<boost>
+		<type>cooldown</type>
+		<amount>3</amount>
+		<count>4</count>
+	</boost>
+	<power>0</power>
+	<cost>0</cost>
+	<bp>0</bp>
+	<rarity>0</rarity>
+	<!--<image>ra_effector_impact_invisible</image>-->
+	<image>ra_effector_hacking</image>
+	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
+	<launchSounds>
+		<sound>rvs_effector_shoot1</sound>
+		<sound>rvs_effector_shoot2</sound>
+		<sound>rvs_effector_shoot3</sound>
+		<sound>rvs_effector_shoot4</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hackStart</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hackStart</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>rvs_artillery_effector</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_ARTILLERY_ENERGY_STUN">
+	<type>LASER</type>
+	<flavorType>Concentrated Energy Blast</flavorType>
+	<tip>tip_energy</tip>
+	<title>Energy Stunner Artillery</title>
+	<short>Energy Stunner Artillery</short>
+	<locked>1</locked>
+	<desc>[Base cooldown: 20] Absolutely stunning I'm sure.</desc>
+	<tooltip>Fires two blasts that does 1 ion damage and 1 hull damage. Can hit and disable shields as well as systems.</tooltip>
+	<stun>10</stun>
+	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<ion>1</ion>
+	<speed>40</speed>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>18</cooldown>
+	<power>0</power>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<!--<boost>
+		<type>cooldown</type>
+		<amount>2.3</amount>
+		<count>4</count>
+	</boost>-->
+	<image>energy_shot</image>
+	<explosion>explosion_energy</explosion>
+	<launchSounds>
+		<sound>energy</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_artillery_energy_stun</weaponArt> 
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_ARTILLERY_BEAM_ION_BUST">
+	<type>BEAM</type>
+	<title>Ion Bust Beam Artillery</title>
+	<short>Ion Bust Artillery</short>
+	<tip>rvs_tip_ion_bust</tip>
+	<desc>[Base cooldown: 25] Ion't you glad it isn't a Hullbeam?</desc>
+	<tooltip>Beam weapon; 2 damage; 2x damage in ionized rooms.</tooltip>
+	<damage>2</damage>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>25</cooldown>
+	<!--on lua table for x2 ion damage under ionBustBeams-->
+	<power>0</power>
+	<cost>0</cost>
+	<bp>0</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>100</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>rvs_artillery_beam_ion_bust</weaponArt>
+	<iconImage>beamH</iconImage>
+</weaponBlueprint>
+
 
 <!--
 

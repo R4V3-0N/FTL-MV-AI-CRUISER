@@ -1,122 +1,16 @@
 
 <!--<ship name="RVS_SHIP_AI" auto_blueprint="RVS_LIST_SHIPS_AI">
 	<surrender  chance="0.8" min="2" max="3" load="SURRENDER_AI"/>
-	<escape  chance="0.25" min="3" max="4" load="GENERIC_ESCAPE"/>
+	<escape  chance="0.25" min="3" max="4" load="RVS_ESCAPE_AI"/>
 	<destroyed load="DESTROYED_AI"/>
 	<deadCrew load="DEAD_CREW_AI"/>
 </ship>-->
 
-<ship name="RVS_SHIP_AI" auto_blueprint="RVS_LIST_SHIPS_AI">
-	<escape chance="0.8" min="4" max="5" >
-		<text>The AI ship tries to retreat from combat. It's powering up its jump drive!</text>
-		<ship hostile="true"/>
-	</escape>
-	<gotaway>
-		<text>Looks like the AIs outsmarted you. They escaped from combat before sustaining critical damage.</text>
-	</gotaway>
-	<destroyed load="DESTROYED_SHIP_AI"/>
-	<deadCrew load="DEAD_CREW_SHIP_AI"/>
-</ship>
 
-<ship name="BS_AI" auto_blueprint="RVS_LIST_SHIPS_AI">
-	<destroyed load="BS_STATION_DESTROYED_DEFAULT"/>
-	<deadCrew load="BS_DEAD_CREW_AI"/>
-</ship>
-
-<ship name="AI_ZOLTAN" auto_blueprint="RVS_LIST_SHIPS_AI"> 
-	<destroyed>
-		<text>With the ship destroyed, you quickly collect useful resources.</text>
-		<autoReward level="MED">standard</autoReward>
-		<choice hidden="true">
-			<text>Contact the Zoltan ship.</text>
-			<event>
-				<text>"Your aid is most appreciated, Federation Captain. The sins of our past are haunting this sector. We shall continue to exterminate the constructs and you shall receive compensation for your help."</text>
-				<autoReward level="LOW">standard</autoReward>
-			</event>
-		</choice>
-	</destroyed>
-	<deadCrew>
-		<text>With the AI crew dead you salvage what you can.</text>
-		<autoReward level="HIGH">standard</autoReward>
-		<choice hidden="true">
-			<text>Contact the Zoltan ship.</text>
-			<event>
-				<text>"Your aid is most appreciated, Federation Captain. The sins of our past are haunting this sector. We shall continue to exterminate the constructs and you shall receive compensation for your help."</text>
-				<autoReward level="LOW">standard</autoReward>
-			</event>
-		</choice>
-	</deadCrew>
-</ship>
-
-<ship name="AI_ZOLTAN_BETRAYAL" auto_blueprint="SHIPS_ZOLTAN"> 
-	<destroyed>
-		<text>With the ship destroyed you quickly collect useful resources.</text>
-		<autoReward level="MED">standard</autoReward>
-		<choice hidden="true">
-			<text>Hail the AI ship.</text>
-			<event load="AI_VS_ZOLTAN_BETRAYAL_LIST"/>
-		</choice>
-	</destroyed>
-	<deadCrew>
-		<text>With the Zoltan crew dead you salvage what you can.</text>
-		<autoReward level="HIGH">standard</autoReward>
-		<choice hidden="true">
-			<text>Hail the AI ship.</text>
-			<event load="AI_VS_ZOLTAN_BETRAYAL_LIST"/>
-		</choice>
-	</deadCrew>
-</ship>
-
-<ship name="AI_NEBULA" auto_blueprint="RVS_LIST_SHIPS_AI">
-	<escape min="3" max="4" >
-		<text>The AI ship tries to retreat from combat. It's powering up its jump drive.</text>
-		<ship hostile="true"/>
-	</escape>
-	<gotaway>
-		<text>When the AI ship jumps away its nano-bot swarm also stops attacking your ship. Might the AIs actually be good sportsmen?</text>
-	</gotaway>
-	<destroyed>
-		<text>The nano-bots retreat from your ship after the AI vessel that controls them ceases to function. You gather up all the scrap you can. The remains of the ship are quickly dissembled by the all-consuming cloud.</text>
-		<status type="clear" target="player" system="weapons" amount="100"/>
-		<status type="clear" target="player" system="shields" amount="100"/>
-		<status type="clear" target="player" system="medbay" amount="100"/>
-		<status type="clear" target="player" system="oxygen" amount="100"/>
-		<status type="clear" target="player" system="doors" amount="100"/>
-		<status type="clear" target="player" system="engines" amount="100"/>
-		<status type="clear" target="player" system="pilot" amount="100"/>
-		<status type="clear" target="player" system="cloaking" amount="100"/>
-		<status type="clear" target="player" system="drones" amount="100"/>
-		<status type="clear" target="player" system="teleporter" amount="100"/>
-		<status type="clear" target="player" system="mind" amount="100"/>
-		<status type="clear" target="player" system="hacking" amount="100"/>
-		<status type="clear" target="player" system="clonebay" amount="100"/>
-		<status type="clear" target="player" system="battery" amount="100"/>
-		<status type="clear" target="player" system="sensors" amount="100"/>
-		<autoReward level="MED">standard</autoReward>
-	</destroyed>
-	<deadCrew load="DEAD_CREW_SHIP_AI"/>
-</ship>
-
-<!-- <ship name="CE_SPOTTER_AI_BEAM" auto_blueprint="SHIPS_AI_DEFENDER"> -->
-<ship name="CE_SPOTTER_AI_BEAM" auto_blueprint="RVS_LIST_SHIPS_AI">
-	<escape chance="0.5" min="3" max="4">
-		<text>The AI defense ship is damaged and charges up its FTL.</text>
-		<ship hostile="true"/>
-	</escape>
-	<gotaway>
-		<text>The defender class jumps away. You should probably do the same, quickly!</text>
-	</gotaway>
-	<destroyed>
-		<text>The defense ship's armored hull bursts open under your last salvo. You decide not to wait to see what the AI throws at you next.</text>
-		<autoReward level="MED">standard</autoReward>
-	</destroyed>
-	<deadCrew>
-		<text>The AI substrates have been eliminated. The nano-cloud retreats from you and and starts to disassemble their vessel. You quickly approach the craft to salvage some of its equipment, then you hasten to jump away.</text>
-		<autoReward level="HIGH">standard</autoReward>
-	</deadCrew>
-	<weaponOverride count="1">
-		<name>CE_PLANETARY_BEAM_1</name>
-		<name>CE_PLANETARY_BEAM_2</name>
-		<name>CE_PLANETARY_BEAM_3</name>
-	</weaponOverride>
+<ship name="RVS_SHIP_AI_FIGHT" auto_blueprint="RVS_LIST_SHIPS_AI">
+	<surrender  chance="0.2" min="1" max="2" load="RVS_SURRENDER_AI"/>
+	<escape  chance="0.3" min="3" max="4" load="RVS_ESCAPE_AI"/>
+	<gotaway load="RVS_GOTAWAY_AI"/>
+	<destroyed load="RVS_DESTROYED_AI"/>
+	<!--<deadCrew load="DEAD_CREW_AI"/>-->
 </ship>
