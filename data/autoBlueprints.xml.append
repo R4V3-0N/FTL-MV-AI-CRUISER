@@ -302,24 +302,24 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<minSector>4</minSector>
 	<maxSector>8</maxSector>
 	<systemList>
-		<artillery power="1" max="3" room="15" start="true" weapon="RVS_ARTILLERY_BEAM_ION_BUST" />
-		<artillery power="1" max="3" room="3" start="true" weapon="RVS_ARTILLERY_EFFECTOR" />
-		<battery power="1" max="2" room="6" start="false" />
-		<cloaking power="1" max="1" room="7" start="false" />
+		<artillery power="1" max="4" room="15" start="true" weapon="RVS_ARTILLERY_BEAM_ION_BUST" />
+		<artillery power="1" max="4" room="3" start="true" weapon="RVS_ARTILLERY_EFFECTOR" />
+		<battery power="2" max="2" room="6" start="false" />	<!-- R4 2023.11.25: Changed min from 1 to 2-->
+		<cloaking power="1" max="2" room="7" start="false" />	<!-- R4 2023.11.25: Changed max from 1 to 2-->
 		<doors power="1" max="3" room="2" start="false" />
 		<drones power="2" max="6" room="11" start="false" />
 		<engines power="2" max="3" room="4" start="true" />
 		<pilot power="1" max="3" room="8" start="true" />
 		<shields power="2" max="10" room="13" start="true" />
 		<teleporter power="1" max="1" room="5" start="false" />
-		<weapons power="1" max="6" room="0" start="false" />
+		<weapons power="1" max="7" room="0" start="false" />	<!-- R4 2023.11.25: Changed max from 1 to 7-->
 	</systemList>
 	<weaponSlots>3</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="6" count="3" load="RVS_LIST_WEAPONS_AI" />	<!-- currently set to 3 weapons for teesting -->
 	<droneList drones="5" count="2" load="RVS_LIST_DRONES_AI" />
 	<health amount="11" />
-	<maxPower amount="7" />
+	<maxPower amount="6" />		<!-- R4 2023.11.25: Changed power from 7 to 6-->
 	<crewCount amount="3" max="8" class="rvs_ai_hologram" />	<!-- 8 AI max because squimsh-->
 	<boardingAI>invasion</boardingAI>
 	<aug name="RVS_ANTI_GRAVITY_ENGINE" />
@@ -343,13 +343,12 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 		<temporal power="1" max="2" room="5" start="true" />
 		<weapons power="2" max="6" room="11" start="true" />
 	</systemList>
-	</systemList>
 	<weaponSlots>3</weaponSlots>
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="6" count="3" load="RVS_LIST_MV_WEAPONS_EMP_SPICY" />
 	<droneList drones="6" count="4" load="RVS_LIST_DRONES_HEAVY" />
 	<health amount="11" />
-	<maxPower amount="8" />
+	<maxPower amount="7" />
 	<crewCount amount="2" max="3" class="rvs_ai_hologram" />
 	<crewCount amount="1" max="2" clsas="zoltan_osmian"/>
 	<crewCount amount="0" max="1" clsas="zoltan_martyr"/>
