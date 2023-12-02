@@ -1,5 +1,24 @@
 <!-- Appends -->
 
+
+<mod:findName type="blueprintList" name="LIST_DRONES_ALL">
+	<mod-append:name>RVS_COMBAT_MISSILE_1</mod-append:name>
+	<mod-append:name>RVS_COMBAT_MISSILE_2</mod-append:name>
+	<mod-append:name>RVS_COMBAT_MISSILE_3</mod-append:name>
+	<mod-append:name>RVS_DRONE_PLASMA_1</mod-append:name>
+	<mod-append:name>RVS_DRONE_PLASMA_2</mod-append:name>
+	<mod-append:name>RA_DRONE_HEAVY_1</mod-append:name>
+	<mod-append:name>RA_DRONE_HEAVY_2</mod-append:name>
+	<mod-append:name>RVS_DRONE_SCATTER</mod-append:name>
+
+	<mod-append:name>RVS_BEAM_DEFENSE_1</mod-append:name>
+	<mod-append:name>RVS_DRONE_DEFENSE_SCATTER</mod-append:name>
+
+	<mod-append:name>RVS_AI_MICROFIGHTER_INTERCEPTOR</mod-append:name>
+	<mod-append:name>RVS_AI_MICROFIGHTER_SHOCK</mod-append:name>
+	<mod-append:name>RVS_AI_MICROFIGHTER_SWARM</mod-append:name>
+</mod:findName>
+
 <mod:findName type="blueprintList" name="LIST_CREW_GAS">
 	<mod-append:name>rvs_ai_hologram</mod-append:name>
 	<mod-append:name>rvs_ai_hologram_cortana</mod-append:name>
@@ -35,10 +54,43 @@
 	<mod-append:name>RVS_BEAM_SHOTGUN_3</mod-append:name>
 </mod:findName>
 
+<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_ALL">
+	<mod-append:name>RVS_PLASMA_1</mod-append:name>
+	<mod-append:name>RVS_PLASMA_2</mod-append:name>
+	<mod-append:name>RVS_PLASMA_3</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_NODAMAGE">
+	<mod-append:name>RVS_PLASMA_1</mod-append:name>
+	<mod-append:name>RVS_PLASMA_2</mod-append:name>
+	<mod-append:name>RVS_PLASMA_3</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="BLUELIST_FIRE_ALL">
+	<mod-append:name>RVS_PLASMA_1</mod-append:name>
+	<mod-append:name>RVS_PLASMA_2</mod-append:name>
+	<mod-append:name>RVS_PLASMA_3</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="BLUELIST_FIRE_NONBALLISTIC">
+	<mod-append:name>RVS_PLASMA_1</mod-append:name>
+	<mod-append:name>RVS_PLASMA_2</mod-append:name>
+	<mod-append:name>RVS_PLASMA_3</mod-append:name>
+</mod:findName>
 
+<mod:findName type="blueprintList" name="BLUELIST_DRONES_DEFENSE">
+	<mod-append:name>RVS_BEAM_DEFENSE_1</mod-append:name>
+	<mod-append:name>RVS_DRONE_DEFENSE_SCATTER</mod-append:name>
+</mod:findName>
 
 <!-- New lists -->
 
+<!-- Blue Lists-->
+<blueprintList name="BLUELIST_EFFECTOR">
+	<name>RA_EFFECTOR_1</name>
+	<name>RA_EFFECTOR_2</name>
+	<name>RA_EFFECTOR_HEAVY</name>
+	<name>RA_EFFECTOR_CHAIN</name>
+</blueprintList>
+
+<!-- Other Lists-->
 <blueprintList name="RVS_LIST_CREW_AI_AVATAR">
 	<name>rvs_ai_hologram</name>
 	<name>rvs_ai_hologram_cortana</name>
@@ -62,6 +114,7 @@
 	<name>RA_EFFECTOR_HEAVY</name>
 	<name>RA_EFFECTOR_CHAIN</name>
 </blueprintList>
+
 
 <blueprintList name="RVS_LIST_WEAPONS_AI">
 		<name>BA_LASER_ARTILLERY_2</name>	<!-- Place holder until remade -->

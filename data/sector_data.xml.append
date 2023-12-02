@@ -1,7 +1,10 @@
 <FTL>
 	<sectorDescription name="SECTOR_UNEXPLORED_AI" unique="false">
 		<nameList>
-			<name>Unregistered Region</name>
+			<name>Periphery Sector</name>
+			<name>Periphery Regions</name>
+			<name>Unexplored Periphery</name>
+			<name>Periphery Nebulae</name>
 			<!--<name>Uncharted Nebulae</name>
 			<name>Uncharted Clouds</name>
 			<name>Unmapped Nebulae</name>
@@ -34,10 +37,10 @@
 			<blueprint name="human" rarity="5"/>
 			<blueprint name="human_medic" rarity="0"/>
 			<blueprint name="human_engineer" rarity="0"/>
-			<blueprint name="engi" rarity="0"/>
-			<blueprint name="engi_separatist" rarity="0"/>
+			<blueprint name="engi" rarity="5"/>
+			<blueprint name="engi_separatist" rarity="4"/>
 			<blueprint name="zoltan" rarity="4"/>
-			<blueprint name="zoltan_monk" rarity="0"/>
+			<blueprint name="zoltan_monk" rarity="5"/>
 			<blueprint name="zoltan_devotee" rarity="0"/>
 			<blueprint name="rock" rarity="0"/>
 			<blueprint name="rock_outcast" rarity="0"/>
@@ -48,13 +51,13 @@
 			<blueprint name="slug_clansman" rarity="5"/>
 			<blueprint name="shell" rarity="4"/>
 			<blueprint name="shell_scientist" rarity="5"/>
-			<blueprint name="shell_mechanic" rarity="5"/>
-			<blueprint name="shell_guardian" rarity="5"/>
+			<blueprint name="shell_mechanic" rarity="0"/>
+			<blueprint name="shell_guardian" rarity="0"/>
 			<blueprint name="crystal" rarity="0"/>
 			<blueprint name="crystal_liberator" rarity="0"/>
 			<blueprint name="orchid" rarity="0"/>
 			<blueprint name="orchid_vampweed" rarity="0"/>
-			<blueprint name="leech" rarity="3"/>
+			<blueprint name="leech" rarity="4"/>
 			<blueprint name="lanius" rarity="5"/>
 			<blueprint name="phantom" rarity="0"/>
 			<blueprint name="phantom_goul" rarity="0"/>
@@ -107,7 +110,127 @@
 			<blueprint name="RVS_ELECTRIC_PLATING" rarity="1"/>
 			<blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="1"/>
 			<blueprint name="RVS_AI_SWARM" rarity="1"/>
+				
+			<!-- NOT FINDABLE WEAPONS/DRONES-->
+			<blueprint name="BEAM_FIRE" rarity="0"/>
+			<blueprint name="BEAM_BIO" rarity="0"/>
+			<blueprint name="LASER_HULL_1" rarity="0"/>
+			<blueprint name="LASER_HULL_2" rarity="0"/>
+			<blueprint name="LASER_FIRE" rarity="0"/>
+			<blueprint name="ION_1" rarity="0"/>
+			<blueprint name="ION_2" rarity="0"/>
+			<blueprint name="ION_3" rarity="0"/>
+			<blueprint name="BOMB_FIRE" rarity="0"/>
+			<blueprint name="BOMB_ION" rarity="0"/>
+			<blueprint name="BOMB_HEAL" rarity="0"/>
+			<blueprint name="BOMB_LOCK" rarity="0"/>
+			<blueprint name="CRYSTAL_BURST_1" rarity="0"/>
+			<blueprint name="CRYSTAL_BURST_2" rarity="0"/>
+			<blueprint name="CRYSTAL_HEAVY_1" rarity="0"/>
+			<blueprint name="CRYSTAL_HEAVY_2" rarity="0"/>
+			<blueprint name="SHOTGUN_1" rarity="0"/>
+			<blueprint name="SHOTGUN_2" rarity="0"/>
+			<blueprint name="LASER_CHAINGUN" rarity="0"/>
+			<blueprint name="LASER_CHAINGUN_2" rarity="0"/>
+			<blueprint name="ION_CHAINGUN" rarity="0"/>
+			<blueprint name="LASER_CHARGEGUN" rarity="0"/>
+			<blueprint name="LASER_CHARGEGUN_2" rarity="0"/>
+			<blueprint name="ION_CHARGEGUN" rarity="0"/>
+			<blueprint name="ION_STUN" rarity="0"/>
+			<blueprint name="BOMB_STUN" rarity="0"/>
+			<blueprint name="LASER_HULL_3" rarity="0"/>
+			<blueprint name="LASER_HEAVY_PIERCE" rarity="0"/>
+			<blueprint name="LASER_PIERCE" rarity="0"/>
+			<blueprint name="LASER_PIERCE_2" rarity="0"/>
+			<blueprint name="LASER_HEAVY_3" rarity="0"/>
+			<blueprint name="LASER_PARTICLE" rarity="0"/>
+			<blueprint name="LASER_PARTICLE_2" rarity="0"/>
+			<blueprint name="SNIPER" rarity="0"/>
+			<blueprint name="LASER_BIO" rarity="0"/>
+			<blueprint name="ION_4" rarity="0"/>
+			<blueprint name="ION_INSTANT" rarity="0"/>
+			<blueprint name="ION_PIERCE_1" rarity="0"/>
+			<blueprint name="ION_PIERCE_2" rarity="0"/>
+			<blueprint name="ION_FIRE" rarity="0"/>
+			<blueprint name="ION_BIO" rarity="0"/>
+			<blueprint name="MISSILES_BURST_2" rarity="0"/>
+			<blueprint name="MISSILES_CLOAK" rarity="0"/>
+			<blueprint name="MISSILES_FIRE" rarity="0"/>
+			<blueprint name="MISSILES_FREE" rarity="0"/>
+			<blueprint name="MISSILES_BIO" rarity="0"/>
+			<blueprint name="MISSILES_PARTICLE" rarity="0"/>
+			<blueprint name="BEAM_FIRE_PIERCE" rarity="0"/>
+			<blueprint name="BEAM_FIRE_INSTANT" rarity="0"/>
+			<blueprint name="BEAM_BREACH" rarity="0"/>
+			<blueprint name="BEAM_4" rarity="0"/>
+			<blueprint name="BEAM_PARTICLE" rarity="0"/>
+			<blueprint name="BEAM_MINING" rarity="0"/>
+			<blueprint name="BEAM_HULL_2" rarity="0"/>
+			<blueprint name="BEAM_LONG_2" rarity="0"/>
+			<blueprint name="BEAM_SCYTHE" rarity="0"/>
+			<blueprint name="BEAM_GUILLOTINE" rarity="0"/>
+			<blueprint name="FOCUS_BIO" rarity="0"/>
+			<blueprint name="BOMB_BIO" rarity="0"/>
+			<blueprint name="BOMB_CLUSTER" rarity="0"/>
+			<blueprint name="BOMB_HEAL" rarity="0"/>
+			<blueprint name="BOMB_BUFF" rarity="0"/>
+			<blueprint name="BOMB_FREE" rarity="0"/>
+			<blueprint name="ENERGY_1" rarity="0"/>
+			<blueprint name="ENERGY_2" rarity="0"/>
+			<blueprint name="ENERGY_3" rarity="0"/>
+			<blueprint name="LASER_CONSERVATIVE" rarity="0"/>
+			<blueprint name="BEAM_CONSERVATIVE" rarity="0"/>
+			<blueprint name="ION_CONSERVATIVE" rarity="0"/>
+			<blueprint name="MISSILES_CONSERVATIVE" rarity="0"/>
+			<blueprint name="BOMB_CONSERVATIVE" rarity="0"/>
+			<blueprint name="ENERGY_CONSERVATIVE" rarity="0"/>
+			<blueprint name="BEAM_BIO_CONSERVATIVE" rarity="0"/>
+			<blueprint name="LASER_CHARGE_CHAIN" rarity="0"/>
+			<blueprint name="LASER_CHAINGUN_DAMAGE" rarity="0"/>
+			<blueprint name="LASER_FROST_1" rarity="0"/>
+			<blueprint name="LASER_FROST_2" rarity="0"/>
+			<blueprint name="LASER_STUN" rarity="0"/>
+			<blueprint name="LASER_CHARGEGUN_3" rarity="0"/>
+			<blueprint name="BEAM_CHAIN" rarity="0"/>
+			<blueprint name="BEAM_PIERCE" rarity="0"/>
+			<blueprint name="BEAM_BIO_CHAIN" rarity="0"/>
+			<blueprint name="BEAM_STUN" rarity="0"/>
+			<blueprint name="BEAM_ADAPT" rarity="0"/>
+			<blueprint name="BEAM_ADAPT_2" rarity="0"/>
+			<blueprint name="FOCUS_CHAIN" rarity="0"/>
+			<blueprint name="MISSILES_STUN" rarity="0"/>
+			<blueprint name="ION_CHARGEGUN_2" rarity="0"/>
+			<blueprint name="ION_STUN_CHARGEGUN" rarity="0"/>
+			<blueprint name="ENERGY_STUN" rarity="0"/>
+			<blueprint name="ENERGY_CHAINGUN" rarity="0"/>
+			<blueprint name="ENERGY_CHARGEGUN" rarity="0"/>
+			<blueprint name="SHOTGUN_CHARGE" rarity="0"/>
+			<blueprint name="SHOTGUN_3" rarity="0"/>
+			<blueprint name="SHOTGUN_4" rarity="0"/>
+			<blueprint name="SHOTGUN_CHAIN" rarity="0"/>
+			<blueprint name="SHOTGUN_FIRE" rarity="0"/>
+			<blueprint name="SHOTGUN_ION" rarity="0"/>
+			<blueprint name="SHOTGUN_TOXIC" rarity="0"/>
+			<blueprint name="SHOTGUN_INSTANT" rarity="0"/>
 			
+			<blueprint name="DEFENSE_1" rarity="0"/>
+			<blueprint name="DEFENSE_2" rarity="0"/>
+			<blueprint name="DEFENSE_3" rarity="0"/>
+			<blueprint name="GUARDIAN_1_MISSILE" rarity="0"/>
+			<blueprint name="GUARDIAN_2_MISSILE" rarity="0"/>
+			<blueprint name="COMBAT_CONSERVATIVE_LASER" rarity="0"/>
+			<blueprint name="ASSAULT_PARTICLE" rarity="0"/>
+			<blueprint name="PEST_RAD" rarity="0"/>
+			<blueprint name="ION_1_AMP2" rarity="0"/>
+			<blueprint name="ENERGY_1_AMP2" rarity="0"/>
+			<blueprint name="FOCUS_1_AMP2" rarity="0"/>
+			<blueprint name="FLAK_1_AMP2" rarity="0"/>
+			<blueprint name="RECON_BOARDER" rarity="0"/>
+			<blueprint name="BATTLETOG_DEFEND" rarity="0"/>
+			<blueprint name="BATTLETOG2_DEFEND" rarity="0"/>
+			<blueprint name="DOCTOR_DEFENSE" rarity="0"/>
+			<blueprint name="MANNING" rarity="0"/>
+			<blueprint name="AMPHI_DEFENSE" rarity="0"/>
 		</rarityList>
 		<startEvent>ENTER_NEBULA</startEvent>
 		<removeFirstBeaconNebula/>
@@ -116,19 +239,19 @@
 		<rebelBeacon event="FLEET_THREAT_MEDIUM" nebulaEvent="FLEET_THREAT_MEDIUM_NEBULA"/>
 		<priorityEvent name="ANOMALY_SPAWNER" min="1" max="1" priority="1" req="ANOMALY_SPAWN_CHECK" lvl="1"/>
 		<!--<event name="NEBULA_SYLVAN" min="0" max="1"/>-->
-		<event name="RVS_NEBULA_AI_HOSTILE" min="5" max="8"/>	<!-- placing here to guarantee full spawns-->
-		<event name="RVS_AI_ASTEROID" min="1" max="1"/>
-		<event name="RVS_AI_SUN" min="1" max="1"/>
+		<event name="RVS_NEBULA_AI_HOSTILE" min="5" max="10"/>	<!-- placing here to guarantee full spawns-->
+		<event name="RVS_STORM_AI_BOARDING" min="1" max="1"/>
+		<event name="RVS_STORM_AI_BOARDING" min="1" max="1"/>
 
 		<event name="NEBULA_STORELIST_UNEXPLORED" min="1" max="2"/>
-		<priorityEvent name="STORELIST_UNEXPLORED" min="0" max="1" priority="0"/>
+		<event name="NEBULA_RVS_AUTO_MALFUNCTION" min="1" max="1"/>
 		
-		<event name="NEBULA_UNEXPLORED_ITEMS" min="2" max="4"/>
-		<event name="NEBULA_UNEXPLORED_NEUTRAL" min="3" max="5"/>
+		<event name="NEBULA_UNEXPLORED_ITEMS" min="2" max="3"/>
+		<event name="NEBULA_UNEXPLORED_NEUTRAL" min="2" max="3"/>
 		<!--<event name="NEBULA_UNEXPLORED_DISTRESS" min="1" max="2"/>-->
 		<priorityEvent name="EVENTS_CLEARING" min="1" max="4" priority="0"/>
 		
-		<!--<event name="NEBULA_UNEXPLORED_HOSTILE" min="3" max="7"/>-->
+		<event name="NEBULA_RVS_AI_ENCOUNTER_REBEL_LIGHTNEBULA" min="1" max="1"/>
 		<event name="NEBULA_HOSTILE" min="1" max="3"/>
 
 		<event name="RVS_AI_NEBULA_EMPTY_EXPLORE" min="1" max="1"/>
@@ -136,12 +259,31 @@
 		<event name="FILLER_LIST" min="999" max="999"/>
 	</sectorDescription>
 
-	<mod:findName type="sectorType" name="SECTOR_LIST_HOSTILE">
-        <mod-append:sector>SECTOR_UNEXPLORED_AI</mod-append:sector>
-    </mod:findName>
-    <mod:findName type="sectorType" name="NEBULA">
-        <mod-append:sector>SECTOR_UNEXPLORED_AI</mod-append:sector>
-    </mod:findName>
+	<!--
+		\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		JULK THIS IS MY SECTOR ATTEMPTING TO EXIST PLEASE HELP
+		\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\		
+	-->
+
+	<mod:findName type="sectorType" name="SECTOR_LIST_GENERIC_NEBULA">
+		<mod-append:sector>SECTOR_UNEXPLORED_AI</mod-append:sector>
+	</mod:findName>
+	<mod:findName type="sectorType" name="NEBULA">
+		<mod-append:sector>SECTOR_UNEXPLORED_AI</mod-append:sector>
+	</mod:findName>
+	<sectorList minSector='2' maxSector='2'>
+		<sector>SECTOR_UNEXPLORED_AI</sector>
+	</sectorList>
+
+	<!--
+		\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		JULK MY SECTOR IS ABOVE PLEASE SAVE MY DOG
+		\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\		
+	-->	
 
 	<mod:findName type="sectorDescription" name="SECRET_ANCIENT" panic="true">
     <mod:findLike type="rarityList">
@@ -279,6 +421,8 @@
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="1"/>
     </mod:findLike>
+	<mod-append:event name="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
+	<mod-append:event name="RVS_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
 </mod:findName>
 <mod:findName type="sectorDescription" name="SECTOR_NEBULA_HEKTAR" panic="true">
     <mod:findLike type="rarityList">
@@ -315,6 +459,8 @@
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="4"/>
     </mod:findLike>
+	<mod-append:event name="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="1"/>
+	<mod-append:event name="RVS_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="1"/>
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_SEPARATIST">
@@ -350,8 +496,9 @@
 		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="5"/>
 		<mod-append:blueprint name="RVS_AI_SWARM" rarity="2"/>
 		
-        <mod-append:blueprint name="rvs_ai_hologram" rarity="3"/>	
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="3"/>
 	</mod:findLike>
+	<mod-append:event name="RVS_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
 </mod:findName>
 <mod:findName type="sectorDescription" name="SECTOR_SEPARATIST_UNIQUE">
 	<mod:findLike type = "rarityList">
@@ -371,8 +518,6 @@
 		<mod-append:blueprint name="RVS_EMP_2" rarity="2"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="2"/>
 
-		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_INTERCEPTER" rarity="5"/>
-		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="5"/>
 		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="4"/>
@@ -387,6 +532,7 @@
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="2"/>	
 	</mod:findLike>
+	<mod-append:event name="RVS_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_ZOLTAN">
@@ -407,8 +553,6 @@
 		<mod-append:blueprint name="RVS_EMP_2" rarity="2"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="2"/>
 
-		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_INTERCEPTOR" rarity="5"/>
-		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="5"/>
 		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="4"/>
@@ -442,8 +586,6 @@
 		<mod-append:blueprint name="RVS_EMP_2" rarity="2"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="2"/>
 
-		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_INTERCEPTOR" rarity="5"/>
-		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="5"/>
 		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="4"/>
@@ -451,7 +593,6 @@
 		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="5"/>
 		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="5"/>
 
-		
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="2"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="2"/>
 		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="3"/>
@@ -538,5 +679,9 @@
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="4"/>
 	</mod:findLike>
+</mod:findName>
+<mod:findName type="sectorDescription" name="SECTOR_ABANDONED">
+	<mod-append:event name="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="1"/>
+	<mod-append:event name="RVS_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
 </mod:findName>
 </FTL>
