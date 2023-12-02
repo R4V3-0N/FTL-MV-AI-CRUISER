@@ -547,7 +547,7 @@
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>14</cooldown>
+	<cooldown>15</cooldown>	<!-- Was 14-->
 	<power>2</power>
 	<cost>70</cost>
 	<bp>8</bp>
