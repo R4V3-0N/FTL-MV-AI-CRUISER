@@ -267,16 +267,18 @@
 		\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\		
 	-->
 
+	<mod:findName type="sectorType" name="OVERRIDE_SECTOR_LIST_GENERIC_NEBULA">
+		<mod-append:sector>SECTOR_UNEXPLORED_AI</mod-append:sector>
+	</mod:findName>
 	<mod:findName type="sectorType" name="SECTOR_LIST_GENERIC_NEBULA">
 		<mod-append:sector>SECTOR_UNEXPLORED_AI</mod-append:sector>
 	</mod:findName>
 	<mod:findName type="sectorType" name="NEBULA">
 		<mod-append:sector>SECTOR_UNEXPLORED_AI</mod-append:sector>
 	</mod:findName>
-	<sectorList minSector='2' maxSector='2'>
-		<sector>SECTOR_UNEXPLORED_AI</sector>
-	</sectorList>
 
+
+	
 	<!--
 		\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 		\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
