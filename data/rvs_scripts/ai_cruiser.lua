@@ -81,7 +81,7 @@ script.on_internal_event(Defines.InternalEvents.JUMP_LEAVE, holoHeal)
 
 -- Increase manning bonuses by 50% for sentient combat AI
 script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR, function(ship, value)
-    if ship:HasEquipment("RVS_SENTIENT_COMBAT_AI") > 0 then
+    if ship and ship:HasEquipment("RVS_SENTIENT_COMBAT_AI") > 0 then
         local pilotSystem = ship:GetSystem(6)
         if pilotSystem and pilotSystem.iActiveManned > 0 then
             value = value + 1 + pilotSystem.iActiveManned
@@ -94,7 +94,7 @@ script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR, function(ship,
     return Defines.Chain.CONTINUE, math.min(100, value)
 end)
 script.on_internal_event(Defines.InternalEvents.GET_AUGMENTATION_VALUE, function(ship, augment, value)
-    if ship:HasEquipment("RVS_SENTIENT_COMBAT_AI") > 0 then
+    if ship and ship:HasEquipment("RVS_SENTIENT_COMBAT_AI") > 0 then
         if augment == "SHIELD_RECHARGE" then
             local shieldSystem = ship:GetSystem(0)
             if shieldSystem and shieldSystem.iActiveManned > 0 then

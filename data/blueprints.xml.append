@@ -288,7 +288,7 @@
 	<desc>These Heavy EMP devices were once favoured for their intense but non-lethal effect. Its projectiles can take down 4 layers of shields, deal 3 ion damage to systems, 2 damage to empty rooms and 1 ion damage to adjacent systems.</desc>
 	<tooltip>Big EMP go pew pew.</tooltip> <!-- placeholder -->
 	<damage>0</damage>
-	<speed>35</speed> <!-- R4: considering it being slower -->
+	<speed>32</speed> <!-- R4: I made it a bit slower -->
 	<shots>1</shots>
 	<sp>0</sp>
 	<!-- ai_cruiser.lua stats
@@ -714,8 +714,8 @@
 		Accuracy Bonus: +10%
 	</tooltipOverride>
 	<damage>0</damage>
-	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="4" immuneAfterHack="7">
+	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10--> 
+	<hack duration="4" immuneAfterHack="3">
 		<shields>4.1</shields> <!--R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields. ADDENDUM: made it 4.1 just so it can work when time is sped up or slowed down -->
 		<doors immuneAfterHack="3">8</doors>
 		<sensors immuneAfterHack="3">8</sensors>
@@ -727,7 +727,7 @@
 			<amount>0</amount>
 			<shipTarget>ALL</shipTarget>
 			<crewTarget>ALL</crewTarget>
-			<duration>11</duration>
+			<duration>7</duration>
 			<roomAnim renderLayer="3">
 				<anim animType="center">ra_effector_residual</anim>
 			</roomAnim>
@@ -772,15 +772,15 @@
 	<short>Effect. II</short>
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
-	<desc>Fast charging projector device that hacks systems at a higher rate than its predecessor.</desc>
-	<descriptionOverride>Fast charging projector device that hacks systems at a higher rate than its predecessor.
+	<desc>Designed to shortly nullify enemy specialized sytems. This fast charging projector device hacks systems at a higher rate than its predecessor.</desc>
+	<descriptionOverride>Designed to shortly nullify enemy specialized sytems. This fast charging projector device hacks systems at a higher rate than its predecessor.
 
 		Stats:
 		Required Power: 3
 		Charge Time: 10 seconds
 
-		Hacking Duration: 4 seconds
-		Hack Immunity: 3 seconds
+		Hacking Duration: 2 seconds
+		Hack Immunity: 6 seconds
 		Accuracy Bonus: +10%
 		
 		Buy/Sell Price: 60~/30~
@@ -791,25 +791,20 @@
 
 		Shots Per Charge: 1
 
-		Hacking Duration: 4 seconds
-		Hack Immunity: 3 seconds
+		Hacking Duration: 2 seconds
+		Hack Immunity: 6 seconds
 		Accuracy Bonus: +10%
 	</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="4" immuneAfterHack="7">
-		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
-		<doors immuneAfterHack="3">8</doors>
-		<sensors immuneAfterHack="3">8</sensors>
-		<temporal immuneAfterHack="3">8</temporal>
-	</hack>
+	<hack duration="2" immuneAfterHack="6"/>
 	<roomStatBoosts>
 		<statBoost name="trueHealAmount">
 			<boostType>FLAT</boostType>
 			<amount>0</amount>
 			<shipTarget>ALL</shipTarget>
 			<crewTarget>ALL</crewTarget>
-			<duration>11</duration>
+			<duration>8</duration>
 			<roomAnim renderLayer="3">
 				<anim animType="center">ra_effector_residual</anim>
 			</roomAnim>
@@ -854,15 +849,15 @@
 	<short>Hv. Effect.</short>
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
-	<desc>Slow-charging effector that can heavily disrupt ship systems with a prolonged hacking attack.</desc>
-	<descriptionOverride>Slow-charging effector that can heavily disrupt ship systems with a prolonged hacking attack.
+	<desc>Slow-charging effector that can heavily disrupt ship systems with a prolonged hacking attack. Though the targeted systems become immune longer compared to other Effector.</desc>
+	<descriptionOverride>Slow-charging effector that can heavily disrupt ship systems with a prolonged hacking attack. Though the targeted systems become immune longer compared to other Effector.
 
 		Stats:
 		Required Power: 3
 		Charge Time: 20 seconds
 
-		Hacking Duration: 10 seconds
-		Hack Immunity: 3 seconds
+		Hacking Duration: 15 seconds
+		Hack Immunity: 20 seconds
 		Accuracy Bonus: +10%
 		
 		Buy/Sell Price: 65~/32~
@@ -873,25 +868,20 @@
 
 		Shots Per Charge: 1
 
-		Hacking Duration: 10 seconds
-		Hack Immunity: 3 seconds
+		Hacking Duration: 15 seconds
+		Hack Immunity: 20 seconds
 		Accuracy Bonus: +10%
 	</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="10" immuneAfterHack="13">
-		<!--<shields>3.8</shields> R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields-->
-		<doors immuneAfterHack="9">14</doors>
-		<sensors immuneAfterHack="9">14</sensors>
-		<temporal immuneAfterHack="9">14</temporal>	
-	</hack>
+	<hack duration="15" immuneAfterHack="20"/>
 	<roomStatBoosts>
 		<statBoost name="trueHealAmount">
 			<boostType>FLAT</boostType>
 			<amount>0</amount>
 			<shipTarget>ALL</shipTarget>
 			<crewTarget>ALL</crewTarget>
-			<duration>23</duration>
+			<duration>35</duration>
 			<roomAnim renderLayer="3">
 				<anim animType="center">ra_effector_residual</anim>
 			</roomAnim>
@@ -903,7 +893,7 @@
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>20</cooldown> <!-- R4 2023.02.15 reduced down from 16 to 15 -->
+	<cooldown>20</cooldown>
 	<power>3</power>
 	<cost>65</cost>
 	<bp>2</bp>
@@ -929,6 +919,7 @@
 	<weaponArt>ra_effector_heavy</weaponArt>
 </weaponBlueprint>
 
+<!-- Defunct -->
 <weaponBlueprint name="RA_EFFECTOR_CHAIN">
 	<type>BOMB</type>
 	<tip>rvs_tip_effector</tip>
@@ -936,8 +927,8 @@
 	<short>Chain Eff.</short>
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
-	<desc>Intelligent field projector that decreases in cooldown to keep up with enemy defenses with its hacking attacks.</desc>
-	<descriptionOverride>Intelligent field projector that decreases in cooldown to keep up with enemy defenses with its hacking attacks.
+	<desc>Intelligent field projector that learns from the enemy system to compute faster hacking solutions.</desc>
+	<descriptionOverride>Intelligent field projector that learns from the enemy system to compute faster hacking solutions.
 
 		Stats:
 		Required Power: 3
@@ -967,18 +958,14 @@
 	</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="7" immuneAfterHack="10">
-		<doors immuneAfterHack="6">11</doors>
-		<sensors immuneAfterHack="6">11</sensors>
-		<temporal immuneAfterHack="6">11</temporal>	
-	</hack>
+	<hack duration="6" immuneAfterHack="3"/>
 	<roomStatBoosts>
 		<statBoost name="trueHealAmount">
 			<boostType>FLAT</boostType>
 			<amount>0</amount>
 			<shipTarget>ALL</shipTarget>
 			<crewTarget>ALL</crewTarget>
-			<duration>17</duration>
+			<duration>9</duration>
 			<roomAnim renderLayer="3">
 				<anim animType="center">ra_effector_residual</anim>
 			</roomAnim>
@@ -996,6 +983,94 @@
 		<amount>2</amount>
 		<count>3</count>
 	</boost>
+	<power>3</power>
+	<cost>65</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
+	<!--<image>ra_effector_impact_invisible</image>-->
+	<image>ra_effector_hacking</image>
+	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
+	<launchSounds>
+		<sound>rvs_effector_shoot1</sound>
+		<sound>rvs_effector_shoot2</sound>
+		<sound>rvs_effector_shoot3</sound>
+		<sound>rvs_effector_shoot4</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hackStart</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hackStart</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>ra_effector_chain</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="RA_EFFECTOR_ADAPTIVE">
+	<type>BOMB</type>
+	<tip>rvs_tip_effector</tip>
+	<title>Adaptive Effector</title>
+	<short>Adapt Eff.</short>
+	<flavorType>Disruption Field Projector</flavorType>
+	<locked>1</locked>
+	<desc>Intelligent field projector that learns from the enemy system to compute better hacking solutions.  Do not dwell too much on where the intelligence comes from.</desc>
+	<descriptionOverride>Intelligent field projector that learns from the enemy system to compute better hacking solutions. Do not dwell too much on where the intelligence comes from.
+
+		Stats:
+		Required Power: 3
+		Charge Time: 18 seconds
+		Shots Per Charge: 1
+
+		Hacking Duration: 6 seconds
+		Adaptive Effect: Increase hacking duration by 2
+		Hacking Duration Cap: 12 seconds (3 chains)
+
+		Hack Immunity: 3 seconds
+		Accuracy Bonus: +10%
+		
+		Buy/Sell Price: 65~/32~
+	</descriptionOverride>
+	<tooltip>Disrupts enemy systems.</tooltip>
+	<tooltipOverride>Required Power: 3
+		Charge Time: 18 seconds
+		Shots Per Charge: 1
+
+		Hacking Duration: 6 seconds
+		Adaptive Effect: Increase hacking duration by 2
+		Hacking Duration Cap: 12 seconds (3 chains)
+		
+		Hack Immunity: 3 seconds
+		Accuracy Bonus: +10%
+	</tooltipOverride>
+	<damage>0</damage>
+	<boost>
+		<type>cooldown</type>
+		<amount>0.01</amount>
+		<count>4</count>
+	</boost>
+	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
+	<hack duration="6" immuneAfterHack="3" boostHackingTimeAddition="2"/>
+	<roomStatBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>0</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<duration>15</duration>
+			<roomAnim renderLayer="3">
+				<anim animType="center">ra_effector_residual</anim>
+			</roomAnim>
+		</statBoost>
+	</roomStatBoosts>
+	<accuracyMod>10</accuracyMod>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>18</cooldown>
 	<power>3</power>
 	<cost>65</cost>
 	<bp>2</bp>

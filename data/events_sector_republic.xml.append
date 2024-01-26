@@ -1,0 +1,3 @@
+<mod:findName type="eventList" name="HOSTILE_LEECH">
+	<mod-append:event load="RVS_GENERIC_ENCOUNTER_AI_REGULAR_LIMIT" />
+</mod:findName>

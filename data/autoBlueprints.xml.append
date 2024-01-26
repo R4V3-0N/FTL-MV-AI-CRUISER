@@ -88,6 +88,7 @@
 	<name>RA_EFFECTOR_2</name>
 	<name>RA_EFFECTOR_HEAVY</name>
 	<name>RA_EFFECTOR_CHAIN</name>
+	<name>RA_EFFECTOR_ADAPTIVE</name>
 </blueprintList>
 
 <!-- Other Lists-->
@@ -112,7 +113,7 @@
 	<name>RA_EFFECTOR_1</name>
 	<name>RA_EFFECTOR_2</name>
 	<name>RA_EFFECTOR_HEAVY</name>
-	<name>RA_EFFECTOR_CHAIN</name>
+	<name>RA_EFFECTOR_ADAPTIVE</name>
 </blueprintList>
 
 
@@ -154,7 +155,7 @@
 	<name>RA_EFFECTOR_1</name>
 	<name>RA_EFFECTOR_2</name>
 	<name>RA_EFFECTOR_HEAVY</name>
-	<!--<name>RA_EFFECTOR_CHAIN</name>-->
+	<!--<name>RA_EFFECTOR_ADAPTIVE</name>-->
 	<name>RVS_LASER_BURST_SCATTER_1</name>
 	<name>RVS_LASER_BURST_SCATTER_2</name>
 		<name>RVS_SHOTGUN_SCATTER</name>
@@ -410,4 +411,28 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<boardingAI>sabotage</boardingAI>
 	<aug name="RVS_ANTI_GRAVITY_ENGINE" />
 	<aug name="ENERGY_SHIELD" />
+</shipBlueprint>
+
+<!-- Empty guard ship -->
+<shipBlueprint name="MU_MILITIA_GUARD_ELITE_EMPTY" layout="mu_militia_guard_elite" img="mu_militia_guard_elite">
+	<class>EDC Guard</class>
+	<systemList>
+		<cloaking power="1" max="1" room="4" start="false" />
+		<clonebay power="1" max="1" room="2" start="false" />
+		<engines power="1" max="1" room="7" start="true" />
+		<medbay power="1" max="1" room="2" start="false" />
+		<oxygen power="1" max="1" room="3" start="true" />
+		<pilot power="1" max="1" room="0" start="true" />
+		<shields power="1" max="1" room="1" start="true" />
+		<teleporter power="1" max="1" room="6" start="false" />
+		<weapons power="1" max="1" room="5" start="true" />
+	</systemList>
+	<weaponSlots>0</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<droneList drones="0" count="0" />
+	<health amount="2" />
+	<maxPower amount="0" />
+	<crewCount amount="1" max="1" class="LIST_CREW_MILITIA_ELITE_RANDOM" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>mu_militia_guard</cloakImage>
 </shipBlueprint>

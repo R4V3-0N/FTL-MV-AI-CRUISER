@@ -1,0 +1,40 @@
+<mod:findName type="event" name="MV_TRAVELER_SECTORS13">
+	<mod:findLike type="loadEventList">
+		<mod-append:event load="MV_TRAVELER_AI_INTERCEPTOR"/>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="MV_TRAVELER_SECTORS45">
+	<mod:findLike type="loadEventList">
+		<mod-append:event load="MV_TRAVELER_AI_INTERCEPTOR"/>
+		<mod-append:event load="MV_TRAVELER_AI_ASSAULT"/>		<!-- Only in 4 5 for now as might be too spooky for 1 3 -->
+	</mod:findLike>
+</mod:findName>
+
+<ship name="SHIP_RVSR_AI_INTERCEPTOR" auto_blueprint="RVSR_AI_INTERCEPTOR">
+	<destroyed load="DEFEAT_MULTIVERSE_TRAVELER" />
+	<deadCrew load="DEFEAT_MULTIVERSE_TRAVELER" />
+</ship>
+<event name="MV_TRAVELER_AI_INTERCEPTOR">
+	<text>Your ship is bombarded with transmissions from beyond the portal's horizon, too rapid and dense to decypher in live time. This is only compounded as the data flow accelerates in advance of the arival of a ship unlike any you have ever seen. It crawls to a stop as its transmissions end, as though waiting for you to respond. 
+
+You don't have time to do so, as the ship engages in a hard burn with its weapons powering up mere moments later! You do not know if you offended them or if their intent was hostile from the outset, but regardless, you power weapons and prepare to respond in kind.</text>
+	<ship load="SHIP_RVSR_AI_INTERCEPTOR" hostile="true"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
+
+<ship name="SHIP_RVSR_AI_ASSAULT" auto_blueprint="RVSR_AI_ASSAULT">
+	<destroyed load="DEFEAT_MULTIVERSE_TRAVELER" />
+	<deadCrew load="DEFEAT_MULTIVERSE_TRAVELER" />
+</ship>
+<event name="MV_TRAVELER_AI_ASSAULT">
+	<text>Emerging from the portal, a peculiarly designed vessel emerges, its otherworldly architecture unlike anything you’ve seen before though you aren’t able to linger on that thought too long. The vessel powers up its weapons as soon as it materializes in this universe with only a single text transmission: "TARGET_AQUIRED. PURGING_INFIDELS." There is no room for negotiations.</text>
+	<ship load="SHIP_RVSR_AI_ASSAULT" hostile="true"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>

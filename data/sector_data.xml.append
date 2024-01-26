@@ -20,7 +20,7 @@
 			<name>Nebula Zone</name>-->
 		</nameList>
 		<trackList>
-			<track>unexplored</track>
+			<track>avatar</track>
 			<track>avatar</track>
 			<track>void</track>
 			<track>sonar</track>
@@ -75,7 +75,7 @@
 			<blueprint name="RA_EFFECTOR_1" rarity="3"/>
 			<blueprint name="RA_EFFECTOR_2" rarity="4"/>
 			<blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-			<blueprint name="RA_EFFECTOR_CHAIN" rarity="4"/>
+			<blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
 			<blueprint name="RVS_PLASMA_1" rarity="2"/>
 			<blueprint name="RVS_PLASMA_2" rarity="3"/>
 			<blueprint name="RVS_PLASMA_3" rarity="4"/>
@@ -232,7 +232,7 @@
 			<blueprint name="MANNING" rarity="0"/>
 			<blueprint name="AMPHI_DEFENSE" rarity="0"/>
 		</rarityList>
-		<startEvent>ENTER_NEBULA</startEvent>
+		<startEvent>START_NEBULA_AI</startEvent>
 		<removeFirstBeaconNebula/>
 		<nebulaSector>true</nebulaSector>
 		<exitBeacon event="FINISH_BEACON_UNEXPLORED" nebulaEvent="NEBULA_FINISH_BEACON_UNEXPLORED" rebelEvent="FINISH_BEACON_FLEET_ELITE"/>
@@ -249,10 +249,10 @@
 		<event name="NEBULA_UNEXPLORED_ITEMS" min="2" max="3"/>
 		<event name="NEBULA_UNEXPLORED_NEUTRAL" min="2" max="3"/>
 		<!--<event name="NEBULA_UNEXPLORED_DISTRESS" min="1" max="2"/>-->
-		<priorityEvent name="EVENTS_CLEARING" min="1" max="4" priority="0"/>
+		<priorityEvent name="CLEARING_UNEXPLORED" min="1" max="4" priority="0"/>
 		
 		<event name="NEBULA_RVS_AI_ENCOUNTER_REBEL_LIGHTNEBULA" min="1" max="1"/>
-		<event name="NEBULA_HOSTILE" min="1" max="3"/>
+		<event name="NEBULA_UNEXPLORED_HOSTILE" min="1" max="3"/>
 
 		<event name="RVS_AI_NEBULA_EMPTY_EXPLORE" min="1" max="1"/>
 		<event name="PIRACY_LIST" min="1" max="2"/>
@@ -271,6 +271,9 @@
 		<mod-append:sector>SECTOR_UNEXPLORED_AI</mod-append:sector>
 	</mod:findName>
 	<mod:findName type="sectorType" name="SECTOR_LIST_GENERIC_NEBULA">
+		<mod-append:sector>SECTOR_UNEXPLORED_AI</mod-append:sector>
+	</mod:findName>
+	<mod:findName type="sectorType" name="SECTOR_LIST_GENERIC">
 		<mod-append:sector>SECTOR_UNEXPLORED_AI</mod-append:sector>
 	</mod:findName>
 	<mod:findName type="sectorType" name="NEBULA">
@@ -296,7 +299,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="0"/>
-		<mod-append:blueprint name="RA_EFFECTOR_CHAIN" rarity="0"/>
+		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="0"/>
 		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_1" rarity="0"/>	
 		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_SHOTGUN_SCATTER" rarity="0"/>
@@ -343,7 +346,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="0"/>
-		<mod-append:blueprint name="RA_EFFECTOR_CHAIN" rarity="0"/>
+		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="0"/>
 		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_1" rarity="0"/>	
 		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_SHOTGUN_SCATTER" rarity="0"/>
@@ -388,7 +391,7 @@
 	In the future these items will be a lot more restrictive
 -->
 
-<mod:findName type="sectorDescription" name="SECTOR_NEBULA" panic="true"> <!-- Nebula sector acting as defacto main way to get the fun toys currently -->
+<mod:findName type="sectorDescription" name="SECTOR_ABANDONED_GENERIC" panic="true"> <!-- Nebula sector acting as defacto main way to get the fun toys currently -->
     <mod:findLike type="rarityList">
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
@@ -397,7 +400,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="4"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_CHAIN" rarity="5"/>
+		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="5"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
@@ -426,7 +429,7 @@
 	<mod-append:event name="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
 	<mod-append:event name="RVS_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
 </mod:findName>
-<mod:findName type="sectorDescription" name="SECTOR_NEBULA_HEKTAR" panic="true">
+<mod:findName type="sectorDescription" name="SECTOR_ABANDONED_GENERIC_HEKTAR" panic="true">
     <mod:findLike type="rarityList">
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
@@ -435,7 +438,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="4"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_CHAIN" rarity="5"/>
+		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="5"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
@@ -461,8 +464,6 @@
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="4"/>
     </mod:findLike>
-	<mod-append:event name="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="1"/>
-	<mod-append:event name="RVS_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="1"/>
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_SEPARATIST">
@@ -474,7 +475,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_CHAIN" rarity="4"/>
+		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -500,7 +501,6 @@
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="3"/>
 	</mod:findLike>
-	<mod-append:event name="RVS_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
 </mod:findName>
 <mod:findName type="sectorDescription" name="SECTOR_SEPARATIST_UNIQUE">
 	<mod:findLike type = "rarityList">
@@ -511,7 +511,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_CHAIN" rarity="4"/>
+		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -534,10 +534,9 @@
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="2"/>	
 	</mod:findLike>
-	<mod-append:event name="RVS_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ZOLTAN">
+<mod:findName type="sectorDescription" name="SECTOR_MINISTRY">
 	<mod:findLike type = "rarityList">
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="3"/>
@@ -546,7 +545,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_CHAIN" rarity="4"/>
+		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -570,7 +569,7 @@
         <mod-append:blueprint name="rvs_ai_hologram" rarity="2"/>		
 	</mod:findLike>
 </mod:findName>
-<mod:findName type="sectorDescription" name="SECTOR_ZOLTAN_UNIQUE">
+<mod:findName type="sectorDescription" name="SECTOR_MINISTRY_UNIQUE">
 	<mod:findLike type = "rarityList">
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="2"/>
@@ -579,7 +578,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_CHAIN" rarity="4"/>
+		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -609,7 +608,7 @@
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ENGI">
+<mod:findName type="sectorDescription" name="SECTOR_HARMONY">
 	<mod:findLike type = "rarityList">
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
@@ -618,7 +617,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_CHAIN" rarity="4"/>
+		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -646,7 +645,7 @@
         <mod-append:blueprint name="rvs_ai_hologram" rarity="4"/>	
 	</mod:findLike>
 </mod:findName>
-<mod:findName type="sectorDescription" name="SECTOR_ENGI_UNIQUE">
+<mod:findName type="sectorDescription" name="SECTOR_HARMONY_UNIQUE">
 	<mod:findLike type = "rarityList">
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
@@ -655,7 +654,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_CHAIN" rarity="4"/>
+		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -681,9 +680,5 @@
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="4"/>
 	</mod:findLike>
-</mod:findName>
-<mod:findName type="sectorDescription" name="SECTOR_ABANDONED">
-	<mod-append:event name="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="1"/>
-	<mod-append:event name="RVS_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
 </mod:findName>
 </FTL>

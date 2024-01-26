@@ -112,9 +112,35 @@
     </mod-append:customShip>
 	
     <!-- Enemies -->
-	<mod-append:customShip name="RVSER_AI_INTERCEPTER">
+	<mod-append:customShip name="RVS_AI_INTERCEPTOR">
 		<shipIcons>
 			<shipIcon>icon_no2</shipIcon>
+			<shipIcon>icon_auto</shipIcon>
+        </shipIcons>
+		<autoShipForce>true</autoShipForce>
+	</mod-append:customShip>
+
+    <mod-append:customShip name="RVSR_AI_INTERCEPTOR">
+		<shipIcons>
+			<shipIcon>icon_no2</shipIcon>
+            <shipIcon>icon_threat</shipIcon>
+			<shipIcon>icon_auto</shipIcon>
+        </shipIcons>
+		<autoShipForce>true</autoShipForce>
+	</mod-append:customShip>
+
+    <mod-append:customShip name="RVS_AI_ASSAULT">
+		<shipIcons>
+			<shipIcon>icon_no2</shipIcon>
+			<shipIcon>icon_auto</shipIcon>
+        </shipIcons>
+		<autoShipForce>true</autoShipForce>
+	</mod-append:customShip>
+
+    <mod-append:customShip name="RVSR_AI_ASSAULT">
+		<shipIcons>
+			<shipIcon>icon_no2</shipIcon>
+            <shipIcon>icon_threat</shipIcon>
 			<shipIcon>icon_auto</shipIcon>
         </shipIcons>
 		<autoShipForce>true</autoShipForce>
@@ -516,7 +542,29 @@
 </mod:findLike>
 
 <mod:findLike type="scripts" limit="1">
+    <mod-append:script>data/vertex_module/tags/hack.lua</mod-append:script>
     <mod-append:script>data/rvs_scripts/ai_cruiser.lua</mod-append:script>
     <mod-append:script>data/rvs_scripts/ai_cruiser_ach.lua</mod-append:script>
+</mod:findLike>
+
+<!-- Music unlock for Jukebox -->
+<events>
+    <metaVariable name="juke_avatar" op="set" val="0"/>
+</events>
+<mod:findLike type="achievements" limit="1">
+	<mod-append:page>
+        <section text="Music" hidden="false">
+            <achievement name="MUSIC_AVATAR">
+                <name>Avatar + Sonar</name>
+                <secretName>[UC]???</secretName>
+                <description id="jukebox_unlocked"/>
+                <secretDescription id="jukebox_locked"/>
+                <header id="jukebox_header"/>
+                <icon>music_unlocked</icon>
+                <variable name="juke_avatar" amount="1"/>
+                <multiDifficulty>false</multiDifficulty>
+            </achievement>
+        </section>
+	</mod-append:page>
 </mod:findLike>
 </FTL>

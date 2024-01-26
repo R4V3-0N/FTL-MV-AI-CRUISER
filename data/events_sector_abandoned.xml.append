@@ -1,0 +1,4 @@
+
+<mod:findName type="eventList" name="HOSTILE_ABANDONED">
+	<mod-append:event load="RVS_NEBULA_GENERIC_ENCOUNTER" />
+</mod:findName>

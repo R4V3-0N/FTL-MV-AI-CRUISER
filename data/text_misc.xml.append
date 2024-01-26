@@ -5,7 +5,12 @@
 <text name="rvs_tip_focus_split">Tip: Splitter pinpoint beams trade the high damage of most pinpoints for multiple beams, allowing for higher potential damage if the target's shields are down.</text>
 
 
-<text name="rvs_tip_effector">Tip: Effectors bypass shields and hack systems. They cannot hack systems which already have a hacking drone atemporarily become immune to effector hacking once the hack has completed.</text>
+<text name="rvs_tip_effector">Tip: Effectors bypass shields and hack systems.
+
+Tip: Effectors cannot hack systems under the effect of a hacking drone.
+
+Tip: After an Effector hacking cycle ends, the affected system becomes temporarily immune to further hacking for a determined amount of time.
+</text>
 <text name="rvs_tip_laser_scatter">Tip: Scatter lasers have a 25% chance to deal full damage, otherwise only deals hull damage. Each laser shot will be blocked by a single shield bubble, regardless of the laser's damage.</text>
 <text name="rvs_tip_plasma">Tip: Plasma weapons target a wide area and have a high chance to ignite fires at every room they hit and have a chance to deal damage rooms on fire based on the percent of the room on fire. They can not penetrate or deplete normal shields, but pass trough supershields.</text>
 
