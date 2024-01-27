@@ -21,15 +21,13 @@
 		</nameList>
 		<trackList>
 			<track>avatar</track>
-			<track>avatar</track>
 			<track>void</track>
 			<track>sonar</track>
 			<track>avatar</track>
 			<track>deepspace</track>
 			<track>sonar</track>
 			<track>avatar</track>
-			<track>void</track>
-			<track>sonar</track>
+			<track>unexplored</track>
 		</trackList>
 		<rarityList>
 			<blueprint name="rvs_ai_hologram" rarity="1"/>

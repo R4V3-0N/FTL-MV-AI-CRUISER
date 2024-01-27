@@ -542,7 +542,6 @@
 </mod:findLike>
 
 <mod:findLike type="scripts" limit="1">
-    <mod-append:script>data/vertex_module/tags/hack.lua</mod-append:script>
     <mod-append:script>data/rvs_scripts/ai_cruiser.lua</mod-append:script>
     <mod-append:script>data/rvs_scripts/ai_cruiser_ach.lua</mod-append:script>
 </mod:findLike>
