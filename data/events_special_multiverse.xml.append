@@ -31,7 +31,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 	<deadCrew load="DEFEAT_MULTIVERSE_TRAVELER" />
 </ship>
 <event name="MV_TRAVELER_AI_ASSAULT">
-	<text>Emerging from the portal, a peculiarly designed vessel emerges, its otherworldly architecture unlike anything you’ve seen before though you aren’t able to linger on that thought too long. The vessel powers up its weapons as soon as it materializes in this universe with only a single text transmission: "TARGET_AQUIRED. PURGING_INFIDELS." There is no room for negotiations.</text>
+	<text>A peculiarly designed vessel emerges from the portal, its architecture unlike anything you've seen before. The vessel powers up its weapons as soon as it materializes in this universe with only a single text transmission: "TARGET_AQUIRED. PURGING_INFIDELS." Apparently there will be no negotiations.</text>
 	<ship load="SHIP_RVSR_AI_ASSAULT" hostile="true"/>
 	<choice hidden="true">
 		<text>Continue...</text>
