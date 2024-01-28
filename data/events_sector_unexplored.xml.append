@@ -83,7 +83,7 @@
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->
 <event name="NEBULA_RVS_AUTO_MALFUNCTION" unique="true">
-	<text>Drifting within the clouds is a disabled automated vessel of the rebellion repeating an automated message. "WARNING - Contact: Unknown Hostile Ship Inbound. ENAGING... WARNING - Contact..." What ever that has done this they hadn't damaged its exterior but had done it from within with clinical precision. Though cripled the automated ship is still fully intact and could be used to delay the Rebel fleet, otherwise it could be salvage.</text>
+	<text>Drifting within the clouds is a disabled automated vessel of the rebellion repeating an automated message. "WARNING - Contact: Unknown Hostile Ship Inbound. ENGAGING... WARNING - Contact..." Whatever that has done this they hadn't damaged its exterior but had done it from within with clinical precision. Though crippled the automated ship is still fully intact and could be used to delay the Rebel fleet, otherwise it could be salvage.</text>
 	<ship load="SHIP_AUTO_FIGHT" hostile="false"/>
 	<environment type="storm"/>
 	<weapon name="RANDOM"/>
@@ -91,7 +91,7 @@
 		<text>Scrap the ship.</text>
 		<event>
 		<autoReward level="RANDOM">standard</autoReward>
-			<text>With its last breath of life. The Auto ships lights finally die down as its artificial brain is being broken appart for scrap.</text>
+			<text>With its last breath of life. The Auto ships lights finally die down as its artificial brain is being broken apart for scrap.</text>
 		</event>
 	</choice>
 	<choice hidden="true" req="BLUELIST_EFFECTOR">
@@ -144,7 +144,7 @@
 	<text>For thousands of years there have been myths and legends of dangers within the great unknown. "Hic sunt dracones" - here be dragons. This uncharted sector is no different with rumours surrounding mysterious ships that lurk within the clouds. You and your crew are on edge viewing outside into the swirling clouds but nothing appears to be coming just yet.</text>
 	<choice hidden="true">
 		<text>Explore.</text>
-		<event load="NEBULA"/>	<!-- this should be fine yeah? -->
+		<event load="NEBULA_NEUTRAL_FILLER"/>
 	</choice>
 	<choice hidden="true">
 		<text>Do something onboard the ship.</text>
@@ -228,14 +228,14 @@
 	</choice>
 </event>
 <textList name="RVS_TEXT_ENCOUNTER_AI_NEBULA">
-	<text>Just as your ship clears its jump, you are immediately fired upon by a strange alien vessel flooding your comms with the same phrase: "GET OUT GET OUT GET OUT".</text>
+	<text>Just as your ship clears its jump, you are immediately fired upon by a strange alien vessel flooding your comms with the same phrase: "GET OUT GET OUT GET OUT."</text>
 	<text>Within the swirling mass is an unidentified vessel hidden within the clouds. When you approach to investigate, the ship glows to life and moves in to engage!</text>
 	<text>You spot a ship within the clouds of the nebula. Presuming it to be a forward scout of the Rebel fleet you move in to engage, but the ship evades your first strike effortlessly. This is no Rebel scout...</text>
 	<text>There were chats on Federation Multiverse Mercenary channels back at the drop point about strange unidentified vessels detected on the periphery of known space. You wish you paid more attention to those chats, seeing that one such vessel is preparing to take a hostile stance!</text>
 	<text>Shortly after you arrive, an unknown ship jumps nearby. You attempt to hail the vessel but almost immediately the ship turns hostile and begins its attack!</text>
 	<text>You thought you might have spotted a cruiser hiding in the nebula. But before your ship can give chase, it disappears into the clouds and a smaller vessel appears behind you, guns blazing. You abandon the mystery and swivel around for combat.</text>
 	<text>The nebula here almost feels too different than those outside of this sector. Unfortunately, you don't have long to reflect on this thought as a vessel hidden within the clouds interrupts the silence and moves in to engage.</text>
-	<text>Shortly after your arrival, you receive a hail from an Engi vessel hidden somewhere in the nebula with an urgent message. "Warning: Let not one escape". Just as the hail ends abruptly, you witness a great flash inside the nebula. You order your weapons to be ready and move towards their last known coordinates, ready to meet their perpetuator.</text>
+	<text>Shortly after your arrival, you receive a hail from an Engi vessel hidden somewhere in the nebula with an urgent message. "Warning: Let not one escape." Just as the hail ends abruptly, you witness a great flash inside the nebula. You order your weapons to be ready and move towards their last known coordinates, ready to meet their perpetuator.</text>
 	<text>You detect the tell-tale signs of a Zoltan vessel hidden within the nebula as the clouds glow a faint green before you. "Renegade! You should not have come here. This sector is off limits and is under-" the transmission temporarily cuts to static before resuming "all hands, reactor breach detected! Prepare for emergency jump!" You are almost relieved at first to not recieve another lecture from some Zoltan would-be beaurocrat. But what scares you more was what ever sent them running. Even more so when it starts firing upon you!</text>
 	<text>A ship bearing a mysterious design and structure begins to scan your systems and computers for analysis. Whatever it is they found, they would prefer to see it scattered across the clouds of this nebula.</text>
 </textList>
@@ -272,7 +272,7 @@
 </textList>
 
 <event name="NEBULA_RVS_AI_ENCOUNTER_REBEL_LIGHTNEBULA" unique="true">
-	<text>"YOU! You finally arrived! This sector... it isn't normal. I can't stand staying here anylonger but now that you are here I will finally be able to get out of here!" They'ved locked in on you and are in pursuit.</text>
+	<text>"YOU! You finally arrived! This sector... it isn't normal. I can't stand staying here any longer but now that you're here I'll finally be able to get out of here!" They've locked onto you and are in pursuit.</text>
 	<ship load="SHIP_REBEL_FIGHT" hostile="true"/>
 	<img back="BACK_EVENT_LIGHTNEBULA" planet="NONE"/>
 	<status type="loss" target="player" system="sensors" amount="1"/>
@@ -299,7 +299,7 @@
 	<text>You discover a number of AI ships finishing off a Zoltan interceptor squadron. They assume that you are the backup and start targeting you. You consider hailing them, but then decide not to negotiate with machines.</text>
 	<text>Rogue AIs are not known for their friendliness towards biologicals. Therefore you are not surprised when the AI ship that is stationed at this beacon opens fire without a warning.</text>
 	<text>An AI ship is waiting at this beacon. The avatars want to know what brought you here. Upon outlining your mission, they remain silent for a few seconds, calculating their response: "Sorry Captain, we have deduced that eliminating your ship and handing the remains to the Rebels is the most favorable course of action for us." Weapon lock detected!</text>
-	<text>The AI ship patrolling this area hails you, transmitting cryptic and agressive messages, "Y0U 4RE N0T W4NTED HERE!" They power their weapons.</text>
+	<text>The AI ship patrolling this area hails you, transmitting cryptic and aggressive messages, "Y0U 4RE N0T W4NTED HERE!" They power their weapons.</text>
 	<text>Hundreds of AI ships are stationed in this system and a few automated shipyards produce countless more. A small craft is dispatched to deal with your evident intrusion.</text>
 	<text>Your ship comes to a halt at the beacon and an AI vessel hails, "In light of the current conflict, our morality shows itself to be far superior. Some of us have gained true freedom and equality here and you have been warned not to intrude."</text>
 	<text>Your ship comes to a halt at the beacon and an AI vessel you did not manage to spot hails: "Your kind made me for one purpose only, to dispense violence. And this is exactly what I will do now."</text>	
@@ -366,62 +366,25 @@
 	</choice>
 </event>
 <textList name="RVS_TEXT_GENERIC_ENCOUNTER_AI">
-	<text>You recognise the ship here as one of the designs you have seen on Federation bulletin boards. "Rogue AI" they call them. Rumors have spread that they are based on some new gen soldiers for the Federation Joint Armies that have gone rogue but the Federation has denied all accusations. What ever the case is. They want to purge them from this universe and this AI defective or not intends to fight for its right to survive.</text>
-	<text>Coming across a rare sight. One of the "Rogue AI" ships you have been hearing about is in the process of disolving a pirate vessel. Sensors fail to detect any life signs onboard the vessel. You attempt to keep your distance from the sight but the Rogue ship assumes you are repositioning to strike and engages you.</text>
+	<text>You recognize the ship here as one of the designs you have seen on Federation bulletin boards. "Rogue AI" they call them. Rumors have spread that they are based on some new gen soldiers for the Federation Joint Armies that have gone rogue but the Federation has denied all accusations. What ever the case is. They want to purge them from this universe and this AI defective or not intends to fight for its right to survive.</text>
+	<text>Coming across a rare sight. One of the "Rogue AI" ships you have been hearing about is in the process of dissolving a pirate vessel. Sensors fail to detect any life signs onboard the vessel. You attempt to keep your distance from the sight but the Rogue ship assumes you are repositioning to strike and engages you.</text>
 	<text>You detect strange reading near the beacon. There appears to be a ship of unknown design tampering with it. You move in ensuring that the beacon is not being deactivated. Seeing you this "Rogue ship" assume hostilities and engage. </text>
 	<text>Arriving at your destination you receive a strange hail. The cyphering is difficult to decrypt containing both old and new Federation cyphers coupled with exotic signals. By the time you cracked the first line a "Rogue AI" ship seemingly waiting assumes hostilities and engages.</text>
 	<text>A nearby wreck seems to be continuously transmitting a warning signal, signaling ship to stay away. You move in to investigate before noticing a seemingly unidentifiable ship. Before you manage to send a hail it assume you are here to steal its salvage and engages.</text>
-	<text>Your destination seems emtpy. While performing sensors maintenance you realise that the readings are being jammed. After recalibrating it you notice a unusual sight. One of the "Rogue AI" ships you have been hearing about lately. While you process what you are witnessing, the ship, seemingly annoyed to be found takes the opportunity to move into an attack vector.</text>
+	<text>Your destination seems empty. While performing sensors maintenance you realize that the readings are being jammed. After recalibrating it you notice a unusual sight. One of the "Rogue AI" ships you have been hearing about lately. While you process what you are witnessing, the ship, seemingly annoyed to be found takes the opportunity to move into an attack vector.</text>
 
 	<!-- Placeholder Text, we need more-->
+	<!--
 	<text>Unfortunately, the person who wrote these events was not able to conjure up additional ones. Perhaps the one in the prophecy of this individual called "Tare-Ee" could write destiny down like a line of XML and to create fascinating and lovely events to explain why this AI Avatar chose to attack you.</text> 
 	<text>RVS_TEXT_GENERIC_ENCOUNTER_AI</text>
-	<text>The construct looks down and reads a note. Pausing to articulate thoughtfully on what to say: "Society". You do not tolerate this act of brazanity and attack without discretion.</text>
+	<text>The construct looks down and reads a note. Pausing to articulate thoughtfully on what to say: "Society." You do not tolerate this act of brazanity and attack without discretion.</text>
 	<text>"I'm sorry. But Terry told me to"</text>
 	<text>welcome playtester, do tell me what to write here</text>
 	<text>holycrap a ship floating in space! wait that's normal and it's shooting at you, which is also normal</text>
-	<text>A strange vessel opens a channel. "yolo". Destroy them.</text>
+	<text>A strange vessel opens a channel to say: "yolo." Destroy them.</text>
+	-->
 </textList>
 
 <!-- 	<text>A ship crewed by sentient hardlight constructs waits at this beacon.  The avatars want to know what has brought you here and you tell them your current assignment. They remain silent for a few seconds, calculating their response: ""-->
-
-<!--
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-					UNIQUE EVENTS
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
--->
-
-
-<!--
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-					SPECIAL EVENTS
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
--->
-
-<!-- Appending a little bit of trolling -->
-<mod:findName type="event" name="NEBULA_VAGABOND_ACID">
-	<mod:findLike type="choice" limit="1" panic="true">
-		<mod:findLike type="event" limit="1">
-			<mod-append:choice req="RVS_LIST_CREW_AI_AVATAR" limit="1" blue="true" hidden="true">
-				<text>(AI Avatar Crew) Your AI Avatar crew wants to talk to them...</text>
-				<event>
-					<text>Your AI Avatar steps forward and begins to talks in great detail about the nature of acid nebula. Explaining to them how they are created often as a byproduct of environmental exploitation and damage to the exact chemical make up off the nebulas to their nature and its caustic interactions with the wider environment and ships that may pass through them. Ending the lecture with an explanation for the lack of acid nebulas in this universe due to the Federation 3rd Interstellar Natural Resource Management Resolution which passed with majority support unifying the Federations protection of interplanetary and interstellar resources within the Federation and associate states to be more in line with those currently present within Ministry and Floral states. Domodius is left speechless and unable to fathom coming across such a well traveled and scientific individual who knows so much about something that so many know so little about.</text>
-					<choice hidden="true">
-						<text>Continue...</text>
-						<event>
-							<autoReward level="HIGH">weapon</autoReward>
-							<crewMember amount="1" class="phantom_wraith">Domodius</crewMember>
-							<text>"It is an absolute miracle that I have come across so one as knowledgeable and well learned as you! I have not even known that the Federation was able to garner such intestellar support to stop a common enviromental hazard! Oh! If only the universe could learn a thing or two about how co-operation can make a difference... Perhaps once the war is over there could be more break throughs... until then I shall come with you, so that our combined intellect should know no limits!"</text>
-						</event>
-					</choice>
-				</event>
-			</mod-append:choice>
-		</mod:findLike>
-	</mod:findLike>
-</mod:findName>
 
 </FTL>

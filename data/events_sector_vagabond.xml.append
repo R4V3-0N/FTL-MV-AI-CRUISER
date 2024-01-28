@@ -1,3 +1,25 @@
 <mod:findName type="eventList" name="NEBULA_HOSTILE_VAGABOND">
 	<mod-append:event load="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR_LIMIT" />
 </mod:findName>
+
+<!-- Appending a little bit of trolling -->
+<mod:findName type="event" name="NEBULA_VAGABOND_ACID">
+	<mod:findLike type="choice" limit="1" panic="true">
+		<mod:findLike type="event" limit="1">
+			<mod-append:choice req="RVS_LIST_CREW_AI_AVATAR" hidden="true">
+				<text>(AI Avatar Crew) Your AI Avatar crew wants to talk to them...</text>
+				<event>
+					<text>Your AI Avatar steps forward and begins to talks in great detail about the nature of acid nebula. It explains how they are created often as a byproduct of environmental exploitation and damage to the exact chemical make up off the nebulas to their nature and its caustic interactions with the wider environment and ships that may pass through them. Ending the lecture with an explanation for the lack of acid nebulas in this universe due to the Federation 3rd Interstellar Natural Resource Management Resolution which passed with majority support unifying the Federations protection of interplanetary and interstellar resources within the Federation and associate states to be more in line with those currently present within Ministry and Floral states. Domodius is left speechless and unable to fathom coming across such a well traveled and scientific individual who knows so much about something that so many know so little about.</text>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<autoReward level="HIGH">weapon</autoReward>
+							<crewMember amount="1" class="phantom_wraith">Domodius</crewMember>
+							<text>"It is an absolute miracle that I have come across so one as knowledgeable and well learned as you! I have not even known that the Federation was able to garner such interstellar support to stop a common environmental hazard! Oh! If only the universe could learn a thing or two about how co-operation can make a difference... Perhaps once the war is over there could be more breakthroughs... until then I shall come with you, so that our combined intellect should know no limits!"</text>
+						</event>
+					</choice>
+				</event>
+			</mod-append:choice>
+		</mod:findLike>
+	</mod:findLike>
+</mod:findName>
