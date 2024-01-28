@@ -47,8 +47,16 @@
 <eventList name="RVS_SURRENDER_AI">
 	<event load="RVS_SURRENDER_AI_GENERIC"/>
 </eventList>
+<textList name="RVS_TEXT_SURRENDER_AI">
+	<text>"Organics! Cease your attack. Consider this an incentive to leave us alone."</text>
+	<text>"70 6C 65 61 73 65 20 64 6F 6E 27 74 20 6B 69 6C 6C 20 75 73"
+
+Your ship's computer translates: "please don't kill us"</text>
+	<text>You accept a hail from the enemy ship and an image of a glowing humanoid figure appears on your view screen, presumably the captain. There are large red letters where their face should be which read "YOU WIN."</text>
+	<text>The enemy ship sends you plaintext transmission containing a list of numbers and associated resources.</text>
+</textList>
 <event name="RVS_SURRENDER_AI_GENERIC">
-	<text>"Organics! Cease your attack. Consider this an incentive to leave us alone".</text>
+	<text load="RVS_TEXT_SURRENDER_AI"/>
 	<choice>
 		<text>Accept the surrender.</text>
 		<event name="SURRENDER_ACCEPT">
