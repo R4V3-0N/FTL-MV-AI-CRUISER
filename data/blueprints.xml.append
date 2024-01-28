@@ -1008,7 +1008,7 @@
 	<weaponArt>ra_effector_chain</weaponArt>
 </weaponBlueprint>
 
-<weaponBlueprint name="RA_EFFECTOR_ADAPTIVE">
+<!-- <weaponBlueprint name="RA_EFFECTOR_ADAPTIVE">
 	<type>BOMB</type>
 	<tip>rvs_tip_effector</tip>
 	<title>Adaptive Effector</title>
@@ -1050,7 +1050,6 @@
 		<amount>0.01</amount>
 		<count>4</count>
 	</boost>
-	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
 	<hack duration="6" immuneAfterHack="3" boostHackingTimeAddition="2"/>
 	<roomStatBoosts>
 		<statBoost name="trueHealAmount">
@@ -1074,10 +1073,9 @@
 	<power>3</power>
 	<cost>65</cost>
 	<bp>2</bp>
-	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
-	<!--<image>ra_effector_impact_invisible</image>-->
+	<rarity>0</rarity>
 	<image>ra_effector_hacking</image>
-	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
+	<explosion>invisible</explosion>
 	<launchSounds>
 		<sound>rvs_effector_shoot1</sound>
 		<sound>rvs_effector_shoot2</sound>
@@ -1094,7 +1092,7 @@
 		<sound>silence</sound>
 	</missSounds>
 	<weaponArt>ra_effector_chain</weaponArt>
-</weaponBlueprint>
+</weaponBlueprint> -->
 
 
 

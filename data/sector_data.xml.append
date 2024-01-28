@@ -75,7 +75,7 @@
 		<blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<blueprint name="RA_EFFECTOR_2" rarity="4"/>
 		<blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
+		<!-- <blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/> -->
 		<blueprint name="RVS_PLASMA_1" rarity="2"/>
 		<blueprint name="RVS_PLASMA_2" rarity="3"/>
 		<blueprint name="RVS_PLASMA_3" rarity="4"/>
@@ -275,7 +275,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="0"/>
-		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="0"/>
+		<!-- <mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="0"/> -->
 		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_1" rarity="0"/>	
 		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_SHOTGUN_SCATTER" rarity="0"/>
@@ -322,7 +322,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="0"/>
-		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="0"/>
+		<!-- <mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="0"/> -->
 		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_1" rarity="0"/>	
 		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_SHOTGUN_SCATTER" rarity="0"/>
@@ -376,7 +376,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="4"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="5"/>
+		<!-- <mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="5"/> -->
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
@@ -414,7 +414,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="4"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="5"/>
+		<!-- <mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="5"/> -->
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
@@ -451,7 +451,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
+		<!-- <mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/> -->
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -487,7 +487,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
+		<!-- <mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/> -->
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -521,7 +521,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
+		<!-- <mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/> -->
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -554,7 +554,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
+		<!-- <mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/> -->
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -593,7 +593,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
+		<!-- <mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/> -->
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -630,7 +630,7 @@
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
+		<!-- <mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/> -->
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
