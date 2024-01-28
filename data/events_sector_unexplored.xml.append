@@ -198,9 +198,10 @@
 
 
 <event name="RVS_AI_ASTEROID" unique="true">
-	<img back="BG_DARK" planet="NONE"/>
 	<text>You arrive in an asteroid belt where small swarms of nano-bots are dissolving rocks and minerals to produce more nano-bots. At least, you think those are nano-bots. The rogue AI ship overseeing the swarm moves in to chase you off.</text>
 	<ship load="RVS_SHIP_AI_FIGHT" hostile="true"/>
+	<img back="BACK_EVENT_LIGHTNEBULA" planet="NONE"/>
+	<status type="loss" target="player" system="sensors" amount="1"/>
 	<environment type="asteroid"/>
 	<choice hidden="true">
 		<text>Continue...</text>
