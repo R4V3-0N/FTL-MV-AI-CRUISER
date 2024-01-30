@@ -1186,7 +1186,7 @@
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>Plasma Projector Mark III</title>
-	<tip>ce_tip_plasma</tip>
+	<tip>rvs_tip_plasma</tip>
 	<short>Plasma III</short>
 	<desc>Fires multiple blasts of plasma across a random area with a chance to light fires in every room that is hit.</desc>
 	<tooltip>Fires plasma across a wide, random area. Very high fire chance.</tooltip>
