@@ -10,23 +10,23 @@
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->	
 
-<mod:findLike type="event" name="ATLAS_MENU">
+<mod:findName type="event" name="ATLAS_MENU">
     <mod-append:choice hidden="true" req="SEC SECTOR_UNEXPLORED_AI" blue="false">
         <text>Proceed to the Uncharted Sector</text>
         <event>
 			<loadEvent>AI_WARP</loadEvent>
 		</event>
     </mod-append:choice>
-</mod:findLike>
+</mod:findName>
 
-<mod:findLike type="event" name="ATLAS_MENU_NOEQUIPMENT">
+<mod:findName type="event" name="ATLAS_MENU_NOEQUIPMENT">
     <mod-append:choice hidden="true" req="SEC SECTOR_UNEXPLORED_AI" blue="false">
         <text>Proceed to the Uncharted Sector</text>
 		<event>
 			<loadEvent>AI_WARP</loadEvent>
 		</event>
     </mod-append:choice>
-</mod:findLike>
+</mod:findName>
 
 <event name="ENTER_AI">
 	<text load="TEXT_LIGHTSPEED"/>
