@@ -13,7 +13,18 @@
 <mod:findLike type="event" name="ATLAS_MENU">
     <mod-append:choice hidden="true" req="SEC SECTOR_UNEXPLORED_AI" blue="false">
         <text>Proceed to the Uncharted Sector</text>
-        <event load="AI_WARP"/>
+        <event>
+			<loadEvent>AI_WARP</loadEvent>
+		</event>
+    </mod-append:choice>
+</mod:findLike>
+
+<mod:findLike type="event" name="ATLAS_MENU_NOEQUIPMENT">
+    <mod-append:choice hidden="true" req="SEC SECTOR_UNEXPLORED_AI" blue="false">
+        <text>Proceed to the Uncharted Sector</text>
+		<event>
+			<loadEvent>AI_WARP</loadEvent>
+		</event>
     </mod-append:choice>
 </mod:findLike>
 
@@ -27,10 +38,10 @@
 </event>
 <event name="AI_WARP">
 	<text>Name: Uncharted Sector
-    Type: Uncolonized
-    Unique: False
-    Dominant Faction: None
-    Rebel Threat Level: Medium
+Type: Uncolonized
+Unique: False
+Dominant Faction: None
+Rebel Threat Level: Medium
 	
 	One of the few uncharted sector in your path. Typically, your atlas would be brimming with topographic details, courtesy of the Federation's charting initiative. However, this time, it appears that only a scant number of automated probes managed to get out of there.</text>
 	<choice hidden="true">
