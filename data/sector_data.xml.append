@@ -232,7 +232,7 @@
 		<blueprint name="MANNING" rarity="0"/>
 		<blueprint name="AMPHI_DEFENSE" rarity="0"/>
 	</rarityList>
-	<startEvent>START_NEBULA_AI</startEvent>
+	<startEvent>ENTER_AI</startEvent>
 	<removeFirstBeaconNebula/>
 	<nebulaSector>true</nebulaSector>
 	<exitBeacon event="FINISH_BEACON_UNEXPLORED" nebulaEvent="NEBULA_FINISH_BEACON_UNEXPLORED" rebelEvent="FINISH_BEACON_FLEET_ELITE"/>

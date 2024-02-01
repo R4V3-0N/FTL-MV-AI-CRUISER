@@ -32,7 +32,7 @@
     Dominant Faction: None
     Rebel Threat Level: Medium
 	
-	One of the few uncharted sector in your path, oftentime your atlas is filled with topographic information about those area thanks to the Federation charting initiative. But it seems this time few automated probe got out of there.</text>
+	One of the few uncharted sector in your path. Typically, your atlas would be brimming with topographic details, courtesy of the Federation's charting initiative. However, this time, it appears that only a scant number of automated probes managed to get out of there.</text>
 	<choice hidden="true">
 		<text>Exit hyperspeed.</text>
 		<event load="START_NEBULA_AI"/>
