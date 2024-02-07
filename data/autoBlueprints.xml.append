@@ -88,7 +88,7 @@
 	<name>RA_EFFECTOR_2</name>
 	<name>RA_EFFECTOR_HEAVY</name>
 	<name>RA_EFFECTOR_CHAIN</name>
-	<!-- <name>RA_EFFECTOR_ADAPTIVE</name> -->
+	<name>RA_EFFECTOR_ADAPTIVE</name>
 </blueprintList>
 
 <!-- Other Lists-->
@@ -113,7 +113,7 @@
 	<name>RA_EFFECTOR_1</name>
 	<name>RA_EFFECTOR_2</name>
 	<name>RA_EFFECTOR_HEAVY</name>
-	<!-- <name>RA_EFFECTOR_ADAPTIVE</name> -->
+	<name>RA_EFFECTOR_ADAPTIVE</name>
 </blueprintList>
 
 
@@ -155,7 +155,7 @@
 	<name>RA_EFFECTOR_1</name>
 	<name>RA_EFFECTOR_2</name>
 	<name>RA_EFFECTOR_HEAVY</name>
-	<!--<name>RA_EFFECTOR_ADAPTIVE</name>-->
+	<name>RA_EFFECTOR_ADAPTIVE</name>
 	<name>RVS_LASER_BURST_SCATTER_1</name>
 	<name>RVS_LASER_BURST_SCATTER_2</name>
 		<name>RVS_SHOTGUN_SCATTER</name>

@@ -1008,7 +1008,7 @@
 	<weaponArt>ra_effector_chain</weaponArt>
 </weaponBlueprint>
 
-<!-- <weaponBlueprint name="RA_EFFECTOR_ADAPTIVE">
+<weaponBlueprint name="RA_EFFECTOR_ADAPTIVE">
 	<type>BOMB</type>
 	<tip>rvs_tip_effector</tip>
 	<title>Adaptive Effector</title>
@@ -1048,7 +1048,7 @@
 	<boost>
 		<type>cooldown</type>
 		<amount>0.01</amount>
-		<count>4</count>
+		<count>3</count>
 	</boost>
 	<hack duration="6" immuneAfterHack="3" boostHackingTimeAddition="2"/>
 	<roomStatBoosts>
@@ -1092,7 +1092,7 @@
 		<sound>silence</sound>
 	</missSounds>
 	<weaponArt>ra_effector_chain</weaponArt>
-</weaponBlueprint> -->
+</weaponBlueprint>
 
 
 
