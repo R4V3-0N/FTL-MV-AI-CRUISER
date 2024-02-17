@@ -33,7 +33,9 @@
 	<img back="BACKGROUND_LIGHTSPEED" planet="NONE"/>
 	<choice hidden="true">
 		<text>Continue...</text>
-		<event load="LOAD_ATLAS_MARKER"/>
+		<event>
+			<loadEvent>LOAD_ATLAS_MARKER</loadEvent>
+		</event>
 	</choice>
 </event>
 <event name="AI_WARP">
@@ -46,10 +48,14 @@ Rebel Threat Level: Medium
 	One of the few uncharted sector in your path. Typically, your atlas would be brimming with topographic details, courtesy of the Federation's charting initiative. However, this time, it appears that only a scant number of automated probes managed to get out of there.</text>
 	<choice hidden="true">
 		<text>Exit hyperspeed.</text>
-		<event load="START_NEBULA_AI"/>
+		<event>
+			<loadEvent>START_NEBULA_AI</loadEvent>
+		</event>
 	</choice>
 	<choice hidden="true" req="COORDS" blue="false">
 		<text>Reroute.</text>
-		<event load="REROUTE_MENU"/>
+		<event>
+			<loadEvent>REROUTE_MENU</loadEvent>
+		</event>
 	</choice>
 </event>
