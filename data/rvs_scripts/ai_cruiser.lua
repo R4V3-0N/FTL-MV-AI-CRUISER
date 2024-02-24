@@ -76,8 +76,7 @@ local function holoHeal(ship)
     end
 end
 script.on_internal_event(Defines.InternalEvents.JUMP_LEAVE, holoHeal)
---TODO: Run callback on ON_WAIT (when it is implemented)
---script.on_internal_event(Defines.InternalEvents.ON_WAIT, holoHeal)
+script.on_internal_event(Defines.InternalEvents.ON_WAIT, holoHeal)
 
 -- Increase manning bonuses by 50% for sentient combat AI
 script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR, function(ship, value)
