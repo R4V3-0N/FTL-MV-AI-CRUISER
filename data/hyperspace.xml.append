@@ -11,7 +11,7 @@
 
 <FTL>
 
-<version>^1.9.0</version>
+<version>^1.10.0</version>
 
 <mod:findLike type="events">
     <mod:findName type="req" name="BLUELIST_CREW_NOFIRE">
