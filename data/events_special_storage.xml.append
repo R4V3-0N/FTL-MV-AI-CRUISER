@@ -487,7 +487,7 @@
             <status type="clear" target="player" system="reactor" amount="100"/>
 		</event>
 	</choice>
-	<choice>
+	<choice hidden="true">
 		<text>Do something else instead.</text>
 		<event load="COMBAT_CHECK"/>
 	</choice>
@@ -519,7 +519,7 @@
             </choice>
 		</event>
 	</choice>
-	<choice>
+	<choice hidden="true">
 		<text>Do something else instead.</text>
 		<event load="COMBAT_CHECK"/>
 	</choice>
