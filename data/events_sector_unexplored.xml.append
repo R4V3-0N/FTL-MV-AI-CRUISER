@@ -177,31 +177,28 @@
 	<environment type="nebula"/>
 	<text>As your ship navigates the uncharted depths of the nebula, your sensors pick up a faint signal amidst the cosmic haze. Following the erratic blips, you stumble upon an orbital research facility concealed within the nebulous clouds. However, upon closer inspection, the facility appears eerily silent, with no signs of recent activity.</text>
 	
-	<choice hidden="true" req="challenge_level" lvl="2" max="3" blue="false">
+	<choice hidden="true" req="challenge_level" lvl="2" max="3" blue="false" max_group="0">
+		<text>Investigate the station.</text>
+		<event>
+			<triggeredEvent event="RVS_MUSKY_BOARDING_WIN" thisFight="false" clearOnJump="true">
+				<enemyCrew amount="0" includeClonebay="false"/>
+			</triggeredEvent>
+			<boarders min="2" max="4" class="human_engineer"/>
+			<text>Your crew navigates dimly lit passageways in the abandoned station, revealing signs of a struggle with scattered terminals and medical instruments. A functioning terminal displays a message: "First human received SynapSync implant, recovering well, promising neuron spike detection." As the red lights die, a sense of danger grips your crew, and they sprint back to the ship. Footsteps and guttural sounds echo, intensifying with each passageway. Collapsing into the airlock, you scramble to your feet, drawing your blaster - these things are already on board.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="challenge_level" lvl="0" max="1" blue="false" max_group="0">
 		<text>Investigate the station.</text>
 		<event>
 			<triggeredEvent event="RVS_MUSKY_BOARDING_WIN" thisFight="false" clearOnJump="true">
 				<enemyCrew amount="0" includeClonebay="false"/>
 			</triggeredEvent>
 			<boarders min="1" max="3" class="human_engineer"/>
-			<boarders min="0" max="1" class="mutant"/>
-			<boarders min="1" max="1" class="rvs_ai_hologram"/>
-			<text>Your crew navigates dimly lit passageways in the abandoned station, revealing signs of a struggle with scattered terminals and medical instruments. A functioning terminal displays a message: "First human received SynapSync implant, recovering well, promising neuron spike detection." As the red lights die, a sense of danger grips your crew, and they sprint back to the ship. Footsteps and guttural sounds echo, intensifying with each passageway. Collapsing into the airlock, you scramble to your feet, drawing your blaster - these things are already on board.</text>
-		</event>
-	</choice>
-	<choice hidden="true" req="challenge_level" lvl="0" max="1" blue="false">
-		<text>Investigate the station.</text>
-		<event>
-			<triggeredEvent event="RVS_MUSKY_BOARDING_WIN" thisFight="false" clearOnJump="true">
-				<enemyCrew amount="0" includeClonebay="false"/>
-			</triggeredEvent>
-			<boarders min="1" max="2" class="human_engineer"/>
-			<boarders min="0" max="1" class="mutant"/>
 			<text>Your crew navigates dimly lit passageways in the abandoned station, revealing signs of a struggle with scattered terminals and medical instruments. A functioning terminal displays a message: "First human received SynapSync implant, recovering well, promising neuron spike detection." As the red lights die, a sense of danger grips your crew, and they sprint back to the ship. Footsteps and guttural sounds echo, intensifying with each passageway. Collapsing into the airlock, you scramble to your feet, drawing your blaster - these things are already on board.</text>
 		</event>
 	</choice>
 
-	<choice hidden="true">
+	<choice hidden="true" max_group="1">
 		<text>Do something onboard the ship.</text>
 		<event>
 			<text>What ever is the reason for this station being here in this forsaken sector isn't of importance to you. You take a look at what can be down on your ship instead.</text>
@@ -218,11 +215,33 @@
 	<text>Laser burns mark the walls of the docking bay. The firefight is over and before you are the results of the 'research' conducted on this facility. Subjects that are driven to insanity by implants and cybernetics that they were experimented with. You decide that this twisted place should not remain and expunge it with prejudice.</text>
 </event>
 
-<!--
+<!-- AI store -->
 <event name="RVS_CLEARING_AI_STORE">
 	<text>A sentient fabricator resides at this beacon, attempting to peddle to you its exotic crafts and sculptures that it has created from the condensed nebula gas, fascinating.</text>
-	<store>RVS_STORE_AI</store>
-</event>-->
+	<store>RVS_STORE_AI</store>	<!-- TO DO -->
+	<!--
+	<choice hidden="true" req="FEDERATION_DATABASE">
+		<text>[Federation Database] ERROR! - ENTRY NOT FOUND!</text>
+		<event>
+			<text>WARNING - ENTRY NOT FOUND!. PLEASE VIEW ERROR LOG
+				RACE: ERROR!
+				TYPE: ERROR!
+				FACTION: ERROR!
+				AFFILIATION: ERROR!
+				THREAT: ERROR!
+
+				LICENSE 2B194
+				The entries for this sector are bloated with product placements and corporate jargon. What concerns you more however is the massive number of distress beacons located within this sector. This should be interesting...
+				</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<restartEvent/>
+				</event>
+			</choice>
+		</event>
+	</choice>-->
+</event>
 
 
 <!--
