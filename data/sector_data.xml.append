@@ -248,6 +248,7 @@
 	
 	<event name="NEBULA_UNEXPLORED_ITEMS" min="2" max="3"/>
 	<event name="NEBULA_UNEXPLORED_NEUTRAL" min="2" max="3"/>
+	<event name="RVS_MUSKY_STATION" min="1" max="1"/>
 	<!--<event name="NEBULA_UNEXPLORED_DISTRESS" min="1" max="2"/>-->
 	<priorityEvent name="CLEARING_UNEXPLORED" min="1" max="4" priority="0"/>
 	
