@@ -11,6 +11,10 @@ local function bool_to_num(bool)
     return bool and 1 or 0
 end
 
+local function PopRandom(_table)
+    return table.remove(_table, math.random(#_table))
+end
+
 local function get_crew_count_name(ship, speciesName)
     if ship then
         local count = 0
@@ -652,6 +656,8 @@ end)
 --Never target the same room twice, unless the ship has less than 3 rooms
 --Always target systems, unless the ship has less than 3 systems
 --Always target a defensive, offensive, and "other" system, unless the ship does not have a system to fit one or more of said categories
+local defensiveSystemIds = MakeSet {0, 1, 6, 10}
+local offensiveSystemIds = MakeSet {3, 4, 9, 11, 14, 15}
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE,
 function(projectile, weapon)
     if weapon.blueprint.name == "RVS_ARTILLERY_AI" and weapon.queuedProjectiles:size() == 2 then --Target projectiles when first projectile fires
