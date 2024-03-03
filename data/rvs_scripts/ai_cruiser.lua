@@ -346,7 +346,7 @@ local function aquire_drone_target(ship, droneName)
             end
         end
         for drone in vter(ship.spaceDrones) do
-            if drone.blueprint.name == droneName then
+            if drone.blueprint and drone.blueprint.name == droneName then
                 local targetTable = userdata_table(drone, "mods.ai.droneTarget")
                 targetTable.target = target
                 if target then
