@@ -142,8 +142,50 @@
         </shipIcons>
 		<autoShipForce>true</autoShipForce>
 	</mod-append:customShip>
+
+
+<!-- Bosses -->
+<!-- Multiverse Renegades-->
+
+    <mod-append:customShip name="RVSRB_AI_CRUISER_3_NORMAL">
+        <shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+        </shipIcons>
+        <!--<crew>
+            <slug_clansman room="0"/>
+        </crew>-->
+        <noFuelStalemate/>
+    </mod-append:customShip>
+    <mod-append:customShip name="RVSRB_AI_CRUISER_3_CHALLENGE">
+        <shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+        </shipIcons>
+        <noFuelStalemate/>
+    </mod-append:customShip>
+    <mod-append:customShip name="RVSRB_AI_CRUISER_3_EXTREME">
+        <shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+        </shipIcons>
+        <noFuelStalemate/>
+    </mod-append:customShip>
+    <mod-append:customShip name="RVSRB_AI_CRUISER_3_CHAOS">
+        <shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep_chaos</shipIcon>
+        </shipIcons>
+        <noFuelStalemate/>
+    </mod-append:customShip>
 </mod:findLike>
 
+<events>
+    <bossShip yOffset="55">RVSRB_AI_CRUISER_3_NORMAL</bossShip>
+    <bossShip yOffset="55">RVSRB_AI_CRUISER_3_CHALLENGE</bossShip>
+    <bossShip yOffset="55">RVSRB_AI_CRUISER_3_EXTREME</bossShip>
+    <bossShip yOffset="55">RVSRB_AI_CRUISER_3_CHAOS</bossShip>
+</events>
 
 <mod:findLike type="crew" limit="1">
     <mod-append:race name="rvs_ai_hologram">
