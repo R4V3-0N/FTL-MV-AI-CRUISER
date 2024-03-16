@@ -119,9 +119,9 @@
 
 <blueprintList name="RVS_LIST_WEAPONS_AI">
 		<name>BA_LASER_ARTILLERY_2</name>	<!-- Place holder until remade -->
-	<name>MISSILES_1</name>
-	<name>MISSILES_2</name>
-	<name>MISSILES_3</name>
+	<name>MISSILES_1_ENEMY</name>
+	<name>MISSILES_2_ENEMY</name>
+	<name>MISSILES_3_ENEMY</name>
 	<name>BEAM_1</name>
 	<name>BEAM_2</name>
 	<name>BEAM_3</name>
@@ -344,7 +344,7 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<weaponList missiles="6" count="4" load="RVS_LIST_MV_WEAPONS_AI_RENEGADE_BROWNIE" />
 	<droneList drones="5" count="2" load="RVS_LIST_MV_DRONES_AI_RENEGADE_BROWNIE" />
 	<health amount="8" />
-	<maxPower amount="8" />
+	<maxPower amount="6" />
 	<crewCount amount="2" max="4" class="rvs_ai_hologram" /> 		<!-- Maybe change it to 5 max? -->
 	<aug name="RVS_ANTI_GRAVITY_ENGINE" />	
 	<boardingAI>invasion</boardingAI>
@@ -435,4 +435,173 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<crewCount amount="1" max="1" class="LIST_CREW_MILITIA_ELITE_RANDOM" />
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>mu_militia_guard</cloakImage>
+</shipBlueprint>
+
+
+
+<shipBlueprint name="RVSRB_AI_CRUISER_3_NORMAL" layout="rvsb_ai_cruiser_3" img="rvsrb_ai_cruiser_3">
+	<class>Renegade Cruiser</class>
+	<systemList>
+
+		<battery power="3" max="3" room="23" start="true" />
+		<doors power="2" max="3" room="3" start="true" />
+		<drones power="6" max="6" room="5" start="true" />
+		<engines power="1" max="2" room="1" start="true" />
+		<mind power="1" max="2" room="2" start="true" />
+		<pilot power="2" max="2" room="11" start="true" />
+			<sensors power="2" max="3" room="8" start="true" />
+		<shields power="4" max="8" room="20" start="true" />
+		<teleporter power="2" max="2" room="7" start="false" />
+		<weapons power="6" max="6" room="25" start="true" />
+
+		<!--
+			Commented Out systems are to mark location from player ship for future use
+		-->
+		<!--<hacking power="1" max="1" room="15" start="false" />-->
+		<!--<medbay power="1" max="1" room="6" start="false" />-->
+		<!--<oxygen power="1" max="1" room="17" start="false" />-->
+		<!--<cloaking power="1" max="2" room="13" start="false" />-->
+		<!--<clonebay power="1" max="1" room="6" start="false" />-->
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="3" count="3">
+		<weapon name="RVS_FLOCK_GUN" />				<!--3pwr-->
+		<weapon name="RVS_LASER_BURST_SCATTER_1" />	<!--1pwr-->	
+		<weapon name="MISSILES_2_ENEMY" />			<!--2pwr-->
+	</weaponList>
+	<droneList drones="8" count="3">
+		<drone name="GUARDIAN_1_DRONE" />			<!--2pwr-->
+		<drone name="RVS_BEAM_DEFENSE_1" />			<!--2pwr-->
+		<drone name="RVS_DRONE_SCATTER" />			<!--2pwr-->
+	</droneList>
+	<health amount="14" />
+	<maxPower amount="12" />
+	<crewCount amount="6" max="9" class="rvs_ai_hologram" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="RVS_AI_SWARM" />
+</shipBlueprint>
+
+<shipBlueprint name="RVSRB_AI_CRUISER_3_CHALLENGE" layout="rvsb_ai_cruiser_3" img="rvsrb_ai_cruiser_3">
+	<class>Renegade Cruiser</class>
+	<systemList>
+		<battery power="3" max="3" room="23" start="true" />
+		<doors power="2" max="3" room="3" start="true" />
+		<drones power="7" max="7" room="5" start="true" />
+		<engines power="2" max="2" room="1" start="true" />
+		<mind power="2" max="2" room="2" start="true" />
+		<pilot power="3" max="3" room="11" start="true" />
+		<sensors power="3" max="3" room="8" start="true" />
+		<shields power="4" max="9" room="20" start="true" />
+		<teleporter power="2" max="3" room="7" start="false" />
+		<weapons power="7" max="7" room="25" start="true" />
+		<!--
+			Commented Out systems are to mark location from player ship for future use
+		-->
+		<!--<hacking power="1" max="1" room="15" start="false" />-->
+		<!--<medbay power="1" max="1" room="6" start="false" />-->
+		<!--<oxygen power="1" max="1" room="17" start="false" />-->
+		<!--<cloaking power="1" max="2" room="13" start="false" />-->
+		<!--<clonebay power="1" max="1" room="6" start="false" />-->	
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="3" count="3">
+		<weapon name="RVS_FLOCK_GUN" />				<!--3pwr-->
+		<weapon name="RVS_LASER_BURST_SCATTER_1" />	<!--1pwr-->
+		<weapon name="MISSILES_3_ENEMY" />			<!--3pwr-->
+	</weaponList>
+	<droneList drones="8" count="3">
+		<drone name="GUARDIAN_2_DRONE" />			<!--3pwr-->
+		<drone name="RVS_BEAM_DEFENSE_1" />			<!--2pwr-->
+		<drone name="RVS_AI_MICROFIGHTER_SWARM" />	<!--2pwr, potentially should make enemy version at 3 for this?-->
+	</droneList>
+	<health amount="14" />
+	<maxPower amount="12" />
+	<crewCount amount="8" max="10" class="rvs_ai_hologram" />
+	<boardingAI>invasion</boardingAI>
+	<aug name="RVS_AI_SWARM" />
+</shipBlueprint>
+
+<shipBlueprint name="RVSRB_AI_CRUISER_3_EXTREME" layout="rvsb_ai_cruiser_3" img="rvsrb_ai_cruiser_3">
+	<class>Renegade Cruiser</class>
+	<systemList>
+		<!--
+			Commented Out systems are to mark location for future use
+		-->
+		<!--<cloaking power="1" max="2" room="13" start="false" />-->
+		<!--<clonebay power="1" max="1" room="6" start="false" />-->
+		<!--<oxygen power="1" max="1" room="17" start="false" />-->
+		<!--<medbay power="1" max="1" room="6" start="false" />-->
+		<battery power="3" max="3" room="23" start="true" />
+		<doors power="2" max="3" room="3" start="true" />
+		<drones power="9" max="9" room="5" start="true" />
+		<engines power="2" max="2" room="1" start="true" />
+		<mind power="2" max="3" room="2" start="true" />
+		<pilot power="3" max="3" room="11" start="true" />
+		<sensors power="3" max="3" room="8" start="true" />
+		<shields power="4" max="10" room="20" start="true" />
+		<teleporter power="3" max="3" room="7" start="false" />
+		<weapons power="8" max="8" room="25" start="true" />
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="3" count="3">
+		<weapon name="RVS_FLOCK_GUN" />			<!--3pwr-->
+		<weapon name="RVS_SHOTGUN_SCATTER" />	<!--2pwr-->
+		<weapon name="MISSILES_3_ENEMY" />		<!--3pwr-->
+	</weaponList>
+	<droneList drones="8" count="3">
+		<drone name="GUARDIAN_2_DRONE" />		<!--3pwr-->
+		<drone name="RVS_BEAM_DEFENSE_1" />		<!--2pwr-->
+		<drone name="RVS_AI_MICROFIGHTER_SWARM" /><!--2pwr, potentially should make enemy version at 3 for this?-->
+		<drone name="RVS_DRONE_SCATTER" />			<!--2pwr-->
+	</droneList>
+	<health amount="14" />
+	<maxPower amount="12" />
+	<crewCount amount="12" max="18" class="rvs_ai_hologram" />
+	<boardingAI>invasion</boardingAI>
+	<aug name="RVS_AI_SWARM" />
+</shipBlueprint>
+
+<shipBlueprint name="RVSRB_AI_CRUISER_3_CHAOS" layout="rvsb_ai_cruiser_3" img="rvsrb_ai_cruiser_3">
+	<class>Chaotic Renegade Cruiser</class>
+	<systemList>
+		<battery power="4" max="4" room="23" start="true" />
+		<doors power="3" max="3" room="3" start="true" />
+		<drones power="9" max="9" room="5" start="true" />
+		<engines power="1" max="1" room="1" start="true" />
+		<!--<hacking power="1" max="1" room="15" start="false" />	-->
+		<mind power="2" max="2" room="2" start="true" />
+		<pilot power="3" max="3" room="11" start="true" />
+		<sensors power="3" max="3" room="8" start="true" />
+		<shields power="4" max="8" room="20" start="true" />	<!-- R4: lower because spooky -->
+		<teleporter power="3" max="3" room="7" start="false" />
+		<weapons power="9" max="9" room="25" start="true" />
+		<!--
+			Commented Out systems are to mark location for future use
+		-->
+		<!--<medbay power="1" max="1" room="6" start="false" />-->
+		<!--<oxygen power="1" max="1" room="17" start="false" />-->
+		<!--<cloaking power="1" max="2" room="13" start="false" />-->
+		<!--<clonebay power="1" max="1" room="6" start="false" />-->
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="3" count="3">
+		<weapon name="RVS_FLOCK_GUN" />		<!--3pwr-->
+		<weapon name="RVS_FLOCK_GUN" />		<!--3pwr-->
+		<weapon name="MISSILES_3_ENEMY" />	<!--3pwr-->
+	</weaponList>
+	<droneList drones="8" count="4">
+		<drone name="GUARDIAN_2_DRONE" />	<!--3pwr-->
+		<drone name="RVS_BEAM_DEFENSE_1" />	<!--2pwr-->
+		<drone name="RVS_AI_MICROFIGHTER_SWARM" />	<!--2pwr, potentially should make enemy version at 3 for this?-->
+		<drone name="RVS_AI_MICROFIGHTER_SWARM" />	<!--2pwr, potentially should make enemy version at 3 for this?-->
+	</droneList>
+	<health amount="14" />
+	<maxPower amount="12" />
+	<crewCount amount="14" max="20" class="rvs_ai_hologram" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="RVS_AI_SWARM" />
 </shipBlueprint>
