@@ -531,3 +531,17 @@
 		</event>
 	</choice>
 </event>
+
+<!--RVS_PROJECTOR_AVATAR Event-->
+<event name="RVS_PROJECTOR_SPAWN_DECOY">
+    <crewMember amount="2" class="rvs_ai_hologram_decoy">Decoy</crewMember>
+    <triggeredEvent event="RVS_PROJECTOR_SPAWN_DECOY_DELAY" seeded="false" loops="1" minTime="0.05" maxTime="0.05" />
+</event>
+
+<event name="RVS_PROJECTOR_SPAWN_ATTACKER">
+    <crewMember amount="1" class="rvs_ai_hologram_assault">Assault</crewMember>
+    <triggeredEvent event="RVS_PROJECTOR_SPAWN_DECOY" seeded="false" loops="1" minTime="0.05" maxTime="0.05" />
+</event>
+
+<event name="RVS_PROJECTOR_SPAWN_DECOY_DELAY">
+</event>

@@ -22,6 +22,8 @@
 <mod:findName type="blueprintList" name="LIST_CREW_GAS">
 	<mod-append:name>rvs_ai_hologram</mod-append:name>
 	<mod-append:name>rvs_ai_hologram_cortana</mod-append:name>
+	<mod-append:name>rvs_ai_hologram_decoy</mod-append:name>
+	<mod-append:name>rvs_ai_hologram_assault</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_ION">
@@ -95,6 +97,8 @@
 <blueprintList name="RVS_LIST_CREW_AI_AVATAR">
 	<name>rvs_ai_hologram</name>
 	<name>rvs_ai_hologram_cortana</name>
+	<name>rvs_ai_hologram_decoy</name>
+	<name>rvs_ai_hologram_assault</name>
 </blueprintList>
 
 <blueprintList name="RVS_LIST_WEAPONS_EMP">

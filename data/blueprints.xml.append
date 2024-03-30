@@ -123,8 +123,8 @@
 	<breachChance>0</breachChance>
 	<cooldown>20</cooldown> <!-- R4 2023.02.15 reduced down from 16 to 15 -->
 	<spawnCrew>
-		<number>3</number>
-		<race>rvs_ai_hologram</race>
+		<number>1</number>
+		<race>rvs_ai_hologram_assault</race>
 		<lifetime>30</lifetime>
 		<noSlot>true</noSlot>
 		<statBoosts>
@@ -2398,6 +2398,44 @@ AUGMENTS
 	<title>CTN 0452-9</title>
 	<short>CTN 0452-9</short>
 	<rarity>0</rarity>
+	<powerList>
+		<power>Does not take up a crew slot</power>
+		<power>Max Health is reduced to 50</power>
+		<power>Cannot heal in medbay or be cloned</power>
+		<power>Provides power and heals slowly in drone control room</power>
+		<power>Regains all health on jump</power>
+		<power>Can teleport to your ship from the enemy teleporter room</power>
+		<power>Immune to suffocation and fires</power>
+		<power>Immune to mind control</power>
+		<power>Can phase through doors</power>
+	</powerList>
+</crewBlueprint>
+<crewBlueprint name="rvs_ai_hologram_decoy">
+	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
+	<cost>30</cost>
+	<bp>1</bp>
+	<title>AI Avatar</title>
+	<short>AI Avatar</short>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
+	<powerList>
+		<power>Does not take up a crew slot</power>
+		<power>Max Health is reduced to 50</power>
+		<power>Cannot heal in medbay or be cloned</power>
+		<power>Provides power and heals slowly in drone control room</power>
+		<power>Regains all health on jump</power>
+		<power>Can teleport to your ship from the enemy teleporter room</power>
+		<power>Immune to suffocation and fires</power>
+		<power>Immune to mind control</power>
+		<power>Can phase through doors</power>
+	</powerList>
+</crewBlueprint>
+<crewBlueprint name="rvs_ai_hologram_assault">
+	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
+	<cost>30</cost>
+	<bp>1</bp>
+	<title>AI Avatar</title>
+	<short>AI Avatar</short>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
 	<powerList>
 		<power>Does not take up a crew slot</power>
 		<power>Max Health is reduced to 50</power>

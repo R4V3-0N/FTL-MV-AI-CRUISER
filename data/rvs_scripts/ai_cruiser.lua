@@ -781,7 +781,7 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
                         escortEllipse.center.x + xOffset,
                         escortEllipse.center.y + yOffset))
                 end
-                
+
                 -- Make the drone orbit the fake ellipse
                 if drone.powered then
                     local lookAhead = drone.blueprint.speed*Hyperspace.FPS.SpeedFactor/droneSpeedFactor
@@ -803,11 +803,41 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
                 end
             end
         end
-        
+
         -- Clean out inactive drone IDs
         for droneId in pairs(activeDroneIds) do
             if not stillActive[droneId] then
                 activeDroneIds[droneId] = nil
+            end
+        end
+    end
+end)
+
+-- RVS_PROJECTOR_AVATAR implementation
+local get_random_ship_system = function(ship)
+    local systems = {}
+    for system in vter(ship.vSystemList) do
+        table.insert(systems, system:GetRoomId())
+    end
+    return systems[math.random(#systems)]
+end
+
+script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, 
+function(shipManager, projectile, location, Damage, shipFriendlyFire)
+    if projectile and projectile.extend.name == "RVS_PROJECTOR_AVATAR" then
+        local worldManager = Hyperspace.Global.GetInstance():GetCApp().world
+        Hyperspace.CustomEventsParser.GetInstance():LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_ATTACKER",false,-1)
+    end
+end)
+
+script.on_game_event("RVS_PROJECTOR_SPAWN_DECOY_DELAY", false, function()
+    local shipManager = Hyperspace.ships.player
+    local shipOpponent = Hyperspace.ships.enemy
+    for crewmem in vter(shipManager.vCrewList) do
+        if crewmem.blueprint.name == "rvs_ai_hologram_decoy" or crewmem.blueprint.name == "rvs_ai_hologram_assault" then
+            local tpRoomId = get_random_ship_system(shipOpponent)
+            if not pcall(function() crewmem.extend:InitiateTeleport(1, tpRoomId, 0) end) then
+                crewmem:Kill(true)
             end
         end
     end
