@@ -825,7 +825,7 @@ local activeProjector = false
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, 
 function(shipManager, projectile, location, Damage, shipFriendlyFire)
-    if projectile and projectile.extend.name == "RVS_PROJECTOR_AVATAR" then
+    if projectile and projectile.extend.name == "RVS_PROJECTOR_AVATAR" and shipManager.iShipId == 1 then
         local worldManager = Hyperspace.Global.GetInstance():GetCApp().world
         Hyperspace.CustomEventsParser.GetInstance():LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_ATTACKER",false,-1)
     end
