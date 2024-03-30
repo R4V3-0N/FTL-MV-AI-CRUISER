@@ -821,13 +821,43 @@ local get_random_ship_system = function(ship)
     end
     return systems[math.random(#systems)]
 end
+local refresh_boarding_AI = function(targetShip)
+    local assaultCount = 2
+    local decoyCount = 2
+    for crewmen in vter(targetShip.vCrewList) do
+        if crewmen.blueprint.name == "rvs_ai_hologram_assault" then
+            crewmen.extend.deathTimer:Start(30) --Reset their death Time
+            crewmen.health.first = crewmen.health.second --Reset their health
+            assaultCount = assaultCount - 1
+        end
+        if crewmen.blueprint.name == "rvs_ai_hologram_decoy" then
+            crewmen.extend.deathTimer:Start(30) --Reset their death Time
+            crewmen.health.first = crewmen.health.second --Reset their health
+            decoyCount = decoyCount - 1
+        end
+    end
+
+    local worldManager = Hyperspace.Global.GetInstance():GetCApp().world
+
+    if assaultCount == 2 and decoyCount == 2 then
+        Hyperspace.CustomEventsParser.GetInstance():LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_DECOYATTACKER",false,-1)
+    else
+        for i = 0, assaultCount do
+            Hyperspace.CustomEventsParser.GetInstance():LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_ATTACKER_SINGLE",false,-1)
+        end
+        for i = 0, decoyCount do
+            Hyperspace.CustomEventsParser.GetInstance():LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_DECOY_SINGLE",false,-1)
+        end
+    end 
+    
+end
+
 local activeProjector = false
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, 
 function(shipManager, projectile, location, Damage, shipFriendlyFire)
     if projectile and projectile.extend.name == "RVS_PROJECTOR_AVATAR" and shipManager.iShipId == 1 then
-        local worldManager = Hyperspace.Global.GetInstance():GetCApp().world
-        Hyperspace.CustomEventsParser.GetInstance():LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_ATTACKER",false,-1)
+        refresh_boarding_AI(Hyperspace.ships.enemy)
     end
     return Defines.Chain.CONTINUE
 end)
@@ -835,11 +865,6 @@ end)
 script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, 
 function(shipManager)
     if activeProjector then
-        --Keep all projector down (this make the weapon anti-synergistic with itself)
-        for weapon in vter(shipManager.weaponSystem.weapons) do
-            weapon.cooldown.first = 0
-        end
-
         --Disable itself if no AI is on the enemy ship
         local enemyShip = Hyperspace.ships.enemy
         for crewmem in vter(enemyShip.vCrewList) do
@@ -854,17 +879,20 @@ end)
 -- Small buff/debuff applied on evasion while projector is active
 script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR, 
 function(shipManager, value)
-    if activeProjector then
-        if shipManager.iShipId == 0 then
-            value = value + 5
-        else
-            value = value - 5
+    local playerShip = Hyperspace.ships.player
+    for weapon in vter(playerShip.weaponSystem.weapons) do
+        if weapon.blueprint.name == "RVS_PROJECTOR_AVATAR" and weapon.powered then
+            if shipManager.iShipId == 0 then
+                value = value + 5
+            else
+                value = value - 5
+            end
         end
     end
     return Defines.Chain.CONTINUE, value
 end)
 
-script.on_game_event("RVS_PROJECTOR_SPAWN_DECOY_DELAY", false, function()
+script.on_game_event("RVS_PROJECTOR_SPAWN_DELAY", false, function()
     local shipManager = Hyperspace.ships.player
     local shipOpponent = Hyperspace.ships.enemy
     for crewmem in vter(shipManager.vCrewList) do

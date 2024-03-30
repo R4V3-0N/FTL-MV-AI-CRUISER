@@ -122,21 +122,6 @@
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<cooldown>20</cooldown> <!-- R4 2023.02.15 reduced down from 16 to 15 -->
-	<spawnCrew>
-		<number>1</number>
-		<race>rvs_ai_hologram_assault</race>
-		<lifetime>30</lifetime>
-		<noSlot>true</noSlot>
-		<statBoosts>
-			<statBoost name="noClone">
-				<boostType>SET</boostType>
-				<value>true</value>
-				<shipTarget>ALL</shipTarget>
-				<crewTarget>ALL</crewTarget>
-				<priority>999999</priority>
-			</statBoost>
-		</statBoosts>
-	</spawnCrew>
 	<crewSpawnChance>10</crewSpawnChance>
 	<power>3</power>
 	<cost>70</cost>
