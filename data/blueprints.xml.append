@@ -2414,8 +2414,8 @@ AUGMENTS
 	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
 	<cost>30</cost>
 	<bp>1</bp>
-	<title>AI Avatar</title>
-	<short>AI Avatar</short>
+	<title>AI Avatar Decoy</title>
+	<short>AI Avatar D</short>
 	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
 	<powerList>
 		<power>Does not take up a crew slot</power>
@@ -2433,8 +2433,8 @@ AUGMENTS
 	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
 	<cost>30</cost>
 	<bp>1</bp>
-	<title>AI Avatar</title>
-	<short>AI Avatar</short>
+	<title>AI Avatar Assault</title>
+	<short>AI Avatar A</short>
 	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
 	<powerList>
 		<power>Does not take up a crew slot</power>

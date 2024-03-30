@@ -400,8 +400,10 @@
         </passiveStatBoosts>
     </mod-append:race>
     <mod-append:race name="rvs_ai_hologram_decoy">
-        <maxHealth>50</maxHealth>
+        <maxHealth>100</maxHealth>
         <crewSlots>0</crewSlots>
+        <canFight>false</canFight>
+		<canSabotage>false</canSabotage>
         <essential>-1</essential>
         <noClone>true</noClone>
         <healSpeed>0</healSpeed>
@@ -409,6 +411,7 @@
         <canSuffocate>false</canSuffocate>
         <canPhaseThroughDoors>true</canPhaseThroughDoors>
         <resistsMindControl>true</resistsMindControl>
+        <detectsLifeforms>true</detectsLifeforms>
         <deathSounds>
             <deathSound>aiDeath</deathSound>
         </deathSounds>
@@ -457,47 +460,6 @@
                     <noSys>0</noSys>
                     <hackedSys>0</hackedSys>
                     <noPwr>0</noPwr>
-                    <onePwr>1</onePwr>
-                </systemPowerScaling>
-            </statBoost>
-            <statBoost name="bonusPower">
-                <boostType>SET</boostType>
-                <amount>1</amount>
-                <shipTarget>ORIGINAL_SHIP</shipTarget>
-                <crewTarget>SELF</crewTarget>
-                <maxStacks>1</maxStacks>
-                <priority>0</priority>
-                <whiteList>
-                    <rvs_ai_hologram/>
-                </whiteList>
-                <systemRoomTarget>ALL</systemRoomTarget>
-                <systemPowerDependency>
-                    <drones/>
-                </systemPowerDependency>
-                <systemList>
-                    <drones/>
-                </systemList>
-                <systemPowerScaling>
-                    <noSys>0</noSys>
-                    <noPwr>1</noPwr>
-                    <onePwr>1</onePwr>
-                </systemPowerScaling>
-            </statBoost>
-            <statBoost name="teleportMoveOtherShip"> <!-- Teleport from the other ship's teleporter -->
-                <boostType>SET</boostType>
-                <value>true</value>
-                <shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
-                <crewTarget>SELF</crewTarget>
-                <priority>0</priority>
-                <systemRoomTarget>ALL</systemRoomTarget>
-                <systemPowerDependency>
-                    <teleporter/>
-                </systemPowerDependency>
-                <systemList>
-                    <teleporter/>
-                </systemList>
-                <systemPowerScaling>
-                    <noPwr>1</noPwr>
                     <onePwr>1</onePwr>
                 </systemPowerScaling>
             </statBoost>
@@ -561,47 +523,6 @@
                     <noSys>0</noSys>
                     <hackedSys>0</hackedSys>
                     <noPwr>0</noPwr>
-                    <onePwr>1</onePwr>
-                </systemPowerScaling>
-            </statBoost>
-            <statBoost name="bonusPower">
-                <boostType>SET</boostType>
-                <amount>1</amount>
-                <shipTarget>ORIGINAL_SHIP</shipTarget>
-                <crewTarget>SELF</crewTarget>
-                <maxStacks>1</maxStacks>
-                <priority>0</priority>
-                <whiteList>
-                    <rvs_ai_hologram/>
-                </whiteList>
-                <systemRoomTarget>ALL</systemRoomTarget>
-                <systemPowerDependency>
-                    <drones/>
-                </systemPowerDependency>
-                <systemList>
-                    <drones/>
-                </systemList>
-                <systemPowerScaling>
-                    <noSys>0</noSys>
-                    <noPwr>1</noPwr>
-                    <onePwr>1</onePwr>
-                </systemPowerScaling>
-            </statBoost>
-            <statBoost name="teleportMoveOtherShip"> <!-- Teleport from the other ship's teleporter -->
-                <boostType>SET</boostType>
-                <value>true</value>
-                <shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
-                <crewTarget>SELF</crewTarget>
-                <priority>0</priority>
-                <systemRoomTarget>ALL</systemRoomTarget>
-                <systemPowerDependency>
-                    <teleporter/>
-                </systemPowerDependency>
-                <systemList>
-                    <teleporter/>
-                </systemList>
-                <systemPowerScaling>
-                    <noPwr>1</noPwr>
                     <onePwr>1</onePwr>
                 </systemPowerScaling>
             </statBoost>

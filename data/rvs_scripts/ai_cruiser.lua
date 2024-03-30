@@ -821,6 +821,7 @@ local get_random_ship_system = function(ship)
     end
     return systems[math.random(#systems)]
 end
+local activeProjector = false
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, 
 function(shipManager, projectile, location, Damage, shipFriendlyFire)
@@ -828,6 +829,39 @@ function(shipManager, projectile, location, Damage, shipFriendlyFire)
         local worldManager = Hyperspace.Global.GetInstance():GetCApp().world
         Hyperspace.CustomEventsParser.GetInstance():LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_ATTACKER",false,-1)
     end
+    return Defines.Chain.CONTINUE
+end)
+
+script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, 
+function(shipManager)
+    if activeProjector then
+        --Keep all projector down (this make the weapon anti-synergistic with itself)
+        for weapon in vter(shipManager.weaponSystem.weapons) do
+            weapon.cooldown.first = 0
+        end
+
+        --Disable itself if no AI is on the enemy ship
+        local enemyShip = Hyperspace.ships.enemy
+        for crewmem in vter(enemyShip.vCrewList) do
+            if crewmem.blueprint.name == "rvs_ai_hologram_decoy" or crewmem.blueprint.name == "rvs_ai_hologram_assault" then
+                return
+            end
+        end
+        activeProjector = false
+    end
+end)
+
+-- Small buff/debuff applied on evasion while projector is active
+script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR, 
+function(shipManager, value)
+    if activeProjector then
+        if shipManager.iShipId == 0 then
+            value = value + 5
+        else
+            value = value - 5
+        end
+    end
+    return Defines.Chain.CONTINUE, value
 end)
 
 script.on_game_event("RVS_PROJECTOR_SPAWN_DECOY_DELAY", false, function()
@@ -836,9 +870,13 @@ script.on_game_event("RVS_PROJECTOR_SPAWN_DECOY_DELAY", false, function()
     for crewmem in vter(shipManager.vCrewList) do
         if crewmem.blueprint.name == "rvs_ai_hologram_decoy" or crewmem.blueprint.name == "rvs_ai_hologram_assault" then
             local tpRoomId = get_random_ship_system(shipOpponent)
+            local deathTime = Hyperspace.TimerHelper()
+            deathTime:Start(30)
+            crewmem.extend.deathTimer = deathTime
             if not pcall(function() crewmem.extend:InitiateTeleport(1, tpRoomId, 0) end) then
                 crewmem:Kill(true)
             end
         end
+        activeProjector = true
     end
 end)
