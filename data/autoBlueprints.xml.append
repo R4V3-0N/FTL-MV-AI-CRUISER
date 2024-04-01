@@ -579,8 +579,8 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 		<mind power="2" max="2" room="2" start="true" />
 		<pilot power="3" max="3" room="11" start="true" />
 		<sensors power="3" max="3" room="8" start="true" />
-		<shields power="4" max="8" room="20" start="true" />	<!-- R4: lower because spooky -->
-		<teleporter power="3" max="3" room="7" start="false" />
+		<shields power="4" max="7" room="20" start="true" />	<!-- R4: lower because spooky -->
+		<teleporter power="1" max="2" room="7" start="false" />
 		<weapons power="9" max="9" room="25" start="true" />
 		<!--
 			Commented Out systems are to mark location for future use
@@ -591,11 +591,11 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 		<!--<clonebay power="1" max="1" room="6" start="false" />-->
 	</systemList>
 	<weaponSlots>3</weaponSlots>
-	<droneSlots>3</droneSlots>
+	<droneSlots>4</droneSlots>
 	<weaponList missiles="3" count="3">
 		<weapon name="RVS_FLOCK_GUN" />		<!--3pwr-->
 		<weapon name="RVS_FLOCK_GUN" />		<!--3pwr-->
-		<weapon name="MISSILES_3_ENEMY" />	<!--3pwr-->
+		<weapon name="RVS_PROJECTOR_AVATAR" /><!--3pwr-->
 	</weaponList>
 	<droneList drones="8" count="4">
 		<drone name="GUARDIAN_2_DRONE" />	<!--3pwr-->

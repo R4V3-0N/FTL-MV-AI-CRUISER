@@ -108,6 +108,21 @@
         </crew>
     </mod-append:customShip>
 	
+    <!-- Achievements -->
+    <mod:findLike type="achievements" limit="1">
+        <mod:findLike type="page">
+            <mod:findLike type="section">
+                <mod:selector text="Renegade Cruisers"/>
+                <mod-append:achievement name="ACH_REN_BALLISTICC">
+                    <name>Replicomplications</name>
+                    <description>Defeat the Rogue AI C Renegade and get the Ship Disruption Projector.</description>
+                    <icon>renegade_ai_c</icon>
+                    <header>Renegade Defeated</header>
+                </mod-append:achievement>
+            </mod:findLike>
+        </mod:findLike>
+    </mod:findLike>
+
     <!-- Enemies -->
 	<mod-append:customShip name="RVS_AI_INTERCEPTOR">
 		<shipIcons>
@@ -671,6 +686,7 @@
     <mod-append:variable name="loc_holos_revived" op="set" val="0"/>
     <mod-append:variable name="loc_nebula_nostorm" op="set" val="0"/>
     <mod-append:variable name="loc_nebula_storm" op="set" val="0"/>
+    <mod-append:variable name="rvs_ach_mv_ai_c" op="set" val="0"/>  
     <mod-append:variable name="loc_ai_ach_in_combat" op="set" val="0"/>
     <mod-append:variable name="loc_ai_ach_missed_this_fight" op="set" val="0"/>
     <mod-append:variable name="loc_ai_ach_no_miss_count" op="set" val="0"/>

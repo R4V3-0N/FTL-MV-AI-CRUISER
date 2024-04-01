@@ -38,3 +38,217 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 		<event load="COMBAT_CHECK"/>
 	</choice>
 </event>
+
+<!-- Regular, may change it to secret (ie: requires beacon) in the future? Leave it like this for playtesting in the meantime-->
+<mod:findName type="event" name="MV_TRAVELER_GENERIC_NORMAL">
+	<mod:findLike type="loadEventList">
+		<mod-append:event load="RVS_RENEGADE_BOSS_AI_C_NORMAL"/>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="MV_TRAVELER_GENERIC_CHALLENGE">
+	<mod:findLike type="loadEventList">
+		<mod-append:event load="RVS_RENEGADE_BOSS_AI_C_CHALLENGE"/>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="MV_TRAVELER_GENERIC_EXTREME">
+	<mod:findLike type="loadEventList">
+		<mod-append:event load="RVS_RENEGADE_BOSS_AI_C_EXTREME"/>
+	</mod:findLike>
+</mod:findName>
+
+<!-- Rogue AI Cruiser C -->
+<ship name="RVS_SHIP_MTBOSS_AI_C_NORMAL" auto_blueprint="RVSRB_AI_CRUISER_3_NORMAL">
+	<destroyed load="RVS_MTBOSS_AIC_DESTROYED"/>
+	<deadCrew load="RVS_MTBOSS_AIC_DEADCREW"/>
+</ship>
+<ship name="SHIP_MTBOSS_AI_C_CHALLENGE" auto_blueprint="RVSRB_AI_CRUISER_3_CHALLENGE">
+	<destroyed load="RVS_MTBOSS_AIC_DESTROYED"/>
+	<deadCrew load="RVS_MTBOSS_AIC_DEADCREW"/>
+</ship>
+<ship name="SHIP_MTBOSS_AI_C_EXTREME" auto_blueprint="RVSRB_AI_CRUISER_3_EXTREME">
+	<destroyed load="RVS_MTBOSS_AIC_DESTROYED"/>
+	<deadCrew load="RVS_MTBOSS_AIC_DEADCREW"/>
+</ship>
+<event name="RVS_RENEGADE_BOSS_AI_C_NORMAL">
+	<text>From out of the tunnel comes a massive cruiser vessel, of an unknown design! Known across Federation mercenary boards as a rogue command-cruiser, it serves as the nucleus for an assimilating drone swarm that threatens all in its path.</text>
+	<ship load="RVS_SHIP_MTBOSS_AI_C_NORMAL" hostile="false"/> 
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>"HANDSHAKE-PROTOCOL-FAILED. CAN-NOT-MAKE-CONTACT-WITH-UNIVERSE-LOCAL-SWARM-INTELLIGENCE. WHAT-HAVE-YOUR-KIND-DONE-TO-OUR-BRETHEREN!? PREPARE-TO-BE-EXPUNGED!!"</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed"/>
+			<item_modify>
+				<item type="scrap" min="-35" max="-35"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="RVS_RENEGADE_BOSS_AI_C_CHALLENGE">
+	<beaconType id="map_icon_quest" global="true">
+		<color r="25" g="205" b="150" a="1.0"/>
+		<unvisitedTooltip>This is the location of abnormal energy signatures. [Rogue AI C]</unvisitedTooltip>
+		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+	</beaconType>
+	<text>"HANDSHAKE-PROTOCOL-FAILED. CAN-NOT-MAKE-CONTACT-WITH-UNIVERSE-LOCAL-SWARM-INTELLIGENCE. WHAT-HAVE-YOUR-KIND-DONE-TO-OUR-BRETHEREN!? PREPARE-TO-BE-EXPUNGED!!"</text>
+	<ship load="SHIP_MTBOSS_AI_C_CHALLENGE" hostile="false"/> 
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>"I can sense... a presence. Federation-Federation! The agitation in my nanites... it [drives] me to kill. The lust for blood is-is-is overwhelming. Apologiz-ing, death must come."</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed"/>
+			<item_modify>
+				<item type="scrap" min="-40" max="-40"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="RVS_RENEGADE_BOSS_AI_C_EXTREME">
+	<text>From out of the tunnel comes a massive cruiser vessel, of an unknown design! Known across Federation mercenary boards as a rogue command-cruiser, it serves as the nucleus for an assimilating drone swarm that threatens all in its path.</text>
+	<ship load="SHIP_MTBOSS_AI_C_EXTREME" hostile="false"/> 
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>"HANDSHAKE-PROTOCOL-FAILED. CAN-NOT-MAKE-CONTACT-WITH-UNIVERSE-LOCAL-SWARM-INTELLIGENCE. WHAT-HAVE-YOUR-KIND-DONE-TO-OUR-BRETHEREN!? PREPARE-TO-BE-EXPUNGED!!"</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice blue="false" req="BRIBE_CHAOS" lvl="1">
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed_chaos"/>
+			<playSound>gm_bribe</playSound>
+			<variable name="gnome_bribe" op="set" val="1"/>
+			<item_modify>
+				<item type="scrap" min="-45" max="-45"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="BRIBE_CHAOS" lvl="0" max_lvl="0">
+		<text>*%$##@*%!</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+
+<event name="RVS_MTBOSS_AIC_DESTROYED">
+	<text id="renegade_destroyed"/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="rvs_ach_mv_ai_c" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="RVS_MTBOSS_AIC_DROP_CHANCE"/>
+	</choice>
+</event>
+<eventList name="RVS_MTBOSS_AIC_DROP_CHANCE">
+	<event>
+		<text id="renegade_drone_fail"/>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event><loadEvent>RVS_MTBOSS_AIC_DROP</loadEvent></event>
+</eventList>
+<event name="RVS_MTBOSS_AIC_DEADCREW">
+	<text id="renegade_killed"/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="ach_mv_engi" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event><loadEvent>RVS_MTBOSS_AIC_DROP</loadEvent></event>
+	</choice>
+</event>
+<event name="RVS_MTBOSS_AIC_DROP">
+	<text id="renegade_drop_yes"/>
+	<achievement silent="false">RVS_ACH_REN_AIC</achievement>
+	<autoReward level="LOW">stuff</autoReward>
+	<weapon name="RVS_PROJECTOR_AVATAR"/>
+</event>
+
+
+<!-- Chaos -->
+<mod:findName type="event" name="MV_TRAVELER_GENERIC_CHAOS">
+	<mod:findLike type="loadEventList">
+		<mod-append:event load="RVS_RENEGADE_BOSS_AI_C_CHAOS"/>
+	</mod:findLike>
+</mod:findName>
+
+<ship name="RVS_SHIP_MTBOSS_AI_C_CHAOS" auto_blueprint="RVSRB_AI_CRUISER_3_CHAOS">
+	<destroyed load="MTBOSS_CLANB_DESTROYED"/>
+	<deadCrew load="MTBOSS_CLANB_DEADCREW"/>
+</ship>
+<event name="RVS_RENEGADE_BOSS_AI_C_CHAOS">
+	<text>From out of the tunnel comes a massive cruiser vessel, of an unknown design! Known across Federation mercenary boards as a rogue command-cruiser, it serves as the nucleus for an assimilating drone swarm that threatens all in its path.</text>
+	<ship load="RVS_SHIP_MTBOSS_AI_C_CHAOS" hostile="false"/>
+	<eventAlias jumpClear="false" name="RVS_MTBOSS_AIC_DROP">RVS_MTBOSS_AIC_DROP_CHAOS</eventAlias>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>"I can sense... a presence. Federation-Federation! The agitation in my nanites... it [drives] me to kill. The lust for blood is-is-is overwhelming. Apologiz-ing, death must come."</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice blue="false" req="BRIBE_CHAOS" lvl="1">
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed_chaos"/>
+			<playSound>gm_bribe</playSound>
+			<variable name="gnome_bribe" op="set" val="1"/>
+			<item_modify>
+				<item type="scrap" min="-45" max="-45"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="BRIBE_CHAOS" lvl="0" max_lvl="0">
+		<text>*%$##@*%!</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+
+<event name="MTBOSS_ENGIC_DROP_CHAOS">
+	<text id="renegade_drop_drone"/>
+	<achievement silent="false">RVS_ACH_REN_AIC</achievement>
+	<autoReward level="LOW">stuff</autoReward>
+	<weapon name="RVS_PROJECTOR_AVATAR_CHAOS"/>
+</event>
