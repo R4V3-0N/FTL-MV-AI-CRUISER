@@ -897,6 +897,17 @@ function(shipManager, value)
     return Defines.Chain.CONTINUE, value
 end)
 
+-- Pre-half ignited projector for the player on jump
+script.on_internal_event(Defines.InternalEvents.JUMP_ARRIVE, 
+function(shipManager)
+    if not shipManager == Hyperspace.ships.player then return end
+    for weapon in vter(playerShip.weaponSystem.weapons) do
+        if weapon.blueprint.name == "RVS_PROJECTOR_AVATAR" and weapon.powered then
+            weapon.cooldown.first = weapon.cooldown.second/2
+        end
+    end
+end)
+
 -- Player method
 script.on_game_event("RVS_PROJECTOR_SPAWN_DELAY", false, function()
     local shipManager = Hyperspace.ships.player
