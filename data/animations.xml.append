@@ -444,7 +444,7 @@
 <animSheet name="ra_effector_hacking_warning_small" w="1800" h="120" fw="600" fh="120">effects_rebalanced_arsenal/ra_effector_hacking_warning_small_strip3.png</animSheet>
 <animSheet name="ra_effector_hacking_warning_heavy" w="4800" h="120" fw="600" fh="120">effects_rebalanced_arsenal/ra_effector_hacking_warning_heavy_strip8.png</animSheet>
 <animSheet name="ra_explosion_fire" w="640" h="64" fw="64" fh="64">effects_rebalanced_arsenal/ra_explosion_fire_strip10.png</animSheet>
-
+<animSheet name="ra_effector_impact_1" w="315" h="35" fw="35" fh="35">effects_rebalanced_arsenal/ra_effector_impact_1_strip9.png</animSheet>
 
 
 <anim name="ra_effector_impact_1">
@@ -465,7 +465,7 @@
 </anim>
 
 <anim name="ra_effector_residual_old"> <!-- 1? -->
-	<sheet>ra_effector_residual</sheet>
+	<sheet>ra_effector_residual_old</sheet>
 	<desc length="12" x="0" y="0"/>
 	<time>1.2</time>
 </anim>

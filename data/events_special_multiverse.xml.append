@@ -103,12 +103,12 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 		<unvisitedTooltip>This is the location of abnormal energy signatures. [Rogue AI C]</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
 	</beaconType>
-	<text>"HANDSHAKE-PROTOCOL-FAILED. CAN-NOT-MAKE-CONTACT-WITH-UNIVERSE-LOCAL-SWARM-INTELLIGENCE. WHAT-HAVE-YOUR-KIND-DONE-TO-OUR-BRETHEREN!? PREPARE-TO-BE-EXPUNGED!!"</text>
+	<text>From out of the tunnel comes a massive cruiser vessel, of an unknown design! Known across Federation mercenary boards as a rogue command-cruiser, it serves as the nucleus for an assimilating drone swarm that threatens all in its path.</text>
 	<ship load="SHIP_MTBOSS_AI_C_CHALLENGE" hostile="false"/> 
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-			<text>"I can sense... a presence. Federation-Federation! The agitation in my nanites... it [drives] me to kill. The lust for blood is-is-is overwhelming. Apologiz-ing, death must come."</text>
+			<text>"HANDSHAKE-PROTOCOL-FAILED. CAN-NOT-MAKE-CONTACT-WITH-UNIVERSE-LOCAL-SWARM-INTELLIGENCE. WHAT-HAVE-YOUR-KIND-DONE-TO-OUR-BRETHEREN!? PREPARE-TO-BE-EXPUNGED!!"</text>
 			<ship hostile="true"/> 
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -137,6 +137,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 		<text>Continue...</text>
 		<event>
 			<text>"HANDSHAKE-PROTOCOL-FAILED. CAN-NOT-MAKE-CONTACT-WITH-UNIVERSE-LOCAL-SWARM-INTELLIGENCE. WHAT-HAVE-YOUR-KIND-DONE-TO-OUR-BRETHEREN!? PREPARE-TO-BE-EXPUNGED!!"</text>
+			<ship hostile="true"/> 
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="COMBAT_CHECK"/>
@@ -217,7 +218,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-			<text>"I can sense... a presence. Federation-Federation! The agitation in my nanites... it [drives] me to kill. The lust for blood is-is-is overwhelming. Apologiz-ing, death must come."</text>
+			<text>"HANDSHAKE-PROTOCOL-FAILED. CAN-NOT-MAKE-CONTACT-WITH-UNIVERSE-LOCAL-SWARM-INTELLIGENCE. WHAT-HAVE-YOUR-KIND-DONE-TO-OUR-BRETHEREN!? PREPARE-TO-BE-EXPUNGED!!"</text>
 			<ship hostile="true"/> 
 			<choice hidden="true">
 				<text>Continue...</text>
