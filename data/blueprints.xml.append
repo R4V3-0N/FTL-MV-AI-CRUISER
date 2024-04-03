@@ -71,11 +71,12 @@
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
 	<desc>A marriage between electronic warfare and complete ship disruption. This weapon passively disrupts enemy systems while powered on. Once charged it projects a number of AI Avatars onto the enemy vessel disrupting most ship functions as if the vessel is under an intense boarding invasion.</desc>
-	<descriptionOverride>Basic hacking field projector that can disrupt systems.
+	<descriptionOverride>Advanced Disruption Projector system.
 
 		Stats:
 		Required Power: 3
-		Charge Time: 20 seconds
+		Charge Time: 30 seconds 
+		Partial Pre-Ignited
 
 		Shots Per Charge: 1
 
@@ -85,9 +86,9 @@
 		
 		Buy/Sell Price: 70~/35~
 	</descriptionOverride>
-	<tooltip>Disrupts enemy systems.</tooltip>
-	<tooltipOverride>Required Power: 2
-		Charge Time: 20 seconds
+	<tooltip>Disrupts enemy ships.</tooltip>
+	<tooltipOverride>Required Power: 3
+		Charge Time: 30 seconds
 
 		Shots Per Charge: 1
 
@@ -98,7 +99,7 @@
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10--> 
 	<hack duration="4" immuneAfterHack="3">
-		<shields>4.1</shields> <!--R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields. ADDENDUM: made it 4.1 just so it can work when time is sped up or slowed down -->
+		<shields>4.1</shields>
 		<doors immuneAfterHack="3">8</doors>
 		<sensors immuneAfterHack="3">8</sensors>
 		<temporal immuneAfterHack="3">8</temporal>
@@ -127,9 +128,8 @@
 	<cost>70</cost>
 	<bp>5</bp>
 	<rarity>0</rarity>	<!-- drop from defeating AI Cruiser 3 renegade-->
-	<!--<image>ra_effector_impact_invisible</image>-->
 	<image>ra_effector_hacking</image>
-	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
+	<explosion>invisible</explosion>
 	<launchSounds>
 		<sound>rvs_effector_shoot1</sound>
 		<sound>rvs_effector_shoot2</sound>
@@ -267,7 +267,7 @@
 	<type>LASER</type>
 	<title>EMP Device</title>
 	<short>EMP Device</short>
-	<tip>tip_ion</tip>
+	<tip>rvs_tip_emp</tip>
 	<locked>1</locked>
 	<desc>A simple yet effective EMP device, firing blasts of EMP projectiles that can take down 2 layers of shields, deal 2 ion damage to systems or 1 damage to empty rooms.</desc>
 	<tooltip>Fires a single blast that does 2 ion damage on room hit otherwise pops 2 shields.</tooltip> <!-- placeholder -->
@@ -317,7 +317,7 @@
 	<type>LASER</type>
 	<title>EMP Device Mark II</title>
 	<short>EMP Device II</short>
-	<tip>tip_emp</tip>
+	<tip>rvs_tip_emp</tip>
 	<locked>1</locked>
 	<desc>Slightly improved version of the EMP Device that fires two shots per charge.</desc>
 	<tooltip>Fires a blast of two that does 2 ion damage. Can hit and disable shields as well as systems.</tooltip> <!-- placeholder -->
