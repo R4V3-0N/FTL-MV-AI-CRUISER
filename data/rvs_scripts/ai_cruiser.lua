@@ -849,7 +849,6 @@ local refresh_boarding_AI = function(targetShip)
         if assaultCount == 2 and decoyCount == 2 then
             eventParser:LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_DECOYATTACKER",false,-1)
             return end
-        end
 
         for i = 0, assaultCount - 1 do
             eventParser:LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_ATTACKER_SINGLE",false,-1)
@@ -861,7 +860,6 @@ local refresh_boarding_AI = function(targetShip)
         if assaultCount == 2 and decoyCount == 2 then
             eventParser:LoadEvent(worldManager,"RVS_PROJECTOR_ENEMY_SPAWN_DECOYATTACKER",false,-1)
             return end
-        end
 
         for i = 0, assaultCount - 1 do
             eventParser:LoadEvent(worldManager,"RVS_PROJECTOR_ENEMY_SPAWN_ATTACKER_SINGLE",false,-1)
