@@ -883,6 +883,7 @@ end)
 script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR, 
 function(shipManager, value)
     local playerShip = Hyperspace.ships.player
+    if not playerShip or not playerShip.weaponSystem then return end
     for weapon in vter(playerShip.weaponSystem.weapons) do
         if weapon.blueprint.name == "RVS_PROJECTOR_AVATAR" and weapon.powered then
             if shipManager.iShipId == 0 then
