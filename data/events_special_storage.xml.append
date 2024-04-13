@@ -522,6 +522,36 @@
     <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
     <!--<event load="RVS_STORAGE_CHECK_HOLO_MAKER_NOTHING"/>-->
 </eventList>
+<eventList name="RVS_STORAGE_CHECK_HOLO_MAKER_LIST_HARD">
+    <!-- 
+        4 success, 3 fails.
+    58% success event
+    42% hostile event
+    -->
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
+</eventList>
+<eventList name="RVS_STORAGE_CHECK_HOLO_MAKER_LIST_EXTREME">
+    <!-- 
+        3 success, 4 fails.
+    42% success event
+    58% hostile event
+    -->
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
+</eventList>
 <eventList name="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST">
     <event load="RVS_STORAGE_CHECK_HOLO_MAKER_HOSTILE_FAILURE"/>
     <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SWARM_FAILURE"/>
