@@ -472,7 +472,7 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<weaponList missiles="3" count="3">
 		<weapon name="RVS_FLOCK_GUN" />				<!--3pwr-->
 		<weapon name="RVS_LASER_BURST_SCATTER_1" />	<!--1pwr-->	
-		<weapon name="MISSILES_2_ENEMY" />			<!--2pwr-->
+		<weapon name="RA_EFFECTOR_1" />				<!--2pwr-->
 	</weaponList>
 	<droneList drones="8" count="3">
 		<drone name="GUARDIAN_1_DRONE" />			<!--2pwr-->
@@ -491,14 +491,14 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<systemList>
 		<battery power="3" max="3" room="23" start="true" />
 		<doors power="2" max="3" room="3" start="true" />
-		<drones power="7" max="7" room="5" start="true" />
+		<drones power="6" max="6" room="5" start="true" />
 		<engines power="2" max="2" room="1" start="true" />
 		<mind power="2" max="2" room="2" start="true" />
 		<pilot power="3" max="3" room="11" start="true" />
 		<sensors power="3" max="3" room="8" start="true" />
 		<shields power="4" max="9" room="20" start="true" />
 		<teleporter power="2" max="3" room="7" start="false" />
-		<weapons power="7" max="7" room="25" start="true" />
+		<weapons power="6" max="6" room="25" start="true" />
 		<!--
 			Commented Out systems are to mark location from player ship for future use
 		-->
@@ -513,12 +513,12 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<weaponList missiles="3" count="3">
 		<weapon name="RVS_FLOCK_GUN" />				<!--3pwr-->
 		<weapon name="RVS_LASER_BURST_SCATTER_1" />	<!--1pwr-->
-		<weapon name="MISSILES_3_ENEMY" />			<!--3pwr-->
+		<weapon name="RA_EFFECTOR_1" />				<!--2pwr-->
 	</weaponList>
 	<droneList drones="8" count="3">
-		<drone name="GUARDIAN_2_DRONE" />			<!--3pwr-->
-		<drone name="RVS_BEAM_DEFENSE_1" />			<!--2pwr-->
 		<drone name="RVS_AI_MICROFIGHTER_SWARM" />	<!--2pwr, potentially should make enemy version at 3 for this?-->
+		<drone name="GUARDIAN_1_DRONE" />			<!--2pwr-->
+		<drone name="RVS_BEAM_DEFENSE_1" />			<!--2pwr-->
 	</droneList>
 	<health amount="14" />
 	<maxPower amount="12" />
@@ -553,12 +553,12 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<weaponList missiles="3" count="3">
 		<weapon name="RVS_FLOCK_GUN" />			<!--3pwr-->
 		<weapon name="RVS_SHOTGUN_SCATTER" />	<!--2pwr-->
-		<weapon name="MISSILES_3_ENEMY" />		<!--3pwr-->
+		<weapon name="RA_EFFECTOR_HEAVY" />		<!--3pwr-->
 	</weaponList>
 	<droneList drones="8" count="3">
-		<drone name="GUARDIAN_2_DRONE" />		<!--3pwr-->
-		<drone name="RVS_BEAM_DEFENSE_1" />		<!--2pwr-->
-		<drone name="RVS_AI_MICROFIGHTER_SWARM" /><!--2pwr, potentially should make enemy version at 3 for this?-->
+		<drone name="GUARDIAN_2_DRONE" />			<!--3pwr-->
+		<drone name="RVS_BEAM_DEFENSE_1" />			<!--2pwr-->
+		<drone name="RVS_AI_MICROFIGHTER_SWARM" />	<!--2pwr, potentially should make enemy version at 3 for this?-->
 		<drone name="RVS_DRONE_SCATTER" />			<!--2pwr-->
 	</droneList>
 	<health amount="14" />

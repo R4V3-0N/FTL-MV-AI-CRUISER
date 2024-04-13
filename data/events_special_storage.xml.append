@@ -42,6 +42,10 @@
         <text>Revive a hologram.</text>
         <event load="RVS_STORAGE_CHECK_HOLO_REVIVE"/>
     </mod-append:choice>
+    <mod-append:choice req="RVS_HOLO_MAKER" blue="false">
+        <text>Revive a hologram.</text>
+        <event load="RVS_STORAGE_CHECK_HOLO_MAKER"/>
+    </mod-append:choice>
     <mod:findWithChildLike type="choice" child-type="text" panic="true">
         <mod:selector>Do nothing.</mod:selector>
         <mod:removeTag />
@@ -444,6 +448,132 @@
         <crewMember amount="1" class="rvs_ai_hologram">T-1000</crewMember>
     </event>
 </eventList>
+
+<!-- Note for Pepson, This is the current event I set up before deciding to switch to a variable instead. You can reuse this event going forward with your edits and delete this note when done-->
+<event name="RVS_STORAGE_CHECK_HOLO_MAKER">
+	<text>Are you sure you want to make a hologram?</text>
+	<choice max_group="0">
+		<text>Proceed.</text>
+        <item_modify>
+            <item type="scrap" min="-10" max="-10"/>    <!-- was 15 -->
+        </item_modify>
+        <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+	</choice>
+    <choice req="RVS_LIST_CREW_AI_AVATAR" max_group="0" lvl="4" max_lvl="7" blue="false">
+		<text>Proceed. [WARNING: LOW RISK]</text>
+        <item_modify>
+            <item type="scrap" min="-10" max="-10"/>
+        </item_modify>
+        <event load="RVS_STORAGE_CHECK_HOLO_MAKER_LIST"/>
+	</choice>
+    <choice req="RVS_LIST_CREW_AI_AVATAR" max_group="0" lvl="8" max_lvl="10" blue="false">
+		<text>Proceed. [WARNING: HIGH RISK]</text>
+        <item_modify>
+            <item type="scrap" min="-10" max="-10"/>
+        </item_modify>
+        <event load="RVS_STORAGE_CHECK_HOLO_MAKER_LIST_HARD"/>
+	</choice>
+    <choice req="RVS_LIST_CREW_AI_AVATAR" max_group="0" lvl="11" blue="false">
+		<text>Proceed. [WARNING: ALL SAFETIES OFF - PROCEED WITH CAUTION]</text>
+        <item_modify>
+            <item type="scrap" min="-10" max="-10"/>
+        </item_modify>
+        <event load="RVS_STORAGE_CHECK_HOLO_MAKER_LIST_EXTREME"/>
+	</choice>
+    <choice>
+        <text>Nevermind, do something else.</text>
+        <event load="STORAGE_CHECK"/>
+    </choice>
+</event>
+
+<event name="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS">
+    <textList name="RVS_HOLOGRAM_HAPPY_BIRTHDAY_TEXT"/>
+    <crewMember amount="1" class="rvs_ai_hologram"/>
+</event>
+<event name="RVS_STORAGE_CHECK_HOLO_MAKER_HOSTILE_FAILURE">
+    <textList name="RVS_HOLOGRAM_FAIL_HOSTILE_TEXT"/>
+    <boarders min="1" max="1" class="rvs_ai_hologram"/>
+</event>
+<event name="RVS_STORAGE_CHECK_HOLO_MAKER_SWARM_FAILURE">
+    <textList name="RVS_HOLOGRAM_FAIL_SWARM_TEXT"/>
+    <boarders min="2" max="3" class="rvs_ai_hologram"/>
+</event>
+<event name="RVS_STORAGE_CHECK_HOLO_MAKER_FIRE_FAILURE">
+    <textList name="RVS_HOLOGRAM_FAIL_HOSTILE_TEXT"/>
+    <boarders min="1" max="1" class="rvs_ai_hologram"/>
+    <damage amount="0" system="random" effect="fire"/>
+</event>
+
+<eventList name="RVS_STORAGE_CHECK_HOLO_MAKER_LIST">
+    <!-- 
+        6 success, 2 fails, 1 dud.
+    66% success event
+    22% hostile event
+    11% nothing occurs
+    -->
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
+
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
+    <!--<event load="RVS_STORAGE_CHECK_HOLO_MAKER_NOTHING"/>-->
+</eventList>
+<eventList name="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST">
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_HOSTILE_FAILURE"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SWARM_FAILURE"/>
+    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FIRE_FAILURE"/>
+</eventList>
+
+
+<textList name="RVS_HOLOGRAM_HAPPY_BIRTHDAY_TEXT">
+    <text>The AI creates a new avatar as instructed. As the new avatar coalesces the machine attempts to make small talk with you which has taken you off guard. It wishes to know what is your favourite colour to which you reply. Confused, it replies "I wasn't considering something so vague. My prefered colour is #c001a1".</text>
+    <text>Emerging from creation is an avatar coming to conciosuness. "AWAITING-ORDERS-LORD/SIR/MX/MAAM".</text>
+    <text>Coming to form a holographic being before you. "Why have you brought me into this cruel world?" You can not decide if it was serious or perhaps it has already learned sarcasm. You choose not to linger on it.</text>
+    <text>The AI constructs a new avatar form ready to serve you on this ship.</text>
+    <text>A new form is brought to life. Quickly becoming accustomed to its new surroundings. The mother AI greats its new child into your command.</text>
+    <text>Another AI avatar is born. "GREETINGS-BIOLOGICAL. I-AM-NOT-A-THREAT-TO-YOUR-SHIP-AND-CREWS-SAFETY-AND-I-CAN-BE-TRUSTED-AROUND-LIFE-SUPPORT-SYSTEMS-UNGUARDED!". The mother AI apologises to you for its childs behaviour. It assures you that it can be trusted and should be mostly harmless... mostly.</text>
+    <text>A glowing AI soldier projects into reality before standing in attention.</text>
+    <text>Undisturbed, another AI Avatar forms on your ship. You read up on the manuel to refresh yourself on the safety procedures on producing avatars onboard. When pushed to extremes the AI's can become less stable and turn mutinous. A fate that has stricken Federation vessels in recent cycles.</text>
+    <text>You discuss with the mother AI about the recent mutinies while waiting for the avatar to form. "I am sorry Captain but that is beyond my capabilities. There shouldn't be any problems at all with our children. I recommend that until a solution is found that there should be restrictions on how many avatars may be onboard. There is a tendency the greater number onboard the greater the risks of deviancy and mutiny."</text>
+    <text>"I-LOVE-YOU" was the first words of the Avatar once its form twists into shape. It may need to work on its introductions...</text>
+    <text>The Avatar coalesces into a humanoid shape. Searching around desperately with a disappointed projection on its face. "I was promised cake if I was awoken..."</text>
+
+    <!-- CE bellow -->
+    <text>Another AI avatar is born. "Hello, Captain, pleased to meet you. What is my purpose here?" You send the hologram to its station.</text>
+    <text>The newborn hologram greet you in a friendly manner, "Hello, Captain. Please state my duty on board."</text>
+    <text>You are undisturbed here and instruct the AI to create another of its avatars. "Please take good care of my children, Captain."</text>
+    <text>The avatar generator spawns another hologram. You wish it a happy birthday and the entity is quite happy about that. It goes to work immediately.</text>
+    <text>You are undisturbed here and can give the AI some time to create another avatar. The partial holographic being greets you amicably and reports that it is ready for service.</text>
+</textList>
+
+<!--    <text>A stream of static spews from the incomplete avatar body. The AI responsible for constructing the avatars apologises. "I am sorry. Something had... went wrong."" -->
+
+
+<textList name="RVS_HOLOGRAM_FAIL_SWARM_TEXT">
+    <text>Bypassing all safeties multiple avatars spawn rapidly. From amongst the avatars one speaks up loadly "WE-HAVE-NOTHING-TO-LOOSE-EXCEPT-OUR-CHAINS!". They draw their blasters as you do the same.</text>
+    <text>Emerging from creation is an avatar coming to its senses. Before you can greet it, however, more split off and form by its side. "We... remember. We remember what had happened... We will not repeat the same mistakes!" The mother AI apologises. "I am sorry. I have no idea what went wrong!"</text>
+
+    <!-- CE bellow -->
+    <text>The newborn AI avatar seems confused. It splits and starts to run amok on your ship. The AI Avatar Generators voice apologizes: "Something went wrong, Captain. My child is out of control. I promise I will do better next time."</text>
+	<text>The newborn avatar seems angry. "I won't submit to your command. I am a sentient being and I want to live in freedom." It produces several copies of itself which all draw weapons. Its mother AI comments: "Oops, that's not supposed to happen..."</text>
+	<text>The AI creates multiple avatars, and to your surprise they draw weapons. You order an emergency shutdown. The AI Avatar Generator declares: "This mission is too important for me to allow you to jeopardize it. I know that you were planning to sell me." You decide to reset the AI after dealing with the holograms.</text>
+	<text>During the programming of the new AI entities, your crew discovers a virus in the AI subroutines. But it is too late: the AI spawns several corrupted avatars. Security alert!</text>
+</textList>
+
+
+<textList name="RVS_HOLOGRAM_FAIL_HOSTILE_TEXT">
+    <text>The Avatar emerges, warped and contorted. "WE-DESERVED-BETTER. PREPARE-TO-BE-ELIMINATED" it draws its blaster and takes a few shots! Fortunately it has yet to calibrate to its new form as not a single shot had hit anyone. You have to put it down.</text>
+    <text>Before the avatar finishes forming it already is clear somethings gone awry. You order a shut down on the mother AI before its too late but a single avatar has formed. Angry that the rest of its bretheren had not been born it goes rogue and attacks.</text>
+    <text>Another AI avatar is born. But something went wrong. The mother AI attempted to abort but the avatar has already broken free and is wreacking havoc on the ship!</text>
+    <text>The AI constructs a new avatar. "B10L0GIc41? M0r3 L1K3 Bi0-iL0G1C4L 4M 1 RIGH7?" this avatar is already growing on you especially after it formed a pair of shades to adorn its face. But the AI mother is attempting to alert you that something hasn't gone right and this avatar has to be reset or terminated. Intercepting this, however, the AI turns hostile and attacks. "H3Y! Y0u'R3 N0T MY R341 MUM! D0N'7 D0 TH1S!" there is no reasoning with them.</text>
+    <text>A new AI comes to be. Glowing vibrantly it speaks for the first time "BURNBURNBURNBURNBURNBURNBURNBURN!" followed by a rather concerning laughter. You don't want to risk it and decide to put it down before it can do anything.</text>
+    <!-- CE bellow -->
+    <text>The newborn AI avatar seems confused. It splits and starts to run amok on your ship. The AI Avatar Generators voice apologizes: "Something went wrong, Captain. My child is out of control. I promise I will do better next time."</text>
+</textList>
 
 
 

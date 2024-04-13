@@ -97,7 +97,7 @@
     <mod-append:customShip name="PLAYER_SHIP_RVSP_AI_3">
 		<hiddenAug>SHIP_AUTO</hiddenAug> <!-- eventually replace with AI -->
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-        <hiddenAug>RVS_HOLO_EMITTERS</hiddenAug>
+        <hiddenAug>RVS_HOLO_MAKER</hiddenAug>   <!--Produces Avatars, not brings them back-->
         <crewLimit>4</crewLimit>
         <autoShipForce>true</autoShipForce>
         <crew>

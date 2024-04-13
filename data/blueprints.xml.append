@@ -122,7 +122,7 @@
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>20</cooldown> <!-- R4 2023.02.15 reduced down from 16 to 15 -->
+	<cooldown>30</cooldown> <!-- R4 2024.04.08 Increased from 20 to 30, but gave it a semi-preigniter that starts it at 15 if powered on -->
 	<crewSpawnChance>10</crewSpawnChance>
 	<power>3</power>
 	<cost>70</cost>
@@ -1204,7 +1204,8 @@
 	<rarity>2</rarity>
 	<explosion>ra_explosion_fire</explosion>
     <projectiles>
-		<projectile count="4" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>
+		<projectile count="4" fake="false">ra_plasma_shot</projectile>
+		<!--<projectile count="4" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>-->
 	</projectiles>
 	<launchSounds>
 		<sound>rvs_heavyLaserScatter1</sound>
@@ -1247,7 +1248,8 @@
 	<rarity>3</rarity>
 	<explosion>rvs_explosion_fire</explosion>
     <projectiles>
-		<projectile count="9" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile> <!-- was RVS_LIST_SHOW_PLUS_PLASMA -->
+		<projectile count="9" fake="false">ra_plasma_shot</projectile>
+		<!--<projectile count="9" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile> was RVS_LIST_SHOW_PLUS_PLASMA -->
 	</projectiles>
 	<launchSounds>
 		<sound>rvs_heavyLaserScatter1</sound>
@@ -1289,8 +1291,8 @@
 	<speed>30</speed>
 	<rarity>3</rarity>
 	<explosion>rvs_explosion_fire</explosion>
-    <projectiles>
-		<projectile count="15" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>
+   		<projectile count="9" fake="false">ra_plasma_shot</projectile>
+		<!--<projectile count="15" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>-->
 	</projectiles>
 	<launchSounds>
 		<sound>rvs_heavyLaserScatter1</sound>
@@ -1310,7 +1312,7 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-
+<!-- No longer in use
 <weaponBlueprint name="RVS_SHOT_PLASMA_NORMAL">
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
@@ -1391,7 +1393,6 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-
 <weaponBlueprint name="RVS_SHOT_PLASMA_PLUS_NORMAL">
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
@@ -1471,13 +1472,13 @@
 	<weaponArt>rvs_plasma_projector_1</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
+-->
+
 <!--
 
 DRONES
 
 -->
-
-
 
 <weaponBlueprint name="RVS_DRONE_LASER_SCATTER">
 	<type>LASER</type>
@@ -2226,7 +2227,7 @@ AUGMENTS
 <augBlueprint name="RVS_HOLO_MAKER">
     <title>Holo-Projector</title>
     <desc>Can produce new Hologram Avatars at empty beacons.</desc>
-    <cost>48</cost>
+    <cost>50</cost>
     <bp>8</bp>
     <rarity>0</rarity>	<!-- rarity in sector rarity list-->
     <stackable>false</stackable>
