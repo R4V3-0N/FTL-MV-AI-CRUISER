@@ -101,10 +101,12 @@
         <crewLimit>4</crewLimit>
         <autoShipForce>true</autoShipForce>
         <crew>
-            <rvs_ai_hologram room="19" name="LVII Omnicron" /> <!-- Piloting -->
-            <rvs_ai_hologram room="7" name="BRD-R Assimilant" /> <!-- Engines -->
-            <rvs_ai_hologram room="15" name="Replicel-22" /> <!-- Shields -->
-            <rvs_ai_hologram room="1" name="[CORRUPTED]" /> <!-- Weapons -->
+            <rvs_ai_hologram room="19" name="Replicel-22" />            <!-- Piloting -->
+
+            <!-- Removed due to changing from RVS_HOLO_EMITTERS ot RVS_HOLO_MAKER, shifting focus to producing their comrades.-->
+            <!--<rvs_ai_hologram room="15" name="LVII Omnicron" />-->   <!-- Shielding -->
+            <!--<rvs_ai_hologram room="7" name="BRD-R Assimilant" />--> <!-- Engines -->
+            <!--<rvs_ai_hologram room="1" name="[CORRUPTED]" />-->      <!-- Weapons -->
         </crew>
     </mod-append:customShip>
 	

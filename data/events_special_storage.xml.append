@@ -452,29 +452,26 @@
 <!-- Note for Pepson, This is the current event I set up before deciding to switch to a variable instead. You can reuse this event going forward with your edits and delete this note when done-->
 <event name="RVS_STORAGE_CHECK_HOLO_MAKER">
 	<text>Are you sure you want to make a hologram?</text>
-	<choice max_group="0">
-		<text>Proceed.</text>
-        <item_modify>
-            <item type="scrap" min="-10" max="-10"/>    <!-- was 15 -->
-        </item_modify>
+    <choice req="RVS_LIST_CREW_AI_AVATAR" hidden="true" max_group="0" lvl="0" max_lvl="3" blue="false">
+		<text>Proceed.[Cost: 15~]</text>
         <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
 	</choice>
-    <choice req="RVS_LIST_CREW_AI_AVATAR" max_group="0" lvl="4" max_lvl="7" blue="false">
-		<text>Proceed. [WARNING: LOW RISK]</text>
+    <choice req="RVS_LIST_CREW_AI_AVATAR" hidden="true" max_group="0" lvl="4" max_lvl="7" blue="false">
+		<text>Proceed.[Cost: 15~]</text>
         <item_modify>
             <item type="scrap" min="-10" max="-10"/>
         </item_modify>
         <event load="RVS_STORAGE_CHECK_HOLO_MAKER_LIST"/>
 	</choice>
-    <choice req="RVS_LIST_CREW_AI_AVATAR" max_group="0" lvl="8" max_lvl="10" blue="false">
-		<text>Proceed. [WARNING: HIGH RISK]</text>
+    <choice req="RVS_LIST_CREW_AI_AVATAR" hidden="true" max_group="0" lvl="8" max_lvl="10" blue="false">
+		<text>Proceed.[Cost: 15~ Warning: Unstable]</text>
         <item_modify>
             <item type="scrap" min="-10" max="-10"/>
         </item_modify>
         <event load="RVS_STORAGE_CHECK_HOLO_MAKER_LIST_HARD"/>
 	</choice>
-    <choice req="RVS_LIST_CREW_AI_AVATAR" max_group="0" lvl="11" blue="false">
-		<text>Proceed. [WARNING: ALL SAFETIES OFF - PROCEED WITH CAUTION]</text>
+    <choice req="RVS_LIST_CREW_AI_AVATAR" hidden="true" max_group="0" lvl="11" blue="false">
+		<text>Proceed.[Cost: 15~ Warning: !CRTICIAL!]</text>
         <item_modify>
             <item type="scrap" min="-10" max="-10"/>
         </item_modify>
@@ -489,19 +486,31 @@
 <event name="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS">
     <textList name="RVS_HOLOGRAM_HAPPY_BIRTHDAY_TEXT"/>
     <crewMember amount="1" class="rvs_ai_hologram"/>
+    <item_modify>
+        <item type="scrap" min="-15" max="-15"/>
+    </item_modify>
 </event>
 <event name="RVS_STORAGE_CHECK_HOLO_MAKER_HOSTILE_FAILURE">
     <textList name="RVS_HOLOGRAM_FAIL_HOSTILE_TEXT"/>
     <boarders min="1" max="1" class="rvs_ai_hologram"/>
+    <item_modify>
+        <item type="scrap" min="-15" max="-15"/>
+    </item_modify>
 </event>
 <event name="RVS_STORAGE_CHECK_HOLO_MAKER_SWARM_FAILURE">
     <textList name="RVS_HOLOGRAM_FAIL_SWARM_TEXT"/>
     <boarders min="2" max="3" class="rvs_ai_hologram"/>
+    <item_modify>
+        <item type="scrap" min="-15" max="-15"/>
+    </item_modify>
 </event>
 <event name="RVS_STORAGE_CHECK_HOLO_MAKER_FIRE_FAILURE">
     <textList name="RVS_HOLOGRAM_FAIL_HOSTILE_TEXT"/>
     <boarders min="1" max="1" class="rvs_ai_hologram"/>
     <damage amount="0" system="random" effect="fire"/>
+    <item_modify>
+        <item type="scrap" min="-15" max="-15"/>
+    </item_modify>
 </event>
 
 <eventList name="RVS_STORAGE_CHECK_HOLO_MAKER_LIST">
@@ -539,15 +548,12 @@
 </eventList>
 <eventList name="RVS_STORAGE_CHECK_HOLO_MAKER_LIST_EXTREME">
     <!-- 
-        3 success, 4 fails.
-    42% success event
-    58% hostile event
+        1 success, 3 fails.
+    25% success event
+    75% hostile event
     -->
     <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
-    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
-    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
 
-    <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
     <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
     <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
     <event load="RVS_STORAGE_CHECK_HOLO_MAKER_FAIL_LIST"/>
