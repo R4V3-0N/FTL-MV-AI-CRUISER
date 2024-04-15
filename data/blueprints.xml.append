@@ -1246,7 +1246,7 @@
 	<bp>10</bp>
 	<speed>30</speed>
 	<rarity>3</rarity>
-	<explosion>rvs_explosion_fire</explosion>
+	<explosion>ra_explosion_fire</explosion>
     <projectiles>
 		<projectile count="9" fake="false">ra_plasma_shot</projectile>
 		<!--<projectile count="9" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile> was RVS_LIST_SHOW_PLUS_PLASMA -->
@@ -1290,7 +1290,8 @@
 	<bp>10</bp>
 	<speed>30</speed>
 	<rarity>3</rarity>
-	<explosion>rvs_explosion_fire</explosion>
+	<explosion>ra_explosion_fire</explosion>
+	<projectiles>
    		<projectile count="9" fake="false">ra_plasma_shot</projectile>
 		<!--<projectile count="15" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>-->
 	</projectiles>
@@ -2217,7 +2218,7 @@ AUGMENTS
 <augBlueprint name="RVS_HOLO_EMITTERS">
     <title>Holo-Emitters</title>
     <desc>Allows any hologram crew which have been destroyed after this augment has been installed to be recreated at empty beacons.</desc>
-    <cost>60</cost>
+    <cost>50</cost>	<!-- was 60 -->
     <bp>8</bp>
     <rarity>0</rarity>	<!-- rarity in sector rarity list-->
     <stackable>false</stackable>
@@ -2227,7 +2228,7 @@ AUGMENTS
 <augBlueprint name="RVS_HOLO_MAKER">
     <title>Holo-Projector</title>
     <desc>Can produce new Hologram Avatars at empty beacons.</desc>
-    <cost>50</cost>
+    <cost>35</cost>
     <bp>8</bp>
     <rarity>0</rarity>	<!-- rarity in sector rarity list-->
     <stackable>false</stackable>
