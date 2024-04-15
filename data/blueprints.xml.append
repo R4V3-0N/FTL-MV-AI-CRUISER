@@ -1204,8 +1204,7 @@
 	<rarity>2</rarity>
 	<explosion>ra_explosion_fire</explosion>
     <projectiles>
-		<projectile count="4" fake="false">ra_plasma_shot</projectile>
-		<!--<projectile count="4" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>-->
+		<projectile count="4" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>rvs_heavyLaserScatter1</sound>
@@ -1248,8 +1247,7 @@
 	<rarity>3</rarity>
 	<explosion>ra_explosion_fire</explosion>
     <projectiles>
-		<projectile count="9" fake="false">ra_plasma_shot</projectile>
-		<!--<projectile count="9" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile> was RVS_LIST_SHOW_PLUS_PLASMA -->
+		<projectile count="9" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile> <!--was RVS_LIST_SHOW_PLUS_PLASMA -->
 	</projectiles>
 	<launchSounds>
 		<sound>rvs_heavyLaserScatter1</sound>
@@ -1292,8 +1290,7 @@
 	<rarity>3</rarity>
 	<explosion>ra_explosion_fire</explosion>
 	<projectiles>
-   		<projectile count="9" fake="false">ra_plasma_shot</projectile>
-		<!--<projectile count="15" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>-->
+		<projectile count="15" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>rvs_heavyLaserScatter1</sound>
@@ -1313,7 +1310,6 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<!-- No longer in use
 <weaponBlueprint name="RVS_SHOT_PLASMA_NORMAL">
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
@@ -1363,11 +1359,11 @@
 	<tooltip>YOU SHOULDN'T SEE THIS.</tooltip>
 	<radius>40</radius>
 	<damage>0</damage>
-	<sysDamage>1</sysDamage>
+	<sysDamage>0</sysDamage>	<!-- removed system damage -->
 	<missiles>0</missiles>
 	<shots>1</shots>
 	<sp>0</sp>
-	<fireChance>6</fireChance>
+	<fireChance>7</fireChance>
 	<breachChance>0</breachChance>
 	<cooldown>16</cooldown>
 	<power>1</power>
@@ -1473,7 +1469,6 @@
 	<weaponArt>rvs_plasma_projector_1</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
--->
 
 <!--
 
@@ -1525,7 +1520,7 @@ DRONES
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_1</weaponArt>
+	<weaponArt>laser_burst_1</weaponArt>
 </weaponBlueprint>
 <droneBlueprint name="RVS_AI_MICROFIGHTER_INTERCEPTOR">
 	<type>COMBAT</type>
@@ -1718,7 +1713,7 @@ DRONES
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_1</weaponArt>
+	<weaponArt>laser_burst_1</weaponArt>
 </weaponBlueprint>
 <droneBlueprint name="RVS_DRONE_DEFENSE_SCATTER">
 	<type>DEFENSE</type>
@@ -1910,7 +1905,7 @@ DRONES
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>ba_plasma_thrower_1</weaponArt> 
+	<weaponArt>rvs_plasma_projector_1</weaponArt> 
 </weaponBlueprint>
 <droneBlueprint name="RVS_DRONE_PLASMA_1">
 	<type>COMBAT</type>
@@ -2622,13 +2617,13 @@ AUGMENTS
 				<number>1</number>
 			</slot>
 		</engines>
-		<hacking power="1" room="20" start="true" img="room_hacking_9" />
+		<hacking power="1" room="20" start="false" img="room_hacking_9" />
 		<medbay power="1" room="10" start="false" img="room_medbay_rvs_ai_2">
 			<slot>
 				<number>0</number>
 			</slot>
 		</medbay>
-		<mind power="1" room="4" start="false" img="room_mind_5" />
+		<mind power="1" room="4" start="true" img="room_mind_5" />
 		<oxygen power="1" room="24" start="false" img="room_oxygen_2" />
 		<pilot power="1" room="19" start="true" img="room_pilot_rvs_ai">
 			<slot>
