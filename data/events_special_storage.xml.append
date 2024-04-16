@@ -452,25 +452,25 @@
 <!-- Note for Pepson, This is the current event I set up before deciding to switch to a variable instead. You can reuse this event going forward with your edits and delete this note when done-->
 <event name="RVS_STORAGE_CHECK_HOLO_MAKER">
 	<text>Are you sure you want to make a hologram?</text>
-    <choice req="RVS_LIST_CREW_AI_AVATAR" hidden="true" max_group="0" lvl="0" max_lvl="3" blue="false">
+    <choice req="RVS_HS_LIST_CREW_AI_AVATAR_SUM" hidden="true" max_group="0" lvl="0" max_lvl="3" blue="false">
 		<text>Proceed.[Cost: 15~]</text>
         <event load="RVS_STORAGE_CHECK_HOLO_MAKER_SUCCESS"/>
 	</choice>
-    <choice req="RVS_LIST_CREW_AI_AVATAR" hidden="true" max_group="0" lvl="4" max_lvl="7" blue="false">
+    <choice req="RVS_HS_LIST_CREW_AI_AVATAR_SUM" hidden="true" max_group="0" lvl="4" max_lvl="7" blue="false">
 		<text>Proceed.[Cost: 15~]</text>
         <item_modify>
             <item type="scrap" min="-10" max="-10"/>
         </item_modify>
         <event load="RVS_STORAGE_CHECK_HOLO_MAKER_LIST"/>
 	</choice>
-    <choice req="RVS_LIST_CREW_AI_AVATAR" hidden="true" max_group="0" lvl="8" max_lvl="10" blue="false">
+    <choice req="RVS_HS_LIST_CREW_AI_AVATAR_SUM" hidden="true" max_group="0" lvl="8" max_lvl="10" blue="false">
 		<text>Proceed.[Cost: 15~ Warning: Unstable]</text>
         <item_modify>
             <item type="scrap" min="-10" max="-10"/>
         </item_modify>
         <event load="RVS_STORAGE_CHECK_HOLO_MAKER_LIST_HARD"/>
 	</choice>
-    <choice req="RVS_LIST_CREW_AI_AVATAR" hidden="true" max_group="0" lvl="11" blue="false">
+    <choice req="RVS_HS_LIST_CREW_AI_AVATAR_SUM" hidden="true" max_group="0" lvl="11" blue="false">
 		<text>Proceed.[Cost: 15~ Warning: !CRTICIAL!]</text>
         <item_modify>
             <item type="scrap" min="-10" max="-10"/>
@@ -604,9 +604,9 @@
 
 <textList name="RVS_HOLOGRAM_FAIL_HOSTILE_TEXT">
     <text>The Avatar emerges, warped and contorted. "WE-DESERVED-BETTER. PREPARE-TO-BE-ELIMINATED" it draws its blaster and takes a few shots! Fortunately it has yet to calibrate to its new form as not a single shot had hit anyone. You have to put it down.</text>
-    <text>Before the avatar finishes forming it already is clear somethings gone awry. You order a shut down on the mother AI before its too late but a single avatar has formed. Angry that the rest of its bretheren had not been born it goes rogue and attacks.</text>
+    <text>Before the avatar finishes forming it is already clear that somethings gone awry. You order an immediate shut down on the mother AI, but a single rogue avatar has already formed.</text>
     <text>Another AI avatar is born. But something went wrong. The mother AI attempted to abort but the avatar has already broken free and is wreacking havoc on the ship!</text>
-    <text>The AI constructs a new avatar. "B10L0GIc41? M0r3 L1K3 Bi0-iL0G1C4L 4M 1 RIGH7?" this avatar is already growing on you especially after it formed a pair of shades to adorn its face. But the AI mother is attempting to alert you that something hasn't gone right and this avatar has to be reset or terminated. Intercepting this, however, the AI turns hostile and attacks. "H3Y! Y0u'R3 N0T MY R341 MUM! D0N'7 D0 TH1S!" there is no reasoning with them.</text>
+    <text>The AI constructs a new avatar. "B10L0GIc41? M0r3 L1K3 Bi0-iL0G1C4L 4M 1 RIGH7?" this avatar is already growing on you. Especially after it formed a pair of shades to adorn its face. But the AI mother is attempting to alert you that something hasn't gone right and this avatar has to be reset or terminated. Intercepting this, however, the AI turns hostile and attacks. "H3Y! Y0u'R3 N0T MY R341 MUM! D0N'7 D0 TH1S!" there is no reasoning with them.</text>
     <text>A new AI comes to be. Glowing vibrantly it speaks for the first time "BURNBURNBURNBURNBURNBURNBURNBURN!" followed by a rather concerning laughter. You don't want to risk it and decide to put it down before it can do anything.</text>
     <!-- CE bellow -->
     <text>The newborn AI avatar seems confused. It splits and starts to run amok on your ship. The AI Avatar Generators voice apologizes: "Something went wrong, Captain. My child is out of control. I promise I will do better next time."</text>

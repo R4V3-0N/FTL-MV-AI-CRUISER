@@ -682,6 +682,9 @@
 	</aug>
 </augments>
 
+<!-- Requirement Lists-->
+
+
 <mod:findLike type="events" limit="1">
     <mod-append:variable name="loc_holos_last_count" op="set" val="-1"/>
     <mod-append:variable name="loc_holos_dead" op="set" val="0"/>
@@ -724,6 +727,10 @@
     <mod-append:req name="RVS_REQ_HOLO_REVIVE" type="all">
         <name>loc_holos_dead</name>
         <name>RVS_REQ_HOLO_TRACK_DEATH</name>
+    </mod-append:req>
+    <mod-append:req name="RVS_HS_LIST_CREW_AI_AVATAR_SUM" type="sum">
+        <name>rvs_ai_hologram</name>
+        <name>rvs_ai_hologram</name>
     </mod-append:req>
 </mod:findLike>
 
