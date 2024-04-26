@@ -211,6 +211,7 @@
 <animSheet name="rvs_beam_shotgun_2" w="340" h="49" fw="34" fh="49">weapons_hyperspace/rvs_beam_shotgun_2_strip10.png</animSheet>
 <animSheet name="rvs_beam_shotgun_3" w="532" h="65" fw="38" fh="65">weapons_hyperspace/rvs_beam_shotgun_3_strip14.png</animSheet>
 <animSheet name="rvs_hs_plasma_thrower_1" w="280" h="59" fw="28" fh="59">weapons_hyperspace/rvs_plasma_thrower_1_strip10.png</animSheet>
+<animSheet name="rvs_focus_corrosion_1" w="340" h="65" fw="34" fh="65">weapons_hyperspace/rvs_focus_corrosion_1_strip10.png</animSheet>
 
 <weaponAnim name="rvs_emp_1">
 	<sheet>rvs_emp_1</sheet>
@@ -286,6 +287,16 @@
 	<firePoint  x="16" y="15"/>
 	<mountPoint x="4" y="36"/>
 	<chargeImage>weapons_hyperspace/rvs_plasma_thrower_1_glow.png</chargeImage>
+</weaponAnim>
+
+<weaponAnim name="rvs_focus_corrosion_1">
+	<sheet>rvs_focus_corrosion_1</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint  x="21" y="4"/>
+	<mountPoint x="4" y="45"/>
+	<chargeImage>weapons_hyperspace/rvs_focus_corrosion_1_glow.png</chargeImage>
 </weaponAnim>
 
 <animSheet name="RVS_PROJECTILE_BEAM_FOCUS_1" w="12" h="5" fw="12" fh="5">effects/RVS_PROJECTILE_BEAM_FOCUS_1.png</animSheet>
@@ -539,6 +550,13 @@
 	<time>0.75</time>
 </anim>
 
+<!-- Slightly edited version from IPS made by Slowrider -->
+<animSheet name="rvs_corrode_sparks_2" w="245" h="35" fw="35" fh="35">effects/rvs_corrode_sparks_2.png</animSheet>
+<anim name="rvs_corrode_sparks_2">
+	<sheet>rvs_corrode_sparks_2</sheet>
+	<desc length="7" x="0" y="0"/>
+	<time>1</time>
+</anim>
 
 <!-- Scatter explosion -->
 <animSheet name="ra_explosion_tiny1" w="180" h="15" fw="15" fh="15">effects_rebalanced_arsenal/ra_explosion_tiny1_strip12.png</animSheet>

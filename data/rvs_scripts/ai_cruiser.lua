@@ -125,10 +125,15 @@ end)
 -- Replace burst projectile with beam for shotgun pinpoints
 local pinpoint1 = Hyperspace.Blueprints:GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_1")
 local pinpoint2 = Hyperspace.Blueprints:GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_2")
+local fm_epinpoint1 = Hyperspace.Blueprints:GetWeaponBlueprint("FM_RVS_PROJECTILE_BEAM_ENERGY_FOCUS_1")
+local fm_epinpoint2 = Hyperspace.Blueprints:GetWeaponBlueprint("FM_RVS_PROJECTILE_BEAM_ENERGY_FOCUS_2")
 local burstsToBeams = {}
 burstsToBeams.RVS_BEAM_SHOTGUN_1 = pinpoint1
 burstsToBeams.RVS_BEAM_SHOTGUN_2 = pinpoint1
 burstsToBeams.RVS_BEAM_SHOTGUN_3 = pinpoint2
+burstsToBeams.RVS_BEAM_SHOTGUN_1 = fm_epinpoint1
+burstsToBeams.RVS_BEAM_SHOTGUN_2 = fm_epinpoint1
+burstsToBeams.RVS_BEAM_SHOTGUN_3 = fm_epinpoint2
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local beamReplacement = burstsToBeams[weapon.blueprint.name]
     if beamReplacement then

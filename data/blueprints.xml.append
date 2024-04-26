@@ -567,6 +567,65 @@
     <weaponArt>rvs_beam_shotgun_3</weaponArt>
 </weaponBlueprint>
 
+<weaponBlueprint name="RVS_FOCUS_CORROSION_1">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_focus</tip>
+    <title>Corrosion Focus Beam</title>
+    <short>Corrosion Focus</short>
+    <desc>Outlawed in the universe where this weapon was first sighted. This exotic weapon fires a concentrated tight beam of x-rays that irradiates and corrodes the target causing systems to break down over time for a short duration.</desc>
+    <tooltip>Corrosive focus that deals 3 damage on hit and applies an additional 3 via corrosion.</tooltip>
+    <damage>3</damage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>3</breachChance>
+	<persDamage>3</persDamage>
+    <cooldown>16</cooldown>
+	<color>
+		<r>0</r>
+		<g>204</g>
+		<b>104</b>
+	</color>
+	<statBoosts>
+        <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
+		<statBoost name="stunMultiplier" load="RAD_STUN"/>
+        <statBoost name="repairSpeed" load="RAD_REPAIR"/>
+    </statBoosts>
+    <power>3</power>
+    <cost>90</cost>
+    <bp>5</bp>
+    <speed>1</speed>
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
+    <image>beam_contact</image>
+    <length>1</length>
+	<erosion>
+		<speed>1.5</speed>
+		<maxSpeed>1.5</maxSpeed>
+		<time>17.0</time>
+		<maxTime>25.0</maxTime>
+		<systemRepairMultiplier>1</systemRepairMultiplier>
+		<erodeShields>false</erodeShields>
+		<roomAnim renderLayer="1">
+			<anim animType="center" animBorder="0">invisible</anim>
+			<wallAnim>rvs_corrode_sparks_2</wallAnim>
+		</roomAnim>
+		
+		<!-- The variables below this line cannot be altered on a weapon-to-weapon basis, this is not desirable -->
+		<growBreachMultiplier>1000.0</growBreachMultiplier>
+		<newBreachDamage>0</newBreachDamage>
+		<newBreachRequirement>100000.0</newBreachRequirement>
+		<canDilate>true</canDilate>
+	</erosion>
+    <projectiles>
+        <projectile count="3" fake="false">laser_burst</projectile> <!-- Fake projectiles which LUA replaces with beams -->
+    </projectiles>
+	<launchSounds>
+		<sound>ra_focusbeambig1</sound>
+		<sound>ra_focusbeambig2</sound>
+		<sound>ra_focusbeambig3</sound>
+	</launchSounds>
+    <weaponArt>rvs_focus_corrosion_1</weaponArt>
+</weaponBlueprint>
 
 <!-- 
 	\\\\\\\\\\\\\\\\\\
@@ -1570,7 +1629,7 @@
 		Total Crew Damage: 15
 		Ion Damage: 1 (Rooms Only)
 
-		Fire Chance: 20%
+		Fire Chance: 30%
 		Stun Chance: 100% (3 seconds long)
 
 		Buy/Sell Price: 100~/50~
@@ -1586,13 +1645,14 @@
 		Total Crew Damage: 15
 		Ion Damage: 1 (Rooms Only)
 
-		Fire Chance: 20%
+		Fire Chance: 30%
 		Stun Chance: 100% (3 seconds long)
 	</tooltipOverride>
 	<tooltip>Fires a pair of beams across a random area doing up to 2 damage.</tooltip>
-    <radius>45</radius>
+    <radius>50</radius>
 	<damage>1</damage>
 	<noSysDamage>true</noSysDamage>
+	<shots>1</shots>
 	<sp>0</sp>
 	<fireChance>3</fireChance>
 	<breachChance>0</breachChance>
@@ -1658,9 +1718,10 @@
 		Fire Chance: 30%
 		Stun Chance: 100% (3 seconds long)
 	</tooltipOverride>
-    <radius>47</radius> <!-- R4: Changed from 42 to 47, as I think a near guaranteed 4 hits on a 2x2 room is a lil powerful for a weapon like this-->
-    <damage>1</damage>
-    <shots>1</shots>
+    <radius>55</radius> <!-- R4: Changed from 42 to 47, as I think a near guaranteed 4 hits on a 2x2 room is a lil powerful for a weapon like this-->
+	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<shots>1</shots>
     <sp>0</sp>
     <fireChance>3</fireChance> <!-- fire chance moderately high for Chronos pleasure -->
     <breachChance>1</breachChance>
@@ -1684,7 +1745,7 @@
 		<sound>ra_focusbeam2</sound>
 		<sound>ra_focusbeam3</sound>
 	</launchSounds>
-    <weaponArt>fm_rvs_shotgun_focus_energy_2</weaponArt>
+    <weaponArt>fm_rvs_splitter_energy_2</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="FM_RVS_SPLITTER_ENERGY_3">
@@ -1726,9 +1787,10 @@
 		Fire Chance: 50%
 		Stun Chance: 100% (5 seconds long)
 	</tooltipOverride>
-    <radius>55</radius>
-    <damage>2</damage>
-    <shots>1</shots>
+    <radius>60</radius>
+	<damage>2</damage>
+	<noSysDamage>true</noSysDamage>
+	<shots>1</shots>
     <sp>0</sp>
     <fireChance>5</fireChance>
     <breachChance>0</breachChance>
@@ -1751,7 +1813,97 @@
 		<sound>ra_focusbeambig2</sound>
 		<sound>ra_focusbeambig3</sound>
 	</launchSounds>
-    <weaponArt>fm_rvs_shotgun_focus_energy_3</weaponArt>
+    <weaponArt>fm_rvs_splitter_energy_3</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="FM_RVS_IPS_LASER__SCATTER_CHAINGUN_BURST">
+	<type>LASER</type>
+	<flavorType>Fully-Automatic Momentum Laser</flavorType>	<!--R4 TO DO-->
+	<title>Experimental LSB-2 "Stormer"</title>
+	<short>Stormer</short>
+	<tip>tip_IPS_LASER_CHAINGUN_BURST</tip>	<!--R4 TO DO-->
+	<desc>A massive Chain Laser built for ease of use, whilst retaining most of the devastating firepower of the Chain Vulcans.</desc>	<!--R4 TO DO-->
+	<tooltip></tooltip>	<!--R4 TO DO-->
+	<damage>1</damage>	<!--R4 TO DO-->
+	<shots>3</shots>	<!--R4 TO DO-->
+	<sp>0</sp>
+	<fireChance>1</fireChance>	<!--R4 TO DO-->
+	<breachChance>0</breachChance>	<!--R4 TO DO-->
+	<cooldown>13</cooldown>	<!--R4 TO DO-->
+	<power>4</power>
+	<cost>110</cost>	<!--R4 TO DO-->
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<boost>	<!--R4 TO DO-->
+		<type>cooldown</type>
+		<amount>3</amount>
+		<count>3</count>
+	</boost>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ips_chainlaser_burst</weaponArt> 
+	<iconImage>laser_chain</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="FM_RVS_IPS_OSCILLATOR">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<tip>tip_IPS_WAVEGUN</tip>	<!--R4 TO DO-->
+	<title>Disruption Oscillator</title>
+	<short>Disruptor</short>
+	<desc>A baffling industrial weapon modified for war. This device can disrupt ships with a barrage of hacking pulses.</desc>
+	<tooltip></tooltip>	<!--R4 TO DO-->
+	<radius>45</radius>
+	<shots>1</shots>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>	<!--R4 TO DO, maybe make ion?-->
+	<persDamage>0</persDamage>
+	<hack duration="5" hitShieldDuration="4" immuneAfterHack="0" boostHackingTimeAddition="2"/>	<!-- R4 TEST -->
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<stun>5</stun>
+	<cooldown>12</cooldown>	<!--R4 TO DO-->
+	<power>1</power>	<!--R4 TO DO-->
+	<cost>65</cost>	<!--R4 TO DO-->
+	<bp>10</bp>
+	<speed>75</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="3" fake="false">ips_wavegun_shot</projectile>	<!--R4 TO DO-->
+	</projectiles>
+	<launchSounds>
+		<sound>ips_wavegun_sfx</sound>	<!--R4 TO DO-->
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ips_wavegun</weaponArt>  	<!--R4 TO DO-->
+	<iconImage>missile_charge</iconImage>
 </weaponBlueprint>
 
 <!--
