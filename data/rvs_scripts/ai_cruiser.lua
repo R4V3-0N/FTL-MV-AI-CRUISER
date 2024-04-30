@@ -319,7 +319,7 @@ function(ShipManager, Projectile, Location, Damage, newTile, beamHit)
         system:LockSystem(0) --Deionize the system
         Damage.iDamage = Damage.iDamage * damageMultiplier --Multiply the damage of the weapon by damageMultiplier
         local soundName = ionSounds:GetItem()
-        Hyperspace.Sounds:PlaySoundMix(soundName, -1, true)
+        Hyperspace.Sounds:PlaySoundMix(soundName, -1, false)
     end
   end 
   return Defines.Chain.CONTINUE, beamHit 
