@@ -2981,7 +2981,7 @@ AUGMENTS
 	<!-- <crewCount amount="4" class="rvs_ai_hologram" /> -->
 	<aug name="RVS_ANTI_GRAVITY_ENGINE" />
 	<aug name="ADV_SCANNERS" />
-    <mapImage>map_icon_rvs_ai</mapImage>
+    <mv-mapImage>map_icon_rvs_ai</mv-mapImage>
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI_2" layout="rvsp_ai_cruiser_2" img="rvsp_ai_cruiser_2">
@@ -3061,7 +3061,7 @@ AUGMENTS
 	<aug name="RVS_SENTIENT_COMBAT_AI" />
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
-    <mapImage>map_icon_rvs_ai</mapImage>
+    <mv-mapImage>map_icon_rvs_ai</mv-mapImage>
 </shipBlueprint>
 
 
@@ -3141,7 +3141,7 @@ AUGMENTS
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
 	<floorImage>rvsp_ai_cruiser</floorImage>
-    <mapImage>map_icon_rvs_ai</mapImage>
+    <mv-mapImage>map_icon_rvs_ai</mv-mapImage>
 </shipBlueprint>
 
 
@@ -3151,7 +3151,7 @@ AUGMENTS
 	<desc>Ships of this class have not been exactly seen in this part of the Multiverse. Made more evident so by the crews outrage of what the Rebellion has been doing here.</desc>
 	<systemList>
 		<artillery power="1" room="13" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_5" />
-		<battery power="1" room="12" start="false" img="room_battery_17" />
+		<battery max="2" power="1" room="12" start="false" img="room_battery_17" />
 		<cloaking power="1" room="7" start="false" img="room_cloaking_6" />
 		<doors power="1" room="14" start="true" img="room_doors_10">
 			<slot>
@@ -3159,8 +3159,8 @@ AUGMENTS
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="1" room="6" start="false" img="room_drones_3" />
-		<engines power="1" room="11" start="true" img="room_engines">
+		<drones max="8" power="1" room="6" start="false" img="room_drones_3" />
+		<engines max="8" power="1" room="11" start="true" img="room_engines">
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
@@ -3186,7 +3186,7 @@ AUGMENTS
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="2" start="true" img="room_shields_9">
+		<shields max="8" power="2" room="2" start="true" img="room_shields_9">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -3215,6 +3215,7 @@ AUGMENTS
 	<crewCount amount="1" class="human_engineer" />
 	-->
 	<aug name="FTL_BOOSTER" />
+	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT_3" layout="rvsp_rebel_alt_cruiser_3" img="rvsp_rebel_alt_cruiser_3">
@@ -3222,8 +3223,8 @@ AUGMENTS
 	<name>The Nameless One</name>
 	<desc>THIRD SHIP DESCRIPTION REMEMBER TO REPLACE</desc>
 	<systemList>
-		<artillery power="1" room="2" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_6" />
-		<battery power="1" room="3" start="false" img="room_battery_14" />
+		<artillery max="4" power="1" room="2" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_6" />
+		<battery max="2" power="1" room="3" start="false" img="room_battery_14" />
 		<cloaking power="1" room="8" start="false" img="room_cloaking_6" />
 		<clonebay power="1" room="17" start="true">
 			<slot>
@@ -3236,8 +3237,8 @@ AUGMENTS
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="1" room="7" start="false" img="room_drones_4" />
-		<engines power="1" room="5" start="true" img="room_engines_rvs_uc_2">
+		<drones max="8" power="1" room="7" start="false" img="room_drones_4" />
+		<engines max="8" power="1" room="5" start="true" img="room_engines_rvs_uc_2">
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
@@ -3263,7 +3264,7 @@ AUGMENTS
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="6" start="true" img="room_shields_6">
+		<shields max="8" power="2" room="6" start="true" img="room_shields_6">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
@@ -3290,5 +3291,6 @@ AUGMENTS
 	<crewCount amount="1" class="human_rebel" />
 	<crewCount amount="1" class="human_engineer" />
 	<aug name="HACKING_STUN" />
+	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
 </shipBlueprint>
 </FTL>
