@@ -904,8 +904,8 @@ end)
 -- Pre-half ignited projector for the player on jump
 script.on_internal_event(Defines.InternalEvents.JUMP_ARRIVE, 
 function(shipManager)
-    if not shipManager == Hyperspace.ships.player then return end
-    for weapon in vter(playerShip.weaponSystem.weapons) do
+    if not shipManager.iShipId == 1 then return end
+    for weapon in vter(shipManager.weaponSystem.weapons) do
         if weapon.blueprint.name == "RVS_PROJECTOR_AVATAR" and weapon.powered then
             weapon.cooldown.first = weapon.cooldown.second/2
         end
