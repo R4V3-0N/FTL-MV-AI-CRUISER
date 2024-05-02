@@ -136,7 +136,7 @@
         </achievement>
         <achievement name="ACH_SHIP_RVSP_REBEL_ALT_2" layout="all">
             <name>Shattered Mirror</name>
-            <description>Defeat 3 high threat Rebel ships in the Rebel Cruiser.</description>
+            <description>Defeat 3 high threat Rebel ships during one run in the Rebel Cruiser.</description>
             <icon>rvsp_rebel_alt_ach_2</icon>
             <lockImage>rvsp_rebel_alt_ach_2_lock</lockImage>
         </achievement>
@@ -774,6 +774,7 @@
     <mod-append:variable name="loc_ai_ach_in_combat" op="set" val="0"/>
     <mod-append:variable name="loc_ai_ach_missed_this_fight" op="set" val="0"/>
     <mod-append:variable name="loc_ai_ach_no_miss_count" op="set" val="0"/>
+    <mod-append:variable name="loc_high_rebels_killed" op="set" val="0"/>
     <mod-append:req name="RVS_REQ_AI_ARTILLERY" type="all">
         <req type="any">
             <name>SHIP PLAYER_SHIP_RVSP_AI</name>
