@@ -29,10 +29,20 @@ local function count_ship_achievements(achPrefix)
     return count
 end
 
+-- R4 NOTE: I just added this in from the Pepsiest of all Pepsons. Not sure if it conflicts with anything
+local highRebelDefeat = false -- For tracking all in run value
+script.on_init(function()
+    local playerShip = Hyperspace.ships.player
+    if should_track_achievement("ACHNAME", playerShip, "SHIPNAME") then
+        highRebelDefeat = 0
+    end
+end)
+
 -------------------------
 -- ACHIEVEMENT UNLOCKS --
 -------------------------
 
+-- AI Cruiser Achievements --
 -- Easy
 do
     local function check_holo_revive_ach(ship)
@@ -94,14 +104,135 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
     end
 end)
 
+-- AI Cruiser Achievements --
+-- Easy "HOME BY ANY OTHER NAME"
+local function checkFullCrew()
+    local playerShip = Hyperspace.ships.player
+    if Hyperspace.App.world.starMap.worldLevel == 4 and should_track_achievement("ACH_SHIP_RVSP_REBEL_ALT_1", playerShip, "PLAYER_SHIP_RVSP_REBEL_ALT") then
+        local crew = playerShip.vCrewList
+        if crew:size() >= 8 then
+            Hyperspace.CustomAchievementTracker.instance:SetAchievement("ACH_SHIP_RVSP_REBEL_ALT_1", false)
+        end
+    end
+end
+
+script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
+    checkFullCrew()
+end)
+
+-- Medium "SHATTERED MIRROR"
+local function defeatRebel()
+    local playerShip = Hyperspace.ships.player
+    if should_track_achievement("ACH_SHIP_RVSP_REBEL_ALT_2", playerShip, "PLAYER_SHIP_RVSP_REBEL_ALT") then
+        highRebelDefeat = highRebelDefeat + 1
+    end
+
+    if highRebelDefeat >= 5 then
+        Hyperspace.CustomAchievementTracker.instance:SetAchievement("ACH_SHIP_RVSP_REBEL_ALT_2", false)
+    end
+end
+
+
+script.on_game_event("A55_DEFEAT", false, function()    -- A55 boss fight
+    defeatRebel()
+end)
+
+script.on_game_event("AUTO_POWERCORE_DEFEAT", false, function() -- Engineer Mothership Fight
+    defeatRebel()
+end)
+script.on_game_event("AUTO_POWERCORE_SAVE", false, function()   -- Engineer Mothership Fight (Saved. Included this as you still fought against them and "won")
+    defeatRebel()
+end)
+
+
+script.on_game_event("DYNASTY_DREADNAUGHT_VICTORY", false, function()   -- Dynasty Autodreadnought fight
+    defeatRebel()
+end)
+
+script.on_game_event("FED_MEMORIAL_DESTROY", false, function()  -- Fed Sector Rebel Gunboat Fight
+    defeatRebel()
+end)
+script.on_game_event("FED_MEMORIAL_DEAD_CREW", false, function()
+    defeatRebel()
+end)
+
+script.on_game_event("CURA_DEFEATED", false, function()    --CURA
+    defeatRebel()
+end)
+
+script.on_game_event("CYRA_DEFEAT", false, function()   -- Cyra cruiser stuff
+    defeatRebel()
+end)
+script.on_game_event("CYRA_DEFEAT_JERRY", false, function()
+    defeatRebel()
+end)
+
+script.on_game_event("FLAGSHIP_CONSTRUCTION_WIN", false, function() --Rebel sector Flagship construction
+    defeatRebel()
+end)
+script.on_game_event("SHOWDOWN_WIN", false, function() --MFK Flagship True End Win
+    defeatRebel()
+end)
+-- "SHIP_CHAOS_FLEET_FLAGSHIP" from event "FLEET_CHAOS_FLAGSHIP", "NEBULA_FLEET_CHAOS_FLAGSHIP"
+
+script.on_game_event("ESTATE_LEGION_DEFEAT", false, function()    --Zenith Legion event at Estate
+    defeatRebel()
+end)
+script.on_game_event("ALKALI_LEGION_DEFEATED", false, function()   --Morph Legion event at Science
+    defeatRebel()
+end)
+
+script.on_game_event("RVS_FREIGHTER_CONVOY_WIN", false, function()   --GO BALLISTIC! 2 Cruiser fight
+    defeatRebel()
+end)
+
+
+-- Hard "HOW DID WE GET HERE"
+local function checkShipState()
+    local playerShip = Hyperspace.ships.player
+    if should_track_achievement("ACH_SHIP_RVSP_REBEL_ALT_3", playerShip, "PLAYER_SHIP_RVSP_REBEL_ALT") then
+        local intruder = playerShip.iIntruderCount >= 1
+        local zeroFuel = playerShip.fuel_count <= 0
+        local fire = playerShip.fireSpreader.fire_count.count >= 1
+        local ABS = Hyperspace.App.world.space.bPDS
+
+        if intruder and zeroFuel and fire and ABS then
+            Hyperspace.CustomAchievementTracker.instance:SetAchievement("ACH_SHIP_RVSP_REBEL_ALT_3", false)
+        end
+    end
+end
+
+script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
+    checkShipState()
+end)
+
 -------------------------------------
 -- LAYOUT UNLOCKS FOR ACHIEVEMENTS --
 -------------------------------------
 
+-- AI CRUISER STUFF --
 local achLayoutUnlocks = {
     {
         achPrefix = "ACH_SHIP_RVSP_AI",
         unlockShip = "PLAYER_SHIP_RVSP_AI_3"
+    }
+}
+
+script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
+    local unlockTracker = Hyperspace.CustomShipUnlocks.instance
+    for _, unlockData in ipairs(achLayoutUnlocks) do
+        if not unlockTracker:GetCustomShipUnlocked(unlockData.unlockShip) and count_ship_achievements(unlockData.achPrefix) >= 2 then
+            unlockTracker:UnlockShip(unlockData.unlockShip, false)
+        end
+    end
+end)
+
+--  ALT REBEL CRUISER STUFF  --
+-- Bellow is my bird brained attempt to do a thing
+local achLayoutUnlocks = {
+    {
+        achPrefix = "ACH_SHIP_RVSP_REBEL_ALT",
+        unlockShip = "PLAYER_SHIP_RVSP_REBEL_ALT_3"
     }
 }
 

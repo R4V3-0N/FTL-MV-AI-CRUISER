@@ -834,6 +834,35 @@
 	<weaponArt>ra_beam_auto</weaponArt> 
 </weaponBlueprint>
 
+<weaponBlueprint name="RVS_BEAM_PERNACH">
+	<type>BEAM</type>
+	<tip>tip_focus</tip>
+	<title>'Pernach' Focus Beam</title>
+	<short>Pernach</short>
+	<desc>Fast recharging focus-beam that can only hit one room.</desc>
+	<tooltip>Focused beam weapon, deals 2 damage to one room with low breach chance.</tooltip>
+	<damage>2</damage>
+	<hullBust>1</hullBust>	<!-- Added hull bust to make it compete with Dirk and Cinqueda -->
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>	<!-- was 2, now 3-->
+	<speed>1</speed>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<cost>50</cost>
+	<bp>12</bp>
+	<rarity>3</rarity>
+	<!--<image>ba_beam_contact_pierce</image>-->
+	<image>beam_contact</image>
+	<length>1</length>
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+	<weaponArt>rvs_beam_pernach</weaponArt> 
+</weaponBlueprint>
+
 <weaponBlueprint name="RA_EFFECTOR_1">
 	<type>BOMB</type>
 	<tip>rvs_tip_effector</tip>
@@ -3113,5 +3142,153 @@ AUGMENTS
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
 	<floorImage>rvsp_ai_cruiser</floorImage>
     <mapImage>map_icon_rvs_ai</mapImage>
+</shipBlueprint>
+
+
+<shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT" layout="rvsp_rebel_alt_cruiser" img="rvsp_rebel_alt_cruiser">
+	<class>Rebel Cruiser</class>
+	<name>The Nameless One</name>
+	<desc>Ships of this class have not been exactly seen in this part of the Multiverse. Made more evident so by the crews outrage of what the Rebellion has been doing here.</desc>
+	<systemList>
+		<artillery power="1" room="13" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_5" />
+		<battery power="1" room="12" start="false" img="room_battery_17" />
+		<cloaking power="1" room="7" start="false" img="room_cloaking_6" />
+		<doors power="1" room="14" start="true" img="room_doors_10">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="1" room="6" start="false" img="room_drones_3" />
+		<engines power="1" room="11" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="1" start="false" img="room_hacking_6" />
+		<medbay power="1" room="3" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="8" start="false" img="room_mind_7" />
+		<oxygen power="1" room="15" start="true" img="room_oxygen_20" />
+		<pilot power="1" room="16" start="true" img="room_pilot_rvs_uc_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="9" start="false" img="room_sensors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="2" start="true" img="room_shields_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="10" start="false" />
+		<temporal power="1" room="4" start="false" img="room_temporal_3" />
+		<weapons power="3" room="0" start="true" img="room_weapons_5">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="5" count="4">
+		<weapon name="RVS_LASER_BURST_SCATTER_1" />
+		<weapon name="RVS_BEAM_PERNACH" />
+	</weaponList>
+	<droneList drones="5" count="2" />
+	<health amount="30" />
+	<maxPower amount="10" />
+	<!-- Crew in hyperspace.xml.append
+	<crewCount amount="2" class="human" />
+	<crewCount amount="1" class="human_engineer" />
+	-->
+	<aug name="FTL_BOOSTER" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT_3" layout="rvsp_rebel_alt_cruiser_3" img="rvsp_rebel_alt_cruiser_3">
+	<class>Rebel Cruiser</class>
+	<name>The Nameless One</name>
+	<desc>THIRD SHIP DESCRIPTION REMEMBER TO REPLACE</desc>
+	<systemList>
+		<artillery power="1" room="2" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_6" />
+		<battery power="1" room="3" start="false" img="room_battery_14" />
+		<cloaking power="1" room="8" start="false" img="room_cloaking_6" />
+		<clonebay power="1" room="17" start="true">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="15" start="true" img="room_doors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="1" room="7" start="false" img="room_drones_4" />
+		<engines power="1" room="5" start="true" img="room_engines_rvs_uc_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="0" start="true" img="room_hacking_6" />
+		<medbay power="1" room="17" start="false" img="room_medbay_2">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="10" start="false" img="room_mind_7" />
+		<oxygen power="1" room="18" start="true" img="room_oxygen_20" />
+		<pilot power="1" room="16" start="true" img="room_pilot_rvs_uc_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="4" start="false" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="6" start="true" img="room_shields_6">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="1" start="false" />
+		<weapons power="3" room="9" start="true" img="room_weapons_8">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="5" count="4">
+		<weapon name="RA_EFFECTOR_2" />
+		<weapon name="MISSILES_CLOAK" />
+	</weaponList>
+	<droneList drones="5" count="2" />
+	<health amount="30" />
+	<maxPower amount="10" />
+	<crewCount amount="1" class="human_rebel" />
+	<crewCount amount="1" class="human_rebel" />
+	<crewCount amount="1" class="human_engineer" />
+	<aug name="HACKING_STUN" />
 </shipBlueprint>
 </FTL>

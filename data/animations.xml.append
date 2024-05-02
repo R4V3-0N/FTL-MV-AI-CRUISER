@@ -68,6 +68,7 @@
 <!-- Rebalanced Arsenal / CE inspired weapon Animations-->
 <animSheet name="ra_beam_auto" w="175" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_strip7.png</animSheet>
 <animSheet name="ra_beam_auto_charge" w="25" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_chargeglow.png</animSheet>
+<animSheet name="rvs_beam_pernach" w="300" h="39" fw="30" fh="39">weapons_rebalanced_arsenal/rvs_beam_pernach_strip10.png</animSheet>
 <animSheet name="ra_effector_1" w="105" h="54" fw="35" fh="54">weapons_rebalanced_arsenal/ra_effector_1_strip3.png</animSheet>
 <animSheet name="ra_effector_2" w="123" h="62" fw="41" fh="62">weapons_rebalanced_arsenal/ra_effector_2_strip3.png</animSheet>
 <animSheet name="ra_effector_heavy" w="138" h="72" fw="46" fh="72">weapons_rebalanced_arsenal/ra_effector_heavy_strip3.png</animSheet>
@@ -93,6 +94,16 @@
 	<mountPoint x="5" y="26"/>
 	<chargeImage>weapons_rebalanced_arsenal/ra_beam_auto_glow.png</chargeImage>
 	<boost>ra_beam_auto_charge</boost>
+</weaponAnim>
+
+<weaponAnim name="rvs_beam_pernach">
+	<sheet>rvs_beam_pernach</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="16" y="11"/>
+	<mountPoint x="5" y="22"/>
+	<chargeImage>weapons_rebalanced_arsenal/rvs_beam_pernach_glow.png</chargeImage>
 </weaponAnim>
 
 <weaponAnim name="ra_effector_1">

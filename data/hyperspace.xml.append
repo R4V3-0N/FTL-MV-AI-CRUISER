@@ -110,6 +110,85 @@
         </crew>
     </mod-append:customShip>
 	
+
+
+
+
+
+
+
+
+
+    <mod-append:ship name="PLAYER_SHIP_RVSP_REBEL_ALT" b="true" c="true">
+        <unlock variant="b" silent="false">
+            <type>1</type>
+            <shipReq>PLAYER_SHIP_RVSP_REBEL_ALT</shipReq>
+            <value>8</value>
+        </unlock>
+        <unlock variant="c" silent="false">
+            <type>4</type>
+        </unlock>
+        <achievement name="ACH_SHIP_RVSP_REBEL_ALT_1" layout="all">
+            <name>Home By Any Other Name</name>
+            <description>Reach max crew capacity by Sector 5 while using the Rebel Cruiser.</description>
+            <icon>rvsp_rebel_alt_ach_1</icon>
+            <lockImage>rvsp_rebel_alt_ach_1_lock</lockImage>
+        </achievement>
+        <achievement name="ACH_SHIP_RVSP_REBEL_ALT_2" layout="all">
+            <name>Shattered Mirror</name>
+            <description>Defeat 3 high threat Rebel ships in the Rebel Cruiser.</description>
+            <icon>rvsp_rebel_alt_ach_2</icon>
+            <lockImage>rvsp_rebel_alt_ach_2_lock</lockImage>
+        </achievement>
+        <achievement name="ACH_SHIP_RVSP_REBEL_ALT_3" layout="all">
+            <name>How Did We Get Here?</name>
+            <description>Be boarded, on fire, and out of fuel while under threat of an ASB while using the Rebel Cruiser.</description>
+            <icon>rvsp_rebel_alt_ach_3</icon>
+            <lockImage>rvsp_rebel_alt_ach_3_lock</lockImage>
+        </achievement>
+    </mod-append:ship>
+    <mod-append:customShip name="PLAYER_SHIP_RVSP_REBEL_ALT">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_REBEL</hiddenAug>       <!-- Eventually replace with custom one? -->
+        <crewLimit>8</crewLimit>
+        <crew>
+            <human room="16" name="Sokka" />     <!-- Piloting-->
+            <human room="0"/>                    <!-- Weapons-->
+            <human_engineer room="11"/>          <!-- Engines-->
+        </crew>
+    </mod-append:customShip>
+	
+	<!--<mod-append:customShip name="PLAYER_SHIP_RVSP_REBEL_ALT_2">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_REBEL</hiddenAug>
+		<crewLimit>8</crewLimit>
+		<crew>
+			<rvs_ai_hologram room="0" name="[404]" />
+			<rvs_ai_hologram room="9" name="Replicant 1042" />
+			<rvs_ai_hologram room="23" name="Reciteful Error" />
+			<rvs_ai_hologram room="29" name="DIE DIE DIE" />
+		</crew>
+	</mod-append:customShip>-->
+    
+    <mod-append:customShip name="PLAYER_SHIP_RVSP_REBEL_ALT_3">
+        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_REBEL</hiddenAug>
+        <crewLimit>8</crewLimit>
+        <crew>
+            <human room="16" name="Sokka" />    <!-- Piloting-->
+            <human room="0"/>
+            <human_engineer room="11"/>         <!-- Engines-->
+        </crew>
+    </mod-append:customShip>
+
+
+
+
+
+
+
+
+
     <!-- Achievements -->
     <mod:findLike type="achievements" limit="1">
         <mod:findLike type="page">
