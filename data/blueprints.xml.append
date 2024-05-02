@@ -3150,7 +3150,7 @@ AUGMENTS
 	<name>The Nameless One</name>
 	<desc>Ships of this class have not been exactly seen in this part of the Multiverse. Made more evident so by the crews outrage of what the Rebellion has been doing here.</desc>
 	<systemList>
-		<artillery power="1" room="13" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_5" />
+		<artillery max="4" power="1" room="13" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_5" />
 		<battery max="2" power="1" room="12" start="false" img="room_battery_17" />
 		<cloaking power="1" room="7" start="false" img="room_cloaking_6" />
 		<doors power="1" room="14" start="true" img="room_doors_10">
