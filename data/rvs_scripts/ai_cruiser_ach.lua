@@ -127,7 +127,7 @@ local function defeatRebel()
         highRebelDefeat = highRebelDefeat + 1
     end
 
-    if highRebelDefeat >= 5 then
+    if highRebelDefeat >= 4 then
         Hyperspace.CustomAchievementTracker.instance:SetAchievement("ACH_SHIP_RVSP_REBEL_ALT_2", false)
     end
 end
@@ -193,7 +193,7 @@ local function checkShipState()
     if should_track_achievement("ACH_SHIP_RVSP_REBEL_ALT_3", playerShip, "PLAYER_SHIP_RVSP_REBEL_ALT") then
         local intruder = playerShip.iIntruderCount >= 1
         local zeroFuel = playerShip.fuel_count <= 0
-        local fire = playerShip.fireSpreader.fire_count.count >= 1
+        local fire = playerShip.fireSpreader.count >= 1
         local ABS = Hyperspace.App.world.space.bPDS
 
         if intruder and zeroFuel and fire and ABS then
