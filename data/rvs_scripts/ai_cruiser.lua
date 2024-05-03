@@ -49,7 +49,7 @@ end)
 
 -- Track whether we're in a nebula or a nebula with an ion storm
 script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
-    local space = Hyperspace.Global.GetInstance():GetCApp().world.space
+    local space = Hyperspace.App.world.space
     Hyperspace.playerVariables.loc_nebula_nostorm = bool_to_num(space.bNebula and not space.bStorm)
     Hyperspace.playerVariables.loc_nebula_storm = bool_to_num(space.bStorm)
 end)
@@ -137,7 +137,7 @@ burstsToBeams.RVS_BEAM_SHOTGUN_3 = fm_epinpoint2
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local beamReplacement = burstsToBeams[weapon.blueprint.name]
     if beamReplacement then
-        local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
+        local spaceManager = Hyperspace.App.world.space
         local beam = spaceManager:CreateBeam(
             beamReplacement, projectile.position, projectile.currentSpace, projectile.ownerId,
             projectile.target, Hyperspace.Pointf(projectile.target.x, projectile.target.y + 1),
@@ -455,7 +455,7 @@ end)
 script.on_internal_event(Defines.InternalEvents.DRONE_FIRE,
 function(Projectile, Drone)
     if Drone.blueprint.name == "RVS_BEAM_DEFENSE_1" then
-        local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
+        local spaceManager = Hyperspace.App.world.space
         --Spawn beam from drone to target
         spaceManager:CreateBeam(
             Hyperspace.Blueprints:GetWeaponBlueprint("RVS_BEAM_DEFENSE_SHOT"), 
@@ -541,7 +541,7 @@ function(Drone, Projectile, Damage, CollisionResponse)
         if thisShip.iShipId == Drone.currentSpace then
             spawn_temp_drone{name = "RVS_AI_MICROFIGHTER_SWARM_CHILD", ownerShip = otherShip, targetShip = thisShip, position = Drone.currentLocation}
         else
-            local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
+            local spaceManager = Hyperspace.App.world.space
             local shipCenter = otherShip._targetable:GetShieldShape().center
             local heading = math.deg(math.atan(Drone.currentLocation.y - shipCenter.y, Drone.currentLocation.x - shipCenter.x))
             spaceManager:CreateMissile(swarmChildProj, Drone.currentLocation, Drone.currentSpace, Projectile.ownerId, thisShip:GetRandomRoomCenter(), Drone.iShipId, heading)
@@ -847,7 +847,7 @@ local refresh_boarding_AI = function(targetShip)
         end
     end
 
-    local worldManager = Hyperspace.Global.GetInstance():GetCApp().world
+    local worldManager = Hyperspace.App.world
     local eventParser = Hyperspace.CustomEventsParser.GetInstance()
 
     if targetShip.iShipId == 1 then

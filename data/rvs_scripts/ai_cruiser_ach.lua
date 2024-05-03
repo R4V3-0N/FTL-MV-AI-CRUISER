@@ -7,13 +7,13 @@ local string_starts = mods.multiverse.string_starts
 
 local function should_track_achievement(achievement, ship, shipClassName)
     return ship and
-           Hyperspace.Global.GetInstance():GetCApp().world.bStartedGame and
+           Hyperspace.App.world.bStartedGame and
            Hyperspace.CustomAchievementTracker.instance:GetAchievementStatus(achievement) < Hyperspace.Settings.difficulty and
            string_starts(ship.myBlueprint.blueprintName, shipClassName)
 end
 
 local function current_sector()
-    return Hyperspace.Global.GetInstance():GetCApp().world.starMap.worldLevel + 1
+    return Hyperspace.App.world.starMap.worldLevel + 1
 end
 
 local function count_ship_achievements(achPrefix)
@@ -71,7 +71,7 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
         if enemyShip and enemyShip._targetable.hostile and not (enemyShip.bDestroyed or playerShip.bJumping) then -- In combat?
             vars.loc_ai_ach_in_combat = 1
             if vars.loc_ai_ach_missed_this_fight == 0 then -- Check for miss if we haven't found one already
-                for projectile in vter(Hyperspace.Global.GetInstance():GetCApp().world.space.projectiles) do
+                for projectile in vter(Hyperspace.App.world.space.projectiles) do
                     if projectile.ownerId == 0 and projectile.damage.selfId ~= -1 and projectile.missed and not projectile.death_animation.tracker.running then
                         vars.loc_ai_ach_missed_this_fight = 1
                     end
