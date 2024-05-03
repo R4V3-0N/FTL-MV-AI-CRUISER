@@ -3209,7 +3209,7 @@ AUGMENTS
 	</weaponList>
 	<droneList drones="5" count="2" />
 	<health amount="30" />
-	<maxPower amount="10" />
+	<maxPower amount="7" />
 	<!-- Crew in hyperspace.xml.append
 	<crewCount amount="2" class="human" />
 	<crewCount amount="1" class="human_engineer" />

@@ -139,7 +139,7 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
                      playerShip.fireSpreader.count >= 1
     if checkAch then
         for projectile in vter(Hyperspace.App.world.space.projectiles) do -- Janky way to check if under ASB fire
-            if projectile.ownerId == 1 and projectile.extend and projectile.extend.name == "PDS_SHOT" then
+            if projectile.extend and projectile.extend.name == "PDS_SHOT" then
                 Hyperspace.CustomAchievementTracker.instance:SetAchievement("ACH_SHIP_RVSP_REBEL_ALT_3", false)
                 return
             end
