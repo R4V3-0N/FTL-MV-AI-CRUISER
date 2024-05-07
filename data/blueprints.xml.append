@@ -2719,7 +2719,7 @@ AUGMENTS
     <title>Sentient Combat AI</title>
 	<desc>An Admiral-grade strategy AI, normally used to coordinate fleet actions. Manning bonuses are increased by 50%.</desc> <!-- around 5% for weapons, shields, jump, etc. Effects weapons, shields, jump, hacking, mind control, teleporter, and battery -->
 	<!--<desc>An Admiral-grade strategy AI, normally used to coordinate fleet actions. The construct was always searching for a strong tactical AI to merge with, dreaming of becoming a fully independent cruiser as a result.</desc>-->
-    <cost>75</cost>
+    <cost>80</cost>	<!--R4 2024.05.06: Increased from 75 to 80-->
     <bp>8</bp>
     <rarity>0</rarity>	<!-- rarity in sector rarity list-->
     <stackable>true</stackable>
@@ -2779,13 +2779,24 @@ AUGMENTS
 </augBlueprint>
 
 <augBlueprint name="RVS_ANTI_GRAVITY_ENGINE">
-    <title>Anti-Gravity Engine</title>
+    <title>Anti-Grav Engine</title>
+	<!--	R4: 2024.05.06: Changed the concept of this augments performand and capabilities
 	<desc>If piloting is disabled, provides a 15% evasion boost, otherwise provides a 5% evasion boost if engines are disabled. +10% FTL Drive charge rate.</desc>
-	<cost>35</cost>
+	-->
+	<desc>These high-tech engines provide an unnatural maneuverability without the consequences of g-forces at the cost of speed. Decreasing the base evasion by 5% but being able to change course drastically with each hit recieved by 5% temporarily.</desc>
+	<cost>70</cost>
     <bp>3</bp>
     <rarity>0</rarity>
-    <stackable>false</stackable>
+    <stackable>false</stackable>	<!-- R4: 2024.05.06: Maybe allowing this to stack, with each stack decreasing the decay time of the bonus evasion?-->
+	<icon>rvs_icon_antigrav_engine</icon>
 </augBlueprint>
+
+
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+				CREW
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->
 
 <crewBlueprint name="rvs_ai_hologram">
 	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
@@ -2905,6 +2916,12 @@ AUGMENTS
 		<power>Can phase through doors</power>
 	</powerList>
 </crewBlueprint>
+
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		SHIPS
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI" layout="rvsp_ai_cruiser" img="rvsp_ai_cruiser">
 	<class>AI Cruiser</class>

@@ -181,13 +181,14 @@
         </crew>
     </mod-append:customShip>
 
-
-
-
-
-
-
-
+    <mod-append:shipIcons>
+        <shipIcon>	<!-- Anti-gravity Engines -->
+            <name>rvs_icon_antigrav_engine</name>
+            <tooltip>ANTI-GRAV ENGINE:
+                This ship is equiped with Anti-Gravity Engines providing it with increased evasion with each shot it fails to evade at the cost of its base evasion.
+            </tooltip>
+        </shipIcon>
+    </mod-append:shipIcons>
 
     <!-- Achievements -->
     <mod:findLike type="achievements" limit="1">
