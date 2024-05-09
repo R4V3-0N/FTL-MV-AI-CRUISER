@@ -3235,33 +3235,111 @@ AUGMENTS
 	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
 </shipBlueprint>
 
-<shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT_3" layout="rvsp_rebel_alt_cruiser_3" img="rvsp_rebel_alt_cruiser_3">
+
+<shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT_2" layout="rvsp_rebel_alt_cruiser_2" img="rvsp_rebel_alt_cruiser_2">
 	<class>Rebel Cruiser</class>
 	<name>The Nameless One</name>
-	<desc>THIRD SHIP DESCRIPTION REMEMBER TO REPLACE</desc>
+	<desc>It isn't uncommon to see cruisers refitted into freighters across the Multiverse due to their potential for large carrying capacity and the dangers of carrying cargo in the Multiverse.</desc>
 	<systemList>
-		<artillery max="4" power="1" room="2" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_6" />
-		<battery max="2" power="1" room="3" start="false" img="room_battery_14" />
-		<cloaking power="1" room="8" start="false" img="room_cloaking_6" />
-		<clonebay power="1" room="17" start="true">
+		<artillery power="1" max="4" room="8" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_7" />
+		<battery power="1" max="2" room="10" start="false" img="room_battery_2" />
+		<cloaking power="1" room="9" start="false" img="room_cloaking_rvs_ai" />
+		<clonebay power="1" room="11" start="false">
 			<slot>
-				<number>0</number>
+				<number>1</number>
 			</slot>
 		</clonebay>
-		<doors power="1" room="15" start="true" img="room_doors_6">
+		<doors power="1" room="13" start="false" img="room_doors_6">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones max="8" power="1" room="7" start="false" img="room_drones_4" />
-		<engines max="8" power="1" room="5" start="true" img="room_engines_rvs_uc_2">
+		<drones power="1" max="8" room="5" start="false" img="room_drones_19" />
+		<engines power="2" max="8" room="14" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="16" start="false" img="room_hacking_6" />
+		<medbay power="1" room="11" start="false" img="room_medbay_5">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="2" start="false" img="room_mind_10" />
+		<oxygen power="1" room="6" start="false" img="room_oxygen_7" />
+		<pilot power="1" room="15" start="true" img="room_pilot_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="17" start="false" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="12" start="true" img="room_shields_stolen_nod">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="3" start="false" />
+		<temporal power="1" room="7" start="false" img="room_temporal_3" />
+		<weapons power="3" max="8"  room="0" start="true" img="room_weapons_rvs_uc_1">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="5" count="4">
+		<weapon name="LASER_LIGHT_2" />	<!-- Replace with Autolaser -->
+		<weapon name="LASER_LIGHT_2" />	<!-- Replace with Autolaser -->
+		<weapon name="LASER_BURST_1" />
+	</weaponList>
+	<droneList drones="5" count="2" />
+	<health amount="30" />
+	<maxPower amount="10" />
+	<crewCount amount="4" class="human_humanoid" />
+	<aug name="NEBULA_GASSES" />
+	<shieldImage>rvsp_rebel_alt_cruiser</shieldImage>
+	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT_3" layout="rvsp_rebel_alt_cruiser_3" img="rvsp_rebel_alt_cruiser_3">
+	<class>Rebel Cruiser</class>
+	<name>The Nameless One</name>
+	<desc>A high advanced electronic warfare platform which allows it to dictate the outcome of engagement.</desc>
+	<systemList>
+		<artillery power="1" max="4" room="2" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_6" />
+		<battery power="1" max="2" room="3" start="false" img="room_battery_14" />
+		<cloaking power="1" room="8" start="false" img="room_cloaking_6" />
+		<clonebay power="1" room="17" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="15" start="true" img="room_doors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="1" max="8" room="7" start="false" img="room_drones_4" />
+		<engines power="1" max="8" room="5" start="true" img="room_engines_rvs_uc_2">
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
 			</slot>
 		</engines>
-		<hacking power="1" room="0" start="true" img="room_hacking_6" />
+		<hacking power="1" room="0" start="true" img="room_hacking_9" />
 		<medbay power="1" room="17" start="false" img="room_medbay_2">
 			<slot>
 				<number>3</number>
@@ -3278,17 +3356,18 @@ AUGMENTS
 		<sensors power="1" room="4" start="false" img="room_sensors_2">
 			<slot>
 				<direction>up</direction>
-				<number>1</number>
+				<number>0</number>
 			</slot>
 		</sensors>
-		<shields max="8" power="2" room="6" start="true" img="room_shields_6">
+		<shields power="2" max="8" room="6" start="true" img="room_shields_6">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="1" start="false" />
-		<weapons power="3" room="9" start="true" img="room_weapons_8">
+		<temporal power="1" room="12" start="false" img="room_temporal" />
+		<weapons power="3" max="8" room="9" start="true" img="room_weapons_8">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -3298,16 +3377,20 @@ AUGMENTS
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="5" count="4">
-		<weapon name="RA_EFFECTOR_2" />
-		<weapon name="MISSILES_CLOAK" />
+		<weapon name="RA_EFFECTOR_2" />		<!-- Replace with Adaptive Effector? -->
+		<weapon name="MISSILES_CLOAK" />	<!-- Replace with Baal -->
+		<weapon name="RA_BEAM_AUTO" />
 	</weaponList>
 	<droneList drones="5" count="2" />
 	<health amount="30" />
 	<maxPower amount="10" />
-	<crewCount amount="1" class="human_rebel" />
-	<crewCount amount="1" class="human_rebel" />
+	<crewCount amount="1" class="human_humanoid" />
 	<crewCount amount="1" class="human_engineer" />
+	<crewCount amount="1" class="human_soldier" />
 	<aug name="HACKING_STUN" />
+	<shieldImage>rvsp_rebel_alt_cruiser</shieldImage>
+	<cloakImage>rvsp_rebel_alt_cruiser_2</cloakImage>
+	<floorImage>rvsp_rebel_alt_cruiser</floorImage>
 	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
 </shipBlueprint>
 </FTL>

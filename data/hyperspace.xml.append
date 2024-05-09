@@ -110,15 +110,11 @@
         </crew>
     </mod-append:customShip>
 	
-
-
-
-
-
-
-
-
-
+    <!--
+        \\\\\\\\\\\\\\\\\\\\\\\\
+            CE Rebel Cruiser
+        \\\\\\\\\\\\\\\\\\\\\\\\
+    -->
     <mod-append:ship name="PLAYER_SHIP_RVSP_REBEL_ALT" b="true" c="true">
         <unlock variant="b" silent="false">
             <type>1</type>
@@ -157,28 +153,15 @@
             <human_engineer room="11"/>          <!-- Engines-->
         </crew>
     </mod-append:customShip>
-	
-	<!--<mod-append:customShip name="PLAYER_SHIP_RVSP_REBEL_ALT_2">
-        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+    <mod-append:customShip name="PLAYER_SHIP_RVSP_REBEL_ALT_2">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<hiddenAug>SHIP_REBEL</hiddenAug>
 		<crewLimit>8</crewLimit>
-		<crew>
-			<rvs_ai_hologram room="0" name="[404]" />
-			<rvs_ai_hologram room="9" name="Replicant 1042" />
-			<rvs_ai_hologram room="23" name="Reciteful Error" />
-			<rvs_ai_hologram room="29" name="DIE DIE DIE" />
-		</crew>
-	</mod-append:customShip>-->
-    
+    </mod-append:customShip>
     <mod-append:customShip name="PLAYER_SHIP_RVSP_REBEL_ALT_3">
-        <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<hiddenAug>SHIP_REBEL</hiddenAug>
-        <crewLimit>8</crewLimit>
-        <crew>
-            <human room="16" name="Sokka" />    <!-- Piloting-->
-            <human room="0"/>
-            <human_engineer room="11"/>         <!-- Engines-->
-        </crew>
+		<crewLimit>8</crewLimit>
     </mod-append:customShip>
 
     <mod-append:shipIcons>

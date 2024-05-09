@@ -9,8 +9,12 @@
 <roomLayout name="engines_rvs_ai">		<!-- on the AI type B -->
 	<computerGlow x="43" y="53" dir="DOWN" />
 </roomLayout>
+<roomLayout name="engines_rvs_uc_2">	<!-- on the alt Rebel type C-->
+	<computerGlow x="9" y="53" dir="DOWN" />
+</roomLayout>
 <roomLayout name="pilot_rvs_uc_3">		<!-- on the Alt Rebel type A, and C-->
 	<computerGlow name="glow_pilot" x="19" y="42" dir="RIGHT" />
 </roomLayout>
+
 
 
