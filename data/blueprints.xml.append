@@ -575,12 +575,12 @@
     <short>Corrosion Focus</short>
     <desc>Outlawed in the universe where this weapon was first sighted. This exotic weapon fires a concentrated tight beam of x-rays that irradiates and corrodes the target causing systems to break down over time for a short duration.</desc>
     <tooltip>Corrosive focus that deals 3 damage on hit and applies an additional 3 via corrosion.</tooltip>
-    <damage>3</damage>
+    <damage>2</damage>
     <sp>0</sp>
     <fireChance>0</fireChance>
     <breachChance>3</breachChance>
-	<persDamage>3</persDamage>
-    <cooldown>16</cooldown>
+	<persDamage>2</persDamage>
+    <cooldown>18</cooldown>
 	<color>
 		<r>0</r>
 		<g>204</g>
@@ -591,7 +591,7 @@
 		<statBoost name="stunMultiplier" load="RAD_STUN"/>
         <statBoost name="repairSpeed" load="RAD_REPAIR"/>
     </statBoosts>
-    <power>3</power>
+    <power>2</power>
     <cost>90</cost>
     <bp>5</bp>
     <speed>1</speed>
@@ -601,7 +601,7 @@
 	<erosion>
 		<speed>1.5</speed>
 		<maxSpeed>1.5</maxSpeed>
-		<time>17.0</time>
+		<time>16.0</time>
 		<maxTime>25.0</maxTime>
 		<systemRepairMultiplier>1</systemRepairMultiplier>
 		<erodeShields>false</erodeShields>
