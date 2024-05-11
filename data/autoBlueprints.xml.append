@@ -48,12 +48,14 @@
 	<mod-append:name>RVS_BEAM_SHOTGUN_1</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_2</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_3</mod-append:name>
+	<mod-append:name>RVS_FOCUS_CORROSION_1<mod-append:name/>
 </mod:findName>
 <mod:findName type="blueprintList" name="BLUELIST_FOCUS_DAMAGE">
 	<mod-append:name>RA_BEAM_AUTO</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_1</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_2</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_3</mod-append:name>
+	<mod-append:name>RVS_FOCUS_CORROSION_1<mod-append:name/>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_ALL">
@@ -154,6 +156,7 @@
 	<name>RVS_BEAM_SHOTGUN_1</name>
 	<name>RVS_BEAM_SHOTGUN_2</name>
 	<name>RVS_BEAM_SHOTGUN_3</name>
+	<name>RVS_FOCUS_CORROSION_1<name/>
 	<name>RVS_BEAM_ION_BUST_1</name>
 	<name>RVS_BEAM_ION_BUST_2</name>
 	<name>RA_EFFECTOR_1</name>
@@ -214,12 +217,13 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<name>RVS_LASER_BURST_SCATTER_1</name>
 	<name>RVS_LASER_BURST_SCATTER_2</name>
 
-	<name>ION_1</name>
-	<name>ION_2</name>
-	<name>ION_HEAVY</name>
+	<name>ION_STUN</name>
+	<name>ION_STUN_2</name>
+	<name>ION_STUN_HEAVY</name>
 	<name>MISSILES_1_ENEMY</name>
 	<name>MISSILES_2_ENEMY</name>
 	<name>MISSILES_3_ENEMY</name>
+	<name>MISSILES_STUN_ENEMY</name>
 </blueprintList>
 
 <blueprintList name="RVS_LIST_MV_DRONES_AI_RENEGADE_BROWNIE" type="any">	<!-- VSC says change type to any so uh, okay!-->
@@ -236,22 +240,14 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<!-- MV vanilla weapons -->
 	<name>BA_LASER_ARTILLERY_2</name>	<!-- Place holder because funny -->
 	<name>BEAM_FIRE</name>
-	<name>BEAM_FIRE_PIERCE</name>
 	<name>SPORE_1</name>
 	<name>SPORE_2</name>
 	<name>SPORE_HEAVY</name>
-	<name>SPORE_CHAIN</name>
 	<name>SPORE_STUN</name>
 	<name>ENERGY_1</name> 
 	<name>ENERGY_HULL</name>
-	<name>LASER_FIRE</name>
 	<name>LASER_STUN</name>
 	<name>LASER_HEAVY_PIERCE</name>
-	<name>LASER_PIERCE</name>
-	<name>LASER_PIERCE_2</name>
-	<name>LASER_PARTICLE</name>
-	<name>LASER_PARTICLE_2</name>
-	<name>BEAM_HULL</name>
 	<name>LASER_HULL_1</name>
 	<name>LASER_HULL_2</name>
 	<name>LASER_HULL_3</name>
@@ -266,7 +262,8 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<name>RVS_BEAM_SHOTGUN_1</name>
 	<name>RVS_BEAM_SHOTGUN_2</name>
 	<name>RVS_BEAM_SHOTGUN_3</name>
-	
+	<name>RVS_FOCUS_CORROSION_1</name>
+
 	<!-- CE weapons -->
 	<name>RA_BEAM_AUTO</name>	
 
@@ -274,6 +271,10 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<name>RVS_EMP_1</name>
 	<name>RVS_EMP_2</name>
 	<name>RVS_EMP_HEAVY_1</name>
+	<name>RVS_FOCUS_CORROSION_1</name>
+	<name>RVS_FOCUS_CORROSION_1</name>
+	<name>RVS_FOCUS_CORROSION_1</name>
+	<name>BA_LASER_ARTILLERY_2</name>
 	<name>BA_LASER_ARTILLERY_2</name>
 </blueprintList>
 

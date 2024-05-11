@@ -87,6 +87,7 @@
 		<blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
 		<blueprint name="RVS_BEAM_SHOTGUN_3" rarity="3"/>
+		<blueprint name="RVS_FOCUS_CORROSION_1" rarity="3"/>
 		<blueprint name="RVS_EMP_1" rarity="2"/>
 		<blueprint name="RVS_EMP_2" rarity="4"/>
 		<blueprint name="RVS_EMP_HEAVY_1" rarity="3"/>
@@ -286,6 +287,7 @@
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="0"/>
+		<mod-append:blueprint name="RVS_FOCUS_CORROSION_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_EMP_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_EMP_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="0"/>
@@ -333,6 +335,7 @@
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="0"/>
+		<mod-append:blueprint name="RVS_FOCUS_CORROSION_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_EMP_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_EMP_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="0"/>
@@ -381,6 +384,7 @@
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="3"/>
+		<mod-append:blueprint name="RVS_FOCUS_CORROSION_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_EMP_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_EMP_2" rarity="4"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="4"/>
@@ -419,6 +423,7 @@
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="3"/>
+		<mod-append:blueprint name="RVS_FOCUS_CORROSION_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_EMP_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_EMP_2" rarity="4"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="4"/>
@@ -456,11 +461,12 @@
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="3"/>
+		<mod-append:blueprint name="RVS_FOCUS_CORROSION_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_EMP_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_EMP_2" rarity="3"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="3"/>
 
-		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_INTERCEPTER" rarity="0"/>
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_INTERCEPTOR" rarity="0"/>
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="0"/>
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SWARM" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="0"/>
@@ -492,6 +498,7 @@
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="2"/>
+		<mod-append:blueprint name="RVS_FOCUS_CORROSION_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_EMP_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_EMP_2" rarity="2"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="2"/>
@@ -526,6 +533,7 @@
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="2"/>
+		<mod-append:blueprint name="RVS_FOCUS_CORROSION_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_EMP_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_EMP_2" rarity="2"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="2"/>
@@ -559,6 +567,7 @@
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="2"/>
+		<mod-append:blueprint name="RVS_FOCUS_CORROSION_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_EMP_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_EMP_2" rarity="2"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="2"/>
