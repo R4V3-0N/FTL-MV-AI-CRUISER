@@ -154,7 +154,7 @@
 	SLEEPER'S HYPERSPACE
 	\\\\\\\\\\\\\\\\\\ 
 -->
-<weaponBlueprint name="RVS_HS_IR_BEAM_1">
+<weaponBlueprint name="RVS_HS_IR_BEAM_1">	<!-- R4 2024.05.19: not in use -->
     <type>BEAM</type>
     <flavorType>Pinpoint</flavorType>
     <tip>tip_focus</tip>
@@ -185,7 +185,7 @@
     <weaponArt>rvs_infrared_pulse_beam</weaponArt>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
-<weaponBlueprint name="RVS_HS_IR_BEAM_1_COLOURED">
+<weaponBlueprint name="RVS_HS_IR_BEAM_1_COLOURED">	<!-- R4 2024.05.19: not in use -->
     <type>BEAM</type>
     <flavorType>Pinpoint</flavorType>
     <tip>tip_focus</tip>
@@ -369,6 +369,7 @@
 </weaponBlueprint>
 
 <!-- R4: For Chronklo, depending on how this weapon balance works, it might be fun to have this decrease enemy shield cooldown for like 2-3 seconds when it hits their shield bubble directly, thoughts? -->
+	<!-- R4 2024.05.19: Chrono Vortex never gave me their thoughts :<  -->
 <weaponBlueprint name="RVS_EMP_HEAVY_1">
 	<type>LASER</type>
 	<title>Heavy EMP Device</title>
@@ -762,7 +763,7 @@
 	<cost>70</cost>
 	<bp>10</bp>
 	<speed>60</speed>
-	<rarity>3</rarity>
+	<rarity>0</rarity>	<!-- rarity in sector list --> 
 	<explosion>invisible</explosion>
     <particleEmitters>
         <particleEmitter name="ra_emitter_explosion_scatter" />
@@ -802,6 +803,95 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="RVS_LASER_AUTO_1">
+	<type>LASER</type>
+	<title>Auto Laser Mark I</title>
+	<short>Auto I</short>
+	<tip>rvs_tip_laser_auto</tip>
+	<desc>Fast charging support laser designed to continually lay down suppressive fire.</desc>
+	<!--<desc>Fast charging support laser designed to continually lay down fire on enemy ships.</desc> CE-->
+	<tooltip>Auto Laser; 1 damage, no system damage. 4 second cooldown.</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>	<!-- Cooldown goes down to 4.5 after 1 shot. Making it have a longer cooldown over the Light Laser 1, no accuracy bonus, no breach. Instead doing full damage (system, crew, etc) -->
+	<boost>
+		<type>cooldown</type>
+		<amount>5.5</amount>
+		<count>1</count>
+	</boost>
+	<power>1</power>
+	<cost>35</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>	<!-- rarity in sector list -->
+	<image>ra_laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_laser_auto_1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_LASER_AUTO_2">
+	<type>LASER</type>
+	<title>Auto Laser Mark II</title>
+	<short>Auto II</short>
+	<tip>rvs_tip_laser_auto</tip>
+	<desc>Very fast charging support laser that can keep enemy ships constantly under fire.</desc>
+	<tooltip>Auto Laser; one damage per shot. Reloads very fast.</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>9</cooldown>	<!-- Cooldown goes down to 3 after 1 shot -->
+	<boost>
+		<type>cooldown</type>
+		<amount>6</amount>
+		<count>1</count>
+	</boost>
+	<power>2</power>
+	<cost>40</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>	<!-- rarity in sector list -->
+	<image>ra_laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_laser_auto_2</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="RA_BEAM_AUTO">
 	<type>BEAM</type>
 	<title>Auto Focus Beam</title>
@@ -834,7 +924,7 @@
 	<weaponArt>ra_beam_auto</weaponArt> 
 </weaponBlueprint>
 
-<weaponBlueprint name="RVS_BEAM_PERNACH">
+<weaponBlueprint name="RVS_BEAM_FOCUS_1">
 	<type>BEAM</type>
 	<tip>tip_focus</tip>
 	<title>'Pernach' Focus Beam</title>
@@ -852,8 +942,7 @@
 	<cost>50</cost>
 	<bp>12</bp>
 	<rarity>3</rarity>
-	<!--<image>ba_beam_contact_pierce</image>-->
-	<image>beam_contact</image>
+	<image>ra_beam_contact_pierce</image>
 	<length>1</length>
 	<launchSounds>
 		<sound>ra_focusbeam1</sound>
@@ -1446,7 +1535,7 @@
 	<weaponArt>rvs_plasma_projector_1</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
-<weaponBlueprint name="RVS_SHOT_PLASMA_CRIT">
+<weaponBlueprint name="RVS_SHOT_PLASMA_CRIT">	<!-- R4 2024.05.19: no longer used -->
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>YOU SHOULDN'T SEE THIS</title>
@@ -1487,7 +1576,7 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="RVS_SHOT_PLASMA_PLUS_NORMAL">
+<weaponBlueprint name="RVS_SHOT_PLASMA_PLUS_NORMAL">	<!-- R4 2024.05.19: no longer used -->
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>Plasma Projector Mark I</title>
@@ -1526,7 +1615,7 @@
 	<weaponArt>rvs_plasma_projector_1</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
-<weaponBlueprint name="RVS_SHOT_PLASMA_PLUS_CRIT">
+<weaponBlueprint name="RVS_SHOT_PLASMA_PLUS_CRIT">	<!-- R4 2024.05.19: no longer used -->
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>YOU SHOULDN'T SEE THIS</title>
@@ -1641,7 +1730,7 @@
 <weaponBlueprint name="FM_RVS_SPLITTER_ENERGY_1">
     <type>BURST</type>
     <flavorType>Pinpoint</flavorType>
-    <tip>tip_focusenergy</tip>
+    <tip>rvs_tip_focusenergy</tip>
     <title>'Pendula' Splitter</title>
     <short>'Pendula'</short>
     <desc>A combination of Energy and Splitter technology. Deals no system damage, but deals 1 ion damage on a room hit, stuns all crew in the room. Likely to start fires.</desc>
@@ -1711,7 +1800,7 @@
 <weaponBlueprint name="FM_RVS_SPLITTER_ENERGY_2">
     <type>BURST</type>
     <flavorType>Pinpoint</flavorType>
-    <tip>tip_focusenergy</tip>
+    <tip>rvs_tip_focusenergy</tip>
     <title>'Youngii' Splitter</title>
     <short>'Youngii'</short>
     <desc>A combination of Energy and Pinpoint technology. Deals no system damage, but deals 3 ion damage on a room hit, stuns all crew in the room, and charges faster than the Misericorde. Likely to start fires.</desc>
@@ -1780,7 +1869,7 @@
 <weaponBlueprint name="FM_RVS_SPLITTER_ENERGY_3">
     <type>BURST</type>
     <flavorType>Pinpoint</flavorType>
-    <tip>tip_focusenergy</tip>
+    <tip>rvs_tip_focusenergy</tip>
     <title>'Babylon' Splitter</title>
     <short>'Babylon'</short>
     <desc>A combination of Energy and Pinpoint technology. Deals no system damage, but fires devestating volley of 3 pinpoint beams that deal 2 hull and ion damage each. Likely to start fires.</desc>
@@ -1845,12 +1934,12 @@
     <weaponArt>fm_rvs_splitter_energy_3</weaponArt>
 </weaponBlueprint>
 
-<weaponBlueprint name="FM_RVS_IPS_LASER__SCATTER_CHAINGUN_BURST">
+<weaponBlueprint name="FM_RVS_IPS_LASER_SCATTER_CHAINGUN_BURST">
 	<type>LASER</type>
 	<flavorType>Fully-Automatic Momentum Laser</flavorType>	<!--R4 TO DO-->
 	<title>Experimental LSB-2 "Stormer"</title>
 	<short>Stormer</short>
-	<tip>tip_IPS_LASER_CHAINGUN_BURST</tip>	<!--R4 TO DO-->
+	<tip>rvs_tip_stormer</tip>	<!--R4 TO DO-->
 	<desc>A massive Chain Laser built for ease of use, whilst retaining most of the devastating firepower of the Chain Vulcans.</desc>	<!--R4 TO DO-->
 	<tooltip></tooltip>	<!--R4 TO DO-->
 	<damage>1</damage>	<!--R4 TO DO-->
@@ -1886,14 +1975,14 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>ips_chainlaser_burst</weaponArt> 
+	<weaponArt>fm_rvs_ips_stormer</weaponArt> 
 	<iconImage>laser_chain</iconImage>
 </weaponBlueprint>
 
 <weaponBlueprint name="FM_RVS_IPS_OSCILLATOR">
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
-	<tip>tip_IPS_WAVEGUN</tip>	<!--R4 TO DO-->
+	<tip>rvs_tip_disruptor</tip>	<!--R4 TO DO-->
 	<title>Disruption Oscillator</title>
 	<short>Disruptor</short>
 	<desc>A baffling industrial weapon modified for war. This device can disrupt ships with a barrage of hacking pulses.</desc>
@@ -1902,7 +1991,7 @@
 	<shots>1</shots>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>	<!--R4 TO DO, maybe make ion?-->
-	<persDamage>0</persDamage>
+	<persDamage>1</persDamage>
 	<hack duration="5" hitShieldDuration="4" immuneAfterHack="0" boostHackingTimeAddition="2"/>	<!-- R4 TEST -->
 	<sp>0</sp>
 	<fireChance>0</fireChance>
@@ -1931,7 +2020,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>ips_wavegun</weaponArt>  	<!--R4 TO DO-->
+	<weaponArt>fm_rvs_ips_oscillator</weaponArt>  	<!--R4 TO DO-->
 	<iconImage>missile_charge</iconImage>
 </weaponBlueprint>
 
@@ -3222,7 +3311,7 @@ AUGMENTS
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="5" count="4">
 		<weapon name="RVS_LASER_BURST_SCATTER_1" />
-		<weapon name="RVS_BEAM_PERNACH" />
+		<weapon name="RVS_BEAM_FOCUS_1" />
 	</weaponList>
 	<droneList drones="5" count="2" />
 	<health amount="30" />
@@ -3230,7 +3319,7 @@ AUGMENTS
 	<!-- Crew in hyperspace.xml.append
 	<crewCount amount="2" class="human" />
 	<crewCount amount="1" class="human_engineer" />
-	-->
+	--> <!-- Replace with custom Humanoids -->
 	<aug name="FTL_BOOSTER" />
 	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
 </shipBlueprint>
@@ -3263,13 +3352,13 @@ AUGMENTS
 			</slot>
 		</engines>
 		<hacking power="1" room="16" start="false" img="room_hacking_6" />
-		<medbay power="1" room="11" start="false" img="room_medbay_5">
+		<medbay power="1" room="11" start="true" img="room_medbay_5">
 			<slot>
 				<number>3</number>
 			</slot>
 		</medbay>
 		<mind power="1" room="2" start="false" img="room_mind_10" />
-		<oxygen power="1" room="6" start="false" img="room_oxygen_7" />
+		<oxygen power="1" room="6" start="true" img="room_oxygen_7" />
 		<pilot power="1" room="15" start="true" img="room_pilot_3">
 			<slot>
 				<direction>right</direction>
@@ -3299,15 +3388,15 @@ AUGMENTS
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
-	<weaponList missiles="5" count="4">
-		<weapon name="LASER_LIGHT_2" />	<!-- Replace with Autolaser -->
-		<weapon name="LASER_LIGHT_2" />	<!-- Replace with Autolaser -->
+	<weaponList missiles="5" count="4">	<!-- Load out based on CE Kestrel Type B -->
+		<weapon name="RVS_LASER_AUTO_2" />
+		<weapon name="RVS_LASER_AUTO_2" />
 		<weapon name="LASER_BURST_1" />
 	</weaponList>
 	<droneList drones="5" count="2" />
 	<health amount="30" />
 	<maxPower amount="10" />
-	<crewCount amount="4" class="human_humanoid" />
+	<crewCount amount="4" class="human_humanoid" />	<!-- Replace with custom Humanoids -->
 	<aug name="NEBULA_GASSES" />
 	<shieldImage>rvsp_rebel_alt_cruiser</shieldImage>
 	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
@@ -3384,7 +3473,7 @@ AUGMENTS
 	<droneList drones="5" count="2" />
 	<health amount="30" />
 	<maxPower amount="10" />
-	<crewCount amount="1" class="human_humanoid" />
+	<crewCount amount="1" class="human_humanoid" />	<!-- Replace with custom Humanoids -->
 	<crewCount amount="1" class="human_engineer" />
 	<crewCount amount="1" class="human_soldier" />
 	<aug name="HACKING_STUN" />

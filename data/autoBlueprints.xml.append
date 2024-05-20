@@ -48,14 +48,14 @@
 	<mod-append:name>RVS_BEAM_SHOTGUN_1</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_2</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_3</mod-append:name>
-	<mod-append:name>RVS_FOCUS_CORROSION_1<mod-append:name/>
+	<mod-append:name>RVS_FOCUS_CORROSION_1</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="BLUELIST_FOCUS_DAMAGE">
 	<mod-append:name>RA_BEAM_AUTO</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_1</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_2</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_3</mod-append:name>
-	<mod-append:name>RVS_FOCUS_CORROSION_1<mod-append:name/>
+	<mod-append:name>RVS_FOCUS_CORROSION_1</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_ALL">
@@ -87,12 +87,34 @@
 <!-- New lists -->
 
 <!-- Blue Lists-->
-<blueprintList name="BLUELIST_EFFECTOR">
+<blueprintList name="RVS_BLUELIST_EFFECTOR">
 	<name>RA_EFFECTOR_1</name>
 	<name>RA_EFFECTOR_2</name>
 	<name>RA_EFFECTOR_HEAVY</name>
 	<name>RA_EFFECTOR_CHAIN</name>
 	<name>RA_EFFECTOR_ADAPTIVE</name>
+</blueprintList>
+
+<blueprintList name="RVS_BLUELIST_CREW_AI">
+	<name>rvs_ai_hologram</name>
+	<name>rvs_ai_hologram_cortana</name>
+</blueprintList>
+
+<!-- Gift Lists -->
+<blueprintList name="RVS_GIFTLIST_AI">
+	<name>RA_EFFECTOR_1</name>
+	<name>RA_EFFECTOR_2</name>
+	<name>RA_EFFECTOR_HEAVY</name>
+	<name>RVS_EMP_1</name>
+	<name>RVS_EMP_2</name>
+	<name>RVS_EMP_HEAVY_1</name>
+	<name>RVS_BEAM_SHOTGUN_1</name>
+	<name>RVS_BEAM_SHOTGUN_2</name>
+	<name>RVS_FOCUS_CORROSION_1</name>
+	<name>RVS_BEAM_ION_BUST_1</name>
+	<name>RVS_LASER_BURST_SCATTER_1</name>
+	<name>RVS_LASER_BURST_SCATTER_2</name>
+	<name>RVS_SHOTGUN_SCATTER</name>
 </blueprintList>
 
 <!-- Other Lists-->
@@ -156,7 +178,7 @@
 	<name>RVS_BEAM_SHOTGUN_1</name>
 	<name>RVS_BEAM_SHOTGUN_2</name>
 	<name>RVS_BEAM_SHOTGUN_3</name>
-	<name>RVS_FOCUS_CORROSION_1<name/>
+	<name>RVS_FOCUS_CORROSION_1</name>
 	<name>RVS_BEAM_ION_BUST_1</name>
 	<name>RVS_BEAM_ION_BUST_2</name>
 	<name>RA_EFFECTOR_1</name>
@@ -286,22 +308,32 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 -->
 
 <blueprintList name="RVS_LIST_SHOT_HS_PLASMA">	<!-- For HS Plasma Thrower -->
+	<!--<name>RVS_SHOT_PLASMA_HS_NORMAL</name>
 	<name>RVS_SHOT_PLASMA_HS_NORMAL</name>
 	<name>RVS_SHOT_PLASMA_HS_NORMAL</name>
-	<name>RVS_SHOT_PLASMA_HS_NORMAL</name>
-	<name>RVS_SHOT_PLASMA_HS_CRIT</name>
+	<name>RVS_SHOT_PLASMA_HS_CRIT</name>-->
 </blueprintList>
 
-<blueprintList name="RVS_LIST_SHOT_PLASMA">	<!-- was 50% crit chance, now 25% -->
+<!-- Removed system damage crit chance
+<blueprintList name="RVS_LIST_SHOT_PLASMA">
 	<name>RVS_SHOT_PLASMA_NORMAL</name>
 	<name>RVS_SHOT_PLASMA_NORMAL</name>
 	<name>RVS_SHOT_PLASMA_NORMAL</name>
-	<name>RVS_SHOT_PLASMA_CRIT</name>
+	<name>RVS_SHOT_PLASMA_CRIT</name>	
 </blueprintList>
-<blueprintList name="RVS_LIST_SHOT_PLASMA_PLUS">	<!-- was 50% crit chance, now 33% -->
+<blueprintList name="RVS_LIST_SHOT_PLASMA_PLUS">
 	<name>RVS_SHOT_PLASMA_PLUS_NORMAL</name>
 	<name>RVS_SHOT_PLASMA_PLUS_NORMAL</name>
 	<name>RVS_SHOT_PLASMA_PLUS_CRIT</name>
+</blueprintList>
+-->
+
+<!--removed crit chance-->
+<blueprintList name="RVS_LIST_SHOT_PLASMA">
+	<name>RVS_SHOT_PLASMA_NORMAL</name>
+</blueprintList>
+<blueprintList name="RVS_LIST_SHOT_PLASMA_PLUS">
+	<name>RVS_SHOT_PLASMA_NORMAL</name>
 </blueprintList>
 
 <!-- 
@@ -408,10 +440,8 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<droneList drones="6" count="4" load="RVS_LIST_DRONES_HEAVY" />
 	<health amount="11" />
 	<maxPower amount="7" />
-	<crewCount amount="2" max="3" class="rvs_ai_hologram" />
-	<crewCount amount="1" max="2" clsas="zoltan_osmian"/>
-	<crewCount amount="0" max="1" clsas="zoltan_martyr"/>
-	<crewCount amount="0" max="1" class="crystal_liberator"/>
+	<crewCount amount="3" max="3" class="zoltan_osmian_enemy" />
+	<!-- Hyperspace.xml.append, 4 ai's, 1 martyr -->
 	<!-- eventually Contempter? -->
 	<boardingAI>sabotage</boardingAI>
 	<aug name="RVS_ANTI_GRAVITY_ENGINE" />

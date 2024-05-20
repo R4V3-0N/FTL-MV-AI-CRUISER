@@ -67,7 +67,6 @@
 
 <!-- Rebalanced Arsenal / CE inspired weapon Animations-->
 <animSheet name="ra_beam_auto" w="175" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_strip7.png</animSheet>
-<animSheet name="ra_beam_auto_charge" w="25" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_chargeglow.png</animSheet>
 <animSheet name="rvs_beam_pernach" w="300" h="39" fw="30" fh="39">weapons_rebalanced_arsenal/rvs_beam_pernach_strip10.png</animSheet>
 <animSheet name="ra_effector_1" w="105" h="54" fw="35" fh="54">weapons_rebalanced_arsenal/ra_effector_1_strip3.png</animSheet>
 <animSheet name="ra_effector_2" w="123" h="62" fw="41" fh="62">weapons_rebalanced_arsenal/ra_effector_2_strip3.png</animSheet>
@@ -79,12 +78,9 @@
 <animSheet name="rvs_laser_burst_scatter_1" w="216" h="46" fw="18" fh="46">weapons_rebalanced_arsenal/rvs_laser_burst_scatter_1_strip12.png</animSheet>
 <animSheet name="rvs_laser_burst_scatter_2" w="288" h="50" fw="24" fh="50">weapons_rebalanced_arsenal/rvs_laser_burst_scatter_2_strip12.png</animSheet>
 <animSheet name="rvs_shotgun_scatter" w="240" h="55" fw="30" fh="55">weapons_rebalanced_arsenal/rvs_shotgun_scatter_strip8.png</animSheet>
+<animSheet name="rvs_laser_auto_1" w="276" h="58" fw="23" fh="58">weapons_rebalanced_arsenal/rvs_laser_auto_1_strip12.png</animSheet>
+<animSheet name="rvs_laser_auto_2" w="230" h="59" fw="23" fh="59">weapons_rebalanced_arsenal/rvs_laser_auto_2_strip10.png</animSheet>
 
-<anim name="ra_beam_auto_charge">
-	<sheet>ra_beam_auto_charge</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
 <weaponAnim name="ra_beam_auto">
 	<sheet>ra_beam_auto</sheet>
 	<desc length="7" x="0" y="0"/>
@@ -95,6 +91,12 @@
 	<chargeImage>weapons_rebalanced_arsenal/ra_beam_auto_glow.png</chargeImage>
 	<boost>ra_beam_auto_charge</boost>
 </weaponAnim>
+<animSheet name="ra_beam_auto_charge" w="25" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_chargeglow.png</animSheet>
+<anim name="ra_beam_auto_charge">
+	<sheet>ra_beam_auto_charge</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
 
 <weaponAnim name="rvs_beam_pernach">
 	<sheet>rvs_beam_pernach</sheet>
@@ -214,6 +216,40 @@
 	<mountPoint x="5" y="39"/>
 </weaponAnim>
 
+<weaponAnim name="rvs_laser_auto_1">
+	<sheet>rvs_laser_auto_1</sheet>
+	<desc length="12" x="0" y="0"/>
+	<chargedFrame>7</chargedFrame>
+	<fireFrame>9</fireFrame>
+	<firePoint  x="16" y="8"/>
+	<mountPoint x="5" y="26"/>
+	<chargeImage>weapons_rebalanced_arsenal/rvs_laser_auto_1_glow.png</chargeImage>
+	<boost>rvs_laser_auto_1_charge</boost>
+</weaponAnim>
+<animSheet name="rvs_laser_auto_1_charge" w="23" h="58" fw="23" fh="58">weapons_rebalanced_arsenal/rvs_laser_auto_1_glow.png</animSheet>
+<anim name="rvs_laser_auto_1_charge">
+	<sheet>rvs_laser_auto_1_charge</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<weaponAnim name="rvs_laser_auto_2">
+	<sheet>rvs_laser_auto_2</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>7</fireFrame>
+	<firePoint  x="16" y="8"/>
+	<mountPoint x="5" y="26"/>
+	<chargeImage>weapons_rebalanced_arsenal/rvs_laser_auto_2_glow.png</chargeImage>
+	<boost>rvs_laser_auto_2_charge</boost>
+</weaponAnim>
+<animSheet name="rvs_laser_auto_2_charge" w="23" h="59" fw="23" fh="59">weapons_rebalanced_arsenal/rvs_laser_auto_2_glow.png</animSheet>
+<anim name="rvs_laser_auto_2_charge">
+	<sheet>rvs_laser_auto_2_charge</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
 <!-- Hyperspace Anthology inspired weapons-->
 <animSheet name="rvs_emp_1" w="324" h="95" fw="27" fh="95">weapons_hyperspace/rvs_emp_1_strip12.png</animSheet>
 <animSheet name="rvs_emp_2" w="372" h="106" fw="31" fh="106">weapons_hyperspace/rvs_emp_2_strip12.png</animSheet>
@@ -318,6 +354,8 @@
 </anim>
 
 <!-- Rebalanced Arsenal Projectiles -->
+<animSheet name="ra_laser_light1" w="200" h="20" fw="50" fh="20">projectiles/ra_laser_light_strip4.png</animSheet>
+<animSheet name="ra_laser_light2" w="200" h="20" fw="50" fh="20">projectiles/ra_laser_light2_strip4.png</animSheet>
 <animSheet name="ra_laser_heavy1" w="200" h="20" fw="50" fh="20">projectiles/ra_laser_heavy1_strip4.png</animSheet>
 <animSheet name="ra_laser_heavy2" w="200" h="20" fw="50" fh="20">projectiles/ra_laser_heavy2_strip4.png</animSheet>
 <animSheet name="ra_laser_heavy_scatter_shot_1" w="140" h="20" fw="35" fh="20">projectiles/ra_laser_heavy_scatter_shot_1_strip4.png</animSheet>
@@ -328,6 +366,18 @@
 <animSheet name="ra_laser_burst_scatter_shot" w="400" h="80" fw="50" fh="80">projectiles/ra_laser_burst_scatter_shot_strip8.png</animSheet>
 <animSheet name="ra_shotgun_scatter_shot" w="160" h="16" fw="40" fh="16">projectiles/ra_shotgun_scatter_shot_strip4.png</animSheet>
 <animSheet name="ra_plasma_shot" w="200" h="40" fw="50" fh="40">projectiles/ra_plasma_shot_strip4.png</animSheet>
+
+<anim name="ra_laser_light1">
+	<sheet>ra_laser_light1</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.1</time>
+</anim>
+
+<anim name="ra_laser_light2">
+	<sheet>ra_laser_light2</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.1</time>
+</anim>
 
 <anim name="ra_laser_heavy1">
 	<sheet>ra_laser_heavy1</sheet>
@@ -467,13 +517,11 @@
 <animSheet name="ra_effector_hacking_warning_heavy" w="4800" h="120" fw="600" fh="120">effects_rebalanced_arsenal/ra_effector_hacking_warning_heavy_strip8.png</animSheet>
 <animSheet name="ra_explosion_fire" w="640" h="64" fw="64" fh="64">effects_rebalanced_arsenal/ra_explosion_fire_strip10.png</animSheet>
 <animSheet name="ra_effector_impact_1" w="315" h="35" fw="35" fh="35">effects_rebalanced_arsenal/ra_effector_impact_1_strip9.png</animSheet>
+<!-- Impact -->
+<animSheet name="ra_explosion_laser_light" w="315" h="35" fw="35" fh="35">effects_rebalanced_arsenal/ra_explosion_laser_light_strip9.png</animSheet>
+<animSheet name="ra_beam_contact_big" w="240" h="48" fw="48" fh="48">effects_rebalanced_arsenal/ra_laser_contact_big.png</animSheet>
+<animSheet name="ra_beam_contact_pierce" w="240" h="48" fw="48" fh="48">effects_rebalanced_arsenal/ra_laser_contact_pierce.png</animSheet>
 
-
-<anim name="ra_effector_impact_1">
-	<sheet>ra_effector_impact_1</sheet>
-	<desc length="9" x="0" y="0"/>
-	<time>1</time>
-</anim>
 
 <anim name="ra_effector_hacking_1">
 	<sheet>ra_effector_hacking</sheet>
@@ -528,13 +576,12 @@
 	<time>4.0</time>
 </anim>
 
+<!-- R4: 2024.05.19:  Will just coment this out for now, no clue what this is doing here.
 <anim name="ra_effector_hacking_warning_drone">
 	<sheet>ra_effector_hacking_warning_small</sheet>
 	<desc length="1" x="600" y="0"/>
 	<time>1.5</time>
-</anim>
-
-
+</anim>-->
 
 <anim name="ra_effector_impact_invisible">
 	<sheet>ra_effector_impact_1</sheet>
@@ -549,15 +596,33 @@
 	<time>0.6</time>
 </anim>
 
+<anim name="ra_explosion_fire">
+	<sheet>ra_explosion_fire</sheet>
+	<desc length="10" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<anim name="ra_effector_impact_1">
+	<sheet>ra_effector_impact_1</sheet>
+	<desc length="9" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
 <anim name="ra_explosion_laser_light">
 	<sheet>ra_explosion_laser_light</sheet>
 	<desc length="9" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
 
-<anim name="ra_explosion_fire">
-	<sheet>ra_explosion_fire</sheet>
-	<desc length="10" x="0" y="0"/>
+<anim name="ra_beam_contact_big">
+	<sheet>ra_beam_contact_big</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<anim name="ra_beam_contact_pierce">
+	<sheet>ra_beam_contact_pierce</sheet>
+	<desc length="1" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
 
