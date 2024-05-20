@@ -191,6 +191,7 @@
     <!-- Enemies -->
 	<mod-append:customShip name="RVS_AI_INTERCEPTOR">
 		<shipIcons>
+            <!--<shipIcon>rvs_icon_antigrav_engine</shipIcon>-->   
 			<shipIcon>icon_no2</shipIcon>
 			<shipIcon>icon_auto</shipIcon>
         </shipIcons>
@@ -215,12 +216,18 @@
 	</mod-append:customShip>
 
     <mod-append:customShip name="RVSR_AI_ASSAULT">
-		<shipIcons>
-			<shipIcon>icon_no2</shipIcon>
+		<shipIcons> <!--Has O2-->
             <shipIcon>icon_threat</shipIcon>
 			<shipIcon>icon_auto</shipIcon>
         </shipIcons>
 		<autoShipForce>true</autoShipForce>
+        <crew>
+            <rvs_ai_hologram room="5"/> <!--temporal-->
+            <rvs_ai_hologram room="7"/> <!--shields-->
+            <rvs_ai_hologram room="15"/> <!--oxygen-->
+            <zoltan_martyr room="1"/>  <!--teleporter-->  
+            <rvs_ai_hologram room="1"/>
+        </crew>
 	</mod-append:customShip>
 
 
@@ -822,5 +829,156 @@
             </achievement>
         </section>
 	</mod-append:page>
+</mod:findLike>
+
+
+<mod:findLike type="store" limit="1">
+	<mod-append:customStore id="RVS_STORE_AI">
+        <hullRepair>
+			<price min="3" max="4"/>
+			<sectorScaled/>
+		</hullRepair>
+		<resource>
+			<type>fuel</type>
+			<count min="5" max="10"/>
+		</resource>
+		<resource>
+			<type>missiles</type>
+			<count min="3" max="7"/>
+		</resource>
+		<resource>
+			<type>drones</type>
+			<count min="7" max="13"/>
+			<modifier flat="true">-1</modifier>
+		</resource>
+		<category type="WEAPONS" group="4">
+            <customTitle>WEAPONS OF THE DAY [33% OFF]</customTitle>
+			<item>
+				<modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item> 
+			<item>
+				<modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item>
+			<item>
+				<modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item>
+			<chance>25</chance>
+			<groupChance>50</groupChance>
+        </category>
+		<category type="DRONES" group="4">
+            <customTitle>DRONES OF THE DAY [33% OFF]</customTitle>
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item> 
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item> 
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item> 
+			<chance>50</chance>
+			<groupChance>15</groupChance>
+        </category>
+		<category type="AUGMENTS" group="4">
+            <customTitle>AUGMENTS OF THE DAY [33% OFF]</customTitle>
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item> 
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item> 
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item> 
+			<chance>25</chance>
+			<groupChance>35</groupChance>
+        </category>
+		<category type="WEAPONS" group="3">
+            <item/>
+            <item/>
+            <item>
+                <!--<blueprint>RVS_SHOP_AI_ITEM_WEAPONS</blueprint>-->
+            </item>
+			<chance>100</chance>
+        </category>
+		<category type="DRONES">
+            <item/>
+            <item/>
+            <item/>
+			<chance>100</chance>
+        </category>
+		<category type="AUGMENTS" group="0">
+            <item/>
+            <item/>
+            <item/>
+			<chance>65</chance>
+			<groupChance>50</groupChance>
+        </category>
+		<category type="CREW" group="0">
+			<customTitle>DECKHANDS</customTitle>
+		    <allowDuplicates/>
+			<item/>
+            <item/>
+            <item>
+                <blueprint>rvs_ai_hologram</blueprint>
+            </item>
+			<chance>33</chance>
+			<groupChance>50</groupChance>
+        </category>
+
+
+		<category type="SYSTEMS">
+            <customTitle>ESSENTIAL SYSTEMS</customTitle>
+			<guaranteedSystems>
+                <weapons/>
+				<shields/>
+				<!--<oxygen/> not O2 due to AI vendor -->
+            </guaranteedSystems>
+			<item>
+                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+            </item>
+			<chance>100</chance>
+        </category>
+		<category type="SYSTEMS">
+			<customTitle>AUXILIARY SYSTEMS</customTitle>
+            <!--<guaranteedSystems>
+                <drones/>
+            </guaranteedSystems>-->
+			<item>
+                <blueprint>drones</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+            </item>
+			<chance>65</chance>
+        </category>
+    </mod-append:customStore>
 </mod:findLike>
 </FTL>

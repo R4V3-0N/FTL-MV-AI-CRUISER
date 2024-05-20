@@ -6,6 +6,8 @@
 		<name>Periphery Regions</name>
 		<name>Unexplored Periphery</name>
 		<name>Periphery Nebulae</name>
+		<name>Unmapped Periphery</name>
+		<name>Unregistered Periphery</name>
 		<!--<name>Uncharted Nebulae</name>
 		<name>Uncharted Clouds</name>
 		<name>Unmapped Nebulae</name>
@@ -72,16 +74,19 @@
 
 		<!-- REBALANCED ARSENAL -->
 		<blueprint name="RA_BEAM_AUTO" rarity="2"/>
+		<blueprint name="RVS_BEAM_FOCUS_1" rarity="3"/>
 		<blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<blueprint name="RA_EFFECTOR_2" rarity="4"/>
-		<blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
-		<blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
+		<blueprint name="RA_EFFECTOR_HEAVY" rarity="2"/>
+		<blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="3"/>
 		<blueprint name="RVS_PLASMA_1" rarity="2"/>
 		<blueprint name="RVS_PLASMA_2" rarity="3"/>
 		<blueprint name="RVS_PLASMA_3" rarity="4"/>
 		<blueprint name="RVS_LASER_BURST_SCATTER_1" rarity="1"/>	
 		<blueprint name="RVS_LASER_BURST_SCATTER_2" rarity="3"/>
 		<blueprint name="RVS_SHOTGUN_SCATTER" rarity="3"/>
+		<blueprint name="RVS_LASER_AUTO_1" rarity="2"/>
+		<blueprint name="RVS_LASER_AUTO_2" rarity="3"/>
 
 		<!-- HYPERSPACE-->
 		<blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
@@ -240,10 +245,10 @@
 	<rebelBeacon event="FLEET_THREAT_MEDIUM" nebulaEvent="FLEET_THREAT_MEDIUM_NEBULA"/>
 	<priorityEvent name="ANOMALY_SPAWNER" min="1" max="1" priority="1" req="ANOMALY_SPAWN_CHECK" lvl="1"/>
 	<!--<event name="NEBULA_SYLVAN" min="0" max="1"/>-->
-	<event name="RVS_NEBULA_AI_HOSTILE" min="5" max="10"/>	<!-- placing here to guarantee full spawns-->
+	<event name="RVS_NEBULA_AI_HOSTILE" min="5" max="8"/>	<!-- placing here to guarantee full spawns-->
 	<event name="RVS_STORM_AI_BOARDING" min="1" max="1"/>
 
-	<event name="NEBULA_STORELIST_UNEXPLORED" min="1" max="2"/>
+	<event name="RVS_LIST_STORE_AI" min="1" max="2"/>
 	<event name="NEBULA_RVS_AUTO_MALFUNCTION" min="1" max="1"/>
 	
 	<event name="NEBULA_UNEXPLORED_ITEMS" min="2" max="3"/>
@@ -280,6 +285,8 @@
 		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_1" rarity="0"/>	
 		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_SHOTGUN_SCATTER" rarity="0"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_PLASMA_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_PLASMA_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_PLASMA_3" rarity="0"/>
@@ -328,6 +335,8 @@
 		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_1" rarity="0"/>	
 		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_SHOTGUN_SCATTER" rarity="0"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_PLASMA_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_PLASMA_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_PLASMA_3" rarity="0"/>
@@ -380,6 +389,9 @@
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="4"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="5"/>
+		<mod-append:blueprint name="RVS_SHOTGUN_SCATTER" rarity="4"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_2" rarity="3"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
@@ -419,7 +431,10 @@
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="4"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="5"/>
-		
+		<mod-append:blueprint name="RVS_SHOTGUN_SCATTER" rarity="4"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_2" rarity="3"/>
+
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="4"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="3"/>
@@ -457,6 +472,8 @@
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_2" rarity="3"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -494,6 +511,8 @@
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_2" rarity="3"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -603,6 +622,8 @@
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_1" rarity="4"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_2" rarity="4"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
@@ -640,6 +661,8 @@
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="4"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_1" rarity="4"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_2" rarity="4"/>
 		
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="2"/>
