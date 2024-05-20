@@ -15,6 +15,10 @@
 <roomLayout name="pilot_rvs_uc_3">		<!-- on the Alt Rebel type A, and C-->
 	<computerGlow name="glow_pilot" x="19" y="42" dir="RIGHT" />
 </roomLayout>
-
-
+<roomLayout name="weapons_rvs_uc_1">	<!-- on the Alt Rebel type B-->
+	<computerGlow x="52" y="6" dir="RIGHT" />
+</roomLayout>
+<roomLayout name="shields_stolen_nod">	<!-- on the Alt Rebel type B, also stole this from Chrono Vortex hence the name-->
+	<computerGlow x="1" y="35" dir="LEFT" />
+</roomLayout>
 
