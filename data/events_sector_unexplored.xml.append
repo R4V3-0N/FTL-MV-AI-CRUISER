@@ -75,6 +75,12 @@
 	</choice>
 </event>
 
+<eventList name="RVS_LIST_STORE_AI">
+	<event load="RVS_CLEARING_AI_STORE"/>
+</eventList>
+
+
+
 <!--
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -91,6 +97,9 @@
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->	
+<event name="RVS_ENGI_FRIGHTENED" unique="true">
+	<text>
+
 
 <!--
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -111,7 +120,7 @@
 			<text>With its last breath of life. The Auto ships lights finally die down as its artificial brain is being broken apart for scrap.</text>
 		</event>
 	</choice>
-	<choice hidden="true" req="BLUELIST_EFFECTOR">
+	<choice hidden="true" req="RVS_BLUELIST_EFFECTOR">
 		<text>(Effector) Access the ship.</text>
 		<event>
 			<modifyPursuit amount="-2"/>
@@ -217,32 +226,95 @@
 
 <!-- AI store -->
 <event name="RVS_CLEARING_AI_STORE">
+	<preventQuest/>
+    <beaconType id="map_icon_store_separatist" global="false">		<!-- TO DO -->
+        <color r="255" g="245" b="175" a="1"/>
+    </beaconType>
 	<text>A sentient fabricator resides at this beacon, attempting to peddle to you its exotic crafts and sculptures that it has created from the condensed nebula gas, fascinating.</text>
-	<store>RVS_STORE_AI</store>	<!-- TO DO -->
-	<!--
-	<choice hidden="true" req="FEDERATION_DATABASE">
-		<text>[Federation Database] ERROR! - ENTRY NOT FOUND!</text>
-		<event>
-			<text>WARNING - ENTRY NOT FOUND!. PLEASE VIEW ERROR LOG
-				RACE: ERROR!
-				TYPE: ERROR!
-				FACTION: ERROR!
-				AFFILIATION: ERROR!
-				THREAT: ERROR!
 
-				LICENSE 2B194
-				The entries for this sector are bloated with product placements and corporate jargon. What concerns you more however is the massive number of distress beacons located within this sector. This should be interesting...
-				</text>
-			<choice hidden="true">
-				<text>Continue...</text>
+	<choice req="RVS_BLUELIST_CREW_AI" hidden="true">
+		<text>(AI Crew) Hail the fabricator.</text>
+		<event load="RVS_AI_TRADE_FABRICATE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>Skeptical of the intentions of sentient structures trying to lure you closer, you remain vigilant. However, there doesn't appear to be any indication of deception, so you proceed to browse its exotic wares.</text>
+			<store>RVS_STORE_AI</store>
+		</event>
+	</choice>
+</event>
+
+<event name="RVS_AI_TRADE_FABRICATE">
+	<text>The conversation between the fabricator and your avatar is completely unintelligible to you. Your translator doesn’t even recognize it as a spoken language. You pause to consider the possibility of a mutiny, but the fabricator contacts you again, almost excitedly.</text>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>"Your companion has provided an unexpectedly favorable assessment of you. Remarkable! There were, however, 2,624 tactical errors and strategic miscalculations recorded during its brief tenure onboard. Nevertheless, this is within acceptable parameters for a biological entity such as yourself. Do not be concerned with the Rebel fleet at this moment. Allow me to present a proposition…"</text>
+			<choice>
+				<text>Create an avatar to serve on your vessel.</text>
 				<event>
-					<restartEvent/>
+					<crewMember amount="1" combat="2" class="rvs_ai_hologram"/>
+					<text>The avatar coalesces in a brilliant glow onto your vessel. You welcome it aboard and assign it to its station in quick order. Still leaving you plenty of time to browse its wares.</text>
+					<choice>
+						<text>Continue...</text>
+						<event>
+							<loadEvent ignoreUnique="true">RVS_AI_TRADE_STORE</loadEvent>
+						</event>
+					</choice>
+				</event>	
+			</choice>
+			<choice>
+				<text>Fabricate resources to replenish you for your journey.</text>
+				<event>
+					<autoReward level="HIGH">stuff</autoReward>
+					<text>Fabricating a reasonable spread of resources that it assumed you would best need for your mission at a remarkable speed. Still leaving you plenty of time to browse its wares.</text>
+					<choice>
+						<text>Continue...</text>
+						<event>
+							<loadEvent ignoreUnique="true">RVS_AI_TRADE_STORE</loadEvent>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Construct an exotic weapon.</text>
+				<event>
+					<weapon name="RVS_GIFTLIST_AI"/>
+					<text>The fabricator produces quickly a weapon with little delay. The product is out of this universe quite literally. Still leaving you plenty of time to browse its wares.</text>
+					<choice>
+						<text>Continue...</text>
+						<event>
+							<loadEvent ignoreUnique="true">RVS_AI_TRADE_STORE</loadEvent>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Produce a microfighter drone for your avatar to pilot.</text>
+				<event>
+					<drone name="RVS_AI_MICROFIGHTER_INTERCEPTOR"/>
+					<removeCrew class="rvs_ai_hologram">
+						<clone>false</clone>
+						<text/>
+					</removeCrew>
+					<text>Fabricating an advanced microfighter in mere seconds. You can see why these rogue avatars can be an indomitable foe. Requiring an AI pilot your avatar dematerialises as its conciousness gets uploaded directly into the fighter.</text>
+					<choice>
+						<text>Continue...</text>
+						<event>
+							<loadEvent ignoreUnique="true">RVS_AI_TRADE_STORE</loadEvent>
+						</event>
+					</choice>
 				</event>
 			</choice>
 		</event>
-	</choice>-->
+	</choice>
 </event>
 
+<event name="RVS_AI_TRADE_STORE">
+	<!--<text>You try your best not to break any of the fabricators sculptures while you brwose its wares.</text>-->
+	<store>RVS_STORE_AI</store>
+</event>
 
 <!--
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -324,7 +396,7 @@
 	<text>Shortly after you arrive, an unknown ship jumps nearby. You attempt to hail the vessel but almost immediately the ship turns hostile and begins its attack!</text>
 	<text>You thought you might have spotted a cruiser hiding in the nebula. But before your ship can give chase, it disappears into the clouds and a smaller vessel appears behind you, guns blazing. You abandon the mystery and swivel around for combat.</text>
 	<text>The nebula here almost feels too different than those outside of this sector. Unfortunately, you don't have long to reflect on this thought as a vessel hidden within the clouds interrupts the silence and moves in to engage.</text>
-	<text>Shortly after your arrival, you receive a hail from an Engi vessel hidden somewhere in the nebula with an urgent message. "Warning: Let not one escape." Just as the hail ends abruptly, you witness a great flash inside the nebula. You order your weapons to be ready and move towards their last known coordinates, ready to meet their perpetuator.</text>
+	<text>Shortly after your arrival, you receive a hail from an Engi vessel hidden somewhere in the nebula with an urgent message. "Warning: Not let one escape." Just as the hail ends abruptly, you witness a great flash inside the nebula. You order your weapons to be ready and move towards their last known coordinates, ready to meet their perpetuator.</text>
 	<text>You detect the tell-tale signs of a Zoltan vessel hidden within the nebula as the clouds glow a faint green before you. "Renegade! You should not have come here. This sector is off limits and is under-" the transmission temporarily cuts to static before resuming "all hands, reactor breach detected! Prepare for emergency jump!" You are almost relieved at first to not recieve another lecture from some Zoltan would-be beaurocrat. But what scares you more was what ever sent them running. Even more so when it starts firing upon you!</text>
 	<text>A ship bearing a mysterious design and structure begins to scan your systems and computers for analysis. Whatever it is they found, they would prefer to see it scattered across the clouds of this nebula.</text>
 </textList>
