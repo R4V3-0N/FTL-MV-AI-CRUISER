@@ -224,9 +224,9 @@
         <crew>
             <rvs_ai_hologram room="5"/> <!--temporal-->
             <rvs_ai_hologram room="7"/> <!--shields-->
-            <rvs_ai_hologram room="15"/> <!--oxygen-->
-            <zoltan_martyr room="1"/>  <!--teleporter-->  
-            <rvs_ai_hologram room="1"/>
+            <zoltan_martyr room="15"/>   <!--oxygen-->
+            <rvs_ai_hologram room="1"/>  <!--teleporter-->  
+            <rvs_contempter room="1"/>
         </crew>
 	</mod-append:customShip>
 
@@ -614,6 +614,63 @@
                 </systemPowerScaling>
             </statBoost>
         </passiveStatBoosts>
+    </mod-append:race>
+
+    <mod-append:race name="rvs_contempter">
+        <maxHealth>120</maxHealth>
+        <crewSlots>1</crewSlots>
+		<damageMultiplier>1.3</damageMultiplier>
+		<rangedDamageMultiplier>0.77</rangedDamageMultiplier>   <!-- should be nearly identical to regular ranged damage-->
+        <noClone>false</noClone>
+        <deathSounds>
+            <deathSound>rvs_contempterDeath1</deathSound>
+            <deathSound>rvs_contempterDeath2</deathSound>
+            <deathSound>rvs_contempterDeath3</deathSound>
+        </deathSounds>
+        <shootingSounds>
+			<shootingSound>vanceShoot</shootingSound>   <!-- is this only for melee? -->
+		</shootingSounds>
+        <!--<passiveStatBoosts>
+        </passiveStatBoosts>-->
+        <animBase>mantis</animBase> <!--I think this is right? -->
+		<skills>
+			<weapons req="40"/>
+			<combat req="5"/>
+		</skills>
+        <powerEffect>
+			<cooldown>20</cooldown>
+			<jumpCooldown>reset</jumpCooldown>
+			<powerSounds>
+				<finishSound>mantisSplat1</finishSound>
+				<finishSound>mantisSplat2</finishSound>
+				<finishSound>mantisSplat3</finishSound>
+			</powerSounds>
+			<req>
+				<minHealth>20</minHealth>
+			</req>
+			<req type="enemy">
+				<minHealth>20</minHealth>
+				<enemyInRoom/>
+			</req>
+			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+			<buttonText>STIMULANTS</buttonText>
+			<tooltip>[CD:20s  DURATION:10s  -10HP]
+			Increase movement speed to 1.25x, 50% damage resistance, and doubles damage.</tooltip>
+			<cooldownColor r="170" g="223" b="255"/>
+			<selfHealth>-10</selfHealth>
+			<temporaryEffect>
+				<duration>10</duration>
+				<cooldownColor r="200" g="140" b="190"/>
+				<finishSounds>
+					<finishSound>mantisSplat1</finishSound>
+					<finishSound>mantisSplat2</finishSound>
+					<finishSound>mantisSplat3</finishSound>
+				</finishSounds>
+				<effectAnim>pheromones_f</effectAnim>
+				<moveSpeedMultiplier>1.25</moveSpeedMultiplier>
+				<damageMultiplier>2.5</damageMultiplier>
+			</temporaryEffect>
+		</powerEffect>
     </mod-append:race>
 </mod:findLike>
 

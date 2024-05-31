@@ -86,6 +86,8 @@
 
 <!-- New lists -->
 
+
+
 <!-- Blue Lists-->
 <blueprintList name="RVS_BLUELIST_EFFECTOR">
 	<name>RA_EFFECTOR_1</name>
@@ -95,9 +97,80 @@
 	<name>RA_EFFECTOR_ADAPTIVE</name>
 </blueprintList>
 
+<blueprintList name="BLUELIST_CREW_UC_FED_ELITE">	<!-- Identical to GB, since this is independent I just changed the blueprint name --> <!-- Just found out this exists so using this instead LIST_CREW_FEDERATION_ELITE_EASTER-->
+	<name>human_soldier</name>
+	<name>unique_tully</name>
+	<name>zoltan_peacekeeper</name>
+	<name>orchid_praetor</name>
+	<name>engi_defender</name>
+	<name>unique_turzil</name> <!-- R4: Despite being a fugitive, I feel he can act in an appropiate capacity for this event-->
+</blueprintList>
+
 <blueprintList name="RVS_BLUELIST_CREW_AI">
 	<name>rvs_ai_hologram</name>
 	<name>rvs_ai_hologram_cortana</name>
+</blueprintList>
+
+<blueprintList name="RVS_BLUELIST_CREW_COMBAT">
+	<name>human_soldier</name>
+	<name>human_mfk</name>
+	<name>human_legion</name>
+	<name>human_legion_pyro</name>
+	<name>human_angel</name>
+	<name>unique_tully</name>
+	<name>zoltan_peacekeeper</name>
+	<name>orchid_praetor</name>
+	<name>engi_defender</name>
+	<name>rock</name>
+	<name>rock_commando</name>
+	<name>rock_crusader</name>
+	<name>rock_paladin</name>
+	<name>rock_outcast</name>
+	<name>rock_elder</name>
+	<name>unique_ariadne</name>
+	<name>unique_tuco</name>
+	<name>unique_vortigon</name>
+	<name>unique_symbiote</name>
+	<name>mantis</name>
+	<name>mantis_suzerain</name>
+	<name>mantis_warlord</name>
+	<name>mantis_bishop</name>
+	<name>unique_kaz</name>
+	<name>unique_freddy</name>
+	<name>unique_freddy_sombrero</name>
+	<name>unique_freddy_jester</name>
+	<name>unique_freddy_fedora</name>
+	<name>unique_freddy_twohats</name>
+	<name>slug_knight</name>
+	<name>slug_ranger</name>
+	<name>unique_nights</name>
+	<name>unique_slocknog</name>
+	<name>unique_sylvan</name>
+	<name>unique_irwin</name>
+	<name>unique_eater</name>
+	<name>unique_anointed</name>
+	<name>phantom_alpha</name>
+	<name>phantom_goul_alpha</name>
+	<name>phantom_mare_alpha</name>
+	<name>phantom_wraith_alpha</name>
+	<name>unique_dessius</name>	
+	<name>gold</name>
+	<name>goldsoldier</name>
+	<name>golddefend</name>
+	<name>goldcrusader</name>
+	<name>goldsentinel</name>
+	<name>goldsuzerain</name>
+	<name>goldwarlord</name>
+	<name>goldsabo</name>
+	<name>goldwelder</name>
+	<name>goldpraetor</name>
+	<name>goldcultivator</name>
+	<name>goldtoxic</name>
+	<name>goldampere</name>
+	<name>goldroyal</name>
+	<name>goldqueen</name>
+	<name>orchid_praetor</name>
+	<name>rvs_contempter</name>
 </blueprintList>
 
 <!-- Gift Lists -->
@@ -440,7 +513,7 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<droneList drones="6" count="4" load="RVS_LIST_DRONES_HEAVY" />
 	<health amount="11" />
 	<maxPower amount="7" />
-	<crewCount amount="3" max="3" class="zoltan_osmian_enemy" />
+	<crewCount amount="1" max="3" class="zoltan_osmian_enemy" />
 	<!-- Hyperspace.xml.append, 4 ai's, 1 martyr -->
 	<!-- eventually Contempter? -->
 	<boardingAI>sabotage</boardingAI>

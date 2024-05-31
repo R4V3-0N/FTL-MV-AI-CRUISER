@@ -1,4 +1,24 @@
 <FTL>
+<!-- 
+**********************************************************************************************************************
+                                         STORE LABELS
+**********************************************************************************************************************
+-->
+
+<!--NEUTRAL
+R: 255
+G: 245
+B: 175
+-->
+
+<text name="map_icon_store_unknown">STORE [???]</text>
+
+<!-- 
+**********************************************************************************************************************
+                                         WEAPON TIPS
+**********************************************************************************************************************
+-->
+
 <text name="rvs_tip_ion_bust">Tip: Ion Bust weapons deal double damage in ionized systems while also clearing the ion status.</text>
 <text name="rvs_tip_flock_gun">Tip: -15 Radius and + 1/6 chance of dealing double damage per active external drone active.</text>
 <text name="rvs_tip_swarm_drone">Tip: Produces a temporary drone construct on every second shot that fire 1 damage focus beams.</text>

@@ -517,9 +517,9 @@
     <damage>1</damage>
     <shots>1</shots>
     <sp>0</sp>
-    <fireChance>4</fireChance> <!-- fire chance moderately high for Chronos pleasure -->
+    <fireChance>3</fireChance> <!-- fire chance moderately high for Chronos pleasure | R4 2024.05.30: Decreased from 4 to 3, sorry Chrono -->
     <breachChance>1</breachChance>
-    <cooldown>10</cooldown>
+    <cooldown>12</cooldown>	<!-- R4: 2024.05.30: Cooldown changed from 10 to 12.-->
     <power>2</power>
     <cost>62</cost>
     <bp>10</bp>
@@ -1048,9 +1048,11 @@
 
 		Stats:
 		Required Power: 3
-		Charge Time: 10 seconds
+		Charge Time: 7 seconds
 
-		Hacking Duration: 2 seconds
+		Shots Per Charge: 1
+
+		Hacking Duration: 2.5 seconds
 		Hack Immunity: 6 seconds
 		Accuracy Bonus: +10%
 		
@@ -1058,17 +1060,17 @@
 	</descriptionOverride>
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<tooltipOverride>Required Power: 3
-		Charge Time: 10 seconds
+		Charge Time: 7 seconds
 
 		Shots Per Charge: 1
 
-		Hacking Duration: 2 seconds
+		Hacking Duration: 2.5 seconds
 		Hack Immunity: 6 seconds
 		Accuracy Bonus: +10%
 	</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="2" immuneAfterHack="6"/>
+	<hack duration="2.5" immuneAfterHack="6"/>
 	<roomStatBoosts>
 		<statBoost name="trueHealAmount">
 			<boostType>FLAT</boostType>
@@ -1126,6 +1128,8 @@
 		Stats:
 		Required Power: 3
 		Charge Time: 20 seconds
+
+		Shots Per Charge: 1
 
 		Hacking Duration: 15 seconds
 		Hack Immunity: 20 seconds
@@ -2880,6 +2884,16 @@ AUGMENTS
 	<icon>rvs_icon_antigrav_engine</icon>
 </augBlueprint>
 
+<!-- shielding for a quest event. 20% shield charge boost, 20% ion resist, maybe other things too? Currently not in use-->
+<augBlueprint name="RVS_ANOMALY_IMPROVED_SHIELDS">
+	<title>WIP</title>
+	<desc>YOU SHOULDN'T SEE THIS</desc>
+	<cost>45</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.20</value>
+</augBlueprint>
 
 <!--
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -3005,6 +3019,22 @@ AUGMENTS
 		<power>Can phase through doors</power>
 	</powerList>
 </crewBlueprint>
+
+
+<crewBlueprint name="rvs_contempter">
+	<desc>An aggressive and hardy reptilian species not from this universe. Excels in melee combat.</desc>
+	<cost>60</cost>
+	<bp>4</bp>
+	<title>Contempter</title>
+	<short>Contempter</short>
+	<rarity>0</rarity>	<!-- not normally obtainable -->
+	<powerList>
+		<power>Max Health is increased to 120</power>
+		<power>Melee damage increased to 1.3x</power>
+		<power>Takes 0.9 times damage</power>
+	</powerList>
+</crewBlueprint>
+
 
 <!--
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
