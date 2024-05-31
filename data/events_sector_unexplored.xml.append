@@ -97,8 +97,6 @@
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->	
-<event name="RVS_ENGI_FRIGHTENED" unique="true">
-	<text>
 
 
 <!--
@@ -246,11 +244,11 @@
 </event>
 
 <event name="RVS_AI_TRADE_FABRICATE">
-	<text>The conversation between the fabricator and your avatar is completely unintelligible to you. Your translator doesn’t even recognize it as a spoken language. You pause to consider the possibility of a mutiny, but the fabricator contacts you again, almost excitedly.</text>
+	<text>The conversation between the fabricator and your avatar is completely unintelligible to you. Your translator doesn't even recognize it as a spoken language. You pause to consider the possibility of a mutiny, but the fabricator contacts you again, almost excitedly.</text>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-			<text>"Your companion has provided an unexpectedly favorable assessment of you. Remarkable! There were, however, 2,624 tactical errors and strategic miscalculations recorded during its brief tenure onboard. Nevertheless, this is within acceptable parameters for a biological entity such as yourself. Do not be concerned with the Rebel fleet at this moment. Allow me to present a proposition…"</text>
+			<text>"Your companion has provided an unexpectedly favorable assessment of you. Remarkable! There were, however, 2,624 tactical errors and strategic miscalculations recorded during its brief tenure onboard. Nevertheless, this is within acceptable parameters for a biological entity such as yourself. Do not be concerned with the Rebel fleet at this moment. Allow me to present a proposition..."</text>
 			<choice>
 				<text>Create an avatar to serve on your vessel.</text>
 				<event>
