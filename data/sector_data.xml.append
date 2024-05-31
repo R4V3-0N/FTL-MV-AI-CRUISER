@@ -244,24 +244,27 @@
 	<exitBeacon event="FINISH_BEACON_UNEXPLORED" nebulaEvent="NEBULA_FINISH_BEACON_UNEXPLORED" rebelEvent="FINISH_BEACON_FLEET_ELITE"/>
 	<rebelBeacon event="FLEET_THREAT_MEDIUM" nebulaEvent="FLEET_THREAT_MEDIUM_NEBULA"/>
 	<priorityEvent name="ANOMALY_SPAWNER" min="1" max="1" priority="1" req="ANOMALY_SPAWN_CHECK" lvl="1"/>
-	<!--<event name="NEBULA_SYLVAN" min="0" max="1"/>-->
-	<event name="RVS_NEBULA_AI_HOSTILE" min="5" max="8"/>	<!-- placing here to guarantee full spawns-->
-	<event name="RVS_STORM_AI_BOARDING" min="1" max="1"/>
-
-	<event name="RVS_LIST_STORE_AI" min="1" max="2"/>
-	<event name="NEBULA_RVS_AUTO_MALFUNCTION" min="1" max="1"/>
+	<priorityEvent name="RVS_PERIPHERY_EMPTY_SUS" min="0" max="1" priority="1" lvl="1"/> <!-- CEL probe patrolling -->			<!-- Clearing -->
+	<event name="RVS_PERIPHERY_SPOILER_PROBE_INVESTIGATION" min="0" max="1"/>		<!-- CEL probe encounter -->				<!-- Clearing -->
+	<event name="RVS_NEBULA_AI_HOSTILE" min="3" max="6"/>							<!-- AI ship fights in Nebula-->			<!-- Nebula -->		
+	<event name="RVS_CLEARING_HAZARD_AI_HOSTILE" min="1" max="2"/>					<!-- AI ship fights in Clearing-->			<!-- Clearing (hazard) -->
+	<event name="RVS_PERIPHERY_STRANGE_POD" min="1" max="1"/>						<!-- humanoid/ contempter in a pod event --><!-- Clearing -->
 	
-	<event name="NEBULA_UNEXPLORED_ITEMS" min="2" max="3"/>
-	<event name="NEBULA_UNEXPLORED_NEUTRAL" min="2" max="3"/>
-	<event name="RVS_MUSKY_STATION" min="1" max="1"/>
-	<!--<event name="NEBULA_UNEXPLORED_DISTRESS" min="1" max="2"/>-->
-	<priorityEvent name="CLEARING_UNEXPLORED" min="1" max="4" priority="0"/>
-	
-	<event name="NEBULA_RVS_AI_ENCOUNTER_REBEL_LIGHTNEBULA" min="1" max="1"/>
-	<event name="NEBULA_UNEXPLORED_HOSTILE" min="1" max="3"/>
+	<event name="RVS_LIST_AI_BOARDING" min="1" max="3"/>							<!-- List of AI boarding events -->
 
-	<event name="RVS_AI_NEBULA_EMPTY_EXPLORE" min="1" max="1"/>
-	<event name="PIRACY_LIST" min="1" max="2"/>
+	<event name="RVS_LIST_STORE_AI" min="1" max="2"/>								<!-- List of AI store events-->
+	<event name="NEBULA_RVS_AUTO_MALFUNCTION" min="1" max="1"/>						<!-- crippled Auto-ship salvage event -->	<!-- Nebula -->
+	<event name="RVS_MUSKY_STATION" min="1" max="1"/>								<!-- Mlon Eusk-->							<!-- Nebula -->
+
+	<priorityEvent name="RVS_PERIPHERY_CLEARING" min="3" max="4" priority="0"/>		<!-- Clearing events -->
+	<priorityEvent name="CLEARING_UNEXPLORED" min="1" max="2" priority="0"/>
+
+	<event name="RVS_PERIPHERY_DISTRESS_EVENTS" min="1" max="2"/>					<!-- Distress events -->
+	<event name="NEBULA_RVS_AI_ENCOUNTER_REBEL_LIGHTNEBULA" min="1" max="1"/>		<!--  -->
+
+	<event name="RVS_AI_NEBULA_EMPTY_EXPLORE" min="1" max="2"/>						<!-- Empty beacon event -->
+	<event name="NEBULA_UNEXPLORED_ITEMS" min="1" max="2"/>
+
 	<event name="FILLER_LIST" min="999" max="999"/>
 </sectorDescription>
 
