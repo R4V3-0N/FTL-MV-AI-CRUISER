@@ -1660,6 +1660,49 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="BA_MINES_TECH">
+	<type>LASER</type>
+	<flavorType>Tech Mines</flavorType>
+	<tip>ra_tip_mines_tech</tip>
+	<title>Baal Minelauncher</title>
+	<short>Baal</short>
+	<desc>Drops a cloaked tech-mine that homes in on the enemy ship and detonates in close proximity. Primarily damages hull.</desc>
+	<tooltip>Lays 1 mine; deals 3 damage to hull; pierces all shields; evades lvl 1 defense drones.</tooltip>
+	<damage>3</damage>
+	<sysDamage>1</sysDamage>
+	<fractionalDamage damage="0.5" sysDamage="-0.5" />
+	<persDamage>-2</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<speed>9</speed>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>14</cooldown>
+	<power>2</power>
+	<cost>30</cost>
+	<bp>6</bp>
+	<rarity>5</rarity>
+	<image>ba_mine_tech</image>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>mine_cloak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ba_minelauncher_tech</weaponArt> 
+</weaponBlueprint>
+
+
 <!--
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

@@ -86,9 +86,85 @@
 
 <!-- New lists -->
 
+<!--
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+			STORE LISTS
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<blueprintList name="RVS_SHOP_ITEM_WEAPONS_AI">
+	<name>BA_LASER_ARTILLERY_2</name>	<!-- Place holder until remade -->
+
+	<name>RVS_EMP_1</name>
+	<name>RVS_EMP_2</name>
+	<name>RVS_EMP_HEAVY_1</name>
+	<name>RA_BEAM_AUTO</name>
+	<name>RVS_BEAM_SHOTGUN_1</name>
+	<name>RVS_BEAM_SHOTGUN_2</name>
+	<name>RVS_BEAM_SHOTGUN_3</name>
+	<name>RVS_FOCUS_CORROSION_1</name>
+	<name>RVS_BEAM_ION_BUST_1</name>
+	<name>RVS_BEAM_ION_BUST_2</name>
+	<name>RA_EFFECTOR_1</name>
+	<name>RA_EFFECTOR_2</name>
+	<name>RA_EFFECTOR_HEAVY</name>
+	<name>RA_EFFECTOR_ADAPTIVE</name>
+	<name>RVS_LASER_BURST_SCATTER_1</name>
+	<name>RVS_LASER_BURST_SCATTER_2</name>
+	<name>RVS_SHOTGUN_SCATTER</name>
+
+	<name>RVS_LASER_AUTO_1</name>
+	<name>RVS_LASER_AUTO_2</name>
+</blueprintList>
 
 
-<!-- Blue Lists-->
+<blueprintList name="RVS_SHOP_ITEM_DRONES_AI">
+	<name>RVS_BEAM_DEFENSE_1</name>
+	<name>RVS_DRONE_DEFENSE_SCATTER</name>
+	<name>RA_DRONE_HEAVY_1</name>
+	<name>RA_DRONE_HEAVY_2</name>
+	<name>RVS_DRONE_SCATTER</name>
+
+	<name>RVS_BEAM_DEFENSE_1</name>
+	<name>RVS_DRONE_DEFENSE_SCATTER</name>
+	<name>RA_DRONE_HEAVY_1</name>
+	<name>RA_DRONE_HEAVY_2</name>
+	<name>RVS_DRONE_SCATTER</name>
+
+	<name>RVS_BEAM_DEFENSE_1</name>
+	<name>RVS_DRONE_DEFENSE_SCATTER</name>
+	<name>RA_DRONE_HEAVY_1</name>
+	<name>RA_DRONE_HEAVY_2</name>
+	<name>RVS_DRONE_SCATTER</name>
+
+	<name>RVS_BEAM_DEFENSE_1</name>
+	<name>RVS_DRONE_DEFENSE_SCATTER</name>
+	<name>RA_DRONE_HEAVY_1</name>
+	<name>RA_DRONE_HEAVY_2</name>
+	<name>RVS_DRONE_SCATTER</name>
+
+	<name>RVS_BEAM_DEFENSE_1</name>
+	<name>RVS_DRONE_DEFENSE_SCATTER</name>
+	<name>RA_DRONE_HEAVY_1</name>
+	<name>RA_DRONE_HEAVY_2</name>
+	<name>RVS_DRONE_SCATTER</name>
+
+	<name>RVS_AI_MICROFIGHTER_INTERCEPTOR</name>
+</blueprintList>
+
+<!--
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+			BLUE LISTS
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+-->
 <blueprintList name="RVS_BLUELIST_EFFECTOR">
 	<name>RA_EFFECTOR_1</name>
 	<name>RA_EFFECTOR_2</name>

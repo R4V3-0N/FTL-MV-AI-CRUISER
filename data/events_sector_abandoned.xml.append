@@ -1,6 +1,6 @@
 <ftl>
 <mod:findName type="eventList" name="HOSTILE_ABANDONED">
-	<mod-append:event load="RVS_NEBULA_GENERIC_ENCOUNTER" />
+	<mod-append:event load="RVS_GENERIC_ENCOUNTER_AI_REGULAR" />
 </mod:findName>
 	
 <!-- Effector Blue Events -->

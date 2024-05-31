@@ -632,7 +632,7 @@
 		</shootingSounds>
         <!--<passiveStatBoosts>
         </passiveStatBoosts>-->
-        <animBase>mantis</animBase> <!--I think this is right? -->
+        <animBase>human</animBase> <!--I think this is right? -->
 		<skills>
 			<weapons req="40"/>
 			<combat req="5"/>
@@ -972,14 +972,16 @@
             <item/>
             <item/>
             <item>
-                <!--<blueprint>RVS_SHOP_AI_ITEM_WEAPONS</blueprint>-->
+                <blueprint>RVS_SHOP_ITEM_WEAPONS_AI</blueprint>
             </item>
 			<chance>100</chance>
         </category>
 		<category type="DRONES">
             <item/>
             <item/>
-            <item/>
+            <item>
+                <blueprint>RVS_SHOP_ITEM_DRONES_AI</blueprint>
+            </item>
 			<chance>100</chance>
         </category>
 		<category type="AUGMENTS" group="0">
@@ -993,7 +995,9 @@
 			<customTitle>DECKHANDS</customTitle>
 		    <allowDuplicates/>
 			<item/>
-            <item/>
+            <item>
+                <blueprint>rvs_ai_hologram</blueprint>
+            </item>
             <item>
                 <blueprint>rvs_ai_hologram</blueprint>
             </item>

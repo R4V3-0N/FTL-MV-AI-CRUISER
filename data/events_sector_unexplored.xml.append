@@ -897,15 +897,15 @@
 	
 	<event name="RVS_PERIPHERY_STRANGE_POD">
 		<text>Your sensors detect a strange pod floating aimlessly in the nebula. It seems to be emitting a faint signal, though the details are unclear. What do you want to do?</text>
-		<choice req="sensors" lvl="2">
+		<choice req="sensors" lvl="2" hidden="true">
 			<text>(Upg. Sensors) Scan the pod.</text>
 			<event load="RVS_PERIPHERY_POD_SCAN"/>
 		</choice>
-		<choice>
-			<text>Take the pod onboard and pry it open.</text>
+		<choice hidden="true">
+			<text>Take the pod onboard and p1ry it open.</text>
 			<event load="RVS_PERIPHERY_POD_BLIND_OPEN"/>
 		</choice>
-		<choice>
+		<choice hidden="true">
 			<text>Leave it alone.</text>
 			<event>
 				<text>It isn't worth opening strange escape pods in the middle of this sector of all places. Not worth the risk you decide to do something else.</text>
@@ -928,11 +928,11 @@
 	
 	<event name="RVS_PERIPHERY_POD_LIFE_SIGNS">
 		<text>The scan reveals faint life signs inside the pod. It appears to contain a living organism of some sort. But you would need to bring it aboard to ascertain what is onboard.</text>
-		<choice>
+		<choice hidden="true">
 			<text>Take the pod onboard and open it.</text>
 			<event load="RVS_PERIPHERY_POD_LIFE_INSIDE"/>
 		</choice>
-		<choice>
+		<choice hidden="true">
 			<text>Leave it alone.</text>
 			<event>
 				<text>It isn't worth opening strange escape pods in the middle of this sector of all places. Not worth the risk you decide to do something else.</text>
@@ -949,11 +949,11 @@
 	</event>
 	<event name="RVS_PERIPHERY_POD_NO_LIFE_SIGNS">
 		<text>The scan indicates that there are no life signs inside the pod. It appears to be just an inanimate object.</text>
-		<choice>
+		<choice hidden="true">
 			<text>Take the pod onboard and open it.</text>
 			<event load="RVS_PERIPHERY_POD_NO_LIFE_INSIDE"/>
 		</choice>
-		<choice>
+		<choice hidden="true">
 			<text>Leave it alone.</text>
 			<event>
 				<text>It isn't worth opening strange escape pods in the middle of this sector of all places. Not worth the risk you decide to do something else.</text>
@@ -1000,7 +1000,7 @@
 			<text>(Adv. Medbay) Subdue with advanced medbay.</text>
 			<event load="RVS_PERIPHERY_CONTEMPTER_MEDBAY"/>
 		</choice>
-		<choice>
+		<choice hidden="true">
 			<text>Try to convince it to join your crew.</text>
 			<event load="RVS_PERIPHERY_CONTEMPTER_CONVINCE_LIST"/>
 		</choice>
@@ -1008,11 +1008,11 @@
 	
 	<event name="RVS_PERIPHERY_CONTEMPTER_COMBAT">
 		<text>Your crew steps forward to apprehend the strange alien. Impressed to see someone stand up to it and not cower like a "weakling" it sheaths the blade and displays its claws. Challenging your crew member for a dual. After a tense struggle, the Contempter concedes, acknowledging your crew's strength. Begrudgingly, they agree to join your crew.</text>
-		<crewMember amount="1" type="rvs_contempter"/>
+		<crewMember amount="1" class="rvs_contempter"/>
 	</event>
 	<event name="RVS_PERIPHERY_CONTEMPTER_MEDBAY">
 		<text>You use your advanced medbay to subdue the strange alien. The calming effects of the medical treatment cleanses them of their stims, after settling down and assessing their situation they agree to join your crew.</text>
-		<crewMember amount="1" type="rvs_contempter"/>
+		<crewMember amount="1" class="rvs_contempter"/>
 	</event>
 	
 	<eventList name="RVS_PERIPHERY_CONTEMPTER_CONVINCE_LIST">
@@ -1021,7 +1021,7 @@
 	</eventList>
 	<event name="RVS_PERIPHERY_CONTEMPTER_CONVINCE">
 		<text>After a heated exchange, you manage to convince the alien that joining your crew is in their best interest. They reluctantly agree, still wary but willing to cooperate.</text>
-		<crewMember amount="1" type="rvs_contempter"/>
+		<crewMember amount="1" class="rvs_contempter"/>
 	</event>
 	<event name="RVS_PERIPHERY_CONTEMPTER_ATTACK">
 		<text>You attempt to talk alien down but instead it launches into a frenzied attack, forcing your crew to defend themselves! The life pod could be salvaged after the fight.</text>
@@ -1046,7 +1046,12 @@
 			<text>Continue...</text>
 			<event>
 				<text>Skeptical of the intentions of sentient structures trying to lure you closer, you remain vigilant. However, there doesn't appear to be any indication of deception, so you proceed to browse its exotic wares.</text>
-				<store>RVS_STORE_AI</store>
+				<choice hidden="true">
+					<text>Shop.</text>
+					<event>
+						<store>RVS_STORE_AI</store>
+					</event>
+				</choice>
 			</event>
 		</choice>
 	</event>
@@ -1118,7 +1123,6 @@
 	</event>
 	
 	<event name="RVS_AI_TRADE_STORE">
-		<!--<text>You try your best not to break any of the fabricators sculptures while you brwose its wares.</text>-->
 		<store>RVS_STORE_AI</store>
 	</event>
 	
@@ -1524,11 +1528,9 @@
 		<event load="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR"/>
 	</eventList>
 	
-	<!-- xmlvalidation.com says this doesn't work and I can't be bothered to find out why after bug fixing for the past 2 hours.
 	<mod:findName type="eventList" name="NEBULA_UNEXPLORED_HOSTILE">
 		<mod-append:event load="RVS_NEBULA_GENERIC_ENCOUNTER"/>
 	</mod:findName>
-	-->
 	
 	<event name="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR">
 		<text load="RVS_TEXT_GENERIC_ENCOUNTER_AI_NEBULA"/>
