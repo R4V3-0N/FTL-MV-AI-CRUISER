@@ -14,7 +14,7 @@
 	<destroyed load="DEFEAT_MULTIVERSE_TRAVELER" />
 	<deadCrew load="DEFEAT_MULTIVERSE_TRAVELER" />
 </ship>
-<event name="MV_TRAVELER_AI_INTERCEPTOR">
+<event name="MV_TRAVELER_AI_INTERCEPTOR" unused="true">
 	<text>Your ship is bombarded with transmissions from beyond the portal's horizon, too rapid and dense to decypher in live time. This is only compounded as the data flow accelerates in advance of the arival of a ship unlike any you have ever seen. It crawls to a stop as its transmissions end, as though waiting for you to respond. 
 
 You don't have time to do so, as the ship engages in a hard burn with its weapons powering up mere moments later! You do not know if you offended them or if their intent was hostile from the outset, but regardless, you power weapons and prepare to respond in kind.</text>
@@ -30,7 +30,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 	<destroyed load="DEFEAT_MULTIVERSE_TRAVELER" />
 	<deadCrew load="DEFEAT_MULTIVERSE_TRAVELER" />
 </ship>
-<event name="MV_TRAVELER_AI_ASSAULT">
+<event name="MV_TRAVELER_AI_ASSAULT" unused="true">
 	<text>A peculiarly designed vessel emerges from the portal, its architecture unlike anything you've seen before. The vessel powers up its weapons as soon as it materializes in this universe with only a single text transmission: "TARGET_AQUIRED. PURGING_INFIDELS." Apparently there will be no negotiations.</text>
 	<ship load="SHIP_RVSR_AI_ASSAULT" hostile="true"/>
 	<choice hidden="true">
@@ -97,7 +97,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 		<event load="MV_TRAVELER_BOON"/>
 	</choice>
 </event>
-<event name="RVS_RENEGADE_BOSS_AI_C_CHALLENGE">
+<event name="RVS_RENEGADE_BOSS_AI_C_CHALLENGE" unused="true">
 	<beaconType id="map_icon_quest" global="true">
 		<color r="25" g="205" b="150" a="1.0"/>
 		<unvisitedTooltip>This is the location of abnormal energy signatures. [Rogue AI C]</unvisitedTooltip>
@@ -130,7 +130,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 		<event load="MV_TRAVELER_BOON"/>
 	</choice>
 </event>
-<event name="RVS_RENEGADE_BOSS_AI_C_EXTREME">
+<event name="RVS_RENEGADE_BOSS_AI_C_EXTREME" unused="true">
 	<text>From out of the tunnel comes a massive cruiser vessel, of an unknown design! Known across Federation mercenary boards as a rogue command-cruiser, it serves as the nucleus for an assimilating drone swarm that threatens all in its path.</text>
 	<ship load="SHIP_MTBOSS_AI_C_EXTREME" hostile="false"/> 
 	<choice hidden="true" max_group="0">

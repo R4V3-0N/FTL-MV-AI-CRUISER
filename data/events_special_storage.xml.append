@@ -46,6 +46,9 @@
         <text>Create a hologram.</text>
         <event load="RVS_STORAGE_CHECK_HOLO_MAKER"/>
     </mod-append:choice>
+  
+    <!-- R4 2024.05.20:  As of 5.4 I do not think this is necessary anymore and thus commented out.
+
     <mod:findWithChildLike type="choice" child-type="text" panic="true">
         <mod:selector>Do nothing.</mod:selector>
         <mod:removeTag />
@@ -54,6 +57,7 @@
 		<text>Do nothing.</text>
 		<event/>
 	</mod-append:choice>
+    -->
 </mod:findName>
 
 <event name="RVS_STORAGE_CHECK_HOLO_REVIVE">
@@ -616,14 +620,16 @@
 
 <!-- Combat check -->
 <mod:findName type="event" name="COMBAT_CHECK_REAL">
-    <mod-append:choice req="COMBAT_NEBULA_CLEAR_STORM" blue="false">
+    <mod-append:choice req="COMBAT_NEBULA_CLEAR_STORM" blue="false" max_group="243">        <!-- R4 2024.05.20: Gonna randomly hope max group will make it so it goes to the top? -->
         <text>(Conductive Hull Plating) Neutralize the ion storm's effect on your reactor.</text>
         <event load="COMBAT_CHECK_NEBULA_CLEAR_STORM"/>
     </mod-append:choice>
-    <mod-append:choice req="COMBAT_NEBULA_MAKE_STORM" blue="false">
+    <mod-append:choice req="COMBAT_NEBULA_MAKE_STORM" blue="false" max_group="242">         <!-- R4 2024.05.20: Gonna randomly hope max group will make it so it goes to the top? -->
         <text>(Conductive Hull Plating) Create an ion storm.</text>
         <event load="COMBAT_CHECK_NEBULA_MAKE_STORM"/>
     </mod-append:choice>
+    
+    <!-- Temporarily removing since it causes issues with translations.
     <mod:findWithChildLike type="choice" child-type="text" panic="true">
         <mod:selector>Do some last minute check-ups.</mod:selector>
         <mod:removeTag />
@@ -641,7 +647,7 @@
         <event>
             <status type="clear" target="enemy" system="teleporter" amount="100"/>
         </event>
-    </mod-append:choice>
+    </mod-append:choice>-->
 </mod:findName>
 
 <event name="COMBAT_CHECK_NEBULA_CLEAR_STORM">
