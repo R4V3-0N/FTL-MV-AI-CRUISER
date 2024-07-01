@@ -68,6 +68,7 @@
 <!-- Rebalanced Arsenal / CE inspired weapon Animations-->
 <animSheet name="ra_beam_auto" w="175" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_strip7.png</animSheet>
 <animSheet name="rvs_beam_pernach" w="300" h="39" fw="30" fh="39">weapons_rebalanced_arsenal/rvs_beam_pernach_strip10.png</animSheet>
+<animSheet name="rvs_beam_adaptive_1" w="350" h="36" fw="35" fh="36">weapons_rebalanced_arsenal/rvs_beam_adaptive_1_strip10.png</animSheet>
 <animSheet name="ra_effector_1" w="105" h="54" fw="35" fh="54">weapons_rebalanced_arsenal/ra_effector_1_strip3.png</animSheet>
 <animSheet name="ra_effector_2" w="123" h="62" fw="41" fh="62">weapons_rebalanced_arsenal/ra_effector_2_strip3.png</animSheet>
 <animSheet name="ra_effector_heavy" w="138" h="72" fw="46" fh="72">weapons_rebalanced_arsenal/ra_effector_heavy_strip3.png</animSheet>
@@ -80,6 +81,7 @@
 <animSheet name="rvs_shotgun_scatter" w="240" h="55" fw="30" fh="55">weapons_rebalanced_arsenal/rvs_shotgun_scatter_strip8.png</animSheet>
 <animSheet name="rvs_laser_auto_1" w="276" h="58" fw="23" fh="58">weapons_rebalanced_arsenal/rvs_laser_auto_1_strip12.png</animSheet>
 <animSheet name="rvs_laser_auto_2" w="230" h="59" fw="23" fh="59">weapons_rebalanced_arsenal/rvs_laser_auto_2_strip10.png</animSheet>
+<animSheet name="rvs_minelauncher_tech_1" w="288" h="61" fw="48" fh="61">weapons_rebalanced_arsenal/rvs_minelauncher_tech_1_strip6.png</animSheet>
 
 <weaponAnim name="ra_beam_auto">
 	<sheet>ra_beam_auto</sheet>
@@ -106,6 +108,23 @@
 	<firePoint  x="16" y="11"/>
 	<mountPoint x="5" y="22"/>
 	<chargeImage>weapons_rebalanced_arsenal/rvs_beam_pernach_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="rvs_beam_adaptive_1_charge" w="105" h="36" fw="35" fh="36">weapons_rebalanced_arsenal/rvs_beam_adaptive_1_chargeglow.png</animSheet>	<!-- R4 2024.06.24: Yeah, IDK why this is offset diagonally by one ,so I just changed the sprite instead of the parametres here. Good enough I suppose-->
+<anim name="rvs_beam_adaptive_1_charge">
+	<sheet>rvs_beam_adaptive_1_charge</sheet>
+	<desc length="3" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+<weaponAnim name="rvs_beam_adaptive_1">
+	<sheet>rvs_beam_adaptive_1</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="21" y="14"/>
+	<mountPoint x="9" y="28"/>
+	<chargeImage>weapons_rebalanced_arsenal/rvs_beam_adaptive_1_glow.png</chargeImage>
+	<boost>rvs_beam_adaptive_1_charge</boost>
 </weaponAnim>
 
 <weaponAnim name="ra_effector_1">
@@ -250,6 +269,16 @@
 	<time>1.0</time>
 </anim>
 
+<weaponAnim name="rvs_minelauncher_tech_1">
+	<sheet>rvs_minelauncher_tech_1</sheet>
+	<desc length="6" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="21" y="34iser"/>
+	<mountPoint x="6" y="46"/>
+	<chargeImage>weapons_rebalanced_arsenal/rvs_minelauncher_tech_1_glow.png</chargeImage>
+</weaponAnim>
+
 <!-- Hyperspace Anthology inspired weapons-->
 <animSheet name="rvs_emp_1" w="324" h="95" fw="27" fh="95">weapons_hyperspace/rvs_emp_1_strip12.png</animSheet>
 <animSheet name="rvs_emp_2" w="372" h="106" fw="31" fh="106">weapons_hyperspace/rvs_emp_2_strip12.png</animSheet>
@@ -366,6 +395,7 @@
 <animSheet name="ra_laser_burst_scatter_shot" w="400" h="80" fw="50" fh="80">projectiles/ra_laser_burst_scatter_shot_strip8.png</animSheet>
 <animSheet name="ra_shotgun_scatter_shot" w="160" h="16" fw="40" fh="16">projectiles/ra_shotgun_scatter_shot_strip4.png</animSheet>
 <animSheet name="ra_plasma_shot" w="200" h="40" fw="50" fh="40">projectiles/ra_plasma_shot_strip4.png</animSheet>
+<animSheet name="ra_mine_tech" w="30" h="30" fw="30" fh="30">projectiles/ra_mine_tech_strip1.png</animSheet>
 
 <anim name="ra_laser_light1">
 	<sheet>ra_laser_light1</sheet>
@@ -443,6 +473,12 @@
 	<sheet>ra_plasma_shot</sheet>
 	<desc length="4" x="0" y="0"/>
 	<time>0.3</time>
+</anim>
+
+<anim name="ra_mine_tech">
+	<sheet>ra_mine_tech</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.00</time>
 </anim>
 
 

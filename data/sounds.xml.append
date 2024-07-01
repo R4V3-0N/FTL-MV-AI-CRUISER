@@ -25,6 +25,8 @@
 <rvs_hit_shield_scatter_2 volume="10">weapons/rvs_hit_shield_scatter_2.ogg</rvs_hit_shield_scatter_2>
 <rvs_hit_shield_scatter_3 volume="10">weapons/rvs_hit_shield_scatter_3.ogg</rvs_hit_shield_scatter_3>
 
+<ra_mine_cloak volume="8">weapons/ra_mine_cloak.ogg</mine_cloak>
+
 <!-- Cut FTL SFX reintroduced -->
 <rvs_heavyLaserScatter1 volume="10">weapons/rvs_laser_heavy_2.ogg</rvs_heavyLaserScatter1>
 <rvs_heavyLaserScatter2 volume="10">weapons/rvs_laser_heavy_2b.ogg</rvs_heavyLaserScatter2>

@@ -281,6 +281,10 @@
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="0"/>
 		
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="0"/>
+        <mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_3" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="0"/>
@@ -330,7 +334,10 @@
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="0"/>
 		
-        <mod-append:blueprint name="RA_BEAM_AUTO" rarity="0"/>
+        <mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_3" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="0"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="0"/>
@@ -388,6 +395,10 @@
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
 		
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="3"/>	
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_3" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="4"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
@@ -430,6 +441,10 @@
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
 		
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="3"/>	
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_3" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="4"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
@@ -471,6 +486,10 @@
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
 		
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="3"/>	
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_3" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
@@ -510,6 +529,10 @@
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="3"/>
 	
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="3"/>	
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_3" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
@@ -546,7 +569,11 @@
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="3"/>
  
-		<mod-append:blueprint name="RA_BEAM_AUTO" rarity="2"/>
+        <mod-append:blueprint name="RA_BEAM_AUTO" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="3"/>	
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_3" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
@@ -580,7 +607,11 @@
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="2"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="2"/>
 		
-        <mod-append:blueprint name="RA_BEAM_AUTO" rarity="2"/>
+		<mod-append:blueprint name="RA_BEAM_AUTO" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="2"/>	
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="2"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_3" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
@@ -620,7 +651,11 @@
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
 	
-        <mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="3"/>	
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_3" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
@@ -659,7 +694,11 @@
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
 	
-        <mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RA_BEAM_AUTO" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="3"/>	
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_3" rarity="0"/>	<!-- PLACEHOLDER RARITY LISTING-->
 		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="2"/>
 		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
 		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
@@ -692,4 +731,112 @@
         <mod-append:blueprint name="rvs_ai_hologram" rarity="4"/>
 	</mod:findLike>
 </mod:findName>
+
+<!-- PIRATES will generally just have these things smuggled about  -->
+<mod:findName type="sectorDescription" name="SECTOR_PIRATE" panic="true">
+    <mod:findLike type="rarityList">
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="3"/>
+		
+        <mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_3" rarity="0"/>
+		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
+		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
+		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="3"/>
+		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="3"/>
+		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_1" rarity="3"/>	
+		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_SHOTGUN_SCATTER" rarity="3"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_PLASMA_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_PLASMA_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_PLASMA_3" rarity="3"/>
+
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="3"/>
+		<mod-append:blueprint name="RVS_FOCUS_CORROSION_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_EMP_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_EMP_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="3"/>
+		
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_INTERCEPTOR" rarity="0"/>
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="0"/>
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SWARM" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_3" rarity="3"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="3"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_DRONE_PLASMA_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_DRONE_PLASMA_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_DRONE_SCATTER" rarity="3"/>
+		<mod-append:blueprint name="RVS_DRONE_DEFENSE_SCATTER" rarity="3"/>
+		
+        <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="4"/>
+		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="4"/>
+		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="4"/>
+		<mod-append:blueprint name="RVS_AI_SWARM" rarity="4"/>
+		
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="5"/>
+    </mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_PIRATE_UNIQUE" panic="true">
+    <mod:findLike type="rarityList">
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="3"/>
+		
+        <mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_3" rarity="0"/>
+		<mod-append:blueprint name="RA_EFFECTOR_1" rarity="3"/>
+		<mod-append:blueprint name="RA_EFFECTOR_2" rarity="3"/>
+		<mod-append:blueprint name="RA_EFFECTOR_HEAVY" rarity="2"/>
+		<mod-append:blueprint name="RA_EFFECTOR_ADAPTIVE" rarity="2"/>
+		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_1" rarity="3"/>	
+		<mod-append:blueprint name="RVS_LASER_BURST_SCATTER_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_SHOTGUN_SCATTER" rarity="3"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_LASER_AUTO_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_PLASMA_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_PLASMA_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_PLASMA_3" rarity="3"/>
+
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="3"/>
+		<mod-append:blueprint name="RVS_FOCUS_CORROSION_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_EMP_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_EMP_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="3"/>
+		
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_INTERCEPTOR" rarity="5"/>
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="0"/>
+		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SWARM" rarity="0"/>
+		<mod-append:blueprint name="RVS_BEAM_DEFENSE_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_COMBAT_MISSILE_3" rarity="3"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_1" rarity="3"/>
+		<mod-append:blueprint name="RA_DRONE_HEAVY_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_DRONE_PLASMA_1" rarity="3"/>
+		<mod-append:blueprint name="RVS_DRONE_PLASMA_2" rarity="3"/>
+		<mod-append:blueprint name="RVS_DRONE_SCATTER" rarity="3"/>
+		<mod-append:blueprint name="RVS_DRONE_DEFENSE_SCATTER" rarity="3"/>
+		
+        <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="4"/>
+		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="4"/>
+		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="4"/>
+		<mod-append:blueprint name="RVS_AI_SWARM" rarity="4"/>
+		
+        <mod-append:blueprint name="rvs_ai_hologram" rarity="4"/>
+    </mod:findLike>
+</mod:findName>
+
 </FTL>

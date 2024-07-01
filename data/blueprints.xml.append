@@ -63,6 +63,77 @@
 	<iconImage>beamH</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="RVS_MAGNIFIER_ARTILLERY">
+	<type>LASER</type>
+	<title>Artllery Magnifier Laser</title>
+	<short>Artillery Mag.</short>
+	<tip>tip_magnifier</tip>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<descriptionOverride>Magnifiers use special technology to enhance their power with each charge, rather than gaining additional projectiles. Each charge increases shield pierce and breach chance. Charges become progressively faster.
+
+		Stats:
+		Required Power: 2
+		Charge Time: 14 seconds
+
+		Max Charges: 3
+		Shield Piercing: 0/1/2
+		Bonus Charging Speed: x1.5 per charge
+		
+		Base Hull Damage: 4
+		Total System Damage: 4
+		Total Crew Damage: 60
+		
+		Breach Chance: 30/50/100%
+
+		Default Price: 80~   -   Selling Price: 40~
+	</descriptionOverride>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 14 seconds
+
+		Max Charges: 3
+		Shield Piercing: 0/1/2
+		Bonus Charging Speed: x1.5 per charge
+
+		Base Hull Damage: 4
+		Total System Damage: 4
+		Total Crew Damage: 60
+		
+		Breach Chance: 60/70/80/90%</tooltipOverride>
+	<tooltip>Artillery Laser; 4 damage, 1 shot. 14 second cooldown.</tooltip>
+	<damage>2</damage>
+	<chargeLevels>3</chargeLevels>
+	<shots>1</shots>
+	<speed>75</speed>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>14</cooldown>
+	<power>2</power>
+	<cost>80</cost>
+	<bp>10</bp>
+	<rarity>0</rarity>
+	<image>ba_laser_artillery_shot</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_magnifier_artillery_laser</weaponArt>
+	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="RVS_PROJECTOR_AVATAR">
 	<type>BOMB</type>
 	<tip>rvs_tip_effector</tip>
@@ -641,8 +712,11 @@
 	<desc>This simple scatter laser fires tight spread of projectiles to bring down shields for other weapons.</desc>
 	<tooltip>Fires 2 shot, 1 damage each; 33% chance to damage systems and crew.</tooltip>
 	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<!-- Changing it over to no versions
 	<sysDamage>-1</sysDamage>
-	<persDamage>-1</persDamage>
+	<persDamage>-1</persDamage>-->
 	<shots>2</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
@@ -695,8 +769,11 @@
 	<desc>Powerful burst scatter laser that fires a massive volley of laser pellets.</desc>
 	<tooltip>Fires 4 shot, 1 damage each; 33% chance to damage systems and crew.</tooltip>
 	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<!-- Changing it over to no versions
 	<sysDamage>-1</sysDamage>
-	<persDamage>-1</persDamage>
+	<persDamage>-1</persDamage>-->
 	<shots>4</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
@@ -752,8 +829,11 @@
 	<tooltip>Fires scatter laser projectiles across a random area doing up to 5 damage.</tooltip>
 	<radius>80</radius>
 	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<!-- Changing it over to no versions
 	<sysDamage>-1</sysDamage>
-	<persDamage>-1</persDamage>
+	<persDamage>-1</persDamage>-->
 	<shots>1</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
@@ -932,16 +1012,16 @@
 	<desc>Fast recharging focus-beam that can only hit one room.</desc>
 	<tooltip>Focused beam weapon, deals 2 damage to one room with low breach chance.</tooltip>
 	<damage>2</damage>
-	<hullBust>1</hullBust>	<!-- Added hull bust to make it compete with Dirk and Cinqueda -->
+	<!--<hullBust>1</hullBust> thought about giving it hullBust to compete with Cinq/Dirk -->
 	<sp>0</sp>
 	<fireChance>0</fireChance>
-	<breachChance>3</breachChance>	<!-- was 2, now 3-->
+	<breachChance>4</breachChance>	<!-- was 2, now 4-->
 	<speed>1</speed>
 	<cooldown>12</cooldown>
-	<power>2</power>
+	<power>1</power>	<!-- R4 2024.06.17: dropped from 2 to 1, not sure how to make this stand out compared to a Dirk... 2 power with low cooldown doesn't seem like the answer and neither does giving it hullbust. I want it to be a consistent series of pinpoints from CE that vaguely differ stat wise... all I am thinking about is giving it shield piercing or removing some-->
 	<cost>50</cost>
 	<bp>12</bp>
-	<rarity>3</rarity>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
 	<image>ra_beam_contact_pierce</image>
 	<length>1</length>
 	<launchSounds>
@@ -950,6 +1030,38 @@
 		<sound>ra_focusbeam3</sound>
 	</launchSounds>
 	<weaponArt>rvs_beam_pernach</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_BEAM_ADAPTIVE_1">
+	<type>BEAM</type>
+	<tip>tip_chain_beam</tip>
+	<title>Adaptive Focus Beam Mark I</title>
+	<short>Adaptive I</short>
+	<tooltip>Focused beam weapon; deals 1 damage to one room; damage increases the more it fires.</tooltip>
+	<desc>A foriegn  weapon system that adjusts it's beam pattern to enemy shields and gains 0.25 damage each time it fires up to a maximum of 2.</desc>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>2</speed>		<!-- R4 2024.06.18: Increased speed to 2 since it's not a pinpoint anymore -->
+	<cooldown>7</cooldown>	<!-- R4 2024.06.18: In CE was 9, now 7 to compete with the Dirk (10). Takes 21 seconds to go from 1 to 2 damage--> <!-- May increase cooldown to 8 -->
+	<power>1</power>
+	<cost>50</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
+	<length>30</length>		<!-- R4 2024.06.18: In CE was 1, testing concept with making it 30 -->
+	<image>ra_beam_contact_pierce</image>
+	<boost>					<!-- R4 2024.06.17: tempted to make it 0.35 with a count of 3 instead of 0.25 for 4 -->
+		<type>damage</type>
+		<amount>0.35</amount>
+		<count>3</count>
+	</boost>
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+	<weaponArt>rvs_beam_adaptive_1</weaponArt> 
 </weaponBlueprint>
 
 <weaponBlueprint name="RA_EFFECTOR_1">
@@ -1660,33 +1772,46 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="BA_MINES_TECH">
+<!-- 
+
+	This weapon is very much work in progress and acting as a sneak peak to what Mines can offer the player from the 'CE Cluster'. Unfortunately all of them are very much in concept stages
+	One idea I had is where you deploy several mines that will hover around your or the enemy ship before converging to strike once enough have been gathered around. 
+	This might potentially occur on a trigger, such as enemies firing, or enemies evaded a projectile. Perhaps I make it so that they fire multiple shots with one that hits directly and another orbits.
+	Alternatively, have it so that mines being present in space act as an evasion debuff until it hits the apposing ship where it'll hit or miss.
+	Or its accuracy is inverse to the enemy evasion.
+
+	Lots of ideas of which many I am unsure about. But I do want to do something to help revolutionise the concept of mine launchers.
+
+	The Bael is a cloaked variation, for now it'll have stealth weapons, avoid missile only DD's. Might think about doing more things to it.
+-->
+<weaponBlueprint name="RVS_MINES_TECH_1">
 	<type>LASER</type>
 	<flavorType>Tech Mines</flavorType>
 	<tip>ra_tip_mines_tech</tip>
-	<title>Baal Minelauncher</title>
-	<short>Baal</short>
+	<title>'Bael' Tech Minelauncher</title>
+	<short>'Bael'</short>
 	<desc>Drops a cloaked tech-mine that homes in on the enemy ship and detonates in close proximity. Primarily damages hull.</desc>
 	<tooltip>Lays 1 mine; deals 3 damage to hull; pierces all shields; evades lvl 1 defense drones.</tooltip>
-	<damage>3</damage>
-	<sysDamage>1</sysDamage>
-	<fractionalDamage damage="0.5" sysDamage="-0.5" />
-	<persDamage>-2</persDamage>
+	<damage>4</damage>	<!-- Increased from 3 to 4 compared to CE -->
+	<!--<fractionalDamage damage="0.5" sysDamage="-0.5" />		considered fractional damage from ARC's library, pending concept -->
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<accuracyMod>10</accuracyMod>
 	<missiles>1</missiles>
 	<shots>1</shots>
 	<sp>5</sp>
 	<speed>9</speed>
 	<fireChance>0</fireChance>
-	<breachChance>0</breachChance>
+	<breachChance>3</breachChance>
 	<cooldown>14</cooldown>
 	<power>2</power>
 	<cost>30</cost>
 	<bp>6</bp>
-	<rarity>5</rarity>
-	<image>ba_mine_tech</image>
+	<rarity>0</rarity>
+	<image>ra_mine_tech</image>
 	<explosion>explosion_random</explosion>
 	<launchSounds>
-		<sound>mine_cloak</sound>
+		<sound>ra_mine_cloak</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -1699,7 +1824,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>ba_minelauncher_tech</weaponArt> 
+	<weaponArt>rvs_minelauncher_tech_1</weaponArt> 
 </weaponBlueprint>
 
 
@@ -3339,7 +3464,7 @@ AUGMENTS
 			</slot>
 		</doors>
 		<drones max="8" power="1" room="6" start="false" img="room_drones_3" />
-		<engines max="8" power="1" room="11" start="true" img="room_engines">
+		<engines max="8" power="2" room="11" start="true" img="room_engines">	<!-- R4 2024.06.09: Was 1, now is 2-->
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
@@ -3388,7 +3513,7 @@ AUGMENTS
 	</weaponList>
 	<droneList drones="5" count="2" />
 	<health amount="30" />
-	<maxPower amount="7" />
+	<maxPower amount="8" />	<!-- R4 2024.06.09: Was 8, now is 9-->
 	<!-- Crew in hyperspace.xml.append
 	<crewCount amount="2" class="human" />
 	<crewCount amount="1" class="human_engineer" />
@@ -3401,7 +3526,7 @@ AUGMENTS
 <shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT_2" layout="rvsp_rebel_alt_cruiser_2" img="rvsp_rebel_alt_cruiser_2">
 	<class>Rebel Cruiser</class>
 	<name>The Nameless One</name>
-	<desc>It isn't uncommon to see cruisers refitted into freighters across the Multiverse due to their potential for large carrying capacity and the dangers of carrying cargo in the Multiverse.</desc>
+	<desc>It isn't uncommon to see cruisers refitted into freighters across the Multiverse due to their potential for large carrying capacity. This particular example used by a famous smuggler to lay low in a universe far far away.</desc>
 	<systemList>
 		<artillery power="1" max="4" room="8" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_7" />
 		<battery power="1" max="2" room="10" start="false" img="room_battery_2" />
@@ -3427,7 +3552,7 @@ AUGMENTS
 		<hacking power="1" room="16" start="false" img="room_hacking_6" />
 		<medbay power="1" room="11" start="true" img="room_medbay_5">
 			<slot>
-				<number>3</number>
+				<number>-2</number>
 			</slot>
 		</medbay>
 		<mind power="1" room="2" start="false" img="room_mind_10" />
@@ -3469,8 +3594,10 @@ AUGMENTS
 	<droneList drones="5" count="2" />
 	<health amount="30" />
 	<maxPower amount="10" />
-	<crewCount amount="4" class="human_humanoid" />	<!-- Replace with custom Humanoids -->
+	<crewCount amount="2" class="human_humanoid" />	<!-- Replace with custom Humanoids -->
+	<crewCount amount="2" class="human" />			<!-- 2024.06.09: Replace with custom Humanoids -->
 	<aug name="NEBULA_GASSES" />
+	<aug name="NEBULA_GASSES" />					<!-- R4 2024.06.09: Added second gasses -->
 	<shieldImage>rvsp_rebel_alt_cruiser</shieldImage>
 	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
 </shipBlueprint>
@@ -3478,7 +3605,7 @@ AUGMENTS
 <shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT_3" layout="rvsp_rebel_alt_cruiser_3" img="rvsp_rebel_alt_cruiser_3">
 	<class>Rebel Cruiser</class>
 	<name>The Nameless One</name>
-	<desc>A high advanced electronic warfare platform which allows it to dictate the outcome of engagement.</desc>
+	<desc>A high advanced electronic warfare platform that dictates the outcomes of engagements with its superior technology.</desc>
 	<systemList>
 		<artillery power="1" max="4" room="2" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_6" />
 		<battery power="1" max="2" room="3" start="false" img="room_battery_14" />
@@ -3539,9 +3666,8 @@ AUGMENTS
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="5" count="4">
-		<weapon name="RA_EFFECTOR_2" />		<!-- Replace with Adaptive Effector? -->
-		<weapon name="MISSILES_CLOAK" />	<!-- Replace with Baal -->
-		<weapon name="RA_BEAM_AUTO" />
+		<weapon name="RVS_MINES_TECH_1" />
+		<weapon name="RVS_BEAM_ADAPTIVE_1" />
 	</weaponList>
 	<droneList drones="5" count="2" />
 	<health amount="30" />
@@ -3549,9 +3675,8 @@ AUGMENTS
 	<crewCount amount="1" class="human_humanoid" />	<!-- Replace with custom Humanoids -->
 	<crewCount amount="1" class="human_engineer" />
 	<crewCount amount="1" class="human_soldier" />
-	<aug name="HACKING_STUN" />
+	<aug name="HACKING_STUN" />						<!-- Replace with the funny beam reflective augment -->
 	<shieldImage>rvsp_rebel_alt_cruiser</shieldImage>
-	<cloakImage>rvsp_rebel_alt_cruiser_2</cloakImage>
 	<floorImage>rvsp_rebel_alt_cruiser</floorImage>
 	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
 </shipBlueprint>
