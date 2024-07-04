@@ -1153,7 +1153,13 @@ do
         "Hyperspace Admiral",
         "FTL Throne"
     }
+    local justStartedGame = false
+    script.on_init(function(newGame) justStartedGame = not newGame end)
     script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
+        if justStartedGame then
+            justStartedGame = not Hyperspace.App.world.bStartedGame
+            return
+        end
         if not Hyperspace.App.world.bStartedGame and string_starts(ship.myBlueprint.blueprintName, "PLAYER_SHIP_RVSP_REBEL_ALT") then
             local shipTable = userdata_table(ship, "mods.ai.shipStuff")
             if not shipTable.renamedRebelCruiser then
