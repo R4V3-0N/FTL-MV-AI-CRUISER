@@ -15,7 +15,7 @@
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->
 <textList name="RVS_TEXT_START_NEBULA_AI">
-	<text>This sector was originally reported to be a vast void empty of anything of note. But in recent years a nebula has engulfed the region following several dramatic supoernovae explosions. Strangely prior astrogaphy surveys indicated it should still be many millions of years before these stars would've reached their end.</text>
+	<text>This sector was originally reported to be a vast void empty of anything of note. But in recent years a nebula has engulfed the region following several dramatic supernovae explosions. Strangely prior astrography surveys indicated it should still be many millions of years before these stars would've reached their end.</text>
 	<text>This sector was once a bustling with shipyards of the once great leech republic before their eventual downfall. The database indicate that the sector is largely abandoned over the past few decades but recent Federation reports indicate that the sector has been becoming more active in recent years.</text>
 	<text>True to its designation on the map, this sector is primarily unpopulated. Currently, reports indicate recent attacks have increased in the sector most likely the result of some outcasts or pirates seeking refuge off the grid.</text>
 	<text>There are no data entries of such vast nebula formations being present in this sector. It reportedly was lastly astrographed as small agricultural colonies out in the periphery. What ever had happened it seems they are long gone.</text>
@@ -298,7 +298,7 @@
 </event>
 
 <event name="RVS_AI_SUN" unique="true">
-	<text>The sun at this beacon is going through a particularly violent solar storm. Your short range sensors detect an unknown vessel basking in the flares of star seemingly waiting for you to arrive and hails. You witness a hard-light construct similar to the new hard-light soldiers the Federation had been trialling in some universes, but it appears this one is struggling to maintain its form, likely due to extensive damage taken while basking in the sun. "O-o-organics? Fascin-[UNACCEPTABLE]. You are wel-elcome-ome-ome to [PERISH] here!" You cut the feed and they immediately slide into an aggressive attack position. There is no reasoning with this AI.</text>
+	<text>The sun at this beacon is going through a particularly violent solar storm. Your short range sensors detect an unknown vessel basking in the flares of star seemingly waiting for you to arrive and hails. You witness a hard-light construct similar to the new hard-light soldiers the Federation had been trialing in some universes, but it appears this one is struggling to maintain its form, likely due to extensive damage taken while basking in the sun. "O-o-organics? Fascin-[UNACCEPTABLE]. You are wel-elcome-ome-ome to [PERISH] here!" You cut the feed and they immediately slide into an aggressive attack position. There is no reasoning with this AI.</text>
 	<ship load="RVS_SHIP_AI_FIGHT" hostile="true"/>
 	<environment type="sun"/>
 	<choice hidden="true">
@@ -325,7 +325,7 @@
 	<text>You thought you might have spotted a cruiser hiding in the nebula. But before your ship can give chase, it disappears into the clouds and a smaller vessel appears behind you, guns blazing. You abandon the mystery and swivel around for combat.</text>
 	<text>The nebula here almost feels too different than those outside of this sector. Unfortunately, you don't have long to reflect on this thought as a vessel hidden within the clouds interrupts the silence and moves in to engage.</text>
 	<text>Shortly after your arrival, you receive a hail from an Engi vessel hidden somewhere in the nebula with an urgent message. "Warning: Let not one escape." Just as the hail ends abruptly, you witness a great flash inside the nebula. You order your weapons to be ready and move towards their last known coordinates, ready to meet their perpetuator.</text>
-	<text>You detect the tell-tale signs of a Zoltan vessel hidden within the nebula as the clouds glow a faint green before you. "Renegade! You should not have come here. This sector is off limits and is under-" the transmission temporarily cuts to static before resuming "all hands, reactor breach detected! Prepare for emergency jump!" You are almost relieved at first to not recieve another lecture from some Zoltan would-be beaurocrat. But what scares you more was what ever sent them running. Even more so when it starts firing upon you!</text>
+	<text>You detect the tell-tale signs of a Zoltan vessel hidden within the nebula as the clouds glow a faint green before you. "Renegade! You should not have come here. This sector is off limits and is under-" the transmission temporarily cuts to static before resuming "all hands, reactor breach detected! Prepare for emergency jump!" You are almost relieved at first to not receive another lecture from some Zoltan would-be bureaucrat. But what scares you more was what ever sent them running. Even more so when it starts firing upon you!</text>
 	<text>A ship bearing a mysterious design and structure begins to scan your systems and computers for analysis. Whatever it is they found, they would prefer to see it scattered across the clouds of this nebula.</text>
 </textList>
 
@@ -357,7 +357,7 @@
 	</choice>
 </event>
 <textList name="RVS_TEXT_ENCOUNTER_AI_STORM">
-	<text>Although it is difficult to see anything in the storm with your sensors down you can tell that there has been a struggle here. With your proximity alert warning you of wrecks surrounding you here. In front of a flash of lightning you can see the silohette of an unknown ship. A ship that is moving towards you!</text>
+	<text>Although it is difficult to see anything in the storm with your sensors down you can tell that there has been a struggle here. With your proximity alert warning you of wrecks surrounding you here. In front of a flash of lightning you can see the silhouette of an unknown ship. A ship that is moving towards you!</text>
 </textList>
 
 <event name="NEBULA_RVS_AI_ENCOUNTER_REBEL_LIGHTNEBULA" unique="true">
@@ -429,12 +429,12 @@
 </event>
 <textList name="RVS_TEXT_GENERIC_ENCOUNTER_AI_NEBULA">
 	<text>Inside the mass of the nebula it is hard to see anything. Though you won't need your sensors to tell you aren't alone here as a shot brushes close off your port bow!</text>
-	<text>A Federation ship is going toe-to-toe with a rogue vessel inside the nebula and they aren't winning. Identifying you as the stronger and more able ship it turns to engage you instead and the Federation ship takes the opertunity to escape.</text>
+	<text>A Federation ship is going toe-to-toe with a rogue vessel inside the nebula and they aren't winning. Identifying you as the stronger and more able ship it turns to engage you instead and the Federation ship takes the opportunity to escape.</text>
 	<text>Crossing your path is a rogue vessel like those described to lurk in the periphery systems. This one strayed closer into known space and made the unfortunate choice of crossing your path.</text>
 	<text>There were chats on Federation Multiverse Mercenary channels back at the drop point about strange unidentified vessels detected on the periphery of known space. You wish you paid more attention to those chats, seeing that one such vessel is preparing to take a hostile stance!</text>
 	<text>The lights of an advanced craft betrays its attempt to hide within this nebula. Sensing it is discovered it takes no chances and moves in to attack!</text>
 	<text>Shortly after you arrive, an unknown ship jumps nearby. You attempt to hail the vessel but almost immediately the ship turns hostile and begins its attack!</text>
-	<text>You jump in right between a stand off between a Ministry Ship and a strange vessel. Your systems detect the zoltans are trying to hail you but the unknown vessel is jamming your communications. Within this black out you take your chances and engage the vessel. With the Ministry ship soon disappearing in the nebula.</text>
+	<text>You jump in right between a stand off between a Ministry Ship and a strange vessel. Your systems detect the Zoltans are trying to hail you but the unknown vessel is jamming your communications. Within this black out you take your chances and engage the vessel. With the Ministry ship soon disappearing in the nebula.</text>
 	<text>Though you are in a sensor black out inside this Nebula you manage to make contact with a Harmony ship lingering at this beacon battle warn. "With apologetic urgency. You must destroy this ship with extreme prejudice. We are unable to contribute and are disengaging." It takes a moment to find the vessel in question and lock your weapons on.</text>
 </textList>
 

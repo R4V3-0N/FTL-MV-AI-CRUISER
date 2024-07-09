@@ -374,7 +374,7 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	</systemList>
 	<weaponSlots>3</weaponSlots>
 	<droneSlots>2</droneSlots>
-	<weaponList missiles="6" count="3" load="RVS_LIST_WEAPONS_AI" />	<!-- currently set to 3 weapons for teesting -->
+	<weaponList missiles="6" count="3" load="RVS_LIST_WEAPONS_AI" />	<!-- currently set to 3 weapons for testing -->
 	<droneList drones="5" count="2" load="RVS_LIST_DRONES_AI" />
 	<health amount="11" />
 	<maxPower amount="6" />		<!-- R4 2023.11.25: Changed power from 7 to 6-->
@@ -408,8 +408,8 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<health amount="11" />
 	<maxPower amount="7" />
 	<crewCount amount="2" max="3" class="rvs_ai_hologram" />
-	<crewCount amount="1" max="2" clsas="zoltan_osmian"/>
-	<crewCount amount="0" max="1" clsas="zoltan_martyr"/>
+	<crewCount amount="1" max="2" class="zoltan_osmian"/>
+	<crewCount amount="0" max="1" class="zoltan_martyr"/>
 	<crewCount amount="0" max="1" class="crystal_liberator"/>
 	<!-- eventually Contempter? -->
 	<boardingAI>sabotage</boardingAI>
