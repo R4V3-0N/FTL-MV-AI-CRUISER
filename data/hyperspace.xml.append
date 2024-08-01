@@ -138,7 +138,7 @@
         </achievement>
         <achievement name="ACH_SHIP_RVSP_REBEL_ALT_3" layout="all">
             <name>How Did We Get Here?</name>
-            <description>Be boarded, on fire, and out of fuel while under threat of an ASB while using the Rebel Cruiser.</description>
+            <description>Be boarded, on fire, out of fuel and under threat of an ASB while using the Rebel Cruiser.</description>
             <icon>rvsp_rebel_alt_ach_3</icon>
             <lockImage>rvsp_rebel_alt_ach_3_lock</lockImage>
         </achievement>
