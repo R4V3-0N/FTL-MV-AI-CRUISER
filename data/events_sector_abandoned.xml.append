@@ -1,5 +1,5 @@
 <ftl>
-<mod:findName type="eventList" name="HOSTILE_ABANDONED">
+<mod:findName type="eventList" name="HOSTILE_ABANDONED">	<!-- R4 2024.07.31: TEST UNSUCCESSFUL// Couldn't test this to make an AI appear-->
 	<mod-append:event load="RVS_GENERIC_ENCOUNTER_AI_REGULAR" />
 </mod:findName>
 	
@@ -7,7 +7,7 @@
 <mod:findName type="event" name="ABANDONED_CRYSTAL_TOURIST">
 	<mod:findLike type="choice" limit="1" panic="true">
 		<mod:findLike type="event" limit="1">
-			<mod-append:choice req="RVS_BLUELIST_EFFECTOR" hidden="true">
+			<mod-append:choice req="RVS_BLUELIST_EFFECTOR" hidden="true">	<!-- R4 2024.07.31: TEST UNSUCCESSFUL// Couldn't get blue event to appear.-->
 				<text>(Effector) Remotely access their data storage..</text>
 				<event>
 					<text>While you make small talk with the Crystals, you covertly use your effector to get a read of their data storage, and download their map data. Once the download is complete, you bid farewell and the Crystals even offer a small reward for being so pleasant.</text>
@@ -22,7 +22,7 @@
 <mod:findName type="event" name="DISTRESS_ABANDONED_STOLEN_TECH" unique="true">
 	<mod:findLike type="choice" limit="1" panic="true">
 		<mod:findLike type="event" limit="1">
-			<mod-append:choice req="RVS_BLUELIST_EFFECTOR" hidden="true">
+			<mod-append:choice req="RVS_BLUELIST_EFFECTOR" hidden="true">		<!-- R4 2024.07.31: TEST UNSUCCESSFUL// Couldn't get blue event to appear.-->
 				<text>(Effector) Hack their systems and transfer the schematic.</text>
 				<event>
 					<text>The data transfer goes without problem, but you've also alerted the Lanius of your presence, and they aren't happy.</text>

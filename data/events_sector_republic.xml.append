@@ -1,7 +1,7 @@
-<mod:findName type="eventList" name="HOSTILE_LEECH">
+<mod:findName type="eventList" name="HOSTILE_LEECH">	<!-- R4 2024.07.31: TEST SUCCESSFUL -->
 	<mod-append:event load="RVS_GENERIC_ENCOUNTER_AI_REGULAR"/>
 </mod:findName>
 
-<mod:findName type="eventList" name="NEBULA_HOSTILE_LEECH">
+<mod:findName type="eventList" name="NEBULA_HOSTILE_LEECH">	<!-- R4 2024.07.31: TEST SUCCESSFUL -->
 	<mod-append:event load="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR_LIMIT"/>
 </mod:findName>
