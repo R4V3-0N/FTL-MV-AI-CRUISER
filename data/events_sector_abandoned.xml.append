@@ -1,14 +1,13 @@
-<ftl>
 <mod:findName type="eventList" name="HOSTILE_ABANDONED">
 	<mod-append:event load="RVS_GENERIC_ENCOUNTER_AI_REGULAR" />
 </mod:findName>
 	
 <!-- Effector Blue Events -->
 <mod:findName type="event" name="ABANDONED_CRYSTAL_TOURIST">
-	<mod:findLike type="choice" limit="1" panic="true">
+	<mod:findLike type="choice" limit="1">
 		<mod:findLike type="event" limit="1">
 			<mod-append:choice req="RVS_BLUELIST_EFFECTOR" hidden="true">
-				<text>(Effector) Remotely access their data storage..</text>
+				<text>(Effector) Remotely access their data storage.</text>
 				<event>
 					<text>While you make small talk with the Crystals, you covertly use your effector to get a read of their data storage, and download their map data. Once the download is complete, you bid farewell and the Crystals even offer a small reward for being so pleasant.</text>
 					<autoReward level="LOW">stuff</autoReward>
@@ -19,8 +18,8 @@
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="event" name="DISTRESS_ABANDONED_STOLEN_TECH" unique="true">
-	<mod:findLike type="choice" limit="1" panic="true">
+<mod:findName type="event" name="DISTRESS_ABANDONED_STOLEN_TECH">
+	<mod:findLike type="choice" limit="1">
 		<mod:findLike type="event" limit="1">
 			<mod-append:choice req="RVS_BLUELIST_EFFECTOR" hidden="true">
 				<text>(Effector) Hack their systems and transfer the schematic.</text>
@@ -36,5 +35,3 @@
 		</mod:findLike>
 	</mod:findLike>
 </mod:findName>
-
-</ftl>
