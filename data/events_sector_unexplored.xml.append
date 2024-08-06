@@ -165,7 +165,7 @@
 		<text planet="PLANET_POPULATED_REAL">As you arrive in the system you are hailed by one of the few remaining settlements close to the AI expansion. It turns out some people here still believe the Federation will save them, rather than the Rebels. Upon learning of your quest, they offer you some of their scarce supplies.</text>
 		<text planet="PLANET_GAS">Debris from a forgotten battle still orbits the gas giant in this system. Some of it still might be usable.</text>
 	</textList>
-	<!-- R4: 2024.05.23 I do not know how to assign these to a textlist so I will just have them separate-->
+	<!-- R4: 2024.05.23 I do not know how to assign these to a textlist so I will just have them separate EDIT 2024.08.02 I meant having ships in the background, the things bellow-->
 	
 	<eventList name="RVS_PERIPHERY_FREE_ITEMS_FLEETS">
 		<event load="RVS_PERIPHERY_FREE_ITEMS_ZFLEET"/>
@@ -267,7 +267,7 @@
 		</choice>
 	</event>
 	
-	<event name="NEBULA_RVS_PERIPHERY_LOST_QUEST">	<!-- R4 2024.05.23: Tested, won't load -->
+	<event name="NEBULA_RVS_PERIPHERY_LOST_QUEST">
 		<environment type="nebula"/>
 		<beaconType id="map_icon_quest" global="true">
 			<color r="69" g="168" b="235" a="1"/>
@@ -535,7 +535,7 @@
 		<text>You look through a series of transmissions that had been recorded in the final moments of the vessel and find the latest one uploaded just under 4 years ago. You hit play. "To anyone who finds this message, our crew was overrun by some kind of unidentified synthetic aliens. They came out of nowhere and we were unprepared. They were fragile but numerous. Do not approach this area without heavy onboard defenses. Our lives were lost, but perhaps this warning will save others."</text>
 		<text>There isn't much saved on the terminal. It appears to have already been scrubbed. All that remains is a series of maintanence reports and a digital logbook of which port it had departed and arrived too over its service history... it seems to have been last headed towards what was an Engi sector not too long ago before its recent seperatist liberation. You just take what you have gathered and prepare to leave.</text>
 		<text>You search through a file of recordings named numerically. The first one you opened starts off with a video recording of what you can only assume is the Commander of this once fine vessel. "Mission Briefing: Our objective is to establish a communications relay in this sector. This will facilitate faster data transmission between distant colonies. Initial scans show the presence of interference, likely from the nebula. We will prepare to depart in approximately 32 hours. All men, dismissed"</text>
-		<text>This terminal has a full record of all the medical logs recorded by the clinical officer onboard. "Medical log entry 16, the patient has recieved multiple bruises from blunt force impacts with 1st degree burns as a result of an... erm... confrontation with the unknown entities. The patient is recovering well but if we are unable to find help we-" the recording breaks into static, although bits and pieces can still be made out following things the image continues to distorts. You don't think you would be able to recover any further information and prepare to leave.</text>
+		<text>This terminal has a full record of all the medical logs recorded by the clinical officer onboard. "Medical log entry 16, the patient has recieved multiple bruises from blunt force impacts with several acute burns as a result of a confrontation with those... erm... things. The patient is recovering well but if we are unable to find help we-" the recording breaks into static, although bits and pieces can still be made out following the static, the image continues to distort and skip. You don't think you would be able to recover any further information and prepare to leave.</text>
 		<text>You can only find memo updates posted on this terminal out to all crew. You decide to open a few of the posts to try and find anything that could explain their demise...
 	
 	
@@ -574,14 +574,14 @@
 		<!--<event load="RVS_PERIPHERY_UNION_BLACKBOX_QUEST_ASTEROID"/>-->
 	</eventList>
 	
-	<event name="RVS_PERIPHERY_UNION_BLACKBOX_QUEST_ION">
+	<event name="RVS_PERIPHERY_UNION_BLACKBOX_QUEST_ION">	<!-- R4 2024.08.02 TODO : Fix quest marker to be MV blue-->
 		<text>The termianl has various science reports stored. You select one of the last reports and hit play. "Research Officer's Log: We've made significant progress in studying the nebula's unique properties. The radiation levels are unusually high, but it seems to have remarkable effects on electronic systems. We need more time to understand the potential applications." You mark down the location of the nebula.</text>
 		<quest event="RVS_PERIPHERY_SCIENCE_ION"/>
 	</event>
 	
 	<event name="RVS_PERIPHERY_SCIENCE_ION">
 		<environment type="storm"/>
-		<environment type="pulsar"/>
+		<environment type="pulsar"/>	<!-- R4 2024.08.02 TODO : Make storm and pulsar happen together. I think this may mean putting one of these environments in another event tag-->
 		<text>Following the coordinates detailed in the log, your ship emerges from FTL travel and is immediately engulfed by the swirling chaos of a highly energized ion storm. The nebula ahead pulses with vibrant hues of purple and blue, lightning arcing through its dense clouds. Your sensors flicker and struggle to maintain stability as the storm's intensity wreaks havoc on your systems. Despite the turbulence, the mysterious energy signatures referenced in the report are unmistakable, emanating from deep within the nebula.</text>
 		<choice>
 			<text>Investigate the nebula.</text>
@@ -614,25 +614,25 @@
 		<choice req="shields" hidden="true" blue="false">	
 			<text>Take the time to make improvements to your ships shielding.</text>
 			<event>
-				<hiddenAug>SHIELD_RECHARGE</hiddenAug>	<!--  R4 2024.05.21: Bit lazy, will make this vanilla augmenmt be the gift currently as it won't contribute to the max of 3 stacks the internal upgrade one does. Would later on change it to be 20% strength, as well as providing 20% ion resist-->
+				<hiddenAug>SHIELD_RECHARGE</hiddenAug>	<!--  R4 2024.05.21: Bit lazy, will make this vanilla augmenmt be the gift currently as it won't contribute to the max of 3 stacks the internal upgrade one does. Would later on change it to be 20% strength, as well as providing 20% ion resist-->	<!-- TODO -->
 				<text>Studying how the energy fields interact with the shields your crew is able to find ways in optimising the shield lattice structure to allow it to regenerate approximately 15% faster. You will have to report your findings at some later point to someone who could crack the mysteries of this anomaly.</text>
 			</event>
 		</choice>
 		<choice hidden="true">
 			<text>Take the time to make improvements to your ships hull.</text>
 			<event>
-				<hiddenAug>RVS_DODGE_ARMOR</hiddenAug>	<!-- R4 2024.05.21: Similar to above. Will just yoink a WIP augment that boosts evasion into this for now. -->
+				<hiddenAug>RVS_DODGE_ARMOR</hiddenAug>	<!-- R4 2024.05.21: Similar to above. Will just yoink a WIP augment that boosts evasion into this for now. -->	<!-- TODO -->
 				<text>Examining the interferance of this intense storm on your hull your engineers are able to examing its disruptive properties that could help hide your ship from enemy sensors. Providing an estimate of 10% evasion to all incoming enemy fire. You will have to report your findings at some later point to someone who could crack the mysteries of this anomaly.</text>
 			</event>
 		</choice>
 		<choice hidden="true">	
 			<text>Take the time to make improvements to your ships reactor.</text>
 			<event>	
-				<upgrade amount="3" system="reactor"/>	<!-- R4 2024.05.21: Pepson? Chrono? Julk? Which one of you are good at hyerspace xml LUA shenangains. I would like this to also increase the reactor cap by 2 or this upgrade not contribute to the cap. -->
+				<upgrade amount="3" system="reactor"/>	<!-- R4 2024.05.21: Pepson? Chrono? Julk? Which one of you are good at hyerspace xml LUA shenangains. I would like this to also increase the reactor cap by 2 or this upgrade not contribute to the cap. -->	<!-- TODO -->
 				<text>Your ships reactor is struggling to provide power to your systems. Although certain elements of your ship is recieving power not from your reactor but instead externally from the storm. Studying this exotic interaction you are able to find a way to optimise the ships power effeciency without making any major alternations to the ships reactor. You will have to report your findings at some later point to someone who could crack the mysteries of this anomaly.</text>
 			</event>
 		</choice>
-		<!-- R4 2024.05.21: DM me on discord if you have any ideas you wish to implement for this event. Bonus points if you can implement it yourself. -->
+		<!-- R4 2024.05.21: DM me on discord if you have any ideas you wish to implement for this event. Bonus points if you can implement it yourself. -->	<!-- TODO-->
 	</event>
 	
 	<!-- 
@@ -740,6 +740,10 @@
 					<event>
 						<ship hostile="true"/>
 						<text>Against your better judgement you couldn't ignore an opertunity like this with such a great opertunity before you. You decide to take the risk and move in to attack!</text>
+						<choice hidden="true">
+							<text>Continue...</text>
+							<event load="COMBAT_CHECK"/>					<!-- R4 2024.08.03: Just added combat check-->
+						</choice>
 					</event>
 				</choice>
 			</event>
@@ -840,7 +844,7 @@
 		<text>For thousands of years there have been myths and legends of dangers within the great unknown. "Hic sunt dracones" - here be dragons. This uncharted sector is no different with rumours surrounding mysterious ships that lurk within the clouds. You and your crew are on edge viewing outside into the swirling clouds but nothing appears to be coming just yet.</text>
 		<choice hidden="true">
 			<text>Explore.</text>
-			<event load="NEBULA_NEUTRAL_FILLER"/>
+			<event load="NEBULA_NEUTRAL_FILLER"/>	<!-- R4 2024.08.03: TODO make this more fitting for the sector, may reuse this more for other empty explore events or alternatively textlist this one-->
 		</choice>
 		<choice hidden="true">
 			<text>Do something onboard the ship.</text>
@@ -877,6 +881,8 @@
 			</event>
 		</choice>
 	
+		<!-- R4 2024.08.03: TODO I want to make it have mutents when you have TRC turned on-->
+
 		<choice hidden="true" max_group="1">
 			<text>Do something onboard the ship.</text>
 			<event>
@@ -896,13 +902,14 @@
 	
 	
 	<event name="RVS_PERIPHERY_STRANGE_POD">
+		<environment type="nebula"/>
 		<text>Your sensors detect a strange pod floating aimlessly in the nebula. It seems to be emitting a faint signal, though the details are unclear. What do you want to do?</text>
 		<choice req="sensors" lvl="2" hidden="true">
 			<text>(Upg. Sensors) Scan the pod.</text>
 			<event load="RVS_PERIPHERY_POD_SCAN"/>
 		</choice>
 		<choice hidden="true">
-			<text>Take the pod onboard and p1ry it open.</text>
+			<text>Take the pod onboard and pry it open.</text>
 			<event load="RVS_PERIPHERY_POD_BLIND_OPEN"/>
 		</choice>
 		<choice hidden="true">
@@ -987,7 +994,7 @@
 	
 	<event name="RVS_PERIPHERY_POD_HUMANOID">
 		<text>Inside the pod, you find some kind of humanoid being. They seem lost and confused, not knowing where they are or how they got there. Grateful for your help, they express a desire to join your crew.</text>
-		<crewMember amount="1" type="human_humanoid"/>
+		<crewMember amount="1" class="human_humanoid"/>
 	</event>
 	
 	<event name="RVS_PERIPHERY_POD_CONTEMPTER">
@@ -1000,6 +1007,8 @@
 			<text>(Adv. Medbay) Subdue with advanced medbay.</text>
 			<event load="RVS_PERIPHERY_CONTEMPTER_MEDBAY"/>
 		</choice>
+		<!-- R4 2024.08.03: TODO should add blue event option for Contempter.-->
+		<!-- R4 2024.08.03: TODO 2 also Orchids have a calming effect, perhaps they can help calm them down too?-->
 		<choice hidden="true">
 			<text>Try to convince it to join your crew.</text>
 			<event load="RVS_PERIPHERY_CONTEMPTER_CONVINCE_LIST"/>
@@ -1010,7 +1019,7 @@
 		<text>Your crew steps forward to apprehend the strange alien. Impressed to see someone stand up to it and not cower like a "weakling" it sheaths the blade and displays its claws. Challenging your crew member for a dual. After a tense struggle, the Contempter concedes, acknowledging your crew's strength. Begrudgingly, they agree to join your crew.</text>
 		<crewMember amount="1" class="rvs_contempter"/>
 	</event>
-	<event name="RVS_PERIPHERY_CONTEMPTER_MEDBAY">
+	<event name="RVS_PERIPHERY_CONTEMPTER_MEDBAY">	<!-- R4 2024.08.03: Maybe requires medbots to do this? -->
 		<text>You use your advanced medbay to subdue the strange alien. The calming effects of the medical treatment cleanses them of their stims, after settling down and assessing their situation they agree to join your crew.</text>
 		<crewMember amount="1" class="rvs_contempter"/>
 	</event>
@@ -1037,7 +1046,8 @@
 			<color r="255" g="245" b="175" a="1"/>
 		</beaconType>
 		<text>A sentient fabricator resides at this beacon, attempting to peddle to you its exotic crafts and sculptures that it has created from the condensed nebula gas, fascinating.</text>
-	
+		
+		<!-- R4 2024.08.03 : TODO perhaps can sell nebula gas here for a good profit? Silly random idea -->
 		<choice req="RVS_BLUELIST_CREW_AI" hidden="true">
 			<text>(AI Crew) Hail the fabricator.</text>
 			<event load="RVS_AI_TRADE_FABRICATE"/>
@@ -1134,7 +1144,7 @@
 	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	-->
 	
-	<eventList name="RVS_PERIPHERY_DISTRESS_EVENTS"> <!-- R4 TO DO: No fuel? Rebels wanting a way out of here? Emptied station? Hostile fed station filled with AI crew? The... Rebel Cruiser perchance? -->
+	<eventList name="RVS_PERIPHERY_DISTRESS_EVENTS"> <!-- R4 TODO : No fuel? Rebels wanting a way out of here? Emptied station? Hostile fed station filled with AI crew? The... Rebel Cruiser perchance? -->
 		<event load="NEBULA_RVS_RESCUE_RENEGADE"/>
 		<event load="RVS_PERIPHERY_AI_ZOLTAN_DISTRESS"/>
 	
@@ -1219,7 +1229,7 @@
 	</eventList>
 	
 	<event name="RVS_NEBULA_RESCUE_MISSION_SUCCESS">
-		<text>After a fierce battle, you manage to destroy the AI ship. The mercenary ship sends a message of thanks, offering you a reward for your assistance. As a token of their gratitude, one of their crew members requests to join your crew.</text>
+		<text>After a fierce battle, you manage to destroy the AI ship. The mercenary sends a message of thanks, offering you a reward for your assistance. As a token of their gratitude, one of their crew members requests to join your crew.</text>
 		<reward>
 			<crewMember amount="1" shields="2" class="LIST_CREW_PIRATE_RANDOM"/>
 			<autoReward level="LOW">scrap</autoReward>
@@ -1282,7 +1292,7 @@
 		<destroyed>
 			<text>The ship explodes and sparks as elements of it come flying off of the ship in its final spiral into destruction. You have successfully defeated the AI Assault craft. While scrapping the remains you recieve a hail from the Zoltan Bomber.</text>
 			<autoReward level="MED">standard</autoReward>
-			<choice>
+			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
 				<event load="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_MINISTRY_HELPED"/>
 			</choice>
@@ -1290,7 +1300,7 @@
 		<deadCrew>
 			<text>The last avatar fickers and sparks and not long after the main ship AI falls silent. You have successfully defeated the AI Assault craft. While scrapping the remains you recieve a hail from the Zoltan Bomber.</text>
 			<autoReward level="HIGH">standard</autoReward>
-			<choice>
+			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
 				<event load="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_MINISTRY_HELPED"/>
 			</choice>
@@ -1301,7 +1311,7 @@
 		<destroyed>
 			<text>One final strike rips the Zoltan bomber in twain. The AI ship doesn't seem aggressive and welcomes you with a hail.</text>
 			<autoReward level="MED">standard</autoReward>
-			<choice>
+			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
 				<event load="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_AI_HELPED"/>
 			</choice>
@@ -1309,7 +1319,7 @@
 		<deadCrew>
 			<text>The last avatar fickers and sparks and not long after the main ship AI falls silent. You have successfully defeated the AI Assault craft. While scrapping the remains you recieve a hail from the Zoltan Bomber.</text>
 			<autoReward level="HIGH">standard</autoReward>
-			<choice>
+			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
 				<event load="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_AI_HELPED"/>
 			</choice>
@@ -1353,8 +1363,11 @@
 	-->
 	
 	
-	<!-- R4 TO DO: Make an event where an Engi or Zoltan set up a cordon and are upset you entered -->
+	<!-- R4 TODO: Make an event where an Engi or Zoltan set up a cordon and are upset you entered -->
 	<!-- Rebel Auto Dreadnought being bullied. -->
+	<!-- Engi attacking you on sight "NO WITNESSES". -->
+	<!-- heavily damaged rebel autoship turns "back to life" and attacks you. Has random damage like that one damaged autoship event -->	
+	<!-- scared union ship attacks on sight-->
 	<!--<eventList name="RVS_PERIPHERY_CORDON">
 		<event load="RVS_PERIPHERY_CORDON_ENGI"/>
 		<event load="RVS_PERIPHERY_CORDON_ZOLTAN"/>
@@ -1578,9 +1591,9 @@
 		</choice>
 	</event>
 	<textList name="RVS_TEXT_GENERIC_ENCOUNTER_AI">
-		<text>You recognize the ship here as one of the designs you have seen on Federation bulletin boards. "Rogue AI" they call them. Rumors have spread that they are based on some new gen soldiers for the Federation Joint Armies that have gone rogue but the Federation has denied all accusations. What ever the case is. They want to purge them from this universe and this AI defective or not intends to fight for its right to survive.</text>
+		<text>You recognize the ship here as one of the designs you have seen on Federation bulletin boards. "Rogue AI" they call them. Rumors have spread that they are based on some new gen soldiers for the Federation Joint Armies that have gone rogue, but the Federation has denied all accusations. What ever the case is. They want to purge them from this universe and this AI defective or not intends to fight for its right to survive.</text>
 		<text>Coming across a rare sight. One of the "Rogue AI" ships you have been hearing about is in the process of dissolving a pirate vessel. Sensors fail to detect any life signs onboard the vessel. You attempt to keep your distance from the sight but the Rogue ship assumes you are repositioning to strike and engages you.</text>
-		<text>You detect strange reading near the beacon. There appears to be a ship of unknown design tampering with it. You move in ensuring that the beacon is not being deactivated. Seeing you this "Rogue ship" assume hostilities and engage. </text>
+		<text>You detect a strange reading near the beacon. There appears to be a ship of unknown design tampering with it. You move in ensuring that the beacon is not being deactivated. Seeing you this "Rogue ship" assume hostilities and engage. </text>
 		<text>Arriving at your destination you receive a strange hail. The cyphering is difficult to decrypt containing both old and new Federation cyphers coupled with exotic signals. By the time you cracked the first line a "Rogue AI" ship seemingly waiting assumes hostilities and engages.</text>
 		<text>A nearby wreck seems to be continuously transmitting a warning signal, signaling ship to stay away. You move in to investigate before noticing a seemingly unidentifiable ship. Before you manage to send a hail it assume you are here to steal its salvage and engages.</text>
 		<text>Your destination seems empty. While performing sensors maintenance you realize that the readings are being jammed. After recalibrating it you notice a unusual sight. One of the "Rogue AI" ships you have been hearing about lately. While you process what you are witnessing, the ship, seemingly annoyed to be found takes the opportunity to move into an attack vector.</text>
