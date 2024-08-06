@@ -574,14 +574,21 @@
 		<!--<event load="RVS_PERIPHERY_UNION_BLACKBOX_QUEST_ASTEROID"/>-->
 	</eventList>
 	
-	<event name="RVS_PERIPHERY_UNION_BLACKBOX_QUEST_ION">	<!-- R4 2024.08.02 TODO : Fix quest marker to be MV blue-->
+	<event name="RVS_PERIPHERY_UNION_BLACKBOX_QUEST_ION">
 		<text>The termianl has various science reports stored. You select one of the last reports and hit play. "Research Officer's Log: We've made significant progress in studying the nebula's unique properties. The radiation levels are unusually high, but it seems to have remarkable effects on electronic systems. We need more time to understand the potential applications." You mark down the location of the nebula.</text>
 		<quest event="RVS_PERIPHERY_SCIENCE_ION"/>
 	</event>
 	
 	<event name="RVS_PERIPHERY_SCIENCE_ION">
+		<beaconType id="map_icon_quest" global="true">
+			<color r="69" g="168" b="235" a="1"/>
+			<unvisitedTooltip>A nebula with unusual radiation.</unvisitedTooltip>
+		</beaconType>
 		<environment type="storm"/>
-		<environment type="pulsar"/>	<!-- R4 2024.08.02 TODO : Make storm and pulsar happen together. I think this may mean putting one of these environments in another event tag-->
+		<loadEvent>RVS_PERIPHERY_SCIENCE_ION_MAIN</loadEvent>
+	</event>
+	<event name="RVS_PERIPHERY_SCIENCE_ION_MAIN">
+		<environment type="pulsar"/>
 		<text>Following the coordinates detailed in the log, your ship emerges from FTL travel and is immediately engulfed by the swirling chaos of a highly energized ion storm. The nebula ahead pulses with vibrant hues of purple and blue, lightning arcing through its dense clouds. Your sensors flicker and struggle to maintain stability as the storm's intensity wreaks havoc on your systems. Despite the turbulence, the mysterious energy signatures referenced in the report are unmistakable, emanating from deep within the nebula.</text>
 		<choice>
 			<text>Investigate the nebula.</text>
