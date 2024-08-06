@@ -34,7 +34,16 @@
 	</choice>
 </event>
 
-
+<choice req="RVS_WEAPONS_MINES" hidden="true"> 
+    <text>(Minelauncher) Lay a minefield to delay the Rebel fleet. [ Missiles: -3 ]</text>
+    <event>
+        <text>You quickly drop some mines as you circle around the beacon. The Rebel forces will have to avoid this area, clear the minefield or suffer heavy damage. All possibilities will considerably delay their fleet.</text>
+        <item_modify>
+            <item type="missiles" min="-3" max="-3"/>
+        </item_modify>
+        <modifyPursuit amount="-1"/>
+    </event>
+</choice>
 
 <!-- Storage check -->
 <mod:findName type="event" name="STORAGE_CHECK_REAL" panic="true">
@@ -46,7 +55,7 @@
         <text>Create a hologram.</text>
         <event load="RVS_STORAGE_CHECK_HOLO_MAKER"/>
     </mod-append:choice>
-  
+    
     <!-- R4 2024.05.20:  As of 5.4 I do not think this is necessary anymore and thus commented out.
 
     <mod:findWithChildLike type="choice" child-type="text" panic="true">
@@ -58,6 +67,21 @@
 		<event/>
 	</mod-append:choice>
     -->
+    <!-- R4 2024.08.07 potential TODO, check to see if this is still necessary? -->
+</mod:findName>
+
+    <!-- Mine Launcher appends -->
+<mod:findName type="event" name="STORAGE_CHECK_JOB_FLEET" panic="true">
+    <mod-append:choice req="RVS_MINES_TECH_1" hidden="true">
+        <text>Use your Tech Mine Launcher. [-7}, gives 2 delay, does not impact notoriety]</text>
+        <event>
+            <text>You quickly deploy several smart mines around this beacon where they will remain cloaked and hidden until and only when the Rebel Fleet arrives.</text>
+            <modifyPursuit amount="-2"/>
+            <item_modify>
+                <item type="missiles" min="-7" max="-7"/>   <!-- R4 2024.08.07 : Currently this to be 4 ammo more than in CE and double the modify pursuit compared to CE. Might slightly increase ammo count alter?-->
+            </item_modify>
+        </event>
+    </mod-append:choice>
 </mod:findName>
 
 <event name="RVS_STORAGE_CHECK_HOLO_REVIVE">

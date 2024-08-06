@@ -40,6 +40,8 @@ Tip: After an Effector hacking cycle ends, the affected system becomes temporari
 <text name="rvs_tip_emp">Tip: EMP projectiles pop 2 layers of shields on impact and deals ion damage on direct system hits.</text>
 <text name="rvs_tip_emp_heavy">Tip: Heavy EMP projectiles pop 4 layers of shields on impact, otherwise it deals heavy ion damage on system hits and some ion damage to adjacent systems.</text>
 
+<text name="ra_tip_mines_tech">Tip: Tech Mine Launchers fire slow moving mines that pierce all shields and do no system damage, but has increased accuracy and smart targeting that prevents collateral damage.</text>
+
 <!-- FM weapons -->
 <text name="rvs_tip_disruptor">Tip: Disruptors fire waves of projectiles that disrupts systems and shields on hit causing a hack effect.</text> 
 <text name="rvs_tip_stormer">Tip: Fires an extremely tight burst of scatter lasers on target.</text>

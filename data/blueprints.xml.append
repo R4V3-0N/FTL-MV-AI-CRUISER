@@ -1491,6 +1491,36 @@
 	<short>Plasma I</short>
 	<desc>Fires a concentrated blast of plasma that deals no physical damage but has a good chance to ignite fires.</desc>
 	<tooltip>Fires plasma across a small, random area. High fire chance.</tooltip>
+    <descriptionOverride>Based on an industrial-grade incinerator normally used to clear space of debris and asteroids. This weapon fires a concentrated thermal blast of plasma that sets fires across a ship, capable of dealing damage rooms that are ignited.
+
+Stats:
+Required Power: 1
+Charge Time: 16 seconds
+		
+Shot Radius: 40
+Shots Per Charge: 4
+		
+Damage Chance: 0-33% (scales with fire count)
+Base Hull Damage: 1 
+Total System Damage: 1
+Total Crew Damage: 1
+		
+Fire Chance: 60%
+		
+Default Price: 40~   -   Selling Price: 20~
+	</descriptionOverride>
+    <tooltipOverride>Required Power: 1
+Charge Time: 16 seconds
+		
+Shot Radius: 40
+Shots Per Charge: 4
+		
+Damage Chance: 0-33% (scales with fire count)
+Base Hull Damage: 1 
+Total System Damage: 1
+Total Crew Damage: 1
+		
+Fire Chance: 60%</tooltipOverride>
 	<radius>40</radius>
 	<damage>0</damage>
 	<missiles>0</missiles>
@@ -1534,6 +1564,37 @@
 	<short>Plasma II</short>
 	<desc>Fires multiple blasts of plasma across a random area with a chance to light fires in every room that is hit.</desc>
 	<tooltip>Fires plasma across a wide, random area. Very high fire chance.</tooltip>
+    <descriptionOverride>Fires multible blasts of thermal plasma that sets fires across an entire ship, capable of dealing damage rooms that are ignited.
+
+Stats:
+Required Power: 2
+Charge Time: 20 seconds
+				
+Shot Radius: 80
+Shots Per Charge: 9
+				
+Damage Chance: 0-33% (scales with fire count)
+Base Hull Damage: 1 
+Total System Damage: 1
+Total Crew Damage: 1
+				
+Fire Chance: 60%
+				
+Default Price: 50~   -   Selling Price: 25~
+			</descriptionOverride>
+			<tooltipOverride>Required Power: 1
+Charge Time: 20 seconds
+				
+Shot Radius: 40
+Shots Per Charge: 9
+				
+Damage Chance: 0-33% (scales with fire count)
+Base Hull Damage: 1 
+Total System Damage: 1
+Total Crew Damage: 1
+				
+Fire Chance: 60%</tooltipOverride>
+	
 	<radius>80</radius>	<!-- was 65 in CE -->
 	<damage>0</damage>
 	<missiles>0</missiles>
@@ -1577,6 +1638,37 @@
 	<short>Plasma III</short>
 	<desc>Fires multiple blasts of plasma across a random area with a chance to light fires in every room that is hit.</desc>
 	<tooltip>Fires plasma across a wide, random area. Very high fire chance.</tooltip>
+	<descriptionOverride>Fires a torrent of thermal plasma that sets large swathes ablaze across all but the largest ships, capable of dealing damage rooms that are ignited.
+
+Stats:
+Required Power: 3
+Charge Time: 24 seconds
+				
+Shot Radius: 105
+Shots Per Charge: 15
+				
+Damage Chance: 0-33% (scales with fire count)
+Base Hull Damage: 1 
+Total System Damage: 1
+Total Crew Damage: 1
+				
+Fire Chance: 60%
+				
+Default Price: 60~   -   Selling Price: 30~
+					</descriptionOverride>
+					<tooltipOverride>Required Power: 3
+Charge Time: 24 seconds
+
+Shot Radius: 105
+Shots Per Charge: 15
+
+Damage Chance: 0-33% (scales with fire count)
+Base Hull Damage: 1 
+Total System Damage: 1
+Total Crew Damage: 1
+
+Fire Chance: 60%</tooltipOverride>
+	
 	<radius>105</radius>	<!-- was 90, then 95, now its 105 -->
 	<damage>0</damage>
 	<missiles>0</missiles>
@@ -1586,7 +1678,7 @@
 	<breachChance>0</breachChance>
 	<cooldown>24</cooldown>
 	<power>3</power>
-	<cost>50</cost>
+	<cost>60</cost>			<!-- R4 2024.08.07 : Was 50-->
 	<bp>10</bp>
 	<speed>30</speed>
 	<rarity>3</rarity>
@@ -1796,7 +1888,7 @@
 	<!--<fractionalDamage damage="0.5" sysDamage="-0.5" />		considered fractional damage from ARC's library, pending concept -->
 	<noSysDamage>true</noSysDamage>
 	<noPersDamage>true</noPersDamage>
-	<accuracyMod>10</accuracyMod>
+	<accuracyMod>10</accuracyMod>	<!-- R4 2024.08.07 : TODO change this with projectile coming for second passes on targets it miss -->
 	<missiles>1</missiles>
 	<shots>1</shots>
 	<sp>5</sp>
@@ -1805,7 +1897,7 @@
 	<breachChance>3</breachChance>
 	<cooldown>14</cooldown>
 	<power>2</power>
-	<cost>30</cost>
+	<cost>40</cost>	<!-- Increased scrap from 30 to 40-->
 	<bp>6</bp>
 	<rarity>0</rarity>
 	<image>ra_mine_tech</image>
@@ -2106,7 +2198,7 @@
     <weaponArt>fm_rvs_splitter_energy_3</weaponArt>
 </weaponBlueprint>
 
-<weaponBlueprint name="FM_RVS_IPS_LASER_SCATTER_CHAINGUN_BURST">
+<weaponBlueprint name="FM_RVS_IPS_LASER_SCATTER_CHAINGUN_BURST">	<!-- R4 TODO -->
 	<type>LASER</type>
 	<flavorType>Fully-Automatic Momentum Laser</flavorType>	<!--R4 TO DO-->
 	<title>Experimental LSB-2 "Stormer"</title>
@@ -2151,7 +2243,7 @@
 	<iconImage>laser_chain</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="FM_RVS_IPS_OSCILLATOR">
+<weaponBlueprint name="FM_RVS_IPS_OSCILLATOR">	<!-- R4 TODO -->
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<tip>rvs_tip_disruptor</tip>	<!--R4 TO DO-->
@@ -2171,7 +2263,7 @@
 	<stun>5</stun>
 	<cooldown>12</cooldown>	<!--R4 TO DO-->
 	<power>1</power>	<!--R4 TO DO-->
-	<cost>65</cost>	<!--R4 TO DO-->
+	<cost>65</cost>	<!--R4 TO -->
 	<bp>10</bp>
 	<speed>75</speed>
 	<rarity>0</rarity>
@@ -2179,7 +2271,7 @@
 		<projectile count="3" fake="false">ips_wavegun_shot</projectile>	<!--R4 TO DO-->
 	</projectiles>
 	<launchSounds>
-		<sound>ips_wavegun_sfx</sound>	<!--R4 TO DO-->
+		<sound>ips_wavegun_sfx</sound>	<!--R4 TODO-->
 	</launchSounds>
 	<hitShipSounds>
 		<sound>hitHull1</sound>
