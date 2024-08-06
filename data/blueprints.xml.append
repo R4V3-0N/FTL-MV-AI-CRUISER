@@ -3029,14 +3029,34 @@ AUGMENTS
     <stackable>false</stackable>
 </augBlueprint>
 
-<augBlueprint name="RVS_DODGE_ARMOR">
-    <title>Evasion Armor</title>
-	<desc>Passively increases dodge chance by 10%.</desc>
+<augBlueprint name="RVS_SCIENCE_ION_SHIELD">
+    <title>Shield Upgrade</title>
+	<desc>Passively increases shield reacharge and ion resist by 20%.</desc>
 	<cost>55</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <stackable>true</stackable>
+	<value>20</value>
+</augBlueprint>
+
+<augBlueprint name="RVS_SCIENCE_ION_DODGE">
+    <title>Evasion Upgrade</title>
+	<desc>Passively increases dodge chance by 10%.</desc>
+	<cost>55</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <stackable>false</stackable>
 	<value>10</value>
+</augBlueprint>
+
+<augBlueprint name="RVS_SCIENCE_ION_POWER">
+    <title>Power Upgrade</title>
+	<desc>Passively increases power by 2.</desc>
+	<cost>55</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <stackable>true</stackable>
+	<value>2</value>
 </augBlueprint>
 
 <augBlueprint name="RVS_ANTI_GRAVITY_ENGINE">

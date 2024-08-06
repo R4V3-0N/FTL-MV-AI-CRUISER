@@ -619,27 +619,113 @@
 	<event name="RVS_PERIPHERY_SCIENCE_ION_ENERGY">
 		<text>Your crew navigates the ship carefully into the heart of the storm, sensors working overtime to cut through the electromagnetic interference. The nebula's energy signatures grow stronger as you push deeper, the ship's hull occasionally rattling from the ion discharges. After what feels like an eternity, your science officer detects a peculiar anomaly. Following the signal, you discover strange patterns and formations in the nebula's electromagnetic fields. Your crew can not ascertain the exact cause of this exotic behavior and the origins of the source remains elusive. Given time you could apply this technology to boost your ships technologies and systems.</text>
 		<choice req="shields" hidden="true" blue="false">	
-			<text>Take the time to make improvements to your ships shielding.</text>
+			<text>Take the time to make improvements to your ship's shielding.</text>
 			<event>
-				<hiddenAug>SHIELD_RECHARGE</hiddenAug>	<!--  R4 2024.05.21: Bit lazy, will make this vanilla augmenmt be the gift currently as it won't contribute to the max of 3 stacks the internal upgrade one does. Would later on change it to be 20% strength, as well as providing 20% ion resist-->	<!-- TODO -->
-				<text>Studying how the energy fields interact with the shields your crew is able to find ways in optimising the shield lattice structure to allow it to regenerate approximately 15% faster. You will have to report your findings at some later point to someone who could crack the mysteries of this anomaly.</text>
+				<hiddenAug>RVS_SCIENCE_ION_SHIELD</hiddenAug>
+				<text>Studying how the energy fields interact with the shields, your crew is able to devise a way to optimize the shield lattice structure. This upgrade will allow shields to regenerate 20% faster, as well provide a 20% chance to resist ion damage. You will have to report your findings at some point in the future to someone who can crack the mysteries of this anomaly.</text>
 			</event>
 		</choice>
 		<choice hidden="true">
-			<text>Take the time to make improvements to your ships hull.</text>
+			<text>Take the time to make improvements to your ship's hull.</text>
 			<event>
-				<hiddenAug>RVS_DODGE_ARMOR</hiddenAug>	<!-- R4 2024.05.21: Similar to above. Will just yoink a WIP augment that boosts evasion into this for now. -->	<!-- TODO -->
-				<text>Examining the interferance of this intense storm on your hull your engineers are able to examing its disruptive properties that could help hide your ship from enemy sensors. Providing an estimate of 10% evasion to all incoming enemy fire. You will have to report your findings at some later point to someone who could crack the mysteries of this anomaly.</text>
+				<hiddenAug>RVS_SCIENCE_ION_DODGE</hiddenAug>
+				<text>Examining the interferance of this intense storm on your hull, your crew is able to devise a way to use the disruptive frequencies to hide your ship from enemy sensors. This upgrade will provide an additional 10% evasion chance. You will have to report your findings at some point in the future to someone who can crack the mysteries of this anomaly.</text>
 			</event>
 		</choice>
-		<choice hidden="true">	
-			<text>Take the time to make improvements to your ships reactor.</text>
-			<event>	
-				<upgrade amount="3" system="reactor"/>	<!-- R4 2024.05.21: Pepson? Chrono? Julk? Which one of you are good at hyerspace xml LUA shenangains. I would like this to also increase the reactor cap by 2 or this upgrade not contribute to the cap. -->	<!-- TODO -->
-				<text>Your ships reactor is struggling to provide power to your systems. Although certain elements of your ship is recieving power not from your reactor but instead externally from the storm. Studying this exotic interaction you are able to find a way to optimise the ships power effeciency without making any major alternations to the ships reactor. You will have to report your findings at some later point to someone who could crack the mysteries of this anomaly.</text>
+		<choice req="RVS_SCIENCE_ION_POWER" lvl="0" max_lvl="0" blue="false" hidden="true">	
+			<text>Take the time to make improvements to your ship's reactor.</text>
+			<event>
+				<hiddenAug>RVS_SCIENCE_ION_POWER</hiddenAug>
+				<text>Your ship's reactor is struggling to provide power to your systems, but certain elements of your ship are recieving power from the storm. Studying this exotic interaction, you are able to find a way to optimise the ship's power efficiency without making any major alternations to the reactor. This upgrade will provide 2 bonus power to a system of your choice.</text>
+				<choice req="weapons" hidden="true" blue="false">
+					<text>Weapons.</text>
+					<event>
+						<variable name="loc_ai_bonus_power_system" op="set" val="3"/>
+						<loadEvent>RVS_PERIPHERY_SCIENCE_ION_ENERGY_END</loadEvent>
+					</event>
+				</choice>
+				<choice req="shields" hidden="true" blue="false">
+					<text>Shields.</text>
+					<event>
+						<variable name="loc_ai_bonus_power_system" op="set" val="0"/>
+						<loadEvent>RVS_PERIPHERY_SCIENCE_ION_ENERGY_END</loadEvent>
+					</event>
+				</choice>
+				<choice req="engines" hidden="true" blue="false">
+					<text>Engines.</text>
+					<event>
+						<variable name="loc_ai_bonus_power_system" op="set" val="1"/>
+						<loadEvent>RVS_PERIPHERY_SCIENCE_ION_ENERGY_END</loadEvent>
+					</event>
+				</choice>
+				<choice req="medbay" hidden="true" blue="false">
+					<text>Medbay.</text>
+					<event>
+						<variable name="loc_ai_bonus_power_system" op="set" val="5"/>
+						<loadEvent>RVS_PERIPHERY_SCIENCE_ION_ENERGY_END</loadEvent>
+					</event>
+				</choice>
+				<choice req="clonebay" hidden="true" blue="false">
+					<text>Clonebay.</text>
+					<event>
+						<variable name="loc_ai_bonus_power_system" op="set" val="13"/>
+						<loadEvent>RVS_PERIPHERY_SCIENCE_ION_ENERGY_END</loadEvent>
+					</event>
+				</choice>
+				<choice req="oxygen" hidden="true" blue="false">
+					<text>Oxygen.</text>
+					<event>
+						<variable name="loc_ai_bonus_power_system" op="set" val="2"/>
+						<loadEvent>RVS_PERIPHERY_SCIENCE_ION_ENERGY_END</loadEvent>
+					</event>
+				</choice>
+				<choice req="drones" hidden="true" blue="false">
+					<text>Drones.</text>
+					<event>
+						<variable name="loc_ai_bonus_power_system" op="set" val="4"/>
+						<loadEvent>RVS_PERIPHERY_SCIENCE_ION_ENERGY_END</loadEvent>
+					</event>
+				</choice>
+				<choice req="cloaking" hidden="true" blue="false">
+					<text>Cloaking.</text>
+					<event>
+						<variable name="loc_ai_bonus_power_system" op="set" val="10"/>
+						<loadEvent>RVS_PERIPHERY_SCIENCE_ION_ENERGY_END</loadEvent>
+					</event>
+				</choice>
+				<choice req="teleporter" hidden="true" blue="false">
+					<text>Teleporter.</text>
+					<event>
+						<variable name="loc_ai_bonus_power_system" op="set" val="9"/>
+						<loadEvent>RVS_PERIPHERY_SCIENCE_ION_ENERGY_END</loadEvent>
+					</event>
+				</choice>
+				<choice req="mind" hidden="true" blue="false">
+					<text>Mind Control.</text>
+					<event>
+						<variable name="loc_ai_bonus_power_system" op="set" val="14"/>
+						<loadEvent>RVS_PERIPHERY_SCIENCE_ION_ENERGY_END</loadEvent>
+					</event>
+				</choice>
+				<choice req="hacking" hidden="true" blue="false">
+					<text>Hacking.</text>
+					<event>
+						<variable name="loc_ai_bonus_power_system" op="set" val="15"/>
+						<loadEvent>RVS_PERIPHERY_SCIENCE_ION_ENERGY_END</loadEvent>
+					</event>
+				</choice>
+				<choice req="temporal" hidden="true" blue="false">
+					<text>Temporal Manipulator.</text>
+					<event>
+						<variable name="loc_ai_bonus_power_system" op="set" val="20"/>
+						<loadEvent>RVS_PERIPHERY_SCIENCE_ION_ENERGY_END</loadEvent>
+					</event>
+				</choice>
 			</event>
 		</choice>
-		<!-- R4 2024.05.21: DM me on discord if you have any ideas you wish to implement for this event. Bonus points if you can implement it yourself. -->	<!-- TODO-->
+	</event>
+	<event name="RVS_PERIPHERY_SCIENCE_ION_ENERGY_END">
+		<text>After the upgrade is performed, you decide you will have to report your findings at some point in the future to someone who can crack the mysteries of this anomaly.</text>
 	</event>
 	
 	<!-- 

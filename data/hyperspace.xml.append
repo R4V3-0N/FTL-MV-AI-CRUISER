@@ -807,6 +807,10 @@
     <aug name="RVS_ANTI_GRAVITY_ENGINE">
 		<function name="FTL_BOOSTER" value="0.1" useForReqs="true"/>
 	</aug>
+    <aug name="RVS_SCIENCE_ION_SHIELD">
+		<function name="SHIELD_RECHARGE" value="0.2" useForReqs="false" warning="false"/>
+        <function name="ION_ARMOR" value="0.2" useForReqs="false" warning="false"/>
+	</aug>
 </augments>
 
 <!-- Requirement Lists-->
@@ -824,6 +828,7 @@
     <mod-append:variable name="loc_ai_ach_no_miss_count" op="set" val="0"/>
     <mod-append:variable name="loc_high_rebels_killed" op="set" val="0"/>
     <mod-append:variable name="loc_ai_mutants_exist" op="set" val="0"/>
+    <mod-append:variable name="loc_ai_bonus_power_system" op="set" val="-1"/>
     <mod-append:req name="RVS_REQ_AI_ARTILLERY" type="all">
         <req type="any">
             <name>SHIP PLAYER_SHIP_RVSP_AI</name>
