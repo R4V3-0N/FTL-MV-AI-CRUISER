@@ -131,17 +131,15 @@ script.on_game_event("RVS_FREIGHTER_CONVOY_WIN", false, defeatRebel)   --GO BALL
 -- Hard "HOW DID WE GET HERE"
 script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
     local playerShip = Hyperspace.ships.player
-    local checkAch = should_track_achievement("ACH_SHIP_RVSP_REBEL_ALT_3", playerShip, "PLAYER_SHIP_RVSP_REBEL_ALT") and
+    local space = Hyperspace.App.world.space
+    local awardAch = should_track_achievement("ACH_SHIP_RVSP_REBEL_ALT_3", playerShip, "PLAYER_SHIP_RVSP_REBEL_ALT") and
                      playerShip.iIntruderCount >= 1 and
                      playerShip.fuel_count <= 0 and
-                     playerShip.fireSpreader.count >= 1
-    if checkAch then
-        for projectile in vter(Hyperspace.App.world.space.projectiles) do -- Janky way to check if under ASB fire
-            if projectile.extend and projectile.extend.name == "PDS_SHOT" then
-                Hyperspace.CustomAchievementTracker.instance:SetAchievement("ACH_SHIP_RVSP_REBEL_ALT_3", false)
-                return
-            end
-        end
+                     playerShip.fireSpreader.count >= 1 and
+                     space.bPDS and
+                     (space.envTarget == 0 or space.envTarget == 2)
+    if awardAch then
+        Hyperspace.CustomAchievementTracker.instance:SetAchievement("ACH_SHIP_RVSP_REBEL_ALT_3", false)
     end
 end)
 
