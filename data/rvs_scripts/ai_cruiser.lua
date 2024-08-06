@@ -40,6 +40,15 @@ local function get_crew_count_name(ship, speciesName)
     return 0
 end
 
+local function race_exists(race)
+    return Hyperspace.Blueprints:GetCrewBlueprint(race).name == race
+end
+
+-- Check if TRC's mutants are available
+script.on_init(function(newGame)
+    if newGame and race_exists("mutant") then Hyperspace.playerVariables.loc_ai_mutants_exist = 1 end
+end)
+
 -- Make a list of hologram crew that's easier to reference
 local holoSpecies = {}
 script.on_load(function()

@@ -823,6 +823,7 @@
     <mod-append:variable name="loc_ai_ach_missed_this_fight" op="set" val="0"/>
     <mod-append:variable name="loc_ai_ach_no_miss_count" op="set" val="0"/>
     <mod-append:variable name="loc_high_rebels_killed" op="set" val="0"/>
+    <mod-append:variable name="loc_ai_mutants_exist" op="set" val="0"/>
     <mod-append:req name="RVS_REQ_AI_ARTILLERY" type="all">
         <req type="any">
             <name>SHIP PLAYER_SHIP_RVSP_AI</name>

@@ -870,27 +870,20 @@
 		<choice hidden="true" req="challenge_level" lvl="2" max="3" blue="false" max_group="0">
 			<text>Investigate the station.</text>
 			<event>
-				<triggeredEvent event="RVS_MUSKY_BOARDING_WIN" thisFight="false" clearOnJump="true">
-					<enemyCrew amount="0" includeClonebay="false"/>
-				</triggeredEvent>
-				<boarders min="2" max="4" class="human_engineer"/>
-				<text>Your crew navigates dimly lit passageways in the abandoned station, revealing signs of a struggle with scattered terminals and medical instruments. A functioning terminal displays a message: "First human received SynapSync implant, recovering well, promising neuron spike detection." As the red lights die, a sense of danger grips your crew, and they sprint back to the ship. Footsteps and guttural sounds echo, intensifying with each passageway. Collapsing into the airlock, you scramble to your feet, drawing your blaster - these things are already on board.</text>
+				<loadEventList default="RVS_MUSKY_BOARDING_HARD">
+					<event name="RVS_MUSKY_BOARDING_HARD_MUTANT" req="loc_ai_mutants_exist"/>
+				</loadEventList>
 			</event>
 		</choice>
 		<choice hidden="true" req="challenge_level" lvl="0" max="1" blue="false" max_group="0">
 			<text>Investigate the station.</text>
 			<event>
-				<triggeredEvent event="RVS_MUSKY_BOARDING_WIN" thisFight="false" clearOnJump="true">
-					<enemyCrew amount="0" includeClonebay="false"/>
-				</triggeredEvent>
-				<boarders min="1" max="3" class="human_engineer"/>
-				<text>Your crew navigates dimly lit passageways in the abandoned station, revealing signs of a struggle with scattered terminals and medical instruments. A functioning terminal displays a message: "First human received SynapSync implant, recovering well, promising neuron spike detection." As the red lights die, a sense of danger grips your crew, and they sprint back to the ship. Footsteps and guttural sounds echo, intensifying with each passageway. Collapsing into the airlock, you scramble to your feet, drawing your blaster - these things are already on board.</text>
+				<loadEventList default="RVS_MUSKY_BOARDING_EASY">
+					<event name="RVS_MUSKY_BOARDING_EASY_MUTANT" req="loc_ai_mutants_exist"/>
+				</loadEventList>
 			</event>
 		</choice>
-	
-		<!-- R4 2024.08.03: TODO I want to make it have mutents when you have TRC turned on-->
-
-		<choice hidden="true" max_group="1">
+		<choice hidden="true" req="pilot" lvl="1" max_group="1" blue="false">
 			<text>Do something onboard the ship.</text>
 			<event>
 				<text>What ever is the reason for this station being here in this forsaken sector isn't of importance to you. You take a look at what can be down on your ship instead.</text>
@@ -902,6 +895,35 @@
 		</choice>
 	</event>
 	
+	<event name="RVS_MUSKY_BOARDING_EASY">
+		<triggeredEvent event="RVS_MUSKY_BOARDING_WIN" thisFight="false" clearOnJump="true">
+			<enemyCrew amount="0" includeClonebay="false"/>
+		</triggeredEvent>
+		<boarders min="1" max="3" class="human_engineer"/>
+		<text>Your crew navigates dimly lit passageways in the abandoned station, revealing signs of a struggle with scattered terminals and medical instruments. A functioning terminal displays a message: "First human received SynapSync implant, recovering well, promising neuron spike detection." As the red lights die, a sense of danger grips your crew, and they sprint back to the ship. Footsteps and guttural sounds echo, intensifying with each passageway. Collapsing into the airlock, you scramble to your feet, drawing your blaster - these things are already on board.</text>
+	</event>
+	<event name="RVS_MUSKY_BOARDING_HARD">
+		<triggeredEvent event="RVS_MUSKY_BOARDING_WIN" thisFight="false" clearOnJump="true">
+			<enemyCrew amount="0" includeClonebay="false"/>
+		</triggeredEvent>
+		<boarders min="2" max="4" class="human_engineer"/>
+		<text>Your crew navigates dimly lit passageways in the abandoned station, revealing signs of a struggle with scattered terminals and medical instruments. A functioning terminal displays a message: "First human received SynapSync implant, recovering well, promising neuron spike detection." As the red lights die, a sense of danger grips your crew, and they sprint back to the ship. Footsteps and guttural sounds echo, intensifying with each passageway. Collapsing into the airlock, you scramble to your feet, drawing your blaster - these things are already on board.</text>
+	</event>
+	<event name="RVS_MUSKY_BOARDING_EASY_MUTANT">
+		<triggeredEvent event="RVS_MUSKY_BOARDING_WIN" thisFight="false" clearOnJump="true">
+			<enemyCrew amount="0" includeClonebay="false"/>
+		</triggeredEvent>
+		<boarders min="1" max="2" class="mutant"/>
+		<text>Your crew navigates dimly lit passageways in the abandoned station, revealing signs of a struggle with scattered terminals and medical instruments. A functioning terminal displays a message: "First human received SynapSync implant, recovering well, promising neuron spike detection." As the red lights die, a sense of danger grips your crew, and they sprint back to the ship. Footsteps and guttural sounds echo, intensifying with each passageway. Collapsing into the airlock, you scramble to your feet, drawing your blaster - these things are already on board.</text>
+	</event>
+	<event name="RVS_MUSKY_BOARDING_HARD_MUTANT">
+		<triggeredEvent event="RVS_MUSKY_BOARDING_WIN" thisFight="false" clearOnJump="true">
+			<enemyCrew amount="0" includeClonebay="false"/>
+		</triggeredEvent>
+		<boarders min="2" max="3" class="mutant"/>
+		<text>Your crew navigates dimly lit passageways in the abandoned station, revealing signs of a struggle with scattered terminals and medical instruments. A functioning terminal displays a message: "First human received SynapSync implant, recovering well, promising neuron spike detection." As the red lights die, a sense of danger grips your crew, and they sprint back to the ship. Footsteps and guttural sounds echo, intensifying with each passageway. Collapsing into the airlock, you scramble to your feet, drawing your blaster - these things are already on board.</text>
+	</event>
+
 	<event name="RVS_MUSKY_BOARDING_WIN">
 		<autoReward level="RANDOM">standard</autoReward>
 		<text>Laser burns mark the walls of the docking bay. The firefight is over and before you are the results of the 'research' conducted on this facility. Subjects that are driven to insanity by implants and cybernetics that they were experimented with. You decide that this twisted place should not remain and expunge it with prejudice.</text>
