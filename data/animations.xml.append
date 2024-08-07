@@ -17,7 +17,8 @@
 <animSheet name="rvs_beam_ion_bust_1" w="290" h="76" fw="29" fh="76">weapons/rvs_beam_ion_bust_1_strip10.png</animSheet>
 <animSheet name="rvs_beam_ion_bust_2" w="306" h="86" fw="34" fh="86">weapons/rvs_beam_ion_bust_2_strip9.png</animSheet>
 <animSheet name="rvs_flock_gun" w="351" h="100" fw="39" fh="100">weapons_hyperspace/rvs_flock_gun_strip9.png</animSheet>
-<animSheet name="rvs_projector_avatar" w="924" h="61" fw="42" fh="61">weapons/rvs_projector_avatar_strip22.png</animSheet>
+<animSheet name="rvs_projector_avatar" w="924" h="61" fw="42" fh="61">weapons/rvs_projector_avatar_strip22.png</animSheet>					<!-- BOSS DROP, MV RENEGADE CRUISER -->
+<animSheet name="rvs_projector_avatar_chaos" w="924" h="61" fw="42" fh="61">weapons/rvs_projector_avatar_chaos_strip22.png</animSheet>		<!-- BOSS DROP, CHAOS MV RENEGADE CRUISER -->
 
 <weaponAnim name="rvs_flock_gun">
 	<sheet>rvs_flock_gun</sheet>
@@ -57,6 +58,15 @@
 
 <weaponAnim name="rvs_projector_avatar">
 	<sheet>rvs_projector_avatar</sheet>
+	<desc length="22" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>10</fireFrame>
+	<firePoint  x="26" y="7"/>
+	<mountPoint x="4" y="47"/>
+	<chargeImage>weapons/rvs_projector_avatar_glow.png</chargeImage>
+</weaponAnim>
+<weaponAnim name="rvs_projector_avatar_chaos">
+	<sheet>rvs_projector_avatar_chaos</sheet>
 	<desc length="22" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>10</fireFrame>
