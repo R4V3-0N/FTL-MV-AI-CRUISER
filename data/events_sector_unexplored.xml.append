@@ -15,7 +15,7 @@
 	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	-->
 	<textList name="RVS_TEXT_START_NEBULA_AI">
-		<text>This sector was originally reported to be a vast void empty of anything of note. But in recent years a nebula has engulfed the region following several dramatic supoernovae explosions. Strangely prior astrogaphy surveys indicated it should still be many millions of years before these stars would've reached their end.</text>
+		<text>This sector was originally reported to be a vast void empty of anything of note. But in recent years a nebula has engulfed the region following several dramatic supernovae explosions. Strangely prior astrography surveys indicated it should still be many millions of years before these stars would've reached their end.</text>
 		<text>This sector was once a bustling with shipyards of the once great leech republic before their eventual downfall. The database indicate that the sector is largely abandoned over the past few decades but recent Federation reports indicate that the sector has been becoming more active in recent years.</text>
 		<text>True to its designation on the map, this sector is primarily unpopulated. Currently, reports indicate recent attacks have increased in the sector most likely the result of some outcasts or pirates seeking refuge off the grid.</text>
 		<text>There are no data entries of such vast nebula formations being present in this sector. It reportedly was lastly astrographed as small agricultural colonies out in the periphery. What ever had happened it seems they are long gone.</text>
@@ -184,7 +184,7 @@
 		<autoReward level="LOW">standard</autoReward>
 	</event>
 	<event name="RVS_PERIPHERY_FREE_ITEMS_EFLEET">
-		<text>An Engi cleanup fleet is stationed in orbit performing precision ion bombardments bellow in an attempt to root out any rogue AIs taking refuge on the planet. Noticing you they decided to take the opertunity to entice you with some supplies if you agree to take out any rogue AI's you come across on your journey through this sector.</text>
+		<text>An Engi cleanup fleet is stationed in orbit performing precision ion bombardments bellow in an attempt to root out any rogue AIs taking refuge on the planet. Noticing you they decided to take the opportunity to entice you with some supplies if you agree to take out any rogue AI's you come across on your journey through this sector.</text>
 		<customFleet right="false" firing="false" autoDarkening="false">CUSTOM_FLEET_ENGI</customFleet>
 		<autoReward level="LOW">standard</autoReward>
 	</event>
@@ -636,7 +636,7 @@
 			<text>Take the time to make improvements to your ship's reactor.</text>
 			<event>
 				<hiddenAug>RVS_SCIENCE_ION_POWER</hiddenAug>
-				<text>Your ship's reactor is struggling to provide power to your systems, but certain elements of your ship are recieving power from the storm. Studying this exotic interaction, you are able to find a way to optimise the ship's power efficiency without making any major alternations to the reactor. This upgrade will provide 2 bonus power to a system of your choice.</text>
+				<text>Your ship's reactor is struggling to provide power to your systems, but certain elements of your ship are receiving power from the storm. Studying this exotic interaction, you are able to find a way to optimise the ship's power efficiency without making any major alternations to the reactor. This upgrade will provide 2 bonus power to a system of your choice.</text>
 				<choice req="weapons" hidden="true" blue="false">
 					<text>Weapons.</text>
 					<event>
@@ -832,7 +832,7 @@
 					<text>Something that high tech must have something valuable, attack it!</text>
 					<event>
 						<ship hostile="true"/>
-						<text>Against your better judgement you couldn't ignore an opertunity like this with such a great opertunity before you. You decide to take the risk and move in to attack!</text>
+						<text>Against your better judgement you couldn't ignore an opportunity like this with such a great opportunity before you. You decide to take the risk and move in to attack!</text>
 						<choice hidden="true">
 							<text>Continue...</text>
 							<event load="COMBAT_CHECK"/>					<!-- R4 2024.08.03: Just added combat check-->
@@ -1234,7 +1234,7 @@
 							<clone>false</clone>
 							<text/>
 						</removeCrew>
-						<text>Fabricating an advanced microfighter in mere seconds. You can see why these rogue avatars can be an indomitable foe. Requiring an AI pilot your avatar dematerialises as its conciousness gets uploaded directly into the fighter.</text>
+						<text>Fabricating an advanced microfighter in mere seconds. You can see why these rogue avatars can be an indomitable foe. Requiring an AI pilot your avatar dematerialises as its consciousness gets uploaded directly into the fighter.</text>
 						<choice>
 							<text>Continue...</text>
 							<event>
@@ -1405,7 +1405,7 @@
 	<!-- ship events for RVS_PERIPHERY_AI_DISTRESS_SIGNAL -->
 	<ship name="RVS_PERIPHERY_DISTRESS_RVS_AI_ASSAULT" auto_blueprint="RVS_AI_ASSAULT">
 		<destroyed>
-			<text>The ship explodes and sparks as elements of it come flying off of the ship in its final spiral into destruction. You have successfully defeated the AI Assault craft. While scrapping the remains you recieve a hail from the Zoltan Bomber.</text>
+			<text>The ship explodes and sparks as elements of it come flying off of the ship in its final spiral into destruction. You have successfully defeated the AI Assault craft. While scrapping the remains you receive a hail from the Zoltan Bomber.</text>
 			<autoReward level="MED">standard</autoReward>
 			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
@@ -1413,7 +1413,7 @@
 			</choice>
 		</destroyed>
 		<deadCrew>
-			<text>The last avatar fickers and sparks and not long after the main ship AI falls silent. You have successfully defeated the AI Assault craft. While scrapping the remains you recieve a hail from the Zoltan Bomber.</text>
+			<text>The last avatar fickers and sparks and not long after the main ship AI falls silent. You have successfully defeated the AI Assault craft. While scrapping the remains you receive a hail from the Zoltan Bomber.</text>
 			<autoReward level="HIGH">standard</autoReward>
 			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
@@ -1432,7 +1432,7 @@
 			</choice>
 		</destroyed>
 		<deadCrew>
-			<text>The last avatar fickers and sparks and not long after the main ship AI falls silent. You have successfully defeated the AI Assault craft. While scrapping the remains you recieve a hail from the Zoltan Bomber.</text>
+			<text>The last avatar fickers and sparks and not long after the main ship AI falls silent. You have successfully defeated the AI Assault craft. While scrapping the remains you receive a hail from the Zoltan Bomber.</text>
 			<autoReward level="HIGH">standard</autoReward>
 			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
@@ -1529,7 +1529,7 @@
 	</event>
 	
 	<event name="RVS_AI_SUN" unique="true">
-		<text>The sun at this beacon is going through a particularly violent solar storm. Your short range sensors detect an unknown vessel basking in the flares of star seemingly waiting for you to arrive and hails. You witness a hard-light construct similar to the new hard-light soldiers the Federation had been trialling in some universes, but it appears this one is struggling to maintain its form, likely due to extensive damage taken while basking in the sun. "O-o-organics? Fascin-[UNACCEPTABLE]. You are wel-elcome-ome-ome to [PERISH] here!" You cut the feed and they immediately slide into an aggressive attack position. There is no reasoning with this AI.</text>
+		<text>The sun at this beacon is going through a particularly violent solar storm. Your short range sensors detect an unknown vessel basking in the flares of star seemingly waiting for you to arrive and hails. You witness a hard-light construct similar to the new hard-light soldiers the Federation had been trialing in some universes, but it appears this one is struggling to maintain its form, likely due to extensive damage taken while basking in the sun. "O-o-organics? Fascin-[UNACCEPTABLE]. You are wel-elcome-ome-ome to [PERISH] here!" You cut the feed and they immediately slide into an aggressive attack position. There is no reasoning with this AI.</text>
 		<ship load="RVS_SHIP_AI_FIGHT" hostile="true"/>
 		<environment type="sun"/>
 		<choice hidden="true">
@@ -1556,7 +1556,7 @@
 		<text>You thought you might have spotted a cruiser hiding in the nebula. But before your ship can give chase, it disappears into the clouds and a smaller vessel appears behind you, guns blazing. You abandon the mystery and swivel around for combat.</text>
 		<text>The nebula here almost feels too different than those outside of this sector. Unfortunately, you don't have long to reflect on this thought as a vessel hidden within the clouds interrupts the silence and moves in to engage.</text>
 		<text>Shortly after your arrival, you receive a hail from an Engi vessel hidden somewhere in the nebula with an urgent message. "Warning: Not let one escape." Just as the hail ends abruptly, you witness a great flash inside the nebula. You order your weapons to be ready and move towards their last known coordinates, ready to meet their perpetuator.</text>
-		<text>You detect the tell-tale signs of a Zoltan vessel hidden within the nebula as the clouds glow a faint green before you. "Renegade! You should not have come here. This sector is off limits and is under-" the transmission temporarily cuts to static before resuming "all hands, reactor breach detected! Prepare for emergency jump!" You are almost relieved at first to not recieve another lecture from some Zoltan would-be beaurocrat. But what scares you more was what ever sent them running. Even more so when it starts firing upon you!</text>
+		<text>You detect the tell-tale signs of a Zoltan vessel hidden within the nebula as the clouds glow a faint green before you. "Renegade! You should not have come here. This sector is off limits and is under-" the transmission temporarily cuts to static before resuming "all hands, reactor breach detected! Prepare for emergency jump!" You are almost relieved at first to not receive another lecture from some Zoltan would-be bureaucrat. But what scares you more was what ever sent them running. Even more so when it starts firing upon you!</text>
 		<text>A ship bearing a mysterious design and structure begins to scan your systems and computers for analysis. Whatever it is they found, they would prefer to see it scattered across the clouds of this nebula.</text>
 	</textList>
 	
@@ -1680,7 +1680,7 @@
 	</event>
 	<textList name="RVS_TEXT_GENERIC_ENCOUNTER_AI_NEBULA">
 		<text>Inside the mass of the nebula it is hard to see anything. Though you won't need your sensors to tell you aren't alone here as a shot brushes close off your port bow!</text>
-		<text>A Federation ship is going toe-to-toe with a rogue vessel inside the nebula and they aren't winning. Identifying you as the stronger and more able ship it turns to engage you instead and the Federation ship takes the opertunity to escape.</text>
+		<text>A Federation ship is going toe-to-toe with a rogue vessel inside the nebula and they aren't winning. Identifying you as the stronger and more able ship it turns to engage you instead and the Federation ship takes the opportunity to escape.</text>
 		<text>Crossing your path is a rogue vessel like those described to lurk in the periphery systems. This one strayed closer into known space and made the unfortunate choice of crossing your path.</text>
 		<text>There were chats on Federation Multiverse Mercenary channels back at the drop point about strange unidentified vessels detected on the periphery of known space. You wish you paid more attention to those chats, seeing that one such vessel is preparing to take a hostile stance!</text>
 		<text>The lights of an advanced craft betrays its attempt to hide within this nebula. Sensing it is discovered it takes no chances and moves in to attack!</text>

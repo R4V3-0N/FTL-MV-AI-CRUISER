@@ -41,7 +41,7 @@
 	<title>Ion Bust Beam Mark II</title>
 	<short>Ion Bust II</short>
 	<tip>rvs_tip_ion_bust</tip>
-	<desc>A powerful beam that deals devestating damage against ionized systems.</desc>
+	<desc>A powerful beam that deals devastating damage against ionized systems.</desc>
 	<tooltip>Beam weapon; 2 damage; 2x damage in ionized rooms.</tooltip>
 	<damage>2</damage>
 	<sp>0</sp>
@@ -373,7 +373,7 @@
 	<title>Flock Gun</title>
 	<short>Flock Gun</short>
 	<tip>rvs_tip_flock_gun</tip>
-	<desc>A weapon designed by a runaway automated fleet. Not bad considering it was designed by something that only had just achieved swarm conciousness 5 minutes prior. An eratic burst weapon that heavily relies on targeting data from other drones for increased critical chance and precision.</desc>
+	<desc>A weapon designed by a runaway automated fleet. Not bad considering it was designed by something that only had just achieved swarm consciousness 5 minutes prior. An erratic burst weapon that heavily relies on targeting data from other drones for increased critical chance and precision.</desc>
 	<tooltip>Fires 4 projectiles, 1 damage each with chance for critical based on number of active drones.</tooltip>
 	<radius>70</radius>				<!-- R4 2023.08.07 Increased from 60 to 70, but now each drone decreases radius by 15 instead of 5 -->
 	<!-- Radius goes down by 15 for each drone active,
@@ -581,7 +581,7 @@
 	<tip>tip_focus</tip>
 	<title>Splitter Beam Projectile</title>
 	<short>Splitter Beam Projectile</short>
-	<desc>YOU SOULD NEVER SEE THIS</desc>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
 	<damage>1</damage>
 	<sp>0</sp>
@@ -607,7 +607,7 @@
 	<tip>tip_focus</tip>
 	<title>Splitter Beam Projectile</title>
 	<short>Splitter Beam Projectile</short>
-	<desc>YOU SOULD NEVER SEE THIS</desc>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
 	<damage>2</damage>
 	<sp>0</sp>
@@ -698,7 +698,7 @@
     <tip>rvs_tip_focus_split</tip>
     <title>Splitter Pinpoint Mark III</title> <!-- Scatter Beam mark II? -->
     <short>Splitter III</short>
-    <desc>Fires devestating volley of 3 pinpoint beams that deal 2 damage each.</desc>
+    <desc>Fires devastating volley of 3 pinpoint beams that deal 2 damage each.</desc>
     <tooltip>Fires a scatter of beams across a random area doing up to 4 damage.</tooltip>
     <radius>55</radius> <!-- might reduce to 50 later? -->
     <damage>2</damage> <!-- two damage on the mark 3-->
@@ -1239,8 +1239,8 @@
 	<short>Effect. II</short>
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
-	<desc>Designed to shortly nullify enemy specialized sytems. This fast charging projector device hacks systems at a higher rate than its predecessor.</desc>
-	<descriptionOverride>Designed to shortly nullify enemy specialized sytems. This fast charging projector device hacks systems at a higher rate than its predecessor.
+	<desc>Designed to shortly nullify enemy specialized systems. This fast charging projector device hacks systems at a higher rate than its predecessor.</desc>
+	<descriptionOverride>Designed to shortly nullify enemy specialized systems. This fast charging projector device hacks systems at a higher rate than its predecessor.
 
 		Stats:
 		Required Power: 3
@@ -2017,7 +2017,7 @@ Fire Chance: 60%</tooltipOverride>
 	<tip>tip_focus</tip>
 	<title>Energy Splitter Beam Projectile</title>
 	<short>Energy Splitter Beam Projectile</short>
-	<desc>YOU SOULD NEVER SEE THIS</desc>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
 	<damage>1</damage>
 	<sp>0</sp>
@@ -2048,7 +2048,7 @@ Fire Chance: 60%</tooltipOverride>
 	<tip>tip_focus</tip>
 	<title>Energy Splitter Beam Projectile</title>
 	<short>Energy Splitter Beam Projectile</short>
-	<desc>YOU SOULD NEVER SEE THIS</desc>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
 	<damage>2</damage>
 	<sp>0</sp>
@@ -2220,8 +2220,8 @@ Fire Chance: 60%</tooltipOverride>
     <tip>rvs_tip_focusenergy</tip>
     <title>'Babylon' Splitter</title>
     <short>'Babylon'</short>
-    <desc>A combination of Energy and Pinpoint technology. Deals no system damage, but fires devestating volley of 3 pinpoint beams that deal 2 hull and ion damage each. Likely to start fires.</desc>
-    <descriptionOverride>A combination of Energy and Pinpoint technology. Deals no system damage, but fires devestating volley of 3 pinpoint beams that deal 2 hull and ion damage each. Likely to start fires.
+    <desc>A combination of Energy and Pinpoint technology. Deals no system damage, but fires devastating volley of 3 pinpoint beams that deal 2 hull and ion damage each. Likely to start fires.</desc>
+    <descriptionOverride>A combination of Energy and Pinpoint technology. Deals no system damage, but fires devastating volley of 3 pinpoint beams that deal 2 hull and ion damage each. Likely to start fires.
 
 		Stats:
 		Required Power: 3
@@ -2392,7 +2392,7 @@ Fire Chance: 60%</tooltipOverride>
 	<type>LASER</type>
 	<title>RVS DRONE LASER SCATTER</title>
 	<short>YOU SHOULDN'T SEE THIS</short>
-	<desc>YOU SHOULDN'T SEE THIS - REPORT THIS TO R4V3-0N... But while you are here: this is a laser scatter equiped on drones</desc>
+	<desc>YOU SHOULDN'T SEE THIS - REPORT THIS TO R4V3-0N... But while you are here: this is a laser scatter equipped on drones</desc>
 	<damage>1</damage>
 	<sysDamage>-1</sysDamage>
 	<persDamage>-1</persDamage>
@@ -2464,7 +2464,7 @@ Fire Chance: 60%</tooltipOverride>
 	<type>LASER</type>
 	<title>RVS DRONE LIGHT EMP</title>
 	<short>YOU SHOULDN'T SEE THIS</short>
-	<desc>YOU SHOULDN'T SEE THIS - REPORT THIS TO R4V3-0N... But while you are here: this is a light EMP device equiped on drones</desc>
+	<desc>YOU SHOULDN'T SEE THIS - REPORT THIS TO R4V3-0N... But while you are here: this is a light EMP device equipped on drones</desc>
 	<damage>0</damage>
 	<speed>35</speed>
 	<shots>1</shots>
@@ -2499,15 +2499,15 @@ Fire Chance: 60%</tooltipOverride>
 	<!--<tip>tip_ai_microfighter</tip>-->
 	<title>AI Shock Microfighter</title>
 	<short>Shock Drone</short>
-	<desc>Modified well beyond safety parametres by a rather obnoxious Avatar which pilots this craft. This evasive Microfighter has an EMP-centred loadout that excels in disabling ships systems single-handedly when their shielding is disabled.</desc>
+	<desc>Modified well beyond safety parameters by a rather obnoxious Avatar which pilots this craft. This evasive Microfighter has an EMP-centred loadout that excels in disabling ships systems single-handedly when their shielding is disabled.</desc>
 	<!--	Excessively long non-descriptive description I wrote... starting to think I want to port Slow's INS+ computer menu into MV
-	<desc>Piloted by a rather obnoxious Avatar, modified well beyond nominal safety parametres stripping away standard EMP shielding necessary for other Avatars to maintain a link. SRKZ on the other hand is well suited to pilot this specialised microfighter.</desc>
+	<desc>Piloted by a rather obnoxious Avatar, modified well beyond nominal safety parameters stripping away standard EMP shielding necessary for other Avatars to maintain a link. SRKZ on the other hand is well suited to pilot this specialised microfighter.</desc>
 	-->
 	<!--	long modified desc from HS:DF,
 	<desc>The avatar of this thing is most obnoxious. Other AIs needed additional EMP shielding.</desc>
 	-->
 	<!--	Short modified desc from HS:DF,
-	<desc>An EMP-centred loadout that excels in disabling early game enemies, but ill equiped to deal with enemies with stronger shielding.</desc>
+	<desc>An EMP-centred loadout that excels in disabling early game enemies, but ill equipped to deal with enemies with stronger shielding.</desc>
 	-->
 	<power>2</power>	<!-- Changing it to 2 from 1 for more speed -->
 	<cooldown>1000</cooldown>
@@ -2555,7 +2555,7 @@ Fire Chance: 60%</tooltipOverride>
 	<tip>tip_focus</tip>
 	<title>Point Defense</title>
 	<short>Point Defense</short>
-	<desc>YOU SOULD NEVER SEE THIS</desc>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
 	<damage>0</damage>
 	<sp>0</sp>
@@ -2583,7 +2583,7 @@ Fire Chance: 60%</tooltipOverride>
 	<type>BURST</type>
 	<title>Laser Scatter-Burst</title>
 	<short>YOU SHOULDN'T SEE THIS</short>
-	<desc>YOU SHOULDN'T SEE THIS - REPORT THIS TO R4V3-0N... But while you are here: this is a laser scatter flak equiped on a defence drone</desc>
+	<desc>YOU SHOULDN'T SEE THIS - REPORT THIS TO R4V3-0N... But while you are here: this is a laser scatter flak equipped on a defence drone</desc>
 	<radius>15</radius>	<!-- half the radius of omnidrone-->
 	<damage>1</damage>
 	<speed>100</speed>
@@ -2897,7 +2897,7 @@ Fire Chance: 60%</tooltipOverride>
 	<tip>tip_toggle_combat</tip>
 	<title>Spawned Flock Drone</title>
 	<short>Flock Drone</short>
-	<desc>Based on an extremely lightweight template, this drone can be manufactured multiple times using negligable resources gathered during combat.</desc>
+	<desc>Based on an extremely lightweight template, this drone can be manufactured multiple times using negligible resources gathered during combat.</desc>
 	<power>1</power>
 	<cooldown>1000</cooldown>
 	<dodge>0</dodge>
@@ -2912,9 +2912,9 @@ Fire Chance: 60%</tooltipOverride>
 <weaponBlueprint name="RVS_AI_MICROFIGHTER_SWARM_CHILD_PROJ_DUMMY">
 	<type>MISSILES</type>
 	<tip>tip_missiles</tip>
-	<title>YOU SOULD NEVER SEE THIS</title>
-	<short>YOU SOULD NEVER SEE THIS</short>
-	<desc>YOU SOULD NEVER SEE THIS</desc>
+	<title>YOU SHOULD NEVER SEE THIS</title>
+	<short>YOU SHOULD NEVER SEE THIS</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
 	<damage>1</damage>
 	<shots>1</shots>
@@ -3164,7 +3164,7 @@ AUGMENTS
 
 <augBlueprint name="RVS_SHOCKING_SHIELDS">
     <title>Rerouted Insulation</title>
-	<desc>The electro insulation has been rerouted to provide 75% resistance against ions at the cost of organics onboard being more susceptable to stuns and remain stunned longer.</desc> <!-- AI are stun immune -->
+	<desc>The electro insulation has been rerouted to provide 75% resistance against ions at the cost of organics onboard being more susceptible to stuns and remain stunned longer.</desc> <!-- AI are stun immune -->
 	<cost>65</cost>
     <bp>8</bp>
     <rarity>0</rarity>	<!-- rarity in sector rarity list-->
@@ -3190,7 +3190,7 @@ AUGMENTS
 
 <augBlueprint name="RVS_AI_SWARM">
     <title>Assimilative Drone Bays</title>
-	<desc>When an enemy drone is shot down, a temporary drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon recieving hull damage.</desc>
+	<desc>When an enemy drone is shot down, a temporary drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon receiving hull damage.</desc>
 	<cost>70</cost>
     <bp>7</bp>
     <rarity>0</rarity>
@@ -3198,7 +3198,7 @@ AUGMENTS
 </augBlueprint>
 <augBlueprint name="RVS_AI_SWARM_LOCK">
     <title>Assimilative Drone Bays</title>
-	<desc>When an enemy drone is shot down, a temporary drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon recieving hull damage.</desc>
+	<desc>When an enemy drone is shot down, a temporary drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon receiving hull damage.</desc>
 	<cost>70</cost>
     <bp>7</bp>
     <rarity>0</rarity>

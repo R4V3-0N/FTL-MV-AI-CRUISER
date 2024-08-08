@@ -680,7 +680,7 @@
 	<choice hidden="true">
 		<text>Yes</text>
 		<event>
-			<text>Your hull absorbs the electric energy of the surrounding gasses, powering your reactor to full capactiy.</text>
+			<text>Your hull absorbs the electric energy of the surrounding gasses, powering your reactor to full capacity.</text>
             <status type="clear" target="player" system="reactor" amount="100"/>
 		</event>
 	</choice>
@@ -710,7 +710,7 @@
             <choice hidden="true">
                 <text>Continue...</text>
                 <event>
-                    <text>The energy feeds back into your hull, powering your reactor to full capactiy.</text>
+                    <text>The energy feeds back into your hull, powering your reactor to full capacity.</text>
                     <status type="clear" target="player" system="reactor" amount="100"/>
                 </event>
             </choice>

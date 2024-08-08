@@ -120,7 +120,7 @@
 	<chargeImage>weapons_rebalanced_arsenal/rvs_beam_pernach_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="rvs_beam_adaptive_1_charge" w="105" h="36" fw="35" fh="36">weapons_rebalanced_arsenal/rvs_beam_adaptive_1_chargeglow.png</animSheet>	<!-- R4 2024.06.24: Yeah, IDK why this is offset diagonally by one ,so I just changed the sprite instead of the parametres here. Good enough I suppose-->
+<animSheet name="rvs_beam_adaptive_1_charge" w="105" h="36" fw="35" fh="36">weapons_rebalanced_arsenal/rvs_beam_adaptive_1_chargeglow.png</animSheet>	<!-- R4 2024.06.24: Yeah, IDK why this is offset diagonally by one ,so I just changed the sprite instead of the parameters here. Good enough I suppose-->
 <anim name="rvs_beam_adaptive_1_charge">
 	<sheet>rvs_beam_adaptive_1_charge</sheet>
 	<desc length="3" x="0" y="0"/>
