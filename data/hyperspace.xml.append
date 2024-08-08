@@ -164,14 +164,18 @@
 		<crewLimit>8</crewLimit>
     </mod-append:customShip>
 
-    <mod-append:shipIcons>
-        <shipIcon>	<!-- Anti-gravity Engines -->
+    <mod:findLike type="shipIcons" limit="1">
+        <mod-append:shipIcon> <!-- Anti-gravity Engines -->
             <name>rvs_icon_antigrav_engine</name>
             <tooltip>ANTI-GRAV ENGINE:
-This ship is equipped with Anti-Gravity Engines providing it with increased evasion with each shot it fails to evade at the cost of its base evasion.
-            </tooltip>
-        </shipIcon>
-    </mod-append:shipIcons>
+This ship's base evasion is reduced by 5%, but it will gain 5% temporarily for each shot that hits its shields.</tooltip>
+        </mod-append:shipIcon>
+        <mod-append:shipIcon> <!-- Reflective Plating -->
+            <name>icon_reflective_plating</name>
+            <tooltip>REFLECTIVE PLATING:
+Beams that hit this ship's hull have a 50% chance to be reflected back at your ship.</tooltip>
+        </mod-append:shipIcon>
+    </mod:findLike>
 
     <!-- Achievements -->
     <mod:findLike type="achievements" limit="1">
@@ -724,6 +728,10 @@ This ship is equipped with Anti-Gravity Engines providing it with increased evas
 		<locked/>
 		<function name="RVS_AI_SWARM" value="1" useForReqs="true"/>
 	</aug>
+    <aug name="RVS_REFLECTIVE_PLATING">
+        <locked/>
+        <icon>icon_reflective_plating</icon>
+    </aug>
 <!-- Reference to get TP stuff right hopefully
 	<aug name="LOCKED_GLOBAL_TELEPORT">
 		<locked/>
@@ -829,6 +837,7 @@ This ship is equipped with Anti-Gravity Engines providing it with increased evas
     <mod-append:variable name="loc_high_rebels_killed" op="set" val="0"/>
     <mod-append:variable name="loc_ai_mutants_exist" op="set" val="0"/>
     <mod-append:variable name="loc_ai_bonus_power_system" op="set" val="-1"/>
+    <mod-append:variable name="loc_ai_reflect_power" op="set" val="0"/>
     <mod-append:req name="RVS_REQ_AI_ARTILLERY" type="all">
         <req type="any">
             <name>SHIP PLAYER_SHIP_RVSP_AI</name>

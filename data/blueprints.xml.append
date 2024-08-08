@@ -3188,6 +3188,16 @@ AUGMENTS
     <stackable>false</stackable>
 </augBlueprint>
 
+<augBlueprint name="RVS_REFLECTIVE_PLATING">
+    <title>Reflective Plating</title>
+    <desc>Your ship's shields are tuned to allow enemy beams to pass through. This hull plating can be powered before combat to reflect beams that hit your hull back at the enemy. More power reflects higher damage beams.</desc>
+    <cost>80</cost>
+    <bp>15</bp>
+    <rarity>0</rarity>
+    <stackable>false</stackable>
+    <value>0.5</value> <!-- Flat chance for an enemy ship with this augment to reflect any beam -->
+</augBlueprint>
+
 <augBlueprint name="RVS_AI_SWARM">
     <title>Assimilative Drone Bays</title>
 	<desc>When an enemy drone is shot down, a temporary drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon receiving hull damage.</desc>
@@ -3871,7 +3881,7 @@ AUGMENTS
 	<crewCount amount="1" class="human_humanoid" />	<!-- Replace with custom Humanoids -->
 	<crewCount amount="1" class="human_engineer" />
 	<crewCount amount="1" class="human_soldier" />
-	<aug name="HACKING_STUN" />						<!-- Replace with the funny beam reflective augment -->
+	<aug name="RVS_REFLECTIVE_PLATING" />
 	<shieldImage>rvsp_rebel_alt_cruiser</shieldImage>
 	<floorImage>rvsp_rebel_alt_cruiser</floorImage>
 	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>

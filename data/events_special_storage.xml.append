@@ -652,6 +652,10 @@
         <text>(Conductive Hull Plating) Create an ion storm.</text>
         <event load="COMBAT_CHECK_NEBULA_MAKE_STORM"/>
     </mod-append:choice>
+    <mod-append:choice req="RVS_REFLECTIVE_PLATING" blue="false" max_group="241">
+        <text>(Reflective Plating) Power the Reflective Plating.</text>
+        <event load="COMBAT_CHECK_REFLECTIVE_PLATING"/>
+    </mod-append:choice>
     
     <!-- Temporarily removing since it causes issues with translations.
     <mod:findWithChildLike type="choice" child-type="text" panic="true">
@@ -725,6 +729,68 @@
 		<event>
 			<text>You decide not to do anything and prepare to fight.</text>
 			<status type="clear" target="enemy" system="teleporter" amount="100"/>
+		</event>
+	</choice>
+</event>
+
+<event name="COMBAT_CHECK_REFLECTIVE_PLATING">
+	<text>How much power do you want to put into the augment?</text>
+	<choice req="reactor" lvl="2" hidden="true" blue="false">
+		<text>1. [Reflect all 1 damage or lower beams, chance to reflect 2 damage or higher beams]</text>
+		<event>
+			<text>You activate the combat augment.</text>
+			<status type="loss" target="player" system="reactor" amount="1"/>
+            <variable name="loc_ai_reflect_power" op="set" val="1"/>
+			<choice>
+				<text>Continue to the fight!</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="reactor" lvl="3" hidden="true" blue="false">
+		<text>2. [Reflect all 2 damage or lower beams, chance to reflect 3 damage or higher beams]</text>
+		<event>
+			<text>You activate the combat augment.</text>
+			<status type="loss" target="player" system="reactor" amount="2"/>
+            <variable name="loc_ai_reflect_power" op="set" val="2"/>
+			<choice>
+				<text>Continue to the fight!</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="reactor" lvl="4" hidden="true" blue="false">
+		<text>3. [Reflect all 3 damage or lower beams, chance to reflect 4 damage or higher beams]</text>
+		<event>
+			<text>You activate the combat augment.</text>
+			<status type="loss" target="player" system="reactor" amount="3"/>
+            <variable name="loc_ai_reflect_power" op="set" val="3"/>
+			<choice>
+				<text>Continue to the fight!</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="reactor" lvl="5" hidden="true" blue="false">
+		<text>4. [Reflect all 4 damage or lower beams, chance to reflect 5 damage or higher beams]</text>
+		<event>
+			<text>You activate the combat augment.</text>
+			<status type="loss" target="player" system="reactor" amount="4"/>
+            <variable name="loc_ai_reflect_power" op="set" val="4"/>
+			<choice>
+				<text>Continue to the fight!</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Do something else instead.</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+	<choice>
+		<text>Nevermind, let's fight!</text>
+		<event>
+			<text>You decide not to do anything and prepare to fight.</text>
 		</event>
 	</choice>
 </event>
