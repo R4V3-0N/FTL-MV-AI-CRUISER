@@ -3240,7 +3240,7 @@ AUGMENTS
 	<!--	R4: 2024.05.06: Changed the concept of this augments performand and capabilities
 	<desc>If piloting is disabled, provides a 15% evasion boost, otherwise provides a 5% evasion boost if engines are disabled. +10% FTL Drive charge rate.</desc>
 	-->
-	<desc>These high-tech engines provide an unnatural maneuverability without the consequences of g-forces at the cost of speed. Decreasing the base evasion by 5% but being able to change course drastically with each hit recieved by 5% temporarily.</desc>
+	<desc>These high-tech engines provide unnatural maneuverability by canceling out g-forces, but at the cost of speed. Base evasion is decreased by 5%, and every projectile that hits your shields will temporarily boost evasion by 5%.</desc>
 	<cost>70</cost>
     <bp>3</bp>
     <rarity>0</rarity>
