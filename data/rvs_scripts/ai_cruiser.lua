@@ -2,10 +2,11 @@ if not mods or not mods.vertexutil then
     error("Couldn't find Vertex Tags and Utility Functions! Make sure it's above mods which depend on it in the Slipstream load order")
 end
 
-local vter = mods.vertexutil.vter
-local userdata_table = mods.vertexutil.userdata_table
-local get_room_at_location = mods.vertexutil.get_room_at_location
-local get_adjacent_rooms = mods.vertexutil.get_adjacent_rooms
+local vter = mods.multiverse.vter
+local userdata_table = mods.multiverse.userdata_table
+local string_starts = mods.multiverse.string_starts
+local get_room_at_location = mods.multiverse.get_room_at_location
+local get_adjacent_rooms = mods.multiverse.get_adjacent_rooms
 
 local function bool_to_num(bool)
     return bool and 1 or 0
@@ -39,6 +40,15 @@ local function get_crew_count_name(ship, speciesName)
     return 0
 end
 
+local function race_exists(race)
+    return Hyperspace.Blueprints:GetCrewBlueprint(race).name == race
+end
+
+-- Check if TRC's mutants are available
+script.on_init(function(newGame)
+    if newGame and race_exists("mutant") then Hyperspace.playerVariables.loc_ai_mutants_exist = 1 end
+end)
+
 -- Make a list of hologram crew that's easier to reference
 local holoSpecies = {}
 script.on_load(function()
@@ -49,7 +59,7 @@ end)
 
 -- Track whether we're in a nebula or a nebula with an ion storm
 script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
-    local space = Hyperspace.Global.GetInstance():GetCApp().world.space
+    local space = Hyperspace.App.world.space
     Hyperspace.playerVariables.loc_nebula_nostorm = bool_to_num(space.bNebula and not space.bStorm)
     Hyperspace.playerVariables.loc_nebula_storm = bool_to_num(space.bStorm)
 end)
@@ -125,14 +135,19 @@ end)
 -- Replace burst projectile with beam for shotgun pinpoints
 local pinpoint1 = Hyperspace.Blueprints:GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_1")
 local pinpoint2 = Hyperspace.Blueprints:GetWeaponBlueprint("RVS_PROJECTILE_BEAM_FOCUS_2")
+local fm_epinpoint1 = Hyperspace.Blueprints:GetWeaponBlueprint("FM_RVS_PROJECTILE_BEAM_ENERGY_FOCUS_1")
+local fm_epinpoint2 = Hyperspace.Blueprints:GetWeaponBlueprint("FM_RVS_PROJECTILE_BEAM_ENERGY_FOCUS_2")
 local burstsToBeams = {}
 burstsToBeams.RVS_BEAM_SHOTGUN_1 = pinpoint1
 burstsToBeams.RVS_BEAM_SHOTGUN_2 = pinpoint1
 burstsToBeams.RVS_BEAM_SHOTGUN_3 = pinpoint2
+burstsToBeams.FM_RVS_SPLITTER_ENERGY_1 = fm_epinpoint1
+burstsToBeams.FM_RVS_SPLITTER_ENERGY_2 = fm_epinpoint1
+burstsToBeams.FM_RVS_SPLITTER_ENERGY_3 = fm_epinpoint2
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local beamReplacement = burstsToBeams[weapon.blueprint.name]
     if beamReplacement then
-        local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
+        local spaceManager = Hyperspace.App.world.space
         local beam = spaceManager:CreateBeam(
             beamReplacement, projectile.position, projectile.currentSpace, projectile.ownerId,
             projectile.target, Hyperspace.Pointf(projectile.target.x, projectile.target.y + 1),
@@ -429,6 +444,44 @@ limitShots.RVS_AI_MISSILE_1 = 7
 limitShots.RVS_AI_MISSILE_2 = 5
 limitShots.RVS_AI_MISSILE_3 = 15
 
+-- Anti Gravity Engines
+script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR, function(shipManager, value)
+    if shipManager:HasAugmentation("RVS_ANTI_GRAVITY_ENGINE") > 0 then
+        local dodgeTable = userdata_table(shipManager, "mods.ai.grav_engine")
+        local valueAdd = 0
+        if dodgeTable.addDodge then
+            valueAdd = math.Round(dodgeTable.addDodge, 0)
+        end
+        value = math.max(value - 5 + valueAdd, 0)
+    end
+    return Defines.Chain.CONTINUE, value
+end)
+
+script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)
+    if shipManager:HasAugmentation("RVS_ANTI_GRAVITY_ENGINE") > 0 then
+        if response.damage > 0 or response.superDamage > 0 then
+            local dodgeTable = userdata_table(shipManager, "mods.ai.grav_engine")
+            if dodgeTable.addDodge then
+                dodgeTable.addDodge = math.min(dodgeTable.addDodge + 5, 40)
+            else
+                dodgeTable.addDodge = 5
+            end
+        end
+    end
+end)
+
+script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
+    if shipManager:HasAugmentation("RVS_ANTI_GRAVITY_ENGINE") > 0 then
+        local dodgeTable = userdata_table(shipManager, "mods.ai.grav_engine")
+        if dodgeTable.addDodge then
+            dodgeTable.addDodge = math.max(dodgeTable.addDodge - Hyperspace.FPS.SpeedFactor/16, 0)
+            if dodgeTable.addDodge == 0 then
+                dodgeTable.addDodge = nil
+            end
+        end
+    end
+end)
+
 
 --Implementation uses lifespan for save and load, replace with table implementation when saving features are available
 --I think lifespan is only used for surge drones so it's ok to use here
@@ -450,7 +503,7 @@ end)
 script.on_internal_event(Defines.InternalEvents.DRONE_FIRE,
 function(Projectile, Drone)
     if Drone.blueprint.name == "RVS_BEAM_DEFENSE_1" then
-        local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
+        local spaceManager = Hyperspace.App.world.space
         --Spawn beam from drone to target
         spaceManager:CreateBeam(
             Hyperspace.Blueprints:GetWeaponBlueprint("RVS_BEAM_DEFENSE_SHOT"), 
@@ -536,7 +589,7 @@ function(Drone, Projectile, Damage, CollisionResponse)
         if thisShip.iShipId == Drone.currentSpace then
             spawn_temp_drone{name = "RVS_AI_MICROFIGHTER_SWARM_CHILD", ownerShip = otherShip, targetShip = thisShip, position = Drone.currentLocation}
         else
-            local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
+            local spaceManager = Hyperspace.App.world.space
             local shipCenter = otherShip._targetable:GetShieldShape().center
             local heading = math.deg(math.atan(Drone.currentLocation.y - shipCenter.y, Drone.currentLocation.x - shipCenter.x))
             spaceManager:CreateMissile(swarmChildProj, Drone.currentLocation, Drone.currentSpace, Projectile.ownerId, thisShip:GetRandomRoomCenter(), Drone.iShipId, heading)
@@ -682,10 +735,18 @@ function(projectile, weapon)
     end
 end)
 
+--Power Upgrade
+script.on_internal_event(Defines.InternalEvents.SET_BONUS_POWER, function(system, amount)
+    if system:GetId() == Hyperspace.playerVariables.loc_ai_bonus_power_system then
+        amount = amount + Hyperspace.ships(system._shipObj.iShipId):GetAugmentationValue("RVS_SCIENCE_ION_POWER")
+    end
+    return Defines.Chain.CONTINUE, amount
+end)
+
 --Evasion Armor
 script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR,
 function(ShipManager, dodge)
-    dodge = dodge + ShipManager:GetAugmentationValue("RVS_DODGE_ARMOR")
+    dodge = dodge + ShipManager:GetAugmentationValue("RVS_SCIENCE_ION_DODGE")
     return Defines.Chain.CONTINUE, dodge
 end)
 
@@ -710,7 +771,7 @@ local plasmaProjectiles = MakeSet {
     "RVS_SHOT_PLASMA_PLUS_NORMAL",
     "RVS_SHOT_PLASMA_PLUS_CRIT",
     "RVS_SHOT_PLASMA_HS_NORMAL",
-    "RVS_SHOT_PLASMA_HS_CRIT"
+    "RVS_SHOT_PLASMA_HS_CRIT",
 }
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA, 
@@ -727,7 +788,7 @@ function(ShipManager, Projectile, Location, Damage, forceHit, shipFriendlyFire)
             local fireCount = ShipManager:GetFireCount(roomId)
 
             local firePercent = (fireCount / tileCount) * 100
-            local hullDamageChance = firePercent / 3    --this was 2, I changed this to 3, hopefully that isn't bad? this does mean lower chance yes yes?
+            local hullDamageChance = firePercent / 3    --R4: this was 2, I changed this to 3, hopefully that isn't bad? this does mean lower chance yes yes?
 
             if math.random(100) <= hullDamageChance then
                 Damage.iDamage = Damage.iDamage + 1
@@ -821,6 +882,7 @@ local get_random_ship_system = function(ship)
     end
     return systems[math.random(#systems)]
 end
+
 local refresh_boarding_AI = function(targetShip)
     local assaultCount = 2
     local decoyCount = 2
@@ -835,51 +897,54 @@ local refresh_boarding_AI = function(targetShip)
             crewmen.health.first = crewmen.health.second --Reset their health
             decoyCount = decoyCount - 1
         end
+        if crewmen.blueprint.name == "rvs_ai_hologram" then
+            crewmen.health.first = crewmen.health.second --Reset their health
+            decoyCount = decoyCount - 1
+        end
     end
 
-    local worldManager = Hyperspace.Global.GetInstance():GetCApp().world
+    local worldManager = Hyperspace.App.world
+    local eventParser = Hyperspace.CustomEventsParser.GetInstance()
 
-    if assaultCount == 2 and decoyCount == 2 then
-        Hyperspace.CustomEventsParser.GetInstance():LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_DECOYATTACKER",false,-1)
+    if targetShip.iShipId == 1 then
+        if assaultCount == 2 and decoyCount == 2 then
+            eventParser:LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_DECOYATTACKER",false,-1)
+            return end
+
+        for i = 0, assaultCount - 1 do
+            eventParser:LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_ATTACKER_SINGLE",false,-1)
+        end
+        for i = 0, decoyCount - 1 do
+            eventParser:LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_DECOY_SINGLE",false,-1)
+        end
     else
-        for i = 0, assaultCount do
-            Hyperspace.CustomEventsParser.GetInstance():LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_ATTACKER_SINGLE",false,-1)
+        if assaultCount == 2 and decoyCount == 2 then
+            eventParser:LoadEvent(worldManager,"RVS_PROJECTOR_ENEMY_SPAWN_DECOYATTACKER",false,-1)
+            return end
+
+        for i = 0, assaultCount - 1 do
+            eventParser:LoadEvent(worldManager,"RVS_PROJECTOR_ENEMY_SPAWN_ATTACKER_SINGLE",false,-1)
         end
-        for i = 0, decoyCount do
-            Hyperspace.CustomEventsParser.GetInstance():LoadEvent(worldManager,"RVS_PROJECTOR_SPAWN_DECOY_SINGLE",false,-1)
+        for i = 0, decoyCount - 1 do
+            eventParser:LoadEvent(worldManager,"RVS_PROJECTOR_ENEMY_SPAWN_DECOY_SINGLE",false,-1)
         end
-    end 
+    end
     
 end
 
-local activeProjector = false
-
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, 
 function(shipManager, projectile, location, Damage, shipFriendlyFire)
-    if projectile and projectile.extend.name == "RVS_PROJECTOR_AVATAR" and shipManager.iShipId == 1 then
-        refresh_boarding_AI(Hyperspace.ships.enemy)
+    if projectile and projectile.extend.name == "RVS_PROJECTOR_AVATAR" then
+        refresh_boarding_AI(shipManager)
     end
     return Defines.Chain.CONTINUE
 end)
 
-script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, 
-function(shipManager)
-    if activeProjector then
-        --Disable itself if no AI is on the enemy ship
-        local enemyShip = Hyperspace.ships.enemy
-        for crewmem in vter(enemyShip.vCrewList) do
-            if crewmem.blueprint.name == "rvs_ai_hologram_decoy" or crewmem.blueprint.name == "rvs_ai_hologram_assault" then
-                return
-            end
-        end
-        activeProjector = false
-    end
-end)
-
--- Small buff/debuff applied on evasion while projector is active
+-- Small buff/debuff applied on evasion while projector is active, only for the player
 script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR, 
 function(shipManager, value)
     local playerShip = Hyperspace.ships.player
+    if not playerShip or not playerShip.weaponSystem then return end
     for weapon in vter(playerShip.weaponSystem.weapons) do
         if weapon.blueprint.name == "RVS_PROJECTOR_AVATAR" and weapon.powered then
             if shipManager.iShipId == 0 then
@@ -892,6 +957,18 @@ function(shipManager, value)
     return Defines.Chain.CONTINUE, value
 end)
 
+-- Pre-half ignited projector for the player on jump
+script.on_internal_event(Defines.InternalEvents.JUMP_ARRIVE, 
+function(shipManager)
+    if not shipManager.iShipId == 1 then return end
+    for weapon in vter(shipManager.weaponSystem.weapons) do
+        if weapon.blueprint.name == "RVS_PROJECTOR_AVATAR" and weapon.powered then
+            weapon.cooldown.first = weapon.cooldown.second/2
+        end
+    end
+end)
+
+-- Player method
 script.on_game_event("RVS_PROJECTOR_SPAWN_DELAY", false, function()
     local shipManager = Hyperspace.ships.player
     local shipOpponent = Hyperspace.ships.enemy
@@ -905,6 +982,207 @@ script.on_game_event("RVS_PROJECTOR_SPAWN_DELAY", false, function()
                 crewmem:Kill(true)
             end
         end
-        activeProjector = true
     end
 end)
+
+-- Enemy method
+script.on_game_event("RVS_PROJECTOR_ENEMY_SPAWN_DELAY", false, function()
+    local shipManager = Hyperspace.ships.enemy
+    for crewmem in vter(shipManager.vCrewList) do
+        if crewmem.blueprint.name == "rvs_ai_hologram_decoy" or crewmem.blueprint.name == "rvs_ai_hologram_assault" then
+            local deathTime = Hyperspace.TimerHelper()
+            deathTime:Start(30)
+            crewmem.extend.deathTimer = deathTime
+        end
+    end
+end)
+
+-- Pick a random name for the rebel cruisers
+do
+    local rebelCruiserNames = {
+        "Oooo, Doughnuts",
+        "Wrecking Ball",
+        "Cuddle Buddy",
+        "Suck It Up",
+        "That's Gotta Sting",
+        "Slippery When Wet",
+        "Discount Muffler",
+        "Space Radish",
+        "Look, A Squirrel!",
+        "Up Your Kilt",
+        "Date Your Sister?",
+        "Nocturnal Emission",
+        "Cut To The Chase",
+        "Space Booger",
+        "Big Sexy Beast",
+        "Chatterbox",
+        "In The Out Door",
+        "Merry Go Round",
+        "End Of Invention",
+        "Socialization Fail",
+        "Pain Of Rejection",
+        "Pew!Pew!Pew!",
+        "End Of Inventions",
+        "Ablation",
+        "Pure Mad Boat Man",
+        "Undesirable Alien",
+        "Zero Credibility",
+        "Mutual Respect",
+        "Gravitas Shortfall",
+        "Hey Diddly Diddly",
+        "Spilt Milk",
+        "Meaty Goodness",
+        "Problem Child",
+        "Recent Convert",
+        "Cleanup Crew",
+        "Dirty Whistle",
+        "Petty Mischief",
+        "Six Pack Abs",
+        "Terminal Damage",
+        "Size Is Everything",
+        "Dirty Dancing",
+        "Disco Love",
+        "Double Bubble",
+        "Muskrat Love",
+        "I Am The Walrus",
+        "Beautiful Noise",
+        "Bacon Is Truth",
+        "Talking Trash",
+        "Gobble Gobble",
+        "Cat's Cradle",
+        "Cute Little Thing",
+        "Fog Of Peace",
+        "Roll The Dice",
+        "Next Big Thing",
+        "Kiss My Grits",
+        "Momma Done Told Me",
+        "No Worries",
+        "Brute Force",
+        "Nasty Rash",
+        "New In Town",
+        "Cake Eater",
+        "Whoopie Cushion",
+        "Invincible",
+        "Broken Dreams",
+        "Not Sold In Stores",
+        "Crowd Dispersal",
+        "Circuit Breaker",
+        "Grinding Fun",
+        "Rapid Response",
+        "Father Of Guns",
+        "To-Do List",
+        "Excessive Force",
+        "They Hate Me",
+        "By The Power Of Ra",
+        "Speling Erors",
+        "Correction Utility",
+        "Educator",
+        "Application Form",
+        "Pillow Fight",
+        "BBQ Chips",
+        "Dirty Unicorn",
+        "Bad Day",
+        "Bad Habits",
+        "No Joy",
+        "Gun Addict",
+        "Pig In A Poke",
+        "Shield Freak",
+        "Pro Gamer",
+        "I'm Telling Mama",
+        "Meat Eater",
+        "Big Bam Boom",
+        "Socially Awkward",
+        "Price Of Water",
+        "Arsonist",
+        "Try Me",
+        "Advanced Chemistry",
+        "Baloney",
+        "Ground Zero",
+        "Sun Gazer",
+        "Electro Junky",
+        "Baseline",
+        "Hedonists Pride",
+        "Village Idiot",
+        "Pretzel Sticks",
+        "Economy Size",
+        "Plaything",
+        "Space Census",
+        "Burst Damage",
+        "Immovable Object",
+        "Cataclysmic Event",
+        "Hostile Encounter",
+        "Braindead",
+        "Head Trauma",
+        "Troubled Childhood",
+        "Mindless Tool",
+        "Attitude Adjuster",
+        "Corrector",
+        "I Want My Mommy",
+        "Pithy Sayings",
+        "Lapsed Pacifist",
+        "Lasting Damage",
+        "New Recruit",
+        "Isn't it Ironic?",
+        "Pretty Good Shot",
+        "Beacon Eater",
+        "Sun Hugger",
+        "Pain Maximizer",
+        "Sugarcoated",
+        "Gangsters Paradise",
+        "Promises Broken",
+        "Disappointing Son",
+        "Laser Therapy",
+        "Bernie's Wrath",
+        "System Nerd",
+        "Brass Bandit",
+        "Boogie Man",
+        "Get Off My Lawn",
+        "Constipated",
+        "Tourist Season",
+        "Drone Lover",
+        "Danger Zone",
+        "Iron Beagle",
+        "Advanced Bookstore",
+        "Alabaster Barrel",
+        "Impact Calculation",
+        "Roadkill Producer",
+        "Whack Bunny",
+        "Occipital Region",
+        "Well Sorted",
+        "Well Behaved",
+        "Just Go Away",
+        "Superstitious",
+        "You Can't Drive",
+        "A Million Missiles",
+        "Orbital Striker",
+        "Beam-Burned",
+        "Deluxe Version",
+        "Teleport Everyone",
+        "Lunatic Fringe",
+        "Scatterbrained",
+        "Jah No Partial",
+        "Goa Goa MPU Ja",
+        "I Shot a Man Down",
+        "Base Drop",
+        "Herbivore",
+        "BS Loadout",
+        "Hyper Cheese",
+        "Hyperspace Admiral",
+        "FTL Throne"
+    }
+    local justStartedGame = false
+    script.on_init(function(newGame) justStartedGame = not newGame end)
+    script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
+        if justStartedGame then
+            justStartedGame = not Hyperspace.App.world.bStartedGame
+            return
+        end
+        if not Hyperspace.App.world.bStartedGame and string_starts(ship.myBlueprint.blueprintName, "PLAYER_SHIP_RVSP_REBEL_ALT") then
+            local shipTable = userdata_table(ship, "mods.ai.shipStuff")
+            if not shipTable.renamedRebelCruiser then
+                ship.myBlueprint.name.data = rebelCruiserNames[math.random(#rebelCruiserNames)]
+                shipTable.renamedRebelCruiser = true
+            end
+        end
+    end)
+end

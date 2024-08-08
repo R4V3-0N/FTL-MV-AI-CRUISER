@@ -2,7 +2,7 @@
   <title><![CDATA[ AI Cruisers ]]></title>
   <threadUrl><![CDATA[ https://github.com/R4V3-0N/FTL-MV-AI-CRUISER/releases ]]></threadUrl>
   <author><![CDATA[ R4V3-0N, Chrono Vortex, Altzeus, and Pepson ]]></author>
-  <version><![CDATA[ 3.0.4 ]]></version>
+  <version><![CDATA[ 2.5.0 ]]></version>
 
   
   
@@ -14,14 +14,16 @@ This mod adds a new race of AI hardlight Avatars from a distant universe which w
 
 This sample includes:
 - AI Cruiser type A, B, and C with achievements!
-- 19 New Weapons
+- 21 New Weapons
   - Effectors: field displacer fields that infiltrates enemy systems and disrupts them with hacking attacks.
+  - Auto Laser: a high rate of fire laser equally effective at surpressing shields and disabling systems.
   - Auto Beam: a beam that after firing drops to a supressive rapid strikes.
   - Splitter Focus Beams: a series of 'flak' beams that fire several pinpoint beams over a radius.
-  - EMP Devices: a series of weapons that fires projectiles that knocks down multiple layers of shields per hit and deals ion damage only on system hits.
   - Ion Bust Beams: which can deal double damage on ionized rooms but in doing so clears the ion effect.
+  - EMP Devices: a series of weapons that fires projectiles that knocks down multiple layers of shields per hit and deals ion damage only on system hits.
   - Plasma Projectors: An a range of industrial tools used to incinerate debris that are more than effective at lighting vulnerable ships ablaze.
   - Burst Scatter Lasers: A group of lasers that excell at dealing damage to the ships hull and occasionally deals internal damage.
+  - Tech Minelaucher: Minelaunchers that exploit advanced technologies for greater effeciency
 - 13 New Drones
   - Sentient AI Microfighters, a set of intelligent piloted drones that are specialised to form a variety of roles.
     - Interceptor Microfighter, a drone that is technically more sentient than you. An evasive drone that focuses fire on enemy defence drones before targeting the ship.
@@ -33,19 +35,20 @@ This sample includes:
   - Combat Scatter Laser Drone: A Combat drone equiped with a scatter laser.
   - Defense Scatter Laser Drone: A defensive model that fires a tight scatter of lasers at missiles.
 
-- New semi-unique sector with an original sound track made by Altzeus and a familiar track from a cluster far away.
-- 2 New Hostile enemy ships and 2 acompanying Multiverse Renegades!
+- New partial-unique sector with an original sound track made by Altzeus and a familiar track from a cluster far away.
+- 2 New Hostile enemy ships and 2 acompanying Multiverse Renegades, and one new Multiverse Renegade Boss.
 - New Race: AI Avatar's, a synthetic race of disposable hardlight avatars with many immunities
-- 6 New Augments
+- 7 New Augments
   - Hologram Emitter, an augment that lets you produce an AI hologram when one perishes at empty beacons
   - Anti-Gravity Engine, provides evasion when your engines or helm is disabled.
   - Sentient Combat AI, improves manning level of systems
   - Conductive Hull Plating. This hull plating allows your ship to create ion storms inside nebulas and regain lost reactor power in an ion storm.
   - Assimilative Drone Bays. Allowing the construction of temporary focus beam drones for destroyed enemy drones as well as a chance when your ships damaged.
   - Rerouted Insulation, gives the ship a 80% ion resistance while all crew onboard are more susceptable to stuns.
+  - Reflective armour plating, giving the ship significant resistance to beams
 ...and More!
 
-Special thanks to Julk, and Vertaalfout for providing additional assistance.
+Special thanks to Julk, Lizzard, and Vertaalfout for providing additional assistance.
 
 Download Vertex:
 https://github.com/ChronoVortex/FTL-HS-Vertex/releases/latest

@@ -2,21 +2,18 @@
 -- HELPER FUNCTIONS --
 ----------------------
 
-local vter = mods.vertexutil.vter
-
-local function string_starts(str, start)
-    return string.sub(str, 1, string.len(start)) == start
-end
+local vter = mods.multiverse.vter
+local string_starts = mods.multiverse.string_starts
 
 local function should_track_achievement(achievement, ship, shipClassName)
     return ship and
-           Hyperspace.Global.GetInstance():GetCApp().world.bStartedGame and
+           Hyperspace.App.world.bStartedGame and
            Hyperspace.CustomAchievementTracker.instance:GetAchievementStatus(achievement) < Hyperspace.Settings.difficulty and
            string_starts(ship.myBlueprint.blueprintName, shipClassName)
 end
 
 local function current_sector()
-    return Hyperspace.Global.GetInstance():GetCApp().world.starMap.worldLevel + 1
+    return Hyperspace.App.world.starMap.worldLevel + 1
 end
 
 local function count_ship_achievements(achPrefix)
@@ -33,6 +30,7 @@ end
 -- ACHIEVEMENT UNLOCKS --
 -------------------------
 
+-- AI Cruiser Achievements --
 -- Easy
 do
     local function check_holo_revive_ach(ship)
@@ -73,7 +71,7 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
         if enemyShip and enemyShip._targetable.hostile and not (enemyShip.bDestroyed or playerShip.bJumping) then -- In combat?
             vars.loc_ai_ach_in_combat = 1
             if vars.loc_ai_ach_missed_this_fight == 0 then -- Check for miss if we haven't found one already
-                for projectile in vter(Hyperspace.Global.GetInstance():GetCApp().world.space.projectiles) do
+                for projectile in vter(Hyperspace.App.world.space.projectiles) do
                     if projectile.ownerId == 0 and projectile.damage.selfId ~= -1 and projectile.missed and not projectile.death_animation.tracker.running then
                         vars.loc_ai_ach_missed_this_fight = 1
                     end
@@ -94,14 +92,84 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
     end
 end)
 
+-- Rebel Cruiser Achievements --
+-- Easy "HOME BY ANY OTHER NAME"
+script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
+    if ship.iShipId == 0 and current_sector() <= 5 and should_track_achievement("ACH_SHIP_RVSP_REBEL_ALT_1", ship, "PLAYER_SHIP_RVSP_REBEL_ALT") then
+        if ship:CountCrew(false) >= 8 then
+            Hyperspace.CustomAchievementTracker.instance:SetAchievement("ACH_SHIP_RVSP_REBEL_ALT_1", false)
+        end
+    end
+end)
+
+-- Medium "SHATTERED MIRROR"
+local function defeatRebel()
+    if should_track_achievement("ACH_SHIP_RVSP_REBEL_ALT_2", Hyperspace.ships.player, "PLAYER_SHIP_RVSP_REBEL_ALT") then
+        Hyperspace.playerVariables.loc_high_rebels_killed = Hyperspace.playerVariables.loc_high_rebels_killed + 1
+        if Hyperspace.playerVariables.loc_high_rebels_killed >= 3 then
+            Hyperspace.CustomAchievementTracker.instance:SetAchievement("ACH_SHIP_RVSP_REBEL_ALT_2", false)
+        end
+    end
+end
+
+script.on_game_event("A55_DEFEAT", false, defeatRebel)    -- A55 boss fight
+script.on_game_event("AUTO_POWERCORE_DEFEAT", false, defeatRebel) -- Engineer Mothership Fight
+script.on_game_event("AUTO_POWERCORE_SAVE", false, defeatRebel)   -- Engineer Mothership Fight (Saved. Included this as you still fought against them and "won")
+script.on_game_event("DYNASTY_DREADNAUGHT_VICTORY", false, defeatRebel)   -- Dynasty Autodreadnought fight
+script.on_game_event("FED_MEMORIAL_DESTROY", false, defeatRebel)  -- Fed Sector Rebel Gunboat Fight
+script.on_game_event("FED_MEMORIAL_DEAD_CREW", false, defeatRebel)
+script.on_game_event("CURA_DEFEATED", false, defeatRebel)    --CURA
+script.on_game_event("CYRA_DEFEAT", false, defeatRebel)   -- Cyra cruiser stuff
+script.on_game_event("CYRA_DEFEAT_JERRY", false, defeatRebel)
+script.on_game_event("FLAGSHIP_CONSTRUCTION_WIN", false, defeatRebel) --Rebel sector Flagship construction
+script.on_game_event("SHOWDOWN_WIN", false, defeatRebel) --MFK Flagship True End Win
+-- "SHIP_CHAOS_FLEET_FLAGSHIP" from event "FLEET_CHAOS_FLAGSHIP", "NEBULA_FLEET_CHAOS_FLAGSHIP"
+script.on_game_event("ESTATE_LEGION_DEFEAT", false, defeatRebel)    --Zenith Legion event at Estate
+script.on_game_event("ALKALI_LEGION_DEFEATED", false, defeatRebel)   --Morph Legion event at Science
+script.on_game_event("RVS_FREIGHTER_CONVOY_WIN", false, defeatRebel)   --GO BALLISTIC! 2 Cruiser fight
+
+-- Hard "HOW DID WE GET HERE"
+script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
+    local playerShip = Hyperspace.ships.player
+    local space = Hyperspace.App.world.space
+    local awardAch = should_track_achievement("ACH_SHIP_RVSP_REBEL_ALT_3", playerShip, "PLAYER_SHIP_RVSP_REBEL_ALT") and
+                     playerShip.iIntruderCount >= 1 and
+                     playerShip.fuel_count <= 0 and
+                     playerShip.fireSpreader.count >= 1 and
+                     space.bPDS and
+                     (space.envTarget == 0 or space.envTarget == 2)
+    if awardAch then
+        Hyperspace.CustomAchievementTracker.instance:SetAchievement("ACH_SHIP_RVSP_REBEL_ALT_3", false)
+    end
+end)
+
 -------------------------------------
 -- LAYOUT UNLOCKS FOR ACHIEVEMENTS --
 -------------------------------------
 
+-- AI CRUISER STUFF --
 local achLayoutUnlocks = {
     {
         achPrefix = "ACH_SHIP_RVSP_AI",
         unlockShip = "PLAYER_SHIP_RVSP_AI_3"
+    }
+}
+
+script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
+    local unlockTracker = Hyperspace.CustomShipUnlocks.instance
+    for _, unlockData in ipairs(achLayoutUnlocks) do
+        if not unlockTracker:GetCustomShipUnlocked(unlockData.unlockShip) and count_ship_achievements(unlockData.achPrefix) >= 2 then
+            unlockTracker:UnlockShip(unlockData.unlockShip, false)
+        end
+    end
+end)
+
+--  ALT REBEL CRUISER STUFF  --
+-- Bellow is my bird brained attempt to do a thing
+local achLayoutUnlocks = {
+    {
+        achPrefix = "ACH_SHIP_RVSP_REBEL_ALT",
+        unlockShip = "PLAYER_SHIP_RVSP_REBEL_ALT_3"
     }
 }
 

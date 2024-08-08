@@ -63,6 +63,77 @@
 	<iconImage>beamH</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="RVS_MAGNIFIER_ARTILLERY">
+	<type>LASER</type>
+	<title>Artllery Magnifier Laser</title>
+	<short>Artillery Mag.</short>
+	<tip>tip_magnifier</tip>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<descriptionOverride>Magnifiers use special technology to enhance their power with each charge, rather than gaining additional projectiles. Each charge increases shield pierce and breach chance. Charges become progressively faster.
+
+		Stats:
+		Required Power: 2
+		Charge Time: 14 seconds
+
+		Max Charges: 3
+		Shield Piercing: 0/1/2
+		Bonus Charging Speed: x1.5 per charge
+		
+		Base Hull Damage: 4
+		Total System Damage: 4
+		Total Crew Damage: 60
+		
+		Breach Chance: 30/50/100%
+
+		Default Price: 80~   -   Selling Price: 40~
+	</descriptionOverride>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 14 seconds
+
+		Max Charges: 3
+		Shield Piercing: 0/1/2
+		Bonus Charging Speed: x1.5 per charge
+
+		Base Hull Damage: 4
+		Total System Damage: 4
+		Total Crew Damage: 60
+		
+		Breach Chance: 60/70/80/90%</tooltipOverride>
+	<tooltip>Artillery Laser; 4 damage, 1 shot. 14 second cooldown.</tooltip>
+	<damage>2</damage>
+	<chargeLevels>3</chargeLevels>
+	<shots>1</shots>
+	<speed>75</speed>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>14</cooldown>
+	<power>2</power>
+	<cost>80</cost>
+	<bp>10</bp>
+	<rarity>0</rarity>
+	<image>ba_laser_artillery_shot</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_magnifier_artillery_laser</weaponArt>
+	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="RVS_PROJECTOR_AVATAR">
 	<type>BOMB</type>
 	<tip>rvs_tip_effector</tip>
@@ -71,11 +142,12 @@
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
 	<desc>A marriage between electronic warfare and complete ship disruption. This weapon passively disrupts enemy systems while powered on. Once charged it projects a number of AI Avatars onto the enemy vessel disrupting most ship functions as if the vessel is under an intense boarding invasion.</desc>
-	<descriptionOverride>Basic hacking field projector that can disrupt systems.
+	<descriptionOverride>Advanced Disruption Projector system.
 
 		Stats:
 		Required Power: 3
-		Charge Time: 20 seconds
+		Charge Time: 30 seconds 
+		Partial Pre-Ignited
 
 		Shots Per Charge: 1
 
@@ -85,9 +157,9 @@
 		
 		Buy/Sell Price: 70~/35~
 	</descriptionOverride>
-	<tooltip>Disrupts enemy systems.</tooltip>
-	<tooltipOverride>Required Power: 2
-		Charge Time: 20 seconds
+	<tooltip>Disrupts enemy ships.</tooltip>
+	<tooltipOverride>Required Power: 3
+		Charge Time: 30 seconds
 
 		Shots Per Charge: 1
 
@@ -98,7 +170,7 @@
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10--> 
 	<hack duration="4" immuneAfterHack="3">
-		<shields>4.1</shields> <!--R4: Edited it to be a full 4, as for a 2 power weapon I feel it needs the ability to take on full shields. ADDENDUM: made it 4.1 just so it can work when time is sped up or slowed down -->
+		<shields>4.1</shields>
 		<doors immuneAfterHack="3">8</doors>
 		<sensors immuneAfterHack="3">8</sensors>
 		<temporal immuneAfterHack="3">8</temporal>
@@ -121,15 +193,14 @@
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>20</cooldown> <!-- R4 2023.02.15 reduced down from 16 to 15 -->
+	<cooldown>30</cooldown> <!-- R4 2024.04.08 Increased from 20 to 30, but gave it a semi-preigniter that starts it at 15 if powered on -->
 	<crewSpawnChance>10</crewSpawnChance>
 	<power>3</power>
 	<cost>70</cost>
 	<bp>5</bp>
 	<rarity>0</rarity>	<!-- drop from defeating AI Cruiser 3 renegade-->
-	<!--<image>ra_effector_impact_invisible</image>-->
 	<image>ra_effector_hacking</image>
-	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
+	<explosion>invisible</explosion>
 	<launchSounds>
 		<sound>rvs_effector_shoot1</sound>
 		<sound>rvs_effector_shoot2</sound>
@@ -148,8 +219,97 @@
 	<weaponArt>rvs_projector_avatar</weaponArt>
 </weaponBlueprint>
 
-<!-- SLEEPER'S HYPERSPACE -->
-<weaponBlueprint name="RVS_HS_IR_BEAM_1">
+<weaponBlueprint name="RVS_PROJECTOR_AVATAR_CHAOS">
+	<type>BOMB</type>
+	<tip>rvs_tip_effector</tip>
+	<title>Ship Disruption Projector</title>
+	<short>AI Projector</short>
+	<flavorType>Disruption Field Projector</flavorType>
+	<locked>1</locked>
+	<desc>A marriage between electronic warfare and complete ship disruption. This weapon passively disrupts enemy systems while powered on. Once charged it projects a number of AI Avatars onto the enemy vessel disrupting most ship functions as if the vessel is under an intense boarding invasion.</desc>
+	<descriptionOverride>Advanced Disruption Projector system.
+
+		Stats:
+		Required Power: 3
+		Charge Time: 30 seconds 
+		Partial Pre-Ignited
+
+		Shots Per Charge: 1
+
+		Hacking Duration: 4 seconds
+		Hack Immunity: 3 seconds
+		Accuracy Bonus: +10%
+		
+		Buy/Sell Price: 70~/35~
+	</descriptionOverride>
+	<tooltip>Disrupts enemy ships.</tooltip>
+	<tooltipOverride>Required Power: 3
+		Charge Time: 30 seconds
+
+		Shots Per Charge: 1
+
+		Hacking Duration: 4 seconds
+		Hack Immunity: 3 seconds
+		Accuracy Bonus: +10%
+	</tooltipOverride>
+	<damage>0</damage>
+	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10--> 
+	<hack duration="4" immuneAfterHack="3">
+		<shields>4.1</shields>
+		<doors immuneAfterHack="3">8</doors>
+		<sensors immuneAfterHack="3">8</sensors>
+		<temporal immuneAfterHack="3">8</temporal>
+	</hack>
+	<roomStatBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>0</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<duration>7</duration>
+			<roomAnim renderLayer="3">
+				<anim animType="center">ra_effector_residual</anim>
+			</roomAnim>
+		</statBoost>
+	</roomStatBoosts>
+	<accuracyMod>10</accuracyMod>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>30</cooldown> <!-- R4 2024.04.08 Increased from 20 to 30, but gave it a semi-preigniter that starts it at 15 if powered on -->
+	<crewSpawnChance>10</crewSpawnChance>
+	<power>3</power>
+	<cost>70</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>	<!-- drop from defeating AI Cruiser 3 renegade-->
+	<image>ra_effector_hacking</image>
+	<explosion>invisible</explosion>
+	<launchSounds>
+		<sound>rvs_effector_shoot1</sound>
+		<sound>rvs_effector_shoot2</sound>
+		<sound>rvs_effector_shoot3</sound>
+		<sound>rvs_effector_shoot4</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hackStart</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hackStart</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>rvs_projector_avatar</weaponArt>
+</weaponBlueprint>
+
+<!-- 
+	\\\\\\\\\\\\\\\\\\
+	SLEEPER'S HYPERSPACE
+	\\\\\\\\\\\\\\\\\\ 
+-->
+<weaponBlueprint name="RVS_HS_IR_BEAM_1">	<!-- R4 2024.05.19: not in use -->
     <type>BEAM</type>
     <flavorType>Pinpoint</flavorType>
     <tip>tip_focus</tip>
@@ -180,7 +340,7 @@
     <weaponArt>rvs_infrared_pulse_beam</weaponArt>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
-<weaponBlueprint name="RVS_HS_IR_BEAM_1_COLOURED">
+<weaponBlueprint name="RVS_HS_IR_BEAM_1_COLOURED">	<!-- R4 2024.05.19: not in use -->
     <type>BEAM</type>
     <flavorType>Pinpoint</flavorType>
     <tip>tip_focus</tip>
@@ -267,7 +427,7 @@
 	<type>LASER</type>
 	<title>EMP Device</title>
 	<short>EMP Device</short>
-	<tip>tip_ion</tip>
+	<tip>rvs_tip_emp</tip>
 	<locked>1</locked>
 	<desc>A simple yet effective EMP device, firing blasts of EMP projectiles that can take down 2 layers of shields, deal 2 ion damage to systems or 1 damage to empty rooms.</desc>
 	<tooltip>Fires a single blast that does 2 ion damage on room hit otherwise pops 2 shields.</tooltip> <!-- placeholder -->
@@ -317,7 +477,7 @@
 	<type>LASER</type>
 	<title>EMP Device Mark II</title>
 	<short>EMP Device II</short>
-	<tip>tip_emp</tip>
+	<tip>rvs_tip_emp</tip>
 	<locked>1</locked>
 	<desc>Slightly improved version of the EMP Device that fires two shots per charge.</desc>
 	<tooltip>Fires a blast of two that does 2 ion damage. Can hit and disable shields as well as systems.</tooltip> <!-- placeholder -->
@@ -364,6 +524,7 @@
 </weaponBlueprint>
 
 <!-- R4: For Chronklo, depending on how this weapon balance works, it might be fun to have this decrease enemy shield cooldown for like 2-3 seconds when it hits their shield bubble directly, thoughts? -->
+	<!-- R4 2024.05.19: Chrono Vortex never gave me their thoughts :<  -->
 <weaponBlueprint name="RVS_EMP_HEAVY_1">
 	<type>LASER</type>
 	<title>Heavy EMP Device</title>
@@ -511,9 +672,9 @@
     <damage>1</damage>
     <shots>1</shots>
     <sp>0</sp>
-    <fireChance>4</fireChance> <!-- fire chance moderately high for Chronos pleasure -->
+    <fireChance>3</fireChance> <!-- fire chance moderately high for Chronos pleasure | R4 2024.05.30: Decreased from 4 to 3, sorry Chrono -->
     <breachChance>1</breachChance>
-    <cooldown>10</cooldown>
+    <cooldown>12</cooldown>	<!-- R4: 2024.05.30: Cooldown changed from 10 to 12.-->
     <power>2</power>
     <cost>62</cost>
     <bp>10</bp>
@@ -562,8 +723,71 @@
     <weaponArt>rvs_beam_shotgun_3</weaponArt>
 </weaponBlueprint>
 
+<weaponBlueprint name="RVS_FOCUS_CORROSION_1">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_focus</tip>
+    <title>Corrosion Focus Beam</title>
+    <short>Corrosion Focus</short>
+    <desc>Outlawed in the universe where this weapon was first sighted. This exotic weapon fires a concentrated tight beam of x-rays that irradiates and corrodes the target causing systems to break down over time for a short duration.</desc>
+    <tooltip>Corrosive focus that deals 3 damage on hit and applies an additional 3 via corrosion.</tooltip>
+    <damage>2</damage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>3</breachChance>
+	<persDamage>2</persDamage>
+    <cooldown>18</cooldown>
+	<color>
+		<r>0</r>
+		<g>204</g>
+		<b>104</b>
+	</color>
+	<statBoosts>
+        <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
+		<statBoost name="stunMultiplier" load="RAD_STUN"/>
+        <statBoost name="repairSpeed" load="RAD_REPAIR"/>
+    </statBoosts>
+    <power>2</power>
+    <cost>90</cost>
+    <bp>5</bp>
+    <speed>1</speed>
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
+    <image>beam_contact</image>
+    <length>1</length>
+	<erosion>
+		<speed>1.5</speed>
+		<maxSpeed>1.5</maxSpeed>
+		<time>16.0</time>
+		<maxTime>25.0</maxTime>
+		<systemRepairMultiplier>1</systemRepairMultiplier>
+		<erodeShields>false</erodeShields>
+		<roomAnim renderLayer="1">
+			<anim animType="center" animBorder="0">invisible</anim>
+			<wallAnim>rvs_corrode_sparks_2</wallAnim>
+		</roomAnim>
+		
+		<!-- The variables below this line cannot be altered on a weapon-to-weapon basis, this is not desirable -->
+		<growBreachMultiplier>1000.0</growBreachMultiplier>
+		<newBreachDamage>0</newBreachDamage>
+		<newBreachRequirement>100000.0</newBreachRequirement>
+		<canDilate>true</canDilate>
+	</erosion>
+    <projectiles>
+        <projectile count="3" fake="false">laser_burst</projectile> <!-- Fake projectiles which LUA replaces with beams -->
+    </projectiles>
+	<launchSounds>
+		<sound>ra_focusbeambig1</sound>
+		<sound>ra_focusbeambig2</sound>
+		<sound>ra_focusbeambig3</sound>
+	</launchSounds>
+    <weaponArt>rvs_focus_corrosion_1</weaponArt>
+</weaponBlueprint>
 
-<!-- REBALANCED ARSENAL -->
+<!-- 
+	\\\\\\\\\\\\\\\\\\
+	REBALANCED ARSENAL
+	\\\\\\\\\\\\\\\\\\ 
+-->
 <weaponBlueprint name="RVS_LASER_BURST_SCATTER_1">
 	<type>LASER</type>
 	<tip>rvs_tip_laser_scatter</tip>
@@ -572,8 +796,11 @@
 	<desc>This simple scatter laser fires tight spread of projectiles to bring down shields for other weapons.</desc>
 	<tooltip>Fires 2 shot, 1 damage each; 33% chance to damage systems and crew.</tooltip>
 	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<!-- Changing it over to no versions
 	<sysDamage>-1</sysDamage>
-	<persDamage>-1</persDamage>
+	<persDamage>-1</persDamage>-->
 	<shots>2</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
@@ -626,8 +853,11 @@
 	<desc>Powerful burst scatter laser that fires a massive volley of laser pellets.</desc>
 	<tooltip>Fires 4 shot, 1 damage each; 33% chance to damage systems and crew.</tooltip>
 	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<!-- Changing it over to no versions
 	<sysDamage>-1</sysDamage>
-	<persDamage>-1</persDamage>
+	<persDamage>-1</persDamage>-->
 	<shots>4</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
@@ -683,8 +913,11 @@
 	<tooltip>Fires scatter laser projectiles across a random area doing up to 5 damage.</tooltip>
 	<radius>80</radius>
 	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<!-- Changing it over to no versions
 	<sysDamage>-1</sysDamage>
-	<persDamage>-1</persDamage>
+	<persDamage>-1</persDamage>-->
 	<shots>1</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
@@ -694,7 +927,7 @@
 	<cost>70</cost>
 	<bp>10</bp>
 	<speed>60</speed>
-	<rarity>3</rarity>
+	<rarity>0</rarity>	<!-- rarity in sector list --> 
 	<explosion>invisible</explosion>
     <particleEmitters>
         <particleEmitter name="ra_emitter_explosion_scatter" />
@@ -734,6 +967,95 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="RVS_LASER_AUTO_1">
+	<type>LASER</type>
+	<title>Auto Laser Mark I</title>
+	<short>Auto I</short>
+	<tip>rvs_tip_laser_auto</tip>
+	<desc>Fast charging support laser designed to continually lay down suppressive fire.</desc>
+	<!--<desc>Fast charging support laser designed to continually lay down fire on enemy ships.</desc> CE-->
+	<tooltip>Auto Laser; 1 damage, no system damage. 4 second cooldown.</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>	<!-- Cooldown goes down to 4.5 after 1 shot. Making it have a longer cooldown over the Light Laser 1, no accuracy bonus, no breach. Instead doing full damage (system, crew, etc) -->
+	<boost>
+		<type>cooldown</type>
+		<amount>5.5</amount>
+		<count>1</count>
+	</boost>
+	<power>1</power>
+	<cost>35</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>	<!-- rarity in sector list -->
+	<image>ra_laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_laser_auto_1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_LASER_AUTO_2">
+	<type>LASER</type>
+	<title>Auto Laser Mark II</title>
+	<short>Auto II</short>
+	<tip>rvs_tip_laser_auto</tip>
+	<desc>Very fast charging support laser that can keep enemy ships constantly under fire.</desc>
+	<tooltip>Auto Laser; one damage per shot. Reloads very fast.</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>9</cooldown>	<!-- Cooldown goes down to 3 after 1 shot -->
+	<boost>
+		<type>cooldown</type>
+		<amount>6</amount>
+		<count>1</count>
+	</boost>
+	<power>2</power>
+	<cost>40</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>	<!-- rarity in sector list -->
+	<image>ra_laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_laser_auto_2</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="RA_BEAM_AUTO">
 	<type>BEAM</type>
 	<title>Auto Focus Beam</title>
@@ -764,6 +1086,66 @@
 		<sound>ra_focusbeam3</sound>
 	</launchSounds>
 	<weaponArt>ra_beam_auto</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_BEAM_FOCUS_1">
+	<type>BEAM</type>
+	<tip>tip_focus</tip>
+	<title>'Pernach' Focus Beam</title>
+	<short>Pernach</short>
+	<desc>Fast recharging focus-beam that can only hit one room.</desc>
+	<tooltip>Focused beam weapon, deals 2 damage to one room with low breach chance.</tooltip>
+	<damage>2</damage>
+	<!--<hullBust>1</hullBust> thought about giving it hullBust to compete with Cinq/Dirk -->
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>4</breachChance>	<!-- was 2, now 4-->
+	<speed>1</speed>
+	<cooldown>12</cooldown>
+	<power>1</power>	<!-- R4 2024.06.17: dropped from 2 to 1, not sure how to make this stand out compared to a Dirk... 2 power with low cooldown doesn't seem like the answer and neither does giving it hullbust. I want it to be a consistent series of pinpoints from CE that vaguely differ stat wise... all I am thinking about is giving it shield piercing or removing some-->
+	<cost>50</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
+	<image>ra_beam_contact_pierce</image>
+	<length>1</length>
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+	<weaponArt>rvs_beam_pernach</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_BEAM_ADAPTIVE_1">
+	<type>BEAM</type>
+	<tip>tip_chain_beam</tip>
+	<title>Adaptive Focus Beam Mark I</title>
+	<short>Adaptive I</short>
+	<tooltip>Focused beam weapon; deals 1 damage to one room; damage increases the more it fires.</tooltip>
+	<desc>A foriegn  weapon system that adjusts it's beam pattern to enemy shields and gains 0.25 damage each time it fires up to a maximum of 2.</desc>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>2</speed>		<!-- R4 2024.06.18: Increased speed to 2 since it's not a pinpoint anymore -->
+	<cooldown>7</cooldown>	<!-- R4 2024.06.18: In CE was 9, now 7 to compete with the Dirk (10). Takes 21 seconds to go from 1 to 2 damage--> <!-- May increase cooldown to 8 -->
+	<power>1</power>
+	<cost>50</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
+	<length>30</length>		<!-- R4 2024.06.18: In CE was 1, testing concept with making it 30 -->
+	<image>ra_beam_contact_pierce</image>
+	<boost>					<!-- R4 2024.06.17: tempted to make it 0.35 with a count of 3 instead of 0.25 for 4 -->
+		<type>damage</type>
+		<amount>0.35</amount>
+		<count>3</count>
+	</boost>
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+	<weaponArt>rvs_beam_adaptive_1</weaponArt> 
 </weaponBlueprint>
 
 <weaponBlueprint name="RA_EFFECTOR_1">
@@ -862,9 +1244,11 @@
 
 		Stats:
 		Required Power: 3
-		Charge Time: 10 seconds
+		Charge Time: 7 seconds
 
-		Hacking Duration: 2 seconds
+		Shots Per Charge: 1
+
+		Hacking Duration: 2.5 seconds
 		Hack Immunity: 6 seconds
 		Accuracy Bonus: +10%
 		
@@ -872,17 +1256,17 @@
 	</descriptionOverride>
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<tooltipOverride>Required Power: 3
-		Charge Time: 10 seconds
+		Charge Time: 7 seconds
 
 		Shots Per Charge: 1
 
-		Hacking Duration: 2 seconds
+		Hacking Duration: 2.5 seconds
 		Hack Immunity: 6 seconds
 		Accuracy Bonus: +10%
 	</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
-	<hack duration="2" immuneAfterHack="6"/>
+	<hack duration="2.5" immuneAfterHack="6"/>
 	<roomStatBoosts>
 		<statBoost name="trueHealAmount">
 			<boostType>FLAT</boostType>
@@ -940,6 +1324,8 @@
 		Stats:
 		Required Power: 3
 		Charge Time: 20 seconds
+
+		Shots Per Charge: 1
 
 		Hacking Duration: 15 seconds
 		Hack Immunity: 20 seconds
@@ -1189,6 +1575,36 @@
 	<short>Plasma I</short>
 	<desc>Fires a concentrated blast of plasma that deals no physical damage but has a good chance to ignite fires.</desc>
 	<tooltip>Fires plasma across a small, random area. High fire chance.</tooltip>
+    <descriptionOverride>Based on an industrial-grade incinerator normally used to clear space of debris and asteroids. This weapon fires a concentrated thermal blast of plasma that sets fires across a ship, capable of dealing damage rooms that are ignited.
+
+Stats:
+Required Power: 1
+Charge Time: 16 seconds
+		
+Shot Radius: 40
+Shots Per Charge: 4
+		
+Damage Chance: 0-33% (scales with fire count)
+Base Hull Damage: 1 
+Total System Damage: 1
+Total Crew Damage: 1
+		
+Fire Chance: 60%
+		
+Default Price: 40~   -   Selling Price: 20~
+	</descriptionOverride>
+    <tooltipOverride>Required Power: 1
+Charge Time: 16 seconds
+		
+Shot Radius: 40
+Shots Per Charge: 4
+		
+Damage Chance: 0-33% (scales with fire count)
+Base Hull Damage: 1 
+Total System Damage: 1
+Total Crew Damage: 1
+		
+Fire Chance: 60%</tooltipOverride>
 	<radius>40</radius>
 	<damage>0</damage>
 	<missiles>0</missiles>
@@ -1232,6 +1648,37 @@
 	<short>Plasma II</short>
 	<desc>Fires multiple blasts of plasma across a random area with a chance to light fires in every room that is hit.</desc>
 	<tooltip>Fires plasma across a wide, random area. Very high fire chance.</tooltip>
+    <descriptionOverride>Fires multible blasts of thermal plasma that sets fires across an entire ship, capable of dealing damage rooms that are ignited.
+
+Stats:
+Required Power: 2
+Charge Time: 20 seconds
+				
+Shot Radius: 80
+Shots Per Charge: 9
+				
+Damage Chance: 0-33% (scales with fire count)
+Base Hull Damage: 1 
+Total System Damage: 1
+Total Crew Damage: 1
+				
+Fire Chance: 60%
+				
+Default Price: 50~   -   Selling Price: 25~
+			</descriptionOverride>
+			<tooltipOverride>Required Power: 1
+Charge Time: 20 seconds
+				
+Shot Radius: 40
+Shots Per Charge: 9
+				
+Damage Chance: 0-33% (scales with fire count)
+Base Hull Damage: 1 
+Total System Damage: 1
+Total Crew Damage: 1
+				
+Fire Chance: 60%</tooltipOverride>
+	
 	<radius>80</radius>	<!-- was 65 in CE -->
 	<damage>0</damage>
 	<missiles>0</missiles>
@@ -1245,9 +1692,9 @@
 	<bp>10</bp>
 	<speed>30</speed>
 	<rarity>3</rarity>
-	<explosion>rvs_explosion_fire</explosion>
+	<explosion>ra_explosion_fire</explosion>
     <projectiles>
-		<projectile count="9" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile> <!-- was RVS_LIST_SHOW_PLUS_PLASMA -->
+		<projectile count="9" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile> <!--was RVS_LIST_SHOW_PLUS_PLASMA -->
 	</projectiles>
 	<launchSounds>
 		<sound>rvs_heavyLaserScatter1</sound>
@@ -1275,6 +1722,37 @@
 	<short>Plasma III</short>
 	<desc>Fires multiple blasts of plasma across a random area with a chance to light fires in every room that is hit.</desc>
 	<tooltip>Fires plasma across a wide, random area. Very high fire chance.</tooltip>
+	<descriptionOverride>Fires a torrent of thermal plasma that sets large swathes ablaze across all but the largest ships, capable of dealing damage rooms that are ignited.
+
+Stats:
+Required Power: 3
+Charge Time: 24 seconds
+				
+Shot Radius: 105
+Shots Per Charge: 15
+				
+Damage Chance: 0-33% (scales with fire count)
+Base Hull Damage: 1 
+Total System Damage: 1
+Total Crew Damage: 1
+				
+Fire Chance: 60%
+				
+Default Price: 60~   -   Selling Price: 30~
+					</descriptionOverride>
+					<tooltipOverride>Required Power: 3
+Charge Time: 24 seconds
+
+Shot Radius: 105
+Shots Per Charge: 15
+
+Damage Chance: 0-33% (scales with fire count)
+Base Hull Damage: 1 
+Total System Damage: 1
+Total Crew Damage: 1
+
+Fire Chance: 60%</tooltipOverride>
+	
 	<radius>105</radius>	<!-- was 90, then 95, now its 105 -->
 	<damage>0</damage>
 	<missiles>0</missiles>
@@ -1284,12 +1762,12 @@
 	<breachChance>0</breachChance>
 	<cooldown>24</cooldown>
 	<power>3</power>
-	<cost>50</cost>
+	<cost>60</cost>			<!-- R4 2024.08.07 : Was 50-->
 	<bp>10</bp>
 	<speed>30</speed>
 	<rarity>3</rarity>
-	<explosion>rvs_explosion_fire</explosion>
-    <projectiles>
+	<explosion>ra_explosion_fire</explosion>
+	<projectiles>
 		<projectile count="15" fake="false" blueprint="RVS_LIST_SHOT_PLASMA">ra_plasma_shot</projectile>
 	</projectiles>
 	<launchSounds>
@@ -1309,7 +1787,6 @@
 	<weaponArt>rvs_plasma_projector_3</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
-
 
 <weaponBlueprint name="RVS_SHOT_PLASMA_NORMAL">
 	<type>BURST</type>
@@ -1350,7 +1827,7 @@
 	<weaponArt>rvs_plasma_projector_1</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
-<weaponBlueprint name="RVS_SHOT_PLASMA_CRIT">
+<weaponBlueprint name="RVS_SHOT_PLASMA_CRIT">	<!-- R4 2024.05.19: no longer used -->
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>YOU SHOULDN'T SEE THIS</title>
@@ -1360,11 +1837,11 @@
 	<tooltip>YOU SHOULDN'T SEE THIS.</tooltip>
 	<radius>40</radius>
 	<damage>0</damage>
-	<sysDamage>1</sysDamage>
+	<sysDamage>0</sysDamage>	<!-- removed system damage -->
 	<missiles>0</missiles>
 	<shots>1</shots>
 	<sp>0</sp>
-	<fireChance>6</fireChance>
+	<fireChance>7</fireChance>
 	<breachChance>0</breachChance>
 	<cooldown>16</cooldown>
 	<power>1</power>
@@ -1391,8 +1868,7 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-
-<weaponBlueprint name="RVS_SHOT_PLASMA_PLUS_NORMAL">
+<weaponBlueprint name="RVS_SHOT_PLASMA_PLUS_NORMAL">	<!-- R4 2024.05.19: no longer used -->
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>Plasma Projector Mark I</title>
@@ -1431,7 +1907,7 @@
 	<weaponArt>rvs_plasma_projector_1</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
-<weaponBlueprint name="RVS_SHOT_PLASMA_PLUS_CRIT">
+<weaponBlueprint name="RVS_SHOT_PLASMA_PLUS_CRIT">	<!-- R4 2024.05.19: no longer used -->
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<title>YOU SHOULDN'T SEE THIS</title>
@@ -1471,13 +1947,446 @@
 	<weaponArt>rvs_plasma_projector_1</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
+
+<!-- 
+
+	This weapon is very much work in progress and acting as a sneak peak to what Mines can offer the player from the 'CE Cluster'. Unfortunately all of them are very much in concept stages
+	One idea I had is where you deploy several mines that will hover around your or the enemy ship before converging to strike once enough have been gathered around. 
+	This might potentially occur on a trigger, such as enemies firing, or enemies evaded a projectile. Perhaps I make it so that they fire multiple shots with one that hits directly and another orbits.
+	Alternatively, have it so that mines being present in space act as an evasion debuff until it hits the apposing ship where it'll hit or miss.
+	Or its accuracy is inverse to the enemy evasion.
+
+	Lots of ideas of which many I am unsure about. But I do want to do something to help revolutionise the concept of mine launchers.
+
+	The Bael is a cloaked variation, for now it'll have stealth weapons, avoid missile only DD's. Might think about doing more things to it.
+-->
+<weaponBlueprint name="RVS_MINES_TECH_1">
+	<type>LASER</type>
+	<flavorType>Tech Mines</flavorType>
+	<tip>ra_tip_mines_tech</tip>
+	<title>'Bael' Tech Minelauncher</title>
+	<short>'Bael'</short>
+	<desc>Drops a cloaked tech-mine that homes in on the enemy ship and detonates in close proximity. Primarily damages hull.</desc>
+	<tooltip>Lays 1 mine; deals 3 damage to hull; pierces all shields; evades lvl 1 defense drones.</tooltip>
+	<damage>4</damage>	<!-- Increased from 3 to 4 compared to CE -->
+	<!--<fractionalDamage damage="0.5" sysDamage="-0.5" />		considered fractional damage from ARC's library, pending concept -->
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<accuracyMod>10</accuracyMod>	<!-- R4 2024.08.07 : TODO change this with projectile coming for second passes on targets it miss -->
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<speed>9</speed>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>14</cooldown>
+	<power>2</power>
+	<cost>40</cost>	<!-- Increased scrap from 30 to 40-->
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>ra_mine_tech</image>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>ra_mine_cloak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rvs_minelauncher_tech_1</weaponArt> 
+</weaponBlueprint>
+
+
 <!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+	FORGEMASTER CROSSOVER
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->
 
-DRONES
+<weaponBlueprint name="FM_RVS_PROJECTILE_BEAM_ENERGY_FOCUS_1">
+	<type>BEAM</type>
+	<tip>tip_focus</tip>
+	<title>Energy Splitter Beam Projectile</title>
+	<short>Energy Splitter Beam Projectile</short>
+	<desc>YOU SOULD NEVER SEE THIS</desc>
+	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+	<damage>1</damage>
+	<sp>0</sp>
+    <fireChance>3</fireChance> <!-- fire chance moderately high for Chronos pleasure -->
+    <breachChance>0</breachChance>
+	<cooldown>14</cooldown>
+	<color>
+		<r>53</r>
+		<g>255</g>
+		<b>0</b>
+	</color>
+	<speed>1</speed>
+	<length>1</length>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+	<weaponArt>ra_beam_auto</weaponArt> 
+</weaponBlueprint>
+<weaponBlueprint name="FM_RVS_PROJECTILE_BEAM_ENERGY_FOCUS_2">
+	<type>BEAM</type>
+	<tip>tip_focus</tip>
+	<title>Energy Splitter Beam Projectile</title>
+	<short>Energy Splitter Beam Projectile</short>
+	<desc>YOU SOULD NEVER SEE THIS</desc>
+	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+	<damage>2</damage>
+	<sp>0</sp>
+    <fireChance>5</fireChance> <!-- fire chance moderately high for Chronos pleasure -->
+    <breachChance>0</breachChance>
+	<cooldown>14</cooldown>
+	<color>
+		<r>53</r>
+		<g>255</g>
+		<b>0</b>
+	</color>
+	<speed>1</speed>
+	<length>1</length>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>ra_focusbeambig1</sound>
+		<sound>ra_focusbeambig2</sound>
+		<sound>ra_focusbeambig3</sound>
+	</launchSounds>
+	<weaponArt>ra_beam_auto</weaponArt> 
+</weaponBlueprint>
 
+<weaponBlueprint name="FM_RVS_SPLITTER_ENERGY_1">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>rvs_tip_focusenergy</tip>
+    <title>'Pendula' Splitter</title>
+    <short>'Pendula'</short>
+    <desc>A combination of Energy and Splitter technology. Deals no system damage, but deals 1 ion damage on a room hit, stuns all crew in the room. Likely to start fires.</desc>
+	<descriptionOverride>A combination of Energy and Pinpoint technology. Deals no system damage, but deals 1 ion damage on a room hit. May start fires.
+
+		Stats:
+		Required Power: 1
+		Charge Time: 5 seconds
+
+		Beam Length: 1
+		Beam Speed: 1
+
+		Base Hull Damage: 1
+		Total Crew Damage: 15
+		Ion Damage: 1 (Rooms Only)
+
+		Fire Chance: 30%
+		Stun Chance: 100% (3 seconds long)
+
+		Buy/Sell Price: 100~/50~
+	</descriptionOverride>
+	<tooltip>One damage per room beam weapon</tooltip>
+	<tooltipOverride>Required Power: 1
+		Charge Time: 5 seconds
+
+		Beam Length: 1
+		Beam Speed: 1
+
+		Base Hull Damage: 1
+		Total Crew Damage: 15
+		Ion Damage: 1 (Rooms Only)
+
+		Fire Chance: 30%
+		Stun Chance: 100% (3 seconds long)
+	</tooltipOverride>
+	<tooltip>Fires a pair of beams across a random area doing up to 2 damage.</tooltip>
+    <radius>50</radius>
+	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<breachChance>0</breachChance>
+    <cooldown>5</cooldown>
+	<color>
+		<r>53</r>
+		<g>255</g>
+		<b>0</b>
+	</color>
+    <power>1</power>
+    <cost>100</cost>
+    <bp>2</bp>
+    <speed>0</speed> <!-- R4: Chrono told me this is important to be 0-->
+    <rarity>0</rarity>
+    <projectiles>
+        <projectile count="2" fake="false">laser_burst</projectile> <!-- Fake projectiles which LUA replaces with beams -->
+    </projectiles>
+    <!-- not sure what sound effect best works here -->
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+    <weaponArt>fm_rvs_splitter_energy_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="FM_RVS_SPLITTER_ENERGY_2">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>rvs_tip_focusenergy</tip>
+    <title>'Youngii' Splitter</title>
+    <short>'Youngii'</short>
+    <desc>A combination of Energy and Pinpoint technology. Deals no system damage, but deals 3 ion damage on a room hit, stuns all crew in the room, and charges faster than the Misericorde. Likely to start fires.</desc>
+	<descriptionOverride>A combination of Energy and Pinpoint technology. Deals no system damage, but deals 3 ion damage on a room hit, stuns all crew in the room, and charges faster than the Misericorde. Likely to start fires.
+
+		Stats:
+		Required Power: 2
+		Charge Time: 10 seconds
+
+		Beam Length: 1
+		Beam Speed: 1
+
+		Base Hull Damage: 1
+		Total Crew Damage: 15
+		Ion Damage: 1 (Rooms Only)
+
+		Fire Chance: 30%
+		Stun Chance: 100% (3 seconds long)
+
+		Buy/Sell Price: 140~/70~
+	</descriptionOverride>
+	<tooltip>One damage per room beam weapon</tooltip>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 10 seconds
+
+		Beam Length: 1
+		Beam Speed: 1
+
+		Base Hull Damage: 1
+		Total Crew Damage: 15
+		Ion Damage: 1 (Rooms Only)
+
+		Fire Chance: 30%
+		Stun Chance: 100% (3 seconds long)
+	</tooltipOverride>
+    <radius>55</radius> <!-- R4: Changed from 42 to 47, as I think a near guaranteed 4 hits on a 2x2 room is a lil powerful for a weapon like this-->
+	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<shots>1</shots>
+    <sp>0</sp>
+    <fireChance>3</fireChance> <!-- fire chance moderately high for Chronos pleasure -->
+    <breachChance>1</breachChance>
+    <cooldown>10</cooldown>
+	<color>
+		<r>53</r>
+		<g>255</g>
+		<b>0</b>
+	</color>
+    <power>2</power>
+    <cost>140</cost>
+    <bp>10</bp>
+    <speed>0</speed> <!-- R4: Chrono told me this is important to be 0-->
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
+    <projectiles>
+        <projectile count="4" fake="false">laser_burst</projectile> <!-- Fake projectiles which LUA replaces with beams -->
+    </projectiles>
+    <!-- not sure what sound effect best works here -->
+	<launchSounds>
+		<sound>ra_focusbeam1</sound>
+		<sound>ra_focusbeam2</sound>
+		<sound>ra_focusbeam3</sound>
+	</launchSounds>
+    <weaponArt>fm_rvs_splitter_energy_2</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="FM_RVS_SPLITTER_ENERGY_3">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>rvs_tip_focusenergy</tip>
+    <title>'Babylon' Splitter</title>
+    <short>'Babylon'</short>
+    <desc>A combination of Energy and Pinpoint technology. Deals no system damage, but fires devestating volley of 3 pinpoint beams that deal 2 hull and ion damage each. Likely to start fires.</desc>
+    <descriptionOverride>A combination of Energy and Pinpoint technology. Deals no system damage, but fires devestating volley of 3 pinpoint beams that deal 2 hull and ion damage each. Likely to start fires.
+
+		Stats:
+		Required Power: 3
+		Charge Time: 12 seconds
+
+		Beam Length: 1
+		Beam Speed: 1
+
+		Base Hull Damage: 2
+		Total Crew Damage: 30
+		Ion Damage: 2 (Rooms Only)
+
+		Fire Chance: 50%
+		Stun Chance: 100% (5 seconds long)
+
+		Buy/Sell Price: 180~/90~
+	</descriptionOverride>
+	<tooltip>One damage per room beam weapon</tooltip>
+	<tooltipOverride>Required Power: 3
+		Charge Time: 12 seconds
+
+		Beam Length: 1
+		Beam Speed: 1
+
+		Base Hull Damage: 2
+		Total Crew Damage: 30
+		Ion Damage: 2 (Rooms Only)
+
+		Fire Chance: 50%
+		Stun Chance: 100% (5 seconds long)
+	</tooltipOverride>
+    <radius>60</radius>
+	<damage>2</damage>
+	<noSysDamage>true</noSysDamage>
+	<shots>1</shots>
+    <sp>0</sp>
+    <fireChance>5</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>12</cooldown>
+	<color>
+		<r>53</r>
+		<g>255</g>
+		<b>0</b>
+	</color>
+    <power>3</power>
+    <cost>180</cost>
+    <bp>10</bp>
+    <speed>0</speed> <!-- R4: Chrono told me this is important to be 0-->
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
+    <projectiles>
+        <projectile count="3" fake="false">laser_burst</projectile> <!-- Fake projectiles which LUA replaces with beams -->
+    </projectiles>
+	<launchSounds>
+		<sound>ra_focusbeambig1</sound>
+		<sound>ra_focusbeambig2</sound>
+		<sound>ra_focusbeambig3</sound>
+	</launchSounds>
+    <weaponArt>fm_rvs_splitter_energy_3</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="FM_RVS_IPS_LASER_SCATTER_CHAINGUN_BURST">	<!-- R4 TODO -->
+	<type>LASER</type>
+	<flavorType>Fully-Automatic Momentum Laser</flavorType>	<!--R4 TO DO-->
+	<title>Experimental LSB-2 "Stormer"</title>
+	<short>Stormer</short>
+	<tip>rvs_tip_stormer</tip>	<!--R4 TO DO-->
+	<desc>A massive Chain Laser built for ease of use, whilst retaining most of the devastating firepower of the Chain Vulcans.</desc>	<!--R4 TO DO-->
+	<tooltip></tooltip>	<!--R4 TO DO-->
+	<damage>1</damage>	<!--R4 TO DO-->
+	<shots>3</shots>	<!--R4 TO DO-->
+	<sp>0</sp>
+	<fireChance>1</fireChance>	<!--R4 TO DO-->
+	<breachChance>0</breachChance>	<!--R4 TO DO-->
+	<cooldown>13</cooldown>	<!--R4 TO DO-->
+	<power>4</power>
+	<cost>110</cost>	<!--R4 TO DO-->
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<boost>	<!--R4 TO DO-->
+		<type>cooldown</type>
+		<amount>3</amount>
+		<count>3</count>
+	</boost>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>fm_rvs_ips_stormer</weaponArt> 
+	<iconImage>laser_chain</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="FM_RVS_IPS_OSCILLATOR">	<!-- R4 TODO -->
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<tip>rvs_tip_disruptor</tip>	<!--R4 TO DO-->
+	<title>Disruption Oscillator</title>
+	<short>Disruptor</short>
+	<desc>A baffling industrial weapon modified for war. This device can disrupt ships with a barrage of hacking pulses.</desc>
+	<tooltip></tooltip>	<!--R4 TO DO-->
+	<radius>45</radius>
+	<shots>1</shots>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>	<!--R4 TO DO, maybe make ion?-->
+	<persDamage>1</persDamage>
+	<hack duration="5" hitShieldDuration="4" immuneAfterHack="0" boostHackingTimeAddition="2"/>	<!-- R4 TEST -->
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<stun>5</stun>
+	<cooldown>12</cooldown>	<!--R4 TO DO-->
+	<power>1</power>	<!--R4 TO DO-->
+	<cost>65</cost>	<!--R4 TO -->
+	<bp>10</bp>
+	<speed>75</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="3" fake="false">ips_wavegun_shot</projectile>	<!--R4 TO DO-->
+	</projectiles>
+	<launchSounds>
+		<sound>ips_wavegun_sfx</sound>	<!--R4 TODO-->
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>fm_rvs_ips_oscillator</weaponArt>  	<!--R4 TO DO-->
+	<iconImage>missile_charge</iconImage>
+</weaponBlueprint>
+
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+	FORGEMASTER CROSSOVER END
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->
 
 
+
+<!--
+	\\\\\\\\
+	DRONES
+	\\\\\\\\
+-->
 
 <weaponBlueprint name="RVS_DRONE_LASER_SCATTER">
 	<type>LASER</type>
@@ -1523,7 +2432,7 @@ DRONES
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_1</weaponArt>
+	<weaponArt>laser_burst_1</weaponArt>
 </weaponBlueprint>
 <droneBlueprint name="RVS_AI_MICROFIGHTER_INTERCEPTOR">
 	<type>COMBAT</type>
@@ -1716,7 +2625,7 @@ DRONES
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_1</weaponArt>
+	<weaponArt>laser_burst_1</weaponArt>
 </weaponBlueprint>
 <droneBlueprint name="RVS_DRONE_DEFENSE_SCATTER">
 	<type>DEFENSE</type>
@@ -1908,7 +2817,7 @@ DRONES
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>ba_plasma_thrower_1</weaponArt> 
+	<weaponArt>rvs_plasma_projector_1</weaponArt> 
 </weaponBlueprint>
 <droneBlueprint name="RVS_DRONE_PLASMA_1">
 	<type>COMBAT</type>
@@ -2216,7 +3125,7 @@ AUGMENTS
 <augBlueprint name="RVS_HOLO_EMITTERS">
     <title>Holo-Emitters</title>
     <desc>Allows any hologram crew which have been destroyed after this augment has been installed to be recreated at empty beacons.</desc>
-    <cost>60</cost>
+    <cost>50</cost>	<!-- was 60 -->
     <bp>8</bp>
     <rarity>0</rarity>	<!-- rarity in sector rarity list-->
     <stackable>false</stackable>
@@ -2226,7 +3135,7 @@ AUGMENTS
 <augBlueprint name="RVS_HOLO_MAKER">
     <title>Holo-Projector</title>
     <desc>Can produce new Hologram Avatars at empty beacons.</desc>
-    <cost>48</cost>
+    <cost>35</cost>
     <bp>8</bp>
     <rarity>0</rarity>	<!-- rarity in sector rarity list-->
     <stackable>false</stackable>
@@ -2247,7 +3156,7 @@ AUGMENTS
     <title>Sentient Combat AI</title>
 	<desc>An Admiral-grade strategy AI, normally used to coordinate fleet actions. Manning bonuses are increased by 50%.</desc> <!-- around 5% for weapons, shields, jump, etc. Effects weapons, shields, jump, hacking, mind control, teleporter, and battery -->
 	<!--<desc>An Admiral-grade strategy AI, normally used to coordinate fleet actions. The construct was always searching for a strong tactical AI to merge with, dreaming of becoming a fully independent cruiser as a result.</desc>-->
-    <cost>75</cost>
+    <cost>80</cost>	<!--R4 2024.05.06: Increased from 75 to 80-->
     <bp>8</bp>
     <rarity>0</rarity>	<!-- rarity in sector rarity list-->
     <stackable>true</stackable>
@@ -2296,24 +3205,65 @@ AUGMENTS
     <stackable>false</stackable>
 </augBlueprint>
 
-<augBlueprint name="RVS_DODGE_ARMOR">
-    <title>Evasion Armor</title>
-	<desc>Passively increases dodge chance by 10%.</desc>
+<augBlueprint name="RVS_SCIENCE_ION_SHIELD">
+    <title>Shield Upgrade</title>
+	<desc>Passively increases shield reacharge and ion resist by 20%.</desc>
 	<cost>55</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <stackable>true</stackable>
+	<value>20</value>
+</augBlueprint>
+
+<augBlueprint name="RVS_SCIENCE_ION_DODGE">
+    <title>Evasion Upgrade</title>
+	<desc>Passively increases dodge chance by 10%.</desc>
+	<cost>55</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <stackable>false</stackable>
 	<value>10</value>
 </augBlueprint>
 
+<augBlueprint name="RVS_SCIENCE_ION_POWER">
+    <title>Power Upgrade</title>
+	<desc>Passively increases power by 2.</desc>
+	<cost>55</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <stackable>true</stackable>
+	<value>2</value>
+</augBlueprint>
+
 <augBlueprint name="RVS_ANTI_GRAVITY_ENGINE">
-    <title>Anti-Gravity Engine</title>
+    <title>Anti-Grav Engine</title>
+	<!--	R4: 2024.05.06: Changed the concept of this augments performand and capabilities
 	<desc>If piloting is disabled, provides a 15% evasion boost, otherwise provides a 5% evasion boost if engines are disabled. +10% FTL Drive charge rate.</desc>
-	<cost>35</cost>
+	-->
+	<desc>These high-tech engines provide an unnatural maneuverability without the consequences of g-forces at the cost of speed. Decreasing the base evasion by 5% but being able to change course drastically with each hit recieved by 5% temporarily.</desc>
+	<cost>70</cost>
     <bp>3</bp>
     <rarity>0</rarity>
-    <stackable>false</stackable>
+    <stackable>false</stackable>	<!-- R4: 2024.05.06: Maybe allowing this to stack, with each stack decreasing the decay time of the bonus evasion?-->
+	<icon>rvs_icon_antigrav_engine</icon>
 </augBlueprint>
+
+<!-- shielding for a quest event. 20% shield charge boost, 20% ion resist, maybe other things too? Currently not in use-->
+<augBlueprint name="RVS_ANOMALY_IMPROVED_SHIELDS">
+	<title>WIP</title>
+	<desc>YOU SHOULDN'T SEE THIS</desc>
+	<cost>45</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.20</value>
+</augBlueprint>
+
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+				CREW
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->
 
 <crewBlueprint name="rvs_ai_hologram">
 	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
@@ -2434,6 +3384,28 @@ AUGMENTS
 	</powerList>
 </crewBlueprint>
 
+
+<crewBlueprint name="rvs_contempter">
+	<desc>An aggressive and hardy reptilian species not from this universe. Excels in melee combat.</desc>
+	<cost>60</cost>
+	<bp>4</bp>
+	<title>Contempter</title>
+	<short>Contempter</short>
+	<rarity>0</rarity>	<!-- not normally obtainable -->
+	<powerList>
+		<power>Max Health is increased to 120</power>
+		<power>Melee damage increased to 1.3x</power>
+		<power>Takes 0.9 times damage</power>
+	</powerList>
+</crewBlueprint>
+
+
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		SHIPS
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->
+
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI" layout="rvsp_ai_cruiser" img="rvsp_ai_cruiser">
 	<class>AI Cruiser</class>
 	<name>Alpha Star</name>	<!-- Named after an AI program that is proficient in Starcraft... would've called it Deep Blue but MV already took that for the Auto Cruiser! -->
@@ -2509,7 +3481,7 @@ AUGMENTS
 	<!-- <crewCount amount="4" class="rvs_ai_hologram" /> -->
 	<aug name="RVS_ANTI_GRAVITY_ENGINE" />
 	<aug name="ADV_SCANNERS" />
-    <mapImage>map_icon_rvs_ai</mapImage>
+    <mv-mapImage>map_icon_rvs_ai</mv-mapImage>
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_AI_2" layout="rvsp_ai_cruiser_2" img="rvsp_ai_cruiser_2">
@@ -2589,7 +3561,7 @@ AUGMENTS
 	<aug name="RVS_SENTIENT_COMBAT_AI" />
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
-    <mapImage>map_icon_rvs_ai</mapImage>
+    <mv-mapImage>map_icon_rvs_ai</mv-mapImage>
 </shipBlueprint>
 
 
@@ -2620,13 +3592,13 @@ AUGMENTS
 				<number>1</number>
 			</slot>
 		</engines>
-		<hacking power="1" room="20" start="true" img="room_hacking_9" />
+		<hacking power="1" room="20" start="false" img="room_hacking_9" />
 		<medbay power="1" room="10" start="false" img="room_medbay_rvs_ai_2">
 			<slot>
 				<number>0</number>
 			</slot>
 		</medbay>
-		<mind power="1" room="4" start="false" img="room_mind_5" />
+		<mind power="1" room="4" start="true" img="room_mind_5" />
 		<oxygen power="1" room="24" start="false" img="room_oxygen_2" />
 		<pilot power="1" room="19" start="true" img="room_pilot_rvs_ai">
 			<slot>
@@ -2669,6 +3641,239 @@ AUGMENTS
 	<shieldImage>rvsp_ai_cruiser</shieldImage>
 	<cloakImage>rvsp_ai_cruiser</cloakImage>
 	<floorImage>rvsp_ai_cruiser</floorImage>
-    <mapImage>map_icon_rvs_ai</mapImage>
+    <mv-mapImage>map_icon_rvs_ai</mv-mapImage>
+</shipBlueprint>
+
+
+<shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT" layout="rvsp_rebel_alt_cruiser" img="rvsp_rebel_alt_cruiser">
+	<class>Rebel Cruiser</class>
+	<name>The Nameless One</name>
+	<desc>Ships of this class have not been exactly seen in this part of the Multiverse. Made more evident so by the crews outrage of what the Rebellion has been doing here.</desc>
+	<systemList>
+		<artillery max="4" power="1" room="13" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_5" />
+		<battery max="2" power="1" room="12" start="false" img="room_battery_17" />
+		<cloaking power="1" room="7" start="false" img="room_cloaking_6" />
+		<doors power="1" room="14" start="true" img="room_doors_10">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones max="8" power="1" room="6" start="false" img="room_drones_3" />
+		<engines max="8" power="2" room="11" start="true" img="room_engines">	<!-- R4 2024.06.09: Was 1, now is 2-->
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="1" start="false" img="room_hacking_6" />
+		<medbay power="1" room="3" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="8" start="false" img="room_mind_7" />
+		<oxygen power="1" room="15" start="true" img="room_oxygen_20" />
+		<pilot power="1" room="16" start="true" img="room_pilot_rvs_uc_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="9" start="false" img="room_sensors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields max="8" power="2" room="2" start="true" img="room_shields_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="10" start="false" />
+		<temporal power="1" room="4" start="false" img="room_temporal_3" />
+		<weapons power="3" room="0" start="true" img="room_weapons_5">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="5" count="4">
+		<weapon name="RVS_LASER_BURST_SCATTER_1" />
+		<weapon name="RVS_BEAM_FOCUS_1" />
+	</weaponList>
+	<droneList drones="5" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />	<!-- R4 2024.06.09: Was 8, now is 9-->
+	<!-- Crew in hyperspace.xml.append
+	<crewCount amount="2" class="human" />
+	<crewCount amount="1" class="human_engineer" />
+	--> <!-- Replace with custom Humanoids -->
+	<aug name="FTL_BOOSTER" />
+	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
+</shipBlueprint>
+
+
+<shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT_2" layout="rvsp_rebel_alt_cruiser_2" img="rvsp_rebel_alt_cruiser_2">
+	<class>Rebel Cruiser</class>
+	<name>The Nameless One</name>
+	<desc>It isn't uncommon to see cruisers refitted into freighters across the Multiverse due to their potential for large carrying capacity. This particular example used by a famous smuggler to lay low in a universe far far away.</desc>
+	<systemList>
+		<artillery power="1" max="4" room="8" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_7" />
+		<battery power="1" max="2" room="10" start="false" img="room_battery_2" />
+		<cloaking power="1" room="9" start="false" img="room_cloaking_rvs_ai" />
+		<clonebay power="1" room="11" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="13" start="false" img="room_doors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="1" max="8" room="5" start="false" img="room_drones_19" />
+		<engines power="2" max="8" room="14" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="16" start="false" img="room_hacking_6" />
+		<medbay power="1" room="11" start="true" img="room_medbay_5">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="2" start="false" img="room_mind_10" />
+		<oxygen power="1" room="6" start="true" img="room_oxygen_7" />
+		<pilot power="1" room="15" start="true" img="room_pilot_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="17" start="false" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="12" start="true" img="room_shields_stolen_nod">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="3" start="false" />
+		<temporal power="1" room="7" start="false" img="room_temporal_3" />
+		<weapons power="3" max="8"  room="0" start="true" img="room_weapons_rvs_uc_1">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="5" count="4">	<!-- Load out based on CE Kestrel Type B -->
+		<weapon name="RVS_LASER_AUTO_2" />
+		<weapon name="RVS_LASER_AUTO_2" />
+		<weapon name="LASER_BURST_1" />
+	</weaponList>
+	<droneList drones="5" count="2" />
+	<health amount="30" />
+	<maxPower amount="10" />
+	<crewCount amount="2" class="human_humanoid" />	<!-- Replace with custom Humanoids -->
+	<crewCount amount="2" class="human" />			<!-- 2024.06.09: Replace with custom Humanoids -->
+	<aug name="NEBULA_GASSES" />
+	<aug name="NEBULA_GASSES" />					<!-- R4 2024.06.09: Added second gasses -->
+	<shieldImage>rvsp_rebel_alt_cruiser</shieldImage>
+	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT_3" layout="rvsp_rebel_alt_cruiser_3" img="rvsp_rebel_alt_cruiser_3">
+	<class>Rebel Cruiser</class>
+	<name>The Nameless One</name>
+	<desc>A high advanced electronic warfare platform that dictates the outcomes of engagements with its superior technology.</desc>
+	<systemList>
+		<artillery power="1" max="4" room="2" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_6" />
+		<battery power="1" max="2" room="3" start="false" img="room_battery_14" />
+		<cloaking power="1" room="8" start="false" img="room_cloaking_6" />
+		<clonebay power="1" room="17" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="15" start="true" img="room_doors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="1" max="8" room="7" start="false" img="room_drones_4" />
+		<engines power="1" max="8" room="5" start="true" img="room_engines_rvs_uc_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="0" start="true" img="room_hacking_9" />
+		<medbay power="1" room="17" start="false" img="room_medbay_2">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="10" start="false" img="room_mind_7" />
+		<oxygen power="1" room="18" start="true" img="room_oxygen_20" />
+		<pilot power="1" room="16" start="true" img="room_pilot_rvs_uc_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="4" start="false" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="6" start="true" img="room_shields_6">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="1" start="false" />
+		<temporal power="1" room="12" start="false" img="room_temporal" />
+		<weapons power="3" max="8" room="9" start="true" img="room_weapons_8">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="5" count="4">
+		<weapon name="RVS_MINES_TECH_1" />
+		<weapon name="RVS_BEAM_ADAPTIVE_1" />
+	</weaponList>
+	<droneList drones="5" count="2" />
+	<health amount="30" />
+	<maxPower amount="10" />
+	<crewCount amount="1" class="human_humanoid" />	<!-- Replace with custom Humanoids -->
+	<crewCount amount="1" class="human_engineer" />
+	<crewCount amount="1" class="human_soldier" />
+	<aug name="HACKING_STUN" />						<!-- Replace with the funny beam reflective augment -->
+	<shieldImage>rvsp_rebel_alt_cruiser</shieldImage>
+	<floorImage>rvsp_rebel_alt_cruiser</floorImage>
+	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
 </shipBlueprint>
 </FTL>

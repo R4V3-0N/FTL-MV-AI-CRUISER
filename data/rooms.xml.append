@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<roomLayout name="pilot_rvs_ai">			<!-- on the AI type A -->
+<roomLayout name="pilot_rvs_ai">		<!-- on the AI type A -->
 	<computerGlow name="glow_pilot" x="54" y="9" dir="RIGHT" />
 </roomLayout>
 <roomLayout name="pilot_rvs_ai_2">		<!-- on the AI type B -->
@@ -9,5 +9,16 @@
 <roomLayout name="engines_rvs_ai">		<!-- on the AI type B -->
 	<computerGlow x="43" y="53" dir="DOWN" />
 </roomLayout>
-
+<roomLayout name="engines_rvs_uc_2">	<!-- on the alt Rebel type C-->
+	<computerGlow x="9" y="53" dir="DOWN" />
+</roomLayout>
+<roomLayout name="pilot_rvs_uc_3">		<!-- on the Alt Rebel type A, and C-->
+	<computerGlow name="glow_pilot" x="19" y="42" dir="RIGHT" />
+</roomLayout>
+<roomLayout name="weapons_rvs_uc_1">	<!-- on the Alt Rebel type B-->
+	<computerGlow x="52" y="6" dir="RIGHT" />
+</roomLayout>
+<roomLayout name="shields_stolen_nod">	<!-- on the Alt Rebel type B, also stole this from Chrono Vortex hence the name-->
+	<computerGlow x="1" y="35" dir="LEFT" />
+</roomLayout>
 

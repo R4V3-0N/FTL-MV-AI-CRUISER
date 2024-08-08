@@ -17,7 +17,8 @@
 <animSheet name="rvs_beam_ion_bust_1" w="290" h="76" fw="29" fh="76">weapons/rvs_beam_ion_bust_1_strip10.png</animSheet>
 <animSheet name="rvs_beam_ion_bust_2" w="306" h="86" fw="34" fh="86">weapons/rvs_beam_ion_bust_2_strip9.png</animSheet>
 <animSheet name="rvs_flock_gun" w="351" h="100" fw="39" fh="100">weapons_hyperspace/rvs_flock_gun_strip9.png</animSheet>
-<animSheet name="rvs_projector_avatar" w="924" h="61" fw="42" fh="61">weapons/rvs_projector_avatar_strip22.png</animSheet>
+<animSheet name="rvs_projector_avatar" w="924" h="61" fw="42" fh="61">weapons/rvs_projector_avatar_strip22.png</animSheet>					<!-- BOSS DROP, MV RENEGADE CRUISER -->
+<animSheet name="rvs_projector_avatar_chaos" w="924" h="61" fw="42" fh="61">weapons/rvs_projector_avatar_chaos_strip22.png</animSheet>		<!-- BOSS DROP, CHAOS MV RENEGADE CRUISER -->
 
 <weaponAnim name="rvs_flock_gun">
 	<sheet>rvs_flock_gun</sheet>
@@ -64,10 +65,20 @@
 	<mountPoint x="4" y="47"/>
 	<chargeImage>weapons/rvs_projector_avatar_glow.png</chargeImage>
 </weaponAnim>
+<weaponAnim name="rvs_projector_avatar_chaos">
+	<sheet>rvs_projector_avatar_chaos</sheet>
+	<desc length="22" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>10</fireFrame>
+	<firePoint  x="26" y="7"/>
+	<mountPoint x="4" y="47"/>
+	<chargeImage>weapons/rvs_projector_avatar_glow.png</chargeImage>
+</weaponAnim>
 
 <!-- Rebalanced Arsenal / CE inspired weapon Animations-->
 <animSheet name="ra_beam_auto" w="175" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_strip7.png</animSheet>
-<animSheet name="ra_beam_auto_charge" w="25" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_chargeglow.png</animSheet>
+<animSheet name="rvs_beam_pernach" w="300" h="39" fw="30" fh="39">weapons_rebalanced_arsenal/rvs_beam_pernach_strip10.png</animSheet>
+<animSheet name="rvs_beam_adaptive_1" w="350" h="36" fw="35" fh="36">weapons_rebalanced_arsenal/rvs_beam_adaptive_1_strip10.png</animSheet>
 <animSheet name="ra_effector_1" w="105" h="54" fw="35" fh="54">weapons_rebalanced_arsenal/ra_effector_1_strip3.png</animSheet>
 <animSheet name="ra_effector_2" w="123" h="62" fw="41" fh="62">weapons_rebalanced_arsenal/ra_effector_2_strip3.png</animSheet>
 <animSheet name="ra_effector_heavy" w="138" h="72" fw="46" fh="72">weapons_rebalanced_arsenal/ra_effector_heavy_strip3.png</animSheet>
@@ -78,12 +89,10 @@
 <animSheet name="rvs_laser_burst_scatter_1" w="216" h="46" fw="18" fh="46">weapons_rebalanced_arsenal/rvs_laser_burst_scatter_1_strip12.png</animSheet>
 <animSheet name="rvs_laser_burst_scatter_2" w="288" h="50" fw="24" fh="50">weapons_rebalanced_arsenal/rvs_laser_burst_scatter_2_strip12.png</animSheet>
 <animSheet name="rvs_shotgun_scatter" w="240" h="55" fw="30" fh="55">weapons_rebalanced_arsenal/rvs_shotgun_scatter_strip8.png</animSheet>
+<animSheet name="rvs_laser_auto_1" w="276" h="58" fw="23" fh="58">weapons_rebalanced_arsenal/rvs_laser_auto_1_strip12.png</animSheet>
+<animSheet name="rvs_laser_auto_2" w="230" h="59" fw="23" fh="59">weapons_rebalanced_arsenal/rvs_laser_auto_2_strip10.png</animSheet>
+<animSheet name="rvs_minelauncher_tech_1" w="288" h="61" fw="48" fh="61">weapons_rebalanced_arsenal/rvs_minelauncher_tech_1_strip6.png</animSheet>
 
-<anim name="ra_beam_auto_charge">
-	<sheet>ra_beam_auto_charge</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
 <weaponAnim name="ra_beam_auto">
 	<sheet>ra_beam_auto</sheet>
 	<desc length="7" x="0" y="0"/>
@@ -93,6 +102,39 @@
 	<mountPoint x="5" y="26"/>
 	<chargeImage>weapons_rebalanced_arsenal/ra_beam_auto_glow.png</chargeImage>
 	<boost>ra_beam_auto_charge</boost>
+</weaponAnim>
+<animSheet name="ra_beam_auto_charge" w="25" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_chargeglow.png</animSheet>
+<anim name="ra_beam_auto_charge">
+	<sheet>ra_beam_auto_charge</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<weaponAnim name="rvs_beam_pernach">
+	<sheet>rvs_beam_pernach</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="16" y="11"/>
+	<mountPoint x="5" y="22"/>
+	<chargeImage>weapons_rebalanced_arsenal/rvs_beam_pernach_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="rvs_beam_adaptive_1_charge" w="105" h="36" fw="35" fh="36">weapons_rebalanced_arsenal/rvs_beam_adaptive_1_chargeglow.png</animSheet>	<!-- R4 2024.06.24: Yeah, IDK why this is offset diagonally by one ,so I just changed the sprite instead of the parametres here. Good enough I suppose-->
+<anim name="rvs_beam_adaptive_1_charge">
+	<sheet>rvs_beam_adaptive_1_charge</sheet>
+	<desc length="3" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+<weaponAnim name="rvs_beam_adaptive_1">
+	<sheet>rvs_beam_adaptive_1</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="21" y="14"/>
+	<mountPoint x="9" y="28"/>
+	<chargeImage>weapons_rebalanced_arsenal/rvs_beam_adaptive_1_glow.png</chargeImage>
+	<boost>rvs_beam_adaptive_1_charge</boost>
 </weaponAnim>
 
 <weaponAnim name="ra_effector_1">
@@ -203,6 +245,50 @@
 	<mountPoint x="5" y="39"/>
 </weaponAnim>
 
+<weaponAnim name="rvs_laser_auto_1">
+	<sheet>rvs_laser_auto_1</sheet>
+	<desc length="12" x="0" y="0"/>
+	<chargedFrame>7</chargedFrame>
+	<fireFrame>9</fireFrame>
+	<firePoint  x="14" y="3"/>
+	<mountPoint x="4" y="37"/>
+	<chargeImage>weapons_rebalanced_arsenal/rvs_laser_auto_1_glow.png</chargeImage>
+	<boost>rvs_laser_auto_1_charge</boost>
+</weaponAnim>
+<animSheet name="rvs_laser_auto_1_charge" w="23" h="58" fw="23" fh="58">weapons_rebalanced_arsenal/rvs_laser_auto_1_glow.png</animSheet>
+<anim name="rvs_laser_auto_1_charge">
+	<sheet>rvs_laser_auto_1_charge</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<weaponAnim name="rvs_laser_auto_2">
+	<sheet>rvs_laser_auto_2</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>7</fireFrame>
+	<firePoint  x="14" y="3"/>
+	<mountPoint x="4" y="39"/>
+	<chargeImage>weapons_rebalanced_arsenal/rvs_laser_auto_2_glow.png</chargeImage>
+	<boost>rvs_laser_auto_2_charge</boost>
+</weaponAnim>
+<animSheet name="rvs_laser_auto_2_charge" w="23" h="59" fw="23" fh="59">weapons_rebalanced_arsenal/rvs_laser_auto_2_glow.png</animSheet>
+<anim name="rvs_laser_auto_2_charge">
+	<sheet>rvs_laser_auto_2_charge</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<weaponAnim name="rvs_minelauncher_tech_1">
+	<sheet>rvs_minelauncher_tech_1</sheet>
+	<desc length="6" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="21" y="34iser"/>
+	<mountPoint x="6" y="46"/>
+	<chargeImage>weapons_rebalanced_arsenal/rvs_minelauncher_tech_1_glow.png</chargeImage>
+</weaponAnim>
+
 <!-- Hyperspace Anthology inspired weapons-->
 <animSheet name="rvs_emp_1" w="324" h="95" fw="27" fh="95">weapons_hyperspace/rvs_emp_1_strip12.png</animSheet>
 <animSheet name="rvs_emp_2" w="372" h="106" fw="31" fh="106">weapons_hyperspace/rvs_emp_2_strip12.png</animSheet>
@@ -211,6 +297,7 @@
 <animSheet name="rvs_beam_shotgun_2" w="340" h="49" fw="34" fh="49">weapons_hyperspace/rvs_beam_shotgun_2_strip10.png</animSheet>
 <animSheet name="rvs_beam_shotgun_3" w="532" h="65" fw="38" fh="65">weapons_hyperspace/rvs_beam_shotgun_3_strip14.png</animSheet>
 <animSheet name="rvs_hs_plasma_thrower_1" w="280" h="59" fw="28" fh="59">weapons_hyperspace/rvs_plasma_thrower_1_strip10.png</animSheet>
+<animSheet name="rvs_focus_corrosion_1" w="340" h="65" fw="34" fh="65">weapons_hyperspace/rvs_focus_corrosion_1_strip10.png</animSheet>
 
 <weaponAnim name="rvs_emp_1">
 	<sheet>rvs_emp_1</sheet>
@@ -288,6 +375,16 @@
 	<chargeImage>weapons_hyperspace/rvs_plasma_thrower_1_glow.png</chargeImage>
 </weaponAnim>
 
+<weaponAnim name="rvs_focus_corrosion_1">
+	<sheet>rvs_focus_corrosion_1</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint  x="21" y="4"/>
+	<mountPoint x="4" y="45"/>
+	<chargeImage>weapons_hyperspace/rvs_focus_corrosion_1_glow.png</chargeImage>
+</weaponAnim>
+
 <animSheet name="RVS_PROJECTILE_BEAM_FOCUS_1" w="12" h="5" fw="12" fh="5">effects/RVS_PROJECTILE_BEAM_FOCUS_1.png</animSheet>
 <anim name="RVS_PROJECTILE_BEAM_FOCUS_1">
 	<sheet>RVS_PROJECTILE_BEAM_FOCUS_1</sheet>
@@ -296,6 +393,8 @@
 </anim>
 
 <!-- Rebalanced Arsenal Projectiles -->
+<animSheet name="ra_laser_light1" w="200" h="20" fw="50" fh="20">projectiles/ra_laser_light_strip4.png</animSheet>
+<animSheet name="ra_laser_light2" w="200" h="20" fw="50" fh="20">projectiles/ra_laser_light2_strip4.png</animSheet>
 <animSheet name="ra_laser_heavy1" w="200" h="20" fw="50" fh="20">projectiles/ra_laser_heavy1_strip4.png</animSheet>
 <animSheet name="ra_laser_heavy2" w="200" h="20" fw="50" fh="20">projectiles/ra_laser_heavy2_strip4.png</animSheet>
 <animSheet name="ra_laser_heavy_scatter_shot_1" w="140" h="20" fw="35" fh="20">projectiles/ra_laser_heavy_scatter_shot_1_strip4.png</animSheet>
@@ -306,6 +405,19 @@
 <animSheet name="ra_laser_burst_scatter_shot" w="400" h="80" fw="50" fh="80">projectiles/ra_laser_burst_scatter_shot_strip8.png</animSheet>
 <animSheet name="ra_shotgun_scatter_shot" w="160" h="16" fw="40" fh="16">projectiles/ra_shotgun_scatter_shot_strip4.png</animSheet>
 <animSheet name="ra_plasma_shot" w="200" h="40" fw="50" fh="40">projectiles/ra_plasma_shot_strip4.png</animSheet>
+<animSheet name="ra_mine_tech" w="30" h="30" fw="30" fh="30">projectiles/ra_mine_tech_strip1.png</animSheet>
+
+<anim name="ra_laser_light1">
+	<sheet>ra_laser_light1</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.1</time>
+</anim>
+
+<anim name="ra_laser_light2">
+	<sheet>ra_laser_light2</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.1</time>
+</anim>
 
 <anim name="ra_laser_heavy1">
 	<sheet>ra_laser_heavy1</sheet>
@@ -371,6 +483,12 @@
 	<sheet>ra_plasma_shot</sheet>
 	<desc length="4" x="0" y="0"/>
 	<time>0.3</time>
+</anim>
+
+<anim name="ra_mine_tech">
+	<sheet>ra_mine_tech</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.00</time>
 </anim>
 
 
@@ -444,14 +562,12 @@
 <animSheet name="ra_effector_hacking_warning_small" w="1800" h="120" fw="600" fh="120">effects_rebalanced_arsenal/ra_effector_hacking_warning_small_strip3.png</animSheet>
 <animSheet name="ra_effector_hacking_warning_heavy" w="4800" h="120" fw="600" fh="120">effects_rebalanced_arsenal/ra_effector_hacking_warning_heavy_strip8.png</animSheet>
 <animSheet name="ra_explosion_fire" w="640" h="64" fw="64" fh="64">effects_rebalanced_arsenal/ra_explosion_fire_strip10.png</animSheet>
+<animSheet name="ra_effector_impact_1" w="315" h="35" fw="35" fh="35">effects_rebalanced_arsenal/ra_effector_impact_1_strip9.png</animSheet>
+<!-- Impact -->
+<animSheet name="ra_explosion_laser_light" w="315" h="35" fw="35" fh="35">effects_rebalanced_arsenal/ra_explosion_laser_light_strip9.png</animSheet>
+<animSheet name="ra_beam_contact_big" w="240" h="48" fw="48" fh="48">effects_rebalanced_arsenal/ra_laser_contact_big.png</animSheet>
+<animSheet name="ra_beam_contact_pierce" w="240" h="48" fw="48" fh="48">effects_rebalanced_arsenal/ra_laser_contact_pierce.png</animSheet>
 
-
-
-<anim name="ra_effector_impact_1">
-	<sheet>ra_effector_impact_1</sheet>
-	<desc length="9" x="0" y="0"/>
-	<time>1</time>
-</anim>
 
 <anim name="ra_effector_hacking_1">
 	<sheet>ra_effector_hacking</sheet>
@@ -465,7 +581,7 @@
 </anim>
 
 <anim name="ra_effector_residual_old"> <!-- 1? -->
-	<sheet>ra_effector_residual</sheet>
+	<sheet>ra_effector_residual_old</sheet>
 	<desc length="12" x="0" y="0"/>
 	<time>1.2</time>
 </anim>
@@ -506,13 +622,12 @@
 	<time>4.0</time>
 </anim>
 
+<!-- R4: 2024.05.19:  Will just coment this out for now, no clue what this is doing here.
 <anim name="ra_effector_hacking_warning_drone">
 	<sheet>ra_effector_hacking_warning_small</sheet>
 	<desc length="1" x="600" y="0"/>
 	<time>1.5</time>
-</anim>
-
-
+</anim>-->
 
 <anim name="ra_effector_impact_invisible">
 	<sheet>ra_effector_impact_1</sheet>
@@ -527,18 +642,43 @@
 	<time>0.6</time>
 </anim>
 
-<anim name="ra_explosion_laser_light">
-	<sheet>ra_explosion_laser_light</sheet>
-	<desc length="9" x="0" y="0"/>
-	<time>0.75</time>
-</anim>
-
 <anim name="ra_explosion_fire">
 	<sheet>ra_explosion_fire</sheet>
 	<desc length="10" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
 
+<anim name="ra_effector_impact_1">
+	<sheet>ra_effector_impact_1</sheet>
+	<desc length="9" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<anim name="ra_explosion_laser_light">
+	<sheet>ra_explosion_laser_light</sheet>
+	<desc length="9" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<anim name="ra_beam_contact_big">
+	<sheet>ra_beam_contact_big</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<anim name="ra_beam_contact_pierce">
+	<sheet>ra_beam_contact_pierce</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<!-- Slightly edited version from IPS made by Slowrider -->
+<animSheet name="rvs_corrode_sparks_2" w="245" h="35" fw="35" fh="35">effects/rvs_corrode_sparks_2.png</animSheet>
+<anim name="rvs_corrode_sparks_2">
+	<sheet>rvs_corrode_sparks_2</sheet>
+	<desc length="7" x="0" y="0"/>
+	<time>1</time>
+</anim>
 
 <!-- Scatter explosion -->
 <animSheet name="ra_explosion_tiny1" w="180" h="15" fw="15" fh="15">effects_rebalanced_arsenal/ra_explosion_tiny1_strip12.png</animSheet>
@@ -1089,6 +1229,137 @@
 	<time>1</time>
 </anim>
 
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+			CONTEMPTER CREW
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ --> 
+<animSheet name="rvs_contempter" w="315" h="490" fw="35" fh="35">people/rvs_contempter_base.png</animSheet>
+<anim name="rvs_contempter_clone">
+	<sheet>rvs_contempter</sheet>
+	<desc length="6" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="rvs_contempter_death_right">
+	<sheet>rvs_contempter</sheet>
+	<desc length="5" x="3" y="0"/>
+	<time>0.75</time>
+</anim>
+<anim name="rvs_contempter_death_left">
+	<sheet>rvs_contempter</sheet>
+	<desc length="5" x="0" y="2"/>	<!-- R4 2024.05.23: is this right? What even is this anim for?! -->
+	<time>0.75</time>
+</anim>
+<anim name="rvs_contempter_walk_down">
+	<sheet>rvs_contempter</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_walk_right">
+	<sheet>rvs_contempter</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_walk_up">
+	<sheet>rvs_contempter</sheet>
+	<desc length="4" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_walk_left">
+	<sheet>rvs_contempter</sheet>
+	<desc length="4" x="4" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_shoot_down">
+	<sheet>rvs_contempter</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_shoot_right">
+	<sheet>rvs_contempter</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_shoot_up">
+	<sheet>rvs_contempter</sheet>
+	<desc length="3" x="6" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_shoot_left">
+	<sheet>rvs_contempter</sheet>
+	<desc length="3" x="0" y="1"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_fire_down">
+	<sheet>rvs_contempter</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_fire_right">
+	<sheet>rvs_contempter</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_fire_up">
+	<sheet>rvs_contempter</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_fire_left">
+	<sheet>rvs_contempter</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_repair">
+	<sheet>rvs_contempter</sheet>
+	<desc length="9" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_punch_up">
+	<sheet>rvs_contempter</sheet>
+	<desc length="7" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_punch_down">
+	<sheet>rvs_contempter</sheet>
+	<desc length="7" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="rvs_contempter_teleport">
+	<sheet>rvs_contempter</sheet>
+	<desc length="9" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="rvs_contempter_type_right">
+	<sheet>rvs_contempter</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="rvs_contempter_type_left">
+	<sheet>rvs_contempter</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="rvs_contempter_type_up">
+	<sheet>rvs_contempter</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="rvs_contempter_type_down">
+	<sheet>rvs_contempter</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="rvs_contempter_portrait">
+	<sheet>rvs_contempter</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<anim name="rvs_contempter_crewLaser">
+	<sheet>rvs_contempter</sheet>
+	<desc length="2" x="1" y="0"/>
+	<time>0.5</time>
+</anim>
+
 
 <animSheet name="telepad_on_1x1" w="35" h="35" fw="35" fh="35">effects/telepad_on_1x1.png</animSheet>
 <anim name="telepad_on_1x1">
@@ -1096,4 +1367,41 @@
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
+
+
+<!-- FORGE MASTER CROSS OVER ANIMATIONS-->
+
+<animSheet name="fm_rvs_splitter_energy_1" w="184" h="40" fw="23" fh="40">weapons_forgemaster/fm_rvs_splitter_energy_1_strip8.png</animSheet>
+<animSheet name="fm_rvs_splitter_energy_2" w="290" h="57" fw="29" fh="57">weapons_forgemaster/fm_rvs_splitter_energy_2_strip10.png</animSheet>
+<animSheet name="fm_rvs_splitter_energy_3" w="360" h="74" fw="36" fh="74">weapons_forgemaster/fm_rvs_splitter_energy_3_strip10.png</animSheet>
+
+<weaponAnim name="fm_rvs_splitter_energy_1">
+	<sheet>fm_rvs_splitter_energy_1</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="14" y="6"/>
+	<mountPoint x="4" y="28"/>
+	<chargeImage>weapons_forgemaster/fm_rvs_splitter_energy_1_glow.png</chargeImage>
+</weaponAnim>
+<weaponAnim name="fm_rvs_splitter_energy_2">
+	<sheet>fm_rvs_splitter_energy_2</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="18" y="7"/>
+	<mountPoint x="5" y="44"/>
+	<chargeImage>weapons_forgemaster/fm_rvs_splitter_energy_2_glow.png</chargeImage>
+</weaponAnim>
+<weaponAnim name="fm_rvs_splitter_energy_3">
+	<sheet>fm_rvs_splitter_energy_3</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="21" y="7"/>
+	<mountPoint x="6" y="57"/>
+	<chargeImage>weapons_forgemaster/fm_rvs_splitter_energy_3_glow.png</chargeImage>
+</weaponAnim>
+
+<!-- FORGOR END-->
 </FTL>
