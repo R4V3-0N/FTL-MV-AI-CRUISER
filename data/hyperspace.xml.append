@@ -900,7 +900,6 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
     <mod-append:script>data/rvs_scripts/ai_drones/beam_defense.lua</mod-append:script>
     <mod-append:script>data/rvs_scripts/ai_drones/swarm.lua</mod-append:script>
     <mod-append:script>data/rvs_scripts/ai_misc/holos.lua</mod-append:script>
-    <mod-append:script>data/rvs_scripts/ai_misc/drone_orbit.lua</mod-append:script>
     <mod-append:script>data/rvs_scripts/ai_misc/rebel_cruiser_name.lua</mod-append:script>
 </mod:findLike>
 
