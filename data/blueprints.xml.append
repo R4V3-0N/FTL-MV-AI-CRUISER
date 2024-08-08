@@ -1141,9 +1141,8 @@
 		<count>3</count>
 	</boost>
 	<launchSounds>
-		<sound>ra_focusbeam1</sound>
-		<sound>ra_focusbeam2</sound>
-		<sound>ra_focusbeam3</sound>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
 	</launchSounds>
 	<weaponArt>rvs_beam_adaptive_1</weaponArt> 
 </weaponBlueprint>
@@ -3255,7 +3254,6 @@ AUGMENTS
     <bp>3</bp>
     <rarity>0</rarity>
     <stackable>false</stackable>	<!-- R4: 2024.05.06: Maybe allowing this to stack, with each stack decreasing the decay time of the bonus evasion?-->
-	<icon>rvs_icon_antigrav_engine</icon>
 </augBlueprint>
 
 <!-- shielding for a quest event. 20% shield charge boost, 20% ion resist, maybe other things too? Currently not in use-->
@@ -3704,7 +3702,7 @@ AUGMENTS
 		</shields>
 		<teleporter power="1" room="10" start="false" />
 		<temporal power="1" room="4" start="false" img="room_temporal_3" />
-		<weapons power="3" room="0" start="true" img="room_weapons_5">
+		<weapons power="2" room="0" start="true" img="room_weapons_5">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -3719,7 +3717,7 @@ AUGMENTS
 	</weaponList>
 	<droneList drones="5" count="2" />
 	<health amount="30" />
-	<maxPower amount="8" />	<!-- R4 2024.06.09: Was 8, now is 9-->
+	<maxPower amount="7" />
 	<!-- Crew in hyperspace.xml.append
 	<crewCount amount="2" class="human" />
 	<crewCount amount="1" class="human_engineer" />
@@ -3783,7 +3781,7 @@ AUGMENTS
 		</shields>
 		<teleporter power="1" room="3" start="false" />
 		<temporal power="1" room="7" start="false" img="room_temporal_3" />
-		<weapons power="3" max="8"  room="0" start="true" img="room_weapons_rvs_uc_1">
+		<weapons power="4" max="8"  room="0" start="true" img="room_weapons_rvs_uc_1">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -3795,11 +3793,10 @@ AUGMENTS
 	<weaponList missiles="5" count="4">	<!-- Load out based on CE Kestrel Type B -->
 		<weapon name="RVS_LASER_AUTO_2" />
 		<weapon name="RVS_LASER_AUTO_2" />
-		<weapon name="LASER_BURST_1" />
 	</weaponList>
 	<droneList drones="5" count="2" />
 	<health amount="30" />
-	<maxPower amount="10" />
+	<maxPower amount="9" />
 	<crewCount amount="2" class="human_humanoid" />	<!-- Replace with custom Humanoids -->
 	<crewCount amount="2" class="human" />			<!-- 2024.06.09: Replace with custom Humanoids -->
 	<aug name="NEBULA_GASSES" />
@@ -3877,7 +3874,7 @@ AUGMENTS
 	</weaponList>
 	<droneList drones="5" count="2" />
 	<health amount="30" />
-	<maxPower amount="10" />
+	<maxPower amount="9" />
 	<crewCount amount="1" class="human_humanoid" />	<!-- Replace with custom Humanoids -->
 	<crewCount amount="1" class="human_engineer" />
 	<crewCount amount="1" class="human_soldier" />
