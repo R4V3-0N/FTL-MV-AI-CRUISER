@@ -869,8 +869,30 @@ This ship is equipped with Anti-Gravity Engines providing it with increased evas
 </mod:findLike>
 
 <mod:findLike type="scripts" limit="1">
-    <mod-append:script>data/rvs_scripts/ai_cruiser.lua</mod-append:script>
-    <mod-append:script>data/rvs_scripts/ai_cruiser_ach.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_core.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_ship_ach.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_value_trackers.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_augments/combat_ai.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_augments/grav_engine.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_augments/drone_bays.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_augments/reflective_plating.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_augments/pulsar_nebula_upgrades.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_weapons/scatter_beam.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_weapons/emp.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_weapons/effector.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_weapons/ion_buster.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_weapons/flock_gun.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_weapons/scatter.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_weapons/plasma.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_weapons/projector.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_drones/interceptor.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_drones/shock.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_drones/missile.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_drones/beam_defense.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_drones/swarm.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_misc/holos.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_misc/drone_orbit.lua</mod-append:script>
+    <mod-append:script>data/rvs_scripts/ai_misc/rebel_cruiser_name.lua</mod-append:script>
 </mod:findLike>
 
 <!-- Music unlock for Jukebox -->
