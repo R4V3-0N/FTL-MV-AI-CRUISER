@@ -3674,9 +3674,9 @@ AUGMENTS
 
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT" layout="rvsp_rebel_alt_cruiser" img="rvsp_rebel_alt_cruiser">
-	<class>Rebel Cruiser</class>
+	<class>Alt Rebel Cruiser</class>
 	<name>The Nameless One</name>
-	<desc>Ships of this class have not been exactly seen in this part of the Multiverse. Made more evident so by the crews outrage of what the Rebellion has been doing here.</desc>
+	<desc>Ships of this class are not normally seen in this part of the Multiverse. This is made more evident by the crew's outrage at what the Rebellion has been doing here.</desc>
 	<systemList>
 		<artillery max="4" power="1" room="13" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_5" />
 		<battery max="2" power="1" room="12" start="false" img="room_battery_17" />
@@ -3748,9 +3748,10 @@ AUGMENTS
 
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT_2" layout="rvsp_rebel_alt_cruiser_2" img="rvsp_rebel_alt_cruiser_2">
-	<class>Rebel Cruiser</class>
+	<class>Alt Rebel Cruiser</class>
 	<name>The Nameless One</name>
-	<desc>It isn't uncommon to see cruisers refitted into freighters across the Multiverse due to their potential for large carrying capacity. This particular example used by a famous smuggler to lay low in a universe far far away.</desc>
+	<unlock>Get to Sector 8 with the Alt Rebel Cruiser Type A to unlock this ship.</unlock>
+	<desc>It isn't uncommon to see cruisers refitted into freighters across the Multiverse due to their large carrying capacity. This particular example was used by a famous smuggler to lay low in a universe far far away.</desc>
 	<systemList>
 		<artillery power="1" max="4" room="8" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_7" />
 		<battery power="1" max="2" room="10" start="false" img="room_battery_2" />
@@ -3826,9 +3827,10 @@ AUGMENTS
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_RVSP_REBEL_ALT_3" layout="rvsp_rebel_alt_cruiser_3" img="rvsp_rebel_alt_cruiser_3">
-	<class>Rebel Cruiser</class>
+	<class>Alt Rebel Cruiser</class>
 	<name>The Nameless One</name>
-	<desc>A high advanced electronic warfare platform that dictates the outcomes of engagements with its superior technology.</desc>
+	<unlock>Complete 2/3 of the Alt Rebel Cruiser Achievements to unlock this ship.</unlock>
+	<desc>A highly advanced electronic warfare platform that dictates the outcomes of engagements with its superior technology.</desc>
 	<systemList>
 		<artillery power="1" max="4" room="2" start="false" weapon="ARTILLERY_BOSS_1" img="room_artillery_6" />
 		<battery power="1" max="2" room="3" start="false" img="room_battery_14" />
