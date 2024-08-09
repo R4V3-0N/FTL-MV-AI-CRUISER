@@ -75,7 +75,7 @@
     <mod-append:choice req="RVS_MINES_TECH_1" hidden="true">
         <text>Use your Tech Mine Launcher. [-7}, gives 2 delay, does not impact notoriety]</text>
         <event>
-            <text>You quickly deploy several smart mines around this beacon where they will remain cloaked and hidden until and only when the Rebel Fleet arrives.</text>
+            <text>You rig the ammunition and set a trap for the Rebels. The mines will remain cloaked until they detect and lock onto Rebel ship signatures, leaving bystanders untouched.</text>
             <modifyPursuit amount="-2"/>
             <item_modify>
                 <item type="missiles" min="-7" max="-7"/>   <!-- R4 2024.08.07 : Currently this to be 4 ammo more than in CE and double the modify pursuit compared to CE. Might slightly increase ammo count alter?-->
