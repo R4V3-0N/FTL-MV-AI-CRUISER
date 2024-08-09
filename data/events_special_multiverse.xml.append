@@ -253,3 +253,21 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 	<autoReward level="LOW">stuff</autoReward>
 	<weapon name="RVS_PROJECTOR_AVATAR_CHAOS"/>
 </event>
+
+<mod:findName type="event" name="NEMESIS_FIRST">
+	<mod:findLike type="choice" limit="1">
+		<mod:findLike type="event" limit="1">
+			<mod-append:choice hidden="true" req="RVS_REFLECTIVE_PLATING">
+				<text>(Reflective Plating) ...You sure about that?</text>
+				<event>
+					<text>"Refractive whatsit? Never heard of it. Whatever your fancy-shancy tech is, it won't save you from me, beyatch! Now prepare to TASTE my BEAMS!"</text>
+					<ship hostile="true"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</mod-append:choice>
+		</mod:findLike>
+	</mod:findLike>
+</mod:findName>
