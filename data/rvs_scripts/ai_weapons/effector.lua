@@ -20,6 +20,8 @@ systemTargetWeapons.RA_EFFECTOR_2 = sysWeights
 systemTargetWeapons.RA_EFFECTOR_HEAVY = sysWeights
 systemTargetWeapons.RA_EFFECTOR_CHAIN = sysWeights
 systemTargetWeapons.RVS_ARTILLERY_EFFECTOR = sysWeights
+systemTargetWeapons.RVS_PROJECTOR_AVATAR = sysWeights
+systemTargetWeapons.RVS_PROJECTOR_AVATAR_CHAOS = sysWeights
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local thisShip = Hyperspace.ships(weapon.iShipId)
     local otherShip = Hyperspace.ships(1 - weapon.iShipId)
