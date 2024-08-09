@@ -155,7 +155,7 @@ Hacking Duration: 4 seconds
 Hack Immunity: 3 seconds
 Accuracy Bonus: +10%
 
-Buy/Sell Price: 70~/35~
+Default Price: 70~   -   Selling Price: 35~
 	</descriptionOverride>
 	<tooltip>Disrupts enemy ships.</tooltip>
 	<tooltipOverride>Required Power: 3
@@ -261,7 +261,7 @@ Hacking Duration: 4 seconds
 Hack Immunity: 3 seconds
 Accuracy Bonus: +10%
 
-Buy/Sell Price: 70~/35~
+Default Price: 70~   -   Selling Price: 35~
 	</descriptionOverride>
 	<tooltip>Disrupts enemy ships.</tooltip>
 	<tooltipOverride>Required Power: 3
@@ -1192,28 +1192,27 @@ Accuracy Bonus: +10%</tooltipOverride>
 	<desc>Basic hacking field projector that can disrupt systems.</desc>
 	<descriptionOverride>Basic hacking field projector that can disrupt systems.
 
-		Stats:
-		Required Power: 2
-		Charge Time: 15 seconds
+Stats:
+Required Power: 2
+Charge Time: 15 seconds
 
-		Shots Per Charge: 1
+Shots Per Charge: 1
 
-		Hacking Duration: 4 seconds
-		Hack Immunity: 3 seconds
-		Accuracy Bonus: +10%
-		
-		Buy/Sell Price: 55~/27~
+Hacking Duration: 4 seconds
+Hack Immunity: 3 seconds
+Accuracy Bonus: +10%
+
+Default Price: 55~   -   Selling Price: 27~
 	</descriptionOverride>
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<tooltipOverride>Required Power: 2
-		Charge Time: 15 seconds
+Charge Time: 15 seconds
 
-		Shots Per Charge: 1
+Shots Per Charge: 1
 
-		Hacking Duration: 4 seconds
-		Hack Immunity: 3 seconds
-		Accuracy Bonus: +10%
-	</tooltipOverride>
+Hacking Duration: 4 seconds
+Hack Immunity: 3 seconds
+Accuracy Bonus: +10%</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10--> 
 	<hack duration="4" immuneAfterHack="3">
@@ -1276,28 +1275,27 @@ Accuracy Bonus: +10%</tooltipOverride>
 	<desc>Designed to shortly nullify enemy specialized systems. This fast charging projector device hacks systems at a higher rate than its predecessor.</desc>
 	<descriptionOverride>Designed to shortly nullify enemy specialized systems. This fast charging projector device hacks systems at a higher rate than its predecessor.
 
-		Stats:
-		Required Power: 3
-		Charge Time: 7 seconds
+Stats:
+Required Power: 3
+Charge Time: 7 seconds
 
-		Shots Per Charge: 1
+Shots Per Charge: 1
 
-		Hacking Duration: 2.5 seconds
-		Hack Immunity: 6 seconds
-		Accuracy Bonus: +10%
-		
-		Buy/Sell Price: 60~/30~
+Hacking Duration: 2.5 seconds
+Hack Immunity: 6 seconds
+Accuracy Bonus: +10%
+
+Default Price: 60~   -   Selling Price: 30~
 	</descriptionOverride>
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<tooltipOverride>Required Power: 3
-		Charge Time: 7 seconds
+Charge Time: 7 seconds
 
-		Shots Per Charge: 1
+Shots Per Charge: 1
 
-		Hacking Duration: 2.5 seconds
-		Hack Immunity: 6 seconds
-		Accuracy Bonus: +10%
-	</tooltipOverride>
+Hacking Duration: 2.5 seconds
+Hack Immunity: 6 seconds
+Accuracy Bonus: +10%</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
 	<hack duration="2.5" immuneAfterHack="6"/>
@@ -1355,28 +1353,27 @@ Accuracy Bonus: +10%</tooltipOverride>
 	<desc>Slow-charging effector that can heavily disrupt ship systems with a prolonged hacking attack. Though the targeted systems become immune longer compared to other Effector.</desc>
 	<descriptionOverride>Slow-charging effector that can heavily disrupt ship systems with a prolonged hacking attack. Though the targeted systems become immune longer compared to other Effector.
 
-		Stats:
-		Required Power: 3
-		Charge Time: 20 seconds
+Stats:
+Required Power: 3
+Charge Time: 20 seconds
 
-		Shots Per Charge: 1
+Shots Per Charge: 1
 
-		Hacking Duration: 15 seconds
-		Hack Immunity: 20 seconds
-		Accuracy Bonus: +10%
-		
-		Buy/Sell Price: 65~/32~
+Hacking Duration: 15 seconds
+Hack Immunity: 20 seconds
+Accuracy Bonus: +10%
+
+Default Price: 65~   -   Selling Price: 32~
 	</descriptionOverride>
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<tooltipOverride>Required Power: 3
-		Charge Time: 20 seconds
+Charge Time: 20 seconds
 
-		Shots Per Charge: 1
+Shots Per Charge: 1
 
-		Hacking Duration: 15 seconds
-		Hack Immunity: 20 seconds
-		Accuracy Bonus: +10%
-	</tooltipOverride>
+Hacking Duration: 15 seconds
+Hack Immunity: 20 seconds
+Accuracy Bonus: +10%</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
 	<hack duration="15" immuneAfterHack="20"/>
@@ -1435,32 +1432,31 @@ Accuracy Bonus: +10%</tooltipOverride>
 	<desc>Intelligent field projector that learns from the enemy system to compute faster hacking solutions.</desc>
 	<descriptionOverride>Intelligent field projector that learns from the enemy system to compute faster hacking solutions.
 
-		Stats:
-		Required Power: 3
-		Charge Time: 18 seconds
-		Chain Effect: Decrease cooldown by 2
-		Chain Cooldown Cap: 12 (3 chains)
-		
-		Shots Per Charge: 1
+Stats:
+Required Power: 3
+Charge Time: 18 seconds
+Chain Effect: Decrease cooldown by 2
+Chain Cooldown Cap: 12 (3 chains)
 
-		Hacking Duration: 6 seconds
-		Hack Immunity: 3 seconds
-		Accuracy Bonus: +10%
-		
-		Buy/Sell Price: 65~/32~
+Shots Per Charge: 1
+
+Hacking Duration: 6 seconds
+Hack Immunity: 3 seconds
+Accuracy Bonus: +10%
+
+Default Price: 65~   -   Selling Price: 32~
 	</descriptionOverride>
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<tooltipOverride>Required Power: 3
-		Charge Time: 18 seconds
-		Chain Effect: Decrease cooldown by 2
-		Chain Cooldown Cap: 12 (3 chains)
-		
-		Shots Per Charge: 1
+Charge Time: 18 seconds
+Chain Effect: Decrease cooldown by 2
+Chain Cooldown Cap: 12 (3 chains)
 
-		Hacking Duration: 6 seconds
-		Hack Immunity: 3 seconds
-		Accuracy Bonus: +10%
-	</tooltipOverride>
+Shots Per Charge: 1
+
+Hacking Duration: 6 seconds
+Hack Immunity: 3 seconds
+Accuracy Bonus: +10%</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10-->
 	<hack duration="6" immuneAfterHack="3"/>
@@ -1523,32 +1519,31 @@ Accuracy Bonus: +10%</tooltipOverride>
 	<desc>Intelligent field projector that learns from the enemy system to compute better hacking solutions.  Do not dwell too much on where the intelligence comes from.</desc>
 	<descriptionOverride>Intelligent field projector that learns from the enemy system to compute better hacking solutions. Do not dwell too much on where the intelligence comes from.
 
-		Stats:
-		Required Power: 3
-		Charge Time: 18 seconds
-		Shots Per Charge: 1
+Stats:
+Required Power: 3
+Charge Time: 18 seconds
+Shots Per Charge: 1
 
-		Hacking Duration: 6 seconds
-		Adaptive Effect: Increase hacking duration by 2
-		Hacking Duration Cap: 12 seconds (3 chains)
+Hacking Duration: 6 seconds
+Adaptive Effect: Increase hacking duration by 2
+Hacking Duration Cap: 12 seconds (3 chains)
 
-		Hack Immunity: 3 seconds
-		Accuracy Bonus: +10%
-		
-		Buy/Sell Price: 65~/32~
+Hack Immunity: 3 seconds
+Accuracy Bonus: +10%
+
+Default Price: 65~   -   Selling Price: 32~
 	</descriptionOverride>
 	<tooltip>Disrupts enemy systems.</tooltip>
 	<tooltipOverride>Required Power: 3
-		Charge Time: 18 seconds
-		Shots Per Charge: 1
+Charge Time: 18 seconds
+Shots Per Charge: 1
 
-		Hacking Duration: 6 seconds
-		Adaptive Effect: Increase hacking duration by 2
-		Hacking Duration Cap: 12 seconds (3 chains)
-		
-		Hack Immunity: 3 seconds
-		Accuracy Bonus: +10%
-	</tooltipOverride>
+Hacking Duration: 6 seconds
+Adaptive Effect: Increase hacking duration by 2
+Hacking Duration Cap: 12 seconds (3 chains)
+
+Hack Immunity: 3 seconds
+Accuracy Bonus: +10%</tooltipOverride>
 	<damage>0</damage>
 	<boost>
 		<type>cooldown</type>
@@ -2118,36 +2113,35 @@ Fire Chance: 60%</tooltipOverride>
     <desc>A combination of Energy and Splitter technology. Deals no system damage, but deals 1 ion damage on a room hit, stuns all crew in the room. Likely to start fires.</desc>
 	<descriptionOverride>A combination of Energy and Pinpoint technology. Deals no system damage, but deals 1 ion damage on a room hit. May start fires.
 
-		Stats:
-		Required Power: 1
-		Charge Time: 5 seconds
+Stats:
+Required Power: 1
+Charge Time: 5 seconds
 
-		Beam Length: 1
-		Beam Speed: 1
+Beam Length: 1
+Beam Speed: 1
 
-		Base Hull Damage: 1
-		Total Crew Damage: 15
-		Ion Damage: 1 (Rooms Only)
+Base Hull Damage: 1
+Total Crew Damage: 15
+Ion Damage: 1 (Rooms Only)
 
-		Fire Chance: 30%
-		Stun Chance: 100% (3 seconds long)
+Fire Chance: 30%
+Stun Chance: 100% (3 seconds long)
 
-		Buy/Sell Price: 100~/50~
+Default Price: 100~   -   Selling Price: 50~
 	</descriptionOverride>
 	<tooltip>One damage per room beam weapon</tooltip>
 	<tooltipOverride>Required Power: 1
-		Charge Time: 5 seconds
+Charge Time: 5 seconds
 
-		Beam Length: 1
-		Beam Speed: 1
+Beam Length: 1
+Beam Speed: 1
 
-		Base Hull Damage: 1
-		Total Crew Damage: 15
-		Ion Damage: 1 (Rooms Only)
+Base Hull Damage: 1
+Total Crew Damage: 15
+Ion Damage: 1 (Rooms Only)
 
-		Fire Chance: 30%
-		Stun Chance: 100% (3 seconds long)
-	</tooltipOverride>
+Fire Chance: 30%
+Stun Chance: 100% (3 seconds long)</tooltipOverride>
 	<tooltip>Fires a pair of beams across a random area doing up to 2 damage.</tooltip>
     <radius>50</radius>
 	<damage>1</damage>
@@ -2188,36 +2182,35 @@ Fire Chance: 60%</tooltipOverride>
     <desc>A combination of Energy and Pinpoint technology. Deals no system damage, but deals 3 ion damage on a room hit, stuns all crew in the room, and charges faster than the Misericorde. Likely to start fires.</desc>
 	<descriptionOverride>A combination of Energy and Pinpoint technology. Deals no system damage, but deals 3 ion damage on a room hit, stuns all crew in the room, and charges faster than the Misericorde. Likely to start fires.
 
-		Stats:
-		Required Power: 2
-		Charge Time: 10 seconds
+Stats:
+Required Power: 2
+Charge Time: 10 seconds
 
-		Beam Length: 1
-		Beam Speed: 1
+Beam Length: 1
+Beam Speed: 1
 
-		Base Hull Damage: 1
-		Total Crew Damage: 15
-		Ion Damage: 1 (Rooms Only)
+Base Hull Damage: 1
+Total Crew Damage: 15
+Ion Damage: 1 (Rooms Only)
 
-		Fire Chance: 30%
-		Stun Chance: 100% (3 seconds long)
+Fire Chance: 30%
+Stun Chance: 100% (3 seconds long)
 
-		Buy/Sell Price: 140~/70~
+Default Price: 140~   -   Selling Price: 70~
 	</descriptionOverride>
 	<tooltip>One damage per room beam weapon</tooltip>
 	<tooltipOverride>Required Power: 2
-		Charge Time: 10 seconds
+Charge Time: 10 seconds
 
-		Beam Length: 1
-		Beam Speed: 1
+Beam Length: 1
+Beam Speed: 1
 
-		Base Hull Damage: 1
-		Total Crew Damage: 15
-		Ion Damage: 1 (Rooms Only)
+Base Hull Damage: 1
+Total Crew Damage: 15
+Ion Damage: 1 (Rooms Only)
 
-		Fire Chance: 30%
-		Stun Chance: 100% (3 seconds long)
-	</tooltipOverride>
+Fire Chance: 30%
+Stun Chance: 100% (3 seconds long)</tooltipOverride>
     <radius>55</radius> <!-- R4: Changed from 42 to 47, as I think a near guaranteed 4 hits on a 2x2 room is a lil powerful for a weapon like this-->
 	<damage>1</damage>
 	<noSysDamage>true</noSysDamage>
@@ -2257,36 +2250,35 @@ Fire Chance: 60%</tooltipOverride>
     <desc>A combination of Energy and Pinpoint technology. Deals no system damage, but fires devastating volley of 3 pinpoint beams that deal 2 hull and ion damage each. Likely to start fires.</desc>
     <descriptionOverride>A combination of Energy and Pinpoint technology. Deals no system damage, but fires devastating volley of 3 pinpoint beams that deal 2 hull and ion damage each. Likely to start fires.
 
-		Stats:
-		Required Power: 3
-		Charge Time: 12 seconds
+Stats:
+Required Power: 3
+Charge Time: 12 seconds
 
-		Beam Length: 1
-		Beam Speed: 1
+Beam Length: 1
+Beam Speed: 1
 
-		Base Hull Damage: 2
-		Total Crew Damage: 30
-		Ion Damage: 2 (Rooms Only)
+Base Hull Damage: 2
+Total Crew Damage: 30
+Ion Damage: 2 (Rooms Only)
 
-		Fire Chance: 50%
-		Stun Chance: 100% (5 seconds long)
+Fire Chance: 50%
+Stun Chance: 100% (5 seconds long)
 
-		Buy/Sell Price: 180~/90~
+Default Price: 180~   -   Selling Price: 90~
 	</descriptionOverride>
 	<tooltip>One damage per room beam weapon</tooltip>
 	<tooltipOverride>Required Power: 3
-		Charge Time: 12 seconds
+Charge Time: 12 seconds
 
-		Beam Length: 1
-		Beam Speed: 1
+Beam Length: 1
+Beam Speed: 1
 
-		Base Hull Damage: 2
-		Total Crew Damage: 30
-		Ion Damage: 2 (Rooms Only)
+Base Hull Damage: 2
+Total Crew Damage: 30
+Ion Damage: 2 (Rooms Only)
 
-		Fire Chance: 50%
-		Stun Chance: 100% (5 seconds long)
-	</tooltipOverride>
+Fire Chance: 50%
+Stun Chance: 100% (5 seconds long)</tooltipOverride>
     <radius>60</radius>
 	<damage>2</damage>
 	<noSysDamage>true</noSysDamage>
