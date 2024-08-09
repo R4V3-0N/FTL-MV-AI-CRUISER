@@ -1,5 +1,53 @@
 <!-- Appends -->
 
+<mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
+    <mod-append:name>RVS_BEAM_ION_BUST_1</mod-append:name>
+    <mod-append:name>RVS_BEAM_ION_BUST_2</mod-append:name>
+    <mod-append:name>RVS_PROJECTOR_AVATAR</mod-append:name>
+    <mod-append:name>RVS_PROJECTOR_AVATAR_CHAOS</mod-append:name>
+    <mod-append:name>RVS_FLOCK_GUN</mod-append:name>
+    <mod-append:name>RVS_EMP_1</mod-append:name>
+    <mod-append:name>RVS_EMP_2</mod-append:name>
+    <mod-append:name>RVS_EMP_HEAVY_1</mod-append:name>
+    <mod-append:name>RVS_BEAM_SHOTGUN_1</mod-append:name>
+    <mod-append:name>RVS_BEAM_SHOTGUN_2</mod-append:name>
+    <mod-append:name>RVS_BEAM_SHOTGUN_3</mod-append:name>
+    <mod-append:name>RVS_LASER_BURST_SCATTER_1</mod-append:name>
+    <mod-append:name>RVS_LASER_BURST_SCATTER_2</mod-append:name>
+    <mod-append:name>RVS_SHOTGUN_SCATTER</mod-append:name>
+    <mod-append:name>RVS_LASER_AUTO_1</mod-append:name>
+    <mod-append:name>RVS_LASER_AUTO_2</mod-append:name>
+    <mod-append:name>RA_BEAM_AUTO</mod-append:name>
+    <mod-append:name>RVS_BEAM_FOCUS_1</mod-append:name>
+    <mod-append:name>RVS_BEAM_ADAPTIVE_1</mod-append:name>
+    <mod-append:name>RA_EFFECTOR_1</mod-append:name>
+    <mod-append:name>RA_EFFECTOR_2</mod-append:name>
+    <mod-append:name>RA_EFFECTOR_HEAVY</mod-append:name>
+    <mod-append:name>RA_EFFECTOR_CHAIN</mod-append:name>
+    <mod-append:name>RA_EFFECTOR_ADAPTIVE</mod-append:name>
+    <mod-append:name>RVS_PLASMA_1</mod-append:name>
+    <mod-append:name>RVS_PLASMA_2</mod-append:name>
+    <mod-append:name>RVS_PLASMA_3</mod-append:name>
+    <mod-append:name>RVS_MINES_TECH_1</mod-append:name>
+    <mod-append:name>FM_RVS_SPLITTER_ENERGY_1</mod-append:name>
+    <mod-append:name>FM_RVS_SPLITTER_ENERGY_2</mod-append:name>
+    <mod-append:name>FM_RVS_SPLITTER_ENERGY_3</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="LIST_DRONES_ALL_CRAPBUCKET">
+    <mod-append:name>RVS_AI_MICROFIGHTER_INTERCEPTOR</mod-append:name>
+    <mod-append:name>RVS_AI_MICROFIGHTER_SHOCK</mod-append:name>
+    <mod-append:name>RVS_AI_MICROFIGHTER_SWARM</mod-append:name>
+    <mod-append:name>RVS_DRONE_DEFENSE_SCATTER</mod-append:name>
+    <mod-append:name>RVS_DRONE_SCATTER</mod-append:name>
+    <mod-append:name>RA_DRONE_HEAVY_1</mod-append:name>
+    <mod-append:name>RA_DRONE_HEAVY_2</mod-append:name>
+    <mod-append:name>RVS_COMBAT_MISSILE_1</mod-append:name>
+    <mod-append:name>RVS_COMBAT_MISSILE_2</mod-append:name>
+    <mod-append:name>RVS_COMBAT_MISSILE_3</mod-append:name>
+    <mod-append:name>RVS_DRONE_PLASMA_1</mod-append:name>
+    <mod-append:name>RVS_DRONE_PLASMA_2</mod-append:name>
+    <mod-append:name>RVS_BEAM_DEFENSE_1</mod-append:name>
+</mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL">
 	<mod-append:name>RVS_COMBAT_MISSILE_1</mod-append:name>
@@ -26,6 +74,10 @@
 	<mod-append:name>rvs_ai_hologram_assault</mod-append:name>
 </mod:findName>
 
+<mod:findName type="blueprintList" name="BLUELIST_MINELAUNCHERS_ALL">
+	<mod-append:name>RVS_MINES_TECH_1</mod-append:name>
+</mod:findName>
+
 <mod:findName type="blueprintList" name="BLUELIST_ION">
 	<mod-append:name>RVS_EMP_1</mod-append:name>
 	<mod-append:name>RVS_EMP_2</mod-append:name>
@@ -36,11 +88,13 @@
 	<mod-append:name>RVS_HS_IR_BEAM_1</mod-append:name>
 	<mod-append:name>RVS_BEAM_ION_BUST_1</mod-append:name>
 	<mod-append:name>RVS_BEAM_ION_BUST_2</mod-append:name>
+	<mod-append:name>RVS_BEAM_ADAPTIVE_1</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="BLUELIST_BEAMS_DAMAGE">
 	<mod-append:name>RVS_HS_IR_BEAM_1</mod-append:name>
 	<mod-append:name>RVS_BEAM_ION_BUST_1</mod-append:name>
 	<mod-append:name>RVS_BEAM_ION_BUST_2</mod-append:name>
+	<mod-append:name>RVS_BEAM_ADAPTIVE_1</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_FOCUS_ALL">
@@ -48,14 +102,25 @@
 	<mod-append:name>RVS_BEAM_SHOTGUN_1</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_2</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_3</mod-append:name>
+	<mod-append:name>RVS_BEAM_FOCUS_1</mod-append:name>
 	<mod-append:name>RVS_FOCUS_CORROSION_1</mod-append:name>
+	<mod-append:name>FM_RVS_SPLITTER_ENERGY_1</mod-append:name>
+	<mod-append:name>FM_RVS_SPLITTER_ENERGY_2</mod-append:name>
+	<mod-append:name>FM_RVS_SPLITTER_ENERGY_3</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="BLUELIST_FOCUS_DAMAGE">
 	<mod-append:name>RA_BEAM_AUTO</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_1</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_2</mod-append:name>
 	<mod-append:name>RVS_BEAM_SHOTGUN_3</mod-append:name>
+	<mod-append:name>RVS_BEAM_FOCUS_1</mod-append:name>
 	<mod-append:name>RVS_FOCUS_CORROSION_1</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_ENERGY">
+	<mod-append:name>FM_RVS_SPLITTER_ENERGY_1</mod-append:name>
+	<mod-append:name>FM_RVS_SPLITTER_ENERGY_2</mod-append:name>
+	<mod-append:name>FM_RVS_SPLITTER_ENERGY_3</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_ALL">
@@ -63,11 +128,12 @@
 	<mod-append:name>RVS_PLASMA_2</mod-append:name>
 	<mod-append:name>RVS_PLASMA_3</mod-append:name>
 </mod:findName>
-<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_NODAMAGE">
+<!-- Removed since these have a chance to do damage -->
+<!-- <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_NODAMAGE">
 	<mod-append:name>RVS_PLASMA_1</mod-append:name>
 	<mod-append:name>RVS_PLASMA_2</mod-append:name>
 	<mod-append:name>RVS_PLASMA_3</mod-append:name>
-</mod:findName>
+</mod:findName> -->
 <mod:findName type="blueprintList" name="BLUELIST_FIRE_ALL">
 	<mod-append:name>RVS_PLASMA_1</mod-append:name>
 	<mod-append:name>RVS_PLASMA_2</mod-append:name>
@@ -171,6 +237,8 @@
 	<name>RA_EFFECTOR_HEAVY</name>
 	<name>RA_EFFECTOR_CHAIN</name>
 	<name>RA_EFFECTOR_ADAPTIVE</name>
+	<name>RVS_PROJECTOR_AVATAR</name>
+	<name>RVS_PROJECTOR_AVATAR_CHAOS</name>
 </blueprintList>
 
 <blueprintList name="BLUELIST_CREW_UC_FED_ELITE">	<!-- Identical to GB, since this is independent I just changed the blueprint name --> <!-- Just found out this exists so using this instead LIST_CREW_FEDERATION_ELITE_EASTER-->
