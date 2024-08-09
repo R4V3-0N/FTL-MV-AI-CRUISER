@@ -239,6 +239,8 @@
 	<name>RA_EFFECTOR_ADAPTIVE</name>
 	<name>RVS_PROJECTOR_AVATAR</name>
 	<name>RVS_PROJECTOR_AVATAR_CHAOS</name>
+	<name>RVS_ARTILLERY_AI</name>
+	<name>RVS_ARTILLERY_EFFECTOR</name>
 </blueprintList>
 
 <blueprintList name="BLUELIST_CREW_UC_FED_ELITE">	<!-- Identical to GB, since this is independent I just changed the blueprint name --> <!-- Just found out this exists so using this instead LIST_CREW_FEDERATION_ELITE_EASTER-->
