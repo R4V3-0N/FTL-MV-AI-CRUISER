@@ -141,32 +141,31 @@
 	<short>AI Projector</short>
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
-	<desc>A marriage between electronic warfare and complete ship disruption. This weapon passively disrupts enemy systems while powered on. Once charged it projects a number of AI Avatars onto the enemy vessel disrupting most ship functions as if the vessel is under an intense boarding invasion.</desc>
-	<descriptionOverride>Advanced Disruption Projector system.
+	<desc>This weapon provides the ultimate marriage of digital and physical disruption. When fired, it projects 2 AI Avatars and 2 decoys onto the enemy vessel. While powered on, the weapon interfears with enemy engines and targeting.</desc>
+	<descriptionOverride>This weapon provides the ultimate marriage of digital and physical disruption. When fired, it projects 2 AI Avatars and 2 decoys onto the enemy vessel. While powered on, the weapon interfears with enemy engines and targeting.
 
-		Stats:
-		Required Power: 3
-		Charge Time: 30 seconds 
-		Partial Pre-Ignited
+Stats:
+Required Power: 3
+Charge Time: 30 seconds
+Partially Pre-Ignited
 
-		Shots Per Charge: 1
+Shots Per Charge: 1
 
-		Hacking Duration: 4 seconds
-		Hack Immunity: 3 seconds
-		Accuracy Bonus: +10%
-		
-		Buy/Sell Price: 70~/35~
+Hacking Duration: 4 seconds
+Hack Immunity: 3 seconds
+Accuracy Bonus: +10%
+
+Buy/Sell Price: 70~/35~
 	</descriptionOverride>
 	<tooltip>Disrupts enemy ships.</tooltip>
 	<tooltipOverride>Required Power: 3
-		Charge Time: 30 seconds
+Charge Time: 30 seconds
 
-		Shots Per Charge: 1
+Shots Per Charge: 1
 
-		Hacking Duration: 4 seconds
-		Hack Immunity: 3 seconds
-		Accuracy Bonus: +10%
-	</tooltipOverride>
+Hacking Duration: 4 seconds
+Hack Immunity: 3 seconds
+Accuracy Bonus: +10%</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10--> 
 	<hack duration="4" immuneAfterHack="3">
@@ -194,10 +193,30 @@
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<cooldown>30</cooldown> <!-- R4 2024.04.08 Increased from 20 to 30, but gave it a semi-preigniter that starts it at 15 if powered on -->
-	<crewSpawnChance>10</crewSpawnChance>
 	<power>3</power>
 	<cost>70</cost>
 	<bp>5</bp>
+	<spawnCrew>
+		<number>2</number>
+		<race>rvs_ai_hologram_assault</race>
+		<lifetime>20</lifetime>
+		<noSlot>true</noSlot>
+	</spawnCrew>
+	<spawnCrew>
+		<number>2</number>
+		<race>rvs_ai_hologram_decoy</race>
+		<lifetime>20</lifetime>
+		<statBoosts>
+			<statBoost name="controllable">
+                <boostType>SET</boostType>
+                <value>false</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+		</statBoosts>
+		<noSlot>true</noSlot>
+	</spawnCrew>
 	<rarity>0</rarity>	<!-- drop from defeating AI Cruiser 3 renegade-->
 	<image>ra_effector_hacking</image>
 	<explosion>invisible</explosion>
@@ -222,36 +241,37 @@
 <weaponBlueprint name="RVS_PROJECTOR_AVATAR_CHAOS">
 	<type>BOMB</type>
 	<tip>rvs_tip_effector</tip>
-	<title>Ship Disruption Projector</title>
-	<short>AI Projector</short>
+	<title>Chaotic Ship Disruption Projector</title>
+	<short>AI Projector™</short>
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
-	<desc>A marriage between electronic warfare and complete ship disruption. This weapon passively disrupts enemy systems while powered on. Once charged it projects a number of AI Avatars onto the enemy vessel disrupting most ship functions as if the vessel is under an intense boarding invasion.</desc>
-	<descriptionOverride>Advanced Disruption Projector system.
+	<desc>This weapon provides the ultimate marriage of digital and physical disruption. When fired, it projects 4 AI Avatars onto the enemy vessel. While powered on, the weapon interfears with enemy engines and targeting.
+Chaotic variant spawns only normal uncontrollable holograms and no decoys, and is fully pre-ignited.</desc>
+	<descriptionOverride>This weapon provides the ultimate marriage of digital and physical disruption. When fired, it projects 4 AI Avatars onto the enemy vessel. While powered on, the weapon interfears with enemy engines and targeting.
+Chaotic variant spawns only normal uncontrollable holograms and no decoys, and is fully pre-ignited.
 
-		Stats:
-		Required Power: 3
-		Charge Time: 30 seconds 
-		Partial Pre-Ignited
+Stats:
+Required Power: 3
+Charge Time: 30 seconds 
+Pre-Ignited
 
-		Shots Per Charge: 1
+Shots Per Charge: 1
 
-		Hacking Duration: 4 seconds
-		Hack Immunity: 3 seconds
-		Accuracy Bonus: +10%
-		
-		Buy/Sell Price: 70~/35~
+Hacking Duration: 4 seconds
+Hack Immunity: 3 seconds
+Accuracy Bonus: +10%
+
+Buy/Sell Price: 70~/35~
 	</descriptionOverride>
 	<tooltip>Disrupts enemy ships.</tooltip>
 	<tooltipOverride>Required Power: 3
-		Charge Time: 30 seconds
+Charge Time: 30 seconds
 
-		Shots Per Charge: 1
+Shots Per Charge: 1
 
-		Hacking Duration: 4 seconds
-		Hack Immunity: 3 seconds
-		Accuracy Bonus: +10%
-	</tooltipOverride>
+Hacking Duration: 4 seconds
+Hack Immunity: 3 seconds
+Accuracy Bonus: +10%</tooltipOverride>
 	<damage>0</damage>
 	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10--> 
 	<hack duration="4" immuneAfterHack="3">
@@ -279,10 +299,25 @@
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<cooldown>30</cooldown> <!-- R4 2024.04.08 Increased from 20 to 30, but gave it a semi-preigniter that starts it at 15 if powered on -->
-	<crewSpawnChance>10</crewSpawnChance>
+	<preignited/>
 	<power>3</power>
 	<cost>70</cost>
 	<bp>5</bp>
+	<spawnCrew>
+		<number>4</number>
+		<race>rvs_ai_hologram_assault</race>
+		<lifetime>20</lifetime>
+		<statBoosts>
+			<statBoost name="controllable">
+                <boostType>SET</boostType>
+                <value>false</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+		</statBoosts>
+		<noSlot>true</noSlot>
+	</spawnCrew>
 	<rarity>0</rarity>	<!-- drop from defeating AI Cruiser 3 renegade-->
 	<image>ra_effector_hacking</image>
 	<explosion>invisible</explosion>
@@ -301,7 +336,7 @@
 	<missSounds>
 		<sound>silence</sound>
 	</missSounds>
-	<weaponArt>rvs_projector_avatar</weaponArt>
+	<weaponArt>rvs_projector_avatar_chaos</weaponArt>
 </weaponBlueprint>
 
 <!-- 
@@ -3361,11 +3396,8 @@ AUGMENTS
 	<short>AI Avatar D</short>
 	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
 	<powerList>
-		<power>Does not take up a crew slot</power>
+		<power>Cannot attack</power>
 		<power>Max Health is reduced to 50</power>
-		<power>Cannot heal in medbay or be cloned</power>
-		<power>Provides power and heals slowly in drone control room</power>
-		<power>Regains all health on jump</power>
 		<power>Can teleport to your ship from the enemy teleporter room</power>
 		<power>Immune to suffocation and fires</power>
 		<power>Immune to mind control</power>
@@ -3380,11 +3412,7 @@ AUGMENTS
 	<short>AI Avatar A</short>
 	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
 	<powerList>
-		<power>Does not take up a crew slot</power>
 		<power>Max Health is reduced to 50</power>
-		<power>Cannot heal in medbay or be cloned</power>
-		<power>Provides power and heals slowly in drone control room</power>
-		<power>Regains all health on jump</power>
 		<power>Can teleport to your ship from the enemy teleporter room</power>
 		<power>Immune to suffocation and fires</power>
 		<power>Immune to mind control</power>

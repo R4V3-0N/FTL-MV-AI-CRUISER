@@ -177,7 +177,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 </event>
 <eventList name="RVS_MTBOSS_AIC_DROP_CHANCE">
 	<event>
-		<text id="renegade_drone_fail"/>
+		<text id="renegade_drop_fail"/>
 		<autoReward level="LOW">stuff</autoReward>
 	</event>
 	<event><loadEvent>RVS_MTBOSS_AIC_DROP</loadEvent></event>
@@ -208,8 +208,8 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 </mod:findName>
 
 <ship name="RVS_SHIP_MTBOSS_AI_C_CHAOS" auto_blueprint="RVSRB_AI_CRUISER_3_CHAOS">
-	<destroyed load="MTBOSS_CLANB_DESTROYED"/>
-	<deadCrew load="MTBOSS_CLANB_DEADCREW"/>
+	<destroyed load="RVS_MTBOSS_AIC_DESTROYED"/>
+	<deadCrew load="RVS_MTBOSS_AIC_DEADCREW"/>
 </ship>
 <event name="RVS_RENEGADE_BOSS_AI_C_CHAOS">
 	<text>From out of the tunnel comes a massive cruiser vessel, of an unknown design! Known across Federation mercenary boards as a rogue command-cruiser, it serves as the nucleus for an assimilating drone swarm that threatens all in its path.</text>
@@ -247,8 +247,8 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 	</choice>
 </event>
 
-<event name="MTBOSS_ENGIC_DROP_CHAOS">
-	<text id="renegade_drop_drone"/>
+<event name="RVS_MTBOSS_AIC_DROP_CHAOS">
+	<text id="renegade_drop_yes"/>
 	<achievement silent="false">RVS_ACH_REN_AIC</achievement>
 	<autoReward level="LOW">stuff</autoReward>
 	<weapon name="RVS_PROJECTOR_AVATAR_CHAOS"/>

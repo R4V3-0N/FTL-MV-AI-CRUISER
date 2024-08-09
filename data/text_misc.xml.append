@@ -29,8 +29,7 @@ B: 175
 
 Tip: Effectors cannot hack systems under the effect of a hacking drone.
 
-Tip: After an Effector hacking cycle ends, the affected system becomes temporarily immune to further hacking for a determined amount of time.
-</text>
+Tip: After an Effector hacking cycle ends, the affected system becomes temporarily immune to further hacking for a determined amount of time.</text>
 
 <text name="rvs_tip_laser_auto">Tip: Auto lasers can continuously suppress enemy shields, similar to certain combat drones. Each laser shot will be blocked by a single shield bubble.</text>
 <text name="rvs_tip_laser_scatter">Tip: Scatter lasers have a 25% chance to deal full damage, otherwise only deals hull damage. Each laser shot will be blocked by a single shield bubble, regardless of the laser's damage.</text>

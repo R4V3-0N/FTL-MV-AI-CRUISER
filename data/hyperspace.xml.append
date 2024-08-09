@@ -923,7 +923,7 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
     <mod:findLike type="page">
         <mod:findLike type="section">
             <mod:selector text="Renegade Cruisers"/>
-            <mod-append:achievement name="ACH_REN_BALLISTICC">
+            <mod-append:achievement name="RVS_ACH_REN_AIC">
                 <name>Replicomplications</name>
                 <description>Defeat the Rogue AI C Renegade and get the Ship Disruption Projector.</description>
                 <icon>renegade_ai_c</icon>
