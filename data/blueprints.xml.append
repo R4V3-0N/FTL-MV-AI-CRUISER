@@ -3687,7 +3687,7 @@ AUGMENTS
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones max="8" power="1" room="6" start="false" img="room_drones_3" />
+		<drones max="8" power="2" room="6" start="false" img="room_drones_3" />
 		<engines max="8" power="2" room="11" start="true" img="room_engines">	<!-- R4 2024.06.09: Was 1, now is 2-->
 			<slot>
 				<direction>down</direction>
@@ -3767,7 +3767,7 @@ AUGMENTS
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="1" max="8" room="5" start="false" img="room_drones_19" />
+		<drones power="2" max="8" room="5" start="false" img="room_drones_19" />
 		<engines power="2" max="8" room="14" start="true" img="room_engines_3">
 			<slot>
 				<direction>right</direction>
@@ -3846,7 +3846,7 @@ AUGMENTS
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="1" max="8" room="7" start="false" img="room_drones_4" />
+		<drones power="2" max="8" room="7" start="false" img="room_drones_4" />
 		<engines power="1" max="8" room="5" start="true" img="room_engines_rvs_uc_2">
 			<slot>
 				<direction>down</direction>
