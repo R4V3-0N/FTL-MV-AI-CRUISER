@@ -691,9 +691,13 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<cloakImage>mu_militia_guard</cloakImage>
 </shipBlueprint>
 
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+				Multiverse Renegade Bosses
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->
 
-
-<shipBlueprint name="RVSRB_AI_CRUISER_3_NORMAL" layout="rvsb_ai_cruiser_3" img="rvsrb_ai_cruiser_3">
+<shipBlueprint name="RVSRB_AI_CRUISER_3_NORMAL" layout="rvsb_ai_cruiser_3" img="rvsrb_ai_cruiser_3">	<!-- R4 2024.08.12: May need to change these to rvsbr, with the b meaning boss and r for renegade instead of the other way around. This way we can search for all bosses witih the prefix "rvsb" regardless of it being a renegade or not -->
 	<class>Renegade Cruiser</class>
 	<systemList>
 
@@ -735,7 +739,6 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<boardingAI>sabotage</boardingAI>
 	<aug name="RVS_AI_SWARM" />
 </shipBlueprint>
-
 <shipBlueprint name="RVSRB_AI_CRUISER_3_CHALLENGE" layout="rvsb_ai_cruiser_3" img="rvsrb_ai_cruiser_3">
 	<class>Renegade Cruiser</class>
 	<systemList>
@@ -776,7 +779,6 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<boardingAI>invasion</boardingAI>
 	<aug name="RVS_AI_SWARM" />
 </shipBlueprint>
-
 <shipBlueprint name="RVSRB_AI_CRUISER_3_EXTREME" layout="rvsb_ai_cruiser_3" img="rvsrb_ai_cruiser_3">
 	<class>Renegade Cruiser</class>
 	<systemList>
@@ -858,4 +860,107 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<crewCount amount="14" max="20" class="rvs_ai_hologram" />
 	<boardingAI>sabotage</boardingAI>
 	<aug name="RVS_AI_SWARM" />
+</shipBlueprint>
+
+<shipBlueprint name="RVSBR_REBEL_CRUISER_C_NORMAL" layout="rvsb_rebel_tech_cruiser" img="rvsbr_rebel_c">
+	<class>Renegade Cruiser</class>
+	<systemList>
+		<cloaking power="2" max="2" room="8" start="true" />
+		<clonebay power="2" max="2" room="17" start="true" />
+		<doors power="2" max="3" room="15" start="true" />
+		<drones power="4" max="4" room="7" start="true" />
+		<engines power="1" max="3" room="5" start="true" />
+		<hacking power="2" max="2" room="0" start="true" />
+		<oxygen power="2" max="2" room="18" start="true" />
+		<pilot power="1" max="3" room="16" start="true" />
+		<shields power="2" max="8" room="6" start="true" />
+		<weapons power="5" max="5" room="9" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="4" count="4">				<!-- PWR TTL: 5 -->
+		<weapon name="RVS_MINES_TECH_1" />			<!-- PWR:2 -->
+		<weapon name="RVS_BEAM_ADAPTIVE_1" />		<!-- PWR:1 -->
+		<weapon name="RVS_LASER_BURST_SCATTER_1" />	<!-- PWR:1 -->
+		<weapon name="ION_PIERCE_1" />				<!-- PWR:1 Maybe effectors instead? -->
+
+		<!--
+		Weapon: Bael Minelauncher
+		Weapon: Adaptive Beam (1, 2, 3)
+		Weapon: Burst Scatter (1, 2)
+		Weapon: Phase Ion	  (replace? upgrade for extreme instead of adaptive beam 3?)
+		-->
+	</weaponList>
+	<droneList drones="6" count="2">
+		<drone name="COMBAT_ENGINEER" />	<!-- R4 2024.08.11 : TODO, Will eventually replace with CE counterpart -->
+		<drone name="RVS_DRONE_DEFENSE_SCATTER" />
+	</droneList>
+	<health amount="14" />
+	<maxPower amount="21" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="RVS_REFLECTIVE_PLATING" />
+</shipBlueprint>
+<shipBlueprint name="RVSBR_REBEL_CRUISER_C_CHALLENGE" layout="rvsb_rebel_tech_cruiser" img="rvsbr_rebel_c">
+	<class>Renegade Cruiser</class>
+	<systemList>
+		<cloaking power="2" max="2" room="8" start="true" />
+		<clonebay power="2" max="2" room="17" start="true" />
+		<doors power="2" max="3" room="15" start="true" />
+		<drones power="4" max="4" room="7" start="true" />
+		<engines power="1" max="3" room="5" start="true" />
+		<hacking power="3" max="3" room="0" start="true" />	<!-- Challenge +1 -->
+		<oxygen power="2" max="2" room="18" start="true" />
+		<pilot power="2" max="3" room="16" start="true" />	<!-- Challenge +1 -->
+		<shields power="4" max="8" room="6" start="true" />	<!-- Challenge +2 -->
+		<weapons power="7" max="7" room="9" start="true" />	<!-- Challenge +2 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="6" count="4">				<!-- PWR TTL: 7 -->
+		<weapon name="RVS_MINES_TECH_1" />			<!-- PWR:2 -->
+		<weapon name="BEAM_ADAPT" />				<!-- PWR:2 TO DO: Exchange out with C-CE Adaptive Beam Mark II when made -->
+		<weapon name="RVS_LASER_BURST_SCATTER_2" />	<!-- PWR:1 -->
+		<weapon name="ION_PIERCE_1" />				<!-- PWR:1 TODO R4: Exchange out with C-CE Phase Ion -->
+	</weaponList>
+	<droneList drones="6" count="2">
+		<drone name="COMBAT_ENGINEER" />	<!-- R4 2024.08.11 : TODO, Will eventually replace with CE counterpart -->
+		<drone name="RVS_DRONE_DEFENSE_SCATTER" />
+	</droneList>
+	<health amount="15" />
+	<maxPower amount="25" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="RVS_REFLECTIVE_PLATING" />
+</shipBlueprint>
+<shipBlueprint name="RVSBR_REBEL_CRUISER_C_EXTREME" layout="rvsb_rebel_tech_cruiser" img="rvsbr_rebel_c">
+	<class>Renegade Cruiser</class>
+	<systemList>
+		<cloaking power="3" max="3" room="8" start="true" /><!-- Extreme +1 -->
+		<clonebay power="2" max="2" room="17" start="true" />
+		<doors power="3" max="3" room="15" start="true" />	<!-- Extreme +1 -->
+		<drones power="6" max="6" room="7" start="true" />	<!-- Extreme +1 -->
+		<engines power="1" max="3" room="5" start="true" />
+		<hacking power="3" max="3" room="0" start="true" />	<!-- Extreme +1 -->
+		<oxygen power="2" max="2" room="18" start="true" />
+		<pilot power="2" max="3" room="16" start="true" />	<!-- Extreme +1 -->
+		<shields power="4" max="8" room="6" start="true" />	<!-- Extreme +2 -->
+		<weapons power="8" max="8" room="9" start="true" />	<!-- Extreme +1 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="6" count="4">				<!-- PWR TTL: 8 -->
+		<weapon name="RVS_MINES_TECH_1" />			<!-- PWR:2 -->
+		<weapon name="BEAM_ADAPT_2" />				<!-- PWR:3 TO DO: Exchange out with C-CE Adaptive Beam Mark III when made -->
+		<weapon name="RVS_LASER_BURST_SCATTER_2" />	<!-- PWR:2 -->
+		<weapon name="ION_PIERCE_1" />				<!-- PWR:1 TODO R4: Exchange out with C-CE Phase Ion -->
+	</weaponList>
+	<droneList drones="6" count="2">
+		<drone name="COMBAT_ENGINEER" />	<!-- R4 2024.08.11 : TODO, Will eventually replace with CE counterpart -->
+		<drone name="RVS_DRONE_DEFENSE_SCATTER" />
+		<drone name="RA_DRONE_HEAVY_1" />
+		<drone name="RA_DRONE_HEAVY_1" />	<!-- R4 2024.08.12 : Would it be funny to have it deploy this drone immediatly when any of its other ones are destroyed? -->
+	</droneList>
+	<health amount="17" />
+	<maxPower amount="26" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="RVS_REFLECTIVE_PLATING" />
 </shipBlueprint>

@@ -262,6 +262,54 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
         </shipIcons>
         <noFuelStalemate/>
     </mod-append:customShip>
+
+    <mod-append:customShip name="RVSBR_REBEL_CRUISER_C_NORMAL">
+        <shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+        </shipIcons>
+        <noFuelStalemate/>
+        <crew>
+            <human_humanoid room="16"/> <!--piloting-->
+            <human_rebel room="9"/>     <!--weapons-->
+            <human room="6"/>           <!--shield-->
+            <human_engineer room="5"/>  <!--engines-->  
+            <human_medic room="17"/>    <!--medbay-->
+            <rvs_ai_hologram room="18"/><!--O2-->
+        </crew>
+    </mod-append:customShip>
+    <mod-append:customShip name="RVSBR_REBEL_CRUISER_C_CHALLENGE">
+        <shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+        </shipIcons>
+        <noFuelStalemate/>
+        <crew>
+            <human_humanoid room="16"/> <!--piloting-->
+            <human_mfk room="9"/>       <!--weapons-->
+            <human_soldier room="6"/>   <!--shield-->
+            <human_engineer room="5"/>  <!--engines-->  
+            <human_medic room="17"/>    <!--medbay-->
+            <rvs_ai_hologram room="18"/><!--O2-->
+            <human_humanoid room="15"/> <!--doors-->
+        </crew>
+    </mod-append:customShip>
+    <mod-append:customShip name="RVSBR_REBEL_CRUISER_C_EXTREME">
+        <shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+        </shipIcons>
+        <noFuelStalemate/>
+        <crew>
+            <human_humanoid room="16"/> <!--piloting-->
+            <human_mfk room="9"/>       <!--weapons-->
+            <human_soldier room="6"/>   <!--shield-->
+            <human_technician room="5"/><!--engines-->  
+            <human_medic room="17"/>    <!--medbay-->
+            <rvs_ai_hologram room="18"/><!--O2-->
+            <human_coomer room="15"/>   <!--doors-->
+        </crew>
+    </mod-append:customShip>
 </mod:findLike>
 
 <events>
@@ -269,6 +317,10 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
     <bossShip yOffset="55">RVSRB_AI_CRUISER_3_CHALLENGE</bossShip>
     <bossShip yOffset="55">RVSRB_AI_CRUISER_3_EXTREME</bossShip>
     <bossShip yOffset="55">RVSRB_AI_CRUISER_3_CHAOS</bossShip>
+
+    <bossShip yOffset="55">RVSBR_REBEL_CRUISER_C_NORMAL</bossShip>  <!-- TODO : I am running out of time and pushing this for now to share works. I didn't calculate the offset-->
+    <bossShip yOffset="55">RVSBR_REBEL_CRUISER_C_CHALLENGE</bossShip>
+    <bossShip yOffset="55">RVSBR_REBEL_CRUISER_C_EXTREME</bossShip>
 </events>
 
 <mod:findLike type="crew" limit="1">
@@ -625,7 +677,7 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
             <deathSound>rvs_contempterDeath3</deathSound>
         </deathSounds>
         <shootingSounds>
-			<shootingSound>vanceShoot</shootingSound>   <!-- is this only for melee? -->
+			<shootingSound>vanceShoot</shootingSound>   <!-- TODO: Investigate this sound effect, intended it for melee not for shooting -->
 		</shootingSounds>
         <!--<passiveStatBoosts>
         </passiveStatBoosts>-->
