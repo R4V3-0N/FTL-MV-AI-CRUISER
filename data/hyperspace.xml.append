@@ -318,9 +318,10 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
     <bossShip yOffset="55">RVSRB_AI_CRUISER_3_EXTREME</bossShip>
     <bossShip yOffset="55">RVSRB_AI_CRUISER_3_CHAOS</bossShip>
 
-    <bossShip yOffset="55">RVSBR_REBEL_CRUISER_C_NORMAL</bossShip>  <!-- TODO : I am running out of time and pushing this for now to share works. I didn't calculate the offset-->
-    <bossShip yOffset="55">RVSBR_REBEL_CRUISER_C_CHALLENGE</bossShip>
-    <bossShip yOffset="55">RVSBR_REBEL_CRUISER_C_EXTREME</bossShip>
+    <bossShip yOffset="85">RVSBR_REBEL_CRUISER_C_NORMAL</bossShip>
+    <bossShip yOffset="85">RVSBR_REBEL_CRUISER_C_CHALLENGE</bossShip>
+    <bossShip yOffset="85">RVSBR_REBEL_CRUISER_C_EXTREME</bossShip>
+    <bossShip yOffset="85">RVSBR_REBEL_CRUISER_C_CHAOS</bossShip>
 </events>
 
 <mod:findLike type="crew" limit="1">
@@ -876,7 +877,8 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
     <mod-append:variable name="loc_holos_revived" op="set" val="0"/>
     <mod-append:variable name="loc_nebula_nostorm" op="set" val="0"/>
     <mod-append:variable name="loc_nebula_storm" op="set" val="0"/>
-    <mod-append:variable name="rvs_ach_mv_ai_c" op="set" val="0"/>  
+    <mod-append:variable name="rvs_ach_mv_ai_c" op="set" val="0"/>
+    <mod-append:variable name="rvs_ach_mv_rebel_c" op="set" val="0"/>
     <mod-append:variable name="loc_ai_ach_in_combat" op="set" val="0"/>
     <mod-append:variable name="loc_ai_ach_missed_this_fight" op="set" val="0"/>
     <mod-append:variable name="loc_ai_ach_no_miss_count" op="set" val="0"/>
@@ -979,6 +981,12 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
                 <name>Replicomplications</name>
                 <description>Defeat the Rogue AI C Renegade and get the Ship Disruption Projector.</description>
                 <icon>renegade_ai_c</icon>
+                <header>Renegade Defeated</header>
+            </mod-append:achievement>
+            <mod-append:achievement name="RVS_ACH_REN_REBELC">
+                <name>[TODO: Rebel renegade ach name]</name>
+                <description>Defeat the Alt Rebel C Renegade and get the [TODO: Weapon name].</description>
+                <icon>renegade_rebel_c</icon>
                 <header>Renegade Defeated</header>
             </mod-append:achievement>
         </mod:findLike>
