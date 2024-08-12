@@ -275,7 +275,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-			<text>[TODO: Encounter monologue]</text>
+			<text>"Greetings unknown vessel. Our navigational AI had a malfunction mid-jump, could we speak yours?" Confused, you tell them you have no AI. The Renegade captain looks shocked. "No AI? You mean, you people still have ORGANIC minds in power? You... you barbarians! We'll destroy you!"</text>
 			<ship hostile="true"/> 
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -308,7 +308,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-			<text>[TODO: Encounter monologue]</text>
+			<text>"Greetings unknown vessel. Our navigational AI had a malfunction mid-jump, could we speak yours?" Confused, you tell them you have no AI. The Renegade captain looks shocked. "No AI? You mean, you people still have ORGANIC minds in power? You... you barbarians! We'll destroy you!"</text>
 			<ship hostile="true"/> 
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -336,7 +336,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 	<choice hidden="true" max_group="0">
 		<text>Continue...</text>
 		<event>
-			<text>[TODO: Encounter monologue]</text>
+			<text>"Greetings unknown vessel. Our navigational AI had a malfunction mid-jump, could we speak yours?" Confused, you tell them you have no AI. The Renegade captain looks shocked. "No AI? You mean, you people still have ORGANIC minds in power? You... you barbarians! We'll destroy you!"</text>
 			<ship hostile="true"/> 
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -411,7 +411,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-			<text>[TODO: Encounter monologue]</text>
+			<text>"Greetings unknown vessel. Our navigational AI had a malfunction mid-jump, could we speak yours?" Confused, you tell them you have no AI. The Renegade captain looks shocked. "No AI? You mean, you people still have ORGANIC minds in power? You... you barbarians! We'll destroy you!"</text>
 			<ship hostile="true"/> 
 			<choice hidden="true">
 				<text>Continue...</text>
