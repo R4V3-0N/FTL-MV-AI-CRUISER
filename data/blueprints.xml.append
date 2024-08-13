@@ -3932,7 +3932,7 @@ AUGMENTS
 	<crewCount amount="2" class="human" />
 	<crewCount amount="1" class="human_engineer" />
 	--> <!-- Replace with custom Humanoids -->
-	<aug name="FTL_BOOSTER" />
+	<aug name="EX_FTL_BOOSTER" />
 	<mv-mapImage>map_icon_rvs_ce_rebel</mv-mapImage>
 </shipBlueprint>
 
