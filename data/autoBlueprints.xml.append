@@ -960,7 +960,7 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 		<drone name="RA_DRONE_HEAVY_1" />	<!-- R4 2024.08.12 : Would it be funny to have it deploy this drone immediatly when any of its other ones are destroyed? -->
 	</droneList>
 	<health amount="17" />
-	<maxPower amount="26" />
+	<maxPower amount="27" />
 	<boardingAI>sabotage</boardingAI>
 	<aug name="RVS_REFLECTIVE_PLATING" />
 </shipBlueprint>
@@ -992,7 +992,7 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 		<drone name="RVS_DRONE_DEFENSE_SCATTER" />	<!-- PWR:2 -->
 		<drone name="RA_DRONE_HEAVY_2" />			<!-- PWR:3 -->
 	</droneList>
-	<health amount="17" />
+	<health amount="20" />
 	<maxPower amount="30" />
 	<boardingAI>sabotage</boardingAI>
 	<aug name="RVS_REFLECTIVE_PLATING" />
