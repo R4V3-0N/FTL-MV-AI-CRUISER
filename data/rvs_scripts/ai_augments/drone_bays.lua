@@ -2,7 +2,7 @@ local spawn_temp_drone = mods.rvsai.spawn_temp_drone
 
 --RVS_AI_SWARM implementation
 --Spawn drone when drone is destroyed
-local swarmChildProj = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("RVS_AI_MICROFIGHTER_SWARM_CHILD_PROJ_DUMMY")
+local swarmChildProj = Hyperspace.Blueprints:GetWeaponBlueprint("RVS_AI_MICROFIGHTER_SWARM_CHILD_PROJ_DUMMY")
 script.on_internal_event(Defines.InternalEvents.DRONE_COLLISION,
 function(Drone, Projectile, Damage, CollisionResponse)
     local thisShip = Hyperspace.ships(Drone.iShipId)
