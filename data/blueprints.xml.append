@@ -3992,7 +3992,7 @@ AUGMENTS
 		</shields>
 		<teleporter power="1" room="3" start="false" />
 		<temporal power="1" room="7" start="false" img="room_temporal_3" />
-		<weapons power="4" max="8"  room="0" start="true" img="room_weapons_rvs_uc_1">
+		<weapons power="3" max="8"  room="0" start="true" img="room_weapons_rvs_uc_1">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -4004,10 +4004,11 @@ AUGMENTS
 	<weaponList missiles="5" count="4">	<!-- Load out based on CE Kestrel Type B -->
 		<weapon name="RVS_LASER_AUTO_2" />
 		<weapon name="RVS_LASER_AUTO_2" />
+		<weapon name="LASER_BURST_1" />
 	</weaponList>
 	<droneList drones="5" count="2" />
 	<health amount="30" />
-	<maxPower amount="9" />
+	<maxPower amount="8" />
 	<crewCount amount="2" class="human_humanoid" />	<!-- Replace with custom Humanoids -->
 	<crewCount amount="2" class="human" />			<!-- 2024.06.09: Replace with custom Humanoids -->
 	<aug name="NEBULA_GASSES" />
