@@ -964,3 +964,36 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<boardingAI>sabotage</boardingAI>
 	<aug name="RVS_REFLECTIVE_PLATING" />
 </shipBlueprint>
+
+<shipBlueprint name="RVSBR_REBEL_CRUISER_C_CHAOS" layout="rvsb_rebel_tech_cruiser" img="rvsbr_rebel_c">
+	<class>Renegade Cruiser</class>
+	<systemList>
+		<cloaking power="3" max="3" room="8" start="true" />
+		<clonebay power="3" max="3" room="17" start="true" />
+		<doors power="3" max="3" room="15" start="true" />	
+		<drones power="8" max="8" room="7" start="true" />	<!-- Chaos +2 -->
+		<engines power="1" max="3" room="5" start="true" />
+		<hacking power="3" max="3" room="0" start="true" />
+		<oxygen power="2" max="2" room="18" start="true" />
+		<pilot power="3" max="3" room="16" start="true" />	<!-- Chaos +1 -->
+		<shields power="4" max="8" room="6" start="true" />
+		<weapons power="8" max="8" room="9" start="true" />	<!-- Chaos +2 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="6" count="4">				<!-- PWR TTL: 8 -->
+		<weapon name="RVS_MINES_TECH_1" />			<!-- PWR:2 -->
+		<weapon name="RVS_FOCUS_BOUNCE" />			<!-- PWR:2 CHAOTIC WEAPON USE-->
+		<weapon name="RVS_SHOTGUN_SCATTER" />		<!-- PWR:2 -->
+		<weapon name="ION_CHAINGUN" />				<!-- PWR:2 TODO R4: Exchange out with C-CE Phase Ion -->
+	</weaponList>
+	<droneList drones="8" count="3">
+		<drone name="HELLRAISER_HULL" />			<!-- PWR:3 -->
+		<drone name="RVS_DRONE_DEFENSE_SCATTER" />	<!-- PWR:2 -->
+		<drone name="RA_DRONE_HEAVY_2" />			<!-- PWR:3 -->
+	</droneList>
+	<health amount="17" />
+	<maxPower amount="30" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="RVS_REFLECTIVE_PLATING" />
+</shipBlueprint>

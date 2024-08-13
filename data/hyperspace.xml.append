@@ -310,6 +310,24 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
             <human_coomer room="15"/>   <!--doors-->
         </crew>
     </mod-append:customShip>
+    <mod-append:customShip name="RVSBR_REBEL_CRUISER_C_CHAOS">
+        <shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep_chaos</shipIcon>
+        </shipIcons>
+        <noFuelStalemate/>
+        <crew>
+            <human_humanoid room="16"/> <!--piloting-->
+            <human_legion_pyro room="9"/><!--weapons-->
+            <human_soldier room="6"/>   <!--shield-->
+            <human_technician room="5"/><!--engines-->  
+            <human_medic room="17"/>    <!--medbay-->
+            <rvs_ai_hologram room="18"/><!--O2-->
+            <human_coomer room="15"/>   <!--doors-->
+            <human_rebel_medic room="10"/>
+            <goldsoldier room="0"/>     <!--Hacking-->
+        </crew>
+    </mod-append:customShip>
 </mod:findLike>
 
 <events>
