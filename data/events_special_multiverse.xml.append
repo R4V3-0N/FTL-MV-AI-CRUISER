@@ -396,7 +396,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 	<text id="renegade_drop_yes"/>
 	<achievement silent="false">RVS_ACH_REN_REBELC</achievement>
 	<autoReward level="LOW">stuff</autoReward>
-	<weapon name="LASER_BURST_1"/>
+	<weapon name="RVS_FOCUS_BOUNCE"/>
 </event>
 
 <!-- Chaos -->
@@ -444,7 +444,7 @@ You don't have time to do so, as the ship engages in a hard burn with its weapon
 	<text id="renegade_drop_yes"/>
 	<achievement silent="false">RVS_ACH_REN_REBELC</achievement>
 	<autoReward level="LOW">stuff</autoReward>
-	<weapon name="LASER_BURST_1"/>
+	<weapon name="RVS_FOCUS_BOUNCE_CHAOS"/>
 </event>
 
 <!-- Special option on beam master for reflective plating -->

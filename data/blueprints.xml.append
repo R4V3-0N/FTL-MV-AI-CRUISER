@@ -339,6 +339,194 @@ Accuracy Bonus: +10%</tooltipOverride>
 	<weaponArt>rvs_projector_avatar_chaos</weaponArt>
 </weaponBlueprint>
 
+<weaponBlueprint name="RVS_FOCUS_BOUNCE">
+	<type>LASER</type>
+	<flavorType>Pinpoint</flavorType>
+	<tip>tip_focus</tip>
+	<title>'Chigiriki' Focus Beam</title>
+	<short>Chigiriki</short>
+	<desc>This focus beam has the unique ability to accumulate charges for increased damage. For each charge beyond the first, the beam will reflect from the point of impact to another room, incrementally dealing less damage as it reflects further from its source.</desc>
+	<descriptionOverride>This focus beam has the unique ability to accumulate charges for increased damage. For each charge beyond the first, the beam will reflect from the point of impact to another room, incrementally dealing less damage as it reflects further from its source.
+
+Stats:
+Required Power: 2
+Charge Time: 6 seconds
+
+Beam Length: Pinpoint
+Beam Speed: 1
+
+Base Hull Damage: 1
+Total System Damage: 1
+Total Crew Damage: 15
+
+Damage Increase Per Charge: 1
+Max Charges: 3
+
+Breach Chance: 40% (Adjusted: 40%)
+
+Default Price: 85~   -   Selling Price: 42~
+	</descriptionOverride>
+	<tooltipOverride>Required Power: 2
+Charge Time: 6 seconds
+
+Beam Length: Pinpoint
+Beam Speed: 1
+
+Base Hull Damage: 1
+Total System Damage: 1
+Total Crew Damage: 15
+
+Damage Increase Per Charge: 1
+Max Charges: 3
+
+Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
+	<tooltip>Focus beam that charges up to 3 damage.</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>4</breachChance>
+	<cooldown>6</cooldown>
+	<power>2</power>
+	<cost>85</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>invisible</image>
+	<chargeLevels>3</chargeLevels>
+	<launchSounds>
+		<sound>silence</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>silence</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>silence</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>rvs_loot_beam_bounce</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="RVS_PROJECTILE_FOCUS_BOUNCE">
+	<type>BEAM</type>
+	<tip>tip_focus</tip>
+	<title>'Chigiriki' Focus Beam</title>
+	<short>Chigiriki</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>4</breachChance>
+	<speed>1</speed>
+	<cooldown>6</cooldown>
+	<power>2</power>
+	<cost>85</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>1</length>
+	<launchSounds>
+		<sound>silence</sound>
+	</launchSounds>
+	<weaponArt>rvs_loot_beam_bounce</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="RVS_FOCUS_BOUNCE_CHAOS">
+	<type>LASER</type>
+	<flavorType>Pinpoint</flavorType>
+	<!-- <tip>tip_focus</tip> --> <!-- description too long for tip to fit -->
+	<title>Chaotic 'Chigiriki' Focus Beam</title>
+	<short>Chigiriki™</short>
+	<desc>This focus beam has the unique ability to accumulate charges for increased damage. For each charge, the beam will reflect from the point of impact to another room, incrementally dealing less damage as it reflects further from its source.
+Chaotic variant requires 1 more power and has a longer cooldown, but deals 1 additional damage.</desc>
+	<descriptionOverride>This focus beam has the unique ability to accumulate charges for increased damage. For each charge, the beam will reflect from the point of impact to another room, incrementally dealing less damage as it reflects further from its source.
+Chaotic variant requires 1 more power and has a longer cooldown, but deals 1 additional damage.
+
+Stats:
+Required Power: 3
+Charge Time: 10 seconds
+
+Beam Length: Pinpoint
+Beam Speed: 1
+
+Base Hull Damage: 2
+Total System Damage: 2
+Total Crew Damage: 30
+
+Damage Increase Per Charge: 1
+Max Charges: 3
+
+Breach Chance: 40% (Adjusted: 40%)
+
+Default Price: 85~   -   Selling Price: 42~
+	</descriptionOverride>
+	<tooltipOverride>Required Power: 3
+Charge Time: 10 seconds
+
+Beam Length: Pinpoint
+Beam Speed: 1
+
+Base Hull Damage: 2
+Total System Damage: 2
+Total Crew Damage: 30
+
+Damage Increase Per Charge: 1
+Max Charges: 3
+
+Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
+	<tooltip>Focus beam that charges up to 3 damage.</tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>4</breachChance>
+	<cooldown>10</cooldown>
+	<power>3</power>
+	<cost>85</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>invisible</image>
+	<chargeLevels>3</chargeLevels>
+	<launchSounds>
+		<sound>silence</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>silence</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>silence</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>rvs_loot_beam_bounce_chaos</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="RVS_PROJECTILE_FOCUS_BOUNCE_CHAOS">
+	<type>BEAM</type>
+	<tip>tip_focus</tip>
+	<title>'Chigiriki' Focus Beam</title>
+	<short>Chigiriki</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+	<damage>2</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>4</breachChance>
+	<speed>1</speed>
+	<cooldown>10</cooldown>
+	<power>3</power>
+	<cost>85</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>1</length>
+	<launchSounds>
+		<sound>silence</sound>
+	</launchSounds>
+	<weaponArt>rvs_loot_beam_bounce</weaponArt> 
+</weaponBlueprint>
+
 <!-- 
 	\\\\\\\\\\\\\\\\\\
 	SLEEPER'S HYPERSPACE
