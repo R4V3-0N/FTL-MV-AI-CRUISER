@@ -1003,8 +1003,8 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
                 <header>Renegade Defeated</header>
             </mod-append:achievement>
             <mod-append:achievement name="RVS_ACH_REN_REBELC">
-                <name>[TODO: Rebel renegade ach name]</name>
-                <description>Defeat the Alt Rebel C Renegade and get the [TODO: Weapon name].</description>
+                <name>Mirror, Mirror</name>
+                <description>Defeat the Alt Rebel C Renegade and get the 'Chigiriki' Focus Beam.</description>
                 <icon>renegade_rebel_c</icon>
                 <header>Renegade Defeated</header>
             </mod-append:achievement>
