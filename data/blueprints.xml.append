@@ -1093,6 +1093,7 @@ Accuracy Bonus: +10%</tooltipOverride>
 
 <weaponBlueprint name="RA_BEAM_AUTO">
 	<type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
 	<title>Auto Focus Beam</title>
 	<tip>tip_focus</tip>
 	<short>Auto Beam</short>
@@ -1125,6 +1126,7 @@ Accuracy Bonus: +10%</tooltipOverride>
 
 <weaponBlueprint name="RVS_BEAM_FOCUS_1">
 	<type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
 	<tip>tip_focus</tip>
 	<title>'Pernach' Focus Beam</title>
 	<short>Pernach</short>
