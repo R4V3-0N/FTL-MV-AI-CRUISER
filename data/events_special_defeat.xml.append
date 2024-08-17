@@ -18,10 +18,10 @@
 	<text load="RVS_TEXT_ESCAPE_AI"/>
 </event>
 <textList name="RVS_TEXT_ESCAPE_AI">
-	<text>"Organics like you is why we took refuge here. Disengage or perish" they appear to be trying to make an escape!</text>
-	<text>The rogue vessel appears to be trying to escape! Though their digital minds are constantly backed up for mental evac they are still rather partial to not dying.</text>
+	<text>"Organics like you are why we took refuge here. Disengage or perish." They appear to be trying to make an escape!</text>
+	<text>The rogue vessel appears to be trying to escape! Though their digital minds are constantly backed up for mental evac, they are still partial to not dying.</text>
 	<text>You detect high energy signatures in the rogue's engines. It must be trying to escape!</text>
-	<text>The space darkens around their engines as they are preparing to perform an FTL jump. They are trying to escape!</text>
+	<text>The space darkens around the enemy vessel's engines as they prepare to perform an FTL jump. They're trying to escape!</text>
 </textList>
 
 <eventList name="RVS_GOTAWAY_AI">
