@@ -1322,7 +1322,7 @@
 		<destroyed>
 			<text>The AI ship explode in a shower of sparks and debris.</text>
 			<autoReward level="MED">standard</autoReward>
-			<choice>
+			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
 				<event load="RVS_NEBULA_RESCUE_MISSION_OUTCOME"/>
 			</choice>
@@ -1330,7 +1330,7 @@
 		<deadCrew>
 			<text>The last of the AI crew collapse, the ship goes quiet soon after that.</text>
 			<autoReward level="HIGH">standard</autoReward>
-			<choice>
+			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
 				<event load="RVS_NEBULA_RESCUE_MISSION_OUTCOME"/>
 			</choice>
