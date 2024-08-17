@@ -932,7 +932,7 @@
 	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	-->	
 	
-	<event name="RVS_AI_NEBULA_EMPTY_EXPLORE" unique="true">
+	<event name="NEBULA_RVS_AI_EMPTY_EXPLORE" unique="true">
 		<environment type="nebula"/>
 		<text>For thousands of years there have been myths and legends of dangers within the great unknown. "Hic sunt dracones" - here be dragons. This uncharted sector is no different with rumours surrounding mysterious ships that lurk within the clouds. You and your crew are on edge viewing outside into the swirling clouds but nothing appears to be coming just yet.</text>
 		<choice hidden="true">
