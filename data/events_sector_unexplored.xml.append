@@ -1609,26 +1609,26 @@
 	</eventList>
 	
 	<event name="RVS_PERIPHERY_STORM_AI_BOARDING" unique="true">
-		<text>You find the remains of a confrontation here within this nebula. Large hulls drift through the storm only being visible with each pulse of light from the storm. You begin to salvage some debris before you hear the sounds of gunfire coming from within your ship. You have been boarded!</text> 
+		<text>You find the remains of a confrontation here within this nebula. Large hulls drift through the storm, only visible with each pulse of lightning. You begin to salvage some debris before you hear the sounds of gunfire coming from within your ship. You have been boarded!</text> 
 		<environment type="storm"/>
 		<boarders min="3" max="5" class="rvs_ai_hologram"/>
 		<autoReward level="MED">standard</autoReward>
 	</event>
 	
 	<textList name="RVS_PERIPHERY_STORM_AI_BOARDING_TEXTS">
-		<text>You find the remains of a confrontation here within this nebula. Large hulls drift through the storm only being visible with each pulse of light from the storm. You begin to salvage some debris before you hear the sounds of gunfire coming from within your ship. You have been boarded!</text>
+		<text>You find the remains of a confrontation here within this nebula. Large hulls drift through the storm, only visible with each pulse of lightning. You begin to salvage some debris before you hear the sounds of gunfire coming from within your ship. You have been boarded!</text>
 		<text>The ion storm crackles with energy, and your systems struggle to maintain stability. Spotting some kind of drydock you attempt to investigate it and scrap it for some parts until suddenly, your sensors pick up an incoming stream of transmissions from within. Before you can register what's about to happen, a series of avatars materialize onboard. Security alert!</text>
 	</textList>
 	
 	<event name="RVS_PERIPHERY_ASTEROID_AI_BOARDING" unique="true">
-		<text>You find the remains of a confrontation here within this nebula. Large hulls drift through the storm only being visible with each pulse of light from the storm. You begin to salvage some debris before you hear the sounds of gunfire coming from within your ship. You have been boarded!</text> 
+		<text>You find the remains of a confrontation here within this nebula. Large hulls drift through the storm, only visible with each pulse of lightning. You begin to salvage some debris before you hear the sounds of gunfire coming from within your ship. You have been boarded!</text> 
 		<environment type="asteroid"/>
 		<boarders min="3" max="5" class="rvs_ai_hologram"/>
 		<autoReward level="MED">standard</autoReward>
 	</event>
 	
 	<textList name="RVS_PERIPHERY_ASTEROID_AI_BOARDING_TEXTS">
-		<text>You find the remains of a confrontation here within this nebula. Large hulls drift through the storm only being visible with each pulse of light from the storm. You begin to salvage some debris before you hear the sounds of gunfire coming from within your ship. You have been boarded!</text>
+		<text>You find the remains of a confrontation here within this nebula. Large hulls drift through the storm, only visible with each pulse of lightning. You begin to salvage some debris before you hear the sounds of gunfire coming from within your ship. You have been boarded!</text>
 		<text>The ion storm crackles with energy, and your systems struggle to maintain stability. Spotting some kind of drydock you attempt to investigate it and scrap it for some parts until suddenly, your sensors pick up an incoming stream of transmissions from within. Before you can register what's about to happen, a series of avatars materialize onboard. Security alert!</text>
 	</textList>
 	
