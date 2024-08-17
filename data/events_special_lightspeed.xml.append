@@ -12,7 +12,7 @@
 
 <mod:findName type="event" name="ATLAS_MENU">
     <mod-append:choice hidden="true" req="SEC SECTOR_UNEXPLORED_AI" blue="false">
-        <text>Proceed to the Uncharted Sector</text>
+        <text>Proceed to the Uncharted Sector.</text>
         <event>
 			<loadEvent>AI_WARP</loadEvent>
 		</event>
@@ -21,7 +21,7 @@
 
 <mod:findName type="event" name="ATLAS_MENU_NOEQUIPMENT">
     <mod-append:choice hidden="true" req="SEC SECTOR_UNEXPLORED_AI" blue="false">
-        <text>Proceed to the Uncharted Sector</text>
+        <text>Proceed to the Uncharted Sector.</text>
 		<event>
 			<loadEvent>AI_WARP</loadEvent>
 		</event>

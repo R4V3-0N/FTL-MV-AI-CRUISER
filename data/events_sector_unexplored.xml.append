@@ -102,7 +102,7 @@
 			<event>
 				<text>Your Zoltan Monk steps forward, opening a channel to the Ministry forces. Their energy-based communication seems to resonate with the patrol ships. After a tense pause, the voice softens slightly: "Zoltan Monk presence detected? how odd. State your business."</text>
 				<choice>
-					<text>Explain your intentions</text>
+					<text>Explain your intentions.</text>
 					<event>
 						<text>You explain your intentions to the Ministry patrols, emphasizing the peaceful nature of your mission. Reluctantly, the Ministry forces agree to let you pass without further processing, but warn you to proceed with caution. "Beware, traveler, this sector is fraught with dangers."</text>
 					</event>
@@ -281,13 +281,13 @@
 			</event>
 		</choice>
 		<choice hidden="true" req="sensors" lvl="2">
-			<text>(Upg. Sensors) Keep a lock on target as you chase it</text>
+			<text>(Upg. Sensors) Keep a lock on target as you chase it.</text>
 			<event>
 				<loadEvent>NEBULA_RVS_PERIPHERY_LOST_QUEST_LIST_IMPROVED</loadEvent>
 			</event>
 		</choice>
 		<choice req="ADV_SCANNERS" hidden="true">
-			<text>(Long-Ranged Scanners) Keep a lock on target as you chase it</text>
+			<text>(Long-Ranged Scanners) Keep a lock on target as you chase it.</text>
 			<event>
 				<loadEvent>NEBULA_RVS_PERIPHERY_LOST_QUEST_LIST_IMPROVED</loadEvent>
 			</event>
@@ -351,24 +351,24 @@
 	<event name="NEBULA_RVS_PERIPHERY_LOST_QUEST_DESTROYED" unique="false">	<!-- R4 2024.05.24: Tested, works now! -->
 		<text>You chased after the dark mass into the clouds until you can identify clearly a ship of a ministry make. At least what is left of it. There doesn't appear to be any survivors and nothing else seems to be looming at this beacon or if it was it isn't making itself be seen.</text>
 		<choice hidden="true">
-			<text>Search for survivors</text>
+			<text>Search for survivors.</text>
 			<event load="NEBULA_RVS_QUEST_ZOLTAN_SEARCH"/>
 		</choice>
 		<choice hidden="true" req="sensors" lvl="3">
-			<text>(Adv. Sensors) Keep a lock on target as you chase it</text>
+			<text>(Adv. Sensors) Keep a lock on target as you chase it.</text>
 			<event load="NEBULA_RVS_QUEST_ZOLTAN_SEARCH_IMPROVED"/>
 		</choice>
 		  <!--
 		I still have no clue how to find the ID for this
 		<choice req="" hidden="true">
-			<text>(Lifeform detection) Keep a lock on target as you chase it</text>
+			<text>(Lifeform detection) Keep a lock on target as you chase it.</text>
 			<event load="NEBULA_RVS_PERIPHERY_LOST_QUEST_LIST_IMPROVED"/>
 		</choice>-->
 		<choice hidden="true">
 			<text>Scrap the ship.</text>
 			<event>
 				<autoReward level="MED">standard</autoReward>
-				<text>In this nebula you can not risk investigating the ship thoroughly. You organise a salvage team to take the most valuable looking bits of debris around the ship before departing</text>
+				<text>In this nebula you can not risk investigating the ship thoroughly. You organise a salvage team to take the most valuable looking bits of debris around the ship before departing.</text>
 			</event>
 		</choice>
 	</event>
@@ -514,7 +514,7 @@
 		<text>The ship appears to be more intact on the inside than initially expected. Some of the terminals still function after a quick reboot, despite the passage of time. It might be worth investigating the data stored onboard.</text>
 		<autoReward level="MED">standard</autoReward>
 		<choice>
-			<text>Investigate the terminal</text>
+			<text>Investigate the terminal.</text>
 			<event load="RVS_PERIPHERY_UNION_BLACKBOX"/>
 		</choice>
 	</event>
@@ -909,7 +909,7 @@
 			</event>
 		</choice>
 		<choice>
-			<text>Do something else</text>
+			<text>Do something else.</text>
 			<event>
 			<text>You let the Automated ship drift into the nebula. Reliving its nightmare of its final encounter as it succumbs into the depths of the swirling clouds. Leaving you time to do something else onboard your ship.</text>
 				<choice hidden="true">
@@ -1318,7 +1318,7 @@
 			</choice>
 		</event>
 		<event>
-			<text>You push through the interference, </text>
+			<text>You push through the interference.</text>
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="NEBULA_RVS_RESCUE_MISSION_FAILURE"/>
@@ -1397,7 +1397,7 @@
 		</choice>
 	
 		<choice>
-			<text>Ignore the Distress Signal</text>
+			<text>Ignore the Distress Signal.</text>
 			<event>
 				<text>Opting to steer clear of the conflict, you continue on your journey, leaving the two ships to their fate in the chaotic nebula.</text>
 			   <choice hidden="true">
@@ -1718,7 +1718,7 @@
 	<textList name="RVS_TEXT_GENERIC_ENCOUNTER_AI">
 		<text>You recognize the ship here as one of the designs you have seen on Federation bulletin boards. "Rogue AI" they call them. Rumors have spread that they are based on some new gen soldiers for the Federation Joint Armies that have gone rogue, but the Federation has denied all accusations. What ever the case is. They want to purge them from this universe and this AI defective or not intends to fight for its right to survive.</text>
 		<text>Coming across a rare sight. One of the "Rogue AI" ships you have been hearing about is in the process of dissolving a pirate vessel. Sensors fail to detect any life signs onboard the vessel. You attempt to keep your distance from the sight but the Rogue ship assumes you are repositioning to strike and engages you.</text>
-		<text>You detect a strange reading near the beacon. There appears to be a ship of unknown design tampering with it. You move in ensuring that the beacon is not being deactivated. Seeing you this "Rogue ship" assume hostilities and engage. </text>
+		<text>You detect a strange reading near the beacon. There appears to be a ship of unknown design tampering with it. You move in ensuring that the beacon is not being deactivated. Seeing you this "Rogue ship" assume hostilities and engage.</text>
 		<text>Arriving at your destination you receive a strange hail. The cyphering is difficult to decrypt containing both old and new Federation cyphers coupled with exotic signals. By the time you cracked the first line a "Rogue AI" ship seemingly waiting assumes hostilities and engages.</text>
 		<text>A nearby wreck seems to be continuously transmitting a warning signal, signaling ship to stay away. You move in to investigate before noticing a seemingly unidentifiable ship. Before you manage to send a hail it assume you are here to steal its salvage and engages.</text>
 		<text>Your destination seems empty. While performing sensors maintenance you realize that the readings are being jammed. After recalibrating it you notice a unusual sight. One of the "Rogue AI" ships you have been hearing about lately. While you process what you are witnessing, the ship, seemingly annoyed to be found takes the opportunity to move into an attack vector.</text>
