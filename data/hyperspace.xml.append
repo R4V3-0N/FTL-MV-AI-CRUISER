@@ -331,6 +331,8 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
 </mod:findLike>
 
 <events>
+    <bossShip yOffset="130">RVS_AI_ASSAULT</bossShip>
+
     <bossShip yOffset="55">RVSRB_AI_CRUISER_3_NORMAL</bossShip>
     <bossShip yOffset="55">RVSRB_AI_CRUISER_3_CHALLENGE</bossShip>
     <bossShip yOffset="55">RVSRB_AI_CRUISER_3_EXTREME</bossShip>
