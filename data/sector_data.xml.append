@@ -246,7 +246,7 @@
 	<priorityEvent name="ANOMALY_SPAWNER" min="1" max="1" priority="1" req="ANOMALY_SPAWN_CHECK" lvl="1"/>
 	<priorityEvent name="RVS_PERIPHERY_EMPTY_SUS" min="0" max="1" priority="1" lvl="1"/> <!-- CEL probe patrolling -->			<!-- Clearing -->
 	<event name="RVS_PERIPHERY_SPOILER_PROBE_INVESTIGATION" min="0" max="1"/>		<!-- CEL probe encounter -->				<!-- Clearing -->
-	<event name="RVS_NEBULA_AI_HOSTILE" min="3" max="6"/>							<!-- AI ship fights in Nebula-->			<!-- Nebula -->		
+	<event name="NEBULA_RVS_AI_HOSTILE" min="3" max="6"/>							<!-- AI ship fights in Nebula-->			<!-- Nebula -->		
 	<event name="RVS_CLEARING_HAZARD_AI_HOSTILE" min="1" max="2"/>					<!-- AI ship fights in Clearing-->			<!-- Clearing (hazard) -->
 	<event name="RVS_PERIPHERY_STRANGE_POD" min="1" max="1"/>						<!-- humanoid/ contempter in a pod event --><!-- Clearing -->
 	
@@ -432,7 +432,7 @@
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="1"/>
     </mod:findLike>
-	<mod-append:event name="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
+	<mod-append:event name="NEBULA_RVS_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
 	<mod-append:event name="RVS_GENERIC_ENCOUNTER_AI_REGULAR" min="0" max="2"/>
 </mod:findName>
 <mod:findName type="sectorDescription" name="SECTOR_ABANDONED_GENERIC_HEKTAR" panic="true">

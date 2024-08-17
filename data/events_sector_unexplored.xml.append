@@ -1298,7 +1298,7 @@
 	</event>
 	
 	<!-- May make above event be trap/ choice thing
-	<eventList name="RVS_NEBULA_RESCUE_RENEGADE_LIST">
+	<eventList name="NEBULA_RVS_RESCUE_RENEGADE_LIST">
 		<event>
 			<text>You push through the interference, honing in on the distress signal. Soon, the renegade ship comes into view, heavily damaged and surrounded by hostile AI drones. You move in to engage the AI ships.</text>
 			<ship load="RVS_SHIP_MERC_RESCUE_FIGHT" hostile="true"/>
@@ -1311,7 +1311,7 @@
 			<text>You push through the interference, </text>
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event load="RVS_NEBULA_RESCUE_MISSION_FAILURE"/>
+				<event load="NEBULA_RVS_RESCUE_MISSION_FAILURE"/>
 			</choice>
 		</event>  
 	</eventList>
@@ -1324,7 +1324,7 @@
 			<autoReward level="MED">standard</autoReward>
 			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
-				<event load="RVS_NEBULA_RESCUE_MISSION_OUTCOME"/>
+				<event load="NEBULA_RVS_RESCUE_MISSION_OUTCOME"/>
 			</choice>
 		</destroyed>
 		<deadCrew>
@@ -1332,25 +1332,25 @@
 			<autoReward level="HIGH">standard</autoReward>
 			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
-				<event load="RVS_NEBULA_RESCUE_MISSION_OUTCOME"/>
+				<event load="NEBULA_RVS_RESCUE_MISSION_OUTCOME"/>
 			</choice>
 		</deadCrew>
 	</ship>
 	
 	<!-- Success or fail chance for RVS_SHIP_MERC_RESCUE_FIGHT -->
-	<eventList name="RVS_NEBULA_RESCUE_MISSION_OUTCOME">
-		<event load="RVS_NEBULA_RESCUE_MISSION_SUCCESS"/>
-		<event load="RVS_NEBULA_RESCUE_MISSION_FAILURE"/>
+	<eventList name="NEBULA_RVS_RESCUE_MISSION_OUTCOME">
+		<event load="NEBULA_RVS_RESCUE_MISSION_SUCCESS"/>
+		<event load="NEBULA_RVS_RESCUE_MISSION_FAILURE"/>
 	</eventList>
 	
-	<event name="RVS_NEBULA_RESCUE_MISSION_SUCCESS">
+	<event name="NEBULA_RVS_RESCUE_MISSION_SUCCESS">
 		<text>After a fierce battle, you manage to destroy the AI ship. The mercenary sends a message of thanks, offering you a reward for your assistance. As a token of their gratitude, one of their crew members requests to join your crew.</text>
 		<reward>
 			<crewMember amount="1" shields="2" class="LIST_CREW_PIRATE_RANDOM"/>
 			<autoReward level="LOW">scrap</autoReward>
 		</reward>
 	</event>
-	<event name="RVS_NEBULA_RESCUE_MISSION_FAILURE">
+	<event name="NEBULA_RVS_RESCUE_MISSION_FAILURE">
 		<text>Despite your best efforts, you arrive too late. The ships hull is compromised, and the crew onboard had suffocated. You salvage what little remains and move on, feeling the weight of the loss of a renegade not too dissimilar to yourself.</text>
 			<autoReward level="MED">stuff</autoReward>
 	</event>
@@ -1442,7 +1442,7 @@
 	</ship>
 	
 	<!-- 
-	<eventList name="RVS_NEBULA_RESCUE_MISSION_OUTCOME"/>
+	<eventList name="NEBULA_RVS_RESCUE_MISSION_OUTCOME"/>
 		<event load="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_SUCCESS"/>
 		<event load="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_SUCCESS"/>
 		<event load="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_FAILURE"/>
@@ -1498,7 +1498,7 @@
 	</event>-->
 	
 	
-	<eventList name="RVS_NEBULA_AI_HOSTILE">
+	<eventList name="NEBULA_RVS_AI_HOSTILE">
 		<event load="NEBULA_RVS_ENCOUNTER_AI_REGULAR"/>
 		<event load="NEBULA_RVS_ENCOUNTER_AI_REGULAR"/>
 		<event load="NEBULA_RVS_ENCOUNTER_AI_REGULAR"/>
@@ -1651,16 +1651,16 @@
 	
 	
 	<!-- Regular Generic Events	-->
-	<eventList name="RVS_NEBULA_GENERIC_ENCOUNTER">
+	<eventList name="NEBULA_RVS_GENERIC_ENCOUNTER">
 		<event load="RVS_GENERIC_ENCOUNTER_AI_REGULAR"/>	<!-- does having it in this list make it marked as a nebula?-->
-		<event load="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR"/>
+		<event load="NEBULA_RVS_GENERIC_ENCOUNTER_AI_REGULAR"/>
 	</eventList>
 	
 	<mod:findName type="eventList" name="NEBULA_UNEXPLORED_HOSTILE">
-		<mod-append:event load="RVS_NEBULA_GENERIC_ENCOUNTER"/>
+		<mod-append:event load="NEBULA_RVS_GENERIC_ENCOUNTER"/>
 	</mod:findName>
 	
-	<event name="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR">
+	<event name="NEBULA_RVS_GENERIC_ENCOUNTER_AI_REGULAR">
 		<text load="RVS_TEXT_GENERIC_ENCOUNTER_AI_NEBULA"/>
 		<ship load="RVS_SHIP_AI_FIGHT" hostile="true"/>
 		<environment type="nebula"/>
@@ -1669,7 +1669,7 @@
 			<event load="COMBAT_CHECK"/>
 		</choice>
 	</event>
-	<event name="RVS_NEBULA_GENERIC_ENCOUNTER_AI_REGULAR_LIMIT" unique="true">
+	<event name="NEBULA_RVS_GENERIC_ENCOUNTER_AI_REGULAR_LIMIT" unique="true">
 		<text load="RVS_TEXT_GENERIC_ENCOUNTER_AI_NEBULA"/>
 		<ship load="RVS_SHIP_AI_FIGHT" hostile="true"/>
 		<environment type="nebula"/>
