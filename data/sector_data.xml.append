@@ -248,7 +248,7 @@
 	<event name="RVS_PERIPHERY_SPOILER_PROBE_INVESTIGATION" min="0" max="1"/>		<!-- CEL probe encounter -->				<!-- Clearing -->
 	<event name="NEBULA_RVS_AI_HOSTILE" min="3" max="6"/>							<!-- AI ship fights in Nebula-->			<!-- Nebula -->		
 	<event name="RVS_CLEARING_HAZARD_AI_HOSTILE" min="1" max="2"/>					<!-- AI ship fights in Clearing-->			<!-- Clearing (hazard) -->
-	<event name="RVS_PERIPHERY_STRANGE_POD" min="1" max="1"/>						<!-- humanoid/ contempter in a pod event --><!-- Clearing -->
+	<event name="NEBULA_RVS_PERIPHERY_STRANGE_POD" min="1" max="1"/>						<!-- humanoid/ contempter in a pod event --><!-- Clearing -->
 	
 	<event name="RVS_LIST_AI_BOARDING" min="1" max="3"/>							<!-- List of AI boarding events -->
 

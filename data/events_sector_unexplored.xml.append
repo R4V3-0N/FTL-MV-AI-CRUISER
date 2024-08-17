@@ -1016,7 +1016,7 @@
 	</event>
 	
 	
-	<event name="RVS_PERIPHERY_STRANGE_POD">
+	<event name="NEBULA_RVS_PERIPHERY_STRANGE_POD">
 		<environment type="nebula"/>
 		<text>Your sensors detect a strange pod floating aimlessly in the nebula. It seems to be emitting a faint signal, though the details are unclear. What do you want to do?</text>
 		<choice req="sensors" lvl="2" hidden="true">
@@ -1614,11 +1614,11 @@
 	
 	
 	<eventList name="RVS_LIST_AI_BOARDING">
-		<event load="RVS_PERIPHERY_STORM_AI_BOARDING"/>
+		<event load="NEBULA_RVS_PERIPHERY_STORM_AI_BOARDING"/>
 		<event load="RVS_PERIPHERY_ASTEROID_AI_BOARDING"/>
 	</eventList>
 	
-	<event name="RVS_PERIPHERY_STORM_AI_BOARDING" unique="true">
+	<event name="NEBULA_RVS_PERIPHERY_STORM_AI_BOARDING" unique="true">
 		<text>You find the remains of a confrontation here within this nebula. Large hulls drift through the storm, only visible with each pulse of lightning. You begin to salvage some debris before you hear the sounds of gunfire coming from within your ship. You have been boarded!</text> 
 		<environment type="storm"/>
 		<boarders min="3" max="5" class="rvs_ai_hologram"/>
