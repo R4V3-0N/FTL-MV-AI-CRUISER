@@ -95,7 +95,7 @@ end)
 -- Rebel Cruiser Achievements --
 -- Easy "HOME BY ANY OTHER NAME"
 script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
-    if ship.iShipId == 0 and current_sector() <= 5 and should_track_achievement("ACH_SHIP_RVSP_REBEL_ALT_1", ship, "PLAYER_SHIP_RVSP_REBEL_ALT") then
+    if ship.iShipId == 0 and current_sector() < 5 and should_track_achievement("ACH_SHIP_RVSP_REBEL_ALT_1", ship, "PLAYER_SHIP_RVSP_REBEL_ALT") then
         if ship:CountCrew(false) >= 8 then
             Hyperspace.CustomAchievementTracker.instance:SetAchievement("ACH_SHIP_RVSP_REBEL_ALT_1", false)
         end
