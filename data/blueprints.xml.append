@@ -130,7 +130,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>rvs_magnifier_artillery_laser</weaponArt>
+	<!--<weaponArt>rvs_magnifier_artillery_laser</weaponArt> -->
 	<iconImage>heavyL</iconImage>
 </weaponBlueprint>
 
@@ -560,7 +560,7 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
         <sound>rvs_photon1</sound>
 		<sound>rvs_photon2</sound>
     </launchSounds>
-    <weaponArt>rvs_infrared_pulse_beam</weaponArt>
+    <!--<weaponArt>rvs_infrared_pulse_beam</weaponArt>-->
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 <weaponBlueprint name="RVS_HS_IR_BEAM_1_COLOURED">	<!-- R4 2024.05.19: not in use -->
@@ -587,7 +587,7 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
         <sound>rvs_photon1</sound>
 		<sound>rvs_photon2</sound>
     </launchSounds>
-    <weaponArt>rvs_loot_infrared_pulse_beam</weaponArt>
+    <!--<weaponArt>rvs_loot_infrared_pulse_beam</weaponArt>-->
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1370,6 +1370,139 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
 		<sound>beam1_2</sound>
 	</launchSounds>
 	<weaponArt>rvs_beam_adaptive_1</weaponArt> 
+</weaponBlueprint>
+
+<!-- RA IONS -->
+<weaponBlueprint name="RA_ION_BURST_1">
+	<type>LASER</type>
+	<tip>tip_ion</tip>
+	<title>Ion Burst Mark I</title>
+	<short>Ion Burst I</short>
+	<locked>1</locked>
+	<desc>Ion weapons can disable systems without causing hull damage.</desc>
+	<tooltip>Fires 2 blasts that do 1 ion damage each. Can hit and disable shields as well as systems.</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<stunChance>1</stunChance>
+	<speed>40</speed>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>13</cooldown>		<!-- R4 2025.05.22:  Was 15 in CE. Ion Burst I in MV is currently 7 seconds. Will change this to 13 which is 1 less than double that of the Ion Burst 1 -->
+	<power>1</power>
+	<cost>40</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>			<!-- R4 2025.05.22: 3-->
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ra_ion_burst_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="RA_ION_BURST_2">
+	<type>LASER</type>
+	<tip>tip_ion</tip>
+	<title>Ion Burst Mark II</title>
+	<short>Ion Burst II</short>
+	<locked>1</locked>
+	<desc>Ion weapons can disable systems without causing hull damage.</desc>
+	<tooltip>Fires 3 blasts that do 1 ion damage each. Can hit and disable shields as well as systems.</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>				<!-- R4 2025.05.22: i10DPS is 2.5-->
+	<stunChance>1</stunChance>
+	<speed>40</speed>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>		<!-- R4 2025.05.22:  Was 15 in CE. MV Ion Burst II which is 2 power is 5 seconds (15 for 3 projectiles), MV Ion Burst III is 4 power for 3 seconds (9 for 3 projectiles). Will set this at 12  -->
+	<power>3</power>
+	<cost>60</cost>				<!-- R4 2025.05.22: Was 100 in CE, currently set to 60 -->
+	<bp>3</bp>
+	<rarity>4</rarity>			<!-- R4 2025.05.22: 4-->
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ra_ion_burst_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="RA_ION_BURST_3">
+	<type>LASER</type>
+	<tip>tip_ion</tip>
+	<title>Ion Burst Mark III</title>
+	<short>Ion Burst III</short>
+	<locked>1</locked>
+	<desc>Powerful ion weapons that can significantly disrupt enemy ships with its massive salvos.</desc>
+	<tooltip>Fires 4 blasts that do 1 ion damage each. Can hit and disable shields as well as systems.</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<stunChance>1</stunChance>
+	<speed>40</speed>
+	<shots>4</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>11</cooldown>		<!-- R4 2025.05.22:  Was 12 in CE. MV Ion Burst III is 4 power for 3 seconds (12 for 4 projectiles). Will set this at 10  -->
+	<power>4</power>
+	<cost>65</cost>				<!-- R4 2025.05.22: Was 100 in CE, currently set to 65 to match MV Ion Burst III-->
+	<bp>4</bp>
+	<rarity>5</rarity>			<!-- R4 2025.05.22: 5-->
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ra_ion_burst_3</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="RA_EFFECTOR_1">
@@ -3900,7 +4033,7 @@ AUGMENTS
 		</pilot>
 		<sensors power="1" room="9" start="false" img="room_sensors">
 			<slot>
-				<direction>up</direction>
+				<direction>down</direction>
 				<number>1</number>
 			</slot>
 		</sensors>

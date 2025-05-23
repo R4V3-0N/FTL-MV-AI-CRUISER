@@ -108,6 +108,9 @@
 <animSheet name="ra_beam_auto" w="175" h="35" fw="25" fh="35">weapons_rebalanced_arsenal/ra_beam_auto_strip7.png</animSheet>
 <animSheet name="rvs_beam_pernach" w="300" h="39" fw="30" fh="39">weapons_rebalanced_arsenal/rvs_beam_pernach_strip10.png</animSheet>
 <animSheet name="rvs_beam_adaptive_1" w="350" h="36" fw="35" fh="36">weapons_rebalanced_arsenal/rvs_beam_adaptive_1_strip10.png</animSheet>
+<animSheet name="ra_ion_burst_1" w="256" h="44" fw="32" fh="44">weapons_rebalanced_arsenal/ra_ion_burst_1_strip8.png</animSheet>
+<animSheet name="ra_ion_burst_2" w="256" h="54" fw="32" fh="54">weapons_rebalanced_arsenal/ra_ion_burst_2_strip8.png</animSheet>
+<animSheet name="ra_ion_burst_3" w="280" h="65" fw="35" fh="65">weapons_rebalanced_arsenal/ra_ion_burst_3_strip8.png</animSheet>
 <animSheet name="ra_effector_1" w="105" h="54" fw="35" fh="54">weapons_rebalanced_arsenal/ra_effector_1_strip3.png</animSheet>
 <animSheet name="ra_effector_2" w="123" h="62" fw="41" fh="62">weapons_rebalanced_arsenal/ra_effector_2_strip3.png</animSheet>
 <animSheet name="ra_effector_heavy" w="138" h="72" fw="46" fh="72">weapons_rebalanced_arsenal/ra_effector_heavy_strip3.png</animSheet>
@@ -164,6 +167,36 @@
 	<mountPoint x="9" y="28"/>
 	<chargeImage>weapons_rebalanced_arsenal/rvs_beam_adaptive_1_glow.png</chargeImage>
 	<boost>rvs_beam_adaptive_1_charge</boost>
+</weaponAnim>
+
+<weaponAnim name="ra_ion_burst_1">
+	<sheet>ra_ion_burst_1</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint  x="17" y="7"/>
+	<mountPoint x="7" y="35"/>
+	<chargeImage>weapons_rebalanced_arsenal/ra_ion_burst_1_glow.png</chargeImage>
+</weaponAnim>
+
+<weaponAnim name="ra_ion_burst_2">
+	<sheet>ra_ion_burst_2</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint  x="17" y="7"/>
+	<mountPoint x="7" y="42"/>
+	<chargeImage>weapons_rebalanced_arsenal/ra_ion_burst_2_glow.png</chargeImage>
+</weaponAnim>
+
+<weaponAnim name="ra_ion_burst_3">
+	<sheet>ra_ion_burst_3</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint  x="18" y="8"/>
+	<mountPoint x="6" y="47"/>
+	<chargeImage>weapons_rebalanced_arsenal/ra_ion_burst_3_glow.png</chargeImage>
 </weaponAnim>
 
 <weaponAnim name="ra_effector_1">

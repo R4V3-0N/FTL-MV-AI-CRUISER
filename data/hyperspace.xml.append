@@ -168,7 +168,7 @@
         <mod-append:shipIcon> <!-- Anti-gravity Engines -->
             <name>icon_rvs_antigrav_engine</name>
             <tooltip>ANTI-GRAV ENGINE:
-This ship's base evasion is reduced by 5%, but it will gain 5% temporarily for each shot that hits its shields.</tooltip>
+This ship's base evasion is reduced by 5%, but it will gain 5% temporarily for each shot that hits its shields and hull.</tooltip>  <!-- R4 2025.05.22: Corrected the description to include hull-->
         </mod-append:shipIcon>
         <mod-append:shipIcon> <!-- Reflective Plating -->
             <name>icon_rvs_reflective_plating</name>
@@ -219,6 +219,14 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
         </crew>
 	</mod-append:customShip>
 
+    <mod-append:customShip name="RVS_AI_DROPSHIP">
+		<shipIcons>
+            <!--<shipIcon>icon_rvs_antigrav_engine</shipIcon>-->   
+			<shipIcon>icon_no2</shipIcon>
+			<shipIcon>icon_auto</shipIcon>
+        </shipIcons>
+		<autoShipForce>true</autoShipForce>
+	</mod-append:customShip>
 
 <!-- Bosses -->
 <!-- Multiverse Renegades-->
