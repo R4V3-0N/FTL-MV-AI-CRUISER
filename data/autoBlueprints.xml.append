@@ -52,6 +52,10 @@
     <mod-append:name>RVS_DRONE_PLASMA_1</mod-append:name>
     <mod-append:name>RVS_DRONE_PLASMA_2</mod-append:name>
     <mod-append:name>RVS_BEAM_DEFENSE_1</mod-append:name>
+
+	<mod-append:name>RA_DRONE_EFFECTOR_1</mod-append:name>
+	<mod-append:name>RA_DRONE_EFFECTOR_2</mod-append:name>
+	<mod-append:name>RA_ANTI_DRONE_EFFECTOR</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL">
@@ -63,6 +67,9 @@
 	<mod-append:name>RA_DRONE_HEAVY_1</mod-append:name>
 	<mod-append:name>RA_DRONE_HEAVY_2</mod-append:name>
 	<mod-append:name>RVS_DRONE_SCATTER</mod-append:name>
+	<mod-append:name>RA_DRONE_EFFECTOR_1</mod-append:name>
+	<mod-append:name>RA_DRONE_EFFECTOR_2</mod-append:name>
+	<mod-append:name>RA_ANTI_DRONE_EFFECTOR</mod-append:name>
 
 	<mod-append:name>RVS_BEAM_DEFENSE_1</mod-append:name>
 	<mod-append:name>RVS_DRONE_DEFENSE_SCATTER</mod-append:name>
@@ -209,30 +216,45 @@
 	<name>RA_DRONE_HEAVY_1</name>
 	<name>RA_DRONE_HEAVY_2</name>
 	<name>RVS_DRONE_SCATTER</name>
+	<name>RA_DRONE_EFFECTOR_1</name>
+	<name>RA_DRONE_EFFECTOR_2</name>
+	<name>RA_ANTI_DRONE_EFFECTOR</name>
 
 	<name>RVS_BEAM_DEFENSE_1</name>
 	<name>RVS_DRONE_DEFENSE_SCATTER</name>
 	<name>RA_DRONE_HEAVY_1</name>
 	<name>RA_DRONE_HEAVY_2</name>
 	<name>RVS_DRONE_SCATTER</name>
+	<name>RA_DRONE_EFFECTOR_1</name>
+	<name>RA_DRONE_EFFECTOR_2</name>
+	<name>RA_ANTI_DRONE_EFFECTOR</name>
 
 	<name>RVS_BEAM_DEFENSE_1</name>
 	<name>RVS_DRONE_DEFENSE_SCATTER</name>
 	<name>RA_DRONE_HEAVY_1</name>
 	<name>RA_DRONE_HEAVY_2</name>
 	<name>RVS_DRONE_SCATTER</name>
+	<name>RA_DRONE_EFFECTOR_1</name>
+	<name>RA_DRONE_EFFECTOR_2</name>
+	<name>RA_ANTI_DRONE_EFFECTOR</name>
 
 	<name>RVS_BEAM_DEFENSE_1</name>
 	<name>RVS_DRONE_DEFENSE_SCATTER</name>
 	<name>RA_DRONE_HEAVY_1</name>
 	<name>RA_DRONE_HEAVY_2</name>
 	<name>RVS_DRONE_SCATTER</name>
+	<name>RA_DRONE_EFFECTOR_1</name>
+	<name>RA_DRONE_EFFECTOR_2</name>
+	<name>RA_ANTI_DRONE_EFFECTOR</name>
 
 	<name>RVS_BEAM_DEFENSE_1</name>
 	<name>RVS_DRONE_DEFENSE_SCATTER</name>
 	<name>RA_DRONE_HEAVY_1</name>
 	<name>RA_DRONE_HEAVY_2</name>
 	<name>RVS_DRONE_SCATTER</name>
+	<name>RA_DRONE_EFFECTOR_1</name>
+	<name>RA_DRONE_EFFECTOR_2</name>
+	<name>RA_ANTI_DRONE_EFFECTOR</name>
 
 	<name>RVS_AI_MICROFIGHTER_INTERCEPTOR</name>
 </blueprintList>
@@ -246,7 +268,7 @@
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 -->
-<blueprintList name="RVS_BLUELIST_EFFECTOR">
+<blueprintList name="RVS_BLUELIST_EFFECTOR" type="any">
 	<name>RA_EFFECTOR_1</name>
 	<name>RA_EFFECTOR_2</name>
 	<name>RA_EFFECTOR_HEAVY</name>
@@ -256,6 +278,9 @@
 	<name>RVS_PROJECTOR_AVATAR_CHAOS</name>
 	<name>RVS_ARTILLERY_AI</name>
 	<name>RVS_ARTILLERY_EFFECTOR</name>
+	
+	<name>RA_DRONE_EFFECTOR_1</name>	<!-- R4 2025.07.09 Made this a blueprintList type="any", note in case of any issues -->
+	<name>RA_DRONE_EFFECTOR_2</name>
 </blueprintList>
 
 <blueprintList name="BLUELIST_CREW_UC_FED_ELITE">	<!-- Identical to GB, since this is independent I just changed the blueprint name --> <!-- Just found out this exists so using this instead LIST_CREW_FEDERATION_ELITE_EASTER-->
@@ -443,6 +468,9 @@
 	<name>RA_DRONE_HEAVY_1</name>
 	<name>RA_DRONE_HEAVY_2</name>
 	<name>RVS_DRONE_SCATTER</name>
+	<name>RA_DRONE_EFFECTOR_1</name>
+	<name>RA_DRONE_EFFECTOR_2</name>
+	<name>RA_ANTI_DRONE_EFFECTOR</name>
 </blueprintList>
 
 <blueprintList name="RVS_LIST_DRONES_HEAVY">	
@@ -453,13 +481,14 @@
 
 <!--
 ////////////////////////////////////////////////////////////////////////////////////
-			MULTIVERSE RENEGADE LISTS
+			MULTIVERSE ENEMY LISTS
 ////////////////////////////////////////////////////////////////////////////////////
 -->
 
 <blueprintList name="RVS_LIST_SHIPS_AI">
 	<name>RVS_AI_INTERCEPTOR</name>
 	<name>RVS_AI_ASSAULT</name>
+	<name>RVS_AI_DROPSHIP</name>
 </blueprintList>
 
 <!--

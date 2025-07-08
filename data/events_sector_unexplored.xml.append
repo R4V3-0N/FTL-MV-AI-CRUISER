@@ -1115,15 +1115,18 @@
 	<event name="RVS_PERIPHERY_POD_CONTEMPTER">
 		<text>Inside the pod, you find some kind of reptilian alien onboard. Enraged and pumped full of combat stims, they immediately hurl insults at you calling you some kind of "Floatoid Respecting Fledgling". Brandishing a hardlight blade you begin to reconsider prying that pod open now...</text>
 		<choice req="RVS_BLUELIST_CREW_COMBAT" hidden="true">
-			<text>(Combat Crew) Subdue with combat crew.</text>
+			<text>(Combat Crew) Subdue the alien with combat crew.</text>
 			<event load="RVS_PERIPHERY_CONTEMPTER_COMBAT"/>
 		</choice>
 		<choice req="medbay" lvl="3" hidden="true">
-			<text>(Adv. Medbay) Subdue with advanced medbay.</text>
+			<text>(Adv. Medbay) Subdue the alien with an advanced medbay.</text>
 			<event load="RVS_PERIPHERY_CONTEMPTER_MEDBAY"/>
 		</choice>
+		<choice req="orchid" lvl="3" hidden="true">
+			<text>(Floral Crew) Calm the alien down.</text>
+			<event load="RVS_PERIPHERY_CONTEMPTER_ORCHID"/>
+		</choice>
 		<!-- R4 2024.08.03: TODO should add blue event option for Contempter.-->
-		<!-- R4 2024.08.03: TODO 2 also Orchids have a calming effect, perhaps they can help calm them down too?-->
 		<choice hidden="true">
 			<text>Try to convince it to join your crew.</text>
 			<event load="RVS_PERIPHERY_CONTEMPTER_CONVINCE_LIST"/>
@@ -1138,7 +1141,12 @@
 		<text>You use your advanced medbay to subdue the strange alien. The calming effects of the medical treatment cleanses them of their stims, after settling down and assessing their situation they agree to join your crew.</text>
 		<crewMember amount="1" class="rvs_contempter"/>
 	</event>
+	<event name="RVS_PERIPHERY_CONTEMPTER_ORCHID">
+		<text>With the Orchids soothing spores. The strange alien begins to calm and settle down. After a brief exchange you convince the alien, though reluctantly, to join your crew.</text>
+		<crewMember amount="1" class="rvs_contempter"/>
+	</event>
 	
+
 	<eventList name="RVS_PERIPHERY_CONTEMPTER_CONVINCE_LIST">
 		<event load="RVS_PERIPHERY_CONTEMPTER_CONVINCE"/>
 		<event load="RVS_PERIPHERY_CONTEMPTER_ATTACK"/>
@@ -1148,10 +1156,11 @@
 		<crewMember amount="1" class="rvs_contempter"/>
 	</event>
 	<event name="RVS_PERIPHERY_CONTEMPTER_ATTACK">
-		<text>You attempt to talk alien down but instead it launches into a frenzied attack, forcing your crew to defend themselves! The life pod could be salvaged after the fight.</text>
+		<text>You attempt to talk the alien into calming down... but instead it launches into a frenzied attack, forcing your crew to defend themselves! The life pod could be salvaged after the fight.</text>
 		<autoReward level="LOW">standard</autoReward>
 		<boarders min="1" max="1" class="rvs_contempter"/>
 	</event>
+
 	
 	
 	<!-- AI store -->

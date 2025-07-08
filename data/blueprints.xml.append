@@ -3081,6 +3081,7 @@ Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<rarity>0</rarity>
 </droneBlueprint>
 
+<!-- Missile Drones -->
 <droneBlueprint name="RVS_COMBAT_MISSILE_1">
 	<type>COMBAT</type>
 	<title>Anti-Ship Missile Drone MK I</title>
@@ -3140,6 +3141,224 @@ Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<iconImage>combat</iconImage>
 </droneBlueprint>
 
+<!-- Effector Drones -->
+
+
+<!--
+R4: 2025.07.09 I do not know what this is here for. Help! Should this be delete???
+
+<weaponBlueprint name="RA_DRONE_EFFECTOR">
+	<type>BOMB</type>
+	<title>Drone Bomb</title>
+	<damage>0</damage>
+	<ion>2</ion>
+	<stun>5</stun>
+	<shots>1</shots>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>bomb_ion</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>rvs_effector_shoot1</sound>
+		<sound>rvs_effector_shoot2</sound>
+		<sound>rvs_effector_shoot3</sound>
+		<sound>rvs_effector_shoot4</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_ion</weaponArt>
+	<weaponArt>laser_burst_1</weaponArt>
+</weaponBlueprint>-->
+
+<weaponBlueprint name="RA_DRONE_EFFECTOR">
+	<type>BOMB</type>
+	<tip>rvs_tip_effector</tip>
+	<title>Drone Effector</title>
+	<damage>0</damage>
+	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10--> 
+	<hack duration="3" immuneAfterHack="0">
+		<shields>4.1</shields> <!-- R4 2025.05.09: Left this at 4.1 so it can take down a single shield bubble, all else 3. -->
+		<doors immuneAfterHack="0">6</doors>
+		<sensors immuneAfterHack="0">6</sensors>
+		<temporal immuneAfterHack="0">6</temporal>
+	</hack>
+	<roomStatBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>0</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<duration>7</duration>
+			<roomAnim renderLayer="3">
+				<anim animType="center">ra_effector_residual</anim>
+			</roomAnim>
+		</statBoost>
+	</roomStatBoosts>
+	<accuracyMod>10</accuracyMod>
+	<shots>1</shots>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<cost>55</cost>
+	<rarity>0</rarity>	
+	<image>ra_effector_hacking</image>
+	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
+	<launchSounds>
+		<sound>rvs_effector_shoot1</sound>
+		<sound>rvs_effector_shoot2</sound>
+		<sound>rvs_effector_shoot3</sound>
+		<sound>rvs_effector_shoot4</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hackStart</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hackStart</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>ra_effector_1</weaponArt>
+</weaponBlueprint>
+<droneBlueprint name="RA_DRONE_EFFECTOR_1">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Effector Anti-Ship Drone Mark I</title>
+	<short>Effector D. I</short>
+	<desc>A specialized drone that disrupts enemy ships with effector barrages, but is relatively slow.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>5</speed>	<!-- R4 2025.07.09 Speed was 7, decreased it to 5. It was too OP at 7-->
+	<cost>60</cost>
+	<bp>3</bp>
+	<droneImage>ra_drone_effector_1</droneImage>
+	<weaponBlueprint>RA_DRONE_EFFECTOR</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+
+<weaponBlueprint name="RA_DRONE_EFFECTOR_HEAVY">
+	<type>BOMB</type>
+	<tip>rvs_tip_effector</tip>
+	<title>Drone Heavy Effector</title>
+	<damage>0</damage>
+	<!-- Hack lvl 1 is 4, lvl 2 is 7, lvl 3 is 10--> 
+	<hack duration="6" immuneAfterHack="0">
+		<doors immuneAfterHack="0">12</doors>
+		<sensors immuneAfterHack="0">12</sensors>
+	</hack>
+	<roomStatBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>0</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<duration>7</duration>
+			<roomAnim renderLayer="3">
+				<anim animType="center">ra_effector_residual</anim>
+			</roomAnim>
+		</statBoost>
+	</roomStatBoosts>
+	<accuracyMod>10</accuracyMod>
+	<shots>1</shots>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<cost>55</cost>
+	<rarity>0</rarity>	
+	<image>ra_effector_hacking</image>
+	<explosion>invisible</explosion>  <!-- was ra_explosion_ionfield -->
+	<launchSounds>
+		<sound>rvs_effector_shoot1</sound>
+		<sound>rvs_effector_shoot2</sound>
+		<sound>rvs_effector_shoot3</sound>
+		<sound>rvs_effector_shoot4</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hackStart</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hackStart</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>ra_effector_1</weaponArt>
+</weaponBlueprint>
+<droneBlueprint name="RA_DRONE_EFFECTOR_2">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Effector Anti-Ship Drone Mark II</title>
+	<short>Effector D. II</short>
+	<desc>A specialized drone that disrupts enemy ships with effector barrages, but is relatively slow.</desc>
+	<power>3</power>
+	<cooldown>1300</cooldown>
+	<dodge>0</dodge>
+	<speed>3</speed>	<!-- R4 2025.07.09 Speed was 7, decreased it to 3. It was too OP at 7-->
+	<cost>60</cost>
+	<bp>3</bp>
+	<droneImage>ra_drone_effector_2</droneImage>
+	<weaponBlueprint>RA_DRONE_EFFECTOR_HEAVY</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<weaponBlueprint name="RA_ANTI_DRONE_EFFECTOR_INVISIBLE"> 
+	<type>LASER</type>
+	<title>Drone Laser</title>
+	<damage>0</damage>
+	<shots>1</shots>
+	<ion>1</ion>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<speed>180</speed>
+	<image>ra_effector_impact_1</image>
+	<explosion>ra_explosion_effector_anti_intercepted</explosion>
+	<launchSounds>
+		<sound>silence</sound>
+	</launchSounds>
+	<hitShipSounds>	<!-- R4: 2025.07.09 May need a new sound effect-->
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>ion_1</weaponArt> 
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+<droneBlueprint name="RA_ANTI_DRONE_EFFECTOR">	<!-- TO DO: May require LUA functionality in the future. Redirect missiles back at enemy? Effect all drones at the same time? Something more than a fancier guardian drone.  -->
+	<type>DEFENSE</type>
+	<tip>tip_defense</tip>
+	<target>DRONES</target>
+	<level>1</level>
+	<title>Effector Anti-Drone</title>
+	<short>E. Anti-Drone</short>
+	<desc>Advanced electronic warfare drone that can continuously disrupt multiple enemy combat drones simultaneously. Reloads in 1 second.</desc>
+	<power>3</power>
+	<cooldown>600</cooldown> <!-- DE was 1000, reducing to 600 -->
+	<dodge>1</dodge>
+	<speed>7</speed>
+	<cost>60</cost>
+	<bp>2</bp>
+	<droneImage>ra_drone_anti_effector</droneImage>
+	<weaponBlueprint>RA_ANTI_DRONE_EFFECTOR_INVISIBLE</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>antiD</iconImage>
+</droneBlueprint>
+
+<!-- Plasma Drones -->
 <weaponBlueprint name="RVS_DRONE_PLASMA_THROWER"> 
 	<type>LASER</type>
 	<title>Plasma Thrower Mark I</title>

@@ -734,6 +734,13 @@
 	<time>0.75</time>
 </anim>
 
+<animSheet name="ra_explosion_effector_anti_intercepted" w="2000" h="100" fw="100" fh="100">effects_rebalanced_arsenal/ra_explosion_effector_anti_intercepted_strip20.png</animSheet>
+<anim name="ra_explosion_effector_anti_intercepted">
+	<sheet>ra_explosion_effector_anti_intercepted</sheet>
+	<desc length="20" x="0" y="0"/>
+	<time>1.5</time>
+</anim>
+
 <!-- Slightly edited version from IPS made by Slowrider -->
 <animSheet name="rvs_corrode_sparks_2" w="245" h="35" fw="35" fh="35">effects/rvs_corrode_sparks_2.png</animSheet>
 <anim name="rvs_corrode_sparks_2">
