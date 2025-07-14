@@ -141,13 +141,13 @@
 	<short>AI Projector</short>
 	<flavorType>Disruption Field Projector</flavorType>
 	<locked>1</locked>
-	<desc>This weapon provides the ultimate marriage of digital and physical disruption. When fired, it projects 2 AI Avatars and 2 decoys onto the enemy vessel. While powered on, the weapon interfears with enemy engines and targeting.</desc>
-	<descriptionOverride>This weapon provides the ultimate marriage of digital and physical disruption. When fired, it projects 2 AI Avatars and 2 decoys onto the enemy vessel. While powered on, the weapon interfears with enemy engines and targeting.
+	<desc>This weapon is the ultimate marriage of digital and physical disruption. When fired, it projects 2 AI Avatars and 2 decoys onto the enemy vessel. While powered on, the weapon interfears with enemy engines and targeting.</desc>
+	<descriptionOverride>This weapon is the ultimate marriage of digital and physical disruption. When fired, it projects 2 AI Avatars and 2 decoys onto the enemy vessel. While powered, the weapon interferes with enemy engines and targeting.
 
 Stats:
 Required Power: 3
 Charge Time: 30 seconds
-Partially Pre-Ignited
+Partially Pre-Ignited (15 seconds)
 
 Shots Per Charge: 1
 
@@ -247,7 +247,7 @@ Accuracy Bonus: +10%</tooltipOverride>
 	<locked>1</locked>
 	<desc>This weapon provides the ultimate marriage of digital and physical disruption. When fired, it projects 4 AI Avatars onto the enemy vessel. While powered on, the weapon interfears with enemy engines and targeting.
 Chaotic variant spawns only normal uncontrollable holograms and no decoys, and is fully pre-ignited.</desc>
-	<descriptionOverride>This weapon provides the ultimate marriage of digital and physical disruption. When fired, it projects 4 AI Avatars onto the enemy vessel. While powered on, the weapon interfears with enemy engines and targeting.
+	<descriptionOverride>This weapon is the ultimate marriage of digital and physical disruption. When fired, it projects 4 AI Avatars onto the enemy vessel. While powered on, the weapon interferes with enemy engines and targeting.
 Chaotic variant spawns only normal uncontrollable holograms and no decoys, and is fully pre-ignited.
 
 Stats:
@@ -3428,7 +3428,7 @@ R4: 2025.07.09 I do not know what this is here for. Help! Should this be delete?
 	<tip>tip_defense</tip>
 	<title>Beam Defender Mk. I</title>
 	<short>Beam Defense I</short>
-	<desc>Defense drone capable of targeting lasers or solid projectiles with a beam
+	<desc>Defense drone capable of targeting lasers or solid projectiles with a beam. Cannot miss, and travels instantly to the target projectile.
 	Reload: 600 MS</desc>
 	<power>2</power>
 	<cooldown>600</cooldown>
