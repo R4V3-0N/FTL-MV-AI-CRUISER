@@ -646,7 +646,7 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
 
 
 <!-- these weapons and bellow are inspired by HS but are not are more adapted to fit within FTL -->
-<weaponBlueprint name="RVS_EMP_1">
+<weaponBlueprint name="RVS_EMP_1">	<!-- IonDP10S is 2.5 -->
 	<type>LASER</type>
 	<title>EMP Device</title>
 	<short>EMP Device</short>
@@ -667,7 +667,7 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<stunChance>3</stunChance>	<!-- perhaps should be higher? -->
-	<cooldown>9</cooldown>	<!-- increased to 9 from 7-->
+	<cooldown>8</cooldown>	<!-- R4 2025.07.10: Was 9, dropping it slightly to 8. Maybe 7 power wasn't as OP as I thought... --> <!-- OLD: increased to 9 from 7-->
 	<power>2</power>
 	<cost>50</cost>
 	<bp>3</bp>
@@ -696,7 +696,7 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="RVS_EMP_2">
+<weaponBlueprint name="RVS_EMP_2">	<!-- IonDP10S is 3.33 -->
 	<type>LASER</type>
 	<title>EMP Device Mark II</title>
 	<short>EMP Device II</short>
@@ -748,7 +748,8 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
 
 <!-- R4: For Chronklo, depending on how this weapon balance works, it might be fun to have this decrease enemy shield cooldown for like 2-3 seconds when it hits their shield bubble directly, thoughts? -->
 	<!-- R4 2024.05.19: Chrono Vortex never gave me their thoughts :<  -->
-<weaponBlueprint name="RVS_EMP_HEAVY_1">
+	 	<!-- R4 2025.07.10: Chrono never looked here :< big sad -->
+<weaponBlueprint name="RVS_EMP_HEAVY_1">	<!-- IonDP10S is 2, ignoring splash -->
 	<type>LASER</type>
 	<title>Heavy EMP Device</title>
 	<short>Heavy EMP Device</short>
@@ -770,7 +771,7 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<stunChance>9</stunChance>
-	<cooldown>15</cooldown>	<!-- might be longer to adjust for balance -->
+	<cooldown>13</cooldown>	<!-- R4 2025.07.10: Wasn't as OP as I thought it seems. Reducing cooldown from 15 to 13.-->
 	<power>3</power>
 	<cost>80</cost>
 	<bp>3</bp>
@@ -3768,7 +3769,7 @@ AUGMENTS
 
 <augBlueprint name="RVS_AI_SWARM">
     <title>Assimilative Drone Bays</title>
-	<desc>When an enemy drone is shot down, a temporary drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon receiving hull damage.</desc>
+	<desc>When an enemy drone is shot down, a temporary pinpoint drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon receiving hull damage.</desc>
 	<cost>70</cost>
     <bp>7</bp>
     <rarity>0</rarity>
@@ -3776,14 +3777,14 @@ AUGMENTS
 </augBlueprint>
 <augBlueprint name="RVS_AI_SWARM_LOCK">
     <title>Assimilative Drone Bays</title>
-	<desc>When an enemy drone is shot down, a temporary drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon receiving hull damage.</desc>
+	<desc>When an enemy drone is shot down, a temporary pinpoint drone will be deployed in its place. Additional drones have a 15% chance to be deployed upon receiving hull damage.</desc>
 	<cost>70</cost>
     <bp>7</bp>
     <rarity>0</rarity>
     <stackable>false</stackable>
 </augBlueprint>
 
-<augBlueprint name="RVS_SCIENCE_ION_SHIELD">
+<augBlueprint name="RVS_SCIENCE_ION_SHIELD">	<!-- R4: Intended in the AI sector "science" event as a reward  -->
     <title>Shield Upgrade</title>
 	<desc>Passively increases shield reacharge and ion resist by 20%.</desc>
 	<cost>55</cost>
@@ -3793,7 +3794,7 @@ AUGMENTS
 	<value>20</value>
 </augBlueprint>
 
-<augBlueprint name="RVS_SCIENCE_ION_DODGE">
+<augBlueprint name="RVS_SCIENCE_ION_DODGE">	<!-- R4: Intended in the AI sector "science" event as a reward  -->
     <title>Evasion Upgrade</title>
 	<desc>Passively increases dodge chance by 10%.</desc>
 	<cost>55</cost>
@@ -3803,7 +3804,7 @@ AUGMENTS
 	<value>10</value>
 </augBlueprint>
 
-<augBlueprint name="RVS_SCIENCE_ION_POWER">
+<augBlueprint name="RVS_SCIENCE_ION_POWER">	<!-- R4: Intended in the AI sector "science" event as a reward  -->
     <title>Power Upgrade</title>
 	<desc>Passively increases power by 2.</desc>
 	<cost>55</cost>
@@ -3826,7 +3827,7 @@ AUGMENTS
 </augBlueprint>
 
 <!-- shielding for a quest event. 20% shield charge boost, 20% ion resist, maybe other things too? Currently not in use-->
-<augBlueprint name="RVS_ANOMALY_IMPROVED_SHIELDS">
+<augBlueprint name="RVS_ANOMALY_IMPROVED_SHIELDS"> 
 	<title>WIP</title>
 	<desc>YOU SHOULDN'T SEE THIS</desc>
 	<cost>45</cost>
