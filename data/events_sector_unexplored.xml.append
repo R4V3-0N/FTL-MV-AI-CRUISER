@@ -832,7 +832,7 @@
 					<text>Something that high tech must have something valuable, attack it!</text>
 					<event>
 						<ship hostile="true"/>
-						<text>Against your better judgement you couldn't ignore an opportunity like this with such a great opportunity before you. You decide to take the risk and move in to attack!</text>
+						<text>Against your better judgement you couldn't let such a great oppertunity go by. You decide to take the risk and move in to engage.</text>
 						<choice hidden="true">
 							<text>Continue...</text>
 							<event load="COMBAT_CHECK"/>					<!-- R4 2024.08.03: Just added combat check-->
