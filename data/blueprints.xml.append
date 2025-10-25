@@ -994,11 +994,11 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
 			<wallAnim>rvs_corrode_sparks_2</wallAnim>
 		</roomAnim>
 		
-		<!-- The variables below this line cannot be altered on a weapon-to-weapon basis, this is not desirable -->
+		<!--
 		<growBreachMultiplier>1000.0</growBreachMultiplier>
 		<newBreachDamage>0</newBreachDamage>
 		<newBreachRequirement>100000.0</newBreachRequirement>
-		<canDilate>true</canDilate>
+		<canDilate>true</canDilate>-->
 	</erosion>
     <projectiles>
         <projectile count="3" fake="false">laser_burst</projectile> <!-- Fake projectiles which LUA replaces with beams -->
