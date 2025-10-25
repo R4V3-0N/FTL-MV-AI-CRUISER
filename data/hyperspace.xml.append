@@ -733,7 +733,7 @@ Beams that hit this ship's hull have a 50% chance to be reflected back at your s
 			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
 			<buttonText>STIMULANTS</buttonText>
 			<tooltip>[CD:20s  DURATION:10s  -10HP]
-			Increase movement speed to 1.25x, 50% damage resistance, and doubles damage.</tooltip>
+			Increase movement speed to 1.25x and combat damage by 2.5x.</tooltip>
 			<cooldownColor r="170" g="223" b="255"/>
 			<selfHealth>-10</selfHealth>
 			<temporaryEffect>

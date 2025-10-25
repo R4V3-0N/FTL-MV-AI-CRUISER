@@ -13,21 +13,21 @@
 	<type>BEAM</type>
 	<title>Ion Bust Beam Mark I</title>
 	<short>Ion Bust I</short>
-	<tip>rvs_tip_ion_bust</tip>
-	<desc>This beam is most powerful when targeting ionized systems.</desc>
+	<tip>tip_beams</tip>
+	<desc>This peculiar beam is most powerful when targeting ionized systems.</desc>
 	<tooltip>Beam weapon; 1 damage; 2x damage in ionized rooms.</tooltip>
 	<damage>1</damage>
 	<sp>0</sp>
 	<fireChance>1</fireChance>
 	<breachChance>0</breachChance>
 	<cooldown>14</cooldown>
-	<!--on lua table for x2 ion damage under ionBustBeams-->
+	<uc-ionBust>2</uc-ionBust> <!-- New Lua tag: multiply damage dealt to ionized rooms by this number, then deionize the target room. -->
 	<power>2</power>
 	<cost>70</cost>
 	<bp>8</bp>
 	<rarity>0</rarity>
 	<image>beam_contact</image>
-	<length>120</length> <!-- R4: 20 pixels longer than hull beam, due to lower availability of ionized rooms making this a straight upgrade when ignoring any busts-->
+	<length>120</length>
 	<launchSounds>
 		<sound>beam1</sound>
 		<sound>beam1_2</sound>
@@ -36,11 +36,11 @@
 	<iconImage>beamH</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="RVS_BEAM_ION_BUST_2"> <!-- Awaiting for sprite and animation + hyperspace.xml -->
+<weaponBlueprint name="RVS_BEAM_ION_BUST_2">
 	<type>BEAM</type>
 	<title>Ion Bust Beam Mark II</title>
 	<short>Ion Bust II</short>
-	<tip>rvs_tip_ion_bust</tip>
+	<tip>tip_beams</tip>
 	<desc>A powerful beam that deals devastating damage against ionized systems.</desc>
 	<tooltip>Beam weapon; 2 damage; 2x damage in ionized rooms.</tooltip>
 	<damage>2</damage>
@@ -48,13 +48,13 @@
 	<fireChance>3</fireChance>
 	<breachChance>1</breachChance>
 	<cooldown>17</cooldown>
-	<!--on lua table for x2 ion damage under ionBustBeams-->
+	<uc-ionBust>2</uc-ionBust>
 	<power>4</power>
 	<cost>90</cost>
 	<bp>8</bp>
 	<rarity>0</rarity>
 	<image>beam_contact</image>
-	<length>100</length> <!-- R4: 10 pixels longer than hull beam, due to lower availability of ionized rooms making this a straight upgrade when ignoring any busts-->
+	<length>100</length>
 	<launchSounds>
 		<sound>beam1</sound>
 		<sound>beam1_2</sound>
@@ -526,6 +526,10 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
 	</launchSounds>
 	<weaponArt>rvs_loot_beam_bounce</weaponArt> 
 </weaponBlueprint>
+
+
+
+
 
 <!-- 
 	\\\\\\\\\\\\\\\\\\
@@ -3662,7 +3666,7 @@ R4: 2025.07.09 I do not know what this is here for. Help! Should this be delete?
 	<type>BEAM</type>
 	<title>Ion Bust Beam Artillery</title>
 	<short>Ion Bust Artillery</short>
-	<tip>rvs_tip_ion_bust</tip>
+	<tip>tip_beams</tip>
 	<desc>[Base cooldown: 25] Ion't you glad it isn't a Hullbeam?</desc>
 	<tooltip>Beam weapon; 2 damage; 2x damage in ionized rooms.</tooltip>
 	<damage>2</damage>
@@ -3670,7 +3674,7 @@ R4: 2025.07.09 I do not know what this is here for. Help! Should this be delete?
 	<fireChance>3</fireChance>
 	<breachChance>1</breachChance>
 	<cooldown>25</cooldown>
-	<!--on lua table for x2 ion damage under ionBustBeams-->
+	<uc-ionBust>2</uc-ionBust>
 	<power>0</power>
 	<cost>0</cost>
 	<bp>0</bp>
@@ -3844,22 +3848,18 @@ AUGMENTS
 -->
 
 <crewBlueprint name="rvs_ai_hologram">
-	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
+	<desc>A sentient hologram from a distant universe. It is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
 	<cost>30</cost>
 	<bp>1</bp>
 	<title>AI Avatar</title>
 	<short>AI Avatar</short>
 	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
 	<powerList>
-		<power>Does not take up a crew slot</power>
 		<power>Max Health is reduced to 50</power>
-		<power>Cannot heal in medbay or be cloned</power>
-		<power>Provides power and heals slowly in drone control room</power>
-		<power>Regains all health on jump</power>
-		<power>Can teleport to your ship from the enemy teleporter room</power>
-		<power>Immune to suffocation and fires</power>
-		<power>Immune to mind control</power>
-		<power>Can phase through doors</power>
+		<power>Immune to hazards and mind control, but cannot heal in the Medbay or be cloned</power>
+		<power>Provides power and heals slowly in Drone Control, regains all health on jump</power>
+		<power>Can phase through doors and teleport to your ship from enemy Crew Teleporters</power>
+		<power>Occupies no slots on the ship manifest</power>
 	</powerList>
 	<colorList>
 		<layer><!-- Layer 1 - Outline -->
@@ -3912,35 +3912,30 @@ AUGMENTS
 	<short>CTN 0452-9</short>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Does not take up a crew slot</power>
 		<power>Max Health is reduced to 50</power>
-		<power>Cannot heal in medbay or be cloned</power>
-		<power>Provides power and heals slowly in drone control room</power>
-		<power>Regains all health on jump</power>
-		<power>Can teleport to your ship from the enemy teleporter room</power>
-		<power>Immune to suffocation and fires</power>
-		<power>Immune to mind control</power>
-		<power>Can phase through doors</power>
+		<power>Immune to hazards and mind control, but cannot heal in the Medbay or be cloned</power>
+		<power>Provides power and heals slowly in Drone Control, regains all health on jump</power>
+		<power>Can phase through doors and teleport to your ship from enemy Crew Teleporters</power>
+		<power>Occupies no slots on the ship manifest</power>
 	</powerList>
 </crewBlueprint>
 <crewBlueprint name="rvs_ai_hologram_decoy">
-	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
+	<desc>A sentient hologram from a distant universe. It is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
 	<cost>30</cost>
 	<bp>1</bp>
 	<title>AI Avatar Decoy</title>
 	<short>AI Avatar D</short>
 	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
 	<powerList>
-		<power>Cannot attack</power>
-		<power>Max Health is reduced to 50</power>
-		<power>Can teleport to your ship from the enemy teleporter room</power>
-		<power>Immune to suffocation and fires</power>
-		<power>Immune to mind control</power>
-		<power>Can phase through doors</power>
+		<power>Cannot fight or sabotage</power>
+		<power>Immune to hazards and mind control, but cannot heal in the Medbay or be cloned</power>
+		<power>Provides power and heals slowly in Drone Control, regains all health on jump</power>
+		<power>Can phase through doors and teleport to your ship from enemy Crew Teleporters</power>
+		<power>Occupies no slots on the ship manifest</power>
 	</powerList>
 </crewBlueprint>
 <crewBlueprint name="rvs_ai_hologram_assault">
-	<desc>This fully sentient hologram is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
+	<desc>A sentient hologram from a distant universe. It is controlled by an advanced AI, housed inside a biological data-substrate.</desc>
 	<cost>30</cost>
 	<bp>1</bp>
 	<title>AI Avatar Assault</title>
@@ -3948,25 +3943,25 @@ AUGMENTS
 	<rarity>0</rarity>	<!-- rarity in sector rarity list-->
 	<powerList>
 		<power>Max Health is reduced to 50</power>
-		<power>Can teleport to your ship from the enemy teleporter room</power>
-		<power>Immune to suffocation and fires</power>
-		<power>Immune to mind control</power>
-		<power>Can phase through doors</power>
+		<power>Immune to hazards and mind control, but cannot heal in the Medbay or be cloned</power>
+		<power>Provides power and heals slowly in Drone Control, regains all health on jump</power>
+		<power>Can phase through doors and teleport to your ship from enemy Crew Teleporters</power>
+		<power>Occupies no slots on the ship manifest</power>
 	</powerList>
 </crewBlueprint>
 
 
 <crewBlueprint name="rvs_contempter">
-	<desc>An aggressive and hardy reptilian species not from this universe. Excels in melee combat.</desc>
+	<desc>Aggressive and hardy, this reptilian species hails from no known universe. Excels in melee combat.</desc>
 	<cost>60</cost>
 	<bp>4</bp>
 	<title>Contempter</title>
 	<short>Contempter</short>
 	<rarity>0</rarity>	<!-- not normally obtainable -->
 	<powerList>
+		<power>Active Ability: Takes a combat stim, boosting movement speed and combat damage.</power>
 		<power>Max Health is increased to 120</power>
-		<power>Melee damage increased to 1.3x</power>
-		<power>Takes 0.9 times damage</power>
+		<power>Inflicts 1.3x damage in melee combat</power>
 	</powerList>
 </crewBlueprint>
 
