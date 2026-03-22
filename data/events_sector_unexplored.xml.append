@@ -760,7 +760,7 @@
 	</eventList>
 	
 	<event name="RVS_PERIPHERY_SPOILER_PROBENT">
-		<text>Something odd is being detected on your sensors. You get a hunch that the interference may not be from the solar storm and order a thorough sweep of the area pumping as much power as possible to your sensors. In spite off your state of the art system nothing has been found. Maybe it was just the sun afterall...</text>
+		<text>Something odd is being detected on your sensors. You get a hunch that the interference may not be from the solar storm and order a thorough sweep of the area pumping as much power as possible to your sensors. In spite of your state of the art sensor system, you are unable to find any disturbances. Maybe it was just the sun after all...</text>
 	</event>
 	<event name="RVS_PERIPHERY_SPOILER_PROBE">
 		<loadEventList seeded="false" first="false" generate="false">
@@ -783,7 +783,7 @@
 	</event>
 	<ship name="SHIP_CONTINUITY_PROBE_EARLY" auto_blueprint="MU_CONTINUITY_AUTO_EARLY">
 		<destroyed>
-			<text>"Error - error - error - error - Continuity has failed to be enforced. Sending request for quarant-" The ship explodes before it can let off the signal. You quickly prepare to jump away before another one of these things can appear.</text>
+			<text>"Error - error - error - error - Continuity has failed to be enforced. Sending request for quarant-" The ship explodes in a brilliant cyan fireball before it can send the signal. You quickly prepare to jump away before whoever dispatched this thing finds out what happened.</text>
 			<autoReward level="HIGH">item</autoReward>
 		</destroyed>
 	</ship>
@@ -792,7 +792,7 @@
 			<name>PRIME_LASER</name>
 		</weaponOverride>
 		<destroyed>
-			<text>"Error - error - error - error - Continuity has failed to be enforced. Sending request for quarant-" The ship explodes before it can let off the signal. You quickly prepare to jump away before another one of these things can appear.</text>
+			<text>"Error - error - error - error - Continuity has failed to be enforced. Sending request for quarant-" The ship explodes in a brilliant cyan fireball before it can send the signal. You quickly prepare to jump away before whoever dispatched this thing finds out what happened.</text>
 			<autoReward level="HIGH">item</autoReward>
 		</destroyed>
 	</ship>
@@ -802,7 +802,7 @@
 			<name>PRIME_LASER</name>
 		</weaponOverride>
 		<destroyed>
-			<text>"Error - error - error - error - Continuity has failed to be enforced. Sending request for quarant-" The ship explodes before it can let off the signal. You quickly prepare to jump away before another one of these things can appear.</text>
+			<text>"Error - error - error - error - Continuity has failed to be enforced. Sending request for quarant-" The ship explodes in a brilliant cyan fireball before it can send the signal. You quickly prepare to jump away before whoever dispatched this thing finds out what happened.</text>
 			<autoReward level="HIGH">item</autoReward>
 		</destroyed>
 	</ship>
@@ -812,12 +812,11 @@
 		<choice hidden="true">
 			<text>Hail the autoship.</text>
 			<event>
-				<text>"DO NOT INTERFEAR. UNDERGOING CONTINUITY ENFORCEMENT INVESGITATION. MOVE ALONG" You have no idea what the autoship is talking about but once its readings are off the charts. You probably shouldn't provoke it.</text>
-				
+				<text>It responds with a very brief, very firm message. "Do not interfere. Investigating continuity error." You have no idea what the auto-ship is talking about, but the amount of unknown technology onboard, as well as its energy spectra, suggest a vessel of extreme threat. You probably shouldn't provoke it.</text>
 				<choice>
 					<text>Leave it alone.</text>
 					<event>
-						<text>There is no telling what kind of trouble you would get into if you went toe to toe with this thing. You already feel isolated and at threat with these rogue vessels in this sector and you have no need to reduce your odds of success getting out of here unharmed further. You pretended like you hadn't seen anything.</text>
+						<text>You know you can't go toe to toe with this thing. In a sector full of threatening automated vessels, of a make and nature unprecedented, you have no reason to reduce your odds of survival any further.</text>
 						<choice hidden="true">
 							<text>Do something onboard the ship.</text>
 							<event load="STORAGE_CHECK"/>
@@ -829,13 +828,13 @@
 					</event>
 				</choice>
 				<choice>
-					<text>Something that high tech must have something valuable, attack it!</text>
+					<text>Attack the strange ship.</text>
 					<event>
 						<ship hostile="true"/>
-						<text>Against your better judgement you couldn't ignore an opportunity like this with such a great opportunity before you. You decide to take the risk and move in to attack!</text>
+						<text>Against your better judgement, you know the strange auto-ship must have rare, valuable technology onboard. As you move in to attack, it snaps to life, almost as if predicting your attempt, and enters an attack formation with absolute, otherworldly precision. This will be a tough one...</text>
 						<choice hidden="true">
 							<text>Continue...</text>
-							<event load="COMBAT_CHECK"/>					<!-- R4 2024.08.03: Just added combat check-->
+							<event load="COMBAT_CHECK"/>
 						</choice>
 					</event>
 				</choice>
@@ -844,7 +843,7 @@
 		<choice>
 			<text>Avoid the autoship.</text>
 			<event>
-				<text>You already have enough strange automated AI ship things in this sector that would preffer you were reduced to nothingness in this sector. You do not have any reason to add another to that list.</text>
+				<text>In this sector, there are already enough strange automated ships trying to reduce you to space dust. You do not want to add another to that list.</text>
 				<choice hidden="true">
 					<text>Do something onboard the ship.</text>
 					<event load="STORAGE_CHECK"/>
@@ -858,9 +857,9 @@
 	</event>
 	
 	<textList name="RVS_PERIPHERY_PROBE_TEXT">
-		<text>Your sensors pick up something unusual amidst the interference. Suspecting that the disturbance may not be solely from the solar storm, you order a thorough sweep of the area, diverting maximum power to your sensors. Finally, the enhanced readings reveal a strange autoship bearing an unknown livery...</text>
-		<text>Amidst the solar storm, your sensors pick up an odd disturbance. Trusting your instincts, you command a thorough scan of the area, diverting extra power to the sensors. Soon, a strange autoship with unfamiliar markings is uncovered...</text>
-		<text>Your sensors comb through the space around you, narrowing down onto a tight patch off to your starboard. Before your readings come back with anything conclusive a strange autoship unlike anything you've ever seen from the Rebels reveals itself.</text>
+		<text>Your sensors pick up something unusual amidst the interference. Suspecting that the disturbance may not be solely from the solar storm, you order a thorough sweep of the area, diverting maximum power to your sensors. The enhanced sweep picks up an auto-ship of unknown livery, bearing some sort of sensor-warping device.</text>
+		<text>Amidst the solar storm, your sensors pick up an odd disturbance. Trusting your instincts, you command a thorough scan of the area, diverting extra power to the sensors. Soon, a strange auto-ship with unfamiliar markings and a powerful jamming suite is uncovered...</text>
+		<text>Your sensors comb through the space around you, narrowing down onto a tight patch off to your starboard. Before your readings come back with anything conclusive, a strange auto-ship unlike anything you've ever seen, here or otherwise, reveals itself.</text>
 	</textList>
 	
 	<!-- R4 to R4, make sure to write a few text lists that comment about how you come across the ship and it has something subtly different to say each time. 
@@ -1113,7 +1112,7 @@
 	</event>
 	
 	<event name="RVS_PERIPHERY_POD_CONTEMPTER">
-		<text>Inside the pod, you find some kind of reptilian alien onboard. Enraged and pumped full of combat stims, they immediately hurl insults at you calling you some kind of "Floatoid Respecting Fledgling". Brandishing a hardlight blade you begin to reconsider prying that pod open now...</text>
+		<text>Inside the pod, you find some kind of tripedal, reptilian alien. Enraged and pumped full of combat stims, they immediately hurl insults at you calling you some kind of "Floatoid Respecting Fledgling". You begin to reconsider your decisions when the occupant reveals a blade of hard light, unlike the majority of weapons you've seen before!</text>
 		<choice req="RVS_BLUELIST_CREW_COMBAT" hidden="true">
 			<text>(Combat Crew) Subdue the alien with combat crew.</text>
 			<event load="RVS_PERIPHERY_CONTEMPTER_COMBAT"/>
@@ -1126,7 +1125,7 @@
 			<text>(Floral Crew) Calm the alien down.</text>
 			<event load="RVS_PERIPHERY_CONTEMPTER_ORCHID"/>
 		</choice>
-		<!-- R4 2024.08.03: TODO should add blue event option for Contempter.-->
+		<!-- TODO: Add blue option if you already have a Contempter crew member. -->
 		<choice hidden="true">
 			<text>Try to convince it to join your crew.</text>
 			<event load="RVS_PERIPHERY_CONTEMPTER_CONVINCE_LIST"/>
@@ -1134,15 +1133,15 @@
 	</event>
 	
 	<event name="RVS_PERIPHERY_CONTEMPTER_COMBAT">
-		<text>Your crew steps forward to apprehend the strange alien. Impressed to see someone stand up to it and not cower like a "weakling" it sheaths the blade and displays its claws. Challenging your crew member for a dual. After a tense struggle, the Contempter concedes, acknowledging your crew's strength. Begrudgingly, they agree to join your crew.</text>
+		<text>Your crew steps forward to apprehend the strange alien. Impressed to see someone stand up to them and not cower like a "weakling," they sheath the blade and displays their claws, challenging your crew to a fist-fight. After a tense struggle, the "Contempter" concedes, acknowledging your crew's strength and agreeing to join you.</text>
 		<crewMember amount="1" class="rvs_contempter"/>
 	</event>
 	<event name="RVS_PERIPHERY_CONTEMPTER_MEDBAY">	<!-- R4 2024.08.03: Maybe requires medbots to do this? -->
-		<text>You use your advanced medbay to subdue the strange alien. The calming effects of the medical treatment cleanses them of their stims, after settling down and assessing their situation they agree to join your crew.</text>
+		<text>You use your medbay's nanomachines to clear their body of combat stims. After settling down and assessing their situation, they reluctantly agree to join your crew.</text>
 		<crewMember amount="1" class="rvs_contempter"/>
 	</event>
 	<event name="RVS_PERIPHERY_CONTEMPTER_ORCHID">
-		<text>With the Orchids soothing spores. The strange alien begins to calm and settle down. After a brief exchange you convince the alien, though reluctantly, to join your crew.</text>
+		<text>Your Orchid's soothing spores help to counteract the effects of their stimulants. After settling down and assessing their situation, they reluctantly agree to join your crew.</text>
 		<crewMember amount="1" class="rvs_contempter"/>
 	</event>
 	
@@ -1152,11 +1151,11 @@
 		<event load="RVS_PERIPHERY_CONTEMPTER_ATTACK"/>
 	</eventList>
 	<event name="RVS_PERIPHERY_CONTEMPTER_CONVINCE">
-		<text>After a heated exchange, you manage to convince the alien that joining your crew is in their best interest. They reluctantly agree, still wary but willing to cooperate.</text>
+		<text>After a heated exchange, you manage to convince this "Contempter" that joining your crew is in their best interest. They reluctantly agree, still wary but willing to cooperate.</text>
 		<crewMember amount="1" class="rvs_contempter"/>
 	</event>
 	<event name="RVS_PERIPHERY_CONTEMPTER_ATTACK">
-		<text>You attempt to talk the alien into calming down... but instead it launches into a frenzied attack, forcing your crew to defend themselves! The life pod could be salvaged after the fight.</text>
+		<text>You attempt to talk the alien into calming down... but instead it launches into a frenzied attack! You're able to snag some leftover materials from the inside of the pod in the chaos, but there's a drugged-up warrior loose on board and your crew will have to defend themselves.</text>
 		<autoReward level="LOW">standard</autoReward>
 		<boarders min="1" max="1" class="rvs_contempter"/>
 	</event>
@@ -1169,7 +1168,7 @@
 		<beaconType id="map_icon_store_unknown" global="false">
 			<color r="255" g="245" b="175" a="1"/>
 		</beaconType>
-		<text>A sentient fabricator resides at this beacon, attempting to peddle to you its exotic crafts and sculptures that it has created from the condensed nebula gas, fascinating.</text>
+		<text>A sentient fabricator resides at this beacon, attempting to peddle to you its exotic crafts and sculptures that it has created from the condensed nebula gas. You've never seen anything like this before.</text>
 		
 		<!-- R4 2024.08.03 : TODO perhaps can sell nebula gas here for a good profit? Silly random idea -->
 		<choice req="RVS_BLUELIST_CREW_AI" hidden="true">
@@ -1205,7 +1204,7 @@
 					<text>Create an avatar to serve on your vessel.</text>
 					<event>
 						<crewMember amount="1" combat="2" class="rvs_ai_hologram"/>
-						<text>The avatar coalesces in a brilliant glow onto your vessel. You welcome it aboard and assign it to its station in quick order. Still leaving you plenty of time to browse its wares.</text>
+						<text>The avatar coalesces in a brilliant glow onto your vessel. You welcome it aboard and assign it to its station in quick order, still leaving you plenty of time to browse its wares.</text>
 						<choice>
 							<text>Continue...</text>
 							<event>
@@ -1218,7 +1217,7 @@
 					<text>Fabricate resources to replenish you for your journey.</text>
 					<event>
 						<autoReward level="HIGH">stuff</autoReward>
-						<text>Fabricating a reasonable spread of resources that it assumed you would best need for your mission at a remarkable speed. Still leaving you plenty of time to browse its wares.</text>
+						<text>The fabricator forges a reasonable spread of resources that it assumes you would best need for your mission at a remarkable speed, still leaving you plenty of time to browse its wares.</text>
 						<choice>
 							<text>Continue...</text>
 							<event>
@@ -1231,7 +1230,7 @@
 					<text>Construct an exotic weapon.</text>
 					<event>
 						<weapon name="RVS_GIFTLIST_AI"/>
-						<text>The fabricator produces quickly a weapon with little delay. The product is out of this universe quite literally. Still leaving you plenty of time to browse its wares.</text>
+						<text>The fabricator produces a new weapon in short order, of a model quite literally out of this world. You still have plenty of time to browse its wares.</text>
 						<choice>
 							<text>Continue...</text>
 							<event>
@@ -1248,7 +1247,7 @@
 							<clone>false</clone>
 							<text/>
 						</removeCrew>
-						<text>Fabricating an advanced microfighter in mere seconds. You can see why these rogue avatars can be an indomitable foe. Requiring an AI pilot your avatar dematerialises as its consciousness gets uploaded directly into the fighter.</text>
+						<text>Your avatar dematerializes as it is uploaded into the chassis of a fighter craft, churned out in seconds by the fabricator. You still have plenty of time to browse its wares.</text>
 						<choice>
 							<text>Continue...</text>
 							<event>
@@ -1290,7 +1289,7 @@
 		<environment type="nebula"/>
 		<text>As your ship navigates through the dense nebula, a weak distress signal cuts through the static. It's from a stranded hired renegade ship under attack by AI forces. The signal is barely coherent, but the desperation in the voice is clear.</text>
 		<choice>
-			<text>Respond to the distress signal.</text>
+			<text>Respond to the distress signal and fight the AI ships.</text>
 			<event>
 				<text>You push through the interference, honing in on the distress signal. Soon, the mercenary ship comes into view, heavily damaged and surrounded by hostile AI drones. You move in to engage the AI ships.</text>
 				<ship load="RVS_SHIP_MERC_RESCUE_FIGHT" hostile="true"/>
@@ -1339,7 +1338,7 @@
 	<!-- ship events for NEBULA_RVS_RESCUE_RENEGADE -->
 	<ship name="RVS_SHIP_MERC_RESCUE_FIGHT" auto_blueprint="RVS_LIST_SHIPS_AI">
 		<destroyed>
-			<text>The AI ship explode in a shower of sparks and debris.</text>
+			<text>The AI ship explodes in a shower of sparks and debris.</text>
 			<autoReward level="MED">standard</autoReward>
 			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
@@ -1347,7 +1346,7 @@
 			</choice>
 		</destroyed>
 		<deadCrew>
-			<text>The last of the AI crew collapse, the ship goes quiet soon after that.</text>
+			<text>The last of the AI crew collapses, dissipating as the ship goes quiet.</text>
 			<autoReward level="HIGH">standard</autoReward>
 			<choice hidden="true">
 				<text>Investigate the Mercenary ship.</text>
@@ -1363,14 +1362,14 @@
 	</eventList>
 	
 	<event name="NEBULA_RVS_RESCUE_MISSION_SUCCESS">
-		<text>After a fierce battle, you manage to destroy the AI ship. The mercenary sends a message of thanks, offering you a reward for your assistance. As a token of their gratitude, one of their crew members requests to join your crew.</text>
+		<text>After the fierce battle, you move in to see the damaged ship. The mercenary sends a message of thanks, offering you a reward for your assistance. As a token of their gratitude, one of their crew members requests to join you.</text>
 		<reward>
 			<crewMember amount="1" shields="2" class="LIST_CREW_PIRATE_RANDOM"/>
 			<autoReward level="LOW">scrap</autoReward>
 		</reward>
 	</event>
 	<event name="NEBULA_RVS_RESCUE_MISSION_FAILURE">
-		<text>Despite your best efforts, you arrive too late. The ships hull is compromised, and the crew onboard had suffocated. You salvage what little remains and move on, feeling the weight of the loss of a renegade not too dissimilar to yourself.</text>
+		<text>Despite your best efforts, you arrive to the mercenary too late. The ship's hull is compromised, and the crew onboard have all suffocated. You salvage what little remains and move on, feeling the weight of the loss of a Renegade not too dissimilar to yourself.</text>
 			<autoReward level="MED">stuff</autoReward>
 	</event>
 	
@@ -1380,7 +1379,7 @@
 		<distressBeacon/>
 		<text>Your sensors pick up a distress signal coming from not too far from here. Approaching closer to the signal you realize, to your surprise, that it's coming from an AI vessel! The ship is under heavy attack by a Ministry Bomber and urgently requests assistance.</text>
 		<choice>
-			<text>Attack the Rogue AI's.</text>
+			<text>Assist the Ministry ship.</text>
 			<event>
 				<text>Deciding that the Ministry Bomber's cause aligns more with your current mission, you prepare to engage the AI Assault. The Ministry ship acknowledges your support, preparing to coordinate the attack.</text>
 				<!-- R4 2024.05.28: TO DO - Will make it an ASB for now. But someone make it 2 ion bombs in the future acting in support -->
@@ -1393,10 +1392,10 @@
 			</event>
 		</choice>
 		<choice>
-			<text>Assist the Rogue AI's.</text>
+			<text>Assist the rogue AIs.</text>
 			<event>
 				<!-- R4 2024.05.28: TO DO - temporary AI crew spawn on enemy ship to assist in fight --> 
-				<text>You quickly decide to aid the beleaguered AI transport. As you approach, the Ministry Bomber shifts its focus towards you, and the AI ship transmits a garbled message of gratitude. Battle stations!</text>
+				<text>You quickly decide to aid the beleaguered AI Assault. As you approach, the Ministry Bomber shifts its focus towards you, and the AI ship transmits a garbled message of gratitude. Battle stations!</text>
 				<ship load="RVS_PERIPHERY_DISTRESS_MINISTRY_BOMBER" hostile="true"/>
 				<choice hidden="true">
 					<text>Continue...</text>
@@ -1406,7 +1405,7 @@
 		</choice>
 	
 		<choice>
-			<text>Ignore the Distress Signal.</text>
+			<text>Ignore the distress signal.</text>
 			<event>
 				<text>Opting to steer clear of the conflict, you continue on your journey, leaving the two ships to their fate in the chaotic nebula.</text>
 			   <choice hidden="true">
@@ -1427,7 +1426,7 @@
 			<text>The ship explodes and sparks as elements of it come flying off of the ship in its final spiral into destruction. You have successfully defeated the AI Assault craft. While scrapping the remains you receive a hail from the Zoltan Bomber.</text>
 			<autoReward level="MED">standard</autoReward>
 			<choice hidden="true">
-				<text>Investigate the Mercenary ship.</text>
+				<text>Continue...</text>
 				<event load="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_MINISTRY_HELPED"/>
 			</choice>
 		</destroyed>
@@ -1435,7 +1434,7 @@
 			<text>The last avatar fickers and sparks and not long after the main ship AI falls silent. You have successfully defeated the AI Assault craft. While scrapping the remains you receive a hail from the Zoltan Bomber.</text>
 			<autoReward level="HIGH">standard</autoReward>
 			<choice hidden="true">
-				<text>Investigate the Mercenary ship.</text>
+				<text>Continue...</text>
 				<event load="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_MINISTRY_HELPED"/>
 			</choice>
 		</deadCrew>
@@ -1443,18 +1442,18 @@
 	
 	<ship name="RVS_PERIPHERY_DISTRESS_MINISTRY_BOMBER" auto_blueprint="MU_ZOLTAN_BOMBER">
 		<destroyed>
-			<text>One final strike rips the Zoltan bomber in twain. The AI ship doesn't seem aggressive and welcomes you with a hail.</text>
+			<text>One final strike splits the Zoltan bomber in twain, its lights flickering out. The AI ship doesn't seem aggressive and welcomes you with a hail.</text>
 			<autoReward level="MED">standard</autoReward>
 			<choice hidden="true">
-				<text>Investigate the Mercenary ship.</text>
+				<text>Continue...</text>
 				<event load="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_AI_HELPED"/>
 			</choice>
 		</destroyed>
 		<deadCrew>
-			<text>The last avatar fickers and sparks and not long after the main ship AI falls silent. You have successfully defeated the AI Assault craft. While scrapping the remains you receive a hail from the Zoltan Bomber.</text>
+			<text>The last Zoltan onboard falls in a brilliant flash of light, leaving nobody to pilot. The AI ship doesn't seem aggressive and welcomes you with a hail.</text>
 			<autoReward level="HIGH">standard</autoReward>
 			<choice hidden="true">
-				<text>Investigate the Mercenary ship.</text>
+				<text>Continue...</text>
 				<event load="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_AI_HELPED"/>
 			</choice>
 		</deadCrew>
@@ -1468,13 +1467,13 @@
 	</eventList>-->
 	
 	<event name="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_AI_HELPED">
-		<text>"With intrique: A biological capable of compasion/empathy/remorse? Unorthodox. We shall bestow a token of our friendship." Well, nothing starts a good friendship in the multiverse like some kind of exotic weapon system to use on those who aren't your friends. You exchange a farewell with the thankful AI's and prepare to leave.</text>
+		<text>"With intrique: A biological capable of compasion/empathy/remorse? Unorthodox. We shall bestow a token of our friendship." Well, nothing starts a good friendship in the Multiverse like some kind of exotic weapon system to use on those who aren't your friends. You exchange a farewell with the thankful AIs and prepare to leave.</text>
 		<weapon name="RVS_GIFTLIST_AI"/>
 		<autoReward level="RANDOM">stuff</autoReward>
 	</event>
 	
 	<event name="RVS_PERIPHERY_AI_DISTRESS_SIGNAL_MINISTRY_HELPED">
-		<text>"We are grateful for your assistance, Renegade. I wasn't sure how we would have faired if we were to spend another moment alone against these things. We will have to return back for repairs and resupply but we can depart with some our equipment to assist you on your travels through this sector."</text>
+		<text>"We are grateful for your assistance, Renegade. I wasn't sure how we would have fared if we were to spend another moment alone against these... things. We will have to return home for repairs and resupply, but we can depart with some our equipment to assist you on your travels through this sector."</text>
 		<weapon name="GIFTLIST_ENERGY"/>
 		<autoReward level="MED">stuff</autoReward>
 	</event>
@@ -1536,7 +1535,7 @@
 	</eventList>
 	
 	<event name="RVS_AI_ASTEROID" unique="true">
-		<text>You arrive in an asteroid belt where small swarms of nano-bots are dissolving rocks and minerals to produce more nano-bots. At least, you think those are nano-bots. The rogue AI ship overseeing the swarm moves in to chase you off.</text>
+		<text>You arrive in an asteroid belt where small swarms of nano-bots are dissolving rocks and minerals to produce more nano-bots. At least, you hope those are nano-bots. The rogue AI ship overseeing the swarm moves in to chase you away.</text>
 		<ship load="RVS_SHIP_AI_FIGHT" hostile="true"/>
 		<img back="BACK_EVENT_LIGHTNEBULA" planet="NONE"/>
 		<status type="loss" target="player" system="sensors" amount="1"/>
@@ -1548,7 +1547,7 @@
 	</event>
 	
 	<event name="RVS_AI_SUN" unique="true">
-		<text>The sun at this beacon is going through a particularly violent solar storm. Your short range sensors detect an unknown vessel basking in the flares of star seemingly waiting for you to arrive and hails. You witness a hard-light construct similar to the new hard-light soldiers the Federation had been trialing in some universes, but it appears this one is struggling to maintain its form, likely due to extensive damage taken while basking in the sun. "O-o-organics? Fascin-[UNACCEPTABLE]. You are wel-elcome-ome-ome to [PERISH] here!" You cut the feed and they immediately slide into an aggressive attack position. There is no reasoning with this AI.</text>
+		<text>The sun at this beacon is going through a particularly violent solar storm. Your short-range sensors detect an unknown vessel basking in the light, seemingly waiting for you to arrive, and it hails you. The hard-light construct on the other end struggles to maintain its form, likely from the damage the solar flares have done to them. "O-o-organics? Fascin-[UNACCEPTABLE]. You are wel-elcome-ome-ome to [PERISH] here!" It is clear that this AI has lost all reason, especially as the ship drifts into an attack position.</text>
 		<ship load="RVS_SHIP_AI_FIGHT" hostile="true"/>
 		<environment type="sun"/>
 		<choice hidden="true">
@@ -1569,13 +1568,13 @@
 	<textList name="RVS_TEXT_ENCOUNTER_AI_NEBULA">
 		<text>Just as your ship clears its jump, you are immediately fired upon by a strange alien vessel flooding your comms with the same phrase: "GET OUT GET OUT GET OUT."</text>
 		<text>Within the swirling mass is an unidentified vessel hidden within the clouds. When you approach to investigate, the ship glows to life and moves in to engage!</text>
-		<text>You spot a ship within the clouds of the nebula. Presuming it to be a forward scout of the Rebel fleet you move in to engage, but the ship evades your first strike effortlessly. This is no Rebel scout...</text>
-		<text>There were chats on Federation Multiverse Mercenary channels back at the drop point about strange unidentified vessels detected on the periphery of known space. You wish you paid more attention to those chats, seeing that one such vessel is preparing to take a hostile stance!</text>
-		<text>Shortly after you arrive, an unknown ship jumps nearby. You attempt to hail the vessel but almost immediately the ship turns hostile and begins its attack!</text>
-		<text>You thought you might have spotted a cruiser hiding in the nebula. But before your ship can give chase, it disappears into the clouds and a smaller vessel appears behind you, guns blazing. You abandon the mystery and swivel around for combat.</text>
-		<text>The nebula here almost feels too different than those outside of this sector. Unfortunately, you don't have long to reflect on this thought as a vessel hidden within the clouds interrupts the silence and moves in to engage.</text>
-		<text>Shortly after your arrival, you receive a hail from an Engi vessel hidden somewhere in the nebula with an urgent message. "Warning: Not let one escape." Just as the hail ends abruptly, you witness a great flash inside the nebula. You order your weapons to be ready and move towards their last known coordinates, ready to meet their perpetuator.</text>
-		<text>You detect the tell-tale signs of a Zoltan vessel hidden within the nebula as the clouds glow a faint green before you. "Renegade! You should not have come here. This sector is off limits and is under-" the transmission temporarily cuts to static before resuming "all hands, reactor breach detected! Prepare for emergency jump!" You are almost relieved at first to not receive another lecture from some Zoltan would-be bureaucrat. But what scares you more was what ever sent them running. Even more so when it starts firing upon you!</text>
+		<text>You spot a ship within the clouds of the nebula. Presuming it to be a forward scout of the Rebel fleet you move in to engage, but the ship evades your first strike effortlessly. This is no Rebel scout.</text>
+		<text>There were chats on Renegade communication channels back at the drop point about strange, unidentified vessels detected at the periphery of known space. You wish you paid more attention to those chats, seeing that one such vessel is preparing to take a hostile stance!</text>
+		<text>Shortly after you arrive, an unknown ship jumps nearby. You attempt to hail the vessel, but it rejects your offer and begins to attack almost immediately!</text>
+		<text>You thought you might have spotted a cruiser hiding in the nebula. But before your ship can give chase, it disappears into the clouds and a smaller vessel appears behind you, guns blazing. You are forced to abandon the mystery and swivel around for combat.</text>
+		<text>The nebula here almost feels... different... than those you would find outside of this sector. Unfortunately, you don't have long to reflect on this thought as a vessel hidden within the clouds interrupts the silence and moves in to engage.</text>
+		<text>Shortly after your arrival, you receive a hail from an Engi vessel hidden somewhere in the nebula with an urgent message. "Warning: Not let one escape." Just as the hail ends abruptly, you witness a great flash inside the nebula. You order your weapons to be ready and move towards their last known coordinates, ready to avenge them.</text>
+		<text>You detect the tell-tale signs of a Zoltan vessel hidden within the nebula as the clouds glow a faint green before you. "Renegade! You should not have come here. This sector is off limits and is under-" the transmission temporarily cuts to static before resuming "all hands, reactor breach detected! Prepare for emergency jump!" You are almost relieved at first to not receive another lecture from some Zoltan would-be bureaucrat. The relief immediately fades once you find what sent them packing, its guns ready for another round.</text>
 		<text>A ship bearing a mysterious design and structure begins to scan your systems and computers for analysis. Whatever it is they found, they would prefer to see it scattered across the clouds of this nebula.</text>
 	</textList>
 	
@@ -1590,10 +1589,10 @@
 		</choice>
 	</event>
 	<textList name="RVS_TEXT_ENCOUNTER_AI_NEBULA_CLEARING">
-		<text>Coming into a clearing within the nebula you can see clearly an unfamiliar vessel. You can see that they clearly do not intend to share this beacon with you as they fire a warning shot across your bow.</text>
-		<text>The nebula has been thinning in this region of space as it clusters together to form into what will be a newly born star soon once it reaches critical mass in a few hundred years. Hiding inside of the ambient radiation is a rogue ship hiding in wait for an unsuspecting traveller.</text>
-		<text>A rogue vessel poises in front of you within the nebula clearing. All of your systems begins to malfunction and rapidly cycle through your transmissions and navigational logs from the start of its recording to the point of here and now. Depicting your ship in space with a previously hidden rogue vessel opposing you. "Curious: Where ever you go you bring death and destruction. Is there not one place where we can be left alone?" Coinciding with the release of your controls and their weapon system surges with power. It would be smart if you were to do the same.</text>
-		<text>You spot a Rebel automated scout within this nebula where it is thinnest and burn to pursue it. But as you get closer you realise the automated ship is already disabled and from behind it a vessel unknown readying their weapons to engage.</text>
+		<text>Coming into a clearing within the nebula, you can see an unfamiliar vessel. You can see they clearly do not intend to share this beacon with you as they fire a warning shot across your bow.</text>
+		<text>The nebula has been thinning in this region of space, clumping together to form what will be a newly born star once it reaches critical mass in a few hundred years. Hiding inside of the ambient radiation is a rogue ship, hiding in wait to attack an unsuspecting traveler.</text>
+		<text>All of your systems begins to malfunction and rapidly cycle through your transmissions and navigational logs from the start of their recording to the point of here and now, depicting your ship in space with a previously hidden rogue vessel opposing you. "Curious. Wherever you go, you bring death and destruction. Is there not one place where we can be left alone?" Coinciding with the release of your controls, they arm their weapons. It would be prudent of you to do the same.</text>
+		<text>You spot a Rebel automated scout within this nebula where it is thinnest, and move in to pursue it. As you get closer, however, you realize the ship has already been disabled, and a second, significantly less familiar vessel emerges, weapons primed!</text>
 	</textList>
 	
 	<event name="NEBULA_RVS_ENCOUNTER_AI_STORM" unique="true">
@@ -1607,11 +1606,11 @@
 		</choice>
 	</event>
 	<textList name="RVS_TEXT_ENCOUNTER_AI_STORM">
-		<text>Although it is difficult to see anything in the storm with your sensors down you can tell that there has been a struggle here. With your proximity alert warning you of wrecks surrounding you here. In front of a flash of lightning you can see the silouhette of an unknown ship. A ship that is moving towards you!</text>
+		<text>Although it is difficult to see anything in the storm with your long-range sensors down, you can tell that there has been a struggle here. Your proximity alert screams about several wrecks in the general vicinity, and your visual scanners confirm it. In front of a flash of lightning you can see the silhouhette of an unknown ship, rapidly moving towards you!</text>
 	</textList>
 	
 	<event name="NEBULA_RVS_AI_ENCOUNTER_REBEL_LIGHTNEBULA" unique="true">
-		<text>"YOU! You finally arrived! This sector... it isn't normal. I can't stand staying here any longer but now that you're here I'll finally be able to get out of here!" They've locked onto you and are in pursuit.</text>
+		<text>"YOU! You finally arrived! This sector... it isn't normal. I can't stand staying here any longer, but now that you're here I'll finally be able to leave!" They've locked onto you and are in pursuit.</text>
 		<ship load="SHIP_REBEL_FIGHT" hostile="true"/>
 		<img back="BACK_EVENT_LIGHTNEBULA" planet="NONE"/>
 		<status type="loss" target="player" system="sensors" amount="1"/>

@@ -13,13 +13,23 @@ B: 175
 
 <text name="map_icon_store_unknown">STORE [???]</text>
 
+
+<!-- 
+**********************************************************************************************************************
+                                       WEAPON STATBOXES
+**********************************************************************************************************************
+-->
+
+<text name="rvs_stat_ion_bust">\1x damage on ionized rooms, clears ion status on hit</text>
+
+
 <!-- 
 **********************************************************************************************************************
                                          WEAPON TIPS
 **********************************************************************************************************************
 -->
 
-<text name="rvs_tip_ion_bust">Tip: Ion Bust weapons deal double damage in ionized systems while also clearing the ion status.</text>
+<!-- <text name="rvs_tip_ion_bust">Tip: Ion Bust weapons deal extra damage in ionized systems while also clearing the ion status.</text> -->
 <text name="rvs_tip_flock_gun">Tip: -15 Radius and + 1/6 chance of dealing double damage per active external drone active.</text>
 <text name="rvs_tip_swarm_drone">Tip: Produces a temporary drone construct on every second shot that fire 1 damage focus beams.</text>
 <text name="rvs_tip_focus_split">Tip: Splitter pinpoint beams trade the high damage of most pinpoints for multiple beams, allowing for higher potential damage if the target's shields are down.</text>

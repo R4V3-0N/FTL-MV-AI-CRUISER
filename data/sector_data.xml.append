@@ -481,7 +481,7 @@
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_SEPARATIST">
-	<mod:findLike type = "rarityList">
+	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="3"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="4"/>
 		

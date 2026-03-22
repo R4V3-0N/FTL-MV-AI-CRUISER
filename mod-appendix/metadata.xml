@@ -1,51 +1,63 @@
 <metadata>
-  <title><![CDATA[ AI Cruisers ]]></title>
-  <threadUrl><![CDATA[ https://github.com/R4V3-0N/FTL-MV-AI-CRUISER/releases ]]></threadUrl>
-  <author><![CDATA[ R4V3-0N, Chrono Vortex, Altzeus, and Pepson ]]></author>
-  <version><![CDATA[ 3.1.3 ]]></version>
+    <title><![CDATA[ AI Cruisers ]]></title>
+    <threadUrl><![CDATA[ https://github.com/R4V3-0N/FTL-MV-AI-CRUISER/releases ]]></threadUrl>
+    <author><![CDATA[ R4V3-0N, Chrono Vortex, Altzeus, Pepson, and Alder ]]></author>
+    <version><![CDATA[ 3.2 ]]></version>
 
-  
-  
-  
-  <description>
-<![CDATA[ THIS MOD HAS DEPENDENCIES! Make sure to patch "Vertex Tags and Utility Functions" first! (link bellow)
+    
+    
+    
+    <description>
+<![CDATA[ THIS MOD HAS DEPENDENCIES! Make sure to patch "Vertex Tags and Utility Functions" first! (link below)
 
-This mod adds a new race of AI hardlight Avatars from a distant universe which will eventually be developed upon further, both with type B and C layouts as well as eventually events and lore inspired by the AI Avatar race from Captains Edition and Hyperspace by Sleeper Service.
+This mod adds a new race of hard-light AI Avatars from a distant, yet familiar universe.
+Content inspired by FTL: Captain's Edition and the Hyperspace Anthology, both by Sleeper Service.
 
 This sample includes:
-- AI Cruiser type A, B, and C with achievements!
+- AI Cruiser type A, B, and C with achievements! Type A unlocked by default.
+
 - 21 New Weapons
-  - Effectors: field displacer fields that infiltrates enemy systems and disrupts them with hacking attacks.
-  - Auto Laser: a high rate of fire laser equally effective at surpressing shields and disabling systems.
-  - Auto Beam: a beam that after firing drops to a suppressive rapid strikes.
-  - Splitter Focus Beams: a series of 'flak' beams that fire several pinpoint beams over a radius.
-  - Ion Bust Beams: which can deal double damage on ionized rooms but in doing so clears the ion effect.
-  - EMP Devices: a series of weapons that fires projectiles that knocks down multiple layers of shields per hit and deals ion damage only on system hits.
-  - Plasma Projectors: An a range of industrial tools used to incinerate debris that are more than effective at lighting vulnerable ships ablaze.
-  - Burst Scatter Lasers: A group of lasers that excel at dealing damage to the ships hull and occasionally deals internal damage.
-  - Tech Minelaucher: Minelaunchers that exploit advanced technologies for greater effeciency
+    - Effectors: Field displacers that infiltrate enemy systems and disrupt them with hacking.
+    - Auto Laser: A high rate of fire laser equally effective at surpressing shields and disabling systems.
+    - Auto Beam: A beam that vastly decreases its cooldown after firing just once, enabling rapid ship destruction.
+    - Splitter Beams: A series of 'flak' beams that fire several pinpoint beams over a radius.
+    - Ion Bust Beams: Beams which deal double damage to ionized rooms, but clear the ion effect.
+    - Tech Minelaucher: Minelauncher that uses cloaking technology for greater destructive potential.
+    - EMP Devices: A series of weapons that pops shields, slows shield regeneration, and inflicts ion on room hit.
+    - Plasma Projectors: Pure incendiary weapons that can set ships ablaze.
+    - Burst Scatter Lasers: A group of lasers that excel at dealing damage to the hull in exchange for unreliable system damage.
+    - Melee: Fields and blades of hard light, constructed into... melee weapons!?
+
 - 13 New Drones
-  - Sentient AI Microfighters, a set of intelligent piloted drones that are specialised to form a variety of roles.
-    - Interceptor Microfighter, a drone that is technically more sentient than you. An evasive drone that focuses fire on enemy defence drones before targeting the ship.
-    - Shock Microfighter, piloted by an obnoxious avatar, this drone targets enemy systems with its light EMP device repeatedly while evading enemy fire.
-    - Swarm Microfighter, the sword of a run away swarm-intelligence. Every alternating shot assimilates material to create a rudimentary attack drone.
-  - Missile Combat Drones: Temporary drones that fires off a small series of missiles before despawning.
-  - Focus Beam Defence Drone: a Defence drone that shoots down enemy projectiles with beams, never misses!
-  - Combat Plasma Drone: A group of drones equipped with Plasma projectors.
-  - Combat Scatter Laser Drone: A Combat drone equipped with a scatter laser.
-  - Defense Scatter Laser Drone: A defensive model that fires a tight scatter of lasers at missiles.
+    - Sentient AI Microfighters, a set of intelligent piloted drones that are specialised to form a variety of roles.
+        - Interceptor Microfighter, a drone that is technically more sentient than you. An evasive drone that focuses fire on enemy defence drones before targeting the ship.
+        - Shock Microfighter, piloted by an obnoxious avatar, this drone targets enemy systems with its light EMP device repeatedly while evading enemy fire.
+        - Swarm Microfighter, the sword of a run away swarm-intelligence. Every alternating shot assimilates material to create a rudimentary attack drone.
+    - Missile Combat Drones: Temporary drones that fires off a small series of missiles before despawning.
+    - Focus Beam Defence Drone: a Defence drone that shoots down enemy projectiles with beams, never misses!
+    - Combat Plasma Drone: A group of drones equipped with Plasma projectors.
+    - Combat Scatter Laser Drone: A Combat drone equipped with a scatter laser.
+    - Defense Scatter Laser Drone: A defensive model that fires a tight scatter of lasers at missiles.
+
+- New Weapon Properties
+    - X-Ray: Slowly erodes systems and rooms, eventually causing semi-permanent damage.
+    - Cascade: Dealing damage to a room on fire causes chaos to erupt.
+    - Containment: Reverse energy shielding! Trap enemy weapon fire within their own ship.
+
 
 - New partial-unique sector with an original sound track made by Altzeus and a familiar track from a cluster far away.
-- 2 New Hostile enemy ships and 2 accompanying Multiverse Renegades, and one new Multiverse Renegade Boss.
-- New Race: AI Avatar's, a synthetic race of disposable hardlight avatars with many immunities
+- 2 new hostile enemy ships and 2 accompanying Multiverse Renegades, and one new Multiverse Renegade Boss.
+
+- New Race: AI Avatars, a synthetic race of disposable hardlight avatars with many immunities
+
 - 7 New Augments
-  - Hologram Emitter, an augment that lets you produce an AI hologram when one perishes at empty beacons
-  - Anti-Gravity Engine, provides evasion when your engines or helm is disabled.
-  - Sentient Combat AI, improves manning level of systems
-  - Conductive Hull Plating. This hull plating allows your ship to create ion storms inside nebulas and regain lost reactor power in an ion storm.
-  - Assimilative Drone Bays. Allowing the construction of temporary focus beam drones for destroyed enemy drones as well as a chance when your ships damaged.
-  - Rerouted Insulation, gives the ship a 80% ion resistance while all crew onboard are more susceptible to stuns.
-  - Reflective armour plating, giving the ship significant resistance to beams
+    - Hologram Emitter: Lets you produce a new AI Avatar when one perishes at empty beacons.
+    - Anti-Gravity Engine: The more punishment your Shields take, the higher your evasion grows!
+    - Sentient Combat AI: Increasing the effects of manning a system.
+    - Conductive Hull Plating: Allows your ship to create ion storms inside nebulas, and regain lost reactor power in an ion storm.
+    - Assimilative Drone Bays: Constructs a temporary drone equipped with a Pinpoint when destroying an enemy drone, or sometimes when taking damage.
+    - Rerouted Insulation: Gives the ship an 80% ion resistance, but renders all crew onboard more susceptible to stun.
+    - Reflective Armour Plating: Significant resistance to beam weapons.
 ...and More!
 
 Special thanks to Julk, Lizzard, and Vertaalfout for providing additional assistance.
@@ -53,5 +65,5 @@ Special thanks to Julk, Lizzard, and Vertaalfout for providing additional assist
 Download Vertex:
 https://github.com/ChronoVortex/FTL-HS-Vertex/releases/latest
 ]]>
-  </description>
+    </description>
 </metadata>
