@@ -1932,7 +1932,7 @@ Accuracy Bonus: +10%</tooltipOverride>
 	<short>Plasma I</short>
 	<desc>Fires a concentrated blast of plasma that deals no physical damage but has a good chance to ignite fires.</desc>
 	<tooltip>Fires plasma across a small, random area. High fire chance.</tooltip>
-    <descriptionOverride>Based on an industrial-grade incinerator normally used to clear space of debris and asteroids. This weapon fires a concentrated thermal blast of plasma that sets fires across a ship, capable of dealing damage rooms that are ignited.
+    <descriptionOverride>Based on an industrial-grade incinerator normally used to clear space of debris and asteroids. This weapon fires a concentrated thermal blast of plasma that sets fires across a ship, capable of dealing damage to rooms that are ignited.
 
 Stats:
 Required Power: 1
@@ -2005,7 +2005,7 @@ Fire Chance: 60%</tooltipOverride>
 	<short>Plasma II</short>
 	<desc>Fires multiple blasts of plasma across a random area with a chance to light fires in every room that is hit.</desc>
 	<tooltip>Fires plasma across a wide, random area. Very high fire chance.</tooltip>
-    <descriptionOverride>Fires multible blasts of thermal plasma that sets fires across an entire ship, capable of dealing damage rooms that are ignited.
+    <descriptionOverride>Fires multible blasts of thermal plasma that sets fires across an entire ship, capable of dealing damage to rooms that are ignited.
 
 Stats:
 Required Power: 2
@@ -2079,7 +2079,7 @@ Fire Chance: 60%</tooltipOverride>
 	<short>Plasma III</short>
 	<desc>Fires multiple blasts of plasma across a random area with a chance to light fires in every room that is hit.</desc>
 	<tooltip>Fires plasma across a wide, random area. Very high fire chance.</tooltip>
-	<descriptionOverride>Fires a torrent of thermal plasma that sets large swathes ablaze across all but the largest ships, capable of dealing damage rooms that are ignited.
+	<descriptionOverride>Fires a torrent of thermal plasma that sets large swathes ablaze across all but the largest ships, capable of dealing damage to rooms that are ignited.
 
 Stats:
 Required Power: 3
