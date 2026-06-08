@@ -15,16 +15,16 @@
 	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	-->
 	<textList name="RVS_TEXT_START_NEBULA_AI">
-		<text>This sector was originally reported to be a vast void empty of anything of note. But in recent years a nebula has engulfed the region following several dramatic supernovae explosions. Strangely prior astrography surveys indicated it should still be many millions of years before these stars would've reached their end.</text>
-		<text>This sector was once a bustling with shipyards of the once great leech republic before their eventual downfall. The database indicate that the sector is largely abandoned over the past few decades but recent Federation reports indicate that the sector has been becoming more active in recent years.</text>
-		<text>True to its designation on the map, this sector is primarily unpopulated. Currently, reports indicate recent attacks have increased in the sector most likely the result of some outcasts or pirates seeking refuge off the grid.</text>
-		<text>There are no data entries of such vast nebula formations being present in this sector. It reportedly was lastly astrographed as small agricultural colonies out in the periphery. What ever had happened it seems they are long gone.</text>
+		<text>Years old reports indicated this Sector used to be empty space, solely for beacon linking and cargo freighting. Nebulae characteristic of supernoval explosions have engulfed the area, despite astrological surveying reporting that nearby stars were still millions of years before such age would claim them.</text>
+		<text>What once was a grand Leech Republic mixed-use district has decayed beyond recognition, both shipyards and homes alike pilfered for all they're worth. Federation and independent probes have reported recent activity within the nebula, but very little official traffic data.</text>
+		<text>True to its designation, this region is unpopulated. Despite its desertification, the occasional travelers through the sector consistently report skirmishes within the nebula, sans any clear descriptions of their assailants. Likely just pirates...</text>
+		<text>Astrographical data indicates this sector should be clear space populated by small agricultural colonies. Said colonies have gone dark ever since the nebula first appeared. Despite various search efforts from concerned parties, no colonists have been found.</text>
 	</textList>
 	
 	<textList name="RVS_TEXT_AI_GUARD_MESSAGE">
-		<text>The guard seems unresponsive to your hails. Further scans indicate that the ship has had suffered a critical life support failure several cycles ago. Nobody remains to be saved.</text>
-		<text>You receive no message from the guard. Further scans indicate that the ship has been emptied of all crew and components. As if all was meticulously collected.</text>
-		<text>Arriving at the sector the guard seems unresponsive to your hails. Further scans indicate that the ship is an empty husk. Sensors indicate the ship has started transmitting a signal of unknown encryption since your arrival...</text>
+		<text>The guard stands idly, not a word in response to your hailing. A deep scan reveals their Life Support suffered catastrophic failure many days ago, all hands lost.</text>
+		<text>Not a word escapes the guard. Secondary scans indicate the ship was gutted for everything it's worth, much more meticulously than your average pirate would bother with. No bodies are found.</text>
+		<text>It's uncomfortably silent, seeing a Militia guard so idle. Scanners detect next to nothing aboard the ship, hollowed out for both its precious metals and base materials. The only remaining functional system aboard the guard has been sending a deeply encrypted signal deep into the nebula...</text>
 	</textList>
 	
 	<ship name="SHIP_GUARD_MILITIA_EMPTY" auto_blueprint="MU_MILITIA_GUARD_ELITE_EMPTY">
@@ -66,7 +66,7 @@
 			<text>Salvage what you can.</text>
 			<event> 
 				<autoReward level="LOW">scrap_only</autoReward>
-				<text>There is only a meager amount of scrap that can be salvaged from that husk. You hope to never encounter what was responsible for this.</text>
+				<text>The husk of a vessel yields only a pittance of scrap. It crosses your mind that whatever caused this is likely still out there.</text>
 				<choice hidden="true">
 					<text>Continue...</text>
 					<event/>
@@ -96,15 +96,15 @@
 	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	-->	
 	<event name="RVS_PERIPHERY_FEDERATION_RESTRICTED_ZONE" unique="true">
-		<text>Upon exiting FTL, you find yourself in a restricted zone marked by Federation insignia. The area around the beacon is guarded by several Ministry patrol ships. A stern, authoritative voice crackles over your comms: "Unidentified vessel, you have entered a Federation quarantine zone. Prepare to be processed. Any attempt to bypass this will be met with force."</text>
+		<text>You're met with a hail immediately upon completing your jump, confronted by a Ministry official. A stern, authoritative voice crackles over your comms: "Unidentified vessel, you have entered a Federation Quarantine Zone. Under Article 85-A9, all vessels traveling through Federation Quarantine Zones must submit to processing. Lethal force is authorized should vessels resist." Multiple additional Ministry ships patrol the beacon.</text>
 		<choice req="zoltan_monk" hidden="true">
 			<text>(Monk) Negotiate with the Ministry patrol.</text>
 			<event>
-				<text>Your Zoltan Monk steps forward, opening a channel to the Ministry forces. Their energy-based communication seems to resonate with the patrol ships. After a tense pause, the voice softens slightly: "Zoltan Monk presence detected? how odd. State your business."</text>
+				<text>Your Zoltan Monk steps forward, opening a channel to the Ministry forces. The Zoltan officer in charge pauses, his voice relaxing. "A monk?" He huffs, beginning to mutter to himself as he leans back. "Well, under section 15.1... guards employed by monks..." A moment passes, before he refocuses on you, stern once more. "State your business."</text>
 				<choice>
 					<text>Explain your intentions.</text>
 					<event>
-						<text>You explain your intentions to the Ministry patrols, emphasizing the peaceful nature of your mission. Reluctantly, the Ministry forces agree to let you pass without further processing, but warn you to proceed with caution. "Beware, traveler, this sector is fraught with dangers."</text>
+						<text>You explain your intentions to the Ministry patrols, emphasizing the peaceful nature of your mission. Reluctantly, the Ministry forces agree to let you pass without further processing. The Zoltan officer hails you one last time. "Alright, you're free to go. Steer clear of the nebulae here."</text>
 					</event>
 				</choice>
 			</event>
@@ -112,7 +112,7 @@
 		<choice req="LIST_CREW_FEDERATION_ELITE_EASTER" hidden="true"> <!--BLUELIST_CREW_UC_FED_ELITE-->
 			<text>(Elite Federation Crew) Negiotiate with the Ministry patrol.</text>
 			<event>
-				<text>Your Federation Elite crew member steps forward, presenting their credentials. The Ministry forces recognize their authority and documentation. After a brief verification process, they agree to let you pass. "Your credentials check out. Proceed, but beware, traveler, this sector is fraught with dangers."</text>
+				<text>Your Federation Elite crew member steps forward, presenting their credentials. The Ministry forces recognize their authority and documentation. After a brief verification process, they agree to let you pass. "Your credentials check out. I trust you have yourselves prepared. Keep your guns ready for whatever come out of these nebulae."</text>
 			</event>
 		</choice>
 		<choice hidden="true">
@@ -123,15 +123,52 @@
 			</event>
 		</choice>
 		<choice>
+			<text>I'm a Renegade, I have business beyond the sector. I'm just passing through.</text>
+			<event>
+				<event load="RVS_PERIPHERY_FED_RES_ZONE_RENEGADE_50"/>
+			</event>
+		</choice>
+		<choice>
 			<text>Attack the Cordon.</text>
 			<event>
-				<text>Ignoring the Ministry's stern warning, you decide to attack the cordon. Almost instantly, the Ministry ships lock onto your vessel and prepare to engage. The anti-ship battery comes online, adding to the challenge. The battle has begun!</text>
+				<text>The Zoltan officer quickly radios out to the rest of the patrol. "Weapons hot, requesting assistance! Unknown vessel confirmed hostile!" The Cordon readies its own weapons, crew on high alert.</text>
 				<environment type="pds"/>
 				<ship load="SHIP_ZOLTAN_FIGHT" hostile="true"/>
 				<choice hidden="true">
 					<text>Continue...</text>
 					<event load="MORALITY_UPDATE_ZOLTAN_FIGHT"/>
 				</choice>
+			</event>
+		</choice>
+	</event>
+	
+	<eventList name="RVS_PERIPHERY_FED_RES_ZONE_RENEGADE_50">
+		<event load="RVS_PERIPHERY_FED_RES_ZONE_RENEGADE_GOOD"/>
+		<event load="RVS_PERIPHERY_FED_RES_ZONE_RENEGADE_BAD"/>
+	</eventList>
+	
+	<event name="RVS_PERIPHERY_FED_RES_ZONE_RENEGADE_GOOD">
+		<text>The Zoltan officer pauses for a moment. "My apologies, captain." He signals to the rest of the patrol to let you pass. "It's not procedure, but I've heard that Renegades like you are heading to the front at Node 17. Good luck."</text>
+	</event>
+	<event name="RVS_PERIPHERY_FED_RES_ZONE_RENEGADE_BAD">
+		<text>The officer's posture grows more intense. "Renegades under Federation employ are still subject to procedure. Comply, or we will be forced to open fire." </text>
+			<choice>
+			<text>Open fire!</text>
+				<event>
+					<text>You don't have time for this! As your weapons come online, the Ministry Cordon responds in kind. The rest of the patrol swarms, providing suppressive fire!</text>
+					<environment type="pds"/>
+					<ship load="SHIP_ZOLTAN_FIGHT" hostile="true"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="MORALITY_UPDATE_ZOLTAN_FIGHT"/>
+					</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Comply.</text>
+			<event>
+				<text>Deciding to comply, you submit to Ministry processing. The detour costs you precious time, the lengthy procedure questioning your crew and inspecting your ship. After everything checks out, you're finally allowed to proceed. "Urgh, Renegades... Try not to get your crew killed by what's out in the nebula."</text>
+				<modifyPursuit amount="1"/>
 			</event>
 		</choice>
 	</event>

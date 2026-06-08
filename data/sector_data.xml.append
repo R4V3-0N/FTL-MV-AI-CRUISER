@@ -326,6 +326,14 @@
 		<mod-append:blueprint name="RVS_AI_SWARM" rarity="0"/>
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="0"/>
+		
+		
+		<mod-append:blueprint name="RA_ION_BURST_1" rarity="0"/>
+		<mod-append:blueprint name="RA_ION_BURST_2" rarity="0"/>
+		<mod-append:blueprint name="RA_ION_BURST_3" rarity="0"/>
+		<mod-append:blueprint name="RA_ANTI_DRONE_EFFECTOR" rarity="0"/>
+
+		
     </mod:findLike>
 </mod:findName>
 
@@ -379,6 +387,14 @@
 		<mod-append:blueprint name="RVS_AI_SWARM" rarity="0"/>
 		
         <mod-append:blueprint name="rvs_ai_hologram" rarity="0"/>
+		
+		
+		<mod-append:blueprint name="RA_ION_BURST_1" rarity="0"/>
+		<mod-append:blueprint name="RA_ION_BURST_2" rarity="0"/>
+		<mod-append:blueprint name="RA_ION_BURST_3" rarity="0"/>
+		<mod-append:blueprint name="RA_ANTI_DRONE_EFFECTOR" rarity="0"/>
+		
+		
     </mod:findLike>
 </mod:findName>
 
