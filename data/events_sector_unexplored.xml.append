@@ -1560,21 +1560,21 @@
 		<event load="NEBULA_RVS_ENCOUNTER_AI_REGULAR"/>
 		<event load="NEBULA_RVS_ENCOUNTER_AI_REGULAR"/>
 	
-		<event load="NEBULA_RVS_ENCOUNTER_AI_CLEARING"/>
-		<event load="NEBULA_RVS_ENCOUNTER_AI_CLEARING"/>
+		<event load="NEBULA_LIGHT_RVS_ENCOUNTER_AI_CLEARING"/>
+		<event load="NEBULA_LIGHT_RVS_ENCOUNTER_AI_CLEARING"/>
 	
-		<event load="NEBULA_RVS_ENCOUNTER_AI_STORM"/>
+		<event load="NEBULA_LIGHT_RVS_ENCOUNTER_AI_STORM"/>
 	</eventList>
 	
 	<eventList name="RVS_CLEARING_HAZARD_AI_HOSTILE">
-		<event load="RVS_AI_ASTEROID"/>
+		<event load="NEBULA_LIGHT_RVS_AI_ASTEROID"/>
 		<event load="RVS_AI_SUN"/>
 	</eventList>
 	
-	<event name="RVS_AI_ASTEROID" unique="true">
+	<event name="NEBULA_LIGHT_RVS_AI_ASTEROID" unique="true">
 		<text>You arrive in an asteroid belt where small swarms of nano-bots are dissolving rocks and minerals to produce more nano-bots. At least, you hope those are nano-bots. The rogue AI ship overseeing the swarm moves in to chase you away.</text>
 		<ship load="RVS_SHIP_AI_FIGHT" hostile="true"/>
-		<img back="BACK_EVENT_LIGHTNEBULA" planet="NONE"/>
+		<!--<img back="BACK_EVENT_LIGHTNEBULA" planet="NONE"/>-->
 		<status type="loss" target="player" system="sensors" amount="1"/>
 		<environment type="asteroid"/>
 		<choice hidden="true">
@@ -1615,10 +1615,10 @@
 		<text>A ship bearing a mysterious design and structure begins to scan your systems and computers for analysis. Whatever it is they found, they would prefer to see it scattered across the clouds of this nebula.</text>
 	</textList>
 	
-	<event name="NEBULA_RVS_ENCOUNTER_AI_CLEARING">
+	<event name="NEBULA_LIGHT_RVS_ENCOUNTER_AI_CLEARING">
 		<text load="RVS_TEXT_ENCOUNTER_AI_NEBULA_CLEARING"/>
 		<ship load="RVS_SHIP_AI_FIGHT" hostile="true"/>
-		<img back="BACK_EVENT_LIGHTNEBULA" planet="NONE"/>
+		<!--<img back="BACK_EVENT_LIGHTNEBULA" planet="NONE"/>-->
 		<status type="loss" target="player" system="sensors" amount="1"/>
 		<choice hidden="true">
 			<text>Continue...</text>
@@ -1632,10 +1632,10 @@
 		<text>You spot a Rebel automated scout within this nebula where it is thinnest, and move in to pursue it. As you get closer, however, you realize the ship has already been disabled, and a second, significantly less familiar vessel emerges, weapons primed!</text>
 	</textList>
 	
-	<event name="NEBULA_RVS_ENCOUNTER_AI_STORM" unique="true">
+	<event name="NEBULA_LIGHT_RVS_ENCOUNTER_AI_STORM" unique="true">
 		<text load="RVS_TEXT_ENCOUNTER_AI_STORM"/>
 		<ship load="RVS_SHIP_AI_FIGHT" hostile="true"/>
-		<img back="BACK_EVENT_LIGHTNEBULA" planet="NONE"/>
+		<!--<img back="BACK_EVENT_LIGHTNEBULA" planet="NONE"/>-->
 		<environment type="storm"/>
 		<choice hidden="true">
 			<text>Continue...</text>
@@ -1646,10 +1646,10 @@
 		<text>Although it is difficult to see anything in the storm with your long-range sensors down, you can tell that there has been a struggle here. Your proximity alert screams about several wrecks in the general vicinity, and your visual scanners confirm it. In front of a flash of lightning you can see the silhouhette of an unknown ship, rapidly moving towards you!</text>
 	</textList>
 	
-	<event name="NEBULA_RVS_AI_ENCOUNTER_REBEL_LIGHTNEBULA" unique="true">
+	<event name="NEBULA_LIGHT_RVS_AI_ENCOUNTER_REBEL_LIGHTNEBULA" unique="true">
 		<text>"YOU! You finally arrived! This sector... it isn't normal. I can't stand staying here any longer, but now that you're here I'll finally be able to leave!" They've locked onto you and are in pursuit.</text>
 		<ship load="SHIP_REBEL_FIGHT" hostile="true"/>
-		<img back="BACK_EVENT_LIGHTNEBULA" planet="NONE"/>
+		<!--<img back="BACK_EVENT_LIGHTNEBULA" planet="NONE"/>-->
 		<status type="loss" target="player" system="sensors" amount="1"/>
 		<choice hidden="true">
 			<text>Continue...</text>
