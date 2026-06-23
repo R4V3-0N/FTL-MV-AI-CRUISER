@@ -279,7 +279,7 @@
     <mod:findLike type="rarityList">
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="0"/>
-		
+		<!--CE type weapons-->
         <mod-append:blueprint name="RA_BEAM_AUTO" rarity="0"/>
         <mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="0"/>
@@ -300,7 +300,7 @@
 		<mod-append:blueprint name="RA_ION_BURST_1" rarity="0"/>
 		<mod-append:blueprint name="RA_ION_BURST_2" rarity="0"/>
 		<mod-append:blueprint name="RA_ION_BURST_3" rarity="0"/>
-
+		<!--HAnth type weapons-->
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="0"/>
@@ -308,7 +308,7 @@
 		<mod-append:blueprint name="RVS_EMP_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_EMP_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="0"/>
-		
+		<!--Drones-->
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_INTERCEPTOR" rarity="0"/>
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="0"/>
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SWARM" rarity="0"/>
@@ -323,15 +323,13 @@
 		<mod-append:blueprint name="RVS_DRONE_SCATTER" rarity="0"/>
 		<mod-append:blueprint name="RVS_DRONE_DEFENSE_SCATTER" rarity="0"/>
 		<mod-append:blueprint name="RA_ANTI_DRONE_EFFECTOR" rarity="0"/>
-		
+		<!--Augments-->
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="0"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="0"/>
 		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="0"/>
 		<mod-append:blueprint name="RVS_AI_SWARM" rarity="0"/>
-		
+		<!--Crew-->
         <mod-append:blueprint name="rvs_ai_hologram" rarity="0"/>
-
-		<mod-append:blueprint name="RA_ANTI_DRONE_EFFECTOR" rarity="0"/>	
     </mod:findLike>
 </mod:findName>
 
@@ -339,7 +337,8 @@
     <mod:findLike type="rarityList">
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_ION_BUST_2" rarity="0"/>
-		
+		<!--CE type weapons-->
+        <mod-append:blueprint name="RA_BEAM_AUTO" rarity="0"/>
         <mod-append:blueprint name="RVS_BEAM_FOCUS_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_ADAPTIVE_2" rarity="0"/>
@@ -359,7 +358,7 @@
 		<mod-append:blueprint name="RA_ION_BURST_1" rarity="0"/>
 		<mod-append:blueprint name="RA_ION_BURST_2" rarity="0"/>
 		<mod-append:blueprint name="RA_ION_BURST_3" rarity="0"/>
-
+		<!--HAnth type weapons-->
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_BEAM_SHOTGUN_3" rarity="0"/>
@@ -367,7 +366,7 @@
 		<mod-append:blueprint name="RVS_EMP_1" rarity="0"/>
 		<mod-append:blueprint name="RVS_EMP_2" rarity="0"/>
 		<mod-append:blueprint name="RVS_EMP_HEAVY_1" rarity="0"/>
-		
+		<!--Drones-->
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_INTERCEPTOR" rarity="0"/>
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SHOCK" rarity="0"/>
 		<mod-append:blueprint name="RVS_AI_MICROFIGHTER_SWARM" rarity="0"/>
@@ -382,12 +381,12 @@
 		<mod-append:blueprint name="RVS_DRONE_SCATTER" rarity="0"/>
 		<mod-append:blueprint name="RVS_DRONE_DEFENSE_SCATTER" rarity="0"/>
 		<mod-append:blueprint name="RA_ANTI_DRONE_EFFECTOR" rarity="0"/>
-		
+		<!--Augments-->
         <mod-append:blueprint name="RVS_HOLO_EMITTERS" rarity="0"/>
 		<mod-append:blueprint name="RVS_ELECTRIC_PLATING" rarity="0"/>
 		<mod-append:blueprint name="RVS_SENTIENT_COMBAT_AI" rarity="0"/>
 		<mod-append:blueprint name="RVS_AI_SWARM" rarity="0"/>
-		
+		<!--Crew-->
         <mod-append:blueprint name="rvs_ai_hologram" rarity="0"/>
     </mod:findLike>
 </mod:findName>
