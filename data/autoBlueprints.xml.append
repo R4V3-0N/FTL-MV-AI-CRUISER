@@ -487,6 +487,7 @@
 
 <blueprintList name="RVS_LIST_SHIPS_AI">
 	<name>RVS_AI_INTERCEPTOR</name>
+	<name>RVS_AI_BOMBER</name>
 	<name>RVS_AI_ASSAULT</name>
 	<name>RVS_AI_DROPSHIP</name>
 </blueprintList>
@@ -654,6 +655,30 @@ remove "renegade" and change MV to "R" or "RE" for renegade encounter? Should I 
 	<crewCount amount="2" max="4" class="rvs_ai_hologram" /> 		<!-- Maybe change it to 5 max? -->
 	<aug name="RVS_ANTI_GRAVITY_ENGINE" />	
 	<boardingAI>invasion</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="RVS_AI_BOMBER" layout="rvs_ai_bomber" img="rvs_ai_bomber">
+	<class>AI Bomber</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<doors power="1" max="3" room="7" start="false" />
+		<engines power="1" max="5" room="6" start="true" />
+		<medbay power="1" max="1" room="3" start="false" />
+		<pilot power="1" max="1" room="1" start="true" />
+		<shields power="2" max="8" room="0" start="true" />
+		<teleporter power="1" max="1" room="5" start="false" />
+		<weapons power="3" max="10" room="2" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="10" count="4" load="RVS_LIST_WEAPONS_AI" />
+	<droneList drones="0" count="0" load="RVS_LIST_DRONES_AI" />
+	<health amount="7" />
+	<maxPower amount="7" />
+	<crewCount amount="4" max="6" class="rvs_ai_hologram" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="RVS_ANTI_GRAVITY_ENGINE" />
 </shipBlueprint>
 
 <!-- AI ASSAULT has two artilleries -->
