@@ -1550,7 +1550,49 @@
 	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	-->
 	
-	
+	<event name="LIGHT_NEBULA_RVS_PERIPHERY_NAME_THING"> <!-- Nauter, this is the ship unlock event -->
+		<text>Your communications array screams to life with multiple Distress pings, various fleetships in the distance shining brightly for flickers of moments before the vacuum snuffs them out. Noticing your arrival, an Engi vessel quickly contacts you.</text>
+		<customFleet right="false" firing="false" autoDarkening="false">CUSTOM_FLEET_ZOLTAN</customFleet> <!-- R4 2026.06.27 Zoltan Engi Fleet, potentially some damaged?-->
+		<choice>
+			<text>Continue...</text>
+			<event>
+				<text>DES: Engi Contacts you, Warns you</text>
+				<choice>
+					<text>Continue...</text>
+					<event>
+						<text>DES: Zoltan Chips in, proposes idea</text>
+						<choice>
+							<text>Continue...</text>
+							<event>
+								<text>DES: Engi contemplates, minor protest</text>
+								<choice>
+									<text>Option 1</text>
+									<event>
+										<text>insert text here</text>
+										<quest event=""/>
+									</event>
+								</choice>
+								<choice>
+									<text>Option 2</text>
+									<event>
+										<text>insert text here</text>
+										<quest event=""/>
+									</event>
+								</choice>
+								<choice>
+									<text>Nope</text>
+									<event>
+										
+									</event>
+								</choice>
+							</event>
+						</choice>
+					</event>
+				</choice>
+			</event>
+		</choice>
+	</event>
+
 	<!--
 	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
