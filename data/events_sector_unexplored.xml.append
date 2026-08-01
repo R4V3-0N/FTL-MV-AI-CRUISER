@@ -1055,6 +1055,7 @@
 	<event name="NEBULA_RVS_PERIPHERY_STRANGE_POD">
 		<environment type="nebula"/>
 		<text>Your sensors detect a strange pod floating aimlessly in the nebula. It seems to be emitting a faint signal, though the details are unclear. What do you want to do?</text>
+		<!-- R4: 2026.07.18.  Add blue event option for slugs, and life form scanner -->
 		<choice req="sensors" lvl="2" hidden="true">
 			<text>(Upg. Sensors) Scan the pod.</text>
 			<event load="RVS_PERIPHERY_POD_SCAN"/>
@@ -1317,7 +1318,8 @@
 	<eventList name="RVS_PERIPHERY_DISTRESS_EVENTS"> <!-- R4 TODO : No fuel? Rebels wanting a way out of here? Emptied station? Hostile fed station filled with AI crew? The... Rebel Cruiser perchance? -->
 		<event load="NEBULA_RVS_RESCUE_RENEGADE"/>
 		<event load="RVS_PERIPHERY_AI_ZOLTAN_DISTRESS"/>
-	
+		<event load="NEBULA_RVS_CONFUSED_AI_DISTRESS"/>
+
 		<event load="DISTRESS_ZOLTAN_HUSK_MV"/>
 	</eventList>
 	
@@ -1456,6 +1458,7 @@
 			</event>
 		</choice>
 	</event>
+
 	
 	<!-- ship events for RVS_PERIPHERY_AI_DISTRESS_SIGNAL -->
 	<ship name="RVS_PERIPHERY_DISTRESS_RVS_AI_ASSAULT" auto_blueprint="RVS_AI_ASSAULT">
@@ -1568,6 +1571,7 @@
 	
 	<eventList name="RVS_CLEARING_HAZARD_AI_HOSTILE">
 		<event load="NEBULA_LIGHT_RVS_AI_ASTEROID"/>
+		<event load="NEBULA_LIGHT_RVS_AI_SUN"/>
 		<event load="RVS_AI_SUN"/>
 	</eventList>
 	
@@ -1593,6 +1597,16 @@
 		</choice>
 	</event>
 	
+	<event name="NEBULA_LIGHT_RVS_AI_SUN" unique="true"> <!-- TO DO: For Cerebral Cloud, delete when done: 2026.06.30 new event. Review text-->
+		<text>Coronal mass ejection events engulf the space around the newly born protostar; nearly missing your vessel as it materialises from another successful jump. Unshrouding itself from behind the solar flare a rogue vessel burns brightly towards you. Not taking any risks you power up your weapons system.</text>
+		<ship load="RVS_SHIP_AI_FIGHT" hostile="true"/>
+		<environment type="sun"/>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="COMBAT_CHECK"/>
+		</choice>
+	</event>
+
 	<event name="NEBULA_RVS_ENCOUNTER_AI_REGULAR">
 		<text load="RVS_TEXT_ENCOUNTER_AI_NEBULA"/>
 		<ship load="RVS_SHIP_AI_FIGHT" hostile="true"/>
@@ -1659,8 +1673,10 @@
 	
 	
 	<eventList name="RVS_LIST_AI_BOARDING">
+		<!-- Boarding only, no ship -->
 		<event load="NEBULA_RVS_PERIPHERY_STORM_AI_BOARDING"/>
 		<event load="RVS_PERIPHERY_ASTEROID_AI_BOARDING"/>
+		<!-- -->
 	</eventList>
 	
 	<event name="NEBULA_RVS_PERIPHERY_STORM_AI_BOARDING" unique="true">
@@ -1705,7 +1721,14 @@
 	</textList>
 	
 	
-	<!-- Regular Generic Events	-->
+	<!-- 
+	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+			Regular Generic Events
+	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+	-->
+	<!-- Events that appear in other sectors -->
 	<eventList name="NEBULA_RVS_GENERIC_ENCOUNTER">
 		<event load="RVS_GENERIC_ENCOUNTER_AI_REGULAR"/>	<!-- does having it in this list make it marked as a nebula?-->
 		<event load="NEBULA_RVS_GENERIC_ENCOUNTER_AI_REGULAR"/>
