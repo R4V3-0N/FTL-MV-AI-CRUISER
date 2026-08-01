@@ -1519,6 +1519,29 @@
 	</event>
 	
 	<event name="NEBULA_RVS_CONFUSED_AI_DISTRESS">
+		<text>There is no sign of where the distress signal originated from and your comms unit hasn't picked up any hails yet. But then your sensors detect an unauthoerised short range teleporter signal.</text>
+		<choice>
+			<text>Continue...</text>
+			<event>
+				<text>It didn't take long to find the source of the signal, an AI hologram struggling to maintain its form flickers in the corridor of your ship. Its projector does not appear to be visually damaged but the form above stumbles and distorts with limbs coming in and out of existance all over its body.</text>
+				<choice>
+					<text>Attempt to help it.</text>
+					<event load=""/>	<!--WIP: TO DO: Load list of odds, 66/33 odds of boarding encouunter or crew gain -->
+				</choice>
+				<choice>
+					<text>Kill it.</text>
+					<event load=""/>	<!--WIP: TO DO: Load list of odds, 33/33/33 odds of boarding encounter, boarding +pain, or success -->
+				</choice>
+				<choice hidden="true" blue="true" req="RVS_BLUELIST_CREW_AI">
+					<text>(AI Crew) Ask your AI crew for help.</text>
+					<event>
+						<text>You normally do not experience your AI crew to stutter. But here it seems more somber and hesitent than usual. "Sir, I will not be able to adequetly explain what is occuring within sufficient time. Their mind is tearing themselves apart and will continue to do so unless proper aid is rendered."</text>
+					</event>
+				</choice>
+			</event>
+		</choice>
+	</event>
+
 	<!--
 	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
