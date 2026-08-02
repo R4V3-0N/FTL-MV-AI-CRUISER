@@ -951,20 +951,25 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
     <weaponArt>rvs_beam_shotgun_3</weaponArt>
 </weaponBlueprint>
 
+<!-- X-ray Weapons -->
+ <!--R4 2026/08/02: I do not know what to call these. Corrosion Beams? X-Ray beams? Cauterisation Beams? -->
 <weaponBlueprint name="RVS_FOCUS_CORROSION_1">
     <type>BEAM</type>
     <flavorType>Pinpoint</flavorType>
     <tip>tip_focus</tip>
-    <title>Corrosion Focus Beam</title>
-    <short>Corrosion Focus</short>
-    <desc>Outlawed in the universe where this weapon was first sighted. This exotic weapon fires a concentrated tight beam of x-rays that irradiates and corrodes the target causing systems to break down over time for a short duration.</desc>
-    <tooltip>Corrosive focus that deals 3 damage on hit and applies an additional 3 via corrosion.</tooltip>
+    <title>X-Ray Focus Beam</title>
+    <short>X-Ray Focus</short>
+	<desc>"A device that casts an intense burst of radiation upon its target. Causing material failure localised at the point of impact resulting in critical damage to accumulate without intervention. Limited exposure to the site is recommended due to significant radiation..."
+
+- SEALED REPORT to be submitted to the Minister of Federation MV Military Intelligence</desc>
+    <!--<desc>Outlawed in the universe where this weapon was first sighted. This exotic weapon fires a concentrated tight beam of x-rays that irradiates and corrodes the target causing systems to break down over time for a short duration.</desc>-->
+    <tooltip>Corrosive focus that deals 2 damage on hit and applies an additional 2 via corrosion.</tooltip>
     <damage>2</damage>
     <sp>0</sp>
     <fireChance>0</fireChance>
     <breachChance>3</breachChance>
 	<persDamage>2</persDamage>
-    <cooldown>18</cooldown>
+    <cooldown>16</cooldown>
 	<color>
 		<r>0</r>
 		<g>204</g>
@@ -985,7 +990,7 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
 	<erosion>
 		<speed>1.5</speed>
 		<maxSpeed>1.5</maxSpeed>
-		<time>16.0</time>
+		<time>10.0</time>	<!-- R4 2026/08/02: Was 16, reduced to 10. It didn't need to be that strong and it will have "heavy irradiation" effect applied later -->
 		<maxTime>25.0</maxTime>
 		<systemRepairMultiplier>1</systemRepairMultiplier>
 		<erodeShields>false</erodeShields>
@@ -1000,15 +1005,73 @@ Breach Chance: 40% (Adjusted: 40%)</tooltipOverride>
 		<newBreachRequirement>100000.0</newBreachRequirement>
 		<canDilate>true</canDilate>-->
 	</erosion>
-    <projectiles>
-        <projectile count="3" fake="false">laser_burst</projectile> <!-- Fake projectiles which LUA replaces with beams -->
-    </projectiles>
+    <!-- <projectiles>
+        <projectile count="3" fake="false">laser_burst</projectile>
+    </projectiles> -->
 	<launchSounds>
 		<sound>ra_focusbeambig1</sound>
 		<sound>ra_focusbeambig2</sound>
 		<sound>ra_focusbeambig3</sound>
 	</launchSounds>
     <weaponArt>rvs_focus_corrosion_1</weaponArt>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="RVS_FOCUS_CORROSION_2">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_focus</tip>
+    <title>X-Ray Caster Beam</title>
+    <short>X-Ray Caster</short>
+    <desc>Outlawed in the universe where this weapon was first sighted. This exotic weapon fires a concentrated tight beam of x-rays that irradiates and corrodes the target causing systems to break down over time for a short duration.</desc>
+    <tooltip>X-Ray focus that deals 3 damage on hit and applies an additional 3 via corrosion.</tooltip>
+    <damage>2</damage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>1</breachChance>
+	<persDamage>2</persDamage>
+    <cooldown>20</cooldown>
+	<color>
+		<r>0</r>
+		<g>204</g>
+		<b>104</b>
+	</color>
+	<statBoosts>
+        <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
+		<statBoost name="stunMultiplier" load="RAD_STUN"/>
+        <statBoost name="repairSpeed" load="RAD_REPAIR"/>
+    </statBoosts>
+    <power>3</power>
+    <cost>90</cost>
+    <bp>5</bp>
+    <speed>5</speed>	<!-- R4: I set it to 5 for no particular reason -->
+    <rarity>0</rarity>	<!-- rarity in sector rarity list-->
+    <image>beam_contact</image>
+    <length>30</length>
+	<erosion>
+		<speed>1.5</speed>
+		<maxSpeed>1.5</maxSpeed>
+		<time>20.0</time>	<!-- Double over mk 1 -->
+		<maxTime>25.0</maxTime>
+		<systemRepairMultiplier>1</systemRepairMultiplier>
+		<erodeShields>false</erodeShields>
+		<roomAnim renderLayer="1">
+			<anim animType="center" animBorder="0">invisible</anim>
+			<wallAnim>rvs_corrode_sparks_2</wallAnim>
+		</roomAnim>
+		
+		<!--
+		<growBreachMultiplier>1000.0</growBreachMultiplier>
+		<newBreachDamage>0</newBreachDamage>
+		<newBreachRequirement>100000.0</newBreachRequirement>
+		<canDilate>true</canDilate>-->
+	</erosion>
+	<launchSounds>
+		<sound>ra_focusbeambig1</sound>
+		<sound>ra_focusbeambig2</sound>
+		<sound>ra_focusbeambig3</sound>
+	</launchSounds>
+    <weaponArt>rvs_focus_corrosion_2</weaponArt>
 </weaponBlueprint>
 
 <!-- 
