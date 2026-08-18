@@ -2089,7 +2089,7 @@ Default Price: 50~   -   Selling Price: 25~
 			<tooltipOverride>Required Power: 1
 Charge Time: 20 seconds
 				
-Shot Radius: 40
+Shot Radius: 80
 Shots Per Charge: 9
 				
 Damage Chance: 0-33% (scales with fire count)
